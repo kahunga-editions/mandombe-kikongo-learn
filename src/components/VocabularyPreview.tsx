@@ -32,7 +32,7 @@ const categories: VocabCategory[] = [
     lariLabel: "Mbote",
     image: vocabGreetings,
     words: [
-      { lari: "Mbote zêno", french: "Bonjour à vous", english: "Hello to you (plural)", portuguese: "Olá a vocês" },
+      { lari: "Mbote zeno", french: "Bonjour à vous", english: "Hello to you (plural)", portuguese: "Olá a vocês" },
       { lari: "Mbote aku", french: "Bonjour à toi", english: "Hello to you (singular)", portuguese: "Olá a você" },
       { lari: "Mbote zawu", french: "Bonjour à eux", english: "Hello to them", portuguese: "Olá a eles" },
       { lari: "Batata mbote zawu", french: "Bonjour aux parents", english: "Hello to the parents", portuguese: "Olá aos pais" },
