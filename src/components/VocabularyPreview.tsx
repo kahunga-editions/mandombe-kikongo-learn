@@ -203,6 +203,12 @@ const VocabularyPreview = () => {
                     key={i}
                     className="bg-card rounded-xl p-5 border border-border hover:border-primary/30 transition-all group"
                   >
+                    <p
+                      className="text-2xl mb-1 text-primary/80 leading-relaxed"
+                      style={{ fontFamily: "'Masono Mandombe', sans-serif" }}
+                    >
+                      {word.lari}
+                    </p>
                     <h4 className="font-display text-xl font-bold text-foreground mb-3 flex items-center gap-2">
                       {word.lari}
                       <Volume2 className="w-4 h-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer" />
