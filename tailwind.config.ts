@@ -16,6 +16,7 @@ export default {
       fontFamily: {
         display: ["Playfair Display", "serif"],
         body: ["Source Sans 3", "sans-serif"],
+        mandombe: ["Masono Mandombe", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
