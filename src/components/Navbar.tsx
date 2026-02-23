@@ -23,6 +23,9 @@ const Navbar = () => {
           <a href="#learn" className="text-cream/80 hover:text-gold transition-colors text-sm font-medium tracking-wide uppercase">
             Learn
           </a>
+          <a href="/lessons" className="text-cream/80 hover:text-gold transition-colors text-sm font-medium tracking-wide uppercase">
+            Lessons
+          </a>
           <a href="#vocabulary" className="text-cream/80 hover:text-gold transition-colors text-sm font-medium tracking-wide uppercase">
             Vocabulary
           </a>
