@@ -73,7 +73,7 @@ const MatchingExercise = ({ question, onComplete }: Props) => {
                 onClick={() => handleLeftClick(i)}
                 className={`w-full text-left px-4 py-3 rounded-lg border transition-all text-sm ${cls}`}
               >
-                <span className="font-mandombe text-xs text-primary/40 block">{pair.left}</span>
+                <span className="font-mandombe text-lg text-primary/40 block">{pair.left}</span>
                 <span className="text-foreground">{pair.left}</span>
               </button>
             );
