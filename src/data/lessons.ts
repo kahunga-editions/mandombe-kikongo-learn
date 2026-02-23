@@ -554,11 +554,11 @@ export const lessons: Lesson[] = [
     ],
   },
   {
-    id: "kena-conjugation",
-    title: "'To Be' Conjugation — Kena",
-    titleLari: "Kena",
-    titleMandombe: "Kena",
-    description: "Master the full conjugation of 'to be' (ba/kena), form adjective phrases, and learn the negation pattern 'ka...ko'.",
+    id: "ba-conjugation",
+    title: "'To Be' Conjugation — Ba",
+    titleLari: "Ba",
+    titleMandombe: "Ba",
+    description: "Master the full conjugation of 'to be' (ba), form adjective phrases, and learn the negation pattern 'ka...ko'.",
     level: "advanced",
     icon: "🔤",
     vocabulary: [
@@ -573,8 +573,8 @@ export const lessons: Lesson[] = [
     ],
     conjugations: [
       {
-        verb: "Ba / Kena",
-        verbMandombe: "Ba / Kena",
+        verb: "Ba",
+        verbMandombe: "Ba",
         meaning: { fr: "Être", en: "To be" },
         tense: "Present",
         rows: [
@@ -587,8 +587,8 @@ export const lessons: Lesson[] = [
         ],
       },
       {
-        verb: "Ba / Kena",
-        verbMandombe: "Ba / Kena",
+        verb: "Ba",
+        verbMandombe: "Ba",
         meaning: { fr: "Être (négatif)", en: "To be (negative)" },
         tense: "Negative (ka...ko)",
         rows: [
@@ -611,11 +611,11 @@ export const lessons: Lesson[] = [
     exercises: [
       {
         type: "multiple-choice",
-        question: "How do you say 'I am' using the verb kena?",
+        question: "How do you say 'I am' using the verb ba?",
         questionMandombe: "Ngiena",
         options: ["wena", "ngiena", "kena", "tuena"],
         correctIndex: 1,
-        explanation: "'Ngiena' is the first person singular form of 'to be' (kena).",
+        explanation: "'Ngiena' is the first person singular form of 'to be' (ba).",
       },
       {
         type: "multiple-choice",
