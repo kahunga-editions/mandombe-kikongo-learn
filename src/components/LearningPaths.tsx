@@ -52,7 +52,7 @@ const LearningPaths = () => {
               <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
                 <path.icon className="w-7 h-7 text-primary" />
               </div>
-              <h3 className="font-display text-2xl font-bold text-foreground mb-1">
+              <h3 className="font-display text-2xl font-bold text-foreground mb-2">
                 {path.title}
               </h3>
               <p className="text-primary font-body text-sm italic mb-4">
