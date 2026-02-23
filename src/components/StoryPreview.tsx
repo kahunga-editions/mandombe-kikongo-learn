@@ -3,6 +3,7 @@ const StoryPreview = () => {
     <section id="stories" className="py-24 bg-card">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
+          <p className="font-mandombe text-3xl text-primary/60 mb-1">Binsamu</p>
           <p className="text-primary font-body text-sm tracking-[0.25em] uppercase mb-3">
             Binsamu — Stories
           </p>
@@ -13,6 +14,9 @@ const StoryPreview = () => {
 
         <div className="max-w-4xl mx-auto bg-background rounded-2xl border border-border overflow-hidden">
           <div className="bg-earth-deep p-6">
+            <p className="font-mandombe text-xl text-gold/50 mb-1">
+              Nsayi a l'ecole et a la foret
+            </p>
             <h3 className="font-display text-2xl font-bold text-gold mb-1">
               Nsayi à l'école et à la forêt
             </h3>
@@ -24,6 +28,9 @@ const StoryPreview = () => {
             {/* Excerpt 1 */}
             <div className="space-y-3">
               <div className="bg-primary/5 rounded-lg p-4 border-l-4 border-primary">
+                <p className="font-mandombe text-base text-primary/40 mb-1">
+                  Lumbu tshi moshi, mu ntangu ya ntama, ku nsi ya Kongo, muana n'Kento beri ta nkumbu Nsayi na ndiku'andi Sunda.
+                </p>
                 <p className="font-display text-lg text-foreground italic">
                   Lumbu tshi moshi, mu ntangu ya ntama, ku nsi ya Kongo, muana
                   n'Kento beri ta nkumbu Nsayi na ndiku'andi Sunda.
@@ -44,6 +51,9 @@ const StoryPreview = () => {
             {/* Excerpt 2 */}
             <div className="space-y-3">
               <div className="bg-primary/5 rounded-lg p-4 border-l-4 border-primary">
+                <p className="font-mandombe text-base text-primary/40 mb-1">
+                  Nsayi nzo mikanda ya ka tomo zolo.
+                </p>
                 <p className="font-display text-lg text-foreground italic">
                   Nsayi nzo mikanda ya ka tomo zolo.
                 </p>
@@ -61,6 +71,9 @@ const StoryPreview = () => {
             {/* Excerpt 3 */}
             <div className="space-y-3">
               <div className="bg-primary/5 rounded-lg p-4 border-l-4 border-primary">
+                <p className="font-mandombe text-base text-primary/40 mb-1">
+                  Mabuku ma ka zolo mu tanga, weri zolo mpe mu kue tsoneka binsamu.
+                </p>
                 <p className="font-display text-lg text-foreground italic">
                   Mabuku ma ka zolo mu tanga, weri zolo mpe mu kue tsoneka
                   binsamu.
