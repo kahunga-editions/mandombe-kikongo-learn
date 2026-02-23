@@ -102,7 +102,7 @@ const LessonDetail = () => {
                         key={i}
                         className="bg-card rounded-lg border border-border p-4 hover:border-primary/30 transition-colors"
                       >
-                        <p className="font-mandombe text-2xl text-primary/40 mb-0.5">
+                        <p className="font-mandombe text-2xl text-primary/40 mb-2">
                           {item.mandombe}
                         </p>
                         <p className="font-display text-lg font-bold text-foreground">
@@ -128,7 +128,7 @@ const LessonDetail = () => {
                     {lesson.conjugations.map((conj, i) => (
                       <div key={i} className="bg-card rounded-xl border border-border overflow-hidden">
                         <div className="bg-earth-deep px-6 py-4">
-                          <p className="font-mandombe text-3xl text-gold/50 mb-0.5">
+                          <p className="font-mandombe text-3xl text-gold/50 mb-2">
                             {conj.verbMandombe}
                           </p>
                           <h3 className="font-display text-xl font-bold text-gold">
@@ -138,16 +138,18 @@ const LessonDetail = () => {
                         </div>
                         <div className="divide-y divide-border">
                           {conj.rows.map((row, j) => (
-                            <div key={j} className="flex items-center px-6 py-3 gap-4">
-                              <span className="text-sm text-muted-foreground w-20 shrink-0">
+                            <div key={j} className="flex items-start px-6 py-3 gap-6">
+                              <span className="text-sm text-muted-foreground w-20 shrink-0 pt-1">
                                 {row.person}
                               </span>
-                              <span className="font-mandombe text-xl text-primary/40">
-                                {row.mandombe}
-                              </span>
-                              <span className="font-display font-semibold text-foreground">
-                                {row.lari}
-                              </span>
+                              <div className="flex flex-col">
+                                <span className="font-mandombe text-xl text-primary/40 leading-tight">
+                                  {row.mandombe}
+                                </span>
+                                <span className="font-display font-semibold text-foreground mt-1">
+                                  {row.lari}
+                                </span>
+                              </div>
                             </div>
                           ))}
                         </div>
@@ -169,7 +171,7 @@ const LessonDetail = () => {
                         key={i}
                         className="bg-card rounded-lg border border-border p-4 border-l-4 border-l-primary"
                       >
-                        <p className="font-mandombe text-2xl text-primary/40 mb-0.5">
+                        <p className="font-mandombe text-2xl text-primary/40 mb-2">
                           {phrase.mandombe}
                         </p>
                         <p className="font-display text-lg font-semibold text-foreground italic">

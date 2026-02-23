@@ -42,7 +42,7 @@ const Lessons = () => {
                       {lesson.level}
                     </span>
                   </div>
-                  <p className="font-mandombe text-2xl text-primary/40 mb-1">
+                  <p className="font-mandombe text-2xl text-primary/40 mb-2">
                     {lesson.titleMandombe}
                   </p>
                   <h2 className="font-display text-xl font-bold text-foreground mb-1 group-hover:text-primary transition-colors">
