@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
+import { Lock } from "lucide-react";
 import { lessons } from "@/data/lessons";
+import { useAuth } from "@/contexts/AuthContext";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -10,6 +12,8 @@ const levelColors = {
 };
 
 const Lessons = () => {
+  const { isPremium } = useAuth();
+
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
@@ -29,43 +33,66 @@ const Lessons = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {lessons.map((lesson) => (
-              <Link
-                key={lesson.id}
-                to={`/lessons/${lesson.id}`}
-                className="group bg-card rounded-xl border border-border hover:border-primary/40 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 overflow-hidden"
-              >
-                <div className="p-6">
-                  <div className="flex items-start justify-between mb-4">
-                    <span className="text-4xl">{lesson.icon}</span>
-                    <span className={`text-xs font-medium px-2.5 py-1 rounded-full border ${levelColors[lesson.level]}`}>
-                      {lesson.level}
-                    </span>
+            {lessons.map((lesson) => {
+              const isLocked = lesson.level === "advanced" && !isPremium;
+
+              if (isLocked) {
+                return (
+                  <div
+                    key={lesson.id}
+                    className="relative bg-card rounded-xl border border-border overflow-hidden opacity-75"
+                  >
+                    <div className="p-6">
+                      <div className="flex items-start justify-between mb-4">
+                        <span className="text-4xl">{lesson.icon}</span>
+                        <span className={`text-xs font-medium px-2.5 py-1 rounded-full border ${levelColors[lesson.level]}`}>
+                          {lesson.level}
+                        </span>
+                      </div>
+                      <p className="font-mandombe text-2xl text-primary/40 mb-2">{lesson.titleMandombe}</p>
+                      <h2 className="font-display text-xl font-bold text-foreground mb-1">{lesson.title}</h2>
+                      <p className="text-primary font-body text-sm italic mb-3">{lesson.titleLari}</p>
+                      <p className="text-muted-foreground text-sm leading-relaxed">{lesson.description}</p>
+                    </div>
+                    <div className="absolute inset-0 bg-earth-deep/50 backdrop-blur-[2px] flex flex-col items-center justify-center rounded-xl">
+                      <div className="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center mb-3">
+                        <Lock className="w-6 h-6 text-gold" />
+                      </div>
+                      <p className="text-cream font-display font-bold text-lg">Premium</p>
+                      <p className="text-cream/60 text-xs mt-1">Upgrade to unlock</p>
+                    </div>
                   </div>
-                  <p className="font-mandombe text-2xl text-primary/40 mb-2">
-                    {lesson.titleMandombe}
-                  </p>
-                  <h2 className="font-display text-xl font-bold text-foreground mb-1 group-hover:text-primary transition-colors">
-                    {lesson.title}
-                  </h2>
-                  <p className="text-primary font-body text-sm italic mb-3">
-                    {lesson.titleLari}
-                  </p>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    {lesson.description}
-                  </p>
-                  <div className="mt-4 flex items-center gap-4 text-xs text-muted-foreground">
-                    {lesson.vocabulary && (
-                      <span>{lesson.vocabulary.length} words</span>
-                    )}
-                    {lesson.conjugations && (
-                      <span>{lesson.conjugations.length} conjugations</span>
-                    )}
-                    <span>{lesson.exercises.length} exercises</span>
+                );
+              }
+
+              return (
+                <Link
+                  key={lesson.id}
+                  to={`/lessons/${lesson.id}`}
+                  className="group bg-card rounded-xl border border-border hover:border-primary/40 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 overflow-hidden"
+                >
+                  <div className="p-6">
+                    <div className="flex items-start justify-between mb-4">
+                      <span className="text-4xl">{lesson.icon}</span>
+                      <span className={`text-xs font-medium px-2.5 py-1 rounded-full border ${levelColors[lesson.level]}`}>
+                        {lesson.level}
+                      </span>
+                    </div>
+                    <p className="font-mandombe text-2xl text-primary/40 mb-2">{lesson.titleMandombe}</p>
+                    <h2 className="font-display text-xl font-bold text-foreground mb-1 group-hover:text-primary transition-colors">
+                      {lesson.title}
+                    </h2>
+                    <p className="text-primary font-body text-sm italic mb-3">{lesson.titleLari}</p>
+                    <p className="text-muted-foreground text-sm leading-relaxed">{lesson.description}</p>
+                    <div className="mt-4 flex items-center gap-4 text-xs text-muted-foreground">
+                      {lesson.vocabulary && <span>{lesson.vocabulary.length} words</span>}
+                      {lesson.conjugations && <span>{lesson.conjugations.length} conjugations</span>}
+                      <span>{lesson.exercises.length} exercises</span>
+                    </div>
                   </div>
-                </div>
-              </Link>
-            ))}
+                </Link>
+              );
+            })}
           </div>
         </div>
       </main>
