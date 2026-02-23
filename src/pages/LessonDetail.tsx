@@ -47,7 +47,7 @@ const LessonDetail = () => {
           </Link>
 
           <div className="mb-8">
-            <p className="font-mandombe text-4xl text-primary/40 mb-1">{lesson.titleMandombe}</p>
+            <p className="font-mandombe text-6xl text-primary/40 mb-1">{lesson.titleMandombe}</p>
             <div className="flex items-center gap-3 mb-2">
               <span className="text-4xl">{lesson.icon}</span>
               <h1 className="font-display text-3xl md:text-4xl font-bold text-foreground">
@@ -94,7 +94,7 @@ const LessonDetail = () => {
               {lesson.vocabulary && lesson.vocabulary.length > 0 && (
                 <section>
                   <h2 className="font-display text-2xl font-bold text-foreground mb-4">
-                    Vocabulary — <span className="font-mandombe text-xl text-primary/50">Mazita</span>
+                    Vocabulary — <span className="font-mandombe text-3xl text-primary/50">Mazita</span>
                   </h2>
                   <div className="grid sm:grid-cols-2 gap-3">
                     {lesson.vocabulary.map((item, i) => (
@@ -102,7 +102,7 @@ const LessonDetail = () => {
                         key={i}
                         className="bg-card rounded-lg border border-border p-4 hover:border-primary/30 transition-colors"
                       >
-                        <p className="font-mandombe text-lg text-primary/40 mb-0.5">
+                        <p className="font-mandombe text-2xl text-primary/40 mb-0.5">
                           {item.mandombe}
                         </p>
                         <p className="font-display text-lg font-bold text-foreground">
@@ -122,13 +122,13 @@ const LessonDetail = () => {
               {lesson.conjugations && lesson.conjugations.length > 0 && (
                 <section>
                   <h2 className="font-display text-2xl font-bold text-foreground mb-4">
-                    Conjugations — <span className="font-mandombe text-xl text-primary/50">Zonza</span>
+                    Conjugations — <span className="font-mandombe text-3xl text-primary/50">Zonza</span>
                   </h2>
                   <div className="space-y-6">
                     {lesson.conjugations.map((conj, i) => (
                       <div key={i} className="bg-card rounded-xl border border-border overflow-hidden">
                         <div className="bg-earth-deep px-6 py-4">
-                          <p className="font-mandombe text-xl text-gold/50 mb-0.5">
+                          <p className="font-mandombe text-3xl text-gold/50 mb-0.5">
                             {conj.verbMandombe}
                           </p>
                           <h3 className="font-display text-xl font-bold text-gold">
@@ -142,7 +142,7 @@ const LessonDetail = () => {
                               <span className="text-sm text-muted-foreground w-20 shrink-0">
                                 {row.person}
                               </span>
-                              <span className="font-mandombe text-base text-primary/40">
+                              <span className="font-mandombe text-xl text-primary/40">
                                 {row.mandombe}
                               </span>
                               <span className="font-display font-semibold text-foreground">
@@ -161,7 +161,7 @@ const LessonDetail = () => {
               {lesson.phrases && lesson.phrases.length > 0 && (
                 <section>
                   <h2 className="font-display text-2xl font-bold text-foreground mb-4">
-                    Key Phrases — <span className="font-mandombe text-xl text-primary/50">Binsamu</span>
+                    Key Phrases — <span className="font-mandombe text-3xl text-primary/50">Binsamu</span>
                   </h2>
                   <div className="space-y-3">
                     {lesson.phrases.map((phrase, i) => (
@@ -169,7 +169,7 @@ const LessonDetail = () => {
                         key={i}
                         className="bg-card rounded-lg border border-border p-4 border-l-4 border-l-primary"
                       >
-                        <p className="font-mandombe text-base text-primary/40 mb-0.5">
+                        <p className="font-mandombe text-2xl text-primary/40 mb-0.5">
                           {phrase.mandombe}
                         </p>
                         <p className="font-display text-lg font-semibold text-foreground italic">
