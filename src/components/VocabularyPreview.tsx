@@ -152,6 +152,9 @@ const VocabularyPreview = () => {
     <section id="vocabulary" className="py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
+          <p className="font-mandombe text-3xl md:text-4xl text-primary/40 mb-2">
+            Mazita
+          </p>
           <p className="text-primary font-body text-sm tracking-[0.25em] uppercase mb-3">
             Mazita — Vocabulary
           </p>
@@ -187,6 +190,9 @@ const VocabularyPreview = () => {
                   className="w-20 h-20 md:w-24 md:h-24 rounded-xl object-cover"
                 />
                 <div>
+                  <p className="font-mandombe text-xl text-primary/50 leading-none mb-1">
+                    {cat.lariLabel}
+                  </p>
                   <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground">
                     {cat.lariLabel}
                   </h3>
@@ -203,10 +209,7 @@ const VocabularyPreview = () => {
                     key={i}
                     className="bg-card rounded-xl p-5 border border-border hover:border-primary/30 transition-all group"
                   >
-                    <p
-                      className="text-2xl mb-1 text-primary/80 leading-relaxed"
-                      style={{ fontFamily: "'Masono Mandombe', sans-serif" }}
-                    >
+                    <p className="font-mandombe text-2xl mb-1 text-primary/80 leading-relaxed">
                       {word.lari}
                     </p>
                     <h4 className="font-display text-xl font-bold text-foreground mb-3 flex items-center gap-2">

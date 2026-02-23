@@ -14,8 +14,9 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-earth-deep/95 backdrop-blur-sm border-b border-gold/20">
       <div className="container mx-auto px-4 flex items-center justify-between h-16">
-        <a href="/" className="font-display text-xl font-bold text-gold">
-          Nzo Mikanda
+        <a href="/" className="flex items-center gap-3">
+          <span className="font-mandombe text-2xl text-gold leading-none">Nzo Mikanda</span>
+          <span className="font-display text-lg font-bold text-cream/70 hidden sm:inline">Nzo Mikanda</span>
         </a>
 
         <div className="hidden md:flex items-center gap-8">
