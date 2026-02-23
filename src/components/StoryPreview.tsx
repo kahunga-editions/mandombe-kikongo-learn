@@ -2,9 +2,17 @@ import PremiumGate from "@/components/PremiumGate";
 import storyPanel1 from "@/assets/story-panel-1.jpg";
 import storyPanel2 from "@/assets/story-panel-2.jpg";
 import storyPanel3 from "@/assets/story-panel-3.jpg";
-import storyPanel4 from "@/assets/story-panel-4.jpg";
-import storyPanel5 from "@/assets/story-panel-5.jpg";
-import storyPanel6 from "@/assets/story-panel-6.jpg";
+import storyPanel4 from "@/assets/story-panel-7.jpg";
+import storyPanel5 from "@/assets/story-panel-8.jpg";
+import storyPanel6 from "@/assets/story-panel-9.jpg";
+import storyPanel7 from "@/assets/story-panel-10.jpg";
+import storyPanel8 from "@/assets/story-panel-11.jpg";
+import storyPanel9 from "@/assets/story-panel-12.jpg";
+import storyPanel10 from "@/assets/story-panel-13.jpg";
+import storyPanel11 from "@/assets/story-panel-14.jpg";
+import storyPanel12 from "@/assets/story-panel-15.jpg";
+import storyPanel13 from "@/assets/story-panel-16.jpg";
+import storyPanel14 from "@/assets/story-panel-17.jpg";
 
 const StoryPreview = () => {
   return (
@@ -59,55 +67,146 @@ const StoryPreview = () => {
                 english="Nsayi was a little girl who loved school very much. She loved reading books and writing stories."
               />
 
-              {/* Panel 3 – Entering the forest */}
+              {/* Panel 3 – In the classroom */}
               <ComicPanel
                 image={storyPanel3}
                 panelNumber={3}
                 layout="left"
-                mandombe="Lumbu moshi, Nsayi na Sunda ba kwenda ku sangi. Ba mona miti ya nene na bifulu bia mbote."
-                lari="Lumbu moshi, Nsayi na Sunda ba kwenda ku sangi. Ba mona miti ya nene na bifulu bia mbote."
-                french="Un jour, Nsayi et Sunda partirent dans la forêt. Elles virent de grands arbres et de belles fleurs."
-                english="One day, Nsayi and Sunda went into the forest. They saw tall trees and beautiful flowers."
+                mandombe="Ka wa yoka malonguki, ka tsoneka mu kaye kandi. Ka zolo tomo mu longa bintu bia mpa."
+                lari="Ka wa yoka malonguki, ka tsoneka mu kaye kandi. Ka zolo tomo mu longa bintu bia mpa."
+                french="Elle écoutait ses professeurs, prenait des notes dans son cahier. Elle aimait beaucoup apprendre de nouvelles choses."
+                english="She listened to her teachers, took notes in her notebook. She loved learning new things."
               />
             </div>
 
-            {/* PREMIUM: Panels 4-6 */}
+            {/* PREMIUM: Panels 4-14 */}
             <div className="px-4 md:px-6 pb-6">
               <PremiumGate label="Continue Nsayi's Story">
                 <div className="space-y-6">
-                  {/* Panel 4 – Meeting the elder */}
+                  {/* Panel 4 – Telling time by the sun */}
                   <ComicPanel
                     image={storyPanel4}
                     panelNumber={4}
                     layout="wide"
-                    mandombe="Mu sangi, ba kumana na nkaka muntu ya ntinu. Ka yambula zawu: 'Beno, bala bami, meno ni zolele ku longa beno.'"
-                    lari="Mu sangi, ba kumana na nkaka muntu ya ntinu. Ka yambula zawu: 'Beno, bala bami, meno ni zolele ku longa beno.'"
-                    french="Dans la forêt, elles rencontrèrent un ancien sage. Il leur dit: 'Mes enfants, je veux vous enseigner.'"
-                    english="In the forest, they met a wise elder. He told them: 'My children, I want to teach you.'"
-                    speechBubble={{ text: "Beno, bala bami, meno ni zolele ku longa beno.", speaker: "Elder" }}
+                    mandombe="Mu ntangu ya ntama, bantu ba beri tanga ntangu na nta'ntangu. Ba beri tala kisembi kia muntu mu zaba ntangu."
+                    lari="Mu ntangu ya ntama, bantu ba beri tanga ntangu na nta'ntangu. Ba beri tala kisembi kia muntu mu zaba ntangu."
+                    french="Dans le temps ancien, les gens lisaient l'heure avec le soleil. Ils regardaient l'ombre d'une personne pour connaître l'heure."
+                    english="In the old days, people told time by the sun. They looked at a person's shadow to know the time."
+                    mandombeBubble={{ text: "Ba beri tala kisembi!", latin: "Ba beri tala kisembi!", speaker: "Nsayi" }}
                   />
 
-                  {/* Panel 5 – The sacred tree */}
+                  {/* Panel 5 – Writing at home */}
                   <ComicPanel
                     image={storyPanel5}
                     panelNumber={5}
                     layout="right"
-                    mandombe="Nkaka ka longa zawu ma nkumbu ya miti na binyama. 'Tala muti yai,' ka tubidi, 'nkumbu andi Nsanda — muti ya longo.'"
-                    lari="Nkaka ka longa zawu ma nkumbu ya miti na binyama. 'Tala muti yai,' ka tubidi, 'nkumbu andi Nsanda — muti ya longo.'"
-                    french="L'ancien leur enseigna les noms des arbres et des animaux. 'Regardez cet arbre,' dit-il, 'son nom est Nsanda — l'arbre sacré.'"
-                    english="The elder taught them the names of trees and animals. 'Look at this tree,' he said, 'its name is Nsanda — the sacred tree.'"
-                    speechBubble={{ text: "Nkumbu andi Nsanda — muti ya longo.", speaker: "Elder" }}
+                    mandombe="Nsayi ka tsonekanga binsamu mu kaye kandi. Ka vandaka ntangu ya nene mu tanga na mu tsoneka. Ka sepelaka tomo mu kaba binsamu biandi na bandiku'andi."
+                    lari="Nsayi ka tsonekanga binsamu mu kaye kandi. Ka vandaka ntangu ya nene mu tanga na mu tsoneka. Ka sepelaka tomo mu kaba binsamu biandi na bandiku'andi."
+                    french="Nsayi écrivait des histoires dans son cahier. Elle passait des heures à lire et à écrire. Elle aimait beaucoup partager ses histoires avec ses amis."
+                    english="Nsayi wrote stories in her notebook. She spent hours reading and writing. She loved sharing her stories with her friends."
                   />
 
-                  {/* Panel 6 – Return home */}
+                  {/* Panel 6 – Letters for family */}
                   <ComicPanel
                     image={storyPanel6}
                     panelNumber={6}
+                    layout="left"
+                    mandombe="Bambuta bandi ba ka tubilanga mu tsoneka mikanda mu dibundu. Nsayi ka tsonekanga mikanda mu bise na bankaka."
+                    lari="Bambuta bandi ba ka tubilanga mu tsoneka mikanda mu dibundu. Nsayi ka tsonekanga mikanda mu bise na bankaka."
+                    french="Ses parents lui demandaient d'écrire des lettres pour la famille. Nsayi écrivait des lettres pour les grands-parents et d'autres proches."
+                    english="Her parents asked her to write letters for the family. Nsayi wrote letters for grandparents and other relatives."
+                    mandombeBubble={{ text: "Tsoneka mukanda mu bise!", latin: "Tsoneka mukanda mu bise!", speaker: "Mama" }}
+                  />
+
+                  {/* Panel 7 – Dream of becoming a doctor */}
+                  <ComicPanel
+                    image={storyPanel7}
+                    panelNumber={7}
                     layout="wide"
-                    mandombe="Na mpimpa, Nsayi na Sunda ba vutuka ku nzo. Nsayi ka lala na ndoto ya mbote — ndoto ya sangi, ya miti, na ya nkaka ya ntinu."
-                    lari="Na mpimpa, Nsayi na Sunda ba vutuka ku nzo. Nsayi ka lala na ndoto ya mbote — ndoto ya sangi, ya miti, na ya nkaka ya ntinu."
-                    french="Le soir, Nsayi et Sunda rentrèrent à la maison. Nsayi s'endormit avec de beaux rêves — des rêves de la forêt, des arbres et du sage ancien."
-                    english="In the evening, Nsayi and Sunda returned home. Nsayi fell asleep with beautiful dreams — dreams of the forest, the trees, and the wise elder."
+                    mandombe="Nsayi ka lota mu kituka nganga. Ka zolele mu buka bana ba vata diandi. Ndoto andi ya weri nene tomo."
+                    lari="Nsayi ka lota mu kituka nganga. Ka zolele mu buka bana ba vata diandi. Ndoto andi ya weri nene tomo."
+                    french="Nsayi rêvait de devenir médecin. Elle voulait soigner les enfants de son village. Son rêve était très grand."
+                    english="Nsayi dreamed of becoming a doctor. She wanted to heal the children of her village. Her dream was very big."
+                    mandombeBubble={{ text: "Meno ni zolele mu kituka nganga!", latin: "Meno ni zolele mu kituka nganga!", speaker: "Nsayi" }}
+                  />
+
+                  {/* Panel 8 – Going to the savanna */}
+                  <ComicPanel
+                    image={storyPanel8}
+                    panelNumber={8}
+                    layout="right"
+                    mandombe="Nsayi na Sunda ba zolele mu kwenda ku ntseke. Ntseke ya beri na bintu bia mbote — miti, bifulu, na binyama."
+                    lari="Nsayi na Sunda ba zolele mu kwenda ku ntseke. Ntseke ya beri na bintu bia mbote — miti, bifulu, na binyama."
+                    french="Nsayi et Sunda aimaient aller dans la savane. La savane était pleine de belles choses — des arbres, des fleurs et des animaux."
+                    english="Nsayi and Sunda loved going to the savanna. The savanna was full of beautiful things — trees, flowers, and animals."
+                  />
+
+                  {/* Panel 9 – Picking mushrooms */}
+                  <ComicPanel
+                    image={storyPanel9}
+                    panelNumber={9}
+                    layout="left"
+                    mandombe="Kisalu kiandi kia tomo zolo: mu bonga bowa, bwa nsempela. Nsempela ya beri na luvunu ya mbote tomo, rangi andi ya weri ya pembe na ngielo."
+                    lari="Kisalu kiandi kia tomo zolo: mu bonga bowa, bwa nsempela. Nsempela ya beri na luvunu ya mbote tomo, rangi andi ya weri ya pembe na ngielo."
+                    french="Son activité préférée : cueillir des champignons, surtout les nsempela orange vif. Les nsempela avaient une saveur unique, un vrai régal."
+                    english="Her favorite activity: picking mushrooms, especially the bright orange nsempela. The nsempela had a unique flavor, a true delight."
+                    mandombeBubble={{ text: "Tala bowa bia nsempela!", latin: "Tala bowa bia nsempela!", speaker: "Sunda" }}
+                  />
+
+                  {/* Panel 10 – The nsempela mushroom */}
+                  <ComicPanel
+                    image={storyPanel10}
+                    panelNumber={10}
+                    layout="wide"
+                    mandombe="Nsempela ya beri bowa ya mbote tomo mu ntseke. Luvunu andi ya beri ya nsoni na ya mbote. Konso lumbu ba bongele nsempela, ya beri luzingu ya mbote."
+                    lari="Nsempela ya beri bowa ya mbote tomo mu ntseke. Luvunu andi ya beri ya nsoni na ya mbote. Konso lumbu ba bongele nsempela, ya beri luzingu ya mbote."
+                    french="Le nsempela était le meilleur champignon de la savane. Sa saveur était douce et délicieuse. Chaque fois qu'on cueillait les nsempela, c'était un plaisir."
+                    english="The nsempela was the best mushroom of the savanna. Its flavor was sweet and delicious. Every time they picked nsempela, it was a delight."
+                  />
+
+                  {/* Panel 11 – Gathering fruits and vegetables */}
+                  <ComicPanel
+                    image={storyPanel11}
+                    panelNumber={11}
+                    layout="right"
+                    mandombe="Ba bongele mpe ma mbuma na ndunda mu ntseke. Mu ntangu ya mvula, ntseke ya beri na bintu bia nene — ma mbuma na ndunda bia ya ntangu."
+                    lari="Ba bongele mpe ma mbuma na ndunda mu ntseke. Mu ntangu ya mvula, ntseke ya beri na bintu bia nene — ma mbuma na ndunda bia ya ntangu."
+                    french="Elles cueillaient aussi des fruits et des légumes dans la savane. Pendant la saison des pluies, la savane offrait des fruits et légumes de saison."
+                    english="They also picked fruits and vegetables in the savanna. During the rainy season, the savanna offered seasonal fruits and vegetables."
+                  />
+
+                  {/* Panel 12 – The musekeni plant */}
+                  <ComicPanel
+                    image={storyPanel12}
+                    panelNumber={12}
+                    layout="left"
+                    mandombe="Ndunda andi ya tomo zolo ya beri musekeni. Musekeni ya beri ya mbote tomo mu lambu na mafuta ma ndinga. Luvunu andi ya beri ya nsoni."
+                    lari="Ndunda andi ya tomo zolo ya beri musekeni. Musekeni ya beri ya mbote tomo mu lambu na mafuta ma ndinga. Luvunu andi ya beri ya nsoni."
+                    french="Son légume préféré était le musekeni. Le musekeni était délicieux cuit dans la sauce à l'huile de palme. Sa saveur était exquise."
+                    english="Her favorite vegetable was the musekeni. The musekeni was delicious cooked in palm oil sauce. Its flavor was exquisite."
+                    mandombeBubble={{ text: "Musekeni ya mbote tomo!", latin: "Musekeni ya mbote tomo!", speaker: "Nsayi" }}
+                  />
+
+                  {/* Panel 13 – The ntinia vine */}
+                  <ComicPanel
+                    image={storyPanel13}
+                    panelNumber={13}
+                    layout="right"
+                    mandombe="Ka zolo mpe ntinia. Ntinia ya beri nti ya nsinga na matiti ma leke. Matiti ma ntinia ma beri ma mbote mu dia."
+                    lari="Ka zolo mpe ntinia. Ntinia ya beri nti ya nsinga na matiti ma leke. Matiti ma ntinia ma beri ma mbote mu dia."
+                    french="Elle aimait aussi la ntinia. La ntinia était une liane aux pointes tendres. Les feuilles de ntinia étaient bonnes à manger."
+                    english="She also loved the ntinia. The ntinia was a vine with tender tips. The ntinia leaves were good to eat."
+                  />
+
+                  {/* Panel 14 – Story ending */}
+                  <ComicPanel
+                    image={storyPanel14}
+                    panelNumber={14}
+                    layout="wide"
+                    mandombe="Nsayi ka kabanga bintu bionso na bandiku'andi. Ka sepelaka tomo mu kaba bilei na binsamu na bantu ba beri pena na yandi."
+                    lari="Nsayi ka kabanga bintu bionso na bandiku'andi. Ka sepelaka tomo mu kaba bilei na binsamu na bantu ba beri pena na yandi."
+                    french="Nsayi partageait tout avec ses amis. Elle aimait partager la nourriture et les histoires avec les gens proches d'elle."
+                    english="Nsayi shared everything with her friends. She loved sharing food and stories with the people close to her."
                   />
 
                   {/* Story ending */}
@@ -127,8 +226,9 @@ const StoryPreview = () => {
 
 /* ── Comic Panel Component ── */
 
-interface SpeechBubble {
+interface MandombeBubble {
   text: string;
+  latin: string;
   speaker: string;
 }
 
@@ -140,7 +240,7 @@ const ComicPanel = ({
   lari,
   french,
   english,
-  speechBubble,
+  mandombeBubble,
 }: {
   image: string;
   panelNumber: number;
@@ -149,7 +249,7 @@ const ComicPanel = ({
   lari: string;
   french: string;
   english: string;
-  speechBubble?: SpeechBubble;
+  mandombeBubble?: MandombeBubble;
 }) => {
   const isWide = layout === "wide";
   const isRight = layout === "right";
@@ -172,16 +272,19 @@ const ComicPanel = ({
         <span className="absolute top-3 left-3 w-8 h-8 rounded-full bg-primary text-primary-foreground text-sm font-bold flex items-center justify-center shadow">
           {panelNumber}
         </span>
-        {/* Speech bubble */}
-        {speechBubble && (
-          <div className="absolute bottom-3 left-3 right-3 md:right-auto md:max-w-[70%]">
-            <div className="bg-background/95 backdrop-blur-sm rounded-xl px-4 py-2 border border-border shadow-lg relative">
-              <p className="text-xs text-muted-foreground font-bold mb-0.5">{speechBubble.speaker}</p>
-              <p className="font-display text-sm text-foreground italic leading-snug">
-                "{speechBubble.text}"
+        {/* Mandombe speech bubble */}
+        {mandombeBubble && (
+          <div className="absolute bottom-3 left-3 right-3 md:right-auto md:max-w-[75%]">
+            <div className="bg-background/95 backdrop-blur-sm rounded-2xl px-4 py-3 border-2 border-primary/30 shadow-lg relative">
+              <p className="font-mandombe text-lg md:text-xl text-foreground leading-snug mb-1">
+                {mandombeBubble.text}
               </p>
+              <p className="text-xs text-muted-foreground italic">
+                {mandombeBubble.latin}
+              </p>
+              <p className="text-[10px] text-primary font-semibold mt-1">— {mandombeBubble.speaker}</p>
               {/* Bubble tail */}
-              <div className="absolute -bottom-2 left-6 w-4 h-4 bg-background/95 border-b border-r border-border rotate-45" />
+              <div className="absolute -bottom-2 left-6 w-4 h-4 bg-background/95 border-b-2 border-r-2 border-primary/30 rotate-45" />
             </div>
           </div>
         )}
