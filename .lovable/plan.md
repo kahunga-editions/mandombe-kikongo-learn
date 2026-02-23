@@ -1,50 +1,82 @@
 
 
-## Add Advanced Lessons: Verb Conjugations, Negation, Imperative, and Travel with Time
+# Expand Nsayi Story with PDF Content and Mandombe Speech Bubbles
 
-Three new lessons will be added to `src/data/lessons.ts`, drawing from the advanced PDF content. Each includes rich vocabulary, conjugation tables, key phrases, and creative exercises with Mandombe script.
+## What We're Building
 
-### New Lessons
+Based on the uploaded PDF "Nsayi a l'ecole et a la foret", we'll expand the comic-strip story from 6 panels to 14 panels, covering the full narrative arc from the book. Each panel will feature:
 
-**Lesson 7: "To Be" Conjugation -- Kena (Advanced)**
-- Full conjugation of the verb "to be" (ba/kena) across all persons: ngiena, wena, kena, tuena, luena, bena
-- Adjective phrases: mavimpi (healthy), kiese (happy), diela (intelligent)
-- Negation pattern: "ka ... ko" (e.g., "Mavimpi ka tuena ko" = We are not healthy)
-- Exercises:
-  - Multiple choice: identify correct pronoun form
-  - Fill-in-blank: complete conjugation rows
-  - Matching: pair "kena" forms with translations
-  - Creative "Sentence Builder": given an adjective and person, pick the right conjugation
-  - Negation exercise: transform affirmative sentences to negative using "ka...ko"
+- Watercolor-style illustrations of Black Congolese characters (Nsayi with her ponytail, Sunda as her best friend)
+- Speech bubbles containing **actual Mandombe script** using the Masono Mandombe font already installed
+- Four-way text: Mandombe script, Kikongo Lari (Latin), French, and English
 
-**Lesson 8: Imperative Mood and Commands -- Tuma**
-- Vocabulary from the house activities and time PDFs: kanga (to close/lock), vungula (to open), lala (to sleep), duka (to go out), diata (to walk), djoka (to run/escape), lomba (to ask)
-- Imperative forms: singular command vs. plural command (e.g., "Kang'eno vungula" = Lock the door)
-- Key phrases with commands used in daily life
-- Exercises:
-  - Multiple choice: identify imperative vs. other moods
-  - Fill-in-blank: complete command sentences
-  - Matching: pair commands with their meanings
-  - Creative "What would you say?": situational exercise (e.g., "It's bedtime, what do you tell the children?" -> "Lala bua mbote")
+## Story Arc (14 Panels)
 
-**Lesson 9: Travel and Places -- Kwenda**
-- Based on the rich travel conjugation content from the time PDF: "Mazuji ku Mpumbu ma bele" (The day before yesterday I went to Kinshasa), future forms with "mbaji"
-- Full conjugation of "kwenda" (to go) in past tense with real place names (Mpumbu, Matadi, Mfua, Linzolo, Kinkala, Mbamu)
-- Future tense: "Mbaji ku Lubomo tu kwenda" (Tomorrow we will go to Lubomo)
-- Additional verbs: kwiza (to come), mona (to see)
-- Exercises:
-  - Multiple choice: translate travel sentences
-  - Fill-in-blank: complete sentences with correct pronoun markers
-  - Matching: pair places with sentences
-  - Creative "Plan your trip": given a destination and time expression, construct a sentence
+The PDF tells a rich story across several chapters. Here's the panel breakdown:
 
-### Technical Changes
+### Free Panels (1-3) -- Existing, will update text from PDF
 
-**File: `src/data/lessons.ts`**
-- Append 3 new lesson objects to the `lessons` array
-- Each lesson follows the existing `Lesson` interface with `vocabulary`, `conjugations`, `phrases`, and `exercises` arrays
-- All Mandombe fields use accent-free Latin characters matching existing conventions
-- Exercise types use all three existing components: `MultipleChoice`, `FillInBlank`, `MatchingExercise`
+1. **Introduction** -- "Once upon a time in the Kongo..." Nsayi and Sunda together in their village (wide layout)
+2. **School life** -- Nsayi loves school, reads books, writes stories (right layout)
+3. **In the classroom** -- She listens to teachers, takes notes in her notebook (left layout)
 
-No new components or routes needed -- the existing `/lessons` page and `/lessons/:lessonId` detail page will automatically pick up the new lessons.
+### Premium Panels (4-14) -- New content from PDF
+
+4. **Telling time by the sun** -- In the old days, people used the sun's position and their shadow to know the time (wide layout, speech bubble from Nsayi in Mandombe)
+5. **Writing at home** -- Nsayi spends hours reading and writing stories for her friends (right layout)
+6. **Letters for family** -- Her parents have her write letters for the family (left layout, speech bubble from Mama in Mandombe)
+7. **Dream of becoming a doctor** -- She dreams of healing children in her village (wide layout, speech bubble from Nsayi in Mandombe)
+8. **Going to the savanna** -- Nsayi loves exploring the savanna with Sunda (right layout)
+9. **Picking mushrooms** -- Her favorite activity: gathering mushrooms, especially the bright orange "nsempela" (left layout, speech bubble from Sunda in Mandombe)
+10. **The nsempela mushroom** -- The nsempela has a unique flavor, a delight every time (wide layout)
+11. **Gathering fruits and vegetables** -- They also pick seasonal fruits in the savanna (right layout)
+12. **The musekeni plant** -- Her favorite vegetable, delicious cooked in palm sauce (left layout, speech bubble from Nsayi in Mandombe)
+13. **The ntinia vine** -- She also loves the ntinia, a vine with tender edible tips (right layout)
+14. **Story ending** -- Nsayi shares everything with her friends (wide layout)
+
+## Technical Implementation
+
+### 1. Update the ComicPanel Component
+
+- Add a `mandombeBubble` prop for speech bubbles that render in Mandombe font
+- The speech bubble will show Mandombe script as the primary text (large, using `font-mandombe` class), with a small Latin transliteration underneath
+- This creates the immersive bilingual experience the user wants
+
+### 2. Generate 8 New Illustration Panels
+
+Create new panel images (story-panel-7 through story-panel-14) using consistent prompts:
+- Watercolor style with earthy palette (terracotta, gold, cream, green)
+- Nsayi: young Black Congolese girl with **ponytail hairstyle**, always recognizable
+- Sunda: her best friend, slightly different hair/outfit
+- Congolese village, savanna, and forest settings
+- Bold outlines, warm lighting
+
+### 3. Update Existing Panels 1-3
+
+- Regenerate panels 1-3 to ensure Nsayi has a clear ponytail hairstyle
+- Update the text content to match the PDF more closely
+
+### 4. Mandombe in Bubbles
+
+The speech bubbles will use the existing `font-mandombe` CSS class (Masono Mandombe font) to render actual Mandombe script characters. The bubble structure:
+
+```
++---------------------------+
+|  [Mandombe script text]   |  <-- large, font-mandombe
+|  Latin transliteration    |  <-- small, italic
+|  -- Speaker name          |
++---------------------------+
+```
+
+### 5. File Changes
+
+| File | Action |
+|------|--------|
+| `src/assets/story-panel-1.jpg` through `story-panel-6.jpg` | Regenerate with ponytail for Nsayi |
+| `src/assets/story-panel-7.jpg` through `story-panel-14.jpg` | New illustrations |
+| `src/components/StoryPreview.tsx` | Expand to 14 panels, add Mandombe bubble support |
+
+### 6. Content Accuracy
+
+All Kikongo Lari text comes directly from the PDF to ensure linguistic authenticity. The Mandombe script in the bubbles will use the font to render the Lari text in its proper alphabet form.
 
