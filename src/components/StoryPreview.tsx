@@ -293,8 +293,10 @@ const ComicPanel = ({
       </div>
 
       {/* Text side */}
-      <div className={`p-5 md:p-6 space-y-3 bg-card ${isRight ? "md:order-1" : ""}`}>
-        <p className="font-mandombe text-sm text-primary/30 leading-relaxed">{mandombe}</p>
+      <div className={`p-5 md:p-6 space-y-4 bg-card ${isRight ? "md:order-1" : ""}`}>
+        <div className="bg-earth-deep/10 rounded-xl p-4 border border-gold/30">
+          <p className="font-mandombe text-2xl md:text-3xl text-primary leading-relaxed tracking-wide">{mandombe}</p>
+        </div>
         <div className="bg-primary/5 rounded-lg p-3 border-l-4 border-primary">
           <p className="font-display text-base text-foreground italic leading-relaxed">{lari}</p>
         </div>
