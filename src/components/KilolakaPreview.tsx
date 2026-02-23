@@ -1,28 +1,23 @@
+import PremiumGate from "@/components/PremiumGate";
+
 const KilolakaPreview = () => {
   return (
     <section id="kilolaka" className="py-24 bg-earth-deep">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <p className="font-mandombe text-3xl text-gold/50 mb-4">Kilolaka</p>
-          <p className="text-gold font-body text-sm tracking-[0.25em] uppercase mb-3">
-            Deep Knowledge
-          </p>
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-cream mb-4">
-            Kilolaka
-          </h2>
+          <p className="text-gold font-body text-sm tracking-[0.25em] uppercase mb-3">Deep Knowledge</p>
+          <h2 className="font-display text-4xl md:text-5xl font-bold text-cream mb-4">Kilolaka</h2>
           <p className="text-cream/70 max-w-2xl mx-auto text-lg">
-            The art of decomposing Kikongo into sacred consciousness — where
-            every syllable is an energetic code.
+            The art of decomposing Kikongo into sacred consciousness — where every syllable is an energetic code.
           </p>
         </div>
 
+        {/* Free preview: Ki-Lo-La-Ka + B-Series */}
         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
-          {/* Syllable breakdown */}
           <div className="bg-cream/5 backdrop-blur rounded-xl p-8 border border-gold/20">
             <p className="font-mandombe text-xl text-gold/40 mb-3">Ki-Lo-La-Ka</p>
-            <h3 className="font-display text-2xl font-bold text-gold mb-6">
-              Ki–Lo–La–Ka
-            </h3>
+            <h3 className="font-display text-2xl font-bold text-gold mb-6">Ki–Lo–La–Ka</h3>
             <div className="space-y-4">
               {[
                 { syllable: "Ki", meaning: "Inner energy — the origin vibration" },
@@ -33,24 +28,17 @@ const KilolakaPreview = () => {
                 <div key={item.syllable} className="flex gap-4 items-start">
                   <div className="min-w-[60px] text-center">
                     <span className="font-mandombe text-lg text-gold/40 block mb-1">{item.syllable}</span>
-                    <span className="font-display text-3xl font-bold text-gold">
-                      {item.syllable}
-                    </span>
+                    <span className="font-display text-3xl font-bold text-gold">{item.syllable}</span>
                   </div>
-                  <p className="text-cream/80 pt-2 text-sm leading-relaxed">
-                    {item.meaning}
-                  </p>
+                  <p className="text-cream/80 pt-2 text-sm leading-relaxed">{item.meaning}</p>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Morpheme table */}
           <div className="bg-cream/5 backdrop-blur rounded-xl p-8 border border-gold/20">
             <p className="font-mandombe text-xl text-terracotta-light/40 mb-3">B-Series</p>
-            <h3 className="font-display text-2xl font-bold text-gold mb-6">
-              B-Series: States of Being
-            </h3>
+            <h3 className="font-display text-2xl font-bold text-gold mb-6">B-Series: States of Being</h3>
             <div className="space-y-3">
               {[
                 { morpheme: "Bi", meaning: "Inner being" },
@@ -59,15 +47,10 @@ const KilolakaPreview = () => {
                 { morpheme: "Bo", meaning: "Ascentional being" },
                 { morpheme: "Ba", meaning: "Manifested being" },
               ].map((item) => (
-                <div
-                  key={item.morpheme}
-                  className="flex items-center gap-4 bg-cream/5 rounded-lg px-4 py-3"
-                >
+                <div key={item.morpheme} className="flex items-center gap-4 bg-cream/5 rounded-lg px-4 py-3">
                   <div className="min-w-[40px] text-center">
                     <span className="font-mandombe text-sm text-terracotta-light/40 block mb-1">{item.morpheme}</span>
-                    <span className="font-display text-xl font-bold text-terracotta-light">
-                      {item.morpheme}
-                    </span>
+                    <span className="font-display text-xl font-bold text-terracotta-light">{item.morpheme}</span>
                   </div>
                   <p className="text-cream/80 text-sm">{item.meaning}</p>
                 </div>
@@ -76,13 +59,71 @@ const KilolakaPreview = () => {
           </div>
         </div>
 
-        <div className="text-center mt-12">
-          <a
-            href="#premium"
-            className="inline-flex items-center gap-2 text-gold font-semibold hover:text-gold-light transition-colors"
-          >
-            Explore the full Kilolaka system →
-          </a>
+        {/* Premium: F, D, G series */}
+        <div className="max-w-4xl mx-auto mt-8">
+          <PremiumGate label="Advanced Kilolaka Modules">
+            <div className="grid md:grid-cols-3 gap-6">
+              {/* F-Series */}
+              <div className="bg-cream/5 backdrop-blur rounded-xl p-8 border border-gold/20">
+                <p className="font-mandombe text-xl text-gold/40 mb-3">F-Series</p>
+                <h3 className="font-display text-xl font-bold text-gold mb-4">F-Series: Force</h3>
+                <div className="space-y-3">
+                  {[
+                    { morpheme: "Fi", meaning: "Inner force — hidden potential" },
+                    { morpheme: "Fu", meaning: "Force that generates" },
+                    { morpheme: "Fe", meaning: "Force that receives" },
+                    { morpheme: "Fo", meaning: "Ascending force" },
+                    { morpheme: "Fa", meaning: "Manifested force" },
+                  ].map((item) => (
+                    <div key={item.morpheme} className="flex items-center gap-3 bg-cream/5 rounded-lg px-3 py-2">
+                      <span className="font-display text-lg font-bold text-gold min-w-[30px]">{item.morpheme}</span>
+                      <p className="text-cream/80 text-xs">{item.meaning}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* D-Series */}
+              <div className="bg-cream/5 backdrop-blur rounded-xl p-8 border border-gold/20">
+                <p className="font-mandombe text-xl text-gold/40 mb-3">D-Series</p>
+                <h3 className="font-display text-xl font-bold text-gold mb-4">D-Series: Depth</h3>
+                <div className="space-y-3">
+                  {[
+                    { morpheme: "Di", meaning: "Inner depth — essence" },
+                    { morpheme: "Du", meaning: "Depth that creates" },
+                    { morpheme: "De", meaning: "Depth that absorbs" },
+                    { morpheme: "Do", meaning: "Ascending depth" },
+                    { morpheme: "Da", meaning: "Manifested depth" },
+                  ].map((item) => (
+                    <div key={item.morpheme} className="flex items-center gap-3 bg-cream/5 rounded-lg px-3 py-2">
+                      <span className="font-display text-lg font-bold text-gold min-w-[30px]">{item.morpheme}</span>
+                      <p className="text-cream/80 text-xs">{item.meaning}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* G-Series */}
+              <div className="bg-cream/5 backdrop-blur rounded-xl p-8 border border-gold/20">
+                <p className="font-mandombe text-xl text-gold/40 mb-3">G-Series</p>
+                <h3 className="font-display text-xl font-bold text-gold mb-4">G-Series: Growth</h3>
+                <div className="space-y-3">
+                  {[
+                    { morpheme: "Gi", meaning: "Inner growth — seed" },
+                    { morpheme: "Gu", meaning: "Growth that begets" },
+                    { morpheme: "Ge", meaning: "Growth that nurtures" },
+                    { morpheme: "Go", meaning: "Ascending growth" },
+                    { morpheme: "Ga", meaning: "Manifested growth" },
+                  ].map((item) => (
+                    <div key={item.morpheme} className="flex items-center gap-3 bg-cream/5 rounded-lg px-3 py-2">
+                      <span className="font-display text-lg font-bold text-gold min-w-[30px]">{item.morpheme}</span>
+                      <p className="text-cream/80 text-xs">{item.meaning}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </PremiumGate>
         </div>
       </div>
     </section>
