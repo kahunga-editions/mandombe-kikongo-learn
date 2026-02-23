@@ -22,7 +22,7 @@ const FillInBlank = ({ question, onComplete }: Props) => {
     <div className="space-y-4">
       <div>
         {question.sentenceMandombe && (
-          <p className="font-mandombe text-xl text-primary/40 mb-1">
+          <p className="font-mandombe text-3xl text-primary/40 mb-1">
             {question.sentenceMandombe}
           </p>
         )}
