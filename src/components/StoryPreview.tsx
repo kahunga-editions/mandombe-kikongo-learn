@@ -274,17 +274,19 @@ const ComicPanel = ({
         </span>
         {/* Mandombe speech bubble */}
         {mandombeBubble && (
-          <div className="absolute bottom-3 left-3 right-3 md:right-auto md:max-w-[75%]">
-            <div className="bg-background/95 backdrop-blur-sm rounded-2xl px-4 py-3 border-2 border-primary/30 shadow-lg relative">
-              <p className="font-mandombe text-lg md:text-xl text-foreground leading-snug mb-1">
+           <div className="absolute bottom-4 left-3 right-3 md:right-auto md:max-w-[80%]">
+            <div className="bg-earth-deep rounded-2xl px-5 py-4 border-2 border-gold shadow-xl relative">
+              <p className="font-mandombe text-2xl md:text-3xl text-gold leading-snug tracking-wide">
                 {mandombeBubble.text}
               </p>
-              <p className="text-xs text-muted-foreground italic">
-                {mandombeBubble.latin}
-              </p>
-              <p className="text-[10px] text-primary font-semibold mt-1">— {mandombeBubble.speaker}</p>
+              <div className="mt-3 pt-2 border-t border-gold/30">
+                <p className="text-xs text-cream/70 italic">
+                  {mandombeBubble.latin}
+                </p>
+                <p className="text-[10px] text-gold/80 font-semibold mt-1">— {mandombeBubble.speaker}</p>
+              </div>
               {/* Bubble tail */}
-              <div className="absolute -bottom-2 left-6 w-4 h-4 bg-background/95 border-b-2 border-r-2 border-primary/30 rotate-45" />
+              <div className="absolute -bottom-2 left-6 w-4 h-4 bg-earth-deep border-b-2 border-r-2 border-gold rotate-45" />
             </div>
           </div>
         )}
