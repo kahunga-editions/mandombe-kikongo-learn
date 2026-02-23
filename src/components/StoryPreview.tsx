@@ -15,7 +15,7 @@ const StoryPreview = () => {
         <div className="max-w-4xl mx-auto bg-background rounded-2xl border border-border overflow-hidden">
           <div className="bg-earth-deep p-6">
             <p className="font-mandombe text-3xl md:text-4xl text-gold/50 mb-4">
-              Nsayi a l'ecole et a la foret
+              Nsayi ku nzo mikanda na sangi
             </p>
             <h3 className="font-display text-2xl font-bold text-gold mb-1">
               Nsayi à l'école et à la forêt
