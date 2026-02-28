@@ -19,9 +19,10 @@ const Lessons = () => {
       <Navbar />
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <p className="font-mandombe text-4xl text-primary/50 mb-2">Zonza Lari</p>
-            <p className="text-primary font-body text-sm tracking-[0.25em] uppercase mb-3">
+           <div className="text-center mb-16">
+            <p className="font-mandombe text-6xl md:text-8xl text-gradient-gold mb-6 drop-shadow-lg">Zonza Lari</p>
+            <div className="w-24 h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mb-6" />
+            <p className="text-gold font-body text-sm tracking-[0.3em] uppercase mb-3">
               Zonza Lari — Lessons
             </p>
             <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">
@@ -49,7 +50,7 @@ const Lessons = () => {
                           {lesson.level}
                         </span>
                       </div>
-                      <p className="font-mandombe text-2xl text-primary/40 mb-2">{lesson.titleMandombe}</p>
+                      <p className="font-mandombe text-4xl text-gold/60 mb-3">{lesson.titleMandombe}</p>
                       <h2 className="font-display text-xl font-bold text-foreground mb-1">{lesson.title}</h2>
                       <p className="text-primary font-body text-sm italic mb-3">{lesson.titleLari}</p>
                       <p className="text-muted-foreground text-sm leading-relaxed">{lesson.description}</p>
@@ -78,7 +79,7 @@ const Lessons = () => {
                         {lesson.level}
                       </span>
                     </div>
-                    <p className="font-mandombe text-2xl text-primary/40 mb-2">{lesson.titleMandombe}</p>
+                    <p className="font-mandombe text-4xl text-gold mb-3 group-hover:text-gradient-gold transition-colors">{lesson.titleMandombe}</p>
                     <h2 className="font-display text-xl font-bold text-foreground mb-1 group-hover:text-primary transition-colors">
                       {lesson.title}
                     </h2>
