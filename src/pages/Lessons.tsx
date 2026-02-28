@@ -20,16 +20,18 @@ const Lessons = () => {
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-4">
            <div className="text-center mb-16">
-            <p className="font-mandombe text-6xl md:text-8xl text-gradient-gold mb-6 drop-shadow-lg">Zonza Lari</p>
+            <div className="mb-8">
+              <p className="font-mandombe text-7xl md:text-9xl text-gold mb-2 block">Zonza Lari</p>
+            </div>
             <div className="w-24 h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mb-6" />
-            <p className="text-gold font-body text-sm tracking-[0.3em] uppercase mb-3">
+            <p className="text-gold/70 font-body text-xs tracking-[0.35em] uppercase mb-4">
               Zonza Lari — Lessons
             </p>
-            <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">
+            <h1 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
               Interactive Lessons
             </h1>
-            <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-              Learn Kikongo Lari step by step with vocabulary, conjugation tables, and interactive exercises — all rendered in Mandombe script.
+            <p className="text-muted-foreground max-w-2xl mx-auto text-base">
+              Learn Kikongo Lari step by step with vocabulary, conjugation tables, and interactive exercises.
             </p>
           </div>
 
@@ -50,9 +52,11 @@ const Lessons = () => {
                           {lesson.level}
                         </span>
                       </div>
-                      <p className="font-mandombe text-4xl text-gold/60 mb-3">{lesson.titleMandombe}</p>
-                      <h2 className="font-display text-xl font-bold text-foreground mb-1">{lesson.title}</h2>
-                      <p className="text-primary font-body text-sm italic mb-3">{lesson.titleLari}</p>
+                      <div className="mb-4">
+                        <p className="font-mandombe text-4xl text-gold/60 block">{lesson.titleMandombe}</p>
+                      </div>
+                      <h2 className="font-display text-lg font-bold text-foreground mb-1">{lesson.title}</h2>
+                      <p className="text-primary/70 font-body text-xs italic mb-3">{lesson.titleLari}</p>
                       <p className="text-muted-foreground text-sm leading-relaxed">{lesson.description}</p>
                     </div>
                     <div className="absolute inset-0 bg-earth-deep/50 backdrop-blur-[2px] flex flex-col items-center justify-center rounded-xl">
@@ -79,11 +83,13 @@ const Lessons = () => {
                         {lesson.level}
                       </span>
                     </div>
-                    <p className="font-mandombe text-4xl text-gold mb-3 group-hover:text-gradient-gold transition-colors">{lesson.titleMandombe}</p>
-                    <h2 className="font-display text-xl font-bold text-foreground mb-1 group-hover:text-primary transition-colors">
+                    <div className="mb-4">
+                      <p className="font-mandombe text-4xl text-gold block">{lesson.titleMandombe}</p>
+                    </div>
+                    <h2 className="font-display text-lg font-bold text-foreground mb-1 group-hover:text-primary transition-colors">
                       {lesson.title}
                     </h2>
-                    <p className="text-primary font-body text-sm italic mb-3">{lesson.titleLari}</p>
+                    <p className="text-primary/70 font-body text-xs italic mb-3">{lesson.titleLari}</p>
                     <p className="text-muted-foreground text-sm leading-relaxed">{lesson.description}</p>
                     <div className="mt-4 flex items-center gap-4 text-xs text-muted-foreground">
                       {lesson.vocabulary && <span>{lesson.vocabulary.length} words</span>}
