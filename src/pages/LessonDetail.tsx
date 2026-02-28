@@ -181,6 +181,11 @@ const LessonDetail = () => {
                           <span>🇫🇷 {phrase.french}</span>
                           <span>🇬🇧 {phrase.english}</span>
                         </div>
+                        {phrase.note && (
+                          <p className="mt-2 text-sm italic text-accent-foreground/70 border-t border-border pt-2">
+                            💡 {phrase.note}
+                          </p>
+                        )}
                       </div>
                     ))}
                   </div>

@@ -49,7 +49,7 @@ export interface Lesson {
   icon: string;
   vocabulary?: VocabItem[];
   conjugations?: ConjugationTable[];
-  phrases?: { lari: string; mandombe: string; french: string; english: string }[];
+  phrases?: { lari: string; mandombe: string; french: string; english: string; note?: string }[];
   exercises: Exercise[];
 }
 
@@ -2381,7 +2381,7 @@ export const lessons: Lesson[] = [
     ],
     phrases: [
       { lari: "Bote kena", mandombe: "Bote kena", french: "C'est beau / bon", english: "It is beautiful / good" },
-      { lari: "Bole bantu", mandombe: "Bole bantu", french: "Deux personnes", english: "Two people" },
+      { lari: "Bole bantu", mandombe: "Bole bantu", french: "Deux personnes", english: "Two people", note: "Hidden meaning: it is important to rely on one another — people are not meant to struggle on their own." },
       { lari: "Bondolela Zambi", mandombe: "Bondolela Jambi", french: "Supplier Dieu ardemment", english: "To beg God ardently" },
       { lari: "Boka na bisalu", mandombe: "Boka na bisalu", french: "Prospérer dans le travail", english: "To prosper in work" },
     ],
