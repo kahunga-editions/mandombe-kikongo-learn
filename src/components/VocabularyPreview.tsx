@@ -121,7 +121,7 @@ const categories: VocabCategory[] = [
       { lari: "Miti", french: "Arbres", english: "Trees", portuguese: "Árvores" },
       { lari: "Makaya", french: "Feuilles", english: "Leaves", portuguese: "Folhas" },
       { lari: "Mbuetete", french: "Étoiles", english: "Stars", portuguese: "Estrelas" },
-      { lari: "Luwa", french: "Champignon", english: "Mushroom", portuguese: "Cogumelo" },
+      { lari: "Buwa", french: "Champignon", english: "Mushroom", portuguese: "Cogumelo" },
       { lari: "Bifulu", french: "Fleurs", english: "Flowers", portuguese: "Flores" },
       { lari: "Nlangu", french: "Eau", english: "Water", portuguese: "Água" },
       { lari: "Mvula", french: "Pluie", english: "Rain", portuguese: "Chuva" },
@@ -220,7 +220,7 @@ const VocabularyPreview = () => {
     <section id="vocabulary" className="py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <p className="font-mandombe text-4xl md:text-5xl text-gold mb-6">Mazita</p>
+          <p className="font-mandombe text-5xl md:text-7xl text-gold mb-6">Mazita</p>
           <p className="text-primary font-body text-sm tracking-[0.25em] uppercase mb-3">Mazita — Vocabulary</p>
           <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">Essential Words & Phrases</h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
@@ -246,7 +246,7 @@ const VocabularyPreview = () => {
               <div className="flex items-center gap-6 mb-8 p-6 bg-card rounded-2xl border border-border">
                 <img src={cat.image} alt={cat.label} className="w-20 h-20 md:w-24 md:h-24 rounded-xl object-cover" />
                 <div>
-                  <p className="font-mandombe text-3xl text-gold leading-none mb-4">{cat.lariLabel}</p>
+                  <p className="font-mandombe text-4xl text-gold leading-normal mb-4">{cat.lariLabel}</p>
                   <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground">{cat.lariLabel}</h3>
                   <p className="text-muted-foreground font-body">
                     {cat.label} — {cat.words.length} free words{cat.premiumWords ? ` + ${cat.premiumWords.length} premium` : ""}

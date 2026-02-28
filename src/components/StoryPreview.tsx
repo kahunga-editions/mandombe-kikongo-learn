@@ -19,7 +19,7 @@ const StoryPreview = () => {
     <section id="stories" className="py-24 bg-card">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <p className="font-mandombe text-3xl text-primary/60 mb-4">Binsamu</p>
+          <p className="font-mandombe text-5xl md:text-7xl text-gold mb-6">Binsamu</p>
           <p className="text-primary font-body text-sm tracking-[0.25em] uppercase mb-3">
             Binsamu — Stories
           </p>
@@ -31,8 +31,8 @@ const StoryPreview = () => {
         <div className="max-w-5xl mx-auto">
           {/* Story title card */}
           <div className="bg-earth-deep rounded-t-2xl p-6 md:p-8 border border-border border-b-0">
-            <p className="font-mandombe text-3xl md:text-4xl text-gold/50 mb-4">
-              Nsayi ku nzo mikanda na sangi
+            <p className="font-mandombe text-4xl md:text-6xl text-gold/80 mb-6">
+              Nsayi ku njo mikanda na sangi
             </p>
             <h3 className="font-display text-2xl md:text-3xl font-bold text-gold mb-1">
               Nsayi à l'école et à la forêt
@@ -154,12 +154,12 @@ const StoryPreview = () => {
                     image={storyPanel9}
                     panelNumber={9}
                     layout="left"
-                    mandombe="Kisalu kiyandi kiya tomo zolo: mu bonga bowa, bwa nsempela. Nsempela ya beri na luvunu ya mbote tomo, rangi andi ya weri ya pembe na ngiyelo."
-                    lari="Kisalu kiandi kia tomo zolo: mu bonga bowa, bwa nsempela. Nsempela ya beri na luvunu ya mbote tomo, rangi andi ya weri ya pembe na ngielo."
+                    mandombe="Kisalu kiyandi kiya tomo zolo: mu bonga buwa, bwa nsempela. Nsempela ya beri na luvunu ya mbote tomo, rangi andi ya weri ya pembe na ngiyelo."
+                    lari="Kisalu kiandi kia tomo zolo: mu bonga buwa, bwa nsempela. Nsempela ya beri na luvunu ya mbote tomo, rangi andi ya weri ya pembe na ngielo."
                     french="Son activité préférée : cueillir des champignons, surtout les nsempela orange vif. Les nsempela avaient une saveur unique, un vrai régal."
                     english="Her favorite activity: picking mushrooms, especially the bright orange nsempela. The nsempela had a unique flavor, a true delight."
                     portuguese="A sua atividade preferida: apanhar cogumelos, especialmente os nsempela laranja vivos. Os nsempela tinham um sabor único, uma verdadeira delícia."
-                    mandombeBubble={{ text: "Tala bowa biya nsempela!", latin: "Tala bowa bia nsempela!", speaker: "Sunda" }}
+                    mandombeBubble={{ text: "Tala buwa biya nsempela!", latin: "Tala buwa bia nsempela!", speaker: "Sunda" }}
                   />
 
                   {/* Panel 10 */}
@@ -167,8 +167,8 @@ const StoryPreview = () => {
                     image={storyPanel10}
                     panelNumber={10}
                     layout="wide"
-                    mandombe="Nsempela ya beri bowa ya mbote tomo mu nseke. Luvunu andi ya beri ya nsoni na ya mbote. Konso lumbu ba bongele nsempela, ya beri lujingu ya mbote."
-                    lari="Nsempela ya beri bowa ya mbote tomo mu ntseke. Luvunu andi ya beri ya nsoni na ya mbote. Konso lumbu ba bongele nsempela, ya beri luzingu ya mbote."
+                    mandombe="Nsempela ya beri buwa ya mbote tomo mu nseke. Luvunu andi ya beri ya nsoni na ya mbote. Konso lumbu ba bongele nsempela, ya beri lujingu ya mbote."
+                    lari="Nsempela ya beri buwa ya mbote tomo mu ntseke. Luvunu andi ya beri ya nsoni na ya mbote. Konso lumbu ba bongele nsempela, ya beri luzingu ya mbote."
                     french="Le nsempela était le meilleur champignon de la savane. Sa saveur était douce et délicieuse. Chaque fois qu'on cueillait les nsempela, c'était un plaisir."
                     english="The nsempela was the best mushroom of the savanna. Its flavor was sweet and delicious. Every time they picked nsempela, it was a delight."
                     portuguese="O nsempela era o melhor cogumelo da savana. O seu sabor era doce e delicioso. Cada vez que apanhavam nsempela, era um prazer."
@@ -225,7 +225,7 @@ const StoryPreview = () => {
 
                   {/* Story ending */}
                   <div className="text-center py-6 border-t border-border">
-                    <p className="font-mandombe text-2xl text-primary/40 mb-2">Nsamu wusukidi</p>
+                    <p className="font-mandombe text-3xl text-gold/60 mb-2">Nsamu wusukidi</p>
                     <p className="font-display text-lg text-foreground italic">Fin de l'histoire — The End — Fim da história</p>
                   </div>
                 </div>
