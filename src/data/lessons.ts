@@ -805,7 +805,7 @@ export const lessons: Lesson[] = [
       { lari: "Bulu", mandombe: "Bulu", french: "Trou, fossé", english: "Hole, ditch" },
       { lari: "Buka", mandombe: "Buka", french: "Soigner, traiter", english: "To heal, to treat" },
       { lari: "Kibuki", mandombe: "Kibuki", french: "Médecin", english: "Doctor" },
-      { lari: "Bumpuntu", mandombe: "Bumpuntu", french: "Humanité, bonté", english: "Humanity, goodness" },
+      { lari: "Bumuntu", mandombe: "Bumuntu", french: "Humanité, bonté", english: "Humanity, goodness" },
       { lari: "Bumama", mandombe: "Bumama", french: "Maternité", english: "Motherhood" },
       { lari: "Bumba", mandombe: "Bumba", french: "Embrasser", english: "To embrace" },
       { lari: "Bulunda", mandombe: "Bulunda", french: "Économie", english: "Economy, savings" },
@@ -816,7 +816,7 @@ export const lessons: Lesson[] = [
     ],
     phrases: [
       { lari: "Bote kena", mandombe: "Bote kena", french: "C'est beau / bon", english: "It is beautiful / good" },
-      { lari: "Bumpuntu bua muntu", mandombe: "Bumpuntu bua muntu", french: "L'humanité de l'être humain", english: "The humanity of a human being" },
+      { lari: "Bumuntu bua muntu", mandombe: "Bumuntu bua muntu", french: "L'humanité de l'être humain", english: "The humanity of a human being" },
       { lari: "Bukulu ba kanda", mandombe: "Bukulu ba kanda", french: "Les anciens du clan", english: "The elders of the clan" },
     ],
     exercises: [
@@ -837,8 +837,8 @@ export const lessons: Lesson[] = [
       },
       {
         type: "multiple-choice",
-        question: "What does 'Bumpuntu' mean?",
-        questionMandombe: "Bumpuntu",
+        question: "What does 'Bumuntu' mean?",
+        questionMandombe: "Bumuntu",
         options: ["Childhood", "Humanity, goodness", "Fear", "Savings"],
         correctIndex: 1,
       },
@@ -874,7 +874,7 @@ export const lessons: Lesson[] = [
         type: "fill-in-blank",
         sentence: "___ means 'humanity, goodness' in Kikongo Lari",
         sentenceMandombe: "___",
-        blank: "bumpuntu",
+        blank: "bumuntu",
         hint: "It derives from 'muntu' (human)",
       },
       {
@@ -1576,7 +1576,7 @@ export const lessons: Lesson[] = [
     phrases: [
       { lari: "Bulemvo bua muntu", mandombe: "Bulemvo bua muntu", french: "L'humilité de l'être humain", english: "The humility of a human being" },
       { lari: "Bumputu ka kena kiese ko", mandombe: "Bumputu ka kena kiese ko", french: "La pauvreté n'est pas une joie", english: "Poverty is not a joy" },
-      { lari: "Bumpuntu bua moyo", mandombe: "Bumpuntu bua moyo", french: "La bonté du cœur", english: "The goodness of the heart" },
+      { lari: "Bumuntu bua moyo", mandombe: "Bumuntu bua moyo", french: "La bonté du cœur", english: "The goodness of the heart" },
       { lari: "Budzia kena mu ntima", mandombe: "Budjiya kena mu ntima", french: "La tranquillité est dans le cœur", english: "Tranquility is in the heart" },
     ],
     exercises: [
@@ -1644,7 +1644,7 @@ export const lessons: Lesson[] = [
         pairs: [
           { left: "Bulemvo", right: "Humility" },
           { left: "Bulenga", right: "Laziness" },
-          { left: "Bumpuntu", right: "Humanity" },
+          { left: "Bumuntu", right: "Humanity" },
           { left: "Bumpula", right: "Gluttony" },
           { left: "Budzoki", right: "Perceptiveness" },
         ],
@@ -1675,7 +1675,7 @@ export const lessons: Lesson[] = [
         pairs: [
           { left: "Mputu → Bumputu", right: "Poor → Poverty" },
           { left: "Mwana → Bumpwana", right: "Child → Childhood" },
-          { left: "Muntu → Bumpuntu", right: "Human → Humanity" },
+          { left: "Muntu → Bumuntu", right: "Human → Humanity" },
           { left: "Kumbi → Bukumbi", right: "Virgin → Virginity" },
         ],
       },
