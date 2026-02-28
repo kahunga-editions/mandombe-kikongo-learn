@@ -32,7 +32,7 @@ const StoryPreview = () => {
           {/* Story title card */}
           <div className="bg-earth-deep rounded-t-2xl p-6 md:p-8 border border-border border-b-0">
             <p className="font-mandombe text-4xl md:text-6xl text-gold/80 mb-6">
-              Nsayi ku njo mikanda na sangi
+              Nsayi ku nzo mikanda na sangi
             </p>
             <h3 className="font-display text-2xl md:text-3xl font-bold text-gold mb-1">
               Nsayi à l'école et à la forêt
@@ -62,7 +62,7 @@ const StoryPreview = () => {
                 image={storyPanel2}
                 panelNumber={2}
                 layout="right"
-                mandombe="Nsayi njo mikanda ya ka tomo zolo. Mabuku ma ka zolo mu tanga, weri zolo mpe mu kuwe nsoneka binsamu."
+                mandombe="Nsayi nzo mikanda ya ka tomo zolo. Mabuku ma ka zolo mu tanga, weri zolo mpe mu kuwe nsoneka binsamu."
                 lari="Nsayi nzo mikanda ya ka tomo zolo. Mabuku ma ka zolo mu tanga, weri zolo mpe mu kue tsoneka binsamu."
                 french="Nsayi était une petite fille qui aimait beaucoup l'école. Elle adorait lire des livres et écrire des histoires."
                 english="Nsayi was a little girl who loved school very much. She loved reading books and writing stories."
