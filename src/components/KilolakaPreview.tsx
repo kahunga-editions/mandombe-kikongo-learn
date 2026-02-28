@@ -42,9 +42,9 @@ const KilolakaPreview = () => {
             <div className="space-y-3">
               {[
                 { morpheme: "Bi", meaning: "Inner being" },
-                { morpheme: "Bu", meaning: "Being who begets life" },
-                { morpheme: "Be", meaning: "Being who receives life" },
-                { morpheme: "Bo", meaning: "Ascentional being" },
+                { morpheme: "Bu", meaning: "Being that generates life" },
+                { morpheme: "Be", meaning: "Being that receives" },
+                { morpheme: "Bo", meaning: "Ascending being" },
                 { morpheme: "Ba", meaning: "Manifested being" },
               ].map((item) => (
                 <div key={item.morpheme} className="flex items-center gap-4 bg-cream/5 rounded-lg px-4 py-3">
@@ -69,8 +69,8 @@ const KilolakaPreview = () => {
                 <h3 className="font-display text-xl font-bold text-gold mb-4">F-Series: Rebirth</h3>
                 <div className="space-y-3">
                   {[
-                    { morpheme: "Fi", meaning: "Inner rebirth — hidden renewal" },
-                    { morpheme: "Fu", meaning: "Rebirth that generates" },
+                    { morpheme: "Fi", meaning: "Inner rebirth" },
+                    { morpheme: "Fu", meaning: "Rebirth that generates life" },
                     { morpheme: "Fe", meaning: "Rebirth that receives" },
                     { morpheme: "Fo", meaning: "Ascending rebirth" },
                     { morpheme: "Fa", meaning: "Manifested rebirth" },
@@ -92,9 +92,9 @@ const KilolakaPreview = () => {
                 <h3 className="font-display text-xl font-bold text-gold mb-4">D-Series: Solar Energy & Speed of Light</h3>
                 <div className="space-y-3">
                   {[
-                    { morpheme: "Di", meaning: "Inner solar energy — essence of light" },
-                    { morpheme: "Du", meaning: "Solar energy that creates" },
-                    { morpheme: "De", meaning: "Solar energy that absorbs" },
+                    { morpheme: "Di", meaning: "Inner solar energy" },
+                    { morpheme: "Du", meaning: "Solar energy that generates life" },
+                    { morpheme: "De", meaning: "Solar energy that receives" },
                     { morpheme: "Do", meaning: "Ascending solar energy" },
                     { morpheme: "Da", meaning: "Manifested solar energy" },
                   ].map((item) => (
@@ -115,9 +115,9 @@ const KilolakaPreview = () => {
                 <h3 className="font-display text-xl font-bold text-gold mb-4">G-Series: The Element that Begets Life</h3>
                 <div className="space-y-3">
                   {[
-                    { morpheme: "Gi", meaning: "Inner life element — seed of existence" },
-                    { morpheme: "Gu", meaning: "Life element that begets" },
-                    { morpheme: "Ge", meaning: "Life element that nurtures" },
+                    { morpheme: "Gi", meaning: "Inner life element" },
+                    { morpheme: "Gu", meaning: "Life element that generates life" },
+                    { morpheme: "Ge", meaning: "Life element that receives" },
                     { morpheme: "Go", meaning: "Ascending life element" },
                     { morpheme: "Ga", meaning: "Manifested life element" },
                   ].map((item) => (
