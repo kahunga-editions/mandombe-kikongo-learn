@@ -108,9 +108,10 @@ const LessonDetail = () => {
                         <p className="font-display text-lg font-bold text-foreground">
                           {item.lari}
                         </p>
-                        <div className="flex gap-4 mt-1 text-sm text-muted-foreground">
+                        <div className="flex flex-wrap gap-4 mt-1 text-sm text-muted-foreground">
                           <span>🇫🇷 {item.french}</span>
                           <span>🇬🇧 {item.english}</span>
+                          {item.portuguese && <span>🇵🇹 {item.portuguese}</span>}
                         </div>
                       </div>
                     ))}
@@ -180,6 +181,7 @@ const LessonDetail = () => {
                         <div className="flex flex-col sm:flex-row gap-1 sm:gap-4 mt-1 text-sm text-muted-foreground">
                           <span>🇫🇷 {phrase.french}</span>
                           <span>🇬🇧 {phrase.english}</span>
+                          {phrase.portuguese && <span>🇵🇹 {phrase.portuguese}</span>}
                         </div>
                         {phrase.note && (
                           <p className="mt-2 text-sm italic text-accent-foreground/70 border-t border-border pt-2">
