@@ -16,10 +16,6 @@ const HeroSection = () => {
         <p className="text-gold font-body text-lg tracking-[0.3em] uppercase mb-8 animate-fade-in opacity-0" style={{ animationDelay: "0.2s" }}>
           Nzo Mikanda — The House of Knowledge
         </p>
-        <h1 className="font-display text-5xl md:text-7xl font-bold text-cream mb-6 leading-tight animate-fade-up opacity-0" style={{ animationDelay: "0.4s" }}>
-          Learn Kikongo Lari
-          <span className="block text-gold mt-2">& the Mandombe Script</span>
-        </h1>
         <p className="text-cream/80 text-lg md:text-xl max-w-2xl mx-auto mb-10 font-body leading-relaxed animate-fade-up opacity-0" style={{ animationDelay: "0.6s" }}>
           Discover the sacred language of the Kongo people through vocabulary,
           stories, and the ancestral art of Kilolaka — with translations in
