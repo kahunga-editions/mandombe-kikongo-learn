@@ -1534,9 +1534,9 @@ export const lessons: Lesson[] = [
     icon: "💭",
     vocabulary: [
       { lari: "Budzoki", mandombe: "Budjoki", french: "Être entreprenant, perspicace", english: "Being enterprising, perceptive" },
-      { lari: "Budzia", mandombe: "Budjia", french: "Quiétude, tranquillité", english: "Quietude, tranquility" },
+      { lari: "Budzia", mandombe: "Budjiya", french: "Quiétude, tranquillité", english: "Quietude, tranquility" },
       { lari: "Budzulu", mandombe: "Budjulu", french: "Impatience, hyperactivité", english: "Impatience, hyperactivity" },
-      { lari: "Budzua", mandombe: "Budjua", french: "Découragement, déception", english: "Discouragement, disappointment" },
+      { lari: "Budzua", mandombe: "Budjuwa", french: "Découragement, déception", english: "Discouragement, disappointment" },
       { lari: "Bunsana", mandombe: "Bunsana", french: "Découragement, déception", english: "Discouragement, disappointment" },
       { lari: "Bufioti", mandombe: "Bufioti", french: "Fait d'être étriqué", english: "Being narrow-minded" },
       { lari: "Bufwazi", mandombe: "Bufwazi", french: "Gaspillage", english: "Waste, squandering" },
@@ -1577,7 +1577,7 @@ export const lessons: Lesson[] = [
       { lari: "Bulemvo bua muntu", mandombe: "Bulemvo bua muntu", french: "L'humilité de l'être humain", english: "The humility of a human being" },
       { lari: "Bumputu ka kena kiese ko", mandombe: "Bumputu ka kena kiese ko", french: "La pauvreté n'est pas une joie", english: "Poverty is not a joy" },
       { lari: "Bumpuntu bua moyo", mandombe: "Bumpuntu bua moyo", french: "La bonté du cœur", english: "The goodness of the heart" },
-      { lari: "Budzia kena mu ntima", mandombe: "Budjia kena mu ntima", french: "La tranquillité est dans le cœur", english: "Tranquility is in the heart" },
+      { lari: "Budzia kena mu ntima", mandombe: "Budjiya kena mu ntima", french: "La tranquillité est dans le cœur", english: "Tranquility is in the heart" },
     ],
     exercises: [
       {
@@ -1627,7 +1627,7 @@ export const lessons: Lesson[] = [
       {
         type: "multiple-choice",
         question: "What does 'Budzia' mean?",
-        questionMandombe: "Budjia",
+        questionMandombe: "Budjiya",
         options: ["Chaos", "Quietude, tranquility", "Violence", "Travel"],
         correctIndex: 1,
       },
