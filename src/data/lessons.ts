@@ -511,8 +511,8 @@ export const lessons: Lesson[] = [
       { lari: "Bifu", mandombe: "Bifu", french: "Habitudes", english: "Habits" },
       { lari: "Biba", mandombe: "Biba", french: "Esprits des morts", english: "Spirits of the dead" },
       { lari: "Bika", mandombe: "Bika", french: "Arrêter, permettre", english: "To stop, to allow" },
-      { lari: "Bilongo", mandombe: "Bilongo", french: "Nourriture en général", english: "Food in general" },
-      { lari: "Bidia", mandombe: "Bidia", french: "Médicament", english: "Medicine" },
+      { lari: "Bilongo", mandombe: "Bilongo", french: "Médicaments", english: "Medicine" },
+      { lari: "Bidia", mandombe: "Bidia", french: "Nourriture en général", english: "Food in general" },
       { lari: "Bima", mandombe: "Bima", french: "Choses, outils", english: "Things, tools" },
       { lari: "Bimba", mandombe: "Bimba", french: "Goûter, savourer", english: "To taste, to enjoy food" },
     ],
@@ -525,7 +525,7 @@ export const lessons: Lesson[] = [
         type: "multiple-choice",
         question: "What does 'Bilongo' mean?",
         questionMandombe: "Bilongo",
-        options: ["Medicine", "Spirits", "Food in general", "Habits"],
+        options: ["Food in general", "Spirits", "Medicine", "Habits"],
         correctIndex: 2,
       },
       {
@@ -534,7 +534,7 @@ export const lessons: Lesson[] = [
         pairs: [
           { left: "Bifu", right: "Habits" },
           { left: "Bima", right: "Things, tools" },
-          { left: "Bidia", right: "Medicine" },
+          { left: "Bidia", right: "Food in general" },
           { left: "Bimba", right: "To taste" },
         ],
       },
