@@ -27,7 +27,7 @@ const KilolakaPreview = () => {
               ].map((item) => (
                 <div key={item.syllable} className="flex gap-4 items-start">
                   <div className="min-w-[60px] text-center">
-                    <span className="font-mandombe text-lg text-gold/40 block mb-1">{item.syllable}</span>
+                    <span className="font-mandombe text-3xl text-gold block mb-2">{item.syllable}</span>
                     <span className="font-display text-3xl font-bold text-gold">{item.syllable}</span>
                   </div>
                   <p className="text-cream/80 pt-2 text-sm leading-relaxed">{item.meaning}</p>
@@ -37,7 +37,7 @@ const KilolakaPreview = () => {
           </div>
 
           <div className="bg-cream/5 backdrop-blur rounded-xl p-8 border border-gold/20">
-            <p className="font-mandombe text-xl text-terracotta-light/40 mb-3">B-Series</p>
+            <p className="font-mandombe text-3xl text-terracotta-light mb-4">B-Series</p>
             <h3 className="font-display text-2xl font-bold text-gold mb-6">B-Series: States of Being</h3>
             <div className="space-y-3">
               {[
@@ -49,7 +49,7 @@ const KilolakaPreview = () => {
               ].map((item) => (
                 <div key={item.morpheme} className="flex items-center gap-4 bg-cream/5 rounded-lg px-4 py-3">
                   <div className="min-w-[40px] text-center">
-                    <span className="font-mandombe text-sm text-terracotta-light/40 block mb-1">{item.morpheme}</span>
+                    <span className="font-mandombe text-2xl text-terracotta-light block mb-2">{item.morpheme}</span>
                     <span className="font-display text-xl font-bold text-terracotta-light">{item.morpheme}</span>
                   </div>
                   <p className="text-cream/80 text-sm">{item.meaning}</p>
@@ -65,7 +65,7 @@ const KilolakaPreview = () => {
             <div className="grid md:grid-cols-3 gap-6">
               {/* F-Series */}
               <div className="bg-cream/5 backdrop-blur rounded-xl p-8 border border-gold/20">
-                <p className="font-mandombe text-xl text-gold/40 mb-3">F-Series</p>
+                <p className="font-mandombe text-3xl text-gold mb-4">F-Series</p>
                 <h3 className="font-display text-xl font-bold text-gold mb-4">F-Series: Rebirth</h3>
                 <div className="space-y-3">
                   {[
@@ -77,7 +77,7 @@ const KilolakaPreview = () => {
                   ].map((item) => (
                     <div key={item.morpheme} className="flex items-center gap-3 bg-cream/5 rounded-lg px-3 py-2">
                       <div className="min-w-[40px] text-center">
-                        <span className="font-mandombe text-sm text-gold/40 block mb-1">{item.morpheme}</span>
+                        <span className="font-mandombe text-2xl text-gold block mb-2">{item.morpheme}</span>
                         <span className="font-display text-lg font-bold text-gold">{item.morpheme}</span>
                       </div>
                       <p className="text-cream/80 text-xs">{item.meaning}</p>
@@ -88,7 +88,7 @@ const KilolakaPreview = () => {
 
               {/* D-Series */}
               <div className="bg-cream/5 backdrop-blur rounded-xl p-8 border border-gold/20">
-                <p className="font-mandombe text-xl text-gold/40 mb-3">D-Series</p>
+                <p className="font-mandombe text-3xl text-gold mb-4">D-Series</p>
                 <h3 className="font-display text-xl font-bold text-gold mb-4">D-Series: Solar Energy & Speed of Light</h3>
                 <div className="space-y-3">
                   {[
@@ -100,7 +100,7 @@ const KilolakaPreview = () => {
                   ].map((item) => (
                     <div key={item.morpheme} className="flex items-center gap-3 bg-cream/5 rounded-lg px-3 py-2">
                       <div className="min-w-[40px] text-center">
-                        <span className="font-mandombe text-sm text-gold/40 block mb-1">{item.morpheme}</span>
+                        <span className="font-mandombe text-2xl text-gold block mb-2">{item.morpheme}</span>
                         <span className="font-display text-lg font-bold text-gold">{item.morpheme}</span>
                       </div>
                       <p className="text-cream/80 text-xs">{item.meaning}</p>
@@ -111,7 +111,7 @@ const KilolakaPreview = () => {
 
               {/* G-Series */}
               <div className="bg-cream/5 backdrop-blur rounded-xl p-8 border border-gold/20">
-                <p className="font-mandombe text-xl text-gold/40 mb-3">G-Series</p>
+                <p className="font-mandombe text-3xl text-gold mb-4">G-Series</p>
                 <h3 className="font-display text-xl font-bold text-gold mb-4">G-Series: The Element that Begets Life</h3>
                 <div className="space-y-3">
                   {[
@@ -123,7 +123,7 @@ const KilolakaPreview = () => {
                   ].map((item) => (
                     <div key={item.morpheme} className="flex items-center gap-3 bg-cream/5 rounded-lg px-3 py-2">
                       <div className="min-w-[40px] text-center">
-                        <span className="font-mandombe text-sm text-gold/40 block mb-1">{item.morpheme}</span>
+                        <span className="font-mandombe text-2xl text-gold block mb-2">{item.morpheme}</span>
                         <span className="font-display text-lg font-bold text-gold">{item.morpheme}</span>
                       </div>
                       <p className="text-cream/80 text-xs">{item.meaning}</p>
