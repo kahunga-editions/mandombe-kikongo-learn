@@ -10,7 +10,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-earth-deep/70 via-earth-deep/50 to-earth-deep/90" />
 
       <div className="relative z-10 container mx-auto px-4 text-center max-w-4xl">
-        <p className="font-mandombe text-4xl md:text-6xl text-gold drop-shadow-lg animate-fade-in opacity-0 py-4" style={{ animationDelay: "0.1s", lineHeight: 2.2 }}>
+        <p className="font-mandombe text-3xl md:text-4xl text-gold drop-shadow-lg animate-fade-in opacity-0 py-4" style={{ animationDelay: "0.1s", lineHeight: 2.2 }}>
           Nzo Mikanda
         </p>
         <div className="w-32 h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mt-4 mb-10 animate-fade-in opacity-0" style={{ animationDelay: "0.15s" }} />

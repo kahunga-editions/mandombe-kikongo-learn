@@ -47,7 +47,7 @@ const LessonDetail = () => {
           </Link>
 
           <div className="mb-8">
-            <p className="font-mandombe text-6xl text-gold mb-4">{lesson.titleMandombe}</p>
+            <p className="font-mandombe text-3xl md:text-4xl text-gold mb-4">{lesson.titleMandombe}</p>
             <div className="flex items-center gap-3 mb-2">
               <span className="text-4xl">{lesson.icon}</span>
               <h1 className="font-display text-3xl md:text-4xl font-bold text-foreground">

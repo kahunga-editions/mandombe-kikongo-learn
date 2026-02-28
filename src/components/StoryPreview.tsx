@@ -19,7 +19,7 @@ const StoryPreview = () => {
     <section id="stories" className="py-24 bg-card">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <p className="font-mandombe text-5xl md:text-7xl text-gold mb-6">Binsamu</p>
+          <p className="font-mandombe text-3xl md:text-4xl text-gold mb-6">Binsamu</p>
           <p className="text-primary font-body text-sm tracking-[0.25em] uppercase mb-3">
             Binsamu — Stories
           </p>
@@ -31,7 +31,7 @@ const StoryPreview = () => {
         <div className="max-w-5xl mx-auto">
           {/* Story title card */}
           <div className="bg-earth-deep rounded-t-2xl p-6 md:p-8 border border-border border-b-0">
-            <p className="font-mandombe text-4xl md:text-6xl text-gold/80 mb-6">
+            <p className="font-mandombe text-2xl md:text-3xl text-gold/80 mb-6">
               Nsayi ku nzo mikanda na sangi
             </p>
             <h3 className="font-display text-2xl md:text-3xl font-bold text-gold mb-1">

@@ -21,7 +21,7 @@ const Lessons = () => {
         <div className="container mx-auto px-4">
            <div className="text-center mb-16">
             <div className="mb-8">
-              <p className="font-mandombe text-7xl md:text-9xl text-gold mb-2 block">Zonza Lari</p>
+              <p className="font-mandombe text-3xl md:text-4xl text-gold mb-2 block">Zonza Lari</p>
             </div>
             <div className="w-24 h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mb-6" />
             <p className="text-gold/70 font-body text-xs tracking-[0.35em] uppercase mb-4">
@@ -53,7 +53,7 @@ const Lessons = () => {
                         </span>
                       </div>
                       <div className="mb-4">
-                        <p className="font-mandombe text-4xl text-gold/60 block">{lesson.titleMandombe}</p>
+                        <p className="font-mandombe text-2xl text-gold/60 block">{lesson.titleMandombe}</p>
                       </div>
                       <h2 className="font-display text-lg font-bold text-foreground mb-1">{lesson.title}</h2>
                       <p className="text-primary/70 font-body text-xs italic mb-3">{lesson.titleLari}</p>
@@ -84,7 +84,7 @@ const Lessons = () => {
                       </span>
                     </div>
                     <div className="mb-4">
-                      <p className="font-mandombe text-4xl text-gold block">{lesson.titleMandombe}</p>
+                      <p className="font-mandombe text-2xl text-gold block">{lesson.titleMandombe}</p>
                     </div>
                     <h2 className="font-display text-lg font-bold text-foreground mb-1 group-hover:text-primary transition-colors">
                       {lesson.title}
