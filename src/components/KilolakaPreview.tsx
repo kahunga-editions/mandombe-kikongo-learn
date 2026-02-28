@@ -37,7 +37,6 @@ const KilolakaPreview = () => {
           </div>
 
           <div className="bg-cream/5 backdrop-blur rounded-xl p-8 border border-gold/20">
-            <p className="font-mandombe text-3xl text-terracotta-light mb-4">B-Series</p>
             <h3 className="font-display text-2xl font-bold text-gold mb-6">B-Series: States of Being</h3>
             <div className="space-y-3">
               {[
@@ -65,7 +64,6 @@ const KilolakaPreview = () => {
             <div className="grid md:grid-cols-3 gap-6">
               {/* F-Series */}
               <div className="bg-cream/5 backdrop-blur rounded-xl p-8 border border-gold/20">
-                <p className="font-mandombe text-3xl text-gold mb-4">F-Series</p>
                 <h3 className="font-display text-xl font-bold text-gold mb-4">F-Series: Rebirth</h3>
                 <div className="space-y-3">
                   {[
@@ -88,7 +86,6 @@ const KilolakaPreview = () => {
 
               {/* D-Series */}
               <div className="bg-cream/5 backdrop-blur rounded-xl p-8 border border-gold/20">
-                <p className="font-mandombe text-3xl text-gold mb-4">D-Series</p>
                 <h3 className="font-display text-xl font-bold text-gold mb-4">D-Series: Solar Energy & Speed of Light</h3>
                 <div className="space-y-3">
                   {[
@@ -111,7 +108,6 @@ const KilolakaPreview = () => {
 
               {/* G-Series */}
               <div className="bg-cream/5 backdrop-blur rounded-xl p-8 border border-gold/20">
-                <p className="font-mandombe text-3xl text-gold mb-4">G-Series</p>
                 <h3 className="font-display text-xl font-bold text-gold mb-4">G-Series: The Element that Begets Life</h3>
                 <div className="space-y-3">
                   {[
