@@ -1533,10 +1533,10 @@ export const lessons: Lesson[] = [
     level: "advanced",
     icon: "💭",
     vocabulary: [
-      { lari: "Budzoki", mandombe: "Budzoki", french: "Être entreprenant, perspicace", english: "Being enterprising, perceptive" },
-      { lari: "Budzia", mandombe: "Budzia", french: "Quiétude, tranquillité", english: "Quietude, tranquility" },
-      { lari: "Budzulu", mandombe: "Budzulu", french: "Impatience, hyperactivité", english: "Impatience, hyperactivity" },
-      { lari: "Budzua", mandombe: "Budzua", french: "Découragement, déception", english: "Discouragement, disappointment" },
+      { lari: "Budzoki", mandombe: "Budjoki", french: "Être entreprenant, perspicace", english: "Being enterprising, perceptive" },
+      { lari: "Budzia", mandombe: "Budjia", french: "Quiétude, tranquillité", english: "Quietude, tranquility" },
+      { lari: "Budzulu", mandombe: "Budjulu", french: "Impatience, hyperactivité", english: "Impatience, hyperactivity" },
+      { lari: "Budzua", mandombe: "Budjua", french: "Découragement, déception", english: "Discouragement, disappointment" },
       { lari: "Bunsana", mandombe: "Bunsana", french: "Découragement, déception", english: "Discouragement, disappointment" },
       { lari: "Bufioti", mandombe: "Bufioti", french: "Fait d'être étriqué", english: "Being narrow-minded" },
       { lari: "Bufwazi", mandombe: "Bufwazi", french: "Gaspillage", english: "Waste, squandering" },
@@ -1567,8 +1567,8 @@ export const lessons: Lesson[] = [
       { lari: "Buke", mandombe: "Buke", french: "Très petit, peu, minuscule", english: "Very small, little, tiny" },
       { lari: "Budulu", mandombe: "Budulu", french: "Bêtise, idiotie, stupidité", english: "Stupidity, foolishness" },
       { lari: "Bubulu", mandombe: "Bubulu", french: "Fait d'être benêt, idiot", english: "Being foolish, idiotic" },
-      { lari: "Budzabu", mandombe: "Budzabu", french: "Maîtrise", english: "Mastery, control" },
-      { lari: "Budzakatare", mandombe: "Budzakatare", french: "Humidité, fraîcheur", english: "Humidity, freshness" },
+      { lari: "Budzabu", mandombe: "Budjabu", french: "Maîtrise", english: "Mastery, control" },
+      { lari: "Budzakata", mandombe: "Budjakata", french: "Humidité, fraîcheur", english: "Humidity, freshness" },
       { lari: "Buma", mandombe: "Buma", french: "Argile, terre arable", english: "Clay, arable land" },
       { lari: "Bulu", mandombe: "Bulu", french: "Trou, fossé, creux", english: "Hole, ditch, hollow" },
       { lari: "Bula", mandombe: "Bula", french: "Casser, jouer", english: "To break, to play" },
@@ -1577,7 +1577,7 @@ export const lessons: Lesson[] = [
       { lari: "Bulemvo bua muntu", mandombe: "Bulemvo bua muntu", french: "L'humilité de l'être humain", english: "The humility of a human being" },
       { lari: "Bumputu ka kena kiese ko", mandombe: "Bumputu ka kena kiese ko", french: "La pauvreté n'est pas une joie", english: "Poverty is not a joy" },
       { lari: "Bumpuntu bua moyo", mandombe: "Bumpuntu bua moyo", french: "La bonté du cœur", english: "The goodness of the heart" },
-      { lari: "Budzia kena mu ntima", mandombe: "Budzia kena mu ntima", french: "La tranquillité est dans le cœur", english: "Tranquility is in the heart" },
+      { lari: "Budzia kena mu ntima", mandombe: "Budjia kena mu ntima", french: "La tranquillité est dans le cœur", english: "Tranquility is in the heart" },
     ],
     exercises: [
       {
@@ -1598,7 +1598,7 @@ export const lessons: Lesson[] = [
       {
         type: "multiple-choice",
         question: "What does 'Budzoki' mean?",
-        questionMandombe: "Budzoki",
+        questionMandombe: "Budjoki",
         options: ["Being lazy", "Being enterprising, perceptive", "Being afraid", "Being old"],
         correctIndex: 1,
       },
@@ -1627,7 +1627,7 @@ export const lessons: Lesson[] = [
       {
         type: "multiple-choice",
         question: "What does 'Budzia' mean?",
-        questionMandombe: "Budzia",
+        questionMandombe: "Budjia",
         options: ["Chaos", "Quietude, tranquility", "Violence", "Travel"],
         correctIndex: 1,
       },
