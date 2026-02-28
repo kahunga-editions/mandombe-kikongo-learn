@@ -2061,7 +2061,7 @@ export const lessons: Lesson[] = [
     ],
     phrases: [
       { lari: "Nzo ka biadila", mandombe: "Nzo ka biyadila", french: "Il a hérité la maison", english: "He inherited the house" },
-      { lari: "Biala kinganga kia Zambi", mandombe: "Biyala kinganga kiya Zambi", french: "Devenir prêtre", english: "To become a priest" },
+      { lari: "Biala kinganga kia Nzambi", mandombe: "Biyala kinganga kiya Nzambi", french: "Devenir prêtre", english: "To become a priest" },
       { lari: "Biangula nkumbu aku", mandombe: "Biyangula nkumbu aku", french: "Appelle ton nom à voix haute", english: "Call out your name loudly" },
     ],
     exercises: [
@@ -2382,7 +2382,7 @@ export const lessons: Lesson[] = [
     phrases: [
       { lari: "Bote kena", mandombe: "Bote kena", french: "C'est beau / bon", english: "It is beautiful / good" },
       { lari: "Bole bantu", mandombe: "Bole bantu", french: "Deux personnes", english: "Two people", note: "Hidden meaning: it is important to rely on one another — people are not meant to struggle on their own." },
-      { lari: "Bondolela Zambi", mandombe: "Bondolela Zambi", french: "Supplier Dieu ardemment", english: "To beg God ardently" },
+      { lari: "Bondolela Nzambi", mandombe: "Bondolela Nzambi", french: "Supplier Dieu ardemment", english: "To beg God ardently" },
       { lari: "Boka na bisalu", mandombe: "Boka na bisalu", french: "Prospérer dans le travail", english: "To prosper in work" },
     ],
     exercises: [
@@ -2494,7 +2494,7 @@ export const lessons: Lesson[] = [
       { lari: "Bunsonga bua muntu", mandombe: "Bunsonga buwa muntu", french: "La sagesse de l'être humain", english: "The wisdom of a human being" },
       { lari: "Buntuadi bua kanda", mandombe: "Buntuadi buwa kanda", french: "L'union du clan", english: "The union of the clan" },
       { lari: "Buntoko bua ntoko", mandombe: "Buntoko buwa ntoko", french: "La beauté de la jeunesse", english: "The beauty of youth" },
-      { lari: "Bunene bua Zambi", mandombe: "Bunene buwa Zambi", french: "La grandeur de Dieu", english: "The greatness of God" },
+      { lari: "Bunene bua Nzambi", mandombe: "Bunene buwa Nzambi", french: "La grandeur de Dieu", english: "The greatness of God" },
     ],
     exercises: [
       {

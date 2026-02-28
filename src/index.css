@@ -128,9 +128,9 @@
   }
 
   .font-mandombe {
-    line-height: 1.6;
+    line-height: 1.8;
     overflow: visible;
-    padding-top: 0.15em;
-    padding-bottom: 0.15em;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
   }
 }
