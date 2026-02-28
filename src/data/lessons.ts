@@ -1552,7 +1552,7 @@ export const lessons: Lesson[] = [
       { lari: "Bulunda", mandombe: "Bulunda", french: "Économie", english: "Economy, savings" },
       { lari: "Bulungi", mandombe: "Bulungi", french: "Anniversaire, fête en mémoire", english: "Anniversary, memorial feast" },
       { lari: "Bumbangi", mandombe: "Bumbangi", french: "Témoignage", english: "Testimony, witness" },
-      { lari: "Bumbaqui", mandombe: "Bumbaqui", french: "Fraude, escroquerie", english: "Fraud, swindle" },
+      { lari: "Bumbaki", mandombe: "Bumbaki", french: "Fraude, escroquerie", english: "Fraud, swindle" },
       { lari: "Bumbanda", mandombe: "Bumbanda", french: "Fait d'être coépouse (polygamie)", english: "Being a co-wife (polygamy)" },
       { lari: "Bumpofo", mandombe: "Bumpofo", french: "Lourdeur, paresse, mollesse", english: "Heaviness, laziness" },
       { lari: "Bumpoto", mandombe: "Bumpoto", french: "Oisiveté, fainéantise", english: "Idleness, laziness" },
