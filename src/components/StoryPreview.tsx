@@ -50,7 +50,7 @@ const StoryPreview = () => {
                 image={storyPanel1}
                 panelNumber={1}
                 layout="wide"
-                mandombe="Lumbu tshi moshi, mu ntangu ya ntama, ku nsi ya Kongo, muana n'Kento beri ta nkumbu Nsayi na ndiku'andi Sunda."
+                mandombe="Lumbu tshi moshi, mu ntangu ya ntama, ku nsi ya Kongo, muwana n'Kento beri ta nkumbu Nsayi na ndiku'andi Sunda."
                 lari="Lumbu tshi moshi, mu ntangu ya ntama, ku nsi ya Kongo, muana n'Kento beri ta nkumbu Nsayi na ndiku'andi Sunda."
                 french="Il était une fois, dans le Kongo, il y a très longtemps, une petite fille nommée Nsayi et sa meilleure amie Sunda."
                 english="Once upon a time, in the Kongo, long ago, a little girl named Nsayi and her best friend Sunda."
@@ -62,7 +62,7 @@ const StoryPreview = () => {
                 image={storyPanel2}
                 panelNumber={2}
                 layout="right"
-                mandombe="Nsayi nzo mikanda ya ka tomo zolo. Mabuku ma ka zolo mu tanga, weri zolo mpe mu kue nsoneka binsamu."
+                mandombe="Nsayi njo mikanda ya ka tomo zolo. Mabuku ma ka zolo mu tanga, weri zolo mpe mu kuwe nsoneka binsamu."
                 lari="Nsayi nzo mikanda ya ka tomo zolo. Mabuku ma ka zolo mu tanga, weri zolo mpe mu kue tsoneka binsamu."
                 french="Nsayi était une petite fille qui aimait beaucoup l'école. Elle adorait lire des livres et écrire des histoires."
                 english="Nsayi was a little girl who loved school very much. She loved reading books and writing stories."
@@ -74,7 +74,7 @@ const StoryPreview = () => {
                 image={storyPanel3}
                 panelNumber={3}
                 layout="left"
-                mandombe="Ka wa yoka malonguki, ka nsoneka mu kaye kandi. Ka zolo tomo mu longa bintu bia mpa."
+                mandombe="Ka wa yoka malonguki, ka nsoneka mu kaye kandi. Ka zolo tomo mu longa bintu biya mpa."
                 lari="Ka wa yoka malonguki, ka tsoneka mu kaye kandi. Ka zolo tomo mu longa bintu bia mpa."
                 french="Elle écoutait ses professeurs, prenait des notes dans son cahier. Elle aimait beaucoup apprendre de nouvelles choses."
                 english="She listened to her teachers, took notes in her notebook. She loved learning new things."
@@ -91,7 +91,7 @@ const StoryPreview = () => {
                     image={storyPanel4}
                     panelNumber={4}
                     layout="wide"
-                    mandombe="Mu ntangu ya ntama, bantu ba beri tanga ntangu na nta'ntangu. Ba beri tala kisembi kia muntu mu zaba ntangu."
+                    mandombe="Mu ntangu ya ntama, bantu ba beri tanga ntangu na nta'ntangu. Ba beri tala kisembi kiya muntu mu zaba ntangu."
                     lari="Mu ntangu ya ntama, bantu ba beri tanga ntangu na nta'ntangu. Ba beri tala kisembi kia muntu mu zaba ntangu."
                     french="Dans le temps ancien, les gens lisaient l'heure avec le soleil. Ils regardaient l'ombre d'une personne pour connaître l'heure."
                     english="In the old days, people told time by the sun. They looked at a person's shadow to know the time."
@@ -104,7 +104,7 @@ const StoryPreview = () => {
                     image={storyPanel5}
                     panelNumber={5}
                     layout="right"
-                    mandombe="Nsayi ka nsonekanga binsamu mu kaye kandi. Ka vandaka ntangu ya nene mu tanga na mu nsoneka. Ka sepelaka tomo mu kaba binsamu biandi na bandiku'andi."
+                    mandombe="Nsayi ka nsonekanga binsamu mu kaye kandi. Ka vandaka ntangu ya nene mu tanga na mu nsoneka. Ka sepelaka tomo mu kaba binsamu biyandi na bandiku'andi."
                     lari="Nsayi ka tsonekanga binsamu mu kaye kandi. Ka vandaka ntangu ya nene mu tanga na mu tsoneka. Ka sepelaka tomo mu kaba binsamu biandi na bandiku'andi."
                     french="Nsayi écrivait des histoires dans son cahier. Elle passait des heures à lire et à écrire. Elle aimait beaucoup partager ses histoires avec ses amis."
                     english="Nsayi wrote stories in her notebook. She spent hours reading and writing. She loved sharing her stories with her friends."
@@ -129,7 +129,7 @@ const StoryPreview = () => {
                     image={storyPanel7}
                     panelNumber={7}
                     layout="wide"
-                    mandombe="Nsayi ka lota mu kituka nganga. Ka zolele mu buka bana ba vata diandi. Ndoto andi ya weri nene tomo."
+                    mandombe="Nsayi ka lota mu kituka nganga. Ka zolele mu buka bana ba vata diyandi. Ndoto andi ya weri nene tomo."
                     lari="Nsayi ka lota mu kituka nganga. Ka zolele mu buka bana ba vata diandi. Ndoto andi ya weri nene tomo."
                     french="Nsayi rêvait de devenir médecin. Elle voulait soigner les enfants de son village. Son rêve était très grand."
                     english="Nsayi dreamed of becoming a doctor. She wanted to heal the children of her village. Her dream was very big."
@@ -142,7 +142,7 @@ const StoryPreview = () => {
                     image={storyPanel8}
                     panelNumber={8}
                     layout="right"
-                    mandombe="Nsayi na Sunda ba zolele mu kwenda ku nseke. Nseke ya beri na bintu bia mbote — miti, bifulu, na binyama."
+                    mandombe="Nsayi na Sunda ba zolele mu kwenda ku nseke. Nseke ya beri na bintu biya mbote — miti, bifulu, na binyama."
                     lari="Nsayi na Sunda ba zolele mu kwenda ku ntseke. Ntseke ya beri na bintu bia mbote — miti, bifulu, na binyama."
                     french="Nsayi et Sunda aimaient aller dans la savane. La savane était pleine de belles choses — des arbres, des fleurs et des animaux."
                     english="Nsayi and Sunda loved going to the savanna. The savanna was full of beautiful things — trees, flowers, and animals."
@@ -154,7 +154,7 @@ const StoryPreview = () => {
                     image={storyPanel9}
                     panelNumber={9}
                     layout="left"
-                    mandombe="Kisalu kiandi kiya tomo zolo: mu bonga bowa, bwa nsempela. Nsempela ya beri na luvunu ya mbote tomo, rangi andi ya weri ya pembe na ngielo."
+                    mandombe="Kisalu kiyandi kiya tomo zolo: mu bonga bowa, bwa nsempela. Nsempela ya beri na luvunu ya mbote tomo, rangi andi ya weri ya pembe na ngiyelo."
                     lari="Kisalu kiandi kia tomo zolo: mu bonga bowa, bwa nsempela. Nsempela ya beri na luvunu ya mbote tomo, rangi andi ya weri ya pembe na ngielo."
                     french="Son activité préférée : cueillir des champignons, surtout les nsempela orange vif. Les nsempela avaient une saveur unique, un vrai régal."
                     english="Her favorite activity: picking mushrooms, especially the bright orange nsempela. The nsempela had a unique flavor, a true delight."
@@ -179,7 +179,7 @@ const StoryPreview = () => {
                     image={storyPanel11}
                     panelNumber={11}
                     layout="right"
-                    mandombe="Ba bongele mpe ma mbuma na ndunda mu nseke. Mu ntangu ya mvula, nseke ya beri na bintu bia nene — ma mbuma na ndunda biya ya ntangu."
+                    mandombe="Ba bongele mpe ma mbuma na ndunda mu nseke. Mu ntangu ya mvula, nseke ya beri na bintu biya nene — ma mbuma na ndunda biya ya ntangu."
                     lari="Ba bongele mpe ma mbuma na ndunda mu ntseke. Mu ntangu ya mvula, ntseke ya beri na bintu bia nene — ma mbuma na ndunda bia ya ntangu."
                     french="Elles cueillaient aussi des fruits et des légumes dans la savane. Pendant la saison des pluies, la savane offrait des fruits et légumes de saison."
                     english="They also picked fruits and vegetables in the savanna. During the rainy season, the savanna offered seasonal fruits and vegetables."
@@ -216,7 +216,7 @@ const StoryPreview = () => {
                     image={storyPanel14}
                     panelNumber={14}
                     layout="wide"
-                    mandombe="Nsayi ka kabanga bintu bionso na bandiku'andi. Ka sepelaka tomo mu kaba bilei na binsamu na bantu ba beri pena na yandi."
+                    mandombe="Nsayi ka kabanga bintu biyonso na bandiku'andi. Ka sepelaka tomo mu kaba bileyi na binsamu na bantu ba beri pena na yandi."
                     lari="Nsayi ka kabanga bintu bionso na bandiku'andi. Ka sepelaka tomo mu kaba bilei na binsamu na bantu ba beri pena na yandi."
                     french="Nsayi partageait tout avec ses amis. Elle aimait partager la nourriture et les histoires avec les gens proches d'elle."
                     english="Nsayi shared everything with her friends. She loved sharing food and stories with the people close to her."
