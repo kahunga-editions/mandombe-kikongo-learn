@@ -133,7 +133,7 @@ export const lessons: Lesson[] = [
       { lari: "Matondo", mandombe: "Matondo", french: "Merci", english: "Thank you", portuguese: "Obrigado/a" },
       { lari: "Ntondele", mandombe: "Ntondele", french: "Je te remercie", english: "I thank you", portuguese: "Eu te agradeço" },
       { lari: "Ntondele bua buingi", mandombe: "Ntondele buwa buingi", french: "Je te remercie beaucoup", english: "I thank you very much", portuguese: "Agradeço-te muito" },
-      { lari: "Matondo kua nzambi", mandombe: "Matondo kuwa njambi", french: "Je te remercie infiniment", english: "Thank you from the bottom of my heart", portuguese: "Agradeço do fundo do coração" },
+      { lari: "Matondo kua nzambi", mandombe: "Matondo kuwa nzambi", french: "Je te remercie infiniment", english: "Thank you from the bottom of my heart", portuguese: "Agradeço do fundo do coração" },
     ],
     conjugations: [
       {
@@ -449,7 +449,7 @@ export const lessons: Lesson[] = [
     id: "house-activities",
     title: "House Activities — Bisalu bia mu Nzo",
     titleLari: "Bisalu bia mu Nzo",
-    titleMandombe: "Bisalu biya mu Njo",
+    titleMandombe: "Bisalu biya mu Nzo",
     description: "Learn vocabulary and sentences about daily house activities: cooking, cutting, preparing, reading, and going to work.",
     level: "intermediate",
     icon: "🏠",
@@ -535,7 +535,7 @@ export const lessons: Lesson[] = [
       { lari: "Biampamba", mandombe: "Biyampamba", french: "Les choses, les biens", english: "Things, goods" },
       { lari: "Bianga", mandombe: "Biyanga", french: "Appeler, convoquer", english: "To call, to summon" },
       { lari: "Biangulu", mandombe: "Biyangulu", french: "Appel", english: "A call" },
-      { lari: "Bibanzulu", mandombe: "Bibanjulu", french: "Les pensées, les soupçons", english: "Thoughts, suspicions" },
+      { lari: "Bibanzulu", mandombe: "Bibanzulu", french: "Les pensées, les soupçons", english: "Thoughts, suspicions" },
       { lari: "Bibindulu", mandombe: "Bibindulu", french: "Pardon", english: "Forgiveness" },
       { lari: "Biala", mandombe: "Biyala", french: "Être consacré, couronné", english: "To be consecrated, crowned" },
       { lari: "Biadisa", mandombe: "Biyadisa", french: "Couronner, investir", english: "To crown, to invest" },
@@ -545,7 +545,7 @@ export const lessons: Lesson[] = [
     ],
     phrases: [
       { lari: "Bi signifie la multiplication de l'etre interieur", mandombe: "Bi", french: "/bi/ signifie la multiplication de l'être intérieur", english: "/bi/ means the multiplication of the inner being" },
-      { lari: "Nzo ka biadila", mandombe: "Njo ka biyadila", french: "Il a hérité la maison", english: "He inherited the house" },
+      { lari: "Nzo ka biadila", mandombe: "Nzo ka biyadila", french: "Il a hérité la maison", english: "He inherited the house" },
       { lari: "Beno ngatu, lu zumese, mababa", mandombe: "Beno ngatu, lu zumese, mababa", french: "Vous risqueriez de faire parler les muets", english: "You would risk making the mute speak — don't test our patience" },
     ],
     exercises: [
@@ -2056,12 +2056,12 @@ export const lessons: Lesson[] = [
       { lari: "Biangulu", mandombe: "Biyangulu", french: "Appel", english: "A call, summons" },
       { lari: "Biangusu", mandombe: "Biyangusu", french: "Appeler, choisir, être élu, accepter", english: "To call, to choose, to be elected" },
       { lari: "Biampamba", mandombe: "Biyampamba", french: "Les choses, les biens", english: "Things, possessions, goods" },
-      { lari: "Bibanzulu", mandombe: "Bibanjulu", french: "Les pensées, les soupçons", english: "Thoughts, suspicions" },
+      { lari: "Bibanzulu", mandombe: "Bibanzulu", french: "Les pensées, les soupçons", english: "Thoughts, suspicions" },
       { lari: "Bibindulu", mandombe: "Bibindulu", french: "Pardon", english: "Forgiveness, pardon" },
     ],
     phrases: [
-      { lari: "Nzo ka biadila", mandombe: "Njo ka biyadila", french: "Il a hérité la maison", english: "He inherited the house" },
-      { lari: "Biala kinganga kia Zambi", mandombe: "Biyala kinganga kiya Jambi", french: "Devenir prêtre", english: "To become a priest" },
+      { lari: "Nzo ka biadila", mandombe: "Nzo ka biyadila", french: "Il a hérité la maison", english: "He inherited the house" },
+      { lari: "Biala kinganga kia Zambi", mandombe: "Biyala kinganga kiya Zambi", french: "Devenir prêtre", english: "To become a priest" },
       { lari: "Biangula nkumbu aku", mandombe: "Biyangula nkumbu aku", french: "Appelle ton nom à voix haute", english: "Call out your name loudly" },
     ],
     exercises: [
@@ -2382,7 +2382,7 @@ export const lessons: Lesson[] = [
     phrases: [
       { lari: "Bote kena", mandombe: "Bote kena", french: "C'est beau / bon", english: "It is beautiful / good" },
       { lari: "Bole bantu", mandombe: "Bole bantu", french: "Deux personnes", english: "Two people", note: "Hidden meaning: it is important to rely on one another — people are not meant to struggle on their own." },
-      { lari: "Bondolela Zambi", mandombe: "Bondolela Jambi", french: "Supplier Dieu ardemment", english: "To beg God ardently" },
+      { lari: "Bondolela Zambi", mandombe: "Bondolela Zambi", french: "Supplier Dieu ardemment", english: "To beg God ardently" },
       { lari: "Boka na bisalu", mandombe: "Boka na bisalu", french: "Prospérer dans le travail", english: "To prosper in work" },
     ],
     exercises: [
@@ -2464,13 +2464,13 @@ export const lessons: Lesson[] = [
     id: "bu-social-spiritual",
     title: "Social & Spiritual Life — Bu Series",
     titleLari: "Buntuadi na Bunzambi",
-    titleMandombe: "Buntuadi na Bunjambi",
+    titleMandombe: "Buntuadi na Bunzambi",
     description: "Explore advanced Bu- concepts for social bonds, spirituality, character traits, and community life from the Kilari dictionary.",
     level: "advanced" as const,
     icon: "🕊️",
     vocabulary: [
       { lari: "Buntuadi", mandombe: "Buntuadi", french: "Alliance, entente, union communautaire", english: "Alliance, agreement, communal union" },
-      { lari: "Bunzambi", mandombe: "Bunjambi", french: "Déité, divinité; comportement pieux", english: "Deity, divinity; pious behavior" },
+      { lari: "Bunzambi", mandombe: "Bunzambi", french: "Déité, divinité; comportement pieux", english: "Deity, divinity; pious behavior" },
       { lari: "Bunsonga", mandombe: "Bunsonga", french: "Sagesse, bon sens, bonne éducation", english: "Wisdom, good sense, good upbringing" },
       { lari: "Bunsunga", mandombe: "Bunsunga", french: "Intelligence, valeur humaine", english: "Intelligence, human value" },
       { lari: "Bunsompi", mandombe: "Bunsompi", french: "Habitude d'emprunter, dénuement", english: "Habit of borrowing, destitution" },
@@ -2494,7 +2494,7 @@ export const lessons: Lesson[] = [
       { lari: "Bunsonga bua muntu", mandombe: "Bunsonga buwa muntu", french: "La sagesse de l'être humain", english: "The wisdom of a human being" },
       { lari: "Buntuadi bua kanda", mandombe: "Buntuadi buwa kanda", french: "L'union du clan", english: "The union of the clan" },
       { lari: "Buntoko bua ntoko", mandombe: "Buntoko buwa ntoko", french: "La beauté de la jeunesse", english: "The beauty of youth" },
-      { lari: "Bunene bua Zambi", mandombe: "Bunene buwa Jambi", french: "La grandeur de Dieu", english: "The greatness of God" },
+      { lari: "Bunene bua Zambi", mandombe: "Bunene buwa Zambi", french: "La grandeur de Dieu", english: "The greatness of God" },
     ],
     exercises: [
       {
@@ -2752,7 +2752,7 @@ export const lessons: Lesson[] = [
     ],
     phrases: [
       { lari: "Hana mono mamba", mandombe: "Hana mono mamba", french: "Donne-moi de l'eau", english: "Give me water" },
-      { lari: "Hambana bua nzila", mandombe: "Hambana bua njila", french: "Se séparer au carrefour", english: "To part ways at the crossroads" },
+      { lari: "Hambana bua nzila", mandombe: "Hambana buwa nzila", french: "Se séparer au carrefour", english: "To part ways at the crossroads" },
       { lari: "Hangama na ntima", mandombe: "Hangama na ntima", french: "Se tenir ferme de cœur", english: "To stand firm in one's heart", note: "Expresses inner resolve and courage — a warrior's mindset." },
       { lari: "Hata ya bakulu", mandombe: "Hata ya bakulu", french: "Le village des ancêtres", english: "The village of the ancestors" },
     ],
@@ -2837,7 +2837,7 @@ export const lessons: Lesson[] = [
     phrases: [
       { lari: "Kaba biloko na bantu", mandombe: "Kaba biloko na bantu", french: "Partager les choses avec les gens", english: "Share things with the people" },
       { lari: "Kanda ya bakulu", mandombe: "Kanda ya bakulu", french: "La famille des ancêtres", english: "The ancestral family", note: "Kanda is the matrilineal clan — the core social unit of Kongo society." },
-      { lari: "Kanga nzo", mandombe: "Kanga njo", french: "Fermer la maison", english: "Close the house" },
+      { lari: "Kanga nzo", mandombe: "Kanga nzo", french: "Fermer la maison", english: "Close the house" },
       { lari: "Kalanga mbisi", mandombe: "Kalanga mbisi", french: "Griller le poisson", english: "Grill the fish" },
     ],
     exercises: [
@@ -2940,10 +2940,10 @@ export const lessons: Lesson[] = [
       { lari: "Kuenda", mandombe: "Kuwenda", french: "Aller, partir", english: "To go, to leave" },
     ],
     phrases: [
-      { lari: "Kula na nzala", mandombe: "Kula na njala", french: "Grandir dans la faim", english: "To grow up in hunger" },
-      { lari: "Kuela na luzolo", mandombe: "Kuwela na lujolo", french: "Se marier par amour", english: "To marry for love" },
-      { lari: "Kuenda na nzila", mandombe: "Kuwenda na njila", french: "Aller sur le chemin", english: "To go on the road" },
-      { lari: "Komba nzo", mandombe: "Komba njo", french: "Balayer la maison", english: "Sweep the house" },
+      { lari: "Kula na nzala", mandombe: "Kula na nzala", french: "Grandir dans la faim", english: "To grow up in hunger" },
+      { lari: "Kuela na luzolo", mandombe: "Kuwela na luzolo", french: "Se marier par amour", english: "To marry for love" },
+      { lari: "Kuenda na nzila", mandombe: "Kuwenda na nzila", french: "Aller sur le chemin", english: "To go on the road" },
+      { lari: "Komba nzo", mandombe: "Komba nzo", french: "Balayer la maison", english: "Sweep the house" },
       { lari: "Kuwa malongi", mandombe: "Kuwa malongi", french: "Écouter les leçons", english: "To listen to the lessons", note: "Kuwa emphasises deep listening — following advice, not just hearing." },
     ],
     exercises: [
@@ -3033,7 +3033,7 @@ export const lessons: Lesson[] = [
       { lari: "Lemba", mandombe: "Lemba", french: "Ancienne école initiatique Kongo", english: "Ancient Kongo initiation school" },
       { lari: "Lendo", mandombe: "Lendo", french: "Fierté, orgueil, pouvoir", english: "Pride, power" },
       { lari: "Lenga", mandombe: "Lenga", french: "Flatter, amadouer, attendrir", english: "To flatter, to coax" },
-      { lari: "Lenzo", mandombe: "Lenjo", french: "Éclat, rayon de lumière", english: "Radiance, ray of light" },
+      { lari: "Lenzo", mandombe: "Lenzo", french: "Éclat, rayon de lumière", english: "Radiance, ray of light" },
       { lari: "Loba", mandombe: "Loba", french: "Pécher", english: "To sin" },
       { lari: "Lobula", mandombe: "Lobula", french: "Cracher", english: "To spit" },
       { lari: "Loka", mandombe: "Loka", french: "Nuire", english: "To harm" },
@@ -3244,7 +3244,7 @@ export const lessons: Lesson[] = [
       { lari: "Misila", mandombe: "Misila", french: "Mardi", english: "Tuesday" },
       { lari: "Mpika", mandombe: "Mpika", french: "Mercredi", english: "Wednesday" },
       { lari: "Nkoiyi", mandombe: "Nkoiyi", french: "Jeudi", english: "Thursday" },
-      { lari: "Bukonzo", mandombe: "Bukonjo", french: "Vendredi", english: "Friday" },
+      { lari: "Bukonzo", mandombe: "Bukonzo", french: "Vendredi", english: "Friday" },
       { lari: "Sabala", mandombe: "Sabala", french: "Samedi", english: "Saturday" },
       { lari: "Mpimpa", mandombe: "Mpimpa", french: "La nuit", english: "The night" },
       { lari: "Buisi", mandombe: "Buwisi", french: "La nuit", english: "The night" },
