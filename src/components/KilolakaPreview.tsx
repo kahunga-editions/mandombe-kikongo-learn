@@ -66,17 +66,20 @@ const KilolakaPreview = () => {
               {/* F-Series */}
               <div className="bg-cream/5 backdrop-blur rounded-xl p-8 border border-gold/20">
                 <p className="font-mandombe text-xl text-gold/40 mb-3">F-Series</p>
-                <h3 className="font-display text-xl font-bold text-gold mb-4">F-Series: Force</h3>
+                <h3 className="font-display text-xl font-bold text-gold mb-4">F-Series: Rebirth</h3>
                 <div className="space-y-3">
                   {[
-                    { morpheme: "Fi", meaning: "Inner force — hidden potential" },
-                    { morpheme: "Fu", meaning: "Force that generates" },
-                    { morpheme: "Fe", meaning: "Force that receives" },
-                    { morpheme: "Fo", meaning: "Ascending force" },
-                    { morpheme: "Fa", meaning: "Manifested force" },
+                    { morpheme: "Fi", meaning: "Inner rebirth — hidden renewal" },
+                    { morpheme: "Fu", meaning: "Rebirth that generates" },
+                    { morpheme: "Fe", meaning: "Rebirth that receives" },
+                    { morpheme: "Fo", meaning: "Ascending rebirth" },
+                    { morpheme: "Fa", meaning: "Manifested rebirth" },
                   ].map((item) => (
                     <div key={item.morpheme} className="flex items-center gap-3 bg-cream/5 rounded-lg px-3 py-2">
-                      <span className="font-display text-lg font-bold text-gold min-w-[30px]">{item.morpheme}</span>
+                      <div className="min-w-[40px] text-center">
+                        <span className="font-mandombe text-sm text-gold/40 block mb-1">{item.morpheme}</span>
+                        <span className="font-display text-lg font-bold text-gold">{item.morpheme}</span>
+                      </div>
                       <p className="text-cream/80 text-xs">{item.meaning}</p>
                     </div>
                   ))}
@@ -86,17 +89,20 @@ const KilolakaPreview = () => {
               {/* D-Series */}
               <div className="bg-cream/5 backdrop-blur rounded-xl p-8 border border-gold/20">
                 <p className="font-mandombe text-xl text-gold/40 mb-3">D-Series</p>
-                <h3 className="font-display text-xl font-bold text-gold mb-4">D-Series: Depth</h3>
+                <h3 className="font-display text-xl font-bold text-gold mb-4">D-Series: Solar Energy & Speed of Light</h3>
                 <div className="space-y-3">
                   {[
-                    { morpheme: "Di", meaning: "Inner depth — essence" },
-                    { morpheme: "Du", meaning: "Depth that creates" },
-                    { morpheme: "De", meaning: "Depth that absorbs" },
-                    { morpheme: "Do", meaning: "Ascending depth" },
-                    { morpheme: "Da", meaning: "Manifested depth" },
+                    { morpheme: "Di", meaning: "Inner solar energy — essence of light" },
+                    { morpheme: "Du", meaning: "Solar energy that creates" },
+                    { morpheme: "De", meaning: "Solar energy that absorbs" },
+                    { morpheme: "Do", meaning: "Ascending solar energy" },
+                    { morpheme: "Da", meaning: "Manifested solar energy" },
                   ].map((item) => (
                     <div key={item.morpheme} className="flex items-center gap-3 bg-cream/5 rounded-lg px-3 py-2">
-                      <span className="font-display text-lg font-bold text-gold min-w-[30px]">{item.morpheme}</span>
+                      <div className="min-w-[40px] text-center">
+                        <span className="font-mandombe text-sm text-gold/40 block mb-1">{item.morpheme}</span>
+                        <span className="font-display text-lg font-bold text-gold">{item.morpheme}</span>
+                      </div>
                       <p className="text-cream/80 text-xs">{item.meaning}</p>
                     </div>
                   ))}
@@ -106,17 +112,20 @@ const KilolakaPreview = () => {
               {/* G-Series */}
               <div className="bg-cream/5 backdrop-blur rounded-xl p-8 border border-gold/20">
                 <p className="font-mandombe text-xl text-gold/40 mb-3">G-Series</p>
-                <h3 className="font-display text-xl font-bold text-gold mb-4">G-Series: Growth</h3>
+                <h3 className="font-display text-xl font-bold text-gold mb-4">G-Series: The Element that Begets Life</h3>
                 <div className="space-y-3">
                   {[
-                    { morpheme: "Gi", meaning: "Inner growth — seed" },
-                    { morpheme: "Gu", meaning: "Growth that begets" },
-                    { morpheme: "Ge", meaning: "Growth that nurtures" },
-                    { morpheme: "Go", meaning: "Ascending growth" },
-                    { morpheme: "Ga", meaning: "Manifested growth" },
+                    { morpheme: "Gi", meaning: "Inner life element — seed of existence" },
+                    { morpheme: "Gu", meaning: "Life element that begets" },
+                    { morpheme: "Ge", meaning: "Life element that nurtures" },
+                    { morpheme: "Go", meaning: "Ascending life element" },
+                    { morpheme: "Ga", meaning: "Manifested life element" },
                   ].map((item) => (
                     <div key={item.morpheme} className="flex items-center gap-3 bg-cream/5 rounded-lg px-3 py-2">
-                      <span className="font-display text-lg font-bold text-gold min-w-[30px]">{item.morpheme}</span>
+                      <div className="min-w-[40px] text-center">
+                        <span className="font-mandombe text-sm text-gold/40 block mb-1">{item.morpheme}</span>
+                        <span className="font-display text-lg font-bold text-gold">{item.morpheme}</span>
+                      </div>
                       <p className="text-cream/80 text-xs">{item.meaning}</p>
                     </div>
                   ))}
