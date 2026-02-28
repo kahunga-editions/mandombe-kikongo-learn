@@ -2,7 +2,7 @@ import heroBg from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[90vh] flex items-center justify-center overflow-x-hidden">
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${heroBg})` }}
@@ -10,7 +10,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-earth-deep/70 via-earth-deep/50 to-earth-deep/90" />
 
       <div className="relative z-10 container mx-auto px-4 text-center max-w-4xl">
-        <p className="font-mandombe text-6xl md:text-9xl text-gradient-gold drop-shadow-lg animate-fade-in opacity-0 leading-[1.8]" style={{ animationDelay: "0.1s" }}>
+        <p className="font-mandombe text-5xl md:text-8xl text-gold drop-shadow-lg animate-fade-in opacity-0 py-4" style={{ animationDelay: "0.1s", lineHeight: 2.2 }}>
           Nzo Mikanda
         </p>
         <div className="w-32 h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mt-4 mb-10 animate-fade-in opacity-0" style={{ animationDelay: "0.15s" }} />
