@@ -23,10 +23,10 @@ const MultipleChoice = ({ question, onComplete }: Props) => {
   };
 
   return (
-    <div className="space-y-4">
+     <div className="space-y-4">
       <div>
         {question.questionMandombe && (
-          <p className="font-mandombe text-3xl text-primary/40 mb-3">
+          <p className="font-mandombe text-4xl text-gold mb-6">
             {question.questionMandombe}
           </p>
         )}

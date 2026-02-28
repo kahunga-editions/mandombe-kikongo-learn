@@ -202,14 +202,14 @@ const categories: VocabCategory[] = [
 
 const WordCard = ({ word }: { word: VocabEntry }) => (
   <div className="bg-card rounded-xl p-5 border border-border hover:border-primary/30 transition-all group">
-    <p className="font-mandombe text-2xl mb-3 text-primary/80 leading-relaxed">{word.lari}</p>
+    <p className="font-mandombe text-3xl text-gold leading-relaxed mb-4">{word.lari}</p>
     <h4 className="font-display text-xl font-bold text-foreground mb-3 flex items-center gap-2">
       {word.lari}
       <Volume2 className="w-4 h-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer" />
     </h4>
     <div className="space-y-1.5 text-sm">
       <p className="text-muted-foreground"><span className="inline-block w-6 text-xs font-bold text-primary/70">FR</span>{word.french}</p>
-      <p className="text-muted-foreground"><span className="inline-block w-6 text-xs font-bold text-primary/70">EN</span>{word.english}</p>
+      <p className="text-muted-foreground"><span className="inline-block w-6 text-xs font-bold text-primary/70">GB</span>{word.english}</p>
       <p className="text-muted-foreground"><span className="inline-block w-6 text-xs font-bold text-primary/70">PT</span>{word.portuguese}</p>
     </div>
   </div>
@@ -220,7 +220,7 @@ const VocabularyPreview = () => {
     <section id="vocabulary" className="py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <p className="font-mandombe text-3xl md:text-4xl text-primary/40 mb-4">Mazita</p>
+          <p className="font-mandombe text-4xl md:text-5xl text-gold mb-6">Mazita</p>
           <p className="text-primary font-body text-sm tracking-[0.25em] uppercase mb-3">Mazita — Vocabulary</p>
           <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">Essential Words & Phrases</h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
@@ -246,7 +246,7 @@ const VocabularyPreview = () => {
               <div className="flex items-center gap-6 mb-8 p-6 bg-card rounded-2xl border border-border">
                 <img src={cat.image} alt={cat.label} className="w-20 h-20 md:w-24 md:h-24 rounded-xl object-cover" />
                 <div>
-                  <p className="font-mandombe text-xl text-primary/50 leading-none mb-3">{cat.lariLabel}</p>
+                  <p className="font-mandombe text-3xl text-gold leading-none mb-4">{cat.lariLabel}</p>
                   <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground">{cat.lariLabel}</h3>
                   <p className="text-muted-foreground font-body">
                     {cat.label} — {cat.words.length} free words{cat.premiumWords ? ` + ${cat.premiumWords.length} premium` : ""}
