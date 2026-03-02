@@ -164,7 +164,7 @@ const LessonDetail = () => {
               {lesson.phrases && lesson.phrases.length > 0 && (
                 <section>
                   <h2 className="font-display text-2xl font-bold text-foreground mb-4">
-                    Key Phrases — <span className="font-mandombe text-4xl text-gold">Binsamu</span>
+                    Key Phrases — <span className="font-mandombe text-4xl text-gold">Bambuka</span>
                   </h2>
                   <div className="space-y-3">
                     {lesson.phrases.map((phrase, i) => (
