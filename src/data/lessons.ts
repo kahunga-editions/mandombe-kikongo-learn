@@ -153,7 +153,7 @@ export const lessons: Lesson[] = [
         meaning: { fr: "Remercier", en: "To thank" },
         tense: "Present",
         rows: [
-          { person: "Je", lari: "ni tondele", mandombe: "ni tondele" },
+          { person: "Je", lari: "ntondele", mandombe: "ntondele" },
           { person: "Tu", lari: "tondele", mandombe: "tondele" },
           { person: "Il/Elle", lari: "tondele", mandombe: "tondele" },
           { person: "Nous", lari: "tu tondele", mandombe: "tu tondele" },
