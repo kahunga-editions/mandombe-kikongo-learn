@@ -239,7 +239,7 @@ export const lessons: Lesson[] = [
         meaning: { fr: "Être", en: "To be" },
         tense: "Present",
         rows: [
-          { person: "Je", lari: "nje(na)", mandombe: "nje(na)" },
+          { person: "Je", lari: "nje(na)", mandombe: "ngiena" },
           { person: "Tu", lari: "we(na)", mandombe: "we(na)" },
           { person: "Il/Elle", lari: "ke(na)", mandombe: "ke(na)" },
           { person: "Nous", lari: "tue(na)", mandombe: "tuwe(na)" },
@@ -3410,7 +3410,7 @@ export const lessons: Lesson[] = [
         meaning: { fr: "Être (conjugaison de base)", en: "To be (basic conjugation)" },
         tense: "Present",
         rows: [
-          { person: "Je", lari: "nje(na)", mandombe: "nje(na)" },
+          { person: "Je", lari: "nje(na)", mandombe: "ngiena" },
           { person: "Tu", lari: "we(na)", mandombe: "we(na)" },
           { person: "Il/Elle", lari: "ke(na)", mandombe: "ke(na)" },
           { person: "Nous", lari: "tue(na)", mandombe: "tuwe(na)" },
