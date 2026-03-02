@@ -128,22 +128,28 @@ export const lessons: Lesson[] = [
   },
   {
     id: "gratitude",
-    title: "Gratitude — Matondo",
-    titleLari: "Matondo",
-    titleMandombe: "Matondo",
-    description: "Learn to express gratitude and conjugate the verb 'tondele' (to thank) in present, past, future, and imperative.",
+    title: "Gratitude — Ntondolo",
+    titleLari: "Ntondolo — Mpila ya vuturila matondo",
+    titleMandombe: "Ntondolo — Mpila ya vuturila matondo",
+    description: "Learn to express gratitude and conjugate the verb 'tonda' (to thank) in present, past, future, and imperative.",
     level: "beginner",
     icon: "🙏",
     vocabulary: [
+      { lari: "Ntondolo", mandombe: "Ntondolo", french: "Gratitude", english: "Gratitude", portuguese: "Gratidão" },
       { lari: "Matondo", mandombe: "Matondo", french: "Merci", english: "Thank you", portuguese: "Obrigado/a" },
+      { lari: "Tonda", mandombe: "Tonda", french: "Remercier", english: "To thank", portuguese: "Agradecer" },
+      { lari: "Vutula matondo", mandombe: "Vutula matondo", french: "Remercier", english: "To thank (lit. return thanks)", portuguese: "Agradecer" },
+      { lari: "Vutula", mandombe: "Vutula", french: "Se retourner, renvoyer", english: "To return, to send back", portuguese: "Devolver, retornar" },
+      { lari: "Hana matondo", mandombe: "Hana matondo", french: "Remercie (impératif)", english: "Thank! (imperative)", portuguese: "Agradeça!" },
+      { lari: "Mpila ya vuturila matondo", mandombe: "Mpila ya vuturila matondo", french: "La façon de dire merci", english: "The way to say thank you", portuguese: "A forma de agradecer" },
       { lari: "Ntondele", mandombe: "Ntondele", french: "Je te remercie", english: "I thank you", portuguese: "Eu te agradeço" },
       { lari: "Ntondele bua buingi", mandombe: "Ntondele buwa buingi", french: "Je te remercie beaucoup", english: "I thank you very much", portuguese: "Agradeço-te muito" },
-      { lari: "Matondo kua nzambi", mandombe: "Matondo kuwa nzambi", french: "Je te remercie infiniment", english: "Thank you from the bottom of my heart", portuguese: "Agradeço do fundo do coração" },
+      { lari: "Matondo kua nzambi", mandombe: "Matondo kuwa nzambi", french: "Merci infiniment", english: "Thank you from the bottom of my heart", portuguese: "Agradeço do fundo do coração" },
     ],
     conjugations: [
       {
-        verb: "Tondele",
-        verbMandombe: "Tondele",
+        verb: "Tonda",
+        verbMandombe: "Tonda",
         meaning: { fr: "Remercier", en: "To thank" },
         tense: "Present",
         rows: [
@@ -156,8 +162,8 @@ export const lessons: Lesson[] = [
         ],
       },
       {
-        verb: "Tondele",
-        verbMandombe: "Tondele",
+        verb: "Tonda",
+        verbMandombe: "Tonda",
         meaning: { fr: "Remercier", en: "To thank" },
         tense: "Past",
         rows: [
@@ -172,7 +178,7 @@ export const lessons: Lesson[] = [
       {
         verb: "Tonda",
         verbMandombe: "Tonda",
-        meaning: { fr: "Remercier (futur)", en: "To thank (future)" },
+        meaning: { fr: "Remercier", en: "To thank" },
         tense: "Future",
         rows: [
           { person: "Je", lari: "mbo ni tonda", mandombe: "mbo ni tonda" },
