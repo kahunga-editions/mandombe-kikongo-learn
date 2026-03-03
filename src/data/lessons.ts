@@ -1242,8 +1242,8 @@ export const lessons: Lesson[] = [
   {
     id: "bi-verbs-sounds",
     title: "Bi- Verbs: Sound, Fire & Force",
-    titleLari: "Zonza Bi — Makelele, Tiya na Ngolo",
-    titleMandombe: "Zonza Bi Makelele Tiya na Ngolo",
+    titleLari: "Malongi me mu \"Bi\"",
+    titleMandombe: "Malongi me mu Bi",
     description: "Discover powerful Bi- verbs related to sound, fire, blessing, and physical force — from resonating drums to blazing flames.",
     level: "advanced",
     icon: "🥁",
