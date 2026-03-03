@@ -1120,6 +1120,7 @@ export const lessons: Lesson[] = [
     level: "advanced",
     icon: "✈️",
     vocabulary: [
+      { lari: "Zeba", mandombe: "Zeba", french: "Voyager, se promener", english: "To travel, to take a walk", portuguese: "Viajar, passear" },
       { lari: "Kwenda", mandombe: "Kwenda", french: "Aller", english: "To go", portuguese: "Ir" },
       { lari: "Kwiza", mandombe: "Kwiza", french: "Venir", english: "To come", portuguese: "Vir" },
       { lari: "Mona", mandombe: "Mona", french: "Voir", english: "To see", portuguese: "Ver" },
