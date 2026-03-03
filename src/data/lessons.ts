@@ -1448,11 +1448,11 @@ export const lessons: Lesson[] = [
       },
       {
         type: "multiple-choice",
-        question: "What is a 'Bafou'?",
-        questionMandombe: "Bafou",
+        question: "What is a 'Bafu'?",
+        questionMandombe: "Bafu",
         options: ["A drum", "A small axe for carving", "A fishing net", "A cooking pot"],
         correctIndex: 1,
-        explanation: "Bafou is a small axe used in making canoes and for sculpture work.",
+        explanation: "Bafu is a small axe used in making canoes and for sculpture work.",
       },
       {
         type: "multiple-choice",
