@@ -266,6 +266,7 @@ const categories: VocabCategory[] = [
       { lari: "Nguba", french: "Arachide", english: "Peanut", portuguese: "Amendoim" },
       { lari: "Malavu", french: "Vin de palme", english: "Palm wine", portuguese: "Vinho de palma" },
       { lari: "Mamba", french: "Eau", english: "Water", portuguese: "Água" },
+      { lari: "Mafuta ma nioshi", french: "Miel", english: "Honey", portuguese: "Mel" },
     ],
   },
 ];
