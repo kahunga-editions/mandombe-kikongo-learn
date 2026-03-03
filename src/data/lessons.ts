@@ -3876,7 +3876,7 @@ export const lessons: Lesson[] = [
         type: "matching",
         instruction: "Match each animal with its plural form.",
         pairs: [
-          { left: "Tshininia", right: "Bininia" },
+          { left: "Kinienia", right: "Binienia" },
           { left: "Kibubu", right: "Bibubu" },
           { left: "Kivuadangu", right: "Bivuadangu" },
           { left: "Ngo", right: "Léopard" },
