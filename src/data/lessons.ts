@@ -144,7 +144,7 @@ export const lessons: Lesson[] = [
       { lari: "Mpila ya vuturila matondo", mandombe: "Mpila ya vuturila matondo", french: "La façon de dire merci", english: "The way to say thank you", portuguese: "A forma de agradecer" },
       { lari: "Ntondele", mandombe: "Ntondele", french: "Je te remercie", english: "I thank you", portuguese: "Eu te agradeço" },
       { lari: "Ntondele bua buingi", mandombe: "Ntondele buwa buingi", french: "Je te remercie beaucoup", english: "I thank you very much", portuguese: "Agradeço-te muito" },
-      { lari: "Matondo kua nzambi", mandombe: "Matondo kuwa nzambi", french: "Merci infiniment", english: "Thank you from the bottom of my heart", portuguese: "Agradeço do fundo do coração" },
+      { lari: "Matondo ma sakila", mandombe: "Matondo ma sakila", french: "Merci infiniment", english: "Thank you infinitely", portuguese: "Muito obrigado/a" },
     ],
     conjugations: [
       {
