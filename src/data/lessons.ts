@@ -1398,7 +1398,7 @@ export const lessons: Lesson[] = [
       { lari: "Baba", mandombe: "Baba", french: "Muet; carbonisé; croûte", english: "Mute; charred; crust" },
       { lari: "Mababa", mandombe: "Mababa", french: "Muets, croûtes (pluriel)", english: "Mutes, crusts (plural)" },
       { lari: "Babuka", mandombe: "Babuka", french: "Être frappé, asséner un coup", english: "To be struck, to deal a blow" },
-      { lari: "Babula", mandombe: "Babula", french: "Cligner de l'œil", english: "To blink, to wink" },
+      { lari: "Babula / Labula", mandombe: "Babula / Labula", french: "Cligner de l'œil", english: "To blink, to wink" },
       { lari: "Babumuka", mandombe: "Babumuka", french: "Être surpris", english: "To be surprised" },
       { lari: "Babisa", mandombe: "Babisa", french: "Faire brûler, trop griller", english: "To let burn, to over-grill" },
       { lari: "Babonso", mandombe: "Babonso", french: "Tout le monde", english: "Everyone, everybody" },
