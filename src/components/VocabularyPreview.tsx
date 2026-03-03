@@ -221,6 +221,7 @@ const categories: VocabCategory[] = [
       { lari: "Mbembo", french: "Nez", english: "Nose", portuguese: "Nariz" },
       { lari: "Nua", french: "Bouche", english: "Mouth", portuguese: "Boca" },
       { lari: "Luboko", french: "Bras / main", english: "Arm / hand", portuguese: "Braço / mão" },
+      { lari: "Kata", french: "Testicule", english: "Testicle", portuguese: "Testículo" },
     ],
   },
   {
