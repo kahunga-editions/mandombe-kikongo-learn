@@ -1379,10 +1379,10 @@ export const lessons: Lesson[] = [
       },
       {
         type: "fill-in-blank",
-        sentence: "___ bubilango means 'to roar like the leopard'",
-        sentenceMandombe: "___ bubilango",
+        sentence: "___ bu ngo means 'to roar like the leopard'",
+        sentenceMandombe: "___ bu ngo",
         blank: "bila",
-        hint: "A verb meaning 'to boil, to rumble'",
+        hint: "A verb meaning 'to boil, to rumble'. Bila bu = like, in the manner of",
       },
     ],
   },
