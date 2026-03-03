@@ -1278,7 +1278,7 @@ export const lessons: Lesson[] = [
     ],
     phrases: [
       { lari: "Nzungu yi bididi", mandombe: "Nzungu yi bididi", french: "La marmite bout", english: "The pot is boiling" },
-      { lari: "Bila bu bila ngo", mandombe: "Bila bu bila ngo", french: "Bouillir comme (à la manière de) le léopard — rugir comme le léopard", english: "To roar like the leopard (bila bu = like, in the manner of; ngo = leopard)" },
+      { lari: "Bila bu bila ngo", mandombe: "Bila bu bila ngo", french: "Rugir comme le léopard", english: "To roar like the leopard (bila bu = like, in the manner of; ngo = leopard)" },
       { lari: "Wa dia bioka wa lembo bioka mfuekene", mandombe: "Wa dia bioka wa lembo bioka mfuekene", french: "Savoir s'arrêter quand on est satisfait. Mfuekene = un glouton, quelqu'un qui mange sans partager, qui s'empiffre", english: "Know when to stop eating — a mfuekene is a glutton, someone who eats without sharing" },
     ],
     exercises: [
