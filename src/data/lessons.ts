@@ -1718,8 +1718,8 @@ export const lessons: Lesson[] = [
   {
     id: "bi-nature-culture",
     title: "Bi- Nature, Culture & Objects",
-    titleLari: "Bima bia Nza na Kintwadi",
-    titleMandombe: "Bima bia Nza na Kintwadi",
+    titleLari: "Malongi me mu \"Bi\" (2)",
+    titleMandombe: "Malongi me mu Bi (2)",
     description: "Explore Bi- words covering plants, animals, cultural objects, numbers, and natural phenomena from the Kilari dictionary.",
     level: "intermediate",
     icon: "🌿",
