@@ -3109,7 +3109,7 @@ export const lessons: Lesson[] = [
         type: "matching",
         instruction: "Match these L- nouns and concepts.",
         pairs: [
-          { left: "Lendi", right: "Successor, heir" },
+          { left: "Landi", right: "Successor, heir" },
           { left: "Leke", right: "A child, a youth" },
           { left: "Lemba", right: "Initiation school" },
           { left: "Lendo", right: "Pride, power" },
