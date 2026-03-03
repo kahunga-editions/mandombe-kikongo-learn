@@ -1874,8 +1874,8 @@ export const lessons: Lesson[] = [
   {
     id: "ba-movement-body",
     title: "Ba- Movement, Body & Transformation",
-    titleLari: "Malongi me mu \"Ba\" — Ndiendo, Nitu na Mbaduka",
-    titleMandombe: "Malongi me mu Ba Ndiendo Nitu na Mbaduka",
+    titleLari: "Malongi me mu \"Ba\" — Nitu na Bimpika",
+    titleMandombe: "Malongi me mu Ba Nitu na Bimpika",
     description: "Master Ba- verbs of physical movement, bodily actions, and transformation — from turning and running to sticking and peeling.",
     level: "advanced",
     icon: "🔄",
