@@ -1540,8 +1540,8 @@ export const lessons: Lesson[] = [
   {
     id: "bu-abstract-concepts",
     title: "Bu- Abstract Concepts & States",
-    titleLari: "Mazita Bu — Makutu na Ntima",
-    titleMandombe: "Mazita Bu Makutu na Ntima",
+    titleLari: "Malongi me mu \"Bu\"",
+    titleMandombe: "Malongi me mu Bu",
     description: "Explore the rich Bu- prefix vocabulary covering abstract states: emotions, virtues, vices, social concepts, and human qualities.",
     level: "advanced",
     icon: "💭",
