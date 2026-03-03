@@ -800,8 +800,8 @@ export const lessons: Lesson[] = [
   {
     id: "bo-bu-glossary",
     title: "Bo- & Bu- Vocabulary",
-    titleLari: "Mazita Bo na Bu",
-    titleMandombe: "Mazita Bo na Bu",
+    titleLari: "Malongi me mu \"Bo\" na \"Bu\"",
+    titleMandombe: "Malongi me mu Bo na Bu",
     description: "Discover vocabulary starting with 'Bo-' and 'Bu-' — covering concepts from beauty and humanity to healing and places.",
     level: "advanced",
     icon: "🌍",
