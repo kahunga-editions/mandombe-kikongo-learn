@@ -3879,8 +3879,8 @@ export const lessons: Lesson[] = [
           { left: "Kinienia", right: "Binienia" },
           { left: "Kibubu", right: "Bibubu" },
           { left: "Kivuadangu", right: "Bivuadangu" },
-          { left: "Ngo", right: "Léopard" },
-          { left: "Ngumbi", right: "Perdrix" },
+          { left: "Ngo", right: "Ngo" },
+          { left: "Ngumbi", right: "Ngumbi" },
         ],
       },
       {
