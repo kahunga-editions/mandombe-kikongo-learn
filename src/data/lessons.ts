@@ -2273,7 +2273,7 @@ export const lessons: Lesson[] = [
       { lari: "Bakasa", mandombe: "Bakasa", french: "Chercher querelle, disputer", english: "To pick a fight, to argue" },
       { lari: "Bakasana", mandombe: "Bakasana", french: "S'entraider, s'assister", english: "To help each other" },
       { lari: "Bakisa", mandombe: "Bakisa", french: "Aider, assister, porter secours", english: "To help, to assist, to rescue" },
-      { lari: "Bakitina", mandombe: "Bakitina", french: "Dominer, avoir le dessus", english: "To dominate, to overcome" },
+      { lari: "Bakitina / Bakishina", mandombe: "Bakitina / Bakishina", french: "Dominer, avoir le dessus", english: "To dominate, to overcome" },
       { lari: "Bakala", mandombe: "Bakala", french: "Mâle, garçon, homme; mari", english: "Male, boy, man; husband" },
       { lari: "Baki", mandombe: "Baki", french: "Possesseur, vainqueur", english: "Owner, winner" },
       { lari: "Bakila", mandombe: "Bakila", french: "Tirer profit, gagner", english: "To profit, to win" },
