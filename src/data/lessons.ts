@@ -238,8 +238,8 @@ export const lessons: Lesson[] = [
   {
     id: "survival-verbs",
     title: "Survival Verbs",
-    titleLari: "Zonza Lari",
-    titleMandombe: "Zonza Lari",
+    titleLari: "Malongi me mu mazita",
+    titleMandombe: "Malongi me mu mazita",
     description: "Master the essential verbs: to be (ba), to do (sa), to eat (dia), to drink (nua), to be able (lenda), to take (bonga), and to know (zaba).",
     level: "intermediate",
     icon: "💪",
