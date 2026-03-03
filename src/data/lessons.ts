@@ -665,8 +665,8 @@ export const lessons: Lesson[] = [
   {
     id: "ba-verbs-dictionary",
     title: "Ba- Verbs & Actions",
-    titleLari: "Zonza Ba",
-    titleMandombe: "Zonza Ba",
+    titleLari: "Malongi me mu \"Ba\"",
+    titleMandombe: "Malongi me mu Ba",
     description: "Master essential Kikongo Lari verbs starting with 'Ba-' — from remembering to running, from fighting to healing.",
     level: "advanced",
     icon: "🏃",
@@ -1389,8 +1389,8 @@ export const lessons: Lesson[] = [
   {
     id: "ba-advanced-verbs",
     title: "Ba- Advanced Verbs & Expressions",
-    titleLari: "Zonza Ba — Mazita ma Ngolo",
-    titleMandombe: "Zonza Ba Mazita ma Ngolo",
+    titleLari: "Malongi me mu \"Ba\" — Mazita ma Ngolo",
+    titleMandombe: "Malongi me mu Ba Mazita ma Ngolo",
     description: "Expand your Ba- verb mastery with verbs of surprise, combat, craftsmanship, and emotional states — drawn from the Kilari dictionary.",
     level: "advanced",
     icon: "⚔️",
@@ -1871,8 +1871,8 @@ export const lessons: Lesson[] = [
   {
     id: "ba-movement-body",
     title: "Ba- Movement, Body & Transformation",
-    titleLari: "Zonza Ba — Ndiendo, Nitu na Mbaduka",
-    titleMandombe: "Zonza Ba Ndiendo Nitu na Mbaduka",
+    titleLari: "Malongi me mu \"Ba\" — Ndiendo, Nitu na Mbaduka",
+    titleMandombe: "Malongi me mu Ba Ndiendo Nitu na Mbaduka",
     description: "Master Ba- verbs of physical movement, bodily actions, and transformation — from turning and running to sticking and peeling.",
     level: "advanced",
     icon: "🔄",
