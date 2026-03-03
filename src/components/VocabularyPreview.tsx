@@ -15,6 +15,7 @@ interface VocabEntry {
   french: string;
   english: string;
   portuguese: string;
+  note?: string;
 }
 
 interface VocabCategory {
