@@ -1113,13 +1113,14 @@ export const lessons: Lesson[] = [
   },
   {
     id: "travel-places",
-    title: "Travel & Places — Kwenda",
-    titleLari: "Kwenda",
-    titleMandombe: "Kwenda",
-    description: "Talk about traveling to places using past and future tenses. Learn real Congolese place names and conjugate 'kwenda' (to go) and 'kwiza' (to come).",
+    title: "Travel & Places — Zeba",
+    titleLari: "Zeba",
+    titleMandombe: "Zeba",
+    description: "Talk about traveling to places using past and future tenses. Learn real Congolese place names and conjugate 'kwenda' (to go) and 'kwiza' (to come). Zeba means to travel, to take a walk.",
     level: "advanced",
     icon: "✈️",
     vocabulary: [
+      { lari: "Zeba", mandombe: "Zeba", french: "Voyager, se promener", english: "To travel, to take a walk", portuguese: "Viajar, passear" },
       { lari: "Kwenda", mandombe: "Kwenda", french: "Aller", english: "To go", portuguese: "Ir" },
       { lari: "Kwiza", mandombe: "Kwiza", french: "Venir", english: "To come", portuguese: "Vir" },
       { lari: "Mona", mandombe: "Mona", french: "Voir", english: "To see", portuguese: "Ver" },
