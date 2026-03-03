@@ -1509,7 +1509,7 @@ export const lessons: Lesson[] = [
         instruction: "Match these Ba- words with their meanings.",
         pairs: [
           { left: "Badi", right: "Vegetable" },
-          { left: "Bafou", right: "Small axe" },
+          { left: "Bafu", right: "Small axe" },
           { left: "Baki", right: "Owner, winner" },
           { left: "Babonso", right: "Everyone" },
         ],
