@@ -3638,9 +3638,9 @@ export const lessons: Lesson[] = [
   },
   {
     id: "nsatu-lemina-hunger-thirst",
-    title: "Hunger & Thirst — Nsatu ye Lemina",
-    titleLari: "Nsatu ye Lemina",
-    titleMandombe: "Nsatu ye Lemina",
+    title: "Hunger & Thirst — Nsatu na Lemina",
+    titleLari: "Nsatu na Lemina",
+    titleMandombe: "Nsatu na Lemina",
     description: "Learn how to express hunger and thirst in Kikongo Lari. 'Nsatu ye nani' = 'I am hungry', 'Lemina die nani' = 'I am thirsty'. Discover food vocabulary and a cultural reference to Franklin Boukaka's protest song 'Dia Bikola'.",
     level: "beginner",
     icon: "🍽️",
