@@ -214,6 +214,7 @@ const WordCard = ({ word }: { word: VocabEntry }) => (
       <p className="text-muted-foreground"><span className="inline-block w-6 text-xs font-bold text-primary/70">FR</span>{word.french}</p>
       <p className="text-muted-foreground"><span className="inline-block w-6 text-xs font-bold text-primary/70">GB</span>{word.english}</p>
       <p className="text-muted-foreground"><span className="inline-block w-6 text-xs font-bold text-primary/70">PT</span>{word.portuguese}</p>
+      {word.note && <p className="text-muted-foreground/70 italic text-xs mt-2">💡 {word.note}</p>}
     </div>
   </div>
 );
