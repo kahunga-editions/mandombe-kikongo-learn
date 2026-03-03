@@ -50,7 +50,7 @@ const categories: VocabCategory[] = [
       { lari: "Vutuka mbote", french: "Bon retour", english: "Welcome back", portuguese: "Bem-vindo de volta" },
       { lari: "Kala mbote", french: "Au revoir", english: "Goodbye (stay well)", portuguese: "Adeus (fique bem)" },
       { lari: "Tukutana", french: "À bientôt", english: "See you soon", portuguese: "Até breve" },
-      { lari: "Matondo mingi", french: "Merci beaucoup", english: "Thank you very much", portuguese: "Muito obrigado" },
+      { lari: "Matondo ma mingi", french: "Merci beaucoup", english: "Thank you very much", portuguese: "Muito obrigado" },
     ],
   },
   {
