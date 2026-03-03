@@ -3893,7 +3893,7 @@ export const lessons: Lesson[] = [
         type: "fill-in-blank",
         sentence: "The plural of Kibubu (gorilla) is ___",
         blank: "Bibubu",
-        hint: "Same plural pattern as Tshininia → Bininia.",
+        hint: "Same plural pattern as Kinienia → Binienia.",
       },
       {
         type: "fill-in-blank",
