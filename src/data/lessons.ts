@@ -1274,11 +1274,12 @@ export const lessons: Lesson[] = [
       { lari: "Bidika", mandombe: "Bidika", french: "Accumuler, multiplier", english: "To accumulate, to multiply" },
       { lari: "Bifiengo", mandombe: "Bifiengo", french: "Instrument de chasse (pipeau)", english: "Hunting instrument (pipe whistle)" },
       { lari: "Fienga", mandombe: "Fienga", french: "Appeler avec un pipeau", english: "To call with a pipe whistle" },
+      { lari: "Luaza", mandombe: "Luaza", french: "Le bruit", english: "Noise, sound" },
     ],
     phrases: [
       { lari: "Nzungu yi bididi", mandombe: "Nzungu yi bididi", french: "La marmite bout", english: "The pot is boiling" },
-      { lari: "Bila bubilango", mandombe: "Bila bubilango", french: "Rugir comme le léopard", english: "To roar like the leopard" },
-      { lari: "Wa dia bioka wa lebbo bioka mfoekene", mandombe: "Wa dia bioka wa lebbo bioka mfoekene", french: "Savoir s'arrêter quand on est satisfait", english: "Know when to stop — express satisfaction" },
+      { lari: "Bila bu ngo", mandombe: "Bila bu ngo", french: "Bouillir comme (à la manière de) le léopard — rugir comme le léopard", english: "To roar like the leopard (bila bu = like, in the manner of; ngo = leopard)" },
+      { lari: "Wa dia bioka wa lembo bioka mfuekene", mandombe: "Wa dia bioka wa lembo bioka mfuekene", french: "Savoir s'arrêter quand on est satisfait. Mfuekene = un glouton, quelqu'un qui mange sans partager, qui s'empiffre", english: "Know when to stop eating — a mfuekene is a glutton, someone who eats without sharing" },
     ],
     exercises: [
       {
