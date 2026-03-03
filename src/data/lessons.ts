@@ -3842,10 +3842,10 @@ export const lessons: Lesson[] = [
       },
       {
         type: "multiple-choice",
-        question: "What is the plural of 'Tshininia' (ant)?",
-        options: ["Matshininia", "Bininia", "Tuninia", "Mininia"],
+        question: "What is the plural of 'Kinienia' (ant)?",
+        options: ["Makinienia", "Binienia", "Tunienia", "Minienia"],
         correctIndex: 1,
-        explanation: "'Tshininia / Kininia' = ant (singular), 'Bininia' = ants (plural). The Tshi-/Ki- prefix becomes Bi- in plural.",
+        explanation: "'Kinienia / Tshinienia' = ant (singular), 'Binienia' = ants (plural). The Ki-/Tshi- prefix becomes Bi- in plural.",
       },
       {
         type: "multiple-choice",
