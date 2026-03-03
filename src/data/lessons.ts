@@ -665,8 +665,8 @@ export const lessons: Lesson[] = [
   {
     id: "ba-verbs-dictionary",
     title: "Ba- Verbs & Actions",
-    titleLari: "Zonza Ba",
-    titleMandombe: "Zonza Ba",
+    titleLari: "Malongi me mu \"Ba\"",
+    titleMandombe: "Malongi me mu Ba",
     description: "Master essential Kikongo Lari verbs starting with 'Ba-' — from remembering to running, from fighting to healing.",
     level: "advanced",
     icon: "🏃",
