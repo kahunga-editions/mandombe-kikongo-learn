@@ -3885,9 +3885,9 @@ export const lessons: Lesson[] = [
       },
       {
         type: "fill-in-blank",
-        sentence: "The plural of Tshininia (ant) is ___",
-        blank: "Bininia",
-        hint: "The Tshi-/Ki- prefix becomes Bi- in plural.",
+        sentence: "The plural of Kinienia (ant) is ___",
+        blank: "Binienia",
+        hint: "The Ki-/Tshi- prefix becomes Bi- in plural.",
       },
       {
         type: "fill-in-blank",
