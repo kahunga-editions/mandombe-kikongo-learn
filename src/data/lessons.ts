@@ -3744,7 +3744,7 @@ export const lessons: Lesson[] = [
           { left: "Loso", right: "Rice" },
           { left: "Ntoba", right: "Cassava leaves" },
           { left: "Mbala", right: "Sweet potato" },
-          { left: "Dikondi", right: "Banana" },
+          { left: "Dinkondi", right: "Banana" },
         ],
       },
       {
