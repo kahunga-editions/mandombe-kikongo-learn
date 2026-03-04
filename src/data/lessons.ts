@@ -1024,7 +1024,6 @@ export const lessons: Lesson[] = [
       {
         type: "multiple-choice",
         question: "Sentence Builder: Someone is intelligent. Which sentence is correct?",
-        questionMandombe: "Diyela kena",
         options: ["Diela ngiena", "Diela kena", "Diela tuena", "Diela bena"],
         correctIndex: 1,
         explanation: "'kena' is the third person singular — He/She is intelligent.",
@@ -1032,7 +1031,6 @@ export const lessons: Lesson[] = [
       {
         type: "multiple-choice",
         question: "Negation: Turn 'Kiese ngiena' (I am happy) into a negative sentence.",
-        questionMandombe: "Kiyese ngiyena",
         options: ["Ka kiese ngiena", "Kiese ka ngiena ko", "Kiese ngiena ko", "Ka kiese ko ngiena"],
         correctIndex: 1,
         explanation: "The negation pattern wraps the verb: 'ka [verb] ko' → Kiese ka ngiena ko.",
@@ -3844,6 +3842,12 @@ export const lessons: Lesson[] = [
       { lari: "Mpangu", mandombe: "Mpangu", french: "Grenouille", english: "Frog" },
       { lari: "Nioka", mandombe: "Nioka", french: "Serpent", english: "Snake" },
       { lari: "Nkabi", mandombe: "Nkabi", french: "Antilope", english: "Antelope" },
+      { lari: "Mfulu", mandombe: "Mfulu", french: "Tortue", english: "Turtle / Tortoise" },
+      { lari: "Nkumbi", mandombe: "Nkumbi", french: "Un gros rat", english: "A large rat" },
+      { lari: "Kuti", mandombe: "Kuti", french: "Hibou", english: "Owl" },
+      { lari: "Mpakasa", mandombe: "Mpakasa", french: "Buffle", english: "Buffalo" },
+      { lari: "Mbambi", mandombe: "Mbambi", french: "Iguane, dragon", english: "Iguana, dragon" },
+      { lari: "Mpese", mandombe: "Mpese", french: "Cafard", english: "Cockroach" },
     ],
     exercises: [
       {
