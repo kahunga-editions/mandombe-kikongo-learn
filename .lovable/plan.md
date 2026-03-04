@@ -1,24 +1,25 @@
 
 
-## Plan
+# Fix Panel 9 Illustration - Missing Head
 
-### 1. Add "Nsatu mamba" conjugation to the vocabulary
-In the "Nsatu na Lemina" lesson (`src/data/lessons.ts`, around line 3702), add 6 new vocabulary entries after the existing "Mpuina" conjugation block:
+## The Problem
 
-- `Nsatu mamba ye nani` — J'ai envie de boire de l'eau / I want to drink water
-- `Nsatu mamba ye naku` — Tu as envie de boire de l'eau
-- `Nsatu mamba ye nandi` — Il/elle/on a envie de boire de l'eau
-- `Nsatu mamba ye neto` — Nous avons envie de boire de l'eau
-- `Nsatu mamba ye neno` — Vous avez envie de boire de l'eau
-- `Nsatu mamba ye nawu` — Ils/elles ont envie de boire de l'eau
+In panel 9, Sunda (the second girl on the right) is cut off — her head is completely missing from the frame, showing only her torso and dress. Nsayi on the left looks fine with her ponytail.
 
-### 2. Correct "Dikondi" → "Dinkondi" and "Makondi" → "Mankondi"
-Fix all occurrences in `src/data/lessons.ts`:
-- **Line 3670**: `Dikondi` → `Dinkondi` (vocabulary entry)
-- **Line 3671**: `Makondi` → `Mankondi` (vocabulary entry)
-- **Line 3741**: `Dikondi` → `Dinkondi` (matching exercise 5)
-- **Line 3787**: `Dikondi / Makondi` → `Dinkondi / Mankondi` (multiple-choice option)
+## The Fix
 
-### Files to modify
-- `src/data/lessons.ts` — add vocabulary entries + correct banana spelling
+Regenerate `src/assets/story-panel-9.jpg` with a single, focused prompt that ensures:
 
+- **Both girls are fully visible** from head to toe, centered in the frame with plenty of space above their heads
+- Nsayi (ponytail) and Sunda sitting together in tall golden savanna grass
+- Both holding/examining bright orange nsempela mushrooms
+- Watercolor style, warm earthy tones, bold outlines
+- Camera pulled back enough so no body parts are cropped
+
+## File Changed
+
+| File | Action |
+|------|--------|
+| `src/assets/story-panel-9.jpg` | Regenerate with both characters fully in frame |
+
+No code changes needed — only the image asset.

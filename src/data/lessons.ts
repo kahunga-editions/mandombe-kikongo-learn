@@ -3667,8 +3667,8 @@ export const lessons: Lesson[] = [
       { lari: "Wandu", mandombe: "Wandu", french: "Pois d'angole", english: "Pigeon peas", portuguese: "Feijão-guandu" },
       { lari: "Tshintu", mandombe: "Tshintu", french: "Ananas (singulier)", english: "Pineapple", portuguese: "Ananás" },
       { lari: "Bintu", mandombe: "Bintu", french: "Ananas (pluriel)", english: "Pineapples", portuguese: "Ananases" },
-      { lari: "Dikondi", mandombe: "Dikondi", french: "Banane (singulier)", english: "Banana", portuguese: "Banana" },
-      { lari: "Makondi", mandombe: "Makondi", french: "Bananes (pluriel)", english: "Bananas", portuguese: "Bananas" },
+      { lari: "Dinkondi", mandombe: "Dinkondi", french: "Banane (singulier)", english: "Banana", portuguese: "Banana" },
+      { lari: "Mankondi", mandombe: "Mankondi", french: "Bananes (pluriel)", english: "Bananas", portuguese: "Bananas" },
       { lari: "Lala", mandombe: "Lala", french: "Orange (singulier)", english: "Orange", portuguese: "Laranja" },
       { lari: "Malala", mandombe: "Malala", french: "Oranges (pluriel)", english: "Oranges", portuguese: "Laranjas" },
       { lari: "Nsafu", mandombe: "Nsafu", french: "Le safou", english: "Safou (African pear)", portuguese: "Safou" },
@@ -3700,6 +3700,12 @@ export const lessons: Lesson[] = [
       { lari: "Mpuina ye neto", mandombe: "Mpuina ye neto", french: "Nous avons soif", english: "We are thirsty", portuguese: "Temos sede" },
       { lari: "Mpuina ye neno", mandombe: "Mpuina ye neno", french: "Vous avez soif", english: "You are thirsty (plural)", portuguese: "Têm sede" },
       { lari: "Mpuina ye nawu", mandombe: "Mpuina ye nawu", french: "Ils/elles ont soif", english: "They are thirsty", portuguese: "Têm sede" },
+      { lari: "Nsatu mamba ye nani", mandombe: "Nsatu mamba ye nani", french: "J'ai envie de boire de l'eau", english: "I want to drink water", portuguese: "Quero beber água" },
+      { lari: "Nsatu mamba ye naku", mandombe: "Nsatu mamba ye naku", french: "Tu as envie de boire de l'eau", english: "You want to drink water", portuguese: "Queres beber água" },
+      { lari: "Nsatu mamba ye nandi", mandombe: "Nsatu mamba ye nandi", french: "Il/elle/on a envie de boire de l'eau", english: "He/she wants to drink water", portuguese: "Quer beber água" },
+      { lari: "Nsatu mamba ye neto", mandombe: "Nsatu mamba ye neto", french: "Nous avons envie de boire de l'eau", english: "We want to drink water", portuguese: "Queremos beber água" },
+      { lari: "Nsatu mamba ye neno", mandombe: "Nsatu mamba ye neno", french: "Vous avez envie de boire de l'eau", english: "You want to drink water (plural)", portuguese: "Querem beber água" },
+      { lari: "Nsatu mamba ye nawu", mandombe: "Nsatu mamba ye nawu", french: "Ils/elles ont envie de boire de l'eau", english: "They want to drink water", portuguese: "Querem beber água" },
     ],
     exercises: [
       {
@@ -3738,7 +3744,7 @@ export const lessons: Lesson[] = [
           { left: "Loso", right: "Rice" },
           { left: "Ntoba", right: "Cassava leaves" },
           { left: "Mbala", right: "Sweet potato" },
-          { left: "Dikondi", right: "Banana" },
+          { left: "Dinkondi", right: "Banana" },
         ],
       },
       {
@@ -3784,7 +3790,7 @@ export const lessons: Lesson[] = [
       {
         type: "multiple-choice",
         question: "What is the singular/plural pair for 'pineapple'?",
-        options: ["Dikondi / Makondi", "Tshintu / Bintu", "Lala / Malala", "Lunungu / Nungu"],
+        options: ["Dinkondi / Mankondi", "Tshintu / Bintu", "Lala / Malala", "Lunungu / Nungu"],
         correctIndex: 1,
         explanation: "'Tshintu' = pineapple (singular), 'Bintu' = pineapples (plural).",
       },
