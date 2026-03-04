@@ -1024,7 +1024,6 @@ export const lessons: Lesson[] = [
       {
         type: "multiple-choice",
         question: "Sentence Builder: Someone is intelligent. Which sentence is correct?",
-        questionMandombe: "Diyela kena",
         options: ["Diela ngiena", "Diela kena", "Diela tuena", "Diela bena"],
         correctIndex: 1,
         explanation: "'kena' is the third person singular — He/She is intelligent.",
@@ -1032,7 +1031,6 @@ export const lessons: Lesson[] = [
       {
         type: "multiple-choice",
         question: "Negation: Turn 'Kiese ngiena' (I am happy) into a negative sentence.",
-        questionMandombe: "Kiyese ngiyena",
         options: ["Ka kiese ngiena", "Kiese ka ngiena ko", "Kiese ngiena ko", "Ka kiese ko ngiena"],
         correctIndex: 1,
         explanation: "The negation pattern wraps the verb: 'ka [verb] ko' → Kiese ka ngiena ko.",
