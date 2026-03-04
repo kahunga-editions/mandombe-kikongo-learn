@@ -3790,7 +3790,7 @@ export const lessons: Lesson[] = [
       {
         type: "multiple-choice",
         question: "What is the singular/plural pair for 'pineapple'?",
-        options: ["Dikondi / Makondi", "Tshintu / Bintu", "Lala / Malala", "Lunungu / Nungu"],
+        options: ["Dinkondi / Mankondi", "Tshintu / Bintu", "Lala / Malala", "Lunungu / Nungu"],
         correctIndex: 1,
         explanation: "'Tshintu' = pineapple (singular), 'Bintu' = pineapples (plural).",
       },
