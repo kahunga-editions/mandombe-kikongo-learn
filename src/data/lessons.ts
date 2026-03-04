@@ -3700,6 +3700,12 @@ export const lessons: Lesson[] = [
       { lari: "Mpuina ye neto", mandombe: "Mpuina ye neto", french: "Nous avons soif", english: "We are thirsty", portuguese: "Temos sede" },
       { lari: "Mpuina ye neno", mandombe: "Mpuina ye neno", french: "Vous avez soif", english: "You are thirsty (plural)", portuguese: "Têm sede" },
       { lari: "Mpuina ye nawu", mandombe: "Mpuina ye nawu", french: "Ils/elles ont soif", english: "They are thirsty", portuguese: "Têm sede" },
+      { lari: "Nsatu mamba ye nani", mandombe: "Nsatu mamba ye nani", french: "J'ai envie de boire de l'eau", english: "I want to drink water", portuguese: "Quero beber água" },
+      { lari: "Nsatu mamba ye naku", mandombe: "Nsatu mamba ye naku", french: "Tu as envie de boire de l'eau", english: "You want to drink water", portuguese: "Queres beber água" },
+      { lari: "Nsatu mamba ye nandi", mandombe: "Nsatu mamba ye nandi", french: "Il/elle/on a envie de boire de l'eau", english: "He/she wants to drink water", portuguese: "Quer beber água" },
+      { lari: "Nsatu mamba ye neto", mandombe: "Nsatu mamba ye neto", french: "Nous avons envie de boire de l'eau", english: "We want to drink water", portuguese: "Queremos beber água" },
+      { lari: "Nsatu mamba ye neno", mandombe: "Nsatu mamba ye neno", french: "Vous avez envie de boire de l'eau", english: "You want to drink water (plural)", portuguese: "Querem beber água" },
+      { lari: "Nsatu mamba ye nawu", mandombe: "Nsatu mamba ye nawu", french: "Ils/elles ont envie de boire de l'eau", english: "They want to drink water", portuguese: "Querem beber água" },
     ],
     exercises: [
       {
