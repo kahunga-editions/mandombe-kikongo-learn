@@ -116,6 +116,16 @@ export const lessons: Lesson[] = [
         ],
       },
       {
+        type: "matching",
+        instruction: "Match the farewell expressions with their translations.",
+        pairs: [
+          { left: "Nkokela kua", right: "See you tonight" },
+          { left: "Mbaji kua", right: "See you tomorrow" },
+          { left: "Ntangu ka kua", right: "See you soon" },
+          { left: "Nkokela", right: "Evening" },
+        ],
+      },
+      {
         type: "fill-in-blank",
         sentence: "Mbote mpangi, ___ aku nani?",
         sentenceMandombe: "Mbote mpangi, ___ aku nani?",
