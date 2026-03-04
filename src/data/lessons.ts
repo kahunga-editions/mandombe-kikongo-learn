@@ -3844,6 +3844,12 @@ export const lessons: Lesson[] = [
       { lari: "Mpangu", mandombe: "Mpangu", french: "Grenouille", english: "Frog" },
       { lari: "Nioka", mandombe: "Nioka", french: "Serpent", english: "Snake" },
       { lari: "Nkabi", mandombe: "Nkabi", french: "Antilope", english: "Antelope" },
+      { lari: "Mfulu", mandombe: "Mfulu", french: "Tortue", english: "Turtle / Tortoise" },
+      { lari: "Nkumbi", mandombe: "Nkumbi", french: "Un gros rat", english: "A large rat" },
+      { lari: "Kuti", mandombe: "Kuti", french: "Hibou", english: "Owl" },
+      { lari: "Mpakasa", mandombe: "Mpakasa", french: "Buffle", english: "Buffalo" },
+      { lari: "Mbambi", mandombe: "Mbambi", french: "Iguane, dragon", english: "Iguana, dragon" },
+      { lari: "Mpese", mandombe: "Mpese", french: "Cafard", english: "Cockroach" },
     ],
     exercises: [
       {
