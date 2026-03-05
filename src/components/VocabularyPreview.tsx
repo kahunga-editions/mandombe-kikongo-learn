@@ -81,6 +81,10 @@ const categories: VocabCategory[] = [
       { lari: "Nzari", french: "Beau-frère / belle-sœur", english: "Brother-in-law / sister-in-law", portuguese: "Cunhado/a", note: "Comme le fleuve (nzari), car ils font continuer la lignée. Pluriel : Banzari (peu usité)." },
       { lari: "Nkueji", french: "Homme marié dans la famille (pièce rapportée)", english: "Man married into the family", portuguese: "Homem casado na família", note: "S'applique aux hommes seulement. Pluriel : Bankueji." },
       { lari: "Kinkueji", french: "Alliance entre deux familles par le mariage", english: "Alliance between two families through marriage", portuguese: "Aliança entre duas famílias pelo casamento" },
+      { lari: "Ndumba", french: "La jeune fille", english: "Young woman, girl", portuguese: "A jovem, rapariga" },
+      { lari: "Bandumba", french: "Les jeunes filles", english: "Young women, girls", portuguese: "As jovens, raparigas" },
+      { lari: "Toko", french: "Le jeune homme", english: "Young man", portuguese: "O jovem, rapaz" },
+      { lari: "Matoko", french: "Les jeunes hommes", english: "Young men", portuguese: "Os jovens, rapazes" },
     ],
   },
   {
