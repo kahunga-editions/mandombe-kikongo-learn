@@ -85,6 +85,8 @@ const categories: VocabCategory[] = [
       { lari: "Ndumba", french: "La jeune fille", english: "Young woman, girl", portuguese: "A jovem, rapariga" },
       { lari: "Bandumba", french: "Les jeunes filles", english: "Young women, girls", portuguese: "As jovens, raparigas" },
       { lari: "Toko", french: "Le jeune homme", english: "Young man", portuguese: "O jovem, rapaz" },
+      { lari: "Buko", french: "Femme de l'oncle maternel / Belle-mère (maman du mari ou de la femme)", english: "Maternal uncle's wife / Mother-in-law", portuguese: "Esposa do tio materno / Sogra", note: "Pluriel : Mako" },
+      { lari: "Mako", french: "Les belles-mères / Les femmes des oncles maternels", english: "Mothers-in-law / Maternal uncles' wives", portuguese: "As sogras / Esposas dos tios maternos" },
       { lari: "Matoko", french: "Les jeunes hommes", english: "Young men", portuguese: "Os jovens, rapazes" },
     ],
   },
