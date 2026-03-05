@@ -9,6 +9,7 @@ import vocabNature from "@/assets/vocab-nature.jpg";
 import vocabBody from "@/assets/vocab-body.jpg";
 import vocabActions from "@/assets/vocab-actions.jpg";
 import vocabFood from "@/assets/vocab-food.jpg";
+import vocabNumbers from "@/assets/vocab-numbers.jpg";
 
 interface VocabEntry {
   lari: string;
