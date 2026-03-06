@@ -3335,6 +3335,8 @@ export const lessons: Lesson[] = [
   {
     id: "ma-days-time",
     title: "Ma- Words, Days & Time Expressions",
+    titleFr: "Mots en Ma-, jours et expressions de temps",
+    titlePt: "Palavras em Ma-, dias e expressões de tempo",
     titleLari: "Mamba na Bilumbu",
     titleMandombe: "Mamba na Bilumbu",
     description: "Learn Ma- vocabulary, the days of the week, and time expressions in Kikongo Lari — essential for daily conversation.",
