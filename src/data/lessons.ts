@@ -1077,6 +1077,8 @@ export const lessons: Lesson[] = [
   {
     id: "imperative-commands",
     title: "Imperative & Commands — Tuma",
+    titleFr: "Impératif et ordres — Tuma",
+    titlePt: "Imperativo e comandos — Tuma",
     titleLari: "Tuma",
     titleMandombe: "Tuma",
     description: "Learn to give commands and instructions: close, open, sleep, go out, walk, run, and ask — in singular and plural imperative forms.",
