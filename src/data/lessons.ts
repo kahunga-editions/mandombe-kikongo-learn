@@ -4464,6 +4464,8 @@ export const lessons: Lesson[] = [
       { lari: "Disu", mandombe: "Disu", french: "Œil", english: "Eye", portuguese: "Olho" },
       { lari: "Meso", mandombe: "Meso", french: "Yeux", english: "Eyes", portuguese: "Olhos" },
       { lari: "Nse", mandombe: "Nse", french: "Sourcil", english: "Eyebrow", portuguese: "Sobrancelha" },
+      { lari: "Lulabu", mandombe: "Lulabu", french: "Cil", english: "Eyelash", portuguese: "Cílio" },
+      { lari: "Ndabu", mandombe: "Ndabu", french: "Cils", english: "Eyelashes", portuguese: "Cílios" },
       { lari: "Mbombo", mandombe: "Mbombo", french: "Nez", english: "Nose", portuguese: "Nariz" },
       { lari: "Kutu", mandombe: "Kutu", french: "Oreille", english: "Ear", portuguese: "Orelha" },
       { lari: "Makutu", mandombe: "Makutu", french: "Oreilles", english: "Ears", portuguese: "Orelhas" },
