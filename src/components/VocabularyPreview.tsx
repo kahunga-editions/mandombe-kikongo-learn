@@ -583,15 +583,17 @@ const WordCard = ({ word }: { word: VocabEntry }) => {
 };
 
 const VocabularyPreview = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="vocabulary" className="py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <p className="font-mandombe text-3xl md:text-4xl text-gold mb-6">Mazita</p>
-          <p className="text-primary font-body text-sm tracking-[0.25em] uppercase mb-3">Mazita — Vocabulary</p>
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">Essential Words & Phrases</h2>
+          <p className="text-primary font-body text-sm tracking-[0.25em] uppercase mb-3">{t("vocab.eyebrow")}</p>
+          <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">{t("vocab.title")}</h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            Each word comes in Kikongo Lari with translations in French, English and Portuguese — languages spoken across the Kongo diaspora.
+            {t("vocab.subtitle")}
           </p>
         </div>
 
