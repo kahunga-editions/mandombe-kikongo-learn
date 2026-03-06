@@ -2116,6 +2116,8 @@ export const lessons: Lesson[] = [
   {
     id: "bia-sacred-governance",
     title: "Sacred & Governance — Bia Series",
+    titleFr: "Sacré et gouvernance — Série Bia",
+    titlePt: "Sagrado e governança — Série Bia",
     titleLari: "Biala na Kimfumu",
     titleMandombe: "Biyala na Kimfumu",
     description: "Explore words of consecration, crowning, inheritance, and calling — the Bia- root family from the dictionary.",
