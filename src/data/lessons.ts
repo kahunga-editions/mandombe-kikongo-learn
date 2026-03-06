@@ -2355,7 +2355,7 @@ export const lessons: Lesson[] = [
     ],
     phrases: [
       { lari: "Budisa bibidiki", mandombe: "Budisa bibidiki", french: "Faisons fabriquer des briques", english: "Let's have bricks made" },
-      { lari: "Binsangu bia mbote", mandombe: "Binsangu biya mbote", french: "Les bonnes nouvelles", english: "The good news" },
+      { lari: "Nsangu za mbote", mandombe: "Nsangu za mbote", french: "Les bonnes nouvelles", english: "The good news" },
       { lari: "Bikonko bitatu bia nene", mandombe: "Bikonko bitatu biya nene", french: "Un grand triangle", english: "A big triangle" },
     ],
     exercises: [
