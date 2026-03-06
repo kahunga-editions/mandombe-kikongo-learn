@@ -10,6 +10,7 @@ import vocabBody from "@/assets/vocab-body.jpg";
 import vocabActions from "@/assets/vocab-actions.jpg";
 import vocabFood from "@/assets/vocab-food.jpg";
 import vocabNumbers from "@/assets/vocab-numbers.jpg";
+import vocabColors from "@/assets/vocab-colors.jpg";
 
 interface VocabEntry {
   lari: string;
