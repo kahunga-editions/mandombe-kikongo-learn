@@ -2392,9 +2392,9 @@ export const lessons: Lesson[] = [
         instruction: "Match the daily objects.",
         pairs: [
           { left: "Bidiki", right: "Brick" },
-          { left: "Bidila", right: "Hem, mat" },
+          { left: "Nkuala", right: "Mat" },
           { left: "Bikuta", right: "Baby calming object" },
-          { left: "Bipopo", right: "Scarification" },
+          { left: "Bipopo", right: "Scarification on cheeks" },
         ],
       },
       {
