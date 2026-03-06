@@ -2352,6 +2352,8 @@ export const lessons: Lesson[] = [
       { lari: "Binokena", mandombe: "Binokena", french: "Insecte du manguier dont la sécrétion rend aveugle", english: "Mango tree insect whose secretion causes blindness" },
       { lari: "Binsangu", mandombe: "Binsangu", french: "Nouvelle, annonce, popularité", english: "News, announcement, popularity" },
       { lari: "Bipopo", mandombe: "Bipopo", french: "Scarification au niveau des joues", english: "Scarification on the cheeks" },
+      { lari: "Tshikonko", mandombe: "Tshikonko", french: "Le coin", english: "The corner" },
+      { lari: "Bikonko", mandombe: "Bikonko", french: "Les coins", english: "The corners" },
     ],
     phrases: [
       { lari: "Budisa bibidiki", mandombe: "Budisa bibidiki", french: "Faisons fabriquer des briques", english: "Let's have bricks made" },
