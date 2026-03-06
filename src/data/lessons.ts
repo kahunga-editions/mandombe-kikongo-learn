@@ -710,6 +710,8 @@ export const lessons: Lesson[] = [
   {
     id: "ba-verbs-dictionary",
     title: "Ba- Verbs & Actions",
+    titleFr: "Verbes et actions en Ba-",
+    titlePt: "Verbos e ações em Ba-",
     titleLari: "Malongi me mu \"Ba\"",
     titleMandombe: "Malongi me mu Ba",
     description: "Master essential Kikongo Lari verbs starting with 'Ba-' — from remembering to running, from fighting to healing.",
