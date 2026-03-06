@@ -542,6 +542,23 @@ const categories: VocabCategory[] = [
       { lari: "Funda dia biaji", french: "Un milliard (1 000 000 000)", english: "One billion (1,000,000,000)", portuguese: "Um bilhão (1.000.000.000)" },
     ],
   },
+  {
+    id: "colors",
+    label: "Colors",
+    lariLabel: "Tinta",
+    image: vocabColors,
+    words: [
+      { lari: "Tinta", french: "Couleur", english: "Color", portuguese: "Cor" },
+      { lari: "Mpembe", french: "Blanc", english: "White", portuguese: "Branco" },
+      { lari: "Ndombi", french: "Noir", english: "Black", portuguese: "Preto" },
+      { lari: "Mpilu", french: "Violet", english: "Purple / Violet", portuguese: "Violeta / Roxo" },
+      { lari: "Mbuaki", french: "Rouge", english: "Red", portuguese: "Vermelho" },
+      { lari: "Ngizu", french: "Vert", english: "Green", portuguese: "Verde" },
+      { lari: "Ngumbudi", french: "Indigo", english: "Indigo", portuguese: "Índigo" },
+      { lari: "Tundu", french: "Jaune", english: "Yellow", portuguese: "Amarelo" },
+      { lari: "Mbudi", french: "Bleu", english: "Blue", portuguese: "Azul" },
+    ],
+  },
 ];
 
 const WordCard = ({ word }: { word: VocabEntry }) => (
