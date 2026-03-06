@@ -4233,6 +4233,8 @@ export const lessons: Lesson[] = [
   {
     id: "numbers",
     title: "Numbers — Ntalu",
+    titleFr: "Les nombres — Ntalu",
+    titlePt: "Os números — Ntalu",
     titleLari: "Ntalu",
     titleMandombe: "Ntalu",
     description: "Learn to count in Kikongo Lari from 0 to billions. Discover the patterns behind tens, hundreds, thousands, millions, and beyond.",
