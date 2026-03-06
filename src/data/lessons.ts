@@ -4881,7 +4881,7 @@ export const lessons: Lesson[] = [
           { left: "Mpembe", right: "White / Blanc" },
           { left: "Ndombi", right: "Black / Noir" },
           { left: "Mbuaki", right: "Red / Rouge" },
-          { left: "Tundu", right: "Yellow / Jaune" },
+          { left: "Ntundu", right: "Yellow / Jaune" },
         ],
       },
       // Exercise 9: Matching — More colors
