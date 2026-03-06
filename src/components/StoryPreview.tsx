@@ -229,7 +229,7 @@ const StoryPreview = () => {
                   {/* Story ending */}
                   <div className="text-center py-6 border-t border-border">
                     <p className="font-mandombe text-3xl text-gold/60 mb-2">Nsamu wusukidi</p>
-                    <p className="font-display text-lg text-foreground italic">Fin de l'histoire — The End — Fim da história</p>
+                    <p className="font-display text-lg text-foreground italic">{t("stories.end")}</p>
                   </div>
                 </div>
               </PremiumGate>
