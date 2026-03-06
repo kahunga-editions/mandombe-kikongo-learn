@@ -462,7 +462,7 @@ export const lessons: Lesson[] = [
     phrases: [
       { lari: "Mpimpa beto ka tu seke ko", mandombe: "Mpimpa beto ka tu seke ko", french: "La nuit dernière nous ne pouvions pas dormir", english: "Last night we couldn't sleep", portuguese: "Ontem à noite não conseguimos dormir" },
       { lari: "Ni luaka ka kue bele", mandombe: "Ni luwaka ka kuwe bele", french: "Il s'inquiète", english: "He is worried", portuguese: "Ele está preocupado" },
-      { lari: "Kang'eno vungula", mandombe: "Kang'eno vungula", french: "Fermez à clef", english: "Lock the door", portuguese: "Tranquem a porta" },
+      { lari: "Kangeno vungula", mandombe: "Kangeno vungula", french: "Fermez à clef", english: "Lock the door", portuguese: "Tranquem a porta" },
     ],
     exercises: [
       {
@@ -1286,7 +1286,7 @@ export const lessons: Lesson[] = [
       { lari: "Yimba", mandombe: "Yimba", french: "Chanter", english: "To sing", portuguese: "Cantar" },
     ],
     phrases: [
-      { lari: "Kang'eno vungula", mandombe: "Kang'eno vungula", french: "Fermez à clef", english: "Lock the door", portuguese: "Tranquem a porta" },
+      { lari: "Kangeno vungula", mandombe: "Kangeno vungula", french: "Fermez à clef", english: "Lock the door", portuguese: "Tranquem a porta" },
       { lari: "Lala bubote", mandombe: "Lala bubote", french: "Dors bien", english: "Sleep well", portuguese: "Durma bem" },
       { lari: "Duka na nsi", mandombe: "Duka na nsi", french: "Sors dehors", english: "Go outside", portuguese: "Sai para fora" },
       { lari: "Diata mbote", mandombe: "Diyata mbote", french: "Marche bien", english: "Walk carefully", portuguese: "Anda com cuidado" },
@@ -1328,7 +1328,7 @@ export const lessons: Lesson[] = [
         type: "matching",
         instruction: "Match the commands with their meanings.",
         pairs: [
-          { left: "Kang'eno vungula", right: "Lock the door" },
+          { left: "Kangeno vungula", right: "Lock the door" },
           { left: "Lala bubote", right: "Sleep well" },
           { left: "Kwiza fulu", right: "Come here" },
           { left: "Diata mbote", right: "Walk carefully" },
