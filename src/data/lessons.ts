@@ -1935,6 +1935,8 @@ export const lessons: Lesson[] = [
   {
     id: "ba-movement-body",
     title: "Ba- Movement, Body & Transformation",
+    titleFr: "Ba- Mouvement, corps et transformation",
+    titlePt: "Ba- Movimento, corpo e transformação",
     titleLari: "Malongi me mu \"Ba\" (3)",
     titleMandombe: "Malongi me mu Ba (3)",
     description: "Master Ba- verbs of physical movement, bodily actions, and transformation — from turning and running to sticking and peeling.",
