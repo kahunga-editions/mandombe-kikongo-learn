@@ -2354,7 +2354,6 @@ export const lessons: Lesson[] = [
       { lari: "Bidekadeka", mandombe: "Bidekadeka", french: "Plante de la famille des Poaceae", english: "Plant of the Poaceae family" },
       { lari: "Bidiki", mandombe: "Bidiki", french: "Brique", english: "Brick" },
       { lari: "Nkuala", mandombe: "Nkuala", french: "Natte", english: "Mat" },
-      { lari: "Bidimu", mandombe: "Bidimu", french: "Image, ressemblance", english: "Image, resemblance" },
       { lari: "Bibila", mandombe: "Bibila", french: "Hématome, sang coagulé suite à un choc", english: "Bruise, hematoma" },
       { lari: "Bifubu", mandombe: "Bifubu", french: "Espèce de liane flexible", english: "Flexible liana species" },
       { lari: "Bifuku", mandombe: "Bifuku", french: "Chenilles vivant en groupe", english: "Caterpillars living in groups" },
