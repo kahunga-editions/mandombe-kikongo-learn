@@ -4069,21 +4069,21 @@ export const lessons: Lesson[] = [
       { lari: "Milele", mandombe: "Milele", french: "Pagnes (plur.)", english: "Loincloths (plur.)", portuguese: "Panos (plur.)" },
     ],
     phrases: [
-      // Règle 1 : particule entre le nom et le nombre
-      { lari: "mabola ma ya", mandombe: "mabola ma ya", french: "quatre oignons", english: "four onions", note: "Particule 'ma' entre le nom (classe ma-) et le nombre" },
-      { lari: "makonko ma tatu", mandombe: "makonko ma tatu", french: "trois sauterelles", english: "three grasshoppers", note: "Particule 'ma' pour la classe ma-" },
+      // Rule 1: particle between the noun and the number
+      { lari: "mabola ma ya", mandombe: "mabola ma ya", french: "quatre oignons", english: "four onions", note: "Particle 'ma' between the noun (ma- class) and the number" },
+      { lari: "makonko ma tatu", mandombe: "makonko ma tatu", french: "trois sauterelles", english: "three grasshoppers", note: "Particle 'ma' for the ma- class" },
       { lari: "makonko ma ya", mandombe: "makonko ma ya", french: "quatre sauterelles", english: "four grasshoppers" },
-      // Règle 2 : particule différente selon le nombre
-      { lari: "konko di moshi", mandombe: "konko di moshi", french: "une sauterelle", english: "one grasshopper", note: "Au singulier, la particule change : 'di' pour 1" },
-      // Règle 3 : pas de particule dans certains cas
-      { lari: "mabola nsambuadi", mandombe: "mabola nsambuadi", french: "sept oignons", english: "seven onions", note: "Pas de particule nécessaire ici" },
+      // Rule 2: different particle depending on the number
+      { lari: "konko di moshi", mandombe: "konko di moshi", french: "une sauterelle", english: "one grasshopper", note: "In the singular, the particle changes: 'di' for 1" },
+      // Rule 3: no particle in some cases
+      { lari: "mabola nsambuadi", mandombe: "mabola nsambuadi", french: "sept oignons", english: "seven onions", note: "No particle needed here" },
       { lari: "mapapa nsambuadi", mandombe: "mapapa nsambuadi", french: "sept chaussures", english: "seven shoes" },
       { lari: "mabola nkama", mandombe: "mabola nkama", french: "cent oignons", english: "one hundred onions" },
-      // Règle 4 : euphonie — la particule s'intègre au nombre
-      { lari: "makonko mole", mandombe: "makonko mole", french: "deux sauterelles", english: "two grasshoppers", note: "Euphonie : la particule 'ma' s'intègre au nombre → 'mole' au lieu de 'ma zole'" },
-      { lari: "bindongo biole", mandombe: "bindongo biole", french: "deux moutons", english: "two sheep", note: "Euphonie : la particule 'bi' s'intègre → 'biole' au lieu de 'bi zole'" },
-      // Règle 5 : mots invariables au pluriel — pas de particule
-      { lari: "nkangabumi moshi", mandombe: "nkangabumi moshi", french: "une araignée", english: "one spider", note: "Mot invariable : pas de particule" },
+      // Rule 4: euphony — the particle merges with the number
+      { lari: "makonko mole", mandombe: "makonko mole", french: "deux sauterelles", english: "two grasshoppers", note: "Euphony: particle 'ma' merges with the number → 'mole' instead of 'ma zole'" },
+      { lari: "bindongo biole", mandombe: "bindongo biole", french: "deux moutons", english: "two sheep", note: "Euphony: particle 'bi' merges → 'biole' instead of 'bi zole'" },
+      // Rule 5: invariable nouns — no particle
+      { lari: "nkangabumi moshi", mandombe: "nkangabumi moshi", french: "une araignée", english: "one spider", note: "Invariable noun: no particle needed" },
       { lari: "nkangabumi zole", mandombe: "nkangabumi zole", french: "deux araignées", english: "two spiders" },
       { lari: "nkangabumi tatu", mandombe: "nkangabumi tatu", french: "trois araignées", english: "three spiders" },
       { lari: "ngombe moshi", mandombe: "ngombe moshi", french: "un bœuf", english: "one ox" },
@@ -4092,11 +4092,11 @@ export const lessons: Lesson[] = [
       { lari: "ngulu moshi", mandombe: "ngulu moshi", french: "un cochon", english: "one pig" },
       { lari: "ngulu zole", mandombe: "ngulu zole", french: "deux cochons", english: "two pigs" },
       { lari: "ngulu tatu", mandombe: "ngulu tatu", french: "trois cochons", english: "three pigs" },
-      // Règle 6 : grands nombres — particule après le 'na'
-      { lari: "makonko makumatatu na ma tanu", mandombe: "makonko makumatatu na ma tanu", french: "trente-cinq sauterelles", english: "thirty-five grasshoppers", note: "Dans les grands nombres, la particule se place après le 'na'" },
-      { lari: "bitunga makumatatu na bi tanu", mandombe: "bitunga makumatatu na bi tanu", french: "trente-cinq paniers", english: "thirty-five baskets", note: "Particule 'bi' (classe bi-) après le 'na'" },
-      { lari: "bindongo makumatatu na bi tanu", mandombe: "bindongo makumatatu na bi tanu", french: "trente-cinq moutons", english: "thirty-five sheep", note: "Même particule 'bi' pour bindongo" },
-      { lari: "milele makumole na miole", mandombe: "milele makumole na miole", french: "vingt-deux pagnes", english: "twenty-two loincloths", note: "Particule 'mi' (classe mi-) intégrée par euphonie → 'miole'" },
+      // Rule 6: large numbers — particle after 'na'
+      { lari: "makonko makumatatu na ma tanu", mandombe: "makonko makumatatu na ma tanu", french: "trente-cinq sauterelles", english: "thirty-five grasshoppers", note: "In large numbers, the particle is placed after 'na'" },
+      { lari: "bitunga makumatatu na bi tanu", mandombe: "bitunga makumatatu na bi tanu", french: "trente-cinq paniers", english: "thirty-five baskets", note: "Particle 'bi' (bi- class) after 'na'" },
+      { lari: "bindongo makumatatu na bi tanu", mandombe: "bindongo makumatatu na bi tanu", french: "trente-cinq moutons", english: "thirty-five sheep", note: "Same particle 'bi' for bindongo" },
+      { lari: "milele makumole na miole", mandombe: "milele makumole na miole", french: "vingt-deux pagnes", english: "twenty-two loincloths", note: "Particle 'mi' (mi- class) merged by euphony → 'miole'" },
       { lari: "milele makumatatu na miole", mandombe: "milele makumatatu na miole", french: "trente-deux pagnes", english: "thirty-two loincloths" },
       { lari: "milele makumatatu na mi tatu", mandombe: "milele makumatatu na mi tatu", french: "trente-trois pagnes", english: "thirty-three loincloths" },
       { lari: "milele makumatatu na mi ya", mandombe: "milele makumatatu na mi ya", french: "trente-quatre pagnes", english: "thirty-four loincloths" },
