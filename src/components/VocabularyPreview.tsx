@@ -243,6 +243,8 @@ const categories: VocabCategory[] = [
       { lari: "Mbunzu", french: "Front", english: "Forehead", portuguese: "Testa" },
       { lari: "Ntumpa", french: "Fontanelle", english: "Fontanelle", portuguese: "Fontanela" },
       { lari: "Nse", french: "Sourcil", english: "Eyebrow", portuguese: "Sobrancelha" },
+      { lari: "Lulabu", french: "Cil", english: "Eyelash", portuguese: "Cílio" },
+      { lari: "Ndabu", french: "Cils", english: "Eyelashes", portuguese: "Cílios" },
       { lari: "Makutu", french: "Oreilles", english: "Ears", portuguese: "Orelhas" },
       { lari: "Bundi", french: "Joue, tempe", english: "Cheek, temple", portuguese: "Bochecha, têmpora" },
       { lari: "Mabundi", french: "Tempes, joues", english: "Temples, cheeks", portuguese: "Têmporas, bochechas" },
