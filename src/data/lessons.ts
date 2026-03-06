@@ -2380,8 +2380,8 @@ export const lessons: Lesson[] = [
         type: "matching",
         instruction: "Match the plants and natural objects.",
         pairs: [
-          { left: "Bideka", right: "Luminaceae plant" },
-          { left: "Bikekele", right: "Olacaceae shrub" },
+          { left: "Bideka", right: "Ornamental plants" },
+          { left: "Bikekele", right: "Edible plant" },
           { left: "Binkandula", right: "Tiliaceae plant" },
           { left: "Bifubu", right: "Flexible liana" },
           { left: "Binkila", right: "Table wine" },
