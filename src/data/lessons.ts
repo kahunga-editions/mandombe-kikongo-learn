@@ -1328,7 +1328,7 @@ export const lessons: Lesson[] = [
         type: "matching",
         instruction: "Match the commands with their meanings.",
         pairs: [
-          { left: "Kang'eno vungula", right: "Lock the door" },
+          { left: "Kangeno vungula", right: "Lock the door" },
           { left: "Lala bubote", right: "Sleep well" },
           { left: "Kwiza fulu", right: "Come here" },
           { left: "Diata mbote", right: "Walk carefully" },
