@@ -3467,6 +3467,8 @@ export const lessons: Lesson[] = [
   {
     id: "verb-ba-forms",
     title: "The Secrets of the Verb BA",
+    titleFr: "Les secrets du verbe BA",
+    titlePt: "Os segredos do verbo BA",
     titleLari: "Bifua bia ka(ka) ya BA",
     titleMandombe: "Bifuwa biya ka(ka) ya BA",
     description: "Discover that the verb BA (to be) has far more than 6 forms. At the 3rd person, BA morphs depending on the noun class and number of the word it qualifies.",
