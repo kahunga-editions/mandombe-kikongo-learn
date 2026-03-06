@@ -4805,7 +4805,7 @@ export const lessons: Lesson[] = [
       { lari: "Mbuaki", mandombe: "Mbuaki", french: "Rouge", english: "Red", portuguese: "Vermelho" },
       { lari: "Ngizu", mandombe: "Ngizu", french: "Vert", english: "Green", portuguese: "Verde" },
       { lari: "Ngumbudi", mandombe: "Ngumbudi", french: "Indigo", english: "Indigo", portuguese: "Índigo" },
-      { lari: "Tundu", mandombe: "Tundu", french: "Jaune", english: "Yellow", portuguese: "Amarelo" },
+      { lari: "Ntundu", mandombe: "Ntundu", french: "Jaune", english: "Yellow", portuguese: "Amarelo" },
       { lari: "Mbudi", mandombe: "Mbudi", french: "Bleu", english: "Blue", portuguese: "Azul" },
     ],
     exercises: [
