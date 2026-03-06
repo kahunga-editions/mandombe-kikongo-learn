@@ -241,6 +241,19 @@ const StoryPreview = () => {
   );
 };
 
+/* ── Translation helper for ComicPanel ── */
+
+const ComicPanelTranslation = ({ french, english, portuguese }: { french: string; english: string; portuguese: string }) => {
+  const { language } = useLanguage();
+  const text = language === "en" ? english : language === "pt" ? portuguese : french;
+  const flag = language === "en" ? "EN" : language === "pt" ? "PT" : "FR";
+  return (
+    <p className="text-muted-foreground text-sm">
+      <span className="font-semibold text-foreground">{flag}:</span> {text}
+    </p>
+  );
+};
+
 /* ── Comic Panel Component ── */
 
 interface MandombeBubble {
