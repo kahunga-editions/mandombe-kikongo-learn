@@ -4051,7 +4051,7 @@ export const lessons: Lesson[] = [
     title: "Ntalu",
     titleLari: "Ntalu",
     titleMandombe: "Ntalu",
-    description: "Apprendre à compter les choses en Kikongo Lari : classes de mots, particules et règles d'euphonie.",
+    description: "Learn how to count things in Kikongo Lari: noun classes, particles, and euphony rules.",
     level: "intermediate",
     icon: "🧮",
     vocabulary: [
@@ -4064,7 +4064,6 @@ export const lessons: Lesson[] = [
       { lari: "Nkangabumi", mandombe: "Nkangabumi", french: "Araignée", english: "Spider", portuguese: "Aranha" },
       { lari: "Ngombe", mandombe: "Ngombe", french: "Bœuf", english: "Ox / Cow", portuguese: "Boi / Vaca" },
       { lari: "Ngulu", mandombe: "Ngulu", french: "Cochon", english: "Pig", portuguese: "Porco" },
-      { lari: "Etunga", mandombe: "Etunga", french: "Panier (sing.)", english: "Basket (sing.)", portuguese: "Cesto (sing.)" },
       { lari: "Bitunga", mandombe: "Bitunga", french: "Paniers (plur.)", english: "Baskets (plur.)", portuguese: "Cestos (plur.)" },
       { lari: "Lele", mandombe: "Lele", french: "Pagne (sing.)", english: "Loincloth (sing.)", portuguese: "Pano (sing.)" },
       { lari: "Milele", mandombe: "Milele", french: "Pagnes (plur.)", english: "Loincloths (plur.)", portuguese: "Panos (plur.)" },
