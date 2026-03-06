@@ -1,52 +1,52 @@
 import { BookOpen, Feather, Sparkles } from "lucide-react";
-
-const paths = [
-  {
-    icon: BookOpen,
-    title: "Vocabulary",
-    titleLari: "Mazita",
-    description:
-      "Learn essential words and phrases in Kikongo Lari with Latin transliteration, and translations in English, French, and Portuguese.",
-    items: ["Greetings & Phrases", "Family & People", "Nature & Animals", "Body & Health"],
-    color: "primary" as const,
-  },
-  {
-    icon: Feather,
-    title: "Stories",
-    titleLari: "Binsamu",
-    description:
-      "Read bilingual stories like Nsayi's adventures — immerse yourself in Kongo culture through narrative.",
-    items: ["Nsayi at School", "Nsayi in the Savanna", "Cultural Tales", "Children's Stories"],
-    color: "secondary" as const,
-  },
-  {
-    icon: Sparkles,
-    title: "Kilolaka",
-    titleLari: "Kilolaka",
-    description:
-      "Explore the sacred art of decomposing Kikongo into energetic codes — language as a cosmological map.",
-    items: ["Morpheme Analysis", "B & F Series", "D & G Axis", "Mandombe Script"],
-    color: "accent" as const,
-  },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const LearningPaths = () => {
+  const { t } = useLanguage();
+
+  const paths = [
+    {
+      icon: BookOpen,
+      title: t("paths.vocab.title"),
+      titleLari: "Mazita",
+      description: t("paths.vocab.desc"),
+      items: t("paths.vocab.items").split(","),
+      color: "primary" as const,
+    },
+    {
+      icon: Feather,
+      title: t("paths.stories.title"),
+      titleLari: "Binsamu",
+      description: t("paths.stories.desc"),
+      items: t("paths.stories.items").split(","),
+      color: "secondary" as const,
+    },
+    {
+      icon: Sparkles,
+      title: t("paths.kilolaka.title"),
+      titleLari: "Kilolaka",
+      description: t("paths.kilolaka.desc"),
+      items: t("paths.kilolaka.items").split(","),
+      color: "accent" as const,
+    },
+  ];
+
   return (
     <section id="learn" className="py-24 bg-card">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <p className="text-primary font-body text-sm tracking-[0.25em] uppercase mb-3">
-            Your Learning Journey
+            {t("paths.eyebrow")}
           </p>
           <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground">
-            Three Paths to Mastery
+            {t("paths.title")}
           </h2>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {paths.map((path) => (
             <div
-              key={path.title}
+              key={path.titleLari}
               className="group bg-background rounded-xl p-8 border border-border hover:border-primary/40 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5"
             >
               <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
