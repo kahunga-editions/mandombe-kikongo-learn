@@ -2224,6 +2224,8 @@ export const lessons: Lesson[] = [
   {
     id: "bi-plants-creatures",
     title: "Plants, Creatures & Objects — Bi Series",
+    titleFr: "Plantes, créatures et objets — Série Bi",
+    titlePt: "Plantas, criaturas e objetos — Série Bi",
     titleLari: "Bima na Bisi",
     titleMandombe: "Bima na Bisi",
     description: "Discover the rich Bi- vocabulary for plants, insects, household objects, and natural phenomena from the Kilari dictionary.",
