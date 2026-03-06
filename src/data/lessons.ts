@@ -5015,6 +5015,8 @@ export const lessons: Lesson[] = [
   {
     id: "negation",
     title: "Negation — KA…KO",
+    titleFr: "La négation — KA…KO",
+    titlePt: "A negação — KA…KO",
     titleLari: "Mpila ya karila",
     titleMandombe: "Mpila ya karila",
     description: "Learn how to negate sentences in Kikongo Lari using the KA…KO and KA…A…KO structures.",
