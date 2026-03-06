@@ -555,6 +555,8 @@ export const lessons: Lesson[] = [
   {
     id: "mandombe-dictionary",
     title: "Bi- Words",
+    titleFr: "Mots en Bi-",
+    titlePt: "Palavras em Bi-",
     titleLari: "Malongi me mu \"Bi\"",
     titleMandombe: "Malongi me mu Bi",
     description: "Explore essential Kikongo Lari vocabulary starting with 'Bi-'. Each word is shown in Mandombe script with French and English translations.",
