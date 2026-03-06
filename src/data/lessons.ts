@@ -5114,7 +5114,7 @@ export const lessons: Lesson[] = [
       // Exercise 12: Fill-in-blank — Complete plural negation
       {
         type: "fill-in-blank",
-        sentence: "Negate: 'Milele mia tundu miena.' → Milele ka ___ mia tundu ko.",
+        sentence: "Negate: 'Milele mia ntundu miena.' → Milele ka ___ mia ntundu ko.",
         blank: "miena",
         hint: "The full verb form for the 'milele' class (mi- prefix). No contraction!",
         hintPt: "A forma verbal completa para a classe 'milele' (prefixo mi-). Sem contração!",
