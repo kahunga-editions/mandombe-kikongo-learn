@@ -1956,13 +1956,6 @@ export const lessons: Lesson[] = [
       },
       {
         type: "multiple-choice",
-        question: "What does 'Bisambanu' mean?",
-        questionMandombe: "Bisambanu",
-        options: ["Four", "Five", "Six", "Seven"],
-        correctIndex: 2,
-      },
-      {
-        type: "multiple-choice",
         question: "What is 'Bipidi'?",
         questionMandombe: "Bipidi",
         options: ["Wedding dress", "Food sent to the fiancée", "Engagement ring", "Dowry payment"],
