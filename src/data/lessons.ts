@@ -2690,6 +2690,8 @@ export const lessons: Lesson[] = [
   {
     id: "fi-fu-verbs",
     title: "Fi- / Fu- — Verbs, Actions & Transformations",
+    titleFr: "Fi- / Fu- — Verbes, actions et transformations",
+    titlePt: "Fi- / Fu- — Verbos, ações e transformações",
     titleLari: "Finkakasa na Futa",
     titleMandombe: "Finkakasa na Futa",
     description: "Master a rich set of Kikongo Lari verbs starting with Fi- and Fu-, covering physical actions, transformations, and everyday activities.",
