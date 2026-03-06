@@ -1,6 +1,9 @@
 import heroBg from "@/assets/hero-bg.jpg";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const HeroSection = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center overflow-x-hidden">
       <div
@@ -15,25 +18,23 @@ const HeroSection = () => {
         </p>
         <div className="w-32 h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mt-4 mb-10 animate-fade-in opacity-0" style={{ animationDelay: "0.15s" }} />
         <p className="text-gold font-body text-lg tracking-[0.3em] uppercase mb-8 animate-fade-in opacity-0" style={{ animationDelay: "0.2s" }}>
-          Nzo Mikanda — The House of Knowledge
+          {t("hero.subtitle")}
         </p>
         <p className="text-cream/80 text-lg md:text-xl max-w-2xl mx-auto mb-10 font-body leading-relaxed animate-fade-up opacity-0" style={{ animationDelay: "0.6s" }}>
-          Discover the sacred language of the Kongo people through vocabulary,
-          stories, and the ancestral art of Kilolaka — with translations in
-          English, French, and Portuguese.
+          {t("hero.description")}
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up opacity-0" style={{ animationDelay: "0.8s" }}>
           <a
             href="#learn"
             className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3.5 rounded-lg text-lg font-semibold transition-colors"
           >
-            Start Learning
+            {t("hero.startLearning")}
           </a>
           <a
             href="#vocabulary"
             className="border-2 border-gold/50 hover:border-gold text-gold px-8 py-3.5 rounded-lg text-lg font-semibold transition-colors hover:bg-gold/10"
           >
-            Explore Vocabulary
+            {t("hero.exploreVocabulary")}
           </a>
         </div>
       </div>

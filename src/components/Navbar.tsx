@@ -3,16 +3,17 @@ import { Globe, User, LogOut, Crown } from "lucide-react";
 import { useAuth } from "@/contexts/AuthContext";
 import { useNavigate } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
+import { useLanguage, Language } from "@/contexts/LanguageContext";
 
-const languages = [
-  { code: "en", label: "English" },
+const languages: { code: Language; label: string }[] = [
   { code: "fr", label: "Français" },
+  { code: "en", label: "English" },
   { code: "pt", label: "Português" },
 ];
 
 const Navbar = () => {
   const [langOpen, setLangOpen] = useState(false);
-  const [currentLang, setCurrentLang] = useState("en");
+  const { language, setLanguage, t } = useLanguage();
   const { user, isPremium, isAdmin, signOut } = useAuth();
   const navigate = useNavigate();
 
@@ -22,7 +23,6 @@ const Navbar = () => {
       return;
     }
     if (isPremium) {
-      // Open customer portal
       try {
         const { data, error } = await supabase.functions.invoke("customer-portal");
         if (error) throw error;
@@ -32,7 +32,6 @@ const Navbar = () => {
       }
       return;
     }
-    // Go to checkout
     try {
       const { data, error } = await supabase.functions.invoke("create-checkout");
       if (error) throw error;
@@ -51,11 +50,11 @@ const Navbar = () => {
         </a>
 
         <div className="hidden md:flex items-center gap-8">
-          <a href="#learn" className="text-cream/80 hover:text-gold transition-colors text-sm font-medium tracking-wide uppercase">Learn</a>
-          <a href="/lessons" className="text-cream/80 hover:text-gold transition-colors text-sm font-medium tracking-wide uppercase">Lessons</a>
-          <a href="#vocabulary" className="text-cream/80 hover:text-gold transition-colors text-sm font-medium tracking-wide uppercase">Vocabulary</a>
-          <a href="#stories" className="text-cream/80 hover:text-gold transition-colors text-sm font-medium tracking-wide uppercase">Stories</a>
-          <a href="#kilolaka" className="text-cream/80 hover:text-gold transition-colors text-sm font-medium tracking-wide uppercase">Kilolaka</a>
+          <a href="#learn" className="text-cream/80 hover:text-gold transition-colors text-sm font-medium tracking-wide uppercase">{t("nav.learn")}</a>
+          <a href="/lessons" className="text-cream/80 hover:text-gold transition-colors text-sm font-medium tracking-wide uppercase">{t("nav.lessons")}</a>
+          <a href="#vocabulary" className="text-cream/80 hover:text-gold transition-colors text-sm font-medium tracking-wide uppercase">{t("nav.vocabulary")}</a>
+          <a href="#stories" className="text-cream/80 hover:text-gold transition-colors text-sm font-medium tracking-wide uppercase">{t("nav.stories")}</a>
+          <a href="#kilolaka" className="text-cream/80 hover:text-gold transition-colors text-sm font-medium tracking-wide uppercase">{t("nav.kilolaka")}</a>
         </div>
 
         <div className="flex items-center gap-3">
@@ -65,16 +64,16 @@ const Navbar = () => {
               className="flex items-center gap-1.5 text-cream/80 hover:text-gold transition-colors text-sm"
             >
               <Globe className="w-4 h-4" />
-              {languages.find((l) => l.code === currentLang)?.label}
+              {languages.find((l) => l.code === language)?.label}
             </button>
             {langOpen && (
               <div className="absolute right-0 top-full mt-2 bg-earth-deep border border-gold/20 rounded-md shadow-lg py-1 min-w-[140px]">
                 {languages.map((lang) => (
                   <button
                     key={lang.code}
-                    onClick={() => { setCurrentLang(lang.code); setLangOpen(false); }}
+                    onClick={() => { setLanguage(lang.code); setLangOpen(false); }}
                     className={`w-full text-left px-4 py-2 text-sm transition-colors ${
-                      currentLang === lang.code ? "text-gold bg-gold/10" : "text-cream/70 hover:text-gold hover:bg-gold/5"
+                      language === lang.code ? "text-gold bg-gold/10" : "text-cream/70 hover:text-gold hover:bg-gold/5"
                     }`}
                   >
                     {lang.label}
@@ -98,7 +97,7 @@ const Navbar = () => {
                 }`}
               >
                 <Crown className="w-4 h-4" />
-                {isPremium ? "Manage Plan" : "Go Premium"}
+                {isPremium ? t("nav.managePlan") : t("nav.goPremium")}
               </button>
               <button
                 onClick={signOut}
@@ -115,13 +114,13 @@ const Navbar = () => {
                 className="text-cream/80 hover:text-gold transition-colors text-sm font-medium flex items-center gap-1.5"
               >
                 <User className="w-4 h-4" />
-                Sign In
+                {t("nav.signIn")}
               </button>
               <button
                 onClick={handlePremiumClick}
                 className="bg-primary hover:bg-primary/90 text-primary-foreground px-4 py-2 rounded-md text-sm font-semibold transition-colors"
               >
-                Go Premium
+                {t("nav.goPremium")}
               </button>
             </div>
           )}
