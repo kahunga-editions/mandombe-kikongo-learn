@@ -2367,9 +2367,9 @@ export const lessons: Lesson[] = [
         questionFr: "Que signifie 'Bitshinda' ?",
         questionPt: "O que significa 'Bitshinda'?",
         questionMandombe: "Bitshinda",
-        options: ["A market", "A tomb, cemetery", "A river", "A tree"],
-        optionsFr: ["Un marché", "Une tombe, un cimetière", "Une rivière", "Un arbre"],
-        optionsPt: ["Um mercado", "Um túmulo, cemitério", "Um rio", "Uma árvore"],
+        options: ["A market", "A cemetery", "A river", "A tree"],
+        optionsFr: ["Un marché", "Un cimetière", "Une rivière", "Un arbre"],
+        optionsPt: ["Um mercado", "Um cemitério", "Um rio", "Uma árvore"],
         correctIndex: 1,
       },
       {
