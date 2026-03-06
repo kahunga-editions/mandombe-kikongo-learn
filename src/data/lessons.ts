@@ -4774,4 +4774,144 @@ export const lessons: Lesson[] = [
       },
     ],
   },
+  {
+    id: "colors",
+    title: "Colors",
+    titleLari: "Tinta",
+    titleMandombe: "Tinta",
+    description: "Learn the names of colors in Kikongo Lari. Discover how to describe the world around you with vivid vocabulary.",
+    level: "beginner",
+    icon: "🎨",
+    vocabulary: [
+      { lari: "Tinta", mandombe: "Tinta", french: "Couleur", english: "Color", portuguese: "Cor" },
+      { lari: "Mpembe", mandombe: "Mpembe", french: "Blanc", english: "White", portuguese: "Branco" },
+      { lari: "Ndombi", mandombe: "Ndombi", french: "Noir", english: "Black", portuguese: "Preto" },
+      { lari: "Mpilu", mandombe: "Mpilu", french: "Violet", english: "Purple / Violet", portuguese: "Violeta / Roxo" },
+      { lari: "Mbuaki", mandombe: "Mbuaki", french: "Rouge", english: "Red", portuguese: "Vermelho" },
+      { lari: "Ngizu", mandombe: "Ngizu", french: "Vert", english: "Green", portuguese: "Verde" },
+      { lari: "Ngumbudi", mandombe: "Ngumbudi", french: "Indigo", english: "Indigo", portuguese: "Índigo" },
+      { lari: "Tundu", mandombe: "Tundu", french: "Jaune", english: "Yellow", portuguese: "Amarelo" },
+      { lari: "Mbudi", mandombe: "Mbudi", french: "Bleu", english: "Blue", portuguese: "Azul" },
+    ],
+    exercises: [
+      // Exercise 1: MCQ — What does "Tinta" mean?
+      {
+        type: "multiple-choice",
+        question: "What does 'Tinta' mean in Kikongo Lari?",
+        questionMandombe: "Tinta",
+        options: ["Painting", "Color", "Ink", "Light"],
+        correctIndex: 1,
+        explanation: "'Tinta' means 'color' (couleur) in Kikongo Lari.",
+        explanationPt: "'Tinta' significa 'cor' em Kikongo Lari.",
+      },
+      // Exercise 2: MCQ — Translate "Red"
+      {
+        type: "multiple-choice",
+        question: "How do you say 'Red' (Rouge) in Kikongo Lari?",
+        options: ["Mpembe", "Tundu", "Mbuaki", "Ngizu"],
+        correctIndex: 2,
+        explanation: "'Mbuaki' means 'red' (rouge / vermelho).",
+        explanationPt: "'Mbuaki' significa 'vermelho'.",
+      },
+      // Exercise 3: MCQ — Translate "Mpembe"
+      {
+        type: "multiple-choice",
+        question: "What color is 'Mpembe'?",
+        questionMandombe: "Mpembe",
+        options: ["Black / Noir", "White / Blanc", "Blue / Bleu", "Yellow / Jaune"],
+        correctIndex: 1,
+        explanation: "'Mpembe' means 'white' (blanc / branco).",
+        explanationPt: "'Mpembe' significa 'branco'.",
+      },
+      // Exercise 4: MCQ — Translate "Ndombi"
+      {
+        type: "multiple-choice",
+        question: "What color is 'Ndombi'?",
+        questionMandombe: "Ndombi",
+        options: ["Green / Vert", "Indigo", "Black / Noir", "Red / Rouge"],
+        correctIndex: 2,
+        explanation: "'Ndombi' means 'black' (noir / preto).",
+        explanationPt: "'Ndombi' significa 'preto'.",
+      },
+      // Exercise 5: Fill-in-blank — Yellow
+      {
+        type: "fill-in-blank",
+        sentence: "How do you say 'Yellow' (Jaune) in Kikongo Lari? ___",
+        blank: "Tundu",
+        hint: "It starts with 'T'.",
+        hintPt: "Começa com 'T'.",
+      },
+      // Exercise 6: Fill-in-blank — Green
+      {
+        type: "fill-in-blank",
+        sentence: "How do you say 'Green' (Vert) in Kikongo Lari? ___",
+        blank: "Ngizu",
+        hint: "It starts with 'Ng'.",
+        hintPt: "Começa com 'Ng'.",
+      },
+      // Exercise 7: Fill-in-blank — Blue
+      {
+        type: "fill-in-blank",
+        sentence: "Translate 'Blue' (Bleu) into Kikongo Lari: ___",
+        blank: "Mbudi",
+        hint: "It starts with 'Mb'.",
+        hintPt: "Começa com 'Mb'.",
+      },
+      // Exercise 8: Matching — Colors
+      {
+        type: "matching",
+        instruction: "Match each Kikongo Lari color with its English/French translation.",
+        instructionPt: "Associe cada cor em Kikongo Lari à sua tradução em inglês/francês.",
+        pairs: [
+          { left: "Mpembe", right: "White / Blanc" },
+          { left: "Ndombi", right: "Black / Noir" },
+          { left: "Mbuaki", right: "Red / Rouge" },
+          { left: "Tundu", right: "Yellow / Jaune" },
+        ],
+      },
+      // Exercise 9: Matching — More colors
+      {
+        type: "matching",
+        instruction: "Match each Kikongo Lari color with its translation.",
+        instructionPt: "Associe cada cor em Kikongo Lari à sua tradução.",
+        pairs: [
+          { left: "Mbudi", right: "Blue / Bleu" },
+          { left: "Ngizu", right: "Green / Vert" },
+          { left: "Mpilu", right: "Violet / Violet" },
+          { left: "Ngumbudi", right: "Indigo" },
+        ],
+      },
+      // Exercise 10: MCQ — Violet
+      {
+        type: "multiple-choice",
+        question: "How do you say 'Violet' (Purple) in Kikongo Lari?",
+        options: ["Mbudi", "Mpilu", "Ngumbudi", "Mbuaki"],
+        correctIndex: 1,
+        explanation: "'Mpilu' means 'violet / purple' (violet / roxo).",
+        explanationPt: "'Mpilu' significa 'violeta / roxo'.",
+      },
+      // Exercise 11: Fill-in-blank — Indigo
+      {
+        type: "fill-in-blank",
+        sentence: "Translate 'Indigo' into Kikongo Lari: ___",
+        blank: "Ngumbudi",
+        hint: "It starts with 'Ng' and is close to 'Mbudi' (blue).",
+        hintPt: "Começa com 'Ng' e é parecido com 'Mbudi' (azul).",
+      },
+      // Exercise 12: MCQ — Distinguish Mbudi vs Ngumbudi
+      {
+        type: "multiple-choice",
+        question: "What is the difference between 'Mbudi' and 'Ngumbudi'?",
+        options: [
+          "Mbudi = Green, Ngumbudi = Yellow",
+          "Mbudi = Blue, Ngumbudi = Indigo",
+          "Mbudi = Indigo, Ngumbudi = Blue",
+          "Mbudi = Violet, Ngumbudi = Red",
+        ],
+        correctIndex: 1,
+        explanation: "'Mbudi' means 'blue' (bleu) and 'Ngumbudi' means 'indigo'. Notice how the prefix 'Ng-' modifies the base word.",
+        explanationPt: "'Mbudi' significa 'azul' e 'Ngumbudi' significa 'índigo'. Note como o prefixo 'Ng-' modifica a palavra base.",
+      },
+    ],
+  },
 ];

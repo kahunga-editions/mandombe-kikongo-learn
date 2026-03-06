@@ -10,6 +10,7 @@ import vocabBody from "@/assets/vocab-body.jpg";
 import vocabActions from "@/assets/vocab-actions.jpg";
 import vocabFood from "@/assets/vocab-food.jpg";
 import vocabNumbers from "@/assets/vocab-numbers.jpg";
+import vocabColors from "@/assets/vocab-colors.jpg";
 
 interface VocabEntry {
   lari: string;
@@ -539,6 +540,23 @@ const categories: VocabCategory[] = [
       { lari: "Biaji nkama vua", french: "Neuf cents millions (900 000 000)", english: "Nine hundred million (900,000,000)", portuguese: "Novecentos milhões (900.000.000)" },
       { lari: "Biaji nkama vua na makumatanu", french: "Neuf cent cinquante millions (950 000 000)", english: "Nine hundred fifty million (950,000,000)", portuguese: "Novecentos e cinquenta milhões (950.000.000)" },
       { lari: "Funda dia biaji", french: "Un milliard (1 000 000 000)", english: "One billion (1,000,000,000)", portuguese: "Um bilhão (1.000.000.000)" },
+    ],
+  },
+  {
+    id: "colors",
+    label: "Colors",
+    lariLabel: "Tinta",
+    image: vocabColors,
+    words: [
+      { lari: "Tinta", french: "Couleur", english: "Color", portuguese: "Cor" },
+      { lari: "Mpembe", french: "Blanc", english: "White", portuguese: "Branco" },
+      { lari: "Ndombi", french: "Noir", english: "Black", portuguese: "Preto" },
+      { lari: "Mpilu", french: "Violet", english: "Purple / Violet", portuguese: "Violeta / Roxo" },
+      { lari: "Mbuaki", french: "Rouge", english: "Red", portuguese: "Vermelho" },
+      { lari: "Ngizu", french: "Vert", english: "Green", portuguese: "Verde" },
+      { lari: "Ngumbudi", french: "Indigo", english: "Indigo", portuguese: "Índigo" },
+      { lari: "Tundu", french: "Jaune", english: "Yellow", portuguese: "Amarelo" },
+      { lari: "Mbudi", french: "Bleu", english: "Blue", portuguese: "Azul" },
     ],
   },
 ];
