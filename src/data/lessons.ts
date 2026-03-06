@@ -4542,6 +4542,8 @@ export const lessons: Lesson[] = [
   {
     id: "body-parts",
     title: "The Human Body",
+    titleFr: "Le corps humain — Nitu",
+    titlePt: "O corpo humano — Nitu",
     titleLari: "Nitu",
     titleMandombe: "Nitu",
     description: "Learn the names of body parts, organs, and fluids in Kikongo ya Letá. Master singular and plural forms.",
