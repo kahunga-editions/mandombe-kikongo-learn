@@ -4532,6 +4532,7 @@ export const lessons: Lesson[] = [
       { lari: "Kata", mandombe: "Kata", french: "Testicule", english: "Testicle", portuguese: "Testículo" },
       { lari: "Makata", mandombe: "Makata", french: "Testicules", english: "Testicles", portuguese: "Testículos" },
       { lari: "Mvia", mandombe: "Mvia", french: "Pénis", english: "Penis", portuguese: "Pénis" },
+      { lari: "Sutu", mandombe: "Sutu", french: "Pénis non circoncis", english: "Uncircumcised penis", portuguese: "Pénis não circuncidado", note: "Considéré comme une abomination et un signe de déséquilibre chez les Kongo. La circoncision est un rite de passage fondamental dans la culture Kongo." },
       // Fluids
       { lari: "Menga", mandombe: "Menga", french: "Sang", english: "Blood", portuguese: "Sangue" },
       { lari: "Tiafuta", mandombe: "Tiafuta", french: "Sueur", english: "Sweat", portuguese: "Suor" },
