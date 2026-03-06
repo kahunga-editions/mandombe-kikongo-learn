@@ -4964,11 +4964,11 @@ export const lessons: Lesson[] = [
       { lari: "Manga za mbuaki zena.", mandombe: "Manga za mbuaki zena.", french: "Les mangues sont rouges.", english: "The mangoes are red.", portuguese: "As mangas são vermelhas." },
       { lari: "Manga ka zena za mbuaki ko.", mandombe: "Manga ka zena za mbuaki ko.", french: "Les mangues ne sont pas rouges.", english: "The mangoes are not red.", portuguese: "As mangas não são vermelhas.", note: "Pluriel : zena reste zena (pas de contraction)" },
 
-      { lari: "Mulele wa tundu wena.", mandombe: "Mulele wa tundu wena.", french: "Le pagne est jaune.", english: "The loincloth is yellow.", portuguese: "O pano é amarelo." },
-      { lari: "Mulele ka wena wa tundu ko.", mandombe: "Mulele ka wena wa tundu ko.", french: "Le pagne n'est pas jaune.", english: "The loincloth is not yellow.", portuguese: "O pano não é amarelo." },
+      { lari: "Mulele wa ntundu wena.", mandombe: "Mulele wa ntundu wena.", french: "Le pagne est jaune.", english: "The loincloth is yellow.", portuguese: "O pano é amarelo." },
+      { lari: "Mulele ka wena wa ntundu ko.", mandombe: "Mulele ka wena wa ntundu ko.", french: "Le pagne n'est pas jaune.", english: "The loincloth is not yellow.", portuguese: "O pano não é amarelo." },
 
-      { lari: "Milele mia tundu miena.", mandombe: "Milele mia tundu miena.", french: "Les pagnes sont jaunes.", english: "The loincloths are yellow.", portuguese: "Os panos são amarelos." },
-      { lari: "Milele ka miena mia tundu ko.", mandombe: "Milele ka miena mia tundu ko.", french: "Les pagnes ne sont pas jaunes.", english: "The loincloths are not yellow.", portuguese: "Os panos não são amarelos." },
+      { lari: "Milele mia ntundu miena.", mandombe: "Milele mia ntundu miena.", french: "Les pagnes sont jaunes.", english: "The loincloths are yellow.", portuguese: "Os panos são amarelos." },
+      { lari: "Milele ka miena mia ntundu ko.", mandombe: "Milele ka miena mia ntundu ko.", french: "Les pagnes ne sont pas jaunes.", english: "The loincloths are not yellow.", portuguese: "Os panos não são amarelos." },
 
       // Verb negation with KA…A…KO
       { lari: "Ka nguidi a ko.", mandombe: "Ka nguidi a ko.", french: "Je ne comprends pas.", english: "I don't understand.", portuguese: "Eu não compreendo." },
