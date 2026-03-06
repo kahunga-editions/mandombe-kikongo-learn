@@ -597,7 +597,7 @@ export const lessons: Lesson[] = [
       { lari: "Biadisa", mandombe: "Biyadisa", french: "Couronner, investir", english: "To crown, to invest" },
       { lari: "Biadila", mandombe: "Biyadila", french: "Héritier", english: "Heir" },
       { lari: "Bididi", mandombe: "Bididi", french: "Rouge vif", english: "Bright red" },
-      { lari: "Bidimu", mandombe: "Bidimu", french: "Image, ressemblance", english: "Image, resemblance" },
+      
     ],
     phrases: [
       { lari: "Bi signifie la multiplication de l'etre interieur", mandombe: "Bi", french: "/bi/ signifie la multiplication de l'être intérieur", english: "/bi/ means the multiplication of the inner being" },
@@ -2380,13 +2380,6 @@ export const lessons: Lesson[] = [
         question: "What is a 'Bikinda'?",
         questionMandombe: "Bikinda",
         options: ["A market", "A tomb, cemetery", "A river", "A tree"],
-        correctIndex: 1,
-      },
-      {
-        type: "multiple-choice",
-        question: "What does 'Bidimu' mean?",
-        questionMandombe: "Bidimu",
-        options: ["Darkness", "Image, resemblance", "Weapon", "Cloud"],
         correctIndex: 1,
       },
       {
