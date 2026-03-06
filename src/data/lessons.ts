@@ -3632,7 +3632,7 @@ export const lessons: Lesson[] = [
       { lari: "Nkokila", mandombe: "Nkokila", french: "Le soir", english: "The evening", portuguese: "A noitinha" },
       { lari: "Ngonda", mandombe: "Ngonda", french: "La lune", english: "The moon", portuguese: "A lua" },
       { lari: "Muezi", mandombe: "Muezi", french: "Le clair de lune", english: "Moonlight", portuguese: "O luar" },
-      { lari: "Muette", mandombe: "Muette", french: "Étoile", english: "Star", portuguese: "Estrela" },
+      { lari: "Mbuetete", mandombe: "Mbuetete", french: "Étoile", english: "Star", portuguese: "Estrela" },
       { lari: "Ntangu", mandombe: "Ntangu", french: "Le soleil, l'heure", english: "The sun, the time/hour", portuguese: "O sol, a hora" },
       { lari: "Muinda", mandombe: "Muinda", french: "Une lampe", english: "A lamp", portuguese: "Uma lâmpada" },
       { lari: "Namisa muinda", mandombe: "Namisa muinda", french: "Éclairer", english: "To light up, to illuminate", portuguese: "Iluminar" },
