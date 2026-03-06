@@ -5029,10 +5029,10 @@ export const lessons: Lesson[] = [
         explanation: "'Manga ka yena ya mbuaki ko.' — KA is placed before the verb 'yena' and KO at the end.",
         explanationPt: "'Manga ka yena ya mbuaki ko.' — KA é colocado antes do verbo 'yena' e KO no final.",
       },
-      // Exercise 5: Fill-in-blank — Negate "Mulele wa tundu wena"
+      // Exercise 5: Fill-in-blank — Negate "Mulele wa ntundu wena"
       {
         type: "fill-in-blank",
-        sentence: "Negate: 'Mulele wa tundu wena.' → Mulele ka ___ wa tundu ko.",
+        sentence: "Negate: 'Mulele wa ntundu wena.' → Mulele ka ___ wa ntundu ko.",
         blank: "wena",
         hint: "The verb form for 'mulele' class (w- prefix).",
         hintPt: "A forma verbal para a classe 'mulele' (prefixo w-).",
