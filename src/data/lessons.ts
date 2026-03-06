@@ -3784,7 +3784,7 @@ export const lessons: Lesson[] = [
           { left: "Mpimpa", right: "The night" },
           { left: "Ngonda", right: "The moon" },
           { left: "Muezi", right: "Moonlight" },
-          { left: "Muette", right: "Star" },
+          { left: "Mbuetete", right: "Star" },
         ],
       },
       {
