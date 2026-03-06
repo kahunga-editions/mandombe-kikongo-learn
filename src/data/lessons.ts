@@ -1018,7 +1018,7 @@ export const lessons: Lesson[] = [
       { lari: "Kiese kie naku", mandombe: "Kiyese kiye naku", french: "Tu es dans la joie", english: "You are in joy", portuguese: "Estás na alegria" },
       { lari: "Mu kiese we(na)", mandombe: "Mu kiyese we(na)", french: "Tu es dans la joie", english: "You are in joy", portuguese: "Estás na alegria" },
       { lari: "Mu nsayi we(na)", mandombe: "Mu nsayi we(na)", french: "Tu es chanceux / chanceuse", english: "You are lucky", portuguese: "Tens sorte" },
-      { lari: "Diela kena", mandombe: "Diyela kena", french: "Il/Elle est intelligent(e)", english: "He/She is intelligent" },
+      { lari: "Mayela me nandi", mandombe: "Mayela me nandi", french: "Il/Elle est intelligent(e)", english: "He/She is intelligent", portuguese: "Ele/Ela é inteligente" },
       { lari: "Mavimpi ka tuena ko", mandombe: "Mavimpi ka tuwena ko", french: "Nous ne sommes pas en bonne santé", english: "We are not healthy" },
       { lari: "Kiese ka bena ko", mandombe: "Kiyese ka bena ko", french: "Ils ne sont pas contents", english: "They are not happy" },
     ],
