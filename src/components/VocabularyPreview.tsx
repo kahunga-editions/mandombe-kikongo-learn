@@ -618,7 +618,7 @@ const VocabularyPreview = () => {
                   <p className="font-mandombe text-2xl text-gold leading-normal mb-4">{cat.lariLabel}</p>
                   <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground">{cat.lariLabel}</h3>
                   <p className="text-muted-foreground font-body">
-                    {cat.label} — {cat.words.length} free words{cat.premiumWords ? ` + ${cat.premiumWords.length} premium` : ""}
+                    {cat.label} — {cat.words.length} {t("vocab.freeWords")}{cat.premiumWords ? ` + ${cat.premiumWords.length} ${t("vocab.premium")}` : ""}
                   </p>
                 </div>
               </div>
