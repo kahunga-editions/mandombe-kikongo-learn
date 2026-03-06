@@ -319,15 +319,7 @@ const ComicPanel = ({
         <div className="bg-primary/5 rounded-lg p-3 border-l-4 border-primary">
           <p className="font-display text-base text-foreground italic leading-relaxed">{lari}</p>
         </div>
-        <p className="text-muted-foreground text-sm">
-          <span className="font-semibold text-foreground">FR:</span> {french}
-        </p>
-        <p className="text-muted-foreground text-sm">
-          <span className="font-semibold text-foreground">EN:</span> {english}
-        </p>
-        <p className="text-muted-foreground text-sm">
-          <span className="font-semibold text-foreground">PT:</span> {portuguese}
-        </p>
+        <ComicPanelTranslation french={french} english={english} portuguese={portuguese} />
       </div>
     </div>
   );
