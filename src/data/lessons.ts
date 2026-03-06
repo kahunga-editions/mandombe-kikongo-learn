@@ -2377,8 +2377,8 @@ export const lessons: Lesson[] = [
     exercises: [
       {
         type: "multiple-choice",
-        question: "What is a 'Bikinda'?",
-        questionMandombe: "Bikinda",
+        question: "What is a 'Bitshinda'?",
+        questionMandombe: "Bitshinda",
         options: ["A market", "A tomb, cemetery", "A river", "A tree"],
         correctIndex: 1,
       },
