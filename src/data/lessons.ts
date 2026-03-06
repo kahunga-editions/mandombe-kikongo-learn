@@ -3224,6 +3224,8 @@ export const lessons: Lesson[] = [
   {
     id: "lu-nouns",
     title: "Lu- — Nouns, Body & Abstract Concepts",
+    titleFr: "Lu- — Noms, corps et concepts abstraits",
+    titlePt: "Lu- — Nomes, corpo e conceitos abstratos",
     titleLari: "Lufua na Lulendo",
     titleMandombe: "Lufuwa na Lulendo",
     description: "Study the Lu- prefix class covering body parts, abstract concepts, social roles, and natural elements in Kikongo Lari.",
