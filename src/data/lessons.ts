@@ -1295,6 +1295,8 @@ export const lessons: Lesson[] = [
   {
     id: "bi-verbs-sounds",
     title: "Bi- Verbs: Sound, Fire & Force",
+    titleFr: "Verbes en Bi- : Son, feu et force",
+    titlePt: "Verbos em Bi- : Som, fogo e força",
     titleLari: "Malongi me mu \"Bi\"",
     titleMandombe: "Malongi me mu Bi",
     description: "Discover powerful Bi- verbs related to sound, fire, blessing, and physical force — from resonating drums to blazing flames.",
