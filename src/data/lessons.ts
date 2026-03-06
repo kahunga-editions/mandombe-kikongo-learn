@@ -4105,10 +4105,11 @@ export const lessons: Lesson[] = [
       { lari: "milele makumatatu na mi ya", mandombe: "milele makumatatu na mi ya", french: "trente-quatre pagnes", english: "thirty-four loincloths", portuguese: "trinta e quatro panos" },
     ],
     exercises: [
-      // Exercise 1: matching — match Lari expressions to their translations
+      // Exercise 1: matching
       {
         type: "matching",
         instruction: "Match each Lari expression to its English translation.",
+        instructionPt: "Associe cada expressão Lari à sua tradução em inglês.",
         pairs: [
           { left: "mabola ma ya", right: "four onions" },
           { left: "makonko ma tatu", right: "three grasshoppers" },
@@ -4117,20 +4118,22 @@ export const lessons: Lesson[] = [
           { left: "bindongo biole", right: "two sheep" },
         ],
       },
-      // Exercise 2: MCQ — which particle to use?
+      // Exercise 2: MCQ — which particle?
       {
         type: "multiple-choice",
         question: "Which particle is used in 'makonko ___ tatu' (three grasshoppers)?",
         options: ["di", "bi", "ma", "mi"],
         correctIndex: 2,
         explanation: "Words of the 'ma-' class (makonko) use the particle 'ma'.",
+        explanationPt: "Palavras da classe 'ma-' (makonko) usam a partícula 'ma'.",
       },
-      // Exercise 3: fill-in-blank — konko di moshi
+      // Exercise 3: fill-in-blank
       {
         type: "fill-in-blank",
         sentence: "konko ___ moshi = one grasshopper",
         blank: "di",
         hint: "The particle changes in the singular for this word.",
+        hintPt: "A partícula muda no singular para esta palavra.",
       },
       // Exercise 4: MCQ — euphony
       {
@@ -4139,6 +4142,7 @@ export const lessons: Lesson[] = [
         options: ["makonko ma zole", "makonko mole", "makonko di zole", "makonko biole"],
         correctIndex: 1,
         explanation: "Through euphony, the particle 'ma' merges with the number: 'ma + zole' → 'mole'.",
+        explanationPt: "Por eufonia, a partícula 'ma' funde-se com o número: 'ma + zole' → 'mole'.",
       },
       // Exercise 5: MCQ — invariable nouns
       {
@@ -4147,18 +4151,21 @@ export const lessons: Lesson[] = [
         options: ["ngombe di zole", "ngombe ma zole", "ngombe zole", "ngombe biole"],
         correctIndex: 2,
         explanation: "Ngombe is an invariable noun: no particle is needed, simply place the number after the word.",
+        explanationPt: "Ngombe é um substantivo invariável: não é necessária partícula, basta colocar o número após a palavra.",
       },
-      // Exercise 6: fill-in-blank — bindongo biole
+      // Exercise 6: fill-in-blank
       {
         type: "fill-in-blank",
         sentence: "bindongo ___ = two sheep (with euphony)",
         blank: "biole",
         hint: "The particle 'bi' merges with the number 'zole' through euphony.",
+        hintPt: "A partícula 'bi' funde-se com o número 'zole' por eufonia.",
       },
       // Exercise 7: matching — invariable nouns
       {
         type: "matching",
         instruction: "Match each expression to its translation. These nouns are invariable in the plural.",
+        instructionPt: "Associe cada expressão à sua tradução. Estes substantivos são invariáveis no plural.",
         pairs: [
           { left: "nkangabumi moshi", right: "one spider" },
           { left: "nkangabumi zole", right: "two spiders" },
@@ -4166,12 +4173,13 @@ export const lessons: Lesson[] = [
           { left: "ngulu zole", right: "two pigs" },
         ],
       },
-      // Exercise 8: fill-in-blank — large numbers with particle after 'na'
+      // Exercise 8: fill-in-blank — large numbers
       {
         type: "fill-in-blank",
         sentence: "bitunga makumatatu na ___ tanu = 35 baskets",
         blank: "bi",
         hint: "The particle of the 'bi-' class is placed after 'na' in large numbers.",
+        hintPt: "A partícula da classe 'bi-' é colocada após 'na' nos números grandes.",
       },
       // Exercise 9: MCQ — milele
       {
@@ -4180,13 +4188,15 @@ export const lessons: Lesson[] = [
         options: ["milele makumole na mi zole", "milele makumole na miole", "milele makumole na biole", "milele makumole zole"],
         correctIndex: 1,
         explanation: "The particle 'mi' (mi- class) merges through euphony: 'mi + zole' → 'miole'.",
+        explanationPt: "A partícula 'mi' (classe mi-) funde-se por eufonia: 'mi + zole' → 'miole'.",
       },
-      // Exercise 10: fill-in-blank — milele makumatatu na mi tatu
+      // Exercise 10: fill-in-blank
       {
         type: "fill-in-blank",
         sentence: "milele makumatatu na ___ tatu = 33 loincloths",
         blank: "mi",
         hint: "The particle of the 'mi-' class for the word milele.",
+        hintPt: "A partícula da classe 'mi-' para a palavra milele.",
       },
       // Exercise 11: MCQ — recognise the rule
       {
@@ -4200,18 +4210,21 @@ export const lessons: Lesson[] = [
         ],
         correctIndex: 1,
         explanation: "Invariable nouns (ngulu, ngombe, nkangabumi) do not require a particle between the word and the number.",
+        explanationPt: "Os substantivos invariáveis (ngulu, ngombe, nkangabumi) não requerem partícula entre a palavra e o número.",
       },
-      // Exercise 12: fill-in-blank — mabola nsambuadi
+      // Exercise 12: fill-in-blank
       {
         type: "fill-in-blank",
         sentence: "mabola ___ = seven onions",
         blank: "nsambuadi",
         hint: "The word for the number 7.",
+        hintPt: "A palavra para o número 7.",
       },
       // Exercise 13: matching — large numbers
       {
         type: "matching",
         instruction: "Match each Lari expression to its translation.",
+        instructionPt: "Associe cada expressão Lari à sua tradução.",
         pairs: [
           { left: "makonko makumatatu na ma tanu", right: "35 grasshoppers" },
           { left: "bindongo makumatatu na bi tanu", right: "35 sheep" },
