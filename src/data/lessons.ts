@@ -2350,7 +2350,7 @@ export const lessons: Lesson[] = [
     level: "intermediate" as const,
     icon: "🌿",
     vocabulary: [
-      { lari: "Bideka", mandombe: "Bideka", french: "Plante de la famille des Luminaceae", english: "Plant of the Luminaceae family" },
+      { lari: "Bideka", mandombe: "Bideka", french: "Plantes d'ornementation en général", english: "Ornamental plants in general" },
       { lari: "Bidekadeka", mandombe: "Bidekadeka", french: "Plante de la famille des Poaceae", english: "Plant of the Poaceae family" },
       { lari: "Bidiki", mandombe: "Bidiki", french: "Brique", english: "Brick" },
       { lari: "Bidila", mandombe: "Bidila", french: "Ourlet, natte", english: "Hem, mat" },
