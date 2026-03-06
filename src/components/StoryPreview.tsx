@@ -87,7 +87,7 @@ const StoryPreview = () => {
 
             {/* PREMIUM: Panels 4-14 */}
             <div className="px-4 md:px-6 pb-6">
-              <PremiumGate label="Continue Nsayi's Story">
+              <PremiumGate label={t("stories.continue")}>
                 <div className="space-y-6">
                   {/* Panel 4 */}
                   <ComicPanel
