@@ -4354,6 +4354,8 @@ export const lessons: Lesson[] = [
   {
     id: "counting",
     title: "Ntalu",
+    titleFr: "Compter — Ntalu",
+    titlePt: "Contar — Ntalu",
     titleLari: "Ntalu",
     titleMandombe: "Ntalu",
     description: "Learn how to count things in Kikongo Lari: noun classes, particles, and euphony rules.",
