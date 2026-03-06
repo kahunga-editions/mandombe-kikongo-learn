@@ -4491,7 +4491,8 @@ export const lessons: Lesson[] = [
       { lari: "Moyo", mandombe: "Moyo", french: "Ventre", english: "Belly", portuguese: "Barriga" },
       { lari: "Nkumba", mandombe: "Nkumba", french: "Nombril", english: "Navel", portuguese: "Umbigo" },
       { lari: "Luketo", mandombe: "Luketo", french: "Reins", english: "Lower back, kidneys", portuguese: "Rins, lombar" },
-      { lari: "Taku", mandombe: "Taku", french: "Fesse", english: "Buttock", portuguese: "Nádega" },
+      { lari: "Suku", mandombe: "Suku", french: "Postérieur", english: "Posterior, backside", portuguese: "Traseiro" },
+      { lari: "Tuku", mandombe: "Tuku", french: "Fesse", english: "Buttock", portuguese: "Nádega" },
       { lari: "Mataku", mandombe: "Mataku", french: "Fesses", english: "Buttocks", portuguese: "Nádegas" },
       // Arms & Hands
       { lari: "Koko", mandombe: "Koko", french: "Main, bras", english: "Hand, arm", portuguese: "Mão, braço" },

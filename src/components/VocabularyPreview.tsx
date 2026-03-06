@@ -267,7 +267,8 @@ const categories: VocabCategory[] = [
       { lari: "Moyo", french: "Ventre", english: "Belly", portuguese: "Barriga" },
       { lari: "Nkumba", french: "Nombril", english: "Navel", portuguese: "Umbigo" },
       { lari: "Luketo", french: "Reins", english: "Lower back, kidneys", portuguese: "Rins, lombar" },
-      { lari: "Taku", french: "Fesse", english: "Buttock", portuguese: "Nádega" },
+      { lari: "Suku", french: "Postérieur", english: "Posterior, backside", portuguese: "Traseiro" },
+      { lari: "Tuku", french: "Fesse", english: "Buttock", portuguese: "Nádega" },
       { lari: "Mataku", french: "Fesses", english: "Buttocks", portuguese: "Nádegas" },
       // Arms & Hands
       { lari: "Nima koko", french: "Dos de la main", english: "Back of the hand", portuguese: "Dorso da mão" },
