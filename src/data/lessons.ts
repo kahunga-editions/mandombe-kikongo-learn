@@ -1933,7 +1933,7 @@ export const lessons: Lesson[] = [
       { lari: "Bikonko bitatu", mandombe: "Bikonko bitatu", french: "Triangle", english: "Triangle" },
       { lari: "Bisambanu", mandombe: "Bisambanu", french: "Six", english: "Six" },
       { lari: "Bipidi", mandombe: "Bipidi", french: "Aliments envoyés à la fiancée", english: "Food sent to the fiancée" },
-      { lari: "Bipopo", mandombe: "Bipopo", french: "Scarification; vaccin", english: "Scarification; vaccine" },
+      { lari: "Bipopo", mandombe: "Bipopo", french: "Scarification au niveau des joues", english: "Scarification on the cheeks" },
       { lari: "Bikululu", mandombe: "Bikululu", french: "Quotidien, habituel; rançon", english: "Daily, usual; ransom" },
       { lari: "Bikoyi", mandombe: "Bikoyi", french: "Complaintes, supplications", english: "Complaints, supplications" },
       { lari: "Bingi", mandombe: "Bingi", french: "Nombreux", english: "Numerous, many" },
@@ -2366,7 +2366,7 @@ export const lessons: Lesson[] = [
       { lari: "Binkila", mandombe: "Binkila", french: "Genre de vin de table", english: "Type of table wine" },
       { lari: "Binokena", mandombe: "Binokena", french: "Insecte du manguier dont la sécrétion rend aveugle", english: "Mango tree insect whose secretion causes blindness" },
       { lari: "Binsangu", mandombe: "Binsangu", french: "Nouvelle, annonce, popularité", english: "News, announcement, popularity" },
-      { lari: "Bipopo", mandombe: "Bipopo", french: "Scarification; vaccin", english: "Scarification; vaccine" },
+      { lari: "Bipopo", mandombe: "Bipopo", french: "Scarification au niveau des joues", english: "Scarification on the cheeks" },
       { lari: "Bisambanu", mandombe: "Bisambanu", french: "Six", english: "Six" },
     ],
     phrases: [
