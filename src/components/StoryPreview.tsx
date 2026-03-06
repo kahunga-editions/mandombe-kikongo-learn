@@ -1,4 +1,5 @@
 import PremiumGate from "@/components/PremiumGate";
+import { useLanguage } from "@/contexts/LanguageContext";
 import storyPanel1 from "@/assets/story-panel-1.jpg";
 import storyPanel2 from "@/assets/story-panel-2.jpg";
 import storyPanel3 from "@/assets/story-panel-3.jpg";
