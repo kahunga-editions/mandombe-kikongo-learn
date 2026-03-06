@@ -4807,6 +4807,7 @@ export const lessons: Lesson[] = [
       { lari: "Ngumbudi", mandombe: "Ngumbudi", french: "Indigo", english: "Indigo", portuguese: "Índigo" },
       { lari: "Ntundu", mandombe: "Ntundu", french: "Jaune", english: "Yellow", portuguese: "Amarelo" },
       { lari: "Mbudi", mandombe: "Mbudi", french: "Bleu", english: "Blue", portuguese: "Azul" },
+      { lari: "Wolo", mandombe: "Wolo", french: "Or", english: "Gold", portuguese: "Ouro" },
     ],
     exercises: [
       // Exercise 1: MCQ — What does "Tinta" mean?
