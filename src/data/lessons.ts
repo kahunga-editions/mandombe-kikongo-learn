@@ -2028,13 +2028,6 @@ export const lessons: Lesson[] = [
       },
       {
         type: "fill-in-blank",
-        sentence: "___ means 'six' in Kikongo Lari",
-        sentenceMandombe: "___",
-        blank: "bisambanu",
-        hint: "A Bi- number word",
-      },
-      {
-        type: "fill-in-blank",
         sentence: "Nsatu ___ means 'hunger is a daily lot'",
         sentenceMandombe: "Nsatu ___",
         blank: "bikululu",
