@@ -500,6 +500,8 @@ export const lessons: Lesson[] = [
   {
     id: "house-activities",
     title: "House Activities — Bisalu bia mu Nzo",
+    titleFr: "Activités de la maison — Bisalu bia mu Nzo",
+    titlePt: "Atividades da casa — Bisalu bia mu Nzo",
     titleLari: "Bisalu bia mu Nzo",
     titleMandombe: "Bisalu biya mu Nzo",
     description: "Learn vocabulary and sentences about daily house activities: cooking, cutting, preparing, reading, and going to work.",
