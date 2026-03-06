@@ -971,7 +971,7 @@ export const lessons: Lesson[] = [
     level: "advanced",
     icon: "🔤",
     vocabulary: [
-      { lari: "Mavimpi", mandombe: "Mavimpi", french: "En bonne santé", english: "Healthy" },
+      
       { lari: "Kiese", mandombe: "Kiese", french: "Content, heureux", english: "Happy" },
       { lari: "Diela", mandombe: "Diyela", french: "Intelligent", english: "Intelligent" },
       { lari: "Mpasi", mandombe: "Mpasi", french: "Difficile, douloureux", english: "Difficult, painful" },
