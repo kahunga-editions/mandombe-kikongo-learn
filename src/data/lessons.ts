@@ -4914,4 +4914,192 @@ export const lessons: Lesson[] = [
       },
     ],
   },
+
+  // ─── LESSON: NEGATION ───────────────────────────────────────
+  {
+    id: "negation",
+    title: "Negation — KA…KO",
+    titleLari: "Mpila ya tatula",
+    titleMandombe: "Mpila ya tatula",
+    description: "Learn how to negate sentences in Kikongo Lari using the KA…KO and KA…A…KO structures.",
+    level: "intermediate",
+    icon: "🚫",
+    vocabulary: [
+      { lari: "Zulu", mandombe: "Zulu", french: "Ciel", english: "Sky", portuguese: "Céu" },
+      { lari: "Mbudi", mandombe: "Mbudi", french: "Bleu", english: "Blue", portuguese: "Azul" },
+      { lari: "Manga", mandombe: "Manga", french: "Mangue", english: "Mango", portuguese: "Manga" },
+      { lari: "Mbuaki", mandombe: "Mbuaki", french: "Mûr / Rouge", english: "Ripe / Red", portuguese: "Maduro / Vermelho" },
+      { lari: "Mulele", mandombe: "Mulele", french: "Pagne", english: "Loincloth", portuguese: "Pano" },
+      { lari: "Milele", mandombe: "Milele", french: "Pagnes (pluriel)", english: "Loincloths (plural)", portuguese: "Panos (plural)" },
+      { lari: "Tundu", mandombe: "Tundu", french: "Jaune", english: "Yellow", portuguese: "Amarelo" },
+    ],
+    phrases: [
+      // Affirmative → Negative pairs
+      { lari: "Zulu dia mbudi diena.", mandombe: "Zulu dia mbudi diena.", french: "Le ciel est bleu.", english: "The sky is blue.", portuguese: "O céu é azul." },
+      { lari: "Zulu ka diena dia mbudi ko.", mandombe: "Zulu ka diena dia mbudi ko.", french: "Le ciel n'est pas bleu.", english: "The sky is not blue.", portuguese: "O céu não é azul.", note: "Structure KA + verbe + KO" },
+
+      { lari: "Manga ya mbuaki.", mandombe: "Manga ya mbuaki.", french: "La mangue est mûre.", english: "The mango is ripe.", portuguese: "A manga está madura." },
+      { lari: "Manga ka yena ya mbuaki ko.", mandombe: "Manga ka yena ya mbuaki ko.", french: "La mangue n'est pas mûre.", english: "The mango is not ripe.", portuguese: "A manga não está madura." },
+
+      { lari: "Manga ya mbuaki yena.", mandombe: "Manga ya mbuaki yena.", french: "La mangue est rouge.", english: "The mango is red.", portuguese: "A manga é vermelha." },
+      { lari: "Manga za mbuaki zena.", mandombe: "Manga za mbuaki zena.", french: "Les mangues sont rouges.", english: "The mangoes are red.", portuguese: "As mangas são vermelhas." },
+      { lari: "Manga ka zena za mbuaki ko.", mandombe: "Manga ka zena za mbuaki ko.", french: "Les mangues ne sont pas rouges.", english: "The mangoes are not red.", portuguese: "As mangas não são vermelhas.", note: "Pluriel : zena reste zena (pas de contraction)" },
+
+      { lari: "Mulele wa tundu wena.", mandombe: "Mulele wa tundu wena.", french: "Le pagne est jaune.", english: "The loincloth is yellow.", portuguese: "O pano é amarelo." },
+      { lari: "Mulele ka wena wa tundu ko.", mandombe: "Mulele ka wena wa tundu ko.", french: "Le pagne n'est pas jaune.", english: "The loincloth is not yellow.", portuguese: "O pano não é amarelo." },
+
+      { lari: "Milele mia tundu miena.", mandombe: "Milele mia tundu miena.", french: "Les pagnes sont jaunes.", english: "The loincloths are yellow.", portuguese: "Os panos são amarelos." },
+      { lari: "Milele ka miena mia tundu ko.", mandombe: "Milele ka miena mia tundu ko.", french: "Les pagnes ne sont pas jaunes.", english: "The loincloths are not yellow.", portuguese: "Os panos não são amarelos." },
+
+      // Verb negation with KA…A…KO
+      { lari: "Ka nguidi a ko.", mandombe: "Ka nguidi a ko.", french: "Je ne comprends pas.", english: "I don't understand.", portuguese: "Eu não compreendo." },
+      { lari: "Ku wiri a ko.", mandombe: "Ku wiri a ko.", french: "Tu ne comprends pas.", english: "You don't understand.", portuguese: "Tu não compreendes.", note: "2e personne : KA → KU" },
+      { lari: "Ka wiri a ko.", mandombe: "Ka wiri a ko.", french: "Il/elle ne comprend pas.", english: "He/she doesn't understand.", portuguese: "Ele/ela não compreende." },
+      { lari: "Ka tu wiri a ko.", mandombe: "Ka tu wiri a ko.", french: "Nous ne comprenons pas.", english: "We don't understand.", portuguese: "Nós não compreendemos." },
+      { lari: "Ka lu wiri a ko.", mandombe: "Ka lu wiri a ko.", french: "Vous ne comprenez pas.", english: "You don't understand.", portuguese: "Vocês não compreendem." },
+      { lari: "Ka ba wiri a ko.", mandombe: "Ka ba wiri a ko.", french: "Ils/elles ne comprennent pas.", english: "They don't understand.", portuguese: "Eles/elas não compreendem." },
+    ],
+    exercises: [
+      // Exercise 1: MCQ — Identify negation structure for nouns
+      {
+        type: "multiple-choice",
+        question: "How do you negate a nominal sentence in Kikongo Lari?",
+        options: [
+          "KA … A … KO",
+          "KA … KO",
+          "KU … KO",
+          "KO … KA",
+        ],
+        correctIndex: 1,
+        explanation: "For nominal sentences (with the verb 'to be'), the negation structure is KA + verb + KO.",
+        explanationPt: "Para frases nominais (com o verbo 'ser/estar'), a estrutura de negação é KA + verbo + KO.",
+      },
+      // Exercise 2: MCQ — Identify negation structure for verbs
+      {
+        type: "multiple-choice",
+        question: "How do you negate a verb (action) in Kikongo Lari?",
+        options: [
+          "KA … KO",
+          "KA … A … KO",
+          "KO … A … KA",
+          "KU … A … KA",
+        ],
+        correctIndex: 1,
+        explanation: "For verbs (actions), the negation adds the particle 'A' before KO: KA … A … KO.",
+        explanationPt: "Para verbos (ações), a negação adiciona a partícula 'A' antes de KO: KA … A … KO.",
+      },
+      // Exercise 3: Fill-in-blank — Negate "Zulu dia mbudi diena"
+      {
+        type: "fill-in-blank",
+        sentence: "Negate: 'Zulu dia mbudi diena.' → Zulu ___ diena dia mbudi ko.",
+        blank: "ka",
+        hint: "The negation particle placed before the verb.",
+        hintPt: "A partícula de negação colocada antes do verbo.",
+      },
+      // Exercise 4: MCQ — Negate "Manga ya mbuaki"
+      {
+        type: "multiple-choice",
+        question: "What is the negative form of 'Manga ya mbuaki.' (The mango is ripe)?",
+        options: [
+          "Manga ka yena ya mbuaki ko.",
+          "Manga ko yena ya mbuaki ka.",
+          "Ka manga ya mbuaki ko.",
+          "Manga yena ka ya mbuaki ko.",
+        ],
+        correctIndex: 0,
+        explanation: "'Manga ka yena ya mbuaki ko.' — KA is placed before the verb 'yena' and KO at the end.",
+        explanationPt: "'Manga ka yena ya mbuaki ko.' — KA é colocado antes do verbo 'yena' e KO no final.",
+      },
+      // Exercise 5: Fill-in-blank — Negate "Mulele wa tundu wena"
+      {
+        type: "fill-in-blank",
+        sentence: "Negate: 'Mulele wa tundu wena.' → Mulele ka ___ wa tundu ko.",
+        blank: "wena",
+        hint: "The verb form for 'mulele' class (w- prefix).",
+        hintPt: "A forma verbal para a classe 'mulele' (prefixo w-).",
+      },
+      // Exercise 6: MCQ — Plural negation
+      {
+        type: "multiple-choice",
+        question: "What is the negative form of 'Manga za mbuaki zena.' (The mangoes are red)?",
+        options: [
+          "Manga ka ze za mbuaki ko.",
+          "Manga ka zena za mbuaki ko.",
+          "Manga ko zena za mbuaki ka.",
+          "Ka manga za mbuaki zena ko.",
+        ],
+        correctIndex: 1,
+        explanation: "'zena' stays 'zena' — no contraction in the negative form.",
+        explanationPt: "'zena' permanece 'zena' — sem contração na forma negativa.",
+      },
+      // Exercise 7: MCQ — 2nd person negation
+      {
+        type: "multiple-choice",
+        question: "How do you say 'You don't understand' (2nd person singular)?",
+        options: [
+          "Ka wiri a ko.",
+          "Ku wiri a ko.",
+          "Ka nguidi a ko.",
+          "Ka tu wiri a ko.",
+        ],
+        correctIndex: 1,
+        explanation: "For the 2nd person singular, KA becomes KU: 'Ku wiri a ko.'",
+        explanationPt: "Para a 2ª pessoa do singular, KA torna-se KU: 'Ku wiri a ko.'",
+      },
+      // Exercise 8: Matching — Affirmative ↔ Negative
+      {
+        type: "matching",
+        instruction: "Match each affirmative sentence with its negation.",
+        instructionPt: "Associe cada frase afirmativa à sua negação.",
+        pairs: [
+          { left: "Zulu dia mbudi diena.", right: "Zulu ka diena dia mbudi ko." },
+          { left: "Manga ya mbuaki.", right: "Manga ka yena ya mbuaki ko." },
+          { left: "Mulele wa tundu wena.", right: "Mulele ka wena wa tundu ko." },
+          { left: "Milele mia tundu miena.", right: "Milele ka miena mia tundu ko." },
+        ],
+      },
+      // Exercise 9: Fill-in-blank — Verb negation
+      {
+        type: "fill-in-blank",
+        sentence: "Complete: 'Ka nguidi ___ ko.' (I don't understand)",
+        blank: "a",
+        hint: "The particle added before KO for verb negation.",
+        hintPt: "A partícula adicionada antes de KO para a negação verbal.",
+      },
+      // Exercise 10: Matching — Person conjugation in negative
+      {
+        type: "matching",
+        instruction: "Match each negative sentence with the correct person.",
+        instructionPt: "Associe cada frase negativa à pessoa correta.",
+        pairs: [
+          { left: "Ka nguidi a ko.", right: "Je / I / Eu" },
+          { left: "Ku wiri a ko.", right: "Tu / You / Tu" },
+          { left: "Ka wiri a ko.", right: "Il·elle / He·She / Ele·Ela" },
+          { left: "Ka ba wiri a ko.", right: "Ils·elles / They / Eles·Elas" },
+        ],
+      },
+      // Exercise 11: MCQ — Distinguish "Ka tu wiri a ko" person
+      {
+        type: "multiple-choice",
+        question: "What does 'Ka tu wiri a ko.' mean?",
+        options: [
+          "I don't understand.",
+          "You (singular) don't understand.",
+          "We don't understand.",
+          "They don't understand.",
+        ],
+        correctIndex: 2,
+        explanation: "'Ka tu wiri a ko.' uses 'tu' for the 1st person plural (we).",
+        explanationPt: "'Ka tu wiri a ko.' usa 'tu' para a 1ª pessoa do plural (nós).",
+      },
+      // Exercise 12: Fill-in-blank — Complete plural negation
+      {
+        type: "fill-in-blank",
+        sentence: "Negate: 'Milele mia tundu miena.' → Milele ka ___ mia tundu ko.",
+        blank: "miena",
+        hint: "The full verb form for the 'milele' class (mi- prefix). No contraction!",
+        hintPt: "A forma verbal completa para a classe 'milele' (prefixo mi-). Sem contração!",
+      },
+    ],
+  },
 ];
