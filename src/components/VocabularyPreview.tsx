@@ -1,6 +1,7 @@
 import { Volume2 } from "lucide-react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import PremiumGate from "@/components/PremiumGate";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 import vocabGreetings from "@/assets/vocab-greetings.jpg";
 import vocabFamily from "@/assets/vocab-family.jpg";
@@ -561,32 +562,38 @@ const categories: VocabCategory[] = [
   },
 ];
 
-const WordCard = ({ word }: { word: VocabEntry }) => (
-  <div className="bg-card rounded-xl p-5 border border-border hover:border-primary/30 transition-all group">
-    <p className="font-mandombe text-3xl text-gold leading-relaxed mb-4">{word.lari}</p>
-    <h4 className="font-display text-xl font-bold text-foreground mb-3 flex items-center gap-2">
-      {word.lari}
-      <Volume2 className="w-4 h-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer" />
-    </h4>
-    <div className="space-y-1.5 text-sm">
-      <p className="text-muted-foreground"><span className="inline-block w-6 text-xs font-bold text-primary/70">FR</span>{word.french}</p>
-      <p className="text-muted-foreground"><span className="inline-block w-6 text-xs font-bold text-primary/70">GB</span>{word.english}</p>
-      <p className="text-muted-foreground"><span className="inline-block w-6 text-xs font-bold text-primary/70">PT</span>{word.portuguese}</p>
-      {word.note && <p className="text-muted-foreground/70 italic text-xs mt-2">💡 {word.note}</p>}
+const WordCard = ({ word }: { word: VocabEntry }) => {
+  const { language } = useLanguage();
+  const translation = language === "en" ? word.english : language === "pt" ? word.portuguese : word.french;
+  const flag = language === "en" ? "GB" : language === "pt" ? "PT" : "FR";
+
+  return (
+    <div className="bg-card rounded-xl p-5 border border-border hover:border-primary/30 transition-all group">
+      <p className="font-mandombe text-3xl text-gold leading-relaxed mb-4">{word.lari}</p>
+      <h4 className="font-display text-xl font-bold text-foreground mb-3 flex items-center gap-2">
+        {word.lari}
+        <Volume2 className="w-4 h-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer" />
+      </h4>
+      <div className="space-y-1.5 text-sm">
+        <p className="text-muted-foreground"><span className="inline-block w-6 text-xs font-bold text-primary/70">{flag}</span>{translation}</p>
+        {word.note && <p className="text-muted-foreground/70 italic text-xs mt-2">💡 {word.note}</p>}
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 const VocabularyPreview = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="vocabulary" className="py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <p className="font-mandombe text-3xl md:text-4xl text-gold mb-6">Mazita</p>
-          <p className="text-primary font-body text-sm tracking-[0.25em] uppercase mb-3">Mazita — Vocabulary</p>
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">Essential Words & Phrases</h2>
+          <p className="text-primary font-body text-sm tracking-[0.25em] uppercase mb-3">{t("vocab.eyebrow")}</p>
+          <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">{t("vocab.title")}</h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            Each word comes in Kikongo Lari with translations in French, English and Portuguese — languages spoken across the Kongo diaspora.
+            {t("vocab.subtitle")}
           </p>
         </div>
 
@@ -611,7 +618,7 @@ const VocabularyPreview = () => {
                   <p className="font-mandombe text-2xl text-gold leading-normal mb-4">{cat.lariLabel}</p>
                   <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground">{cat.lariLabel}</h3>
                   <p className="text-muted-foreground font-body">
-                    {cat.label} — {cat.words.length} free words{cat.premiumWords ? ` + ${cat.premiumWords.length} premium` : ""}
+                    {cat.label} — {cat.words.length} {t("vocab.freeWords")}{cat.premiumWords ? ` + ${cat.premiumWords.length} ${t("vocab.premium")}` : ""}
                   </p>
                 </div>
               </div>
@@ -626,7 +633,7 @@ const VocabularyPreview = () => {
               {/* Premium words */}
               {cat.premiumWords && cat.premiumWords.length > 0 && (
                 <div className="mt-8">
-                  <PremiumGate label={`${cat.premiumWords.length} More ${cat.label} Words`}>
+                  <PremiumGate label={`${cat.premiumWords.length} ${t("vocab.more")} ${cat.label}`}>
                     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                       {cat.premiumWords.map((word, i) => (
                         <WordCard key={i} word={word} />

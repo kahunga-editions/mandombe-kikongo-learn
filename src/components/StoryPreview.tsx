@@ -1,4 +1,5 @@
 import PremiumGate from "@/components/PremiumGate";
+import { useLanguage } from "@/contexts/LanguageContext";
 import storyPanel1 from "@/assets/story-panel-1.jpg";
 import storyPanel2 from "@/assets/story-panel-2.jpg";
 import storyPanel3 from "@/assets/story-panel-3.jpg";
@@ -15,16 +16,18 @@ import storyPanel13 from "@/assets/story-panel-16.jpg";
 import storyPanel14 from "@/assets/story-panel-17.jpg";
 
 const StoryPreview = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="stories" className="py-24 bg-card">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <p className="font-mandombe text-3xl md:text-4xl text-gold mb-6">Binsamu</p>
           <p className="text-primary font-body text-sm tracking-[0.25em] uppercase mb-3">
-            Binsamu — Stories
+            {t("stories.eyebrow")}
           </p>
           <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Learn Through Stories
+            {t("stories.title")}
           </h2>
         </div>
 
@@ -35,10 +38,10 @@ const StoryPreview = () => {
               Nsayi ku nzo mikanda na sangi
             </p>
             <h3 className="font-display text-2xl md:text-3xl font-bold text-gold mb-1">
-              Nsayi à l'école et à la forêt
+              {t("stories.storySubtitle")}
             </h3>
-            <p className="text-cream/80 text-sm mb-1">Nsayi at School and in the Forest</p>
-            <p className="text-cream/60 text-xs">A bilingual comic story — French, English & Portuguese</p>
+            <p className="text-cream/80 text-sm mb-1">{t("stories.storyDescShort")}</p>
+            <p className="text-cream/60 text-xs">{t("stories.storyDesc")}</p>
           </div>
 
           {/* Comic strip panels */}
@@ -84,7 +87,7 @@ const StoryPreview = () => {
 
             {/* PREMIUM: Panels 4-14 */}
             <div className="px-4 md:px-6 pb-6">
-              <PremiumGate label="Continue Nsayi's Story">
+              <PremiumGate label={t("stories.continue")}>
                 <div className="space-y-6">
                   {/* Panel 4 */}
                   <ComicPanel
@@ -226,7 +229,7 @@ const StoryPreview = () => {
                   {/* Story ending */}
                   <div className="text-center py-6 border-t border-border">
                     <p className="font-mandombe text-3xl text-gold/60 mb-2">Nsamu wusukidi</p>
-                    <p className="font-display text-lg text-foreground italic">Fin de l'histoire — The End — Fim da história</p>
+                    <p className="font-display text-lg text-foreground italic">{t("stories.end")}</p>
                   </div>
                 </div>
               </PremiumGate>
@@ -235,6 +238,19 @@ const StoryPreview = () => {
         </div>
       </div>
     </section>
+  );
+};
+
+/* ── Translation helper for ComicPanel ── */
+
+const ComicPanelTranslation = ({ french, english, portuguese }: { french: string; english: string; portuguese: string }) => {
+  const { language } = useLanguage();
+  const text = language === "en" ? english : language === "pt" ? portuguese : french;
+  const flag = language === "en" ? "EN" : language === "pt" ? "PT" : "FR";
+  return (
+    <p className="text-muted-foreground text-sm">
+      <span className="font-semibold text-foreground">{flag}:</span> {text}
+    </p>
   );
 };
 
@@ -316,15 +332,7 @@ const ComicPanel = ({
         <div className="bg-primary/5 rounded-lg p-3 border-l-4 border-primary">
           <p className="font-display text-base text-foreground italic leading-relaxed">{lari}</p>
         </div>
-        <p className="text-muted-foreground text-sm">
-          <span className="font-semibold text-foreground">FR:</span> {french}
-        </p>
-        <p className="text-muted-foreground text-sm">
-          <span className="font-semibold text-foreground">EN:</span> {english}
-        </p>
-        <p className="text-muted-foreground text-sm">
-          <span className="font-semibold text-foreground">PT:</span> {portuguese}
-        </p>
+        <ComicPanelTranslation french={french} english={english} portuguese={portuguese} />
       </div>
     </div>
   );
