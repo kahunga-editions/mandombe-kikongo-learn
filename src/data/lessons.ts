@@ -4946,7 +4946,7 @@ export const lessons: Lesson[] = [
       { lari: "Mbuaki", mandombe: "Mbuaki", french: "Mûr / Rouge", english: "Ripe / Red", portuguese: "Maduro / Vermelho" },
       { lari: "Mulele", mandombe: "Mulele", french: "Pagne", english: "Loincloth", portuguese: "Pano" },
       { lari: "Milele", mandombe: "Milele", french: "Pagnes (pluriel)", english: "Loincloths (plural)", portuguese: "Panos (plural)" },
-      { lari: "Tundu", mandombe: "Tundu", french: "Jaune", english: "Yellow", portuguese: "Amarelo" },
+      { lari: "Ntundu", mandombe: "Ntundu", french: "Jaune", english: "Yellow", portuguese: "Amarelo" },
       { lari: "Mutindu", mandombe: "Mutindu", french: "La façon", english: "The way", portuguese: "A maneira" },
       { lari: "Mitindu", mandombe: "Mitindu", french: "Les façons", english: "The ways", portuguese: "As maneiras" },
       { lari: "Kala", mandombe: "Kala", french: "Dire non, refuser", english: "To say no, to refuse", portuguese: "Dizer não, recusar" },
