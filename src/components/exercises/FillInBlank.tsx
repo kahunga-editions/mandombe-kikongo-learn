@@ -14,9 +14,17 @@ const FillInBlank = ({ question, onComplete }: Props) => {
   const { language, t } = useLanguage();
   const isCorrect = answer.trim().toLowerCase() === question.blank.toLowerCase();
 
-  const hint = language === "pt"
-    ? (question.hintPt || question.hint)
-    : question.hint;
+  const sentence = language === "fr"
+    ? (question.sentenceFr || question.sentence)
+    : language === "pt"
+      ? (question.sentencePt || question.sentence)
+      : question.sentence;
+
+  const hint = language === "fr"
+    ? (question.hintFr || question.hint)
+    : language === "pt"
+      ? (question.hintPt || question.hint)
+      : question.hint;
 
   const handleSubmit = () => {
     if (!answer.trim()) return;
@@ -33,7 +41,7 @@ const FillInBlank = ({ question, onComplete }: Props) => {
           </p>
         )}
         <p className="font-display text-lg font-semibold text-foreground">
-          {question.sentence}
+          {sentence}
         </p>
       </div>
 

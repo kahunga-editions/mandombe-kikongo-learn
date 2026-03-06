@@ -10,34 +10,45 @@ export interface VocabItem {
 export interface ConjugationTable {
   verb: string;
   verbMandombe: string;
-  meaning: { fr: string; en: string };
+  meaning: { fr: string; en: string; pt?: string };
   tense: string;
+  tenseFr?: string;
+  tensePt?: string;
   rows: { person: string; lari: string; mandombe: string }[];
 }
 
 export interface MultipleChoiceQuestion {
   type: "multiple-choice";
   question: string;
+  questionFr?: string;
+  questionPt?: string;
   questionMandombe?: string;
   options: string[];
+  optionsFr?: string[];
+  optionsPt?: string[];
   correctIndex: number;
   explanation?: string;
+  explanationFr?: string;
   explanationPt?: string;
 }
 
 export interface MatchingQuestion {
   type: "matching";
   instruction: string;
+  instructionFr?: string;
   instructionPt?: string;
-  pairs: { left: string; right: string }[];
+  pairs: { left: string; right: string; rightFr?: string; rightPt?: string }[];
 }
 
 export interface FillInBlankQuestion {
   type: "fill-in-blank";
   sentence: string;
+  sentenceFr?: string;
+  sentencePt?: string;
   sentenceMandombe?: string;
   blank: string;
   hint?: string;
+  hintFr?: string;
   hintPt?: string;
 }
 
@@ -46,9 +57,13 @@ export type Exercise = MultipleChoiceQuestion | MatchingQuestion | FillInBlankQu
 export interface Lesson {
   id: string;
   title: string;
+  titleFr?: string;
+  titlePt?: string;
   titleLari: string;
   titleMandombe: string;
   description: string;
+  descriptionFr?: string;
+  descriptionPt?: string;
   level: "beginner" | "intermediate" | "advanced";
   icon: string;
   vocabulary?: VocabItem[];

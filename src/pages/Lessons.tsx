@@ -12,9 +12,31 @@ const levelColors = {
   advanced: "bg-primary/10 text-primary border-primary/30",
 };
 
+const levelLabels = {
+  beginner: { fr: "débutant", en: "beginner", pt: "iniciante" },
+  intermediate: { fr: "intermédiaire", en: "intermediate", pt: "intermediário" },
+  advanced: { fr: "avancé", en: "advanced", pt: "avançado" },
+};
+
 const Lessons = () => {
   const { isPremium } = useAuth();
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
+
+  const getLessonTitle = (lesson: typeof lessons[0]) => {
+    if (language === "fr") return lesson.titleFr || lesson.title;
+    if (language === "pt") return lesson.titlePt || lesson.title;
+    return lesson.title;
+  };
+
+  const getLessonDescription = (lesson: typeof lessons[0]) => {
+    if (language === "fr") return lesson.descriptionFr || lesson.description;
+    if (language === "pt") return lesson.descriptionPt || lesson.description;
+    return lesson.description;
+  };
+
+  const getLevelLabel = (level: "beginner" | "intermediate" | "advanced") => {
+    return levelLabels[level][language] || levelLabels[level].en;
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -51,15 +73,15 @@ const Lessons = () => {
                       <div className="flex items-start justify-between mb-4">
                         <span className="text-4xl">{lesson.icon}</span>
                         <span className={`text-xs font-medium px-2.5 py-1 rounded-full border ${levelColors[lesson.level]}`}>
-                          {lesson.level}
+                          {getLevelLabel(lesson.level)}
                         </span>
                       </div>
                       <div className="mb-4">
                         <p className="font-mandombe text-2xl text-gold/60 block">{lesson.titleMandombe}</p>
                       </div>
-                      <h2 className="font-display text-lg font-bold text-foreground mb-1">{lesson.title}</h2>
+                      <h2 className="font-display text-lg font-bold text-foreground mb-1">{getLessonTitle(lesson)}</h2>
                       <p className="text-primary/70 font-body text-xs italic mb-3">{lesson.titleLari}</p>
-                      <p className="text-muted-foreground text-sm leading-relaxed">{lesson.description}</p>
+                      <p className="text-muted-foreground text-sm leading-relaxed">{getLessonDescription(lesson)}</p>
                     </div>
                     <div className="absolute inset-0 bg-earth-deep/50 backdrop-blur-[2px] flex flex-col items-center justify-center rounded-xl">
                       <div className="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center mb-3">
@@ -82,17 +104,17 @@ const Lessons = () => {
                     <div className="flex items-start justify-between mb-4">
                       <span className="text-4xl">{lesson.icon}</span>
                       <span className={`text-xs font-medium px-2.5 py-1 rounded-full border ${levelColors[lesson.level]}`}>
-                        {lesson.level}
+                        {getLevelLabel(lesson.level)}
                       </span>
                     </div>
                     <div className="mb-4">
                       <p className="font-mandombe text-2xl text-gold block">{lesson.titleMandombe}</p>
                     </div>
                     <h2 className="font-display text-lg font-bold text-foreground mb-1 group-hover:text-primary transition-colors">
-                      {lesson.title}
+                      {getLessonTitle(lesson)}
                     </h2>
                     <p className="text-primary/70 font-body text-xs italic mb-3">{lesson.titleLari}</p>
-                    <p className="text-muted-foreground text-sm leading-relaxed">{lesson.description}</p>
+                    <p className="text-muted-foreground text-sm leading-relaxed">{getLessonDescription(lesson)}</p>
                     <div className="mt-4 flex items-center gap-4 text-xs text-muted-foreground">
                       {lesson.vocabulary && <span>{lesson.vocabulary.length} {t("lessons.words")}</span>}
                       {lesson.conjugations && <span>{lesson.conjugations.length} {t("lessons.conjugations")}</span>}
