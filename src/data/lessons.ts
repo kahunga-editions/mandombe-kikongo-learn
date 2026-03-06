@@ -2328,6 +2328,8 @@ export const lessons: Lesson[] = [
   {
     id: "ba-emotions-disputes",
     title: "Emotions, Actions & Disputes — Ba Series",
+    titleFr: "Émotions, actions et disputes — Série Ba",
+    titlePt: "Emoções, ações e disputas — Série Ba",
     titleLari: "Baba na Bakana",
     titleMandombe: "Baba na Bakana",
     description: "Master Ba- verbs for arguing, seizing, surprising, sticking, and emotional states from the Kilari dictionary.",
