@@ -1931,7 +1931,6 @@ export const lessons: Lesson[] = [
       { lari: "Bidila", mandombe: "Bidila", french: "Ourlet, natte", english: "Hem, mat" },
       { lari: "Biko", mandombe: "Biko", french: "Petit paquet", english: "Small packet" },
       { lari: "Bikonko bitatu", mandombe: "Bikonko bitatu", french: "Triangle", english: "Triangle" },
-      { lari: "Bisambanu", mandombe: "Bisambanu", french: "Six", english: "Six" },
       { lari: "Bipidi", mandombe: "Bipidi", french: "Aliments envoyés à la fiancée", english: "Food sent to the fiancée" },
       { lari: "Bipopo", mandombe: "Bipopo", french: "Scarification au niveau des joues", english: "Scarification on the cheeks" },
       { lari: "Bikululu", mandombe: "Bikululu", french: "Quotidien, habituel; rançon", english: "Daily, usual; ransom" },
