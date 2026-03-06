@@ -4870,6 +4870,8 @@ export const lessons: Lesson[] = [
   {
     id: "colors",
     title: "Colors",
+    titleFr: "Les couleurs — Tinta",
+    titlePt: "As cores — Tinta",
     titleLari: "Tinta",
     titleMandombe: "Tinta",
     description: "Learn the names of colors in Kikongo Lari. Discover how to describe the world around you with vivid vocabulary.",
