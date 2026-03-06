@@ -1,25 +1,36 @@
 
 
-# Fix Panel 9 Illustration - Missing Head
+## Plan: Expand Body Vocabulary & Create Body Parts Lesson
 
-## The Problem
+### What to do
 
-In panel 9, Sunda (the second girl on the right) is cut off — her head is completely missing from the frame, showing only her torso and dress. Nsayi on the left looks fine with her ponytail.
+**1. Update VocabularyPreview.tsx — Body section**
 
-## The Fix
+Replace the current limited body vocabulary (lines ~230-248) with the full list of ~70+ body parts provided, organized with a few free words and the rest as `premiumWords`. Each entry includes French, English, and Portuguese translations.
 
-Regenerate `src/assets/story-panel-9.jpg` with a single, focused prompt that ensures:
+**2. Create a new lesson in `src/data/lessons.ts` — "Nitu" (The Human Body)**
 
-- **Both girls are fully visible** from head to toe, centered in the frame with plenty of space above their heads
-- Nsayi (ponytail) and Sunda sitting together in tall golden savanna grass
-- Both holding/examining bright orange nsempela mushrooms
-- Watercolor style, warm earthy tones, bold outlines
-- Camera pulled back enough so no body parts are cropped
+Add a dedicated body parts lesson with:
+- **Vocabulary**: All ~70+ terms organized by body region (Head & Face, Torso, Arms & Hands, Legs & Feet, Internal Organs, Reproductive, Fluids & Tissues)
+- **Exercises** (~15-20): Mix of matching, multiple-choice, and fill-in-blank covering:
+  - Singular/plural pairs (e.g., hembo/mahembo, koto/makoto, disu/meso)
+  - Body part identification
+  - Internal organs matching
+  - Head/face vocabulary
+  - Hands & feet details
+- All exercises with English + Portuguese translations for instructions, explanations, and hints
 
-## File Changed
+### Key vocabulary to add (sample groupings)
 
-| File | Action |
-|------|--------|
-| `src/assets/story-panel-9.jpg` | Regenerate with both characters fully in frame |
+- **Head**: Ntu (head), Nsuki (hair), Mbunzu (forehead), Ntumpa (fontanelle), Disu/Meso (eye/eyes), Nse (eyebrow), Bundi/Mabundi (cheek/cheeks), Mbombo (nose), Kutu/Makutu (ear/ears), Nua (mouth), Mfinini (gums), Banga/Mabanga (jaw), Tshibanga/Bibanga (chin/chins), Yevo/Yelo/Kiyelo/Tshiyelo (beard), Biyelo (beards)
+- **Neck/Torso**: Nsingu (neck), Koshi (nape), Hembo/Mahembo (shoulder/s), Ntulu (chest), Beni/Mabeni (breast/s), Nima (back), Moyo (belly), Nkumba (navel), Luketo (kidneys/lower back), Taku/Mataku (buttock/s)
+- **Arms/Hands**: Koko (hand/arm), Nima koko (back of hand), Mbata (palm), Lembo/Mulembo/Milembo (finger/s), Luzala/Nzala (nail/s)
+- **Legs/Feet**: Kulu (foot), Ntanga/Mitanga (calf/calves), Tshinkoso/Binkoso (heel/s), Koto/Makoto (knee/s)
+- **Internal/Tissues**: Ntima/Mitima (heart/s), Sakafulu (lung), Tshifundu (stomach), Midia (entrails), Nkanda (skin), Yisi/Biyisi (bone/s), Tidi/Matidi (tendon/s), Muelo/Mielo (chakra/s)
+- **Reproductive**: Sondo (clitoris), Mbula (vagina), Kata/Makata (testicle/s), Mvia (penis)
+- **Fluids**: Menga (blood), Tiafuta (sweat), Masuba (urine), Maluma (sperm), Mante (saliva), Tuvi (feces)
 
-No code changes needed — only the image asset.
+### Files to modify
+- `src/components/VocabularyPreview.tsx` — expand body section
+- `src/data/lessons.ts` — add new "Nitu" lesson with vocabulary + exercises
+
