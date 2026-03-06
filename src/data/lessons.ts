@@ -4102,118 +4102,118 @@ export const lessons: Lesson[] = [
       { lari: "milele makumatatu na mi ya", mandombe: "milele makumatatu na mi ya", french: "trente-quatre pagnes", english: "thirty-four loincloths" },
     ],
     exercises: [
-      // Exercice 1 : matching — associer les expressions à leur traduction
+      // Exercise 1: matching — match Lari expressions to their translations
       {
         type: "matching",
-        instruction: "Associez chaque expression Lari à sa traduction française.",
+        instruction: "Match each Lari expression to its English translation.",
         pairs: [
-          { left: "mabola ma ya", right: "quatre oignons" },
-          { left: "makonko ma tatu", right: "trois sauterelles" },
-          { left: "konko di moshi", right: "une sauterelle" },
-          { left: "ngulu tatu", right: "trois cochons" },
-          { left: "bindongo biole", right: "deux moutons" },
+          { left: "mabola ma ya", right: "four onions" },
+          { left: "makonko ma tatu", right: "three grasshoppers" },
+          { left: "konko di moshi", right: "one grasshopper" },
+          { left: "ngulu tatu", right: "three pigs" },
+          { left: "bindongo biole", right: "two sheep" },
         ],
       },
-      // Exercice 2 : QCM — quelle particule utiliser ?
+      // Exercise 2: MCQ — which particle to use?
       {
         type: "multiple-choice",
-        question: "Quelle est la particule utilisée dans 'makonko ___ tatu' (trois sauterelles) ?",
+        question: "Which particle is used in 'makonko ___ tatu' (three grasshoppers)?",
         options: ["di", "bi", "ma", "mi"],
         correctIndex: 2,
-        explanation: "Les mots de la classe 'ma-' (makonko) utilisent la particule 'ma'.",
+        explanation: "Words of the 'ma-' class (makonko) use the particle 'ma'.",
       },
-      // Exercice 3 : fill-in-blank — konko di moshi
+      // Exercise 3: fill-in-blank — konko di moshi
       {
         type: "fill-in-blank",
-        sentence: "konko ___ moshi = une sauterelle",
+        sentence: "konko ___ moshi = one grasshopper",
         blank: "di",
-        hint: "La particule change au singulier pour ce mot.",
+        hint: "The particle changes in the singular for this word.",
       },
-      // Exercice 4 : QCM — euphonie
+      // Exercise 4: MCQ — euphony
       {
         type: "multiple-choice",
-        question: "Comment dit-on 'deux sauterelles' en Kikongo Lari ? (avec euphonie)",
+        question: "How do you say 'two grasshoppers' in Kikongo Lari? (with euphony)",
         options: ["makonko ma zole", "makonko mole", "makonko di zole", "makonko biole"],
         correctIndex: 1,
-        explanation: "Par euphonie, la particule 'ma' s'intègre au nombre : 'ma + zole' → 'mole'.",
+        explanation: "Through euphony, the particle 'ma' merges with the number: 'ma + zole' → 'mole'.",
       },
-      // Exercice 5 : QCM — mots invariables
+      // Exercise 5: MCQ — invariable nouns
       {
         type: "multiple-choice",
-        question: "Comment dit-on 'deux bœufs' en Kikongo Lari ?",
+        question: "How do you say 'two oxen' in Kikongo Lari?",
         options: ["ngombe di zole", "ngombe ma zole", "ngombe zole", "ngombe biole"],
         correctIndex: 2,
-        explanation: "Ngombe est un mot invariable au pluriel : pas de particule, on place simplement le nombre après le mot.",
+        explanation: "Ngombe is an invariable noun: no particle is needed, simply place the number after the word.",
       },
-      // Exercice 6 : fill-in-blank — bindongo biole
+      // Exercise 6: fill-in-blank — bindongo biole
       {
         type: "fill-in-blank",
-        sentence: "bindongo ___ = deux moutons (avec euphonie)",
+        sentence: "bindongo ___ = two sheep (with euphony)",
         blank: "biole",
-        hint: "La particule 'bi' s'intègre au nombre 'zole' par euphonie.",
+        hint: "The particle 'bi' merges with the number 'zole' through euphony.",
       },
-      // Exercice 7 : matching — mots invariables
+      // Exercise 7: matching — invariable nouns
       {
         type: "matching",
-        instruction: "Associez chaque expression avec sa traduction. Ces mots sont invariables au pluriel.",
+        instruction: "Match each expression to its translation. These nouns are invariable in the plural.",
         pairs: [
-          { left: "nkangabumi moshi", right: "une araignée" },
-          { left: "nkangabumi zole", right: "deux araignées" },
-          { left: "ngombe moshi", right: "un bœuf" },
-          { left: "ngulu zole", right: "deux cochons" },
+          { left: "nkangabumi moshi", right: "one spider" },
+          { left: "nkangabumi zole", right: "two spiders" },
+          { left: "ngombe moshi", right: "one ox" },
+          { left: "ngulu zole", right: "two pigs" },
         ],
       },
-      // Exercice 8 : fill-in-blank — grands nombres avec particule après 'na'
+      // Exercise 8: fill-in-blank — large numbers with particle after 'na'
       {
         type: "fill-in-blank",
-        sentence: "bitunga makumatatu na ___ tanu = 35 paniers",
+        sentence: "bitunga makumatatu na ___ tanu = 35 baskets",
         blank: "bi",
-        hint: "La particule de la classe 'bi-' se place après le 'na' dans les grands nombres.",
+        hint: "The particle of the 'bi-' class is placed after 'na' in large numbers.",
       },
-      // Exercice 9 : QCM — milele
+      // Exercise 9: MCQ — milele
       {
         type: "multiple-choice",
-        question: "Comment dit-on 'vingt-deux pagnes' en Kikongo Lari ?",
+        question: "How do you say 'twenty-two loincloths' in Kikongo Lari?",
         options: ["milele makumole na mi zole", "milele makumole na miole", "milele makumole na biole", "milele makumole zole"],
         correctIndex: 1,
-        explanation: "La particule 'mi' (classe mi-) s'intègre par euphonie : 'mi + zole' → 'miole'.",
+        explanation: "The particle 'mi' (mi- class) merges through euphony: 'mi + zole' → 'miole'.",
       },
-      // Exercice 10 : fill-in-blank — milele makumatatu na mi tatu
+      // Exercise 10: fill-in-blank — milele makumatatu na mi tatu
       {
         type: "fill-in-blank",
-        sentence: "milele makumatatu na ___ tatu = 33 pagnes",
+        sentence: "milele makumatatu na ___ tatu = 33 loincloths",
         blank: "mi",
-        hint: "La particule de la classe 'mi-' pour le mot milele.",
+        hint: "The particle of the 'mi-' class for the word milele.",
       },
-      // Exercice 11 : QCM — reconnaître la règle
+      // Exercise 11: MCQ — recognise the rule
       {
         type: "multiple-choice",
-        question: "Pourquoi dit-on 'ngulu zole' sans particule, mais 'makonko ma tatu' avec particule 'ma' ?",
+        question: "Why do we say 'ngulu zole' without a particle, but 'makonko ma tatu' with the particle 'ma'?",
         options: [
-          "Parce que ngulu est plus court",
-          "Parce que ngulu est invariable au pluriel et ne requiert pas de particule",
-          "Parce que zole est un petit nombre",
-          "Parce que makonko est un animal"
+          "Because ngulu is shorter",
+          "Because ngulu is invariable in the plural and does not require a particle",
+          "Because zole is a small number",
+          "Because makonko is an animal"
         ],
         correctIndex: 1,
-        explanation: "Les mots invariables au pluriel (ngulu, ngombe, nkangabumi) ne requièrent pas de particule entre le mot et le nombre.",
+        explanation: "Invariable nouns (ngulu, ngombe, nkangabumi) do not require a particle between the word and the number.",
       },
-      // Exercice 12 : fill-in-blank — mabola nsambuadi
+      // Exercise 12: fill-in-blank — mabola nsambuadi
       {
         type: "fill-in-blank",
-        sentence: "mabola ___ = sept oignons",
+        sentence: "mabola ___ = seven onions",
         blank: "nsambuadi",
-        hint: "Le mot pour le chiffre 7.",
+        hint: "The word for the number 7.",
       },
-      // Exercice 13 : matching — grands nombres
+      // Exercise 13: matching — large numbers
       {
         type: "matching",
-        instruction: "Associez chaque expression Lari à sa traduction.",
+        instruction: "Match each Lari expression to its translation.",
         pairs: [
-          { left: "makonko makumatatu na ma tanu", right: "35 sauterelles" },
-          { left: "bindongo makumatatu na bi tanu", right: "35 moutons" },
-          { left: "milele makumatatu na mi ya", right: "34 pagnes" },
-          { left: "mabola nkama", right: "100 oignons" },
+          { left: "makonko makumatatu na ma tanu", right: "35 grasshoppers" },
+          { left: "bindongo makumatatu na bi tanu", right: "35 sheep" },
+          { left: "milele makumatatu na mi ya", right: "34 loincloths" },
+          { left: "mabola nkama", right: "100 onions" },
         ],
       },
     ],
