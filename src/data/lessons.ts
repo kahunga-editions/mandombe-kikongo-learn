@@ -21,11 +21,13 @@ export interface MultipleChoiceQuestion {
   options: string[];
   correctIndex: number;
   explanation?: string;
+  explanationPt?: string;
 }
 
 export interface MatchingQuestion {
   type: "matching";
   instruction: string;
+  instructionPt?: string;
   pairs: { left: string; right: string }[];
 }
 
@@ -35,6 +37,7 @@ export interface FillInBlankQuestion {
   sentenceMandombe?: string;
   blank: string;
   hint?: string;
+  hintPt?: string;
 }
 
 export type Exercise = MultipleChoiceQuestion | MatchingQuestion | FillInBlankQuestion;

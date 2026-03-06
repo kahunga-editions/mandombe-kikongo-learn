@@ -74,8 +74,9 @@ const MultipleChoice = ({ question, onComplete }: Props) => {
       )}
 
       {submitted && question.explanation && (
-        <div className="bg-muted/50 rounded-lg p-4 text-sm text-muted-foreground">
-          💡 {question.explanation}
+        <div className="bg-muted/50 rounded-lg p-4 text-sm text-muted-foreground space-y-1">
+          <p>💡 {question.explanation}</p>
+          {question.explanationPt && <p>🇵🇹 {question.explanationPt}</p>}
         </div>
       )}
     </div>
