@@ -2383,13 +2383,6 @@ export const lessons: Lesson[] = [
       },
       {
         type: "multiple-choice",
-        question: "What is 'Bisambanu'?",
-        questionMandombe: "Bisambanu",
-        options: ["Three", "Four", "Six", "Eight"],
-        correctIndex: 2,
-      },
-      {
-        type: "multiple-choice",
         question: "What are 'Bifuku'?",
         questionMandombe: "Bifuku",
         options: ["Fish", "Caterpillars living in groups", "Birds", "Flowers"],
