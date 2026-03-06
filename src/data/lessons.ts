@@ -164,6 +164,8 @@ export const lessons: Lesson[] = [
   {
     id: "gratitude",
     title: "Gratitude — Ntondolo",
+    titleFr: "La gratitude — Ntondolo",
+    titlePt: "Gratidão — Ntondolo",
     titleLari: "Ntondolo — Mpila ya vuturila matondo",
     titleMandombe: "Ntondolo — Mpila ya vuturila matondo",
     description: "Learn to express gratitude and conjugate the verb 'tonda' (to thank) in present, past, future, and imperative.",
