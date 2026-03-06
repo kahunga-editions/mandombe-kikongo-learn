@@ -2816,6 +2816,8 @@ export const lessons: Lesson[] = [
   {
     id: "ha-hu-roots",
     title: "Ha- / Hu- — Places, Actions & Separation",
+    titleFr: "Ha- / Hu- — Lieux, actions et séparation",
+    titlePt: "Ha- / Hu- — Lugares, ações e separação",
     titleLari: "Hana na Huma",
     titleMandombe: "Hana na Huma",
     description: "Explore Kikongo Lari words beginning with Ha- and Hu-, covering places, giving, separation, and physical actions.",
