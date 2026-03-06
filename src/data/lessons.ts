@@ -3666,8 +3666,8 @@ export const lessons: Lesson[] = [
       {
         type: "multiple-choice",
         question: "How do you say 'I am sleepy' in Kikongo Lari?",
-        options: ["Tolo tue naku", "Tolo tue nani", "Tolo tue nandi", "Tolo tue neto"],
-        correctIndex: 1,
+        options: ["Tolo tue nandi", "Tolo tue neto", "Tolo tue nani", "Tolo tue naku"],
+        correctIndex: 2,
         explanation: "'Tolo tue nani' — literally 'sleep is with me'.",
         explanationPt: "'Tolo tue nani' — literalmente 'o sono está comigo'.",
       },
