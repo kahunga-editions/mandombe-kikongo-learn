@@ -306,6 +306,7 @@ const categories: VocabCategory[] = [
       { lari: "Kata", french: "Testicule", english: "Testicle", portuguese: "Testículo" },
       { lari: "Makata", french: "Testicules", english: "Testicles", portuguese: "Testículos" },
       { lari: "Mvia", french: "Pénis", english: "Penis", portuguese: "Pénis" },
+      { lari: "Sutu", french: "Pénis non circoncis", english: "Uncircumcised penis", portuguese: "Pénis não circuncidado" },
       // Fluids
       { lari: "Menga", french: "Sang", english: "Blood", portuguese: "Sangue" },
       { lari: "Tiafuta", french: "Sueur", english: "Sweat", portuguese: "Suor" },

@@ -4,6 +4,7 @@ export interface VocabItem {
   french: string;
   english: string;
   portuguese?: string;
+  note?: string;
 }
 
 export interface ConjugationTable {
