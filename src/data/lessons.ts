@@ -4823,7 +4823,7 @@ export const lessons: Lesson[] = [
       {
         type: "multiple-choice",
         question: "How do you say 'Red' (Rouge) in Kikongo Lari?",
-        options: ["Mpembe", "Tundu", "Mbuaki", "Ngizu"],
+        options: ["Mpembe", "Ntundu", "Mbuaki", "Ngizu"],
         correctIndex: 2,
         explanation: "'Mbuaki' means 'red' (rouge / vermelho).",
         explanationPt: "'Mbuaki' significa 'vermelho'.",
