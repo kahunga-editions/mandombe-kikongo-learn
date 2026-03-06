@@ -1,6 +1,7 @@
 import { useState } from "react";
 import type { MultipleChoiceQuestion } from "@/data/lessons";
 import { CheckCircle, XCircle } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface Props {
   question: MultipleChoiceQuestion;
@@ -10,6 +11,7 @@ interface Props {
 const MultipleChoice = ({ question, onComplete }: Props) => {
   const [selected, setSelected] = useState<number | null>(null);
   const [submitted, setSubmitted] = useState(false);
+  const { language, t } = useLanguage();
 
   const handleSelect = (index: number) => {
     if (submitted) return;
@@ -21,6 +23,11 @@ const MultipleChoice = ({ question, onComplete }: Props) => {
     setSubmitted(true);
     onComplete(selected === question.correctIndex);
   };
+
+  // Pick explanation based on language
+  const explanation = language === "pt"
+    ? (question.explanationPt || question.explanation)
+    : question.explanation;
 
   return (
      <div className="space-y-4">
@@ -69,14 +76,13 @@ const MultipleChoice = ({ question, onComplete }: Props) => {
           disabled={selected === null}
           className="bg-primary text-primary-foreground px-6 py-2.5 rounded-lg text-sm font-semibold transition-colors hover:bg-primary/90 disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          Check Answer
+          {t("exercises.checkAnswer")}
         </button>
       )}
 
-      {submitted && question.explanation && (
-        <div className="bg-muted/50 rounded-lg p-4 text-sm text-muted-foreground space-y-1">
-          <p>💡 {question.explanation}</p>
-          {question.explanationPt && <p>🇵🇹 {question.explanationPt}</p>}
+      {submitted && explanation && (
+        <div className="bg-muted/50 rounded-lg p-4 text-sm text-muted-foreground">
+          <p>💡 {explanation}</p>
         </div>
       )}
     </div>

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import type { FillInBlankQuestion } from "@/data/lessons";
 import { CheckCircle, XCircle } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface Props {
   question: FillInBlankQuestion;
@@ -10,7 +11,12 @@ interface Props {
 const FillInBlank = ({ question, onComplete }: Props) => {
   const [answer, setAnswer] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const { language, t } = useLanguage();
   const isCorrect = answer.trim().toLowerCase() === question.blank.toLowerCase();
+
+  const hint = language === "pt"
+    ? (question.hintPt || question.hint)
+    : question.hint;
 
   const handleSubmit = () => {
     if (!answer.trim()) return;
@@ -31,10 +37,9 @@ const FillInBlank = ({ question, onComplete }: Props) => {
         </p>
       </div>
 
-      {question.hint && (
-        <div className="text-sm text-muted-foreground italic space-y-1">
-          <p>💡 Hint: {question.hint}</p>
-          {question.hintPt && <p>🇵🇹 {question.hintPt}</p>}
+      {hint && (
+        <div className="text-sm text-muted-foreground italic">
+          <p>{t("exercises.hint")} {hint}</p>
         </div>
       )}
 
@@ -44,7 +49,7 @@ const FillInBlank = ({ question, onComplete }: Props) => {
           value={answer}
           onChange={(e) => !submitted && setAnswer(e.target.value)}
           onKeyDown={(e) => e.key === "Enter" && handleSubmit()}
-          placeholder="Type your answer..."
+          placeholder={t("exercises.typeAnswer")}
           className={`flex-1 px-4 py-3 rounded-lg border text-sm bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring ${
             submitted
               ? isCorrect
@@ -66,13 +71,13 @@ const FillInBlank = ({ question, onComplete }: Props) => {
           disabled={!answer.trim()}
           className="bg-primary text-primary-foreground px-6 py-2.5 rounded-lg text-sm font-semibold transition-colors hover:bg-primary/90 disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          Check Answer
+          {t("exercises.checkAnswer")}
         </button>
       )}
 
       {submitted && !isCorrect && (
         <p className="text-sm text-muted-foreground">
-          The correct answer is: <strong className="text-foreground">{question.blank}</strong>
+          {t("exercises.correctAnswer")} <strong className="text-foreground">{question.blank}</strong>
         </p>
       )}
     </div>

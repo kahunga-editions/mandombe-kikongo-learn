@@ -1,6 +1,7 @@
 import { useState, useMemo } from "react";
 import type { MatchingQuestion } from "@/data/lessons";
 import { CheckCircle } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface Props {
   question: MatchingQuestion;
@@ -8,6 +9,12 @@ interface Props {
 }
 
 const MatchingExercise = ({ question, onComplete }: Props) => {
+  const { language, t } = useLanguage();
+
+  const instruction = language === "pt"
+    ? (question.instructionPt || question.instruction)
+    : question.instruction;
+
   const shuffledRight = useMemo(
     () => [...question.pairs].sort(() => Math.random() - 0.5),
     [question]
@@ -25,7 +32,6 @@ const MatchingExercise = ({ question, onComplete }: Props) => {
   const handleRightClick = (shuffledIdx: number) => {
     if (submitted || selectedLeft === null) return;
     const rightValue = shuffledRight[shuffledIdx].right;
-    // Check if this right is already matched
     const alreadyMatched = Object.values(matches).some(
       (mi) => shuffledRight[mi]?.right === rightValue
     );
@@ -50,11 +56,8 @@ const MatchingExercise = ({ question, onComplete }: Props) => {
     <div className="space-y-4">
       <div>
         <p className="font-display text-lg font-semibold text-foreground">
-          {question.instruction}
+          {instruction}
         </p>
-        {question.instructionPt && (
-          <p className="text-sm text-muted-foreground mt-1">🇵🇹 {question.instructionPt}</p>
-        )}
       </div>
 
       <div className="grid grid-cols-2 gap-4">
@@ -113,7 +116,7 @@ const MatchingExercise = ({ question, onComplete }: Props) => {
           disabled={!allMatched}
           className="bg-primary text-primary-foreground px-6 py-2.5 rounded-lg text-sm font-semibold transition-colors hover:bg-primary/90 disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          Check Matches
+          {t("exercises.checkMatches")}
         </button>
       )}
     </div>

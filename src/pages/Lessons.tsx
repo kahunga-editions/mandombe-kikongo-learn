@@ -4,6 +4,7 @@ import { lessons } from "@/data/lessons";
 import { useAuth } from "@/contexts/AuthContext";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const levelColors = {
   beginner: "bg-green-500/10 text-green-700 border-green-500/30",
@@ -13,6 +14,7 @@ const levelColors = {
 
 const Lessons = () => {
   const { isPremium } = useAuth();
+  const { t } = useLanguage();
 
   return (
     <div className="min-h-screen bg-background">
@@ -25,13 +27,13 @@ const Lessons = () => {
             </div>
             <div className="w-24 h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mb-6" />
             <p className="text-gold/70 font-body text-xs tracking-[0.35em] uppercase mb-4">
-              Zonza Lari — Lessons
+              {t("lessons.eyebrow")}
             </p>
             <h1 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Interactive Lessons
+              {t("lessons.title")}
             </h1>
             <p className="text-muted-foreground max-w-2xl mx-auto text-base">
-              Learn Kikongo Lari step by step with vocabulary, conjugation tables, and interactive exercises.
+              {t("lessons.subtitle")}
             </p>
           </div>
 
@@ -64,7 +66,7 @@ const Lessons = () => {
                         <Lock className="w-6 h-6 text-gold" />
                       </div>
                       <p className="text-cream font-display font-bold text-lg">Premium</p>
-                      <p className="text-cream/60 text-xs mt-1">Upgrade to unlock</p>
+                      <p className="text-cream/60 text-xs mt-1">{t("exercises.upgrade")}</p>
                     </div>
                   </div>
                 );
@@ -92,9 +94,9 @@ const Lessons = () => {
                     <p className="text-primary/70 font-body text-xs italic mb-3">{lesson.titleLari}</p>
                     <p className="text-muted-foreground text-sm leading-relaxed">{lesson.description}</p>
                     <div className="mt-4 flex items-center gap-4 text-xs text-muted-foreground">
-                      {lesson.vocabulary && <span>{lesson.vocabulary.length} words</span>}
-                      {lesson.conjugations && <span>{lesson.conjugations.length} conjugations</span>}
-                      <span>{lesson.exercises.length} exercises</span>
+                      {lesson.vocabulary && <span>{lesson.vocabulary.length} {t("lessons.words")}</span>}
+                      {lesson.conjugations && <span>{lesson.conjugations.length} {t("lessons.conjugations")}</span>}
+                      <span>{lesson.exercises.length} {t("lessons.exercises")}</span>
                     </div>
                   </div>
                 </Link>
