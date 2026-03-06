@@ -3003,6 +3003,8 @@ export const lessons: Lesson[] = [
   {
     id: "ko-ku-roots",
     title: "Ko- / Ku- — Health, Growth & Movement",
+    titleFr: "Ko- / Ku- — Santé, croissance et mouvement",
+    titlePt: "Ko- / Ku- — Saúde, crescimento e movimento",
     titleLari: "Kola na Kula",
     titleMandombe: "Kola na Kula",
     description: "Study Ko- and Ku- roots covering health, growth, movement, marriage, and daily activities in Kikongo Lari.",
