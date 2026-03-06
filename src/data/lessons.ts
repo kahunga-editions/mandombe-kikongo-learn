@@ -275,6 +275,8 @@ export const lessons: Lesson[] = [
   {
     id: "survival-verbs",
     title: "Survival Verbs",
+    titleFr: "Verbes de survie",
+    titlePt: "Verbos de sobrevivência",
     titleLari: "Mia sa mu ba na jingu",
     titleMandombe: "Mia sa mu ba na jingu",
     description: "Master the essential verbs: to be (ba), to do (sa), to eat (dia), to drink (nua), to be able (lenda), to take (bonga), and to know (zaba).",
