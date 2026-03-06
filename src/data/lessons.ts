@@ -2380,8 +2380,8 @@ export const lessons: Lesson[] = [
         type: "matching",
         instruction: "Match the plants and natural objects.",
         pairs: [
-          { left: "Bideka", right: "Luminaceae plant" },
-          { left: "Bikekele", right: "Olacaceae shrub" },
+          { left: "Bideka", right: "Ornamental plants" },
+          { left: "Bikekele", right: "Edible plant" },
           { left: "Binkandula", right: "Tiliaceae plant" },
           { left: "Bifubu", right: "Flexible liana" },
           { left: "Binkila", right: "Table wine" },
@@ -2392,9 +2392,9 @@ export const lessons: Lesson[] = [
         instruction: "Match the daily objects.",
         pairs: [
           { left: "Bidiki", right: "Brick" },
-          { left: "Bidila", right: "Hem, mat" },
+          { left: "Nkuala", right: "Mat" },
           { left: "Bikuta", right: "Baby calming object" },
-          { left: "Bipopo", right: "Scarification" },
+          { left: "Bipopo", right: "Scarification on cheeks" },
         ],
       },
       {
