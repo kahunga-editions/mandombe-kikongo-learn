@@ -1933,7 +1933,7 @@ export const lessons: Lesson[] = [
       { lari: "Bikonko bitatu", mandombe: "Bikonko bitatu", french: "Triangle", english: "Triangle" },
       { lari: "Bisambanu", mandombe: "Bisambanu", french: "Six", english: "Six" },
       { lari: "Bipidi", mandombe: "Bipidi", french: "Aliments envoyés à la fiancée", english: "Food sent to the fiancée" },
-      { lari: "Bipopo", mandombe: "Bipopo", french: "Scarification; vaccin", english: "Scarification; vaccine" },
+      { lari: "Bipopo", mandombe: "Bipopo", french: "Scarification au niveau des joues", english: "Scarification on the cheeks" },
       { lari: "Bikululu", mandombe: "Bikululu", french: "Quotidien, habituel; rançon", english: "Daily, usual; ransom" },
       { lari: "Bikoyi", mandombe: "Bikoyi", french: "Complaintes, supplications", english: "Complaints, supplications" },
       { lari: "Bingi", mandombe: "Bingi", french: "Nombreux", english: "Numerous, many" },
