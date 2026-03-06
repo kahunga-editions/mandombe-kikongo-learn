@@ -3632,7 +3632,7 @@ export const lessons: Lesson[] = [
       { lari: "Nkokila", mandombe: "Nkokila", french: "Le soir", english: "The evening", portuguese: "A noitinha" },
       { lari: "Ngonda", mandombe: "Ngonda", french: "La lune", english: "The moon", portuguese: "A lua" },
       { lari: "Muezi", mandombe: "Muezi", french: "Le clair de lune", english: "Moonlight", portuguese: "O luar" },
-      { lari: "Muette", mandombe: "Muette", french: "Étoile", english: "Star", portuguese: "Estrela" },
+      { lari: "Mbuetete", mandombe: "Mbuetete", french: "Étoile", english: "Star", portuguese: "Estrela" },
       { lari: "Ntangu", mandombe: "Ntangu", french: "Le soleil, l'heure", english: "The sun, the time/hour", portuguese: "O sol, a hora" },
       { lari: "Muinda", mandombe: "Muinda", french: "Une lampe", english: "A lamp", portuguese: "Uma lâmpada" },
       { lari: "Namisa muinda", mandombe: "Namisa muinda", french: "Éclairer", english: "To light up, to illuminate", portuguese: "Iluminar" },
@@ -3666,8 +3666,8 @@ export const lessons: Lesson[] = [
       {
         type: "multiple-choice",
         question: "How do you say 'I am sleepy' in Kikongo Lari?",
-        options: ["Tolo tue naku", "Tolo tue nani", "Tolo tue nandi", "Tolo tue neto"],
-        correctIndex: 1,
+        options: ["Tolo tue nandi", "Tolo tue neto", "Tolo tue nani", "Tolo tue naku"],
+        correctIndex: 2,
         explanation: "'Tolo tue nani' — literally 'sleep is with me'.",
         explanationPt: "'Tolo tue nani' — literalmente 'o sono está comigo'.",
       },
@@ -3784,7 +3784,7 @@ export const lessons: Lesson[] = [
           { left: "Mpimpa", right: "The night" },
           { left: "Ngonda", right: "The moon" },
           { left: "Muezi", right: "Moonlight" },
-          { left: "Muette", right: "Star" },
+          { left: "Mbuetete", right: "Star" },
         ],
       },
       {
