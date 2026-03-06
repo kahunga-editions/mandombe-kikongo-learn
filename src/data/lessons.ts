@@ -1444,6 +1444,8 @@ export const lessons: Lesson[] = [
   {
     id: "ba-advanced-verbs",
     title: "Ba- Advanced Verbs & Expressions",
+    titleFr: "Verbes avancés et expressions en Ba-",
+    titlePt: "Verbos avançados e expressões em Ba-",
     titleLari: "Malongi me mu \"Ba\" (2)",
     titleMandombe: "Malongi me mu Ba (2)",
     description: "Expand your Ba- verb mastery with verbs of surprise, combat, craftsmanship, and emotional states — drawn from the Kilari dictionary.",
