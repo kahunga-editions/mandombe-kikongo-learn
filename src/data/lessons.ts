@@ -2359,7 +2359,7 @@ export const lessons: Lesson[] = [
       { lari: "Bifuku", mandombe: "Bifuku", french: "Chenilles vivant en groupe", english: "Caterpillars living in groups" },
       { lari: "Bikekele", mandombe: "Bikekele", french: "Plante comestible", english: "Edible plant" },
       { lari: "Bitshinda", mandombe: "Bitshinda", french: "Tombe, cimetière, nécropole", english: "Tomb, cemetery, necropolis" },
-      { lari: "Bikola", mandombe: "Bikola", french: "Mélange de plantes pour fumigation; légume", english: "Plant mix for fumigation; vegetable" },
+      { lari: "Bikola", mandombe: "Bikola", french: "Légumes à feuille, plantes pour fumigation", english: "Leafy vegetables, plants for fumigation" },
       { lari: "Bikonko bitatu", mandombe: "Bikonko bitatu", french: "Triangle", english: "Triangle" },
       { lari: "Bikuta", mandombe: "Bikuta", french: "Objet pour calmer un bébé", english: "Object to calm a baby" },
       { lari: "Binkandula", mandombe: "Binkandula", french: "Plante de la famille des Tiliaceae", english: "Plant of the Tiliaceae family" },
