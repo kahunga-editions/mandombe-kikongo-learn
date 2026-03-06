@@ -76,6 +76,8 @@ export const lessons: Lesson[] = [
   {
     id: "greetings",
     title: "Greetings & Introductions",
+    titleFr: "Salutations et présentations",
+    titlePt: "Saudações e apresentações",
     titleLari: "Mpila ya hanina mbote",
     titleMandombe: "Mpila ya hanina mbote",
     description: "Learn how to greet people, introduce yourself, and ask about someone's well-being in Kikongo Lari.",
@@ -162,6 +164,8 @@ export const lessons: Lesson[] = [
   {
     id: "gratitude",
     title: "Gratitude — Ntondolo",
+    titleFr: "La gratitude — Ntondolo",
+    titlePt: "Gratidão — Ntondolo",
     titleLari: "Ntondolo — Mpila ya vuturila matondo",
     titleMandombe: "Ntondolo — Mpila ya vuturila matondo",
     description: "Learn to express gratitude and conjugate the verb 'tonda' (to thank) in present, past, future, and imperative.",
@@ -271,6 +275,8 @@ export const lessons: Lesson[] = [
   {
     id: "survival-verbs",
     title: "Survival Verbs",
+    titleFr: "Verbes de survie",
+    titlePt: "Verbos de sobrevivência",
     titleLari: "Mia sa mu ba na jingu",
     titleMandombe: "Mia sa mu ba na jingu",
     description: "Master the essential verbs: to be (ba), to do (sa), to eat (dia), to drink (nua), to be able (lenda), to take (bonga), and to know (zaba).",
@@ -427,6 +433,8 @@ export const lessons: Lesson[] = [
   {
     id: "time-expressions",
     title: "Expressing Time — Ntangu",
+    titleFr: "Exprimer le temps — Ntangu",
+    titlePt: "Expressar o tempo — Ntangu",
     titleLari: "Ntangu",
     titleMandombe: "Ntangu",
     description: "Learn to talk about time: today, tomorrow, yesterday, next week, last night, and more.",
@@ -492,6 +500,8 @@ export const lessons: Lesson[] = [
   {
     id: "house-activities",
     title: "House Activities — Bisalu bia mu Nzo",
+    titleFr: "Activités de la maison — Bisalu bia mu Nzo",
+    titlePt: "Atividades da casa — Bisalu bia mu Nzo",
     titleLari: "Bisalu bia mu Nzo",
     titleMandombe: "Bisalu biya mu Nzo",
     description: "Learn vocabulary and sentences about daily house activities: cooking, cutting, preparing, reading, and going to work.",
@@ -545,6 +555,8 @@ export const lessons: Lesson[] = [
   {
     id: "mandombe-dictionary",
     title: "Bi- Words",
+    titleFr: "Mots en Bi-",
+    titlePt: "Palavras em Bi-",
     titleLari: "Malongi me mu \"Bi\"",
     titleMandombe: "Malongi me mu Bi",
     description: "Explore essential Kikongo Lari vocabulary starting with 'Bi-'. Each word is shown in Mandombe script with French and English translations.",
@@ -698,6 +710,8 @@ export const lessons: Lesson[] = [
   {
     id: "ba-verbs-dictionary",
     title: "Ba- Verbs & Actions",
+    titleFr: "Verbes et actions en Ba-",
+    titlePt: "Verbos e ações em Ba-",
     titleLari: "Malongi me mu \"Ba\"",
     titleMandombe: "Malongi me mu Ba",
     description: "Master essential Kikongo Lari verbs starting with 'Ba-' — from remembering to running, from fighting to healing.",
@@ -833,6 +847,8 @@ export const lessons: Lesson[] = [
   {
     id: "bo-bu-glossary",
     title: "Bo- & Bu- Vocabulary",
+    titleFr: "Vocabulaire en Bo- et Bu-",
+    titlePt: "Vocabulário em Bo- e Bu-",
     titleLari: "Malongi me mu \"Bo\" na \"Bu\"",
     titleMandombe: "Malongi me mu Bo na Bu",
     description: "Discover vocabulary starting with 'Bo-' and 'Bu-' — covering concepts from beauty and humanity to healing and places.",
@@ -947,6 +963,8 @@ export const lessons: Lesson[] = [
   {
     id: "ba-conjugation",
     title: "'To Be' Conjugation — Ba",
+    titleFr: "Conjugaison de « Être » — Ba",
+    titlePt: "Conjugação de « Ser/Estar » — Ba",
     titleLari: "Ba",
     titleMandombe: "Ba",
     description: "Master the full conjugation of 'to be' (ba), form adjective phrases, and learn the negation pattern 'ka...ko'.",
@@ -1059,6 +1077,8 @@ export const lessons: Lesson[] = [
   {
     id: "imperative-commands",
     title: "Imperative & Commands — Tuma",
+    titleFr: "Impératif et ordres — Tuma",
+    titlePt: "Imperativo e comandos — Tuma",
     titleLari: "Tuma",
     titleMandombe: "Tuma",
     description: "Learn to give commands and instructions: close, open, sleep, go out, walk, run, and ask — in singular and plural imperative forms.",
@@ -1145,6 +1165,8 @@ export const lessons: Lesson[] = [
   {
     id: "travel-places",
     title: "Travel & Places — Zeba",
+    titleFr: "Voyages et lieux — Zeba",
+    titlePt: "Viagens e lugares — Zeba",
     titleLari: "Zeba",
     titleMandombe: "Zeba",
     description: "Talk about traveling to places using past and future tenses. Learn real Congolese place names and conjugate 'kwenda' (to go) and 'kwiza' (to come). Zeba means to travel, to take a walk.",
@@ -1273,6 +1295,8 @@ export const lessons: Lesson[] = [
   {
     id: "bi-verbs-sounds",
     title: "Bi- Verbs: Sound, Fire & Force",
+    titleFr: "Verbes en Bi- : Son, feu et force",
+    titlePt: "Verbos em Bi- : Som, fogo e força",
     titleLari: "Malongi me mu \"Bi\"",
     titleMandombe: "Malongi me mu Bi",
     description: "Discover powerful Bi- verbs related to sound, fire, blessing, and physical force — from resonating drums to blazing flames.",
@@ -1420,6 +1444,8 @@ export const lessons: Lesson[] = [
   {
     id: "ba-advanced-verbs",
     title: "Ba- Advanced Verbs & Expressions",
+    titleFr: "Verbes avancés et expressions en Ba-",
+    titlePt: "Verbos avançados e expressões em Ba-",
     titleLari: "Malongi me mu \"Ba\" (2)",
     titleMandombe: "Malongi me mu Ba (2)",
     description: "Expand your Ba- verb mastery with verbs of surprise, combat, craftsmanship, and emotional states — drawn from the Kilari dictionary.",
@@ -1574,6 +1600,8 @@ export const lessons: Lesson[] = [
   {
     id: "bu-abstract-concepts",
     title: "Bu- Abstract Concepts & States",
+    titleFr: "Concepts abstraits et états en Bu-",
+    titlePt: "Conceitos abstratos e estados em Bu-",
     titleLari: "Malongi me mu \"Bu\"",
     titleMandombe: "Malongi me mu Bu",
     description: "Explore the rich Bu- prefix vocabulary covering abstract states: emotions, virtues, vices, social concepts, and human qualities.",
@@ -1752,6 +1780,8 @@ export const lessons: Lesson[] = [
   {
     id: "bi-nature-culture",
     title: "Bi- Nature, Culture & Objects",
+    titleFr: "Bi- Nature, culture et objets",
+    titlePt: "Bi- Natureza, cultura e objetos",
     titleLari: "Malongi me mu \"Bi\" (2)",
     titleMandombe: "Malongi me mu Bi (2)",
     description: "Explore Bi- words covering plants, animals, cultural objects, numbers, and natural phenomena from the Kilari dictionary.",
@@ -1905,6 +1935,8 @@ export const lessons: Lesson[] = [
   {
     id: "ba-movement-body",
     title: "Ba- Movement, Body & Transformation",
+    titleFr: "Ba- Mouvement, corps et transformation",
+    titlePt: "Ba- Movimento, corpo e transformação",
     titleLari: "Malongi me mu \"Ba\" (3)",
     titleMandombe: "Malongi me mu Ba (3)",
     description: "Master Ba- verbs of physical movement, bodily actions, and transformation — from turning and running to sticking and peeling.",
@@ -2084,6 +2116,8 @@ export const lessons: Lesson[] = [
   {
     id: "bia-sacred-governance",
     title: "Sacred & Governance — Bia Series",
+    titleFr: "Sacré et gouvernance — Série Bia",
+    titlePt: "Sagrado e governança — Série Bia",
     titleLari: "Biala na Kimfumu",
     titleMandombe: "Biyala na Kimfumu",
     description: "Explore words of consecration, crowning, inheritance, and calling — the Bia- root family from the dictionary.",
@@ -2190,6 +2224,8 @@ export const lessons: Lesson[] = [
   {
     id: "bi-plants-creatures",
     title: "Plants, Creatures & Objects — Bi Series",
+    titleFr: "Plantes, créatures et objets — Série Bi",
+    titlePt: "Plantas, criaturas e objetos — Série Bi",
     titleLari: "Bima na Bisi",
     titleMandombe: "Bima na Bisi",
     description: "Discover the rich Bi- vocabulary for plants, insects, household objects, and natural phenomena from the Kilari dictionary.",
@@ -2292,6 +2328,8 @@ export const lessons: Lesson[] = [
   {
     id: "ba-emotions-disputes",
     title: "Emotions, Actions & Disputes — Ba Series",
+    titleFr: "Émotions, actions et disputes — Série Ba",
+    titlePt: "Emoções, ações e disputas — Série Ba",
     titleLari: "Baba na Bakana",
     titleMandombe: "Baba na Bakana",
     description: "Master Ba- verbs for arguing, seizing, surprising, sticking, and emotional states from the Kilari dictionary.",
@@ -2402,6 +2440,8 @@ export const lessons: Lesson[] = [
   {
     id: "bo-physical-world",
     title: "Physical World & Actions — Bo Series",
+    titleFr: "Monde physique et actions — Série Bo",
+    titlePt: "Mundo físico e ações — Série Bo",
     titleLari: "Bota na Boka",
     titleMandombe: "Bota na Boka",
     description: "Learn Bo- vocabulary for striking, immersing, prospering, and physical world concepts from the Kilari dictionary.",
@@ -2511,6 +2551,8 @@ export const lessons: Lesson[] = [
   {
     id: "bu-social-spiritual",
     title: "Social & Spiritual Life — Bu Series",
+    titleFr: "Vie sociale et spirituelle — Série Bu",
+    titlePt: "Vida social e espiritual — Série Bu",
     titleLari: "Buntuadi na Bunzambi",
     titleMandombe: "Buntuadi na Bunzambi",
     description: "Explore advanced Bu- concepts for social bonds, spirituality, character traits, and community life from the Kilari dictionary.",
@@ -2648,6 +2690,8 @@ export const lessons: Lesson[] = [
   {
     id: "fi-fu-verbs",
     title: "Fi- / Fu- — Verbs, Actions & Transformations",
+    titleFr: "Fi- / Fu- — Verbes, actions et transformations",
+    titlePt: "Fi- / Fu- — Verbos, ações e transformações",
     titleLari: "Finkakasa na Futa",
     titleMandombe: "Finkakasa na Futa",
     description: "Master a rich set of Kikongo Lari verbs starting with Fi- and Fu-, covering physical actions, transformations, and everyday activities.",
@@ -2772,6 +2816,8 @@ export const lessons: Lesson[] = [
   {
     id: "ha-hu-roots",
     title: "Ha- / Hu- — Places, Actions & Separation",
+    titleFr: "Ha- / Hu- — Lieux, actions et séparation",
+    titlePt: "Ha- / Hu- — Lugares, ações e separação",
     titleLari: "Hana na Huma",
     titleMandombe: "Hana na Huma",
     description: "Explore Kikongo Lari words beginning with Ha- and Hu-, covering places, giving, separation, and physical actions.",
@@ -2860,6 +2906,8 @@ export const lessons: Lesson[] = [
   {
     id: "ka-roots",
     title: "Ka- — Roots of Action & Community",
+    titleFr: "Ka- — Racines d'action et de communauté",
+    titlePt: "Ka- — Raízes de ação e comunidade",
     titleLari: "Kaba na Kanda",
     titleMandombe: "Kaba na Kanda",
     description: "Learn essential Ka- verbs and nouns covering sharing, family, justice, and physical actions in Kikongo Lari.",
@@ -2955,6 +3003,8 @@ export const lessons: Lesson[] = [
   {
     id: "ko-ku-roots",
     title: "Ko- / Ku- — Health, Growth & Movement",
+    titleFr: "Ko- / Ku- — Santé, croissance et mouvement",
+    titlePt: "Ko- / Ku- — Saúde, crescimento e movimento",
     titleLari: "Kola na Kula",
     titleMandombe: "Kola na Kula",
     description: "Study Ko- and Ku- roots covering health, growth, movement, marriage, and daily activities in Kikongo Lari.",
@@ -3060,6 +3110,8 @@ export const lessons: Lesson[] = [
   {
     id: "la-le-lo-roots",
     title: "La- / Le- / Lo- — Language, Learning & Society",
+    titleFr: "La- / Le- / Lo- — Langue, apprentissage et société",
+    titlePt: "La- / Le- / Lo- — Língua, aprendizagem e sociedade",
     titleLari: "Laba na Longa",
     titleMandombe: "Laba na Longa",
     description: "Discover La-, Le-, and Lo- words covering actions, emotions, knowledge, teaching, and social life in Kikongo Lari.",
@@ -3172,6 +3224,8 @@ export const lessons: Lesson[] = [
   {
     id: "lu-nouns",
     title: "Lu- — Nouns, Body & Abstract Concepts",
+    titleFr: "Lu- — Noms, corps et concepts abstraits",
+    titlePt: "Lu- — Nomes, corpo e conceitos abstratos",
     titleLari: "Lufua na Lulendo",
     titleMandombe: "Lufuwa na Lulendo",
     description: "Study the Lu- prefix class covering body parts, abstract concepts, social roles, and natural elements in Kikongo Lari.",
@@ -3281,6 +3335,8 @@ export const lessons: Lesson[] = [
   {
     id: "ma-days-time",
     title: "Ma- Words, Days & Time Expressions",
+    titleFr: "Mots en Ma-, jours et expressions de temps",
+    titlePt: "Palavras em Ma-, dias e expressões de tempo",
     titleLari: "Mamba na Bilumbu",
     titleMandombe: "Mamba na Bilumbu",
     description: "Learn Ma- vocabulary, the days of the week, and time expressions in Kikongo Lari — essential for daily conversation.",
@@ -3411,6 +3467,8 @@ export const lessons: Lesson[] = [
   {
     id: "verb-ba-forms",
     title: "The Secrets of the Verb BA",
+    titleFr: "Les secrets du verbe BA",
+    titlePt: "Os segredos do verbo BA",
     titleLari: "Bifua bia ka(ka) ya BA",
     titleMandombe: "Bifuwa biya ka(ka) ya BA",
     description: "Discover that the verb BA (to be) has far more than 6 forms. At the 3rd person, BA morphs depending on the noun class and number of the word it qualifies.",
@@ -3602,6 +3660,8 @@ export const lessons: Lesson[] = [
   {
     id: "tolo-sleep",
     title: "Sleep — Tolo",
+    titleFr: "Le sommeil — Tolo",
+    titlePt: "O sono — Tolo",
     titleLari: "Tolo",
     titleMandombe: "Tolo",
     description: "Learn how to express sleepiness in Kikongo Lari. 'Tolo tue nani' literally means 'I am with the sleep' — sleep possesses you! Discover vocabulary about sleeping, dreaming, darkness, breathing, and the night sky.",
@@ -3890,6 +3950,8 @@ export const lessons: Lesson[] = [
   {
     id: "nsatu-lemina-hunger-thirst",
     title: "Hunger & Thirst — Nsatu na Lemina",
+    titleFr: "Faim et soif — Nsatu na Lemina",
+    titlePt: "Fome e sede — Nsatu na Lemina",
     titleLari: "Nsatu na Lemina",
     titleMandombe: "Nsatu na Lemina",
     description: "Learn how to express hunger and thirst in Kikongo Lari. 'Nsatu ye nani' = 'I am hungry', 'Lemina die nani' = 'I am thirsty'. Discover food vocabulary and a cultural reference to Franklin Boukaka's protest song 'Dia Bikola'.",
@@ -4057,6 +4119,8 @@ export const lessons: Lesson[] = [
   {
     id: "animals-vocab",
     title: "Animals — Bibulu",
+    titleFr: "Les animaux — Bibulu",
+    titlePt: "Os animais — Bibulu",
     titleLari: "Malongi ma Bibulu",
     titleMandombe: "Malongi ma Bibulu",
     description: "Learn the names of animals in Kikongo Lari: wild, domestic, birds, insects, aquatic creatures, and more.",
@@ -4169,6 +4233,8 @@ export const lessons: Lesson[] = [
   {
     id: "numbers",
     title: "Numbers — Ntalu",
+    titleFr: "Les nombres — Ntalu",
+    titlePt: "Os números — Ntalu",
     titleLari: "Ntalu",
     titleMandombe: "Ntalu",
     description: "Learn to count in Kikongo Lari from 0 to billions. Discover the patterns behind tens, hundreds, thousands, millions, and beyond.",
@@ -4288,6 +4354,8 @@ export const lessons: Lesson[] = [
   {
     id: "counting",
     title: "Ntalu",
+    titleFr: "Compter — Ntalu",
+    titlePt: "Contar — Ntalu",
     titleLari: "Ntalu",
     titleMandombe: "Ntalu",
     description: "Learn how to count things in Kikongo Lari: noun classes, particles, and euphony rules.",
@@ -4474,6 +4542,8 @@ export const lessons: Lesson[] = [
   {
     id: "body-parts",
     title: "The Human Body",
+    titleFr: "Le corps humain — Nitu",
+    titlePt: "O corpo humano — Nitu",
     titleLari: "Nitu",
     titleMandombe: "Nitu",
     description: "Learn the names of body parts, organs, and fluids in Kikongo ya Letá. Master singular and plural forms.",
@@ -4800,6 +4870,8 @@ export const lessons: Lesson[] = [
   {
     id: "colors",
     title: "Colors",
+    titleFr: "Les couleurs — Tinta",
+    titlePt: "As cores — Tinta",
     titleLari: "Tinta",
     titleMandombe: "Tinta",
     description: "Learn the names of colors in Kikongo Lari. Discover how to describe the world around you with vivid vocabulary.",
@@ -4943,6 +5015,8 @@ export const lessons: Lesson[] = [
   {
     id: "negation",
     title: "Negation — KA…KO",
+    titleFr: "La négation — KA…KO",
+    titlePt: "A negação — KA…KO",
     titleLari: "Mpila ya karila",
     titleMandombe: "Mpila ya karila",
     description: "Learn how to negate sentences in Kikongo Lari using the KA…KO and KA…A…KO structures.",
