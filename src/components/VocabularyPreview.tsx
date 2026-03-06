@@ -562,21 +562,25 @@ const categories: VocabCategory[] = [
   },
 ];
 
-const WordCard = ({ word }: { word: VocabEntry }) => (
-  <div className="bg-card rounded-xl p-5 border border-border hover:border-primary/30 transition-all group">
-    <p className="font-mandombe text-3xl text-gold leading-relaxed mb-4">{word.lari}</p>
-    <h4 className="font-display text-xl font-bold text-foreground mb-3 flex items-center gap-2">
-      {word.lari}
-      <Volume2 className="w-4 h-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer" />
-    </h4>
-    <div className="space-y-1.5 text-sm">
-      <p className="text-muted-foreground"><span className="inline-block w-6 text-xs font-bold text-primary/70">FR</span>{word.french}</p>
-      <p className="text-muted-foreground"><span className="inline-block w-6 text-xs font-bold text-primary/70">GB</span>{word.english}</p>
-      <p className="text-muted-foreground"><span className="inline-block w-6 text-xs font-bold text-primary/70">PT</span>{word.portuguese}</p>
-      {word.note && <p className="text-muted-foreground/70 italic text-xs mt-2">💡 {word.note}</p>}
+const WordCard = ({ word }: { word: VocabEntry }) => {
+  const { language } = useLanguage();
+  const translation = language === "en" ? word.english : language === "pt" ? word.portuguese : word.french;
+  const flag = language === "en" ? "GB" : language === "pt" ? "PT" : "FR";
+
+  return (
+    <div className="bg-card rounded-xl p-5 border border-border hover:border-primary/30 transition-all group">
+      <p className="font-mandombe text-3xl text-gold leading-relaxed mb-4">{word.lari}</p>
+      <h4 className="font-display text-xl font-bold text-foreground mb-3 flex items-center gap-2">
+        {word.lari}
+        <Volume2 className="w-4 h-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer" />
+      </h4>
+      <div className="space-y-1.5 text-sm">
+        <p className="text-muted-foreground"><span className="inline-block w-6 text-xs font-bold text-primary/70">{flag}</span>{translation}</p>
+        {word.note && <p className="text-muted-foreground/70 italic text-xs mt-2">💡 {word.note}</p>}
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 const VocabularyPreview = () => {
   return (
