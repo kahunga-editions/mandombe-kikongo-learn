@@ -22,6 +22,28 @@ const LessonDetail = () => {
     return fr;
   };
 
+  // Get lesson text in the right language
+  const getLessonTitle = () => {
+    if (!lesson) return "";
+    if (language === "fr") return lesson.titleFr || lesson.title;
+    if (language === "pt") return lesson.titlePt || lesson.title;
+    return lesson.title;
+  };
+
+  const getLessonDescription = () => {
+    if (!lesson) return "";
+    if (language === "fr") return lesson.descriptionFr || lesson.description;
+    if (language === "pt") return lesson.descriptionPt || lesson.description;
+    return lesson.description;
+  };
+
+  // Get conjugation meaning in the right language
+  const getConjMeaning = (meaning: { fr: string; en: string; pt?: string }) => {
+    if (language === "fr") return meaning.fr;
+    if (language === "pt") return meaning.pt || meaning.fr;
+    return meaning.en;
+  };
+
   if (!lesson) {
     return (
       <div className="min-h-screen bg-background">
@@ -58,11 +80,11 @@ const LessonDetail = () => {
             <div className="flex items-center gap-3 mb-2">
               <span className="text-4xl">{lesson.icon}</span>
               <h1 className="font-display text-3xl md:text-4xl font-bold text-foreground">
-                {lesson.title}
+                {getLessonTitle()}
               </h1>
             </div>
             <p className="text-primary font-body text-sm italic">{lesson.titleLari}</p>
-            <p className="text-muted-foreground mt-2">{lesson.description}</p>
+            <p className="text-muted-foreground mt-2">{getLessonDescription()}</p>
           </div>
 
           {/* Tabs */}
@@ -134,9 +156,11 @@ const LessonDetail = () => {
                         <div className="bg-earth-deep px-6 py-4">
                           <p className="font-mandombe text-4xl text-gold mb-4">{conj.verbMandombe}</p>
                           <h3 className="font-display text-xl font-bold text-gold">
-                            {conj.verb} — {language === "fr" ? conj.meaning.fr : language === "pt" ? (conj.meaning.fr) : conj.meaning.en}
+                            {conj.verb} — {getConjMeaning(conj.meaning)}
                           </h3>
-                          <p className="text-cream/60 text-sm">{conj.tense}</p>
+                          <p className="text-cream/60 text-sm">
+                            {language === "fr" ? (conj.tenseFr || conj.tense) : language === "pt" ? (conj.tensePt || conj.tense) : conj.tense}
+                          </p>
                         </div>
                         <div className="divide-y divide-border">
                           {conj.rows.map((row, j) => (

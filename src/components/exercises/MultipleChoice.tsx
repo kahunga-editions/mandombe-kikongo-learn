@@ -24,10 +24,24 @@ const MultipleChoice = ({ question, onComplete }: Props) => {
     onComplete(selected === question.correctIndex);
   };
 
-  // Pick explanation based on language
-  const explanation = language === "pt"
-    ? (question.explanationPt || question.explanation)
-    : question.explanation;
+  // Pick text based on language
+  const questionText = language === "fr"
+    ? (question.questionFr || question.question)
+    : language === "pt"
+      ? (question.questionPt || question.question)
+      : question.question;
+
+  const options = language === "fr"
+    ? (question.optionsFr || question.options)
+    : language === "pt"
+      ? (question.optionsPt || question.options)
+      : question.options;
+
+  const explanation = language === "fr"
+    ? (question.explanationFr || question.explanation)
+    : language === "pt"
+      ? (question.explanationPt || question.explanation)
+      : question.explanation;
 
   return (
      <div className="space-y-4">
@@ -38,12 +52,12 @@ const MultipleChoice = ({ question, onComplete }: Props) => {
           </p>
         )}
         <p className="font-display text-lg font-semibold text-foreground">
-          {question.question}
+          {questionText}
         </p>
       </div>
 
       <div className="space-y-2">
-        {question.options.map((option, i) => {
+        {options.map((option, i) => {
           let borderClass = "border-border hover:border-primary/40";
           if (submitted) {
             if (i === question.correctIndex) borderClass = "border-green-500 bg-green-500/10";

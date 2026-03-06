@@ -11,9 +11,18 @@ interface Props {
 const MatchingExercise = ({ question, onComplete }: Props) => {
   const { language, t } = useLanguage();
 
-  const instruction = language === "pt"
-    ? (question.instructionPt || question.instruction)
-    : question.instruction;
+  const instruction = language === "fr"
+    ? (question.instructionFr || question.instruction)
+    : language === "pt"
+      ? (question.instructionPt || question.instruction)
+      : question.instruction;
+
+  // Helper to get right-side text in the right language
+  const getRightText = (pair: { right: string; rightFr?: string; rightPt?: string }) => {
+    if (language === "fr") return pair.rightFr || pair.right;
+    if (language === "pt") return pair.rightPt || pair.right;
+    return pair.right;
+  };
 
   const shuffledRight = useMemo(
     () => [...question.pairs].sort(() => Math.random() - 0.5),
@@ -100,7 +109,7 @@ const MatchingExercise = ({ question, onComplete }: Props) => {
                     : "border-border hover:border-primary/40"
                 }`}
               >
-                <span className="text-foreground">{item.right}</span>
+                <span className="text-foreground">{getRightText(item)}</span>
                 {submitted && isUsed && (
                   <CheckCircle className="w-4 h-4 text-green-500 inline ml-2" />
                 )}
