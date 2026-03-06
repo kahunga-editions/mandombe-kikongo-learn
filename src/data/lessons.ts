@@ -597,7 +597,7 @@ export const lessons: Lesson[] = [
       { lari: "Biadisa", mandombe: "Biyadisa", french: "Couronner, investir", english: "To crown, to invest" },
       { lari: "Biadila", mandombe: "Biyadila", french: "Héritier", english: "Heir" },
       { lari: "Bididi", mandombe: "Bididi", french: "Rouge vif", english: "Bright red" },
-      { lari: "Bidimu", mandombe: "Bidimu", french: "Image, ressemblance", english: "Image, resemblance" },
+      
     ],
     phrases: [
       { lari: "Bi signifie la multiplication de l'etre interieur", mandombe: "Bi", french: "/bi/ signifie la multiplication de l'être intérieur", english: "/bi/ means the multiplication of the inner being" },
