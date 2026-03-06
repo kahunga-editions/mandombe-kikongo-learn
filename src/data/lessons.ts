@@ -4852,9 +4852,9 @@ export const lessons: Lesson[] = [
       {
         type: "fill-in-blank",
         sentence: "How do you say 'Yellow' (Jaune) in Kikongo Lari? ___",
-        blank: "Tundu",
-        hint: "It starts with 'T'.",
-        hintPt: "Começa com 'T'.",
+        blank: "Ntundu",
+        hint: "It starts with 'Nt'.",
+        hintPt: "Começa com 'Nt'.",
       },
       // Exercise 6: Fill-in-blank — Green
       {
