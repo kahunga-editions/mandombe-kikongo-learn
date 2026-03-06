@@ -3660,6 +3660,8 @@ export const lessons: Lesson[] = [
   {
     id: "tolo-sleep",
     title: "Sleep — Tolo",
+    titleFr: "Le sommeil — Tolo",
+    titlePt: "O sono — Tolo",
     titleLari: "Tolo",
     titleMandombe: "Tolo",
     description: "Learn how to express sleepiness in Kikongo Lari. 'Tolo tue nani' literally means 'I am with the sleep' — sleep possesses you! Discover vocabulary about sleeping, dreaming, darkness, breathing, and the night sky.",
