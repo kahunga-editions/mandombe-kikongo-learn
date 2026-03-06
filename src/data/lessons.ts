@@ -5073,8 +5073,8 @@ export const lessons: Lesson[] = [
         pairs: [
           { left: "Zulu dia mbudi diena.", right: "Zulu ka diena dia mbudi ko." },
           { left: "Manga ya mbuaki.", right: "Manga ka yena ya mbuaki ko." },
-          { left: "Mulele wa tundu wena.", right: "Mulele ka wena wa tundu ko." },
-          { left: "Milele mia tundu miena.", right: "Milele ka miena mia tundu ko." },
+          { left: "Mulele wa ntundu wena.", right: "Mulele ka wena wa ntundu ko." },
+          { left: "Milele mia ntundu miena.", right: "Milele ka miena mia ntundu ko." },
         ],
       },
       // Exercise 9: Fill-in-blank — Verb negation
