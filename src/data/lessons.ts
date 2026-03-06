@@ -2357,7 +2357,7 @@ export const lessons: Lesson[] = [
       { lari: "Bibila", mandombe: "Bibila", french: "Hématome, sang coagulé suite à un choc", english: "Bruise, hematoma" },
       { lari: "Bifubu", mandombe: "Bifubu", french: "Espèce de liane flexible", english: "Flexible liana species" },
       { lari: "Bifuku", mandombe: "Bifuku", french: "Chenilles vivant en groupe", english: "Caterpillars living in groups" },
-      { lari: "Bikekele", mandombe: "Bikekele", french: "Arbuste de la famille des Olacaceae", english: "Shrub of the Olacaceae family" },
+      { lari: "Bikekele", mandombe: "Bikekele", french: "Plante comestible", english: "Edible plant" },
       { lari: "Bikinda", mandombe: "Bikinda", french: "Tombe, cimetière, nécropole", english: "Tomb, cemetery, necropolis" },
       { lari: "Bikola", mandombe: "Bikola", french: "Mélange de plantes pour fumigation; légume", english: "Plant mix for fumigation; vegetable" },
       { lari: "Bikonko bitatu", mandombe: "Bikonko bitatu", french: "Triangle", english: "Triangle" },
