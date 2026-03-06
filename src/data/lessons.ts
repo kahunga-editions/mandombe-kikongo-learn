@@ -4805,7 +4805,7 @@ export const lessons: Lesson[] = [
       { lari: "Mbuaki", mandombe: "Mbuaki", french: "Rouge", english: "Red", portuguese: "Vermelho" },
       { lari: "Ngizu", mandombe: "Ngizu", french: "Vert", english: "Green", portuguese: "Verde" },
       { lari: "Ngumbudi", mandombe: "Ngumbudi", french: "Indigo", english: "Indigo", portuguese: "Índigo" },
-      { lari: "Tundu", mandombe: "Tundu", french: "Jaune", english: "Yellow", portuguese: "Amarelo" },
+      { lari: "Ntundu", mandombe: "Ntundu", french: "Jaune", english: "Yellow", portuguese: "Amarelo" },
       { lari: "Mbudi", mandombe: "Mbudi", french: "Bleu", english: "Blue", portuguese: "Azul" },
     ],
     exercises: [
@@ -4823,7 +4823,7 @@ export const lessons: Lesson[] = [
       {
         type: "multiple-choice",
         question: "How do you say 'Red' (Rouge) in Kikongo Lari?",
-        options: ["Mpembe", "Tundu", "Mbuaki", "Ngizu"],
+        options: ["Mpembe", "Ntundu", "Mbuaki", "Ngizu"],
         correctIndex: 2,
         explanation: "'Mbuaki' means 'red' (rouge / vermelho).",
         explanationPt: "'Mbuaki' significa 'vermelho'.",
@@ -4852,9 +4852,9 @@ export const lessons: Lesson[] = [
       {
         type: "fill-in-blank",
         sentence: "How do you say 'Yellow' (Jaune) in Kikongo Lari? ___",
-        blank: "Tundu",
-        hint: "It starts with 'T'.",
-        hintPt: "Começa com 'T'.",
+        blank: "Ntundu",
+        hint: "It starts with 'Nt'.",
+        hintPt: "Começa com 'Nt'.",
       },
       // Exercise 6: Fill-in-blank — Green
       {
@@ -4881,7 +4881,7 @@ export const lessons: Lesson[] = [
           { left: "Mpembe", right: "White / Blanc" },
           { left: "Ndombi", right: "Black / Noir" },
           { left: "Mbuaki", right: "Red / Rouge" },
-          { left: "Tundu", right: "Yellow / Jaune" },
+          { left: "Ntundu", right: "Yellow / Jaune" },
         ],
       },
       // Exercise 9: Matching — More colors
@@ -4946,7 +4946,7 @@ export const lessons: Lesson[] = [
       { lari: "Mbuaki", mandombe: "Mbuaki", french: "Mûr / Rouge", english: "Ripe / Red", portuguese: "Maduro / Vermelho" },
       { lari: "Mulele", mandombe: "Mulele", french: "Pagne", english: "Loincloth", portuguese: "Pano" },
       { lari: "Milele", mandombe: "Milele", french: "Pagnes (pluriel)", english: "Loincloths (plural)", portuguese: "Panos (plural)" },
-      { lari: "Tundu", mandombe: "Tundu", french: "Jaune", english: "Yellow", portuguese: "Amarelo" },
+      { lari: "Ntundu", mandombe: "Ntundu", french: "Jaune", english: "Yellow", portuguese: "Amarelo" },
       { lari: "Mutindu", mandombe: "Mutindu", french: "La façon", english: "The way", portuguese: "A maneira" },
       { lari: "Mitindu", mandombe: "Mitindu", french: "Les façons", english: "The ways", portuguese: "As maneiras" },
       { lari: "Kala", mandombe: "Kala", french: "Dire non, refuser", english: "To say no, to refuse", portuguese: "Dizer não, recusar" },
@@ -4964,11 +4964,11 @@ export const lessons: Lesson[] = [
       { lari: "Manga za mbuaki zena.", mandombe: "Manga za mbuaki zena.", french: "Les mangues sont rouges.", english: "The mangoes are red.", portuguese: "As mangas são vermelhas." },
       { lari: "Manga ka zena za mbuaki ko.", mandombe: "Manga ka zena za mbuaki ko.", french: "Les mangues ne sont pas rouges.", english: "The mangoes are not red.", portuguese: "As mangas não são vermelhas.", note: "Pluriel : zena reste zena (pas de contraction)" },
 
-      { lari: "Mulele wa tundu wena.", mandombe: "Mulele wa tundu wena.", french: "Le pagne est jaune.", english: "The loincloth is yellow.", portuguese: "O pano é amarelo." },
-      { lari: "Mulele ka wena wa tundu ko.", mandombe: "Mulele ka wena wa tundu ko.", french: "Le pagne n'est pas jaune.", english: "The loincloth is not yellow.", portuguese: "O pano não é amarelo." },
+      { lari: "Mulele wa ntundu wena.", mandombe: "Mulele wa ntundu wena.", french: "Le pagne est jaune.", english: "The loincloth is yellow.", portuguese: "O pano é amarelo." },
+      { lari: "Mulele ka wena wa ntundu ko.", mandombe: "Mulele ka wena wa ntundu ko.", french: "Le pagne n'est pas jaune.", english: "The loincloth is not yellow.", portuguese: "O pano não é amarelo." },
 
-      { lari: "Milele mia tundu miena.", mandombe: "Milele mia tundu miena.", french: "Les pagnes sont jaunes.", english: "The loincloths are yellow.", portuguese: "Os panos são amarelos." },
-      { lari: "Milele ka miena mia tundu ko.", mandombe: "Milele ka miena mia tundu ko.", french: "Les pagnes ne sont pas jaunes.", english: "The loincloths are not yellow.", portuguese: "Os panos não são amarelos." },
+      { lari: "Milele mia ntundu miena.", mandombe: "Milele mia ntundu miena.", french: "Les pagnes sont jaunes.", english: "The loincloths are yellow.", portuguese: "Os panos são amarelos." },
+      { lari: "Milele ka miena mia ntundu ko.", mandombe: "Milele ka miena mia ntundu ko.", french: "Les pagnes ne sont pas jaunes.", english: "The loincloths are not yellow.", portuguese: "Os panos não são amarelos." },
 
       // Verb negation with KA…A…KO
       { lari: "Ka nguidi a ko.", mandombe: "Ka nguidi a ko.", french: "Je ne comprends pas.", english: "I don't understand.", portuguese: "Eu não compreendo." },
@@ -5029,10 +5029,10 @@ export const lessons: Lesson[] = [
         explanation: "'Manga ka yena ya mbuaki ko.' — KA is placed before the verb 'yena' and KO at the end.",
         explanationPt: "'Manga ka yena ya mbuaki ko.' — KA é colocado antes do verbo 'yena' e KO no final.",
       },
-      // Exercise 5: Fill-in-blank — Negate "Mulele wa tundu wena"
+      // Exercise 5: Fill-in-blank — Negate "Mulele wa ntundu wena"
       {
         type: "fill-in-blank",
-        sentence: "Negate: 'Mulele wa tundu wena.' → Mulele ka ___ wa tundu ko.",
+        sentence: "Negate: 'Mulele wa ntundu wena.' → Mulele ka ___ wa ntundu ko.",
         blank: "wena",
         hint: "The verb form for 'mulele' class (w- prefix).",
         hintPt: "A forma verbal para a classe 'mulele' (prefixo w-).",
@@ -5073,8 +5073,8 @@ export const lessons: Lesson[] = [
         pairs: [
           { left: "Zulu dia mbudi diena.", right: "Zulu ka diena dia mbudi ko." },
           { left: "Manga ya mbuaki.", right: "Manga ka yena ya mbuaki ko." },
-          { left: "Mulele wa tundu wena.", right: "Mulele ka wena wa tundu ko." },
-          { left: "Milele mia tundu miena.", right: "Milele ka miena mia tundu ko." },
+          { left: "Mulele wa ntundu wena.", right: "Mulele ka wena wa ntundu ko." },
+          { left: "Milele mia ntundu miena.", right: "Milele ka miena mia ntundu ko." },
         ],
       },
       // Exercise 9: Fill-in-blank — Verb negation
@@ -5114,7 +5114,7 @@ export const lessons: Lesson[] = [
       // Exercise 12: Fill-in-blank — Complete plural negation
       {
         type: "fill-in-blank",
-        sentence: "Negate: 'Milele mia tundu miena.' → Milele ka ___ mia tundu ko.",
+        sentence: "Negate: 'Milele mia ntundu miena.' → Milele ka ___ mia ntundu ko.",
         blank: "miena",
         hint: "The full verb form for the 'milele' class (mi- prefix). No contraction!",
         hintPt: "A forma verbal completa para a classe 'milele' (prefixo mi-). Sem contração!",
