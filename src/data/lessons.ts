@@ -4119,6 +4119,8 @@ export const lessons: Lesson[] = [
   {
     id: "animals-vocab",
     title: "Animals — Bibulu",
+    titleFr: "Les animaux — Bibulu",
+    titlePt: "Os animais — Bibulu",
     titleLari: "Malongi ma Bibulu",
     titleMandombe: "Malongi ma Bibulu",
     description: "Learn the names of animals in Kikongo Lari: wild, domestic, birds, insects, aquatic creatures, and more.",
