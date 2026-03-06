@@ -433,6 +433,8 @@ export const lessons: Lesson[] = [
   {
     id: "time-expressions",
     title: "Expressing Time — Ntangu",
+    titleFr: "Exprimer le temps — Ntangu",
+    titlePt: "Expressar o tempo — Ntangu",
     titleLari: "Ntangu",
     titleMandombe: "Ntangu",
     description: "Learn to talk about time: today, tomorrow, yesterday, next week, last night, and more.",
