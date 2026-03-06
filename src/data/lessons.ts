@@ -2551,6 +2551,8 @@ export const lessons: Lesson[] = [
   {
     id: "bu-social-spiritual",
     title: "Social & Spiritual Life — Bu Series",
+    titleFr: "Vie sociale et spirituelle — Série Bu",
+    titlePt: "Vida social e espiritual — Série Bu",
     titleLari: "Buntuadi na Bunzambi",
     titleMandombe: "Buntuadi na Bunzambi",
     description: "Explore advanced Bu- concepts for social bonds, spirituality, character traits, and community life from the Kilari dictionary.",
