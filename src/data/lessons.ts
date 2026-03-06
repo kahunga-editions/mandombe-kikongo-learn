@@ -76,6 +76,8 @@ export const lessons: Lesson[] = [
   {
     id: "greetings",
     title: "Greetings & Introductions",
+    titleFr: "Salutations et présentations",
+    titlePt: "Saudações e apresentações",
     titleLari: "Mpila ya hanina mbote",
     titleMandombe: "Mpila ya hanina mbote",
     description: "Learn how to greet people, introduce yourself, and ask about someone's well-being in Kikongo Lari.",
