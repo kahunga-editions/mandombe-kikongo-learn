@@ -452,6 +452,12 @@ export const lessons: Lesson[] = [
       { lari: "Bilumbu bia bianso", mandombe: "Bilumbu biya biyanso", french: "Tous les jours", english: "Every day", portuguese: "Todos os dias" },
       { lari: "Mpimpa za jingi", mandombe: "Mpimpa za jingi", french: "Plusieurs nuits", english: "Several nights", portuguese: "Várias noites" },
       { lari: "Mpe", mandombe: "Mpe", french: "Aussi", english: "Also", portuguese: "Também" },
+      { lari: "Mvula", mandombe: "Mvula", french: "Année", english: "Year", portuguese: "Ano" },
+      { lari: "Muvu", mandombe: "Muvu", french: "Saison", english: "Season", portuguese: "Estação" },
+      { lari: "Ngonsa", mandombe: "Ngonsa", french: "Mois", english: "Month", portuguese: "Mês" },
+      { lari: "Lumingu", mandombe: "Lumingu", french: "Semaine", english: "Week", portuguese: "Semana" },
+      { lari: "Lolo", mandombe: "Lolo", french: "Aujourd'hui", english: "Today", portuguese: "Hoje" },
+      { lari: "Lumbu", mandombe: "Lumbu", french: "Jour", english: "Day", portuguese: "Dia" },
     ],
     phrases: [
       { lari: "Mpimpa beto ka tu seke ko", mandombe: "Mpimpa beto ka tu seke ko", french: "La nuit dernière nous ne pouvions pas dormir", english: "Last night we couldn't sleep", portuguese: "Ontem à noite não conseguimos dormir" },
