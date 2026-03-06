@@ -1011,7 +1011,7 @@ export const lessons: Lesson[] = [
       },
     ],
     phrases: [
-      { lari: "Mavimpi ngiena", mandombe: "Mavimpi ngiyena", french: "Je suis en bonne santé", english: "I am healthy" },
+      
       { lari: "Wa wasa ngiena", mandombe: "Wa wasa ngiena", french: "Je suis bien portant(e)", english: "I am doing well / I am in good health", portuguese: "Estou bem de saúde" },
       { lari: "Nkolele kwani", mandombe: "Nkolele kwani", french: "Je vais bien", english: "I am fine / I am doing well", portuguese: "Estou bem" },
       { lari: "Kiese wena", mandombe: "Kiese wena", french: "Tu es content", english: "You are happy" },
