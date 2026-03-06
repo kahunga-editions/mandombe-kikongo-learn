@@ -3110,6 +3110,8 @@ export const lessons: Lesson[] = [
   {
     id: "la-le-lo-roots",
     title: "La- / Le- / Lo- — Language, Learning & Society",
+    titleFr: "La- / Le- / Lo- — Langue, apprentissage et société",
+    titlePt: "La- / Le- / Lo- — Língua, aprendizagem e sociedade",
     titleLari: "Laba na Longa",
     titleMandombe: "Laba na Longa",
     description: "Discover La-, Le-, and Lo- words covering actions, emotions, knowledge, teaching, and social life in Kikongo Lari.",
