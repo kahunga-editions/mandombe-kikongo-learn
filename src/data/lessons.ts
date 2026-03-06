@@ -462,7 +462,7 @@ export const lessons: Lesson[] = [
     phrases: [
       { lari: "Mpimpa beto ka tu seke ko", mandombe: "Mpimpa beto ka tu seke ko", french: "La nuit dernière nous ne pouvions pas dormir", english: "Last night we couldn't sleep", portuguese: "Ontem à noite não conseguimos dormir" },
       { lari: "Ni luaka ka kue bele", mandombe: "Ni luwaka ka kuwe bele", french: "Il s'inquiète", english: "He is worried", portuguese: "Ele está preocupado" },
-      { lari: "Kang'eno vungula", mandombe: "Kang'eno vungula", french: "Fermez à clef", english: "Lock the door", portuguese: "Tranquem a porta" },
+      { lari: "Kangeno vungula", mandombe: "Kangeno vungula", french: "Fermez à clef", english: "Lock the door", portuguese: "Tranquem a porta" },
     ],
     exercises: [
       {
