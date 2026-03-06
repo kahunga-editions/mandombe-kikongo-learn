@@ -4736,6 +4736,40 @@ export const lessons: Lesson[] = [
         hint: "Starts with 'Nk'.",
         hintPt: "Começa com 'Nk'.",
       },
+      // Exercise 21: MCQ — Eyelash
+      {
+        type: "multiple-choice",
+        question: "How do you say 'eyelash' (cil) in Lari?",
+        options: ["Nse", "Lulabu", "Ndabu", "Disu"],
+        correctIndex: 1,
+        explanation: "'Lulabu' means 'eyelash' (cil). The plural 'eyelashes' is 'Ndabu' (cils).",
+        explanationPt: "'Lulabu' significa 'cílio'. O plural 'cílios' é 'Ndabu'.",
+      },
+      // Exercise 22: MCQ — Plural of eyelash
+      {
+        type: "multiple-choice",
+        question: "What is the plural of 'Lulabu' (eyelash)?",
+        options: ["Malulabu", "Bilabu", "Ndabu", "Milabu"],
+        correctIndex: 2,
+        explanation: "The plural of 'Lulabu' (eyelash / cil) is 'Ndabu' (eyelashes / cils) — an irregular plural.",
+        explanationPt: "O plural de 'Lulabu' (cílio) é 'Ndabu' (cílios) — um plural irregular.",
+      },
+      // Exercise 23: Fill-in-blank — Eyelash sentence
+      {
+        type: "fill-in-blank",
+        sentence: "Complete: '___ lu buiri' means 'an eyelash has fallen' (un cil est tombé).",
+        blank: "Lulabu",
+        hint: "The singular form of 'Ndabu'.",
+        hintPt: "A forma singular de 'Ndabu'.",
+      },
+      // Exercise 24: Fill-in-blank — Eyelashes sentence
+      {
+        type: "fill-in-blank",
+        sentence: "Complete: '___ ji buiri' means 'eyelashes have fallen' (des cils sont tombés).",
+        blank: "Ndabu",
+        hint: "The plural of 'Lulabu'.",
+        hintPt: "O plural de 'Lulabu'.",
+      },
     ],
   },
 ];
