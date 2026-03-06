@@ -32,7 +32,10 @@ const FillInBlank = ({ question, onComplete }: Props) => {
       </div>
 
       {question.hint && (
-        <p className="text-sm text-muted-foreground italic">💡 Hint: {question.hint}</p>
+        <div className="text-sm text-muted-foreground italic space-y-1">
+          <p>💡 Hint: {question.hint}</p>
+          {question.hintPt && <p>🇵🇹 {question.hintPt}</p>}
+        </div>
       )}
 
       <div className="flex items-center gap-3">

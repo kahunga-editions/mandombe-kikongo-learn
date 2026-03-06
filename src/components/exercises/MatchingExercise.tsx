@@ -48,9 +48,14 @@ const MatchingExercise = ({ question, onComplete }: Props) => {
 
   return (
     <div className="space-y-4">
-      <p className="font-display text-lg font-semibold text-foreground">
-        {question.instruction}
-      </p>
+      <div>
+        <p className="font-display text-lg font-semibold text-foreground">
+          {question.instruction}
+        </p>
+        {question.instructionPt && (
+          <p className="text-sm text-muted-foreground mt-1">🇵🇹 {question.instructionPt}</p>
+        )}
+      </div>
 
       <div className="grid grid-cols-2 gap-4">
         <div className="space-y-2">
