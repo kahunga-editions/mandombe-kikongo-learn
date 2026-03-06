@@ -621,22 +621,10 @@ export const lessons: Lesson[] = [
         instructionFr: "Associez les activités.",
         instructionPt: "Associe as atividades.",
         pairs: [
-          { left: "Lamba", right: "To cook" },
-          { left: "Zenga", right: "To cut" },
-          { left: "Nzo", right: "House" },
-          { left: "Mbala", right: "Potatoes" },
-        ],
-        pairsFr: [
-          { left: "Lamba", right: "Cuisiner" },
-          { left: "Zenga", right: "Couper" },
-          { left: "Nzo", right: "Maison" },
-          { left: "Mbala", right: "Patates" },
-        ],
-        pairsPt: [
-          { left: "Lamba", right: "Cozinhar" },
-          { left: "Zenga", right: "Cortar" },
-          { left: "Nzo", right: "Casa" },
-          { left: "Mbala", right: "Batatas" },
+          { left: "Lamba", right: "To cook", rightFr: "Cuisiner", rightPt: "Cozinhar" },
+          { left: "Zenga", right: "To cut", rightFr: "Couper", rightPt: "Cortar" },
+          { left: "Nzo", right: "House", rightFr: "Maison", rightPt: "Casa" },
+          { left: "Mbala", right: "Potatoes", rightFr: "Patates", rightPt: "Batatas" },
         ],
       },
       {
