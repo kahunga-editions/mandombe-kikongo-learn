@@ -2440,6 +2440,8 @@ export const lessons: Lesson[] = [
   {
     id: "bo-physical-world",
     title: "Physical World & Actions — Bo Series",
+    titleFr: "Monde physique et actions — Série Bo",
+    titlePt: "Mundo físico e ações — Série Bo",
     titleLari: "Bota na Boka",
     titleMandombe: "Bota na Boka",
     description: "Learn Bo- vocabulary for striking, immersing, prospering, and physical world concepts from the Kilari dictionary.",
