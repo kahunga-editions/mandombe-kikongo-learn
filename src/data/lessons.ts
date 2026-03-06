@@ -2906,6 +2906,8 @@ export const lessons: Lesson[] = [
   {
     id: "ka-roots",
     title: "Ka- — Roots of Action & Community",
+    titleFr: "Ka- — Racines d'action et de communauté",
+    titlePt: "Ka- — Raízes de ação e comunidade",
     titleLari: "Kaba na Kanda",
     titleMandombe: "Kaba na Kanda",
     description: "Learn essential Ka- verbs and nouns covering sharing, family, justice, and physical actions in Kikongo Lari.",
