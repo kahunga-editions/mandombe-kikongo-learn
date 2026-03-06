@@ -1931,7 +1931,6 @@ export const lessons: Lesson[] = [
       { lari: "Bidila", mandombe: "Bidila", french: "Ourlet, natte", english: "Hem, mat" },
       { lari: "Biko", mandombe: "Biko", french: "Petit paquet", english: "Small packet" },
       { lari: "Bikonko bitatu", mandombe: "Bikonko bitatu", french: "Triangle", english: "Triangle" },
-      { lari: "Bisambanu", mandombe: "Bisambanu", french: "Six", english: "Six" },
       { lari: "Bipidi", mandombe: "Bipidi", french: "Aliments envoyés à la fiancée", english: "Food sent to the fiancée" },
       { lari: "Bipopo", mandombe: "Bipopo", french: "Scarification au niveau des joues", english: "Scarification on the cheeks" },
       { lari: "Bikululu", mandombe: "Bikululu", french: "Quotidien, habituel; rançon", english: "Daily, usual; ransom" },
@@ -1954,13 +1953,6 @@ export const lessons: Lesson[] = [
         options: ["A cooking tool", "A mystical field protector", "A musical instrument", "A type of tree"],
         correctIndex: 1,
         explanation: "Bikandu is an object placed in fields to mystically protect against thieves and sorcerers.",
-      },
-      {
-        type: "multiple-choice",
-        question: "What does 'Bisambanu' mean?",
-        questionMandombe: "Bisambanu",
-        options: ["Four", "Five", "Six", "Seven"],
-        correctIndex: 2,
       },
       {
         type: "multiple-choice",
@@ -2033,13 +2025,6 @@ export const lessons: Lesson[] = [
         sentenceMandombe: "___ bitatu",
         blank: "bikonko",
         hint: "Related to corners or angles",
-      },
-      {
-        type: "fill-in-blank",
-        sentence: "___ means 'six' in Kikongo Lari",
-        sentenceMandombe: "___",
-        blank: "bisambanu",
-        hint: "A Bi- number word",
       },
       {
         type: "fill-in-blank",
