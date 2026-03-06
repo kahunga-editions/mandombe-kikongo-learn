@@ -4446,4 +4446,293 @@ export const lessons: Lesson[] = [
       },
     ],
   },
+  // ===================== LESSON: NITU — THE HUMAN BODY =====================
+  {
+    id: "body-parts",
+    title: "The Human Body",
+    titleLari: "Nitu",
+    titleMandombe: "Nitu",
+    description: "Learn the names of body parts, organs, and fluids in Kikongo ya Letá. Master singular and plural forms.",
+    level: "intermediate",
+    icon: "🦴",
+    vocabulary: [
+      // Head & Face
+      { lari: "Ntu", mandombe: "Ntu", french: "Tête", english: "Head", portuguese: "Cabeça" },
+      { lari: "Nsuki", mandombe: "Nsuki", french: "Cheveux", english: "Hair", portuguese: "Cabelo" },
+      { lari: "Mbunzu", mandombe: "Mbunzu", french: "Front", english: "Forehead", portuguese: "Testa" },
+      { lari: "Ntumpa", mandombe: "Ntumpa", french: "Fontanelle", english: "Fontanelle", portuguese: "Fontanela" },
+      { lari: "Disu", mandombe: "Disu", french: "Œil", english: "Eye", portuguese: "Olho" },
+      { lari: "Meso", mandombe: "Meso", french: "Yeux", english: "Eyes", portuguese: "Olhos" },
+      { lari: "Nse", mandombe: "Nse", french: "Sourcil", english: "Eyebrow", portuguese: "Sobrancelha" },
+      { lari: "Mbombo", mandombe: "Mbombo", french: "Nez", english: "Nose", portuguese: "Nariz" },
+      { lari: "Kutu", mandombe: "Kutu", french: "Oreille", english: "Ear", portuguese: "Orelha" },
+      { lari: "Makutu", mandombe: "Makutu", french: "Oreilles", english: "Ears", portuguese: "Orelhas" },
+      { lari: "Nua", mandombe: "Nuwa", french: "Bouche", english: "Mouth", portuguese: "Boca" },
+      { lari: "Kikoba", mandombe: "Kikoba", french: "Lèvre", english: "Lip", portuguese: "Lábio" },
+      { lari: "Bundi", mandombe: "Bundi", french: "Joue, tempe", english: "Cheek, temple", portuguese: "Bochecha, têmpora" },
+      { lari: "Mabundi", mandombe: "Mabundi", french: "Tempes, joues", english: "Temples, cheeks", portuguese: "Têmporas, bochechas" },
+      { lari: "Mfinini", mandombe: "Mfinini", french: "Gencives", english: "Gums", portuguese: "Gengivas" },
+      { lari: "Banga", mandombe: "Banga", french: "Mâchoire", english: "Jaw", portuguese: "Mandíbula" },
+      { lari: "Mabanga", mandombe: "Mabanga", french: "Mâchoire (pl.)", english: "Jaws", portuguese: "Mandíbulas" },
+      { lari: "Tshibanga", mandombe: "Tshibanga", french: "Menton", english: "Chin", portuguese: "Queixo" },
+      { lari: "Bibanga", mandombe: "Bibanga", french: "Mentons", english: "Chins", portuguese: "Queixos" },
+      { lari: "Yevo / Yelo", mandombe: "Yevo", french: "Barbe", english: "Beard", portuguese: "Barba" },
+      { lari: "Kiyelo / Tshiyelo", mandombe: "Kiyelo", french: "Barbe", english: "Beard", portuguese: "Barba" },
+      { lari: "Biyelo", mandombe: "Biyelo", french: "Barbes", english: "Beards", portuguese: "Barbas" },
+      // Neck & Torso
+      { lari: "Nsingu", mandombe: "Nsingu", french: "Cou", english: "Neck", portuguese: "Pescoço" },
+      { lari: "Koshi", mandombe: "Koshi", french: "Nuque", english: "Nape", portuguese: "Nuca" },
+      { lari: "Hembo", mandombe: "Hembo", french: "Épaule", english: "Shoulder", portuguese: "Ombro" },
+      { lari: "Mahembo", mandombe: "Mahembo", french: "Épaules", english: "Shoulders", portuguese: "Ombros" },
+      { lari: "Ntulu", mandombe: "Ntulu", french: "Poitrine", english: "Chest", portuguese: "Peito" },
+      { lari: "Beni", mandombe: "Beni", french: "Sein", english: "Breast", portuguese: "Seio" },
+      { lari: "Mabeni", mandombe: "Mabeni", french: "Seins", english: "Breasts", portuguese: "Seios" },
+      { lari: "Nima", mandombe: "Nima", french: "Dos", english: "Back", portuguese: "Costas" },
+      { lari: "Moyo", mandombe: "Moyo", french: "Ventre", english: "Belly", portuguese: "Barriga" },
+      { lari: "Nkumba", mandombe: "Nkumba", french: "Nombril", english: "Navel", portuguese: "Umbigo" },
+      { lari: "Luketo", mandombe: "Luketo", french: "Reins", english: "Lower back, kidneys", portuguese: "Rins, lombar" },
+      { lari: "Taku", mandombe: "Taku", french: "Fesse", english: "Buttock", portuguese: "Nádega" },
+      { lari: "Mataku", mandombe: "Mataku", french: "Fesses", english: "Buttocks", portuguese: "Nádegas" },
+      // Arms & Hands
+      { lari: "Koko", mandombe: "Koko", french: "Main, bras", english: "Hand, arm", portuguese: "Mão, braço" },
+      { lari: "Nima koko", mandombe: "Nima koko", french: "Dos de la main", english: "Back of the hand", portuguese: "Dorso da mão" },
+      { lari: "Mbata", mandombe: "Mbata", french: "Paume", english: "Palm", portuguese: "Palma" },
+      { lari: "Lembo / Mulembo", mandombe: "Lembo", french: "Doigt", english: "Finger", portuguese: "Dedo" },
+      { lari: "Milembo", mandombe: "Milembo", french: "Doigts", english: "Fingers", portuguese: "Dedos" },
+      { lari: "Luzala", mandombe: "Luzala", french: "Ongle", english: "Nail", portuguese: "Unha" },
+      { lari: "Nzala", mandombe: "Nzala", french: "Ongles", english: "Nails", portuguese: "Unhas" },
+      // Legs & Feet
+      { lari: "Kulu", mandombe: "Kulu", french: "Pied", english: "Foot", portuguese: "Pé" },
+      { lari: "Malu", mandombe: "Malu", french: "Pieds", english: "Feet", portuguese: "Pés" },
+      { lari: "Koto", mandombe: "Koto", french: "Genou", english: "Knee", portuguese: "Joelho" },
+      { lari: "Makoto", mandombe: "Makoto", french: "Genoux", english: "Knees", portuguese: "Joelhos" },
+      { lari: "Ntanga", mandombe: "Ntanga", french: "Mollet", english: "Calf", portuguese: "Panturrilha" },
+      { lari: "Mitanga", mandombe: "Mitanga", french: "Mollets", english: "Calves", portuguese: "Panturrilhas" },
+      { lari: "Tshinkoso", mandombe: "Tshinkoso", french: "Talon", english: "Heel", portuguese: "Calcanhar" },
+      { lari: "Binkoso", mandombe: "Binkoso", french: "Talons", english: "Heels", portuguese: "Calcanhares" },
+      // Internal organs & Tissues
+      { lari: "Ntima", mandombe: "Ntima", french: "Cœur", english: "Heart", portuguese: "Coração" },
+      { lari: "Mitima", mandombe: "Mitima", french: "Cœurs", english: "Hearts", portuguese: "Corações" },
+      { lari: "Sakafulu", mandombe: "Sakafulu", french: "Poumon", english: "Lung", portuguese: "Pulmão" },
+      { lari: "Tshifundu", mandombe: "Tshifundu", french: "Estomac", english: "Stomach", portuguese: "Estômago" },
+      { lari: "Midia", mandombe: "Midia", french: "Entrailles", english: "Entrails", portuguese: "Entranhas" },
+      { lari: "Nkanda", mandombe: "Nkanda", french: "Peau", english: "Skin", portuguese: "Pele" },
+      { lari: "Yisi", mandombe: "Yisi", french: "Os", english: "Bone", portuguese: "Osso" },
+      { lari: "Biyisi", mandombe: "Biyisi", french: "Os (pluriel)", english: "Bones", portuguese: "Ossos" },
+      { lari: "Tidi", mandombe: "Tidi", french: "Tendon", english: "Tendon", portuguese: "Tendão" },
+      { lari: "Matidi", mandombe: "Matidi", french: "Tendons", english: "Tendons", portuguese: "Tendões" },
+      { lari: "Muelo", mandombe: "Muelo", french: "Chakra", english: "Chakra", portuguese: "Chakra" },
+      { lari: "Mielo", mandombe: "Mielo", french: "Chakras", english: "Chakras", portuguese: "Chakras" },
+      // Reproductive
+      { lari: "Sondo", mandombe: "Sondo", french: "Clitoris", english: "Clitoris", portuguese: "Clitóris" },
+      { lari: "Mbula", mandombe: "Mbula", french: "Vagin", english: "Vagina", portuguese: "Vagina" },
+      { lari: "Kata", mandombe: "Kata", french: "Testicule", english: "Testicle", portuguese: "Testículo" },
+      { lari: "Makata", mandombe: "Makata", french: "Testicules", english: "Testicles", portuguese: "Testículos" },
+      { lari: "Mvia", mandombe: "Mvia", french: "Pénis", english: "Penis", portuguese: "Pénis" },
+      // Fluids
+      { lari: "Menga", mandombe: "Menga", french: "Sang", english: "Blood", portuguese: "Sangue" },
+      { lari: "Tiafuta", mandombe: "Tiafuta", french: "Sueur", english: "Sweat", portuguese: "Suor" },
+      { lari: "Masuba", mandombe: "Masuba", french: "Urines", english: "Urine", portuguese: "Urina" },
+      { lari: "Maluma", mandombe: "Maluma", french: "Sperme", english: "Sperm", portuguese: "Esperma" },
+      { lari: "Mante", mandombe: "Mante", french: "Salive", english: "Saliva", portuguese: "Saliva" },
+      { lari: "Tuvi", mandombe: "Tuvi", french: "Selles", english: "Feces", portuguese: "Fezes" },
+    ],
+    exercises: [
+      // Exercise 1: Matching — Head & Face
+      {
+        type: "matching",
+        instruction: "Match each body part to its English translation (Head & Face).",
+        instructionPt: "Associe cada parte do corpo à sua tradução em inglês (Cabeça e Rosto).",
+        pairs: [
+          { left: "Ntu", right: "Head" },
+          { left: "Disu", right: "Eye" },
+          { left: "Mbombo", right: "Nose" },
+          { left: "Kutu", right: "Ear" },
+          { left: "Nua", right: "Mouth" },
+        ],
+      },
+      // Exercise 2: MCQ — Singular/Plural
+      {
+        type: "multiple-choice",
+        question: "What is the plural of 'Disu' (eye)?",
+        options: ["Madisu", "Meso", "Bidisu", "Disu ya"],
+        correctIndex: 1,
+        explanation: "The plural of 'Disu' (eye) is 'Meso' (eyes) — an irregular plural form.",
+        explanationPt: "O plural de 'Disu' (olho) é 'Meso' (olhos) — uma forma plural irregular.",
+      },
+      // Exercise 3: Fill-in-blank — Forehead
+      {
+        type: "fill-in-blank",
+        sentence: "The forehead in Lari is called ___.",
+        blank: "Mbunzu",
+        hint: "It starts with 'Mb'.",
+        hintPt: "Começa com 'Mb'.",
+      },
+      // Exercise 4: Matching — Singular/Plural pairs
+      {
+        type: "matching",
+        instruction: "Match each singular form to its plural.",
+        instructionPt: "Associe cada forma singular ao seu plural.",
+        pairs: [
+          { left: "Hembo (shoulder)", right: "Mahembo" },
+          { left: "Koto (knee)", right: "Makoto" },
+          { left: "Kutu (ear)", right: "Makutu" },
+          { left: "Taku (buttock)", right: "Mataku" },
+          { left: "Beni (breast)", right: "Mabeni" },
+        ],
+      },
+      // Exercise 5: MCQ — Hand vocabulary
+      {
+        type: "multiple-choice",
+        question: "What does 'Koko' mean?",
+        options: ["Foot", "Hand / arm", "Finger", "Shoulder"],
+        correctIndex: 1,
+        explanation: "'Koko' means 'hand' or 'arm' in Kikongo ya Letá.",
+        explanationPt: "'Koko' significa 'mão' ou 'braço' em Kikongo ya Letá.",
+      },
+      // Exercise 6: Fill-in-blank — Palm
+      {
+        type: "fill-in-blank",
+        sentence: "La paume de la main se dit ___ en Lari. (The palm is called ___ in Lari.)",
+        blank: "Mbata",
+        hint: "It also means 'slap' in some contexts.",
+        hintPt: "Também pode significar 'tapa' em alguns contextos.",
+      },
+      // Exercise 7: Matching — Internal organs
+      {
+        type: "matching",
+        instruction: "Match each Lari word to the correct organ.",
+        instructionPt: "Associe cada palavra Lari ao órgão correto.",
+        pairs: [
+          { left: "Ntima", right: "Heart" },
+          { left: "Sakafulu", right: "Lung" },
+          { left: "Tshifundu", right: "Stomach" },
+          { left: "Nkanda", right: "Skin" },
+          { left: "Yisi", right: "Bone" },
+        ],
+      },
+      // Exercise 8: MCQ — Plural of bone
+      {
+        type: "multiple-choice",
+        question: "What is the plural of 'Yisi' (bone)?",
+        options: ["Mayisi", "Biyisi", "Miyisi", "Yisi ya"],
+        correctIndex: 1,
+        explanation: "'Yisi' (bone) becomes 'Biyisi' (bones) using the bi- plural prefix.",
+        explanationPt: "'Yisi' (osso) torna-se 'Biyisi' (ossos) usando o prefixo plural bi-.",
+      },
+      // Exercise 9: Fill-in-blank — Neck
+      {
+        type: "fill-in-blank",
+        sentence: "The neck is called ___ in Lari.",
+        blank: "Nsingu",
+        hint: "It starts with 'Ns'.",
+        hintPt: "Começa com 'Ns'.",
+      },
+      // Exercise 10: MCQ — Nape
+      {
+        type: "multiple-choice",
+        question: "How do you say 'nape' (back of the neck) in Lari?",
+        options: ["Nsingu", "Koshi", "Hembo", "Nima"],
+        correctIndex: 1,
+        explanation: "'Koshi' is the nape (nuque), while 'Nsingu' is the neck (cou).",
+        explanationPt: "'Koshi' é a nuca, enquanto 'Nsingu' é o pescoço.",
+      },
+      // Exercise 11: Matching — Legs & Feet
+      {
+        type: "matching",
+        instruction: "Match each Lari word to its meaning (Legs & Feet).",
+        instructionPt: "Associe cada palavra Lari ao seu significado (Pernas e Pés).",
+        pairs: [
+          { left: "Kulu", right: "Foot" },
+          { left: "Koto", right: "Knee" },
+          { left: "Ntanga", right: "Calf" },
+          { left: "Tshinkoso", right: "Heel" },
+        ],
+      },
+      // Exercise 12: Fill-in-blank — Belly
+      {
+        type: "fill-in-blank",
+        sentence: "Le ventre se dit ___ en Lari. (The belly is called ___ in Lari.)",
+        blank: "Moyo",
+        hint: "A 4-letter word starting with 'M'.",
+        hintPt: "Uma palavra de 4 letras que começa com 'M'.",
+      },
+      // Exercise 13: MCQ — Fluids
+      {
+        type: "multiple-choice",
+        question: "What does 'Menga' mean?",
+        options: ["Sweat", "Saliva", "Blood", "Urine"],
+        correctIndex: 2,
+        explanation: "'Menga' means 'blood' (sang / sangue).",
+        explanationPt: "'Menga' significa 'sangue'.",
+      },
+      // Exercise 14: Matching — Fluids
+      {
+        type: "matching",
+        instruction: "Match each Lari word to the correct body fluid.",
+        instructionPt: "Associe cada palavra Lari ao fluido corporal correto.",
+        pairs: [
+          { left: "Menga", right: "Blood" },
+          { left: "Tiafuta", right: "Sweat" },
+          { left: "Mante", right: "Saliva" },
+          { left: "Masuba", right: "Urine" },
+        ],
+      },
+      // Exercise 15: Fill-in-blank — Heart
+      {
+        type: "fill-in-blank",
+        sentence: "The word for 'heart' in Lari is ___.",
+        blank: "Ntima",
+        hint: "Its plural is 'Mitima'.",
+        hintPt: "O seu plural é 'Mitima'.",
+      },
+      // Exercise 16: MCQ — Finger
+      {
+        type: "multiple-choice",
+        question: "Which word means 'finger' in Lari?",
+        options: ["Milembo", "Koko", "Lembo", "Mbata"],
+        correctIndex: 2,
+        explanation: "'Lembo' or 'Mulembo' means 'finger'. 'Milembo' is the plural (fingers).",
+        explanationPt: "'Lembo' ou 'Mulembo' significa 'dedo'. 'Milembo' é o plural (dedos).",
+      },
+      // Exercise 17: Fill-in-blank — Back of the hand
+      {
+        type: "fill-in-blank",
+        sentence: "The back of the hand is called ___ koko.",
+        blank: "Nima",
+        hint: "'Nima' alone means 'back'.",
+        hintPt: "'Nima' sozinho significa 'costas'.",
+      },
+      // Exercise 18: Matching — Beard, chin, jaw
+      {
+        type: "matching",
+        instruction: "Match each Lari word to its English meaning (Face details).",
+        instructionPt: "Associe cada palavra Lari ao seu significado em inglês (Detalhes do rosto).",
+        pairs: [
+          { left: "Yevo / Yelo", right: "Beard" },
+          { left: "Tshibanga", right: "Chin" },
+          { left: "Banga", right: "Jaw" },
+          { left: "Mfinini", right: "Gums" },
+          { left: "Nse", right: "Eyebrow" },
+        ],
+      },
+      // Exercise 19: MCQ — Plural patterns
+      {
+        type: "multiple-choice",
+        question: "Which plural prefix pattern does 'Tidi → Matidi' (tendon → tendons) follow?",
+        options: ["bi- prefix", "mi- prefix", "ma- prefix", "No change"],
+        correctIndex: 2,
+        explanation: "'Tidi' becomes 'Matidi' using the 'ma-' plural prefix, common for body parts.",
+        explanationPt: "'Tidi' torna-se 'Matidi' usando o prefixo plural 'ma-', comum para partes do corpo.",
+      },
+      // Exercise 20: Fill-in-blank — Navel
+      {
+        type: "fill-in-blank",
+        sentence: "The navel (nombril) is called ___ in Lari.",
+        blank: "Nkumba",
+        hint: "Starts with 'Nk'.",
+        hintPt: "Começa com 'Nk'.",
+      },
+    ],
+  },
 ];
