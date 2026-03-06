@@ -633,7 +633,7 @@ const VocabularyPreview = () => {
               {/* Premium words */}
               {cat.premiumWords && cat.premiumWords.length > 0 && (
                 <div className="mt-8">
-                  <PremiumGate label={`${cat.premiumWords.length} More ${cat.label} Words`}>
+                  <PremiumGate label={`${cat.premiumWords.length} ${t("vocab.more")} ${cat.label}`}>
                     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                       {cat.premiumWords.map((word, i) => (
                         <WordCard key={i} word={word} />
