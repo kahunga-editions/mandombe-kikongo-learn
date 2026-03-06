@@ -963,6 +963,8 @@ export const lessons: Lesson[] = [
   {
     id: "ba-conjugation",
     title: "'To Be' Conjugation — Ba",
+    titleFr: "Conjugaison de « Être » — Ba",
+    titlePt: "Conjugação de « Ser/Estar » — Ba",
     titleLari: "Ba",
     titleMandombe: "Ba",
     description: "Master the full conjugation of 'to be' (ba), form adjective phrases, and learn the negation pattern 'ka...ko'.",
