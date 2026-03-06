@@ -1,6 +1,7 @@
 import { Volume2 } from "lucide-react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import PremiumGate from "@/components/PremiumGate";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 import vocabGreetings from "@/assets/vocab-greetings.jpg";
 import vocabFamily from "@/assets/vocab-family.jpg";
