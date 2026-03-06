@@ -16,16 +16,18 @@ import storyPanel13 from "@/assets/story-panel-16.jpg";
 import storyPanel14 from "@/assets/story-panel-17.jpg";
 
 const StoryPreview = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="stories" className="py-24 bg-card">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <p className="font-mandombe text-3xl md:text-4xl text-gold mb-6">Binsamu</p>
           <p className="text-primary font-body text-sm tracking-[0.25em] uppercase mb-3">
-            Binsamu — Stories
+            {t("stories.eyebrow")}
           </p>
           <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Learn Through Stories
+            {t("stories.title")}
           </h2>
         </div>
 
@@ -36,10 +38,10 @@ const StoryPreview = () => {
               Nsayi ku nzo mikanda na sangi
             </p>
             <h3 className="font-display text-2xl md:text-3xl font-bold text-gold mb-1">
-              Nsayi à l'école et à la forêt
+              {t("stories.storySubtitle")}
             </h3>
-            <p className="text-cream/80 text-sm mb-1">Nsayi at School and in the Forest</p>
-            <p className="text-cream/60 text-xs">A bilingual comic story — French, English & Portuguese</p>
+            <p className="text-cream/80 text-sm mb-1">{t("stories.storyDescShort")}</p>
+            <p className="text-cream/60 text-xs">{t("stories.storyDesc")}</p>
           </div>
 
           {/* Comic strip panels */}
