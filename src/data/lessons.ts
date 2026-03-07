@@ -519,6 +519,8 @@ export const lessons: Lesson[] = [
     titleLari: "Ntangu",
     titleMandombe: "Ntangu",
     description: "Learn to talk about time: today, tomorrow, yesterday, next week, last night, and more.",
+    descriptionFr: "Apprenez à parler du temps : aujourd'hui, demain, hier, la semaine prochaine, hier soir, et plus encore.",
+    descriptionPt: "Aprenda a falar sobre o tempo: hoje, amanhã, ontem, próxima semana, ontem à noite, e mais.",
     level: "intermediate",
     icon: "⏰",
     vocabulary: [
