@@ -5395,10 +5395,10 @@ export const lessons: Lesson[] = [
             descriptionFr: "Les mots invariables qui désignent un humain utilisent aussi la structure yi/zi.",
             descriptionPt: "Os nomes invariáveis que designam um humano também usam a estrutura yi/zi.",
             examples: [
-              { lari: "Nzonzi zonza yi ta zonza.", french: "Le juge est en train de parler.", english: "The judge is speaking.", portuguese: "O juiz está a falar." },
-              { lari: "Nzonzi zonza zi ta zonza.", french: "Les juges sont en train de parler.", english: "The judges are speaking.", portuguese: "Os juízes estão a falar." },
-              { lari: "Nganga buka yi ta buka.", french: "Le guérisseur traditionnel est en train de soigner.", english: "The traditional healer is healing.", portuguese: "O curandeiro tradicional está a curar." },
-              { lari: "Nganga buka zi ta buka.", french: "Les guérisseurs traditionnels sont en train de soigner.", english: "The traditional healers are healing.", portuguese: "Os curandeiros tradicionais estão a curar." },
+              { lari: "Nzonzi zonza yi ta zonza.", mandombe: "Nzonzi zonza yi ta zonza.", french: "Le juge est en train de parler.", english: "The judge is speaking.", portuguese: "O juiz está a falar." },
+              { lari: "Nzonzi zonza zi ta zonza.", mandombe: "Nzonzi zonza zi ta zonza.", french: "Les juges sont en train de parler.", english: "The judges are speaking.", portuguese: "Os juízes estão a falar." },
+              { lari: "Nganga buka yi ta buka.", mandombe: "Nganga buka yi ta buka.", french: "Le guérisseur traditionnel est en train de soigner.", english: "The traditional healer is healing.", portuguese: "O curandeiro tradicional está a curar." },
+              { lari: "Nganga buka zi ta buka.", mandombe: "Nganga buka zi ta buka.", french: "Les guérisseurs traditionnels sont en train de soigner.", english: "The traditional healers are healing.", portuguese: "Os curandeiros tradicionais estão a curar." },
             ],
           },
           {
