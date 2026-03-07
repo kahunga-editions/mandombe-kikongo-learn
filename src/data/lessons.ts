@@ -66,6 +66,7 @@ export interface SyntaxGroup {
   title: string;
   titleFr?: string;
   titlePt?: string;
+  titleMandombe?: string;
   description?: string;
   descriptionFr?: string;
   descriptionPt?: string;
@@ -5420,7 +5421,8 @@ export const lessons: Lesson[] = [
             ],
           },
           {
-            title: "Mia bambuka — Mia sila ntimu",
+            title: "Mia bambuka — Mia shila ntimu",
+            titleMandombe: "Mia shila ntimu",
             titleFr: "Mia shila ntimu — À retenir",
             titlePt: "A reter",
             examples: [

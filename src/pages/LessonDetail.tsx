@@ -178,6 +178,9 @@ const LessonDetail = () => {
 
                               return (
                                 <div key={gi} className="px-6 py-5">
+                                  {group.titleMandombe && (
+                                    <p className="font-mandombe text-gold text-lg mb-0.5">{group.titleMandombe}</p>
+                                  )}
                                   <h4 className="font-display text-lg font-bold text-foreground mb-1">{groupTitle}</h4>
                                   {groupDesc && (
                                     <p className="text-sm text-muted-foreground mb-3 leading-relaxed">{groupDesc}</p>
