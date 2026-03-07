@@ -5537,6 +5537,8 @@ export const lessons: Lesson[] = [
     titleLari: "Mpila ya karila",
     titleMandombe: "Mpila ya karila",
     description: "Learn how to negate sentences in Kikongo Lari using the KA…KO and KA…A…KO structures.",
+    descriptionFr: "Apprenez à formuler la négation en kikongo lari avec les structures KA…KO et KA…A…KO.",
+    descriptionPt: "Aprenda a negar frases em kikongo lari usando as estruturas KA…KO e KA…A…KO.",
     level: "intermediate",
     icon: "🚫",
     vocabulary: [
