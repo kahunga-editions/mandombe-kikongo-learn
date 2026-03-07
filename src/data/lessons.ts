@@ -3182,6 +3182,8 @@ export const lessons: Lesson[] = [
     titleLari: "Finkakasa na Futa",
     titleMandombe: "Finkakasa na Futa",
     description: "Master a rich set of Kikongo Lari verbs starting with Fi- and Fu-, covering physical actions, transformations, and everyday activities.",
+    descriptionFr: "Maîtrisez un ensemble riche de verbes en Fi- et Fu- couvrant les actions physiques, transformations et activités quotidiennes.",
+    descriptionPt: "Domine um conjunto rico de verbos em Fi- e Fu- abrangendo ações físicas, transformações e atividades do quotidiano.",
     level: "intermediate",
     icon: "🔥",
     vocabulary: [
