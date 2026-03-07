@@ -3310,6 +3310,8 @@ export const lessons: Lesson[] = [
     titleLari: "Hana na Huma",
     titleMandombe: "Hana na Huma",
     description: "Explore Kikongo Lari words beginning with Ha- and Hu-, covering places, giving, separation, and physical actions.",
+    descriptionFr: "Explorez les mots du kikongo lari commençant par Ha- et Hu-, couvrant les lieux, le don, la séparation et les actions physiques.",
+    descriptionPt: "Explore palavras do kikongo lari começando por Ha- e Hu-, abrangendo lugares, doação, separação e ações físicas.",
     level: "intermediate",
     icon: "🏘️",
     vocabulary: [
