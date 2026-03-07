@@ -2590,6 +2590,8 @@ export const lessons: Lesson[] = [
     titleLari: "Biala na Kimfumu",
     titleMandombe: "Biyala na Kimfumu",
     description: "Explore words of consecration, crowning, inheritance, and calling — the Bia- root family from the dictionary.",
+    descriptionFr: "Explorez les mots de consécration, couronnement, héritage et vocation — la famille de racines Bia- du dictionnaire.",
+    descriptionPt: "Explore palavras de consagração, coroação, herança e vocação — a família de raízes Bia- do dicionário.",
     level: "advanced" as const,
     icon: "👑",
     vocabulary: [
