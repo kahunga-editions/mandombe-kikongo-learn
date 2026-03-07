@@ -5753,10 +5753,8 @@ export const lessons: Lesson[] = [
         titlePt: "Caça-palavras: Encontre as palavras lari",
         gridSize: 8,
         words: [
-          { word: "KARILA", clue: "Way of saying no", clueFr: "Façon de dire non", cluePt: "Forma de dizer não", row: 0, col: 0, direction: "across" },
-          { word: "NUNI", clue: "Bird", clueFr: "Oiseau", cluePt: "Pássaro", row: 1, col: 4, direction: "down" },
+          { word: "KARILA", clue: "To go back, to return", clueFr: "Reprendre, retourner en arrière", cluePt: "Voltar, retroceder", row: 0, col: 0, direction: "across" },
           { word: "YEBELA", clue: "To wash oneself", clueFr: "Se laver", cluePt: "Lavar-se", row: 2, col: 0, direction: "across" },
-          { word: "NGANGA", clue: "Traditional healer", clueFr: "Guérisseur traditionnel", cluePt: "Curandeiro tradicional", row: 4, col: 1, direction: "across" },
           { word: "MUANA", clue: "Child", clueFr: "Enfant", cluePt: "Criança", row: 3, col: 0, direction: "down" },
           { word: "ZONZA", clue: "To speak", clueFr: "Parler", cluePt: "Falar", row: 6, col: 2, direction: "across" },
         ],
