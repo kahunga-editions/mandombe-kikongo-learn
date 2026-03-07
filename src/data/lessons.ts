@@ -2928,6 +2928,8 @@ export const lessons: Lesson[] = [
     titleLari: "Bota na Boka",
     titleMandombe: "Bota na Boka",
     description: "Learn Bo- vocabulary for striking, immersing, prospering, and physical world concepts from the Kilari dictionary.",
+    descriptionFr: "Apprenez le vocabulaire Bo- pour frapper, immerger, prospérer et les concepts du monde physique du dictionnaire kilari.",
+    descriptionPt: "Aprenda o vocabulário Bo- para bater, imergir, prosperar e conceitos do mundo físico do dicionário kilari.",
     level: "intermediate" as const,
     icon: "🌊",
     vocabulary: [
