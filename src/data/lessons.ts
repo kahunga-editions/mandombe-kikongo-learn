@@ -5362,12 +5362,12 @@ export const lessons: Lesson[] = [
             descriptionFr: "Conjugaison avec les pronoms personnels avec le verbe « yebela » (se laver).",
             descriptionPt: "Conjugação com pronomes pessoais usando o verbo 'yebela' (lavar-se).",
             examples: [
-              { lari: "Yebela ni ta yebela.", french: "Je me lave.", english: "I am washing myself.", portuguese: "Eu estou a lavar-me." },
-              { lari: "Yebela … ta yebela.", french: "Tu te laves.", english: "You are washing yourself.", portuguese: "Tu estás a lavar-te." },
-              { lari: "Yebela ka ta yebela.", french: "Elle se lave.", english: "She is washing herself.", portuguese: "Ela está a lavar-se." },
-              { lari: "Yebela tu ta yebela.", french: "Nous nous lavons.", english: "We are washing ourselves.", portuguese: "Nós estamos a lavar-nos." },
-              { lari: "Yebela lu ta yebela.", french: "Vous vous lavez.", english: "You are washing yourselves.", portuguese: "Vocês estão a lavar-se." },
-              { lari: "Yebela ba ta yebela.", french: "Ils se lavent.", english: "They are washing themselves.", portuguese: "Eles estão a lavar-se." },
+              { lari: "Yebela ni ta yebela.", mandombe: "Yebela ni ta yebela.", french: "Je me lave.", english: "I am washing myself.", portuguese: "Eu estou a lavar-me." },
+              { lari: "Yebela … ta yebela.", mandombe: "Yebela ... ta yebela.", french: "Tu te laves.", english: "You are washing yourself.", portuguese: "Tu estás a lavar-te." },
+              { lari: "Yebela ka ta yebela.", mandombe: "Yebela ka ta yebela.", french: "Elle se lave.", english: "She is washing herself.", portuguese: "Ela está a lavar-se." },
+              { lari: "Yebela tu ta yebela.", mandombe: "Yebela tu ta yebela.", french: "Nous nous lavons.", english: "We are washing ourselves.", portuguese: "Nós estamos a lavar-nos." },
+              { lari: "Yebela lu ta yebela.", mandombe: "Yebela lu ta yebela.", french: "Vous vous lavez.", english: "You are washing yourselves.", portuguese: "Vocês estão a lavar-se." },
+              { lari: "Yebela ba ta yebela.", mandombe: "Yebela ba ta yebela.", french: "Ils se lavent.", english: "They are washing themselves.", portuguese: "Eles estão a lavar-se." },
             ],
           },
           {
