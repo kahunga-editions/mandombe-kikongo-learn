@@ -4168,6 +4168,8 @@ export const lessons: Lesson[] = [
     titleLari: "Tolo",
     titleMandombe: "Tolo",
     description: "Learn how to express sleepiness in Kikongo Lari. 'Tolo tue nani' literally means 'I am with the sleep' — sleep possesses you! Discover vocabulary about sleeping, dreaming, darkness, breathing, and the night sky.",
+    descriptionFr: "Apprenez à exprimer la somnolence en kikongo lari. « Tolo tue nani » signifie littéralement « le sommeil est avec moi ». Découvrez le vocabulaire du sommeil, des rêves, de l'obscurité, de la respiration et du ciel nocturne.",
+    descriptionPt: "Aprenda a expressar sonolência em kikongo lari. 'Tolo tue nani' significa literalmente 'o sono está comigo'. Descubra vocabulário sobre dormir, sonhar, escuridão, respiração e o céu noturno.",
     level: "beginner",
     icon: "😴",
     vocabulary: [
