@@ -99,6 +99,19 @@ const CrosswordPuzzle = ({ question, onComplete }: Props) => {
     onComplete(allCorrect);
   };
 
+  // Reveal all correct answers on the grid
+  const handleReveal = () => {
+    const revealed: Record<string, string> = {};
+    clues.forEach((clue) => {
+      for (let i = 0; i < clue.answer.length; i++) {
+        const r = clue.direction === "down" ? clue.row + i : clue.row;
+        const c = clue.direction === "across" ? clue.col + i : clue.col;
+        revealed[`${r}-${c}`] = clue.answer[i].toUpperCase();
+      }
+    });
+    setGrid(revealed);
+  };
+
   const getClueText = (clue: CrosswordClue) => {
     if (language === "fr") return clue.clueFr || clue.clue;
     if (language === "pt") return clue.cluePt || clue.clue;
