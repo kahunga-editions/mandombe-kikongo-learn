@@ -2700,6 +2700,8 @@ export const lessons: Lesson[] = [
     titleLari: "Bima na Bisi",
     titleMandombe: "Bima na Bisi",
     description: "Discover the rich Bi- vocabulary for plants, insects, household objects, and natural phenomena from the Kilari dictionary.",
+    descriptionFr: "Découvrez le riche vocabulaire Bi- pour les plantes, insectes, objets du quotidien et phénomènes naturels du dictionnaire kilari.",
+    descriptionPt: "Descubra o rico vocabulário Bi- para plantas, insetos, objetos do quotidiano e fenómenos naturais do dicionário kilari.",
     level: "intermediate" as const,
     icon: "🌿",
     vocabulary: [
