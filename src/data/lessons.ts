@@ -3726,6 +3726,8 @@ export const lessons: Lesson[] = [
     titleLari: "Lufua na Lulendo",
     titleMandombe: "Lufuwa na Lulendo",
     description: "Study the Lu- prefix class covering body parts, abstract concepts, social roles, and natural elements in Kikongo Lari.",
+    descriptionFr: "Étudiez la classe du préfixe Lu- couvrant les parties du corps, concepts abstraits, rôles sociaux et éléments naturels en kikongo lari.",
+    descriptionPt: "Estude a classe do prefixo Lu- abrangendo partes do corpo, conceitos abstratos, papéis sociais e elementos naturais em kikongo lari.",
     level: "advanced",
     icon: "🦋",
     vocabulary: [
