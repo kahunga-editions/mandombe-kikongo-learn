@@ -156,6 +156,8 @@ export const lessons: Lesson[] = [
     titleLari: "Mpila ya hanina mbote",
     titleMandombe: "Mpila ya hanina mbote",
     description: "Learn how to greet people, introduce yourself, and ask about someone's well-being in Kikongo Lari.",
+    descriptionFr: "Apprenez à saluer, vous présenter et demander des nouvelles en kikongo lari.",
+    descriptionPt: "Aprenda a cumprimentar, apresentar-se e perguntar pelo bem-estar de alguém em kikongo lari.",
     level: "beginner",
     icon: "👋",
     vocabulary: [
