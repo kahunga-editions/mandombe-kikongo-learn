@@ -6,6 +6,8 @@ import Footer from "@/components/Footer";
 import MultipleChoice from "@/components/exercises/MultipleChoice";
 import MatchingExercise from "@/components/exercises/MatchingExercise";
 import FillInBlank from "@/components/exercises/FillInBlank";
+import CrosswordPuzzle from "@/components/exercises/CrosswordPuzzle";
+import WordSearchPuzzle from "@/components/exercises/WordSearchPuzzle";
 import { ArrowLeft, BookOpen, Trophy } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -334,6 +336,18 @@ const LessonDetail = () => {
                   )}
                   {exercise.type === "fill-in-blank" && (
                     <FillInBlank
+                      question={exercise}
+                      onComplete={(correct) => handleExerciseComplete(i, correct)}
+                    />
+                  )}
+                  {exercise.type === "crossword" && (
+                    <CrosswordPuzzle
+                      question={exercise}
+                      onComplete={(correct) => handleExerciseComplete(i, correct)}
+                    />
+                  )}
+                  {exercise.type === "word-search" && (
+                    <WordSearchPuzzle
                       question={exercise}
                       onComplete={(correct) => handleExerciseComplete(i, correct)}
                     />

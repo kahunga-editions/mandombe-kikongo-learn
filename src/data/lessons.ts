@@ -52,7 +52,46 @@ export interface FillInBlankQuestion {
   hintPt?: string;
 }
 
-export type Exercise = MultipleChoiceQuestion | MatchingQuestion | FillInBlankQuestion;
+export interface CrosswordClue {
+  answer: string;
+  clue: string;
+  clueFr?: string;
+  cluePt?: string;
+  row: number;
+  col: number;
+  direction: "across" | "down";
+}
+
+export interface CrosswordQuestion {
+  type: "crossword";
+  title?: string;
+  titleFr?: string;
+  titlePt?: string;
+  gridSize: number;
+  clues: CrosswordClue[];
+}
+
+export interface WordSearchClue {
+  word: string;
+  clue: string;
+  clueFr?: string;
+  cluePt?: string;
+  row: number;
+  col: number;
+  direction: "across" | "down" | "diagonal";
+}
+
+export interface WordSearchQuestion {
+  type: "word-search";
+  title?: string;
+  titleFr?: string;
+  titlePt?: string;
+  gridSize: number;
+  words: WordSearchClue[];
+  fillerLetters: string;
+}
+
+export type Exercise = MultipleChoiceQuestion | MatchingQuestion | FillInBlankQuestion | CrosswordQuestion | WordSearchQuestion;
 
 export interface SyntaxExample {
   lari: string;
@@ -5623,6 +5662,146 @@ export const lessons: Lesson[] = [
         blank: "miena",
         hint: "The full verb form for the 'milele' class (mi- prefix). No contraction!",
         hintPt: "A forma verbal completa para a classe 'milele' (prefixo mi-). Sem contração!",
+      },
+      // Exercise 13: MCQ — Syntax: present progressive negation with noun subject
+      {
+        type: "multiple-choice",
+        question: "How do you negate 'Nuni yebela yi ta yebela' (The bird is washing itself)?",
+        questionFr: "Comment nie-t-on 'Nuni yebela yi ta yebela' (L'oiseau est en train de se laver) ?",
+        questionPt: "Como se nega 'Nuni yebela yi ta yebela' (O pássaro está a lavar-se)?",
+        options: [
+          "KA Nuni yebela yi ta yebela ko.",
+          "Nuni KA yebela yi ta yebela KO.",
+          "Nuni yebela KA yi ta yebela ko.",
+          "Nuni yebela yi KA ta yebela ko.",
+        ],
+        optionsFr: [
+          "KA Nuni yebela yi ta yebela ko.",
+          "Nuni KA yebela yi ta yebela KO.",
+          "Nuni yebela KA yi ta yebela ko.",
+          "Nuni yebela yi KA ta yebela ko.",
+        ],
+        optionsPt: [
+          "KA Nuni yebela yi ta yebela ko.",
+          "Nuni KA yebela yi ta yebela KO.",
+          "Nuni yebela KA yi ta yebela ko.",
+          "Nuni yebela yi KA ta yebela ko.",
+        ],
+        correctIndex: 1,
+        explanation: "With a noun subject, KA goes right after the noun: 'Nuni KA yebela yi ta yebela KO.'",
+        explanationFr: "Avec un nom sujet, KA se place juste après le nom : 'Nuni KA yebela yi ta yebela KO.'",
+        explanationPt: "Com um nome sujeito, KA coloca-se logo após o nome: 'Nuni KA yebela yi ta yebela KO.'",
+      },
+      // Exercise 14: Fill-in-blank — Present progressive negation pronoun
+      {
+        type: "fill-in-blank",
+        sentence: "Negate: 'Yebela ni ta yebela.' → ___ ni ta yebela ko.",
+        sentenceFr: "Niez : 'Yebela ni ta yebela.' → ___ ni ta yebela ko.",
+        sentencePt: "Negue: 'Yebela ni ta yebela.' → ___ ni ta yebela ko.",
+        blank: "KA",
+        hint: "The negation marker placed before the pronoun.",
+        hintFr: "Le marqueur de négation placé avant le pronom.",
+        hintPt: "O marcador de negação colocado antes do pronome.",
+      },
+      // Exercise 15: MCQ — Progressive 2nd person negation irregularity
+      {
+        type: "multiple-choice",
+        question: "How do you say 'You are not washing yourself' (2nd person singular, present progressive)?",
+        questionFr: "Comment dit-on 'Tu ne te laves pas' (2e personne du singulier, présent progressif) ?",
+        questionPt: "Como se diz 'Tu não estás a lavar-te' (2ª pessoa do singular, presente progressivo)?",
+        options: [
+          "Ka ta yebela ko.",
+          "Ku ta yebela ko.",
+          "Ka wu ta yebela ko.",
+          "KA yi ta yebela ko.",
+        ],
+        optionsFr: [
+          "Ka ta yebela ko.",
+          "Ku ta yebela ko.",
+          "Ka wu ta yebela ko.",
+          "KA yi ta yebela ko.",
+        ],
+        optionsPt: [
+          "Ka ta yebela ko.",
+          "Ku ta yebela ko.",
+          "Ka wu ta yebela ko.",
+          "KA yi ta yebela ko.",
+        ],
+        correctIndex: 1,
+        explanation: "For the 2nd person singular, KA becomes KU: 'Ku ta yebela ko.'",
+        explanationFr: "À la 2e personne du singulier, KA devient KU : 'Ku ta yebela ko.'",
+        explanationPt: "Na 2ª pessoa do singular, KA torna-se KU: 'Ku ta yebela ko.'",
+      },
+      // Exercise 16: Matching — Progressive affirmative ↔ negative
+      {
+        type: "matching",
+        instruction: "Match each affirmative progressive sentence with its negative form.",
+        instructionFr: "Associez chaque phrase au présent progressif avec sa forme négative.",
+        instructionPt: "Associe cada frase no presente progressivo à sua forma negativa.",
+        pairs: [
+          { left: "Yebela ni ta yebela.", right: "KA ni ta yebela ko." },
+          { left: "Yebela ka ta yebela.", right: "Ka ta yebela ko." },
+          { left: "Yebela tu ta yebela.", right: "Ka tu ta yebela ko." },
+          { left: "Yebela ba ta yebela.", right: "Ka ba ta yebela ko." },
+        ],
+      },
+      // Exercise 17: Crossword — Negation vocabulary
+      {
+        type: "crossword",
+        title: "Crossword: Negation",
+        titleFr: "Mots croisés : La négation",
+        titlePt: "Palavras cruzadas: A negação",
+        gridSize: 8,
+        clues: [
+          { answer: "KARILA", clue: "The way of saying no (Mutindu wa...)", clueFr: "La façon de dire non (Mutindu wa...)", cluePt: "A forma de dizer não (Mutindu wa...)", row: 0, col: 0, direction: "across" },
+          { answer: "YEBELA", clue: "To wash oneself", clueFr: "Se laver", cluePt: "Lavar-se", row: 0, col: 0, direction: "down" },
+          { answer: "NUNI", clue: "Bird", clueFr: "Oiseau", cluePt: "Pássaro", row: 2, col: 2, direction: "across" },
+          { answer: "KALA", clue: "To refuse", clueFr: "Refuser", cluePt: "Recusar", row: 0, col: 4, direction: "down" },
+          { answer: "NZONZI", clue: "Judge", clueFr: "Juge", cluePt: "Juiz", row: 4, col: 0, direction: "across" },
+          { answer: "MUANA", clue: "Child", clueFr: "Enfant", cluePt: "Criança", row: 2, col: 5, direction: "down" },
+        ],
+      },
+      // Exercise 18: Word Search — Negation key words
+      {
+        type: "word-search",
+        title: "Word Search: Find the Lari words",
+        titleFr: "Mots fléchés : Trouvez les mots lari",
+        titlePt: "Caça-palavras: Encontre as palavras lari",
+        gridSize: 8,
+        words: [
+          { word: "KARILA", clue: "Way of saying no", clueFr: "Façon de dire non", cluePt: "Forma de dizer não", row: 0, col: 0, direction: "across" },
+          { word: "NUNI", clue: "Bird", clueFr: "Oiseau", cluePt: "Pássaro", row: 1, col: 4, direction: "down" },
+          { word: "YEBELA", clue: "To wash oneself", clueFr: "Se laver", cluePt: "Lavar-se", row: 2, col: 0, direction: "across" },
+          { word: "NGANGA", clue: "Traditional healer", clueFr: "Guérisseur traditionnel", cluePt: "Curandeiro tradicional", row: 4, col: 1, direction: "across" },
+          { word: "MUANA", clue: "Child", clueFr: "Enfant", cluePt: "Criança", row: 3, col: 0, direction: "down" },
+          { word: "ZONZA", clue: "To speak", clueFr: "Parler", cluePt: "Falar", row: 6, col: 2, direction: "across" },
+        ],
+        fillerLetters: "KARILABMTUWIZOLENUNIBALOYEBELAKZMUALUBANGANGADIBAMUNIGKAZONZATBWKFUSILA",
+      },
+      // Exercise 19: MCQ — Noun class pronoun yi/zi
+      {
+        type: "multiple-choice",
+        question: "Which pronoun pair is used for invariable animals and humans in Kikongo Lari?",
+        questionFr: "Quelle paire de pronoms est utilisée pour les animaux et humains invariables en Kikongo Lari ?",
+        questionPt: "Que par de pronomes é usado para animais e humanos invariáveis em Kikongo Lari?",
+        options: ["wu / ba", "yi / zi", "tshi / bi", "ki / bi"],
+        optionsFr: ["wu / ba", "yi / zi", "tshi / bi", "ki / bi"],
+        optionsPt: ["wu / ba", "yi / zi", "tshi / bi", "ki / bi"],
+        correctIndex: 1,
+        explanation: "yi (singular) / zi (plural) are used for invariable nouns designating animals and humans.",
+        explanationFr: "yi (singulier) / zi (pluriel) sont utilisés pour les noms invariables désignant des animaux et des humains.",
+        explanationPt: "yi (singular) / zi (plural) são usados para nomes invariáveis que designam animais e humanos.",
+      },
+      // Exercise 20: Fill-in-blank — Noun class progressive
+      {
+        type: "fill-in-blank",
+        sentence: "Complete: 'Tshinienia yebela ___ ta yebela.' (The ant is washing itself)",
+        sentenceFr: "Complétez : 'Tshinienia yebela ___ ta yebela.' (La fourmi est en train de se laver)",
+        sentencePt: "Complete: 'Tshinienia yebela ___ ta yebela.' (A formiga está a lavar-se)",
+        blank: "tshi",
+        hint: "The class pronoun for 'tshinienia'.",
+        hintFr: "Le pronom de classe pour 'tshinienia'.",
+        hintPt: "O pronome de classe para 'tshinienia'.",
       },
     ],
   },
