@@ -5753,7 +5753,7 @@ export const lessons: Lesson[] = [
         titlePt: "Palavras cruzadas: A negação",
         gridSize: 8,
         clues: [
-          { answer: "KARILA", clue: "The way of saying no (Mutindu wa...)", clueFr: "La façon de dire non (Mutindu wa...)", cluePt: "A forma de dizer não (Mutindu wa...)", row: 0, col: 0, direction: "across" },
+          { answer: "KARILA", clue: "To go back, to return (verb)", clueFr: "Reprendre, retourner en arrière (verbe)", cluePt: "Voltar, retroceder (verbo)", row: 0, col: 0, direction: "across" },
           { answer: "YEBELA", clue: "To wash oneself", clueFr: "Se laver", cluePt: "Lavar-se", row: 0, col: 0, direction: "down" },
           { answer: "NUNI", clue: "Bird", clueFr: "Oiseau", cluePt: "Pássaro", row: 2, col: 2, direction: "across" },
           { answer: "KALA", clue: "To refuse", clueFr: "Refuser", cluePt: "Recusar", row: 0, col: 4, direction: "down" },
