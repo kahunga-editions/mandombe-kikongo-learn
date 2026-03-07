@@ -2265,6 +2265,8 @@ export const lessons: Lesson[] = [
     titleLari: "Malongi me mu \"Bi\" (2)",
     titleMandombe: "Malongi me mu Bi (2)",
     description: "Explore Bi- words covering plants, animals, cultural objects, numbers, and natural phenomena from the Kilari dictionary.",
+    descriptionFr: "Explorez les mots en Bi- couvrant plantes, animaux, objets culturels, nombres et phénomènes naturels du dictionnaire kilari.",
+    descriptionPt: "Explore palavras em Bi- abrangendo plantas, animais, objetos culturais, números e fenómenos naturais do dicionário kilari.",
     level: "intermediate",
     icon: "🌿",
     vocabulary: [
