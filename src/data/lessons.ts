@@ -5424,8 +5424,8 @@ export const lessons: Lesson[] = [
             titleFr: "À retenir",
             titlePt: "A reter",
             examples: [
-              { lari: "Mulumi ani yebela wu ta yebela.", french: "Mon mari est en train de se laver.", english: "My husband is washing himself.", portuguese: "O meu marido está a lavar-se." },
-              { lari: "Milumi mieto yebela mi ta yebela.", french: "Nos maris sont en train de se laver.", english: "Our husbands are washing themselves.", portuguese: "Os nossos maridos estão a lavar-se." },
+              { lari: "Mulumi ani yebela wu ta yebela.", mandombe: "Mulumi ani yebela wu ta yebela.", french: "Mon mari est en train de se laver.", english: "My husband is washing himself.", portuguese: "O meu marido está a lavar-se." },
+              { lari: "Milumi mieto yebela mi ta yebela.", mandombe: "Milumi mieto yebela mi ta yebela.", french: "Nos maris sont en train de se laver.", english: "Our husbands are washing themselves.", portuguese: "Os nossos maridos estão a lavar-se." },
             ],
           },
         ],
