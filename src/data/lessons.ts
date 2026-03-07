@@ -2083,6 +2083,8 @@ export const lessons: Lesson[] = [
     titleLari: "Malongi me mu \"Bu\"",
     titleMandombe: "Malongi me mu Bu",
     description: "Explore the rich Bu- prefix vocabulary covering abstract states: emotions, virtues, vices, social concepts, and human qualities.",
+    descriptionFr: "Explorez le riche vocabulaire du préfixe Bu- couvrant les états abstraits : émotions, vertus, vices, concepts sociaux et qualités humaines.",
+    descriptionPt: "Explore o rico vocabulário do prefixo Bu- abrangendo estados abstratos: emoções, virtudes, vícios, conceitos sociais e qualidades humanas.",
     level: "advanced",
     icon: "💭",
     vocabulary: [
