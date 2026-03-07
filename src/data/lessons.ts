@@ -54,6 +54,39 @@ export interface FillInBlankQuestion {
 
 export type Exercise = MultipleChoiceQuestion | MatchingQuestion | FillInBlankQuestion;
 
+export interface SyntaxExample {
+  lari: string;
+  french: string;
+  english: string;
+  portuguese?: string;
+}
+
+export interface SyntaxGroup {
+  title: string;
+  titleFr?: string;
+  titlePt?: string;
+  description?: string;
+  descriptionFr?: string;
+  descriptionPt?: string;
+  examples: SyntaxExample[];
+  note?: string;
+  noteFr?: string;
+  notePt?: string;
+}
+
+export interface SyntaxBlock {
+  title: string;
+  titleFr?: string;
+  titlePt?: string;
+  description: string;
+  descriptionFr?: string;
+  descriptionPt?: string;
+  pattern?: string;
+  patternFr?: string;
+  patternPt?: string;
+  groups: SyntaxGroup[];
+}
+
 export interface Lesson {
   id: string;
   title: string;
@@ -67,6 +100,7 @@ export interface Lesson {
   level: "beginner" | "intermediate" | "advanced";
   icon: string;
   vocabulary?: VocabItem[];
+  syntax?: SyntaxBlock[];
   conjugations?: ConjugationTable[];
   phrases?: { lari: string; mandombe: string; french: string; english: string; portuguese?: string; note?: string }[];
   exercises: Exercise[];
