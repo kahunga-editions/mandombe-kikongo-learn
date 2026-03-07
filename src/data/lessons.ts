@@ -3973,6 +3973,8 @@ export const lessons: Lesson[] = [
     titleLari: "Bifua bia ka(ka) ya BA",
     titleMandombe: "Bifuwa biya ka(ka) ya BA",
     description: "Discover that the verb BA (to be) has far more than 6 forms. At the 3rd person, BA morphs depending on the noun class and number of the word it qualifies.",
+    descriptionFr: "Découvrez que le verbe BA (être) possède bien plus de 6 formes. À la 3e personne, BA se transforme selon la classe nominale et le nombre du mot qu'il qualifie.",
+    descriptionPt: "Descubra que o verbo BA (ser/estar) tem muito mais de 6 formas. Na 3ª pessoa, BA transforma-se conforme a classe nominal e o número da palavra que qualifica.",
     level: "intermediate",
     icon: "🔑",
     vocabulary: [
