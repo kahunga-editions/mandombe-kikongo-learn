@@ -56,6 +56,7 @@ export type Exercise = MultipleChoiceQuestion | MatchingQuestion | FillInBlankQu
 
 export interface SyntaxExample {
   lari: string;
+  mandombe: string;
   french: string;
   english: string;
   portuguese?: string;
