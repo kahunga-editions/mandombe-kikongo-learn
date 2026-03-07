@@ -5441,6 +5441,17 @@ export const lessons: Lesson[] = [
               { lari: "Ka ba ta yebela ko.", mandombe: "Ka ba ta yebela ko.", french: "Elles ne sont pas en train de se laver.", english: "They are not washing themselves.", portuguese: "Elas não estão a lavar-se." },
             ],
           },
+          {
+            title: "Karila na nkumbu — Négation avec un nom sujet",
+            titleFr: "Négation du présent progressif avec un nom sujet",
+            titlePt: "Negação do presente progressivo com um nome sujeito",
+            examples: [
+              { lari: "Nuni yebela yi ta yebela.", mandombe: "Nuni yebela yi ta yebela.", french: "L'oiseau est en train de se laver.", english: "The bird is washing itself.", portuguese: "O pássaro está a lavar-se." },
+              { lari: "Nuni KA yebela yi ta yebela KO.", mandombe: "Nuni KA yebela yi ta yebela KO.", french: "L'oiseau n'est pas en train de se laver.", english: "The bird is not washing itself.", portuguese: "O pássaro não está a lavar-se." },
+              { lari: "Nuni yebela zi ta yebela.", mandombe: "Nuni yebela zi ta yebela.", french: "Les oiseaux sont en train de se laver.", english: "The birds are washing themselves.", portuguese: "Os pássaros estão a lavar-se." },
+              { lari: "Nuni KA yebela zi ta yebela ko.", mandombe: "Nuni KA yebela zi ta yebela ko.", french: "Les oiseaux ne sont pas en train de se laver.", english: "The birds are not washing themselves.", portuguese: "Os pássaros não estão a lavar-se." },
+            ],
+          },
         ],
       },
     ],
