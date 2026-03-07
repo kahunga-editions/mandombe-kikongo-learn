@@ -66,6 +66,7 @@ export interface SyntaxGroup {
   title: string;
   titleFr?: string;
   titlePt?: string;
+  titleMandombe?: string;
   description?: string;
   descriptionFr?: string;
   descriptionPt?: string;
