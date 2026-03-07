@@ -5805,6 +5805,8 @@ export const lessons: Lesson[] = [
       },
     ],
   },
+  {
+    id: "lufua",
     title: "Death",
     titleFr: "La mort",
     titlePt: "A morte",
