@@ -156,6 +156,8 @@ export const lessons: Lesson[] = [
     titleLari: "Mpila ya hanina mbote",
     titleMandombe: "Mpila ya hanina mbote",
     description: "Learn how to greet people, introduce yourself, and ask about someone's well-being in Kikongo Lari.",
+    descriptionFr: "Apprenez à saluer, vous présenter et demander des nouvelles en kikongo lari.",
+    descriptionPt: "Aprenda a cumprimentar, apresentar-se e perguntar pelo bem-estar de alguém em kikongo lari.",
     level: "beginner",
     icon: "👋",
     vocabulary: [
@@ -244,6 +246,8 @@ export const lessons: Lesson[] = [
     titleLari: "Ntondolo — Mpila ya vuturila matondo",
     titleMandombe: "Ntondolo — Mpila ya vuturila matondo",
     description: "Learn to express gratitude and conjugate the verb 'tonda' (to thank) in present, past, future, and imperative.",
+    descriptionFr: "Apprenez à exprimer la gratitude et à conjuguer le verbe « tonda » (remercier) au présent, passé, futur et impératif.",
+    descriptionPt: "Aprenda a expressar gratidão e a conjugar o verbo 'tonda' (agradecer) no presente, passado, futuro e imperativo.",
     level: "beginner",
     icon: "🙏",
     vocabulary: [
@@ -355,6 +359,8 @@ export const lessons: Lesson[] = [
     titleLari: "Mia sa mu ba na jingu",
     titleMandombe: "Mia sa mu ba na jingu",
     description: "Master the essential verbs: to be (ba), to do (sa), to eat (dia), to drink (nua), to be able (lenda), to take (bonga), and to know (zaba).",
+    descriptionFr: "Maîtrisez les verbes essentiels : être (ba), faire (sa), manger (dia), boire (nua), pouvoir (lenda), prendre (bonga) et savoir (zaba).",
+    descriptionPt: "Domine os verbos essenciais: ser (ba), fazer (sa), comer (dia), beber (nua), poder (lenda), pegar (bonga) e saber (zaba).",
     level: "intermediate",
     icon: "💪",
     conjugations: [
@@ -513,6 +519,8 @@ export const lessons: Lesson[] = [
     titleLari: "Ntangu",
     titleMandombe: "Ntangu",
     description: "Learn to talk about time: today, tomorrow, yesterday, next week, last night, and more.",
+    descriptionFr: "Apprenez à parler du temps : aujourd'hui, demain, hier, la semaine prochaine, hier soir, et plus encore.",
+    descriptionPt: "Aprenda a falar sobre o tempo: hoje, amanhã, ontem, próxima semana, ontem à noite, e mais.",
     level: "intermediate",
     icon: "⏰",
     vocabulary: [
@@ -749,6 +757,8 @@ export const lessons: Lesson[] = [
     titleLari: "Bisalu bia mu Nzo",
     titleMandombe: "Bisalu biya mu Nzo",
     description: "Learn vocabulary and sentences about daily house activities: cooking, cutting, preparing, reading, and going to work.",
+    descriptionFr: "Apprenez le vocabulaire et les phrases sur les activités quotidiennes de la maison : cuisiner, couper, préparer, lire et aller au travail.",
+    descriptionPt: "Aprenda vocabulário e frases sobre atividades domésticas do dia a dia: cozinhar, cortar, preparar, ler e ir trabalhar.",
     level: "intermediate",
     icon: "🏠",
     vocabulary: [
@@ -894,6 +904,8 @@ export const lessons: Lesson[] = [
     titleLari: "Malongi me mu \"Bi\"",
     titleMandombe: "Malongi me mu Bi",
     description: "Explore essential Kikongo Lari vocabulary starting with 'Bi-'. Each word is shown in Mandombe script with French and English translations.",
+    descriptionFr: "Explorez le vocabulaire essentiel du kikongo lari commençant par « Bi- ». Chaque mot est affiché en écriture mandombe avec ses traductions.",
+    descriptionPt: "Explore o vocabulário essencial do kikongo lari começando por 'Bi-'. Cada palavra é apresentada em escrita mandombe com traduções.",
     level: "advanced",
     icon: "📖",
     vocabulary: [
@@ -1049,6 +1061,8 @@ export const lessons: Lesson[] = [
     titleLari: "Malongi me mu \"Ba\"",
     titleMandombe: "Malongi me mu Ba",
     description: "Master essential Kikongo Lari verbs starting with 'Ba-' — from remembering to running, from fighting to healing.",
+    descriptionFr: "Maîtrisez les verbes essentiels du kikongo lari commençant par « Ba- » — de la mémoire à la course, du combat à la guérison.",
+    descriptionPt: "Domine os verbos essenciais do kikongo lari começando por 'Ba-' — da memória à corrida, do combate à cura.",
     level: "advanced",
     icon: "🏃",
     vocabulary: [
@@ -1186,6 +1200,8 @@ export const lessons: Lesson[] = [
     titleLari: "Malongi me mu \"Bo\" na \"Bu\"",
     titleMandombe: "Malongi me mu Bo na Bu",
     description: "Discover vocabulary starting with 'Bo-' and 'Bu-' — covering concepts from beauty and humanity to healing and places.",
+    descriptionFr: "Découvrez le vocabulaire commençant par « Bo- » et « Bu- » — couvrant des concepts allant de la beauté à l'humanité, de la guérison aux lieux.",
+    descriptionPt: "Descubra o vocabulário começando por 'Bo-' e 'Bu-' — abrangendo conceitos de beleza e humanidade à cura e lugares.",
     level: "advanced",
     icon: "🌍",
     vocabulary: [
@@ -1302,6 +1318,8 @@ export const lessons: Lesson[] = [
     titleLari: "Ba",
     titleMandombe: "Ba",
     description: "Master the full conjugation of 'to be' (ba), form adjective phrases, and learn the negation pattern 'ka...ko'.",
+    descriptionFr: "Maîtrisez la conjugaison complète de « être » (ba), formez des phrases adjectivales et apprenez la négation « ka…ko ».",
+    descriptionPt: "Domine a conjugação completa de 'ser/estar' (ba), forme frases adjetivais e aprenda a negação 'ka…ko'.",
     level: "advanced",
     icon: "🔤",
     vocabulary: [
@@ -1534,6 +1552,8 @@ export const lessons: Lesson[] = [
     titleLari: "Tuma",
     titleMandombe: "Tuma",
     description: "Learn to give commands and instructions: close, open, sleep, go out, walk, run, and ask — in singular and plural imperative forms.",
+    descriptionFr: "Apprenez à donner des ordres et des instructions : fermer, ouvrir, dormir, sortir, marcher, courir et demander — au singulier et au pluriel.",
+    descriptionPt: "Aprenda a dar ordens e instruções: fechar, abrir, dormir, sair, andar, correr e pedir — no singular e no plural.",
     level: "advanced",
     icon: "📢",
     vocabulary: [
@@ -1622,6 +1642,8 @@ export const lessons: Lesson[] = [
     titleLari: "Zeba",
     titleMandombe: "Zeba",
     description: "Talk about traveling to places using past and future tenses. Learn real Congolese place names and conjugate 'kwenda' (to go) and 'kwiza' (to come). Zeba means to travel, to take a walk.",
+    descriptionFr: "Parlez de voyages en utilisant le passé et le futur. Apprenez des noms de lieux congolais et conjuguez « kwenda » (aller) et « kwiza » (venir). Zeba signifie voyager, se promener.",
+    descriptionPt: "Fale sobre viagens usando o passado e o futuro. Aprenda nomes de lugares congoleses e conjugue 'kwenda' (ir) e 'kwiza' (vir). Zeba significa viajar, passear.",
     level: "advanced",
     icon: "✈️",
     vocabulary: [
@@ -1752,6 +1774,8 @@ export const lessons: Lesson[] = [
     titleLari: "Malongi me mu \"Bi\"",
     titleMandombe: "Malongi me mu Bi",
     description: "Discover powerful Bi- verbs related to sound, fire, blessing, and physical force — from resonating drums to blazing flames.",
+    descriptionFr: "Découvrez de puissants verbes en Bi- liés au son, au feu, à la bénédiction et à la force physique — des tambours résonnants aux flammes ardentes.",
+    descriptionPt: "Descubra poderosos verbos em Bi- relacionados ao som, fogo, bênção e força física — de tambores ressonantes a chamas ardentes.",
     level: "advanced",
     icon: "🥁",
     vocabulary: [
@@ -1901,6 +1925,8 @@ export const lessons: Lesson[] = [
     titleLari: "Malongi me mu \"Ba\" (2)",
     titleMandombe: "Malongi me mu Ba (2)",
     description: "Expand your Ba- verb mastery with verbs of surprise, combat, craftsmanship, and emotional states — drawn from the Kilari dictionary.",
+    descriptionFr: "Élargissez votre maîtrise des verbes en Ba- avec des verbes de surprise, combat, artisanat et états émotionnels — tirés du dictionnaire kilari.",
+    descriptionPt: "Amplie o seu domínio dos verbos em Ba- com verbos de surpresa, combate, artesanato e estados emocionais — extraídos do dicionário kilari.",
     level: "advanced",
     icon: "⚔️",
     vocabulary: [
@@ -2057,6 +2083,8 @@ export const lessons: Lesson[] = [
     titleLari: "Malongi me mu \"Bu\"",
     titleMandombe: "Malongi me mu Bu",
     description: "Explore the rich Bu- prefix vocabulary covering abstract states: emotions, virtues, vices, social concepts, and human qualities.",
+    descriptionFr: "Explorez le riche vocabulaire du préfixe Bu- couvrant les états abstraits : émotions, vertus, vices, concepts sociaux et qualités humaines.",
+    descriptionPt: "Explore o rico vocabulário do prefixo Bu- abrangendo estados abstratos: emoções, virtudes, vícios, conceitos sociais e qualidades humanas.",
     level: "advanced",
     icon: "💭",
     vocabulary: [
@@ -2237,6 +2265,8 @@ export const lessons: Lesson[] = [
     titleLari: "Malongi me mu \"Bi\" (2)",
     titleMandombe: "Malongi me mu Bi (2)",
     description: "Explore Bi- words covering plants, animals, cultural objects, numbers, and natural phenomena from the Kilari dictionary.",
+    descriptionFr: "Explorez les mots en Bi- couvrant plantes, animaux, objets culturels, nombres et phénomènes naturels du dictionnaire kilari.",
+    descriptionPt: "Explore palavras em Bi- abrangendo plantas, animais, objetos culturais, números e fenómenos naturais do dicionário kilari.",
     level: "intermediate",
     icon: "🌿",
     vocabulary: [
@@ -2377,6 +2407,8 @@ export const lessons: Lesson[] = [
     titleLari: "Malongi me mu \"Ba\" (3)",
     titleMandombe: "Malongi me mu Ba (3)",
     description: "Master Ba- verbs of physical movement, bodily actions, and transformation — from turning and running to sticking and peeling.",
+    descriptionFr: "Maîtrisez les verbes Ba- de mouvement physique, d'actions corporelles et de transformation — du retournement à la course, du collage au décollage.",
+    descriptionPt: "Domine os verbos Ba- de movimento físico, ações corporais e transformação — de virar e correr a colar e descolar.",
     level: "advanced",
     icon: "🔄",
     vocabulary: [
@@ -2558,6 +2590,8 @@ export const lessons: Lesson[] = [
     titleLari: "Biala na Kimfumu",
     titleMandombe: "Biyala na Kimfumu",
     description: "Explore words of consecration, crowning, inheritance, and calling — the Bia- root family from the dictionary.",
+    descriptionFr: "Explorez les mots de consécration, couronnement, héritage et vocation — la famille de racines Bia- du dictionnaire.",
+    descriptionPt: "Explore palavras de consagração, coroação, herança e vocação — a família de raízes Bia- do dicionário.",
     level: "advanced" as const,
     icon: "👑",
     vocabulary: [
@@ -2666,6 +2700,8 @@ export const lessons: Lesson[] = [
     titleLari: "Bima na Bisi",
     titleMandombe: "Bima na Bisi",
     description: "Discover the rich Bi- vocabulary for plants, insects, household objects, and natural phenomena from the Kilari dictionary.",
+    descriptionFr: "Découvrez le riche vocabulaire Bi- pour les plantes, insectes, objets du quotidien et phénomènes naturels du dictionnaire kilari.",
+    descriptionPt: "Descubra o rico vocabulário Bi- para plantas, insetos, objetos do quotidiano e fenómenos naturais do dicionário kilari.",
     level: "intermediate" as const,
     icon: "🌿",
     vocabulary: [
@@ -2778,6 +2814,8 @@ export const lessons: Lesson[] = [
     titleLari: "Baba na Bakana",
     titleMandombe: "Baba na Bakana",
     description: "Master Ba- verbs for arguing, seizing, surprising, sticking, and emotional states from the Kilari dictionary.",
+    descriptionFr: "Maîtrisez les verbes Ba- pour se disputer, saisir, surprendre, coller et les états émotionnels du dictionnaire kilari.",
+    descriptionPt: "Domine os verbos Ba- para discutir, agarrar, surpreender, colar e estados emocionais do dicionário kilari.",
     level: "intermediate" as const,
     icon: "⚡",
     vocabulary: [
@@ -2890,6 +2928,8 @@ export const lessons: Lesson[] = [
     titleLari: "Bota na Boka",
     titleMandombe: "Bota na Boka",
     description: "Learn Bo- vocabulary for striking, immersing, prospering, and physical world concepts from the Kilari dictionary.",
+    descriptionFr: "Apprenez le vocabulaire Bo- pour frapper, immerger, prospérer et les concepts du monde physique du dictionnaire kilari.",
+    descriptionPt: "Aprenda o vocabulário Bo- para bater, imergir, prosperar e conceitos do mundo físico do dicionário kilari.",
     level: "intermediate" as const,
     icon: "🌊",
     vocabulary: [
@@ -3001,6 +3041,8 @@ export const lessons: Lesson[] = [
     titleLari: "Buntuadi na Bunzambi",
     titleMandombe: "Buntuadi na Bunzambi",
     description: "Explore advanced Bu- concepts for social bonds, spirituality, character traits, and community life from the Kilari dictionary.",
+    descriptionFr: "Explorez les concepts avancés en Bu- pour les liens sociaux, la spiritualité, les traits de caractère et la vie communautaire du dictionnaire kilari.",
+    descriptionPt: "Explore conceitos avançados em Bu- para laços sociais, espiritualidade, traços de carácter e vida comunitária do dicionário kilari.",
     level: "advanced" as const,
     icon: "🕊️",
     vocabulary: [
@@ -3140,6 +3182,8 @@ export const lessons: Lesson[] = [
     titleLari: "Finkakasa na Futa",
     titleMandombe: "Finkakasa na Futa",
     description: "Master a rich set of Kikongo Lari verbs starting with Fi- and Fu-, covering physical actions, transformations, and everyday activities.",
+    descriptionFr: "Maîtrisez un ensemble riche de verbes en Fi- et Fu- couvrant les actions physiques, transformations et activités quotidiennes.",
+    descriptionPt: "Domine um conjunto rico de verbos em Fi- e Fu- abrangendo ações físicas, transformações e atividades do quotidiano.",
     level: "intermediate",
     icon: "🔥",
     vocabulary: [
@@ -3266,6 +3310,8 @@ export const lessons: Lesson[] = [
     titleLari: "Hana na Huma",
     titleMandombe: "Hana na Huma",
     description: "Explore Kikongo Lari words beginning with Ha- and Hu-, covering places, giving, separation, and physical actions.",
+    descriptionFr: "Explorez les mots du kikongo lari commençant par Ha- et Hu-, couvrant les lieux, le don, la séparation et les actions physiques.",
+    descriptionPt: "Explore palavras do kikongo lari começando por Ha- e Hu-, abrangendo lugares, doação, separação e ações físicas.",
     level: "intermediate",
     icon: "🏘️",
     vocabulary: [
@@ -3356,6 +3402,8 @@ export const lessons: Lesson[] = [
     titleLari: "Kaba na Kanda",
     titleMandombe: "Kaba na Kanda",
     description: "Learn essential Ka- verbs and nouns covering sharing, family, justice, and physical actions in Kikongo Lari.",
+    descriptionFr: "Apprenez les verbes et noms essentiels en Ka- couvrant le partage, la famille, la justice et les actions physiques en kikongo lari.",
+    descriptionPt: "Aprenda os verbos e nomes essenciais em Ka- abrangendo partilha, família, justiça e ações físicas em kikongo lari.",
     level: "intermediate",
     icon: "⚖️",
     vocabulary: [
@@ -3453,6 +3501,8 @@ export const lessons: Lesson[] = [
     titleLari: "Kola na Kula",
     titleMandombe: "Kola na Kula",
     description: "Study Ko- and Ku- roots covering health, growth, movement, marriage, and daily activities in Kikongo Lari.",
+    descriptionFr: "Étudiez les racines Ko- et Ku- couvrant la santé, la croissance, le mouvement, le mariage et les activités quotidiennes en kikongo lari.",
+    descriptionPt: "Estude as raízes Ko- e Ku- abrangendo saúde, crescimento, movimento, casamento e atividades diárias em kikongo lari.",
     level: "intermediate",
     icon: "🌱",
     vocabulary: [
@@ -3560,6 +3610,8 @@ export const lessons: Lesson[] = [
     titleLari: "Laba na Longa",
     titleMandombe: "Laba na Longa",
     description: "Discover La-, Le-, and Lo- words covering actions, emotions, knowledge, teaching, and social life in Kikongo Lari.",
+    descriptionFr: "Découvrez les mots en La-, Le- et Lo- couvrant les actions, émotions, connaissances, enseignement et vie sociale en kikongo lari.",
+    descriptionPt: "Descubra palavras em La-, Le- e Lo- abrangendo ações, emoções, conhecimento, ensino e vida social em kikongo lari.",
     level: "advanced",
     icon: "📖",
     vocabulary: [
@@ -3674,6 +3726,8 @@ export const lessons: Lesson[] = [
     titleLari: "Lufua na Lulendo",
     titleMandombe: "Lufuwa na Lulendo",
     description: "Study the Lu- prefix class covering body parts, abstract concepts, social roles, and natural elements in Kikongo Lari.",
+    descriptionFr: "Étudiez la classe du préfixe Lu- couvrant les parties du corps, concepts abstraits, rôles sociaux et éléments naturels en kikongo lari.",
+    descriptionPt: "Estude a classe do prefixo Lu- abrangendo partes do corpo, conceitos abstratos, papéis sociais e elementos naturais em kikongo lari.",
     level: "advanced",
     icon: "🦋",
     vocabulary: [
@@ -3785,6 +3839,8 @@ export const lessons: Lesson[] = [
     titleLari: "Mamba na Bilumbu",
     titleMandombe: "Mamba na Bilumbu",
     description: "Learn Ma- vocabulary, the days of the week, and time expressions in Kikongo Lari — essential for daily conversation.",
+    descriptionFr: "Apprenez le vocabulaire en Ma-, les jours de la semaine et les expressions de temps en kikongo lari — essentiels pour la conversation quotidienne.",
+    descriptionPt: "Aprenda o vocabulário em Ma-, os dias da semana e expressões de tempo em kikongo lari — essenciais para a conversa diária.",
     level: "beginner",
     icon: "📅",
     vocabulary: [
@@ -3917,6 +3973,8 @@ export const lessons: Lesson[] = [
     titleLari: "Bifua bia ka(ka) ya BA",
     titleMandombe: "Bifuwa biya ka(ka) ya BA",
     description: "Discover that the verb BA (to be) has far more than 6 forms. At the 3rd person, BA morphs depending on the noun class and number of the word it qualifies.",
+    descriptionFr: "Découvrez que le verbe BA (être) possède bien plus de 6 formes. À la 3e personne, BA se transforme selon la classe nominale et le nombre du mot qu'il qualifie.",
+    descriptionPt: "Descubra que o verbo BA (ser/estar) tem muito mais de 6 formas. Na 3ª pessoa, BA transforma-se conforme a classe nominal e o número da palavra que qualifica.",
     level: "intermediate",
     icon: "🔑",
     vocabulary: [
@@ -4110,6 +4168,8 @@ export const lessons: Lesson[] = [
     titleLari: "Tolo",
     titleMandombe: "Tolo",
     description: "Learn how to express sleepiness in Kikongo Lari. 'Tolo tue nani' literally means 'I am with the sleep' — sleep possesses you! Discover vocabulary about sleeping, dreaming, darkness, breathing, and the night sky.",
+    descriptionFr: "Apprenez à exprimer la somnolence en kikongo lari. « Tolo tue nani » signifie littéralement « le sommeil est avec moi ». Découvrez le vocabulaire du sommeil, des rêves, de l'obscurité, de la respiration et du ciel nocturne.",
+    descriptionPt: "Aprenda a expressar sonolência em kikongo lari. 'Tolo tue nani' significa literalmente 'o sono está comigo'. Descubra vocabulário sobre dormir, sonhar, escuridão, respiração e o céu noturno.",
     level: "beginner",
     icon: "😴",
     vocabulary: [
@@ -4400,6 +4460,8 @@ export const lessons: Lesson[] = [
     titleLari: "Nsatu na Lemina",
     titleMandombe: "Nsatu na Lemina",
     description: "Learn how to express hunger and thirst in Kikongo Lari. 'Nsatu ye nani' = 'I am hungry', 'Lemina die nani' = 'I am thirsty'. Discover food vocabulary and a cultural reference to Franklin Boukaka's protest song 'Dia Bikola'.",
+    descriptionFr: "Apprenez à exprimer la faim et la soif en kikongo lari. « Nsatu ye nani » = « j'ai faim », « Lemina die nani » = « j'ai soif ». Découvrez le vocabulaire alimentaire et une référence culturelle à la chanson de Franklin Boukaka « Dia Bikola ».",
+    descriptionPt: "Aprenda a expressar fome e sede em kikongo lari. 'Nsatu ye nani' = 'tenho fome', 'Lemina die nani' = 'tenho sede'. Descubra vocabulário alimentar e uma referência cultural à canção de Franklin Boukaka 'Dia Bikola'.",
     level: "beginner",
     icon: "🍽️",
     vocabulary: [
@@ -4569,6 +4631,8 @@ export const lessons: Lesson[] = [
     titleLari: "Malongi ma Bibulu",
     titleMandombe: "Malongi ma Bibulu",
     description: "Learn the names of animals in Kikongo Lari: wild, domestic, birds, insects, aquatic creatures, and more.",
+    descriptionFr: "Apprenez les noms des animaux en kikongo lari : sauvages, domestiques, oiseaux, insectes, créatures aquatiques, et plus encore.",
+    descriptionPt: "Aprenda os nomes dos animais em kikongo lari: selvagens, domésticos, aves, insetos, criaturas aquáticas, e mais.",
     level: "beginner",
     icon: "🦁",
     vocabulary: [
@@ -4683,6 +4747,8 @@ export const lessons: Lesson[] = [
     titleLari: "Ntalu",
     titleMandombe: "Ntalu",
     description: "Learn to count in Kikongo Lari from 0 to billions. Discover the patterns behind tens, hundreds, thousands, millions, and beyond.",
+    descriptionFr: "Apprenez à compter en kikongo lari de 0 à des milliards. Découvrez les règles des dizaines, centaines, milliers, millions et au-delà.",
+    descriptionPt: "Aprenda a contar em kikongo lari de 0 a bilhões. Descubra os padrões das dezenas, centenas, milhares, milhões e além.",
     level: "beginner",
     icon: "🔢",
     vocabulary: [
@@ -4804,6 +4870,8 @@ export const lessons: Lesson[] = [
     titleLari: "Ntalu",
     titleMandombe: "Ntalu",
     description: "Learn how to count things in Kikongo Lari: noun classes, particles, and euphony rules.",
+    descriptionFr: "Apprenez à compter des objets en kikongo lari : classes nominales, particules et règles d'euphonie.",
+    descriptionPt: "Aprenda a contar objetos em kikongo lari: classes nominais, partículas e regras de eufonia.",
     level: "intermediate",
     icon: "🧮",
     vocabulary: [
@@ -4992,6 +5060,8 @@ export const lessons: Lesson[] = [
     titleLari: "Nitu",
     titleMandombe: "Nitu",
     description: "Learn the names of body parts, organs, and fluids in Kikongo ya Letá. Master singular and plural forms.",
+    descriptionFr: "Apprenez les noms des parties du corps, organes et fluides en kikongo ya letá. Maîtrisez les formes singulier et pluriel.",
+    descriptionPt: "Aprenda os nomes das partes do corpo, órgãos e fluidos em kikongo ya letá. Domine as formas singular e plural.",
     level: "intermediate",
     icon: "🦴",
     vocabulary: [
@@ -5320,6 +5390,8 @@ export const lessons: Lesson[] = [
     titleLari: "Tinta",
     titleMandombe: "Tinta",
     description: "Learn the names of colors in Kikongo Lari. Discover how to describe the world around you with vivid vocabulary.",
+    descriptionFr: "Apprenez les noms des couleurs en kikongo lari. Découvrez comment décrire le monde autour de vous avec un vocabulaire vivant.",
+    descriptionPt: "Aprenda os nomes das cores em kikongo lari. Descubra como descrever o mundo à sua volta com vocabulário vívido.",
     level: "beginner",
     icon: "🎨",
     vocabulary: [
@@ -5465,6 +5537,8 @@ export const lessons: Lesson[] = [
     titleLari: "Mpila ya karila",
     titleMandombe: "Mpila ya karila",
     description: "Learn how to negate sentences in Kikongo Lari using the KA…KO and KA…A…KO structures.",
+    descriptionFr: "Apprenez à formuler la négation en kikongo lari avec les structures KA…KO et KA…A…KO.",
+    descriptionPt: "Aprenda a negar frases em kikongo lari usando as estruturas KA…KO e KA…A…KO.",
     level: "intermediate",
     icon: "🚫",
     vocabulary: [
