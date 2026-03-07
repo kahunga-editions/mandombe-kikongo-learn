@@ -3610,6 +3610,8 @@ export const lessons: Lesson[] = [
     titleLari: "Laba na Longa",
     titleMandombe: "Laba na Longa",
     description: "Discover La-, Le-, and Lo- words covering actions, emotions, knowledge, teaching, and social life in Kikongo Lari.",
+    descriptionFr: "Découvrez les mots en La-, Le- et Lo- couvrant les actions, émotions, connaissances, enseignement et vie sociale en kikongo lari.",
+    descriptionPt: "Descubra palavras em La-, Le- e Lo- abrangendo ações, emoções, conhecimento, ensino e vida social em kikongo lari.",
     level: "advanced",
     icon: "📖",
     vocabulary: [
