@@ -1552,6 +1552,8 @@ export const lessons: Lesson[] = [
     titleLari: "Tuma",
     titleMandombe: "Tuma",
     description: "Learn to give commands and instructions: close, open, sleep, go out, walk, run, and ask — in singular and plural imperative forms.",
+    descriptionFr: "Apprenez à donner des ordres et des instructions : fermer, ouvrir, dormir, sortir, marcher, courir et demander — au singulier et au pluriel.",
+    descriptionPt: "Aprenda a dar ordens e instruções: fechar, abrir, dormir, sair, andar, correr e pedir — no singular e no plural.",
     level: "advanced",
     icon: "📢",
     vocabulary: [
