@@ -3041,6 +3041,8 @@ export const lessons: Lesson[] = [
     titleLari: "Buntuadi na Bunzambi",
     titleMandombe: "Buntuadi na Bunzambi",
     description: "Explore advanced Bu- concepts for social bonds, spirituality, character traits, and community life from the Kilari dictionary.",
+    descriptionFr: "Explorez les concepts avancés en Bu- pour les liens sociaux, la spiritualité, les traits de caractère et la vie communautaire du dictionnaire kilari.",
+    descriptionPt: "Explore conceitos avançados em Bu- para laços sociais, espiritualidade, traços de carácter e vida comunitária do dicionário kilari.",
     level: "advanced" as const,
     icon: "🕊️",
     vocabulary: [
