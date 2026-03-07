@@ -3501,6 +3501,8 @@ export const lessons: Lesson[] = [
     titleLari: "Kola na Kula",
     titleMandombe: "Kola na Kula",
     description: "Study Ko- and Ku- roots covering health, growth, movement, marriage, and daily activities in Kikongo Lari.",
+    descriptionFr: "Étudiez les racines Ko- et Ku- couvrant la santé, la croissance, le mouvement, le mariage et les activités quotidiennes en kikongo lari.",
+    descriptionPt: "Estude as raízes Ko- e Ku- abrangendo saúde, crescimento, movimento, casamento e atividades diárias em kikongo lari.",
     level: "intermediate",
     icon: "🌱",
     vocabulary: [
