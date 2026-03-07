@@ -340,6 +340,18 @@ const LessonDetail = () => {
                       onComplete={(correct) => handleExerciseComplete(i, correct)}
                     />
                   )}
+                  {exercise.type === "crossword" && (
+                    <CrosswordPuzzle
+                      question={exercise}
+                      onComplete={(correct) => handleExerciseComplete(i, correct)}
+                    />
+                  )}
+                  {exercise.type === "word-search" && (
+                    <WordSearchPuzzle
+                      question={exercise}
+                      onComplete={(correct) => handleExerciseComplete(i, correct)}
+                    />
+                  )}
                 </div>
               ))}
             </div>
