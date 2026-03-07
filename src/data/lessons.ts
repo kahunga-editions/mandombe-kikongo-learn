@@ -5060,6 +5060,8 @@ export const lessons: Lesson[] = [
     titleLari: "Nitu",
     titleMandombe: "Nitu",
     description: "Learn the names of body parts, organs, and fluids in Kikongo ya Letá. Master singular and plural forms.",
+    descriptionFr: "Apprenez les noms des parties du corps, organes et fluides en kikongo ya letá. Maîtrisez les formes singulier et pluriel.",
+    descriptionPt: "Aprenda os nomes das partes do corpo, órgãos e fluidos em kikongo ya letá. Domine as formas singular e plural.",
     level: "intermediate",
     icon: "🦴",
     vocabulary: [
