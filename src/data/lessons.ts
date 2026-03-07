@@ -757,6 +757,8 @@ export const lessons: Lesson[] = [
     titleLari: "Bisalu bia mu Nzo",
     titleMandombe: "Bisalu biya mu Nzo",
     description: "Learn vocabulary and sentences about daily house activities: cooking, cutting, preparing, reading, and going to work.",
+    descriptionFr: "Apprenez le vocabulaire et les phrases sur les activités quotidiennes de la maison : cuisiner, couper, préparer, lire et aller au travail.",
+    descriptionPt: "Aprenda vocabulário e frases sobre atividades domésticas do dia a dia: cozinhar, cortar, preparar, ler e ir trabalhar.",
     level: "intermediate",
     icon: "🏠",
     vocabulary: [
