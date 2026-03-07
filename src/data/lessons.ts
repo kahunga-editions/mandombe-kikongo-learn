@@ -5390,6 +5390,8 @@ export const lessons: Lesson[] = [
     titleLari: "Tinta",
     titleMandombe: "Tinta",
     description: "Learn the names of colors in Kikongo Lari. Discover how to describe the world around you with vivid vocabulary.",
+    descriptionFr: "Apprenez les noms des couleurs en kikongo lari. Découvrez comment décrire le monde autour de vous avec un vocabulaire vivant.",
+    descriptionPt: "Aprenda os nomes das cores em kikongo lari. Descubra como descrever o mundo à sua volta com vocabulário vívido.",
     level: "beginner",
     icon: "🎨",
     vocabulary: [
