@@ -1642,6 +1642,8 @@ export const lessons: Lesson[] = [
     titleLari: "Zeba",
     titleMandombe: "Zeba",
     description: "Talk about traveling to places using past and future tenses. Learn real Congolese place names and conjugate 'kwenda' (to go) and 'kwiza' (to come). Zeba means to travel, to take a walk.",
+    descriptionFr: "Parlez de voyages en utilisant le passé et le futur. Apprenez des noms de lieux congolais et conjuguez « kwenda » (aller) et « kwiza » (venir). Zeba signifie voyager, se promener.",
+    descriptionPt: "Fale sobre viagens usando o passado e o futuro. Aprenda nomes de lugares congoleses e conjugue 'kwenda' (ir) e 'kwiza' (vir). Zeba significa viajar, passear.",
     level: "advanced",
     icon: "✈️",
     vocabulary: [
