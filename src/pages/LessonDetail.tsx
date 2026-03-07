@@ -145,6 +145,70 @@ const LessonDetail = () => {
                 </section>
               )}
 
+              {lesson.syntax && lesson.syntax.length > 0 && (
+                <section>
+                  <h2 className="font-display text-2xl font-bold text-foreground mb-4">
+                    {tr("Syntaxe", "Syntax", "Sintaxe")} — <span className="font-mandombe text-4xl text-gold">Mitindu</span>
+                  </h2>
+                  <div className="space-y-8">
+                    {lesson.syntax.map((block, bi) => {
+                      const blockTitle = language === "fr" ? (block.titleFr || block.title) : language === "pt" ? (block.titlePt || block.title) : block.title;
+                      const blockDesc = language === "fr" ? (block.descriptionFr || block.description) : language === "pt" ? (block.descriptionPt || block.description) : block.description;
+                      const blockPattern = language === "fr" ? (block.patternFr || block.pattern) : language === "pt" ? (block.patternPt || block.pattern) : block.pattern;
+
+                      return (
+                        <div key={bi} className="bg-card rounded-xl border border-border overflow-hidden">
+                          <div className="bg-earth-deep px-6 py-4">
+                            <h3 className="font-display text-xl font-bold text-gold">{blockTitle}</h3>
+                            <p className="text-cream/80 text-sm mt-1 leading-relaxed">{blockDesc}</p>
+                            {blockPattern && (
+                              <div className="mt-3 bg-background/10 rounded-lg px-4 py-2 border border-gold/20">
+                                <p className="text-xs text-cream/50 uppercase tracking-wider mb-1">{tr("Formule", "Pattern", "Fórmula")}</p>
+                                <p className="font-display font-semibold text-gold text-sm">{blockPattern}</p>
+                              </div>
+                            )}
+                          </div>
+
+                          <div className="divide-y divide-border">
+                            {block.groups.map((group, gi) => {
+                              const groupTitle = language === "fr" ? (group.titleFr || group.title) : language === "pt" ? (group.titlePt || group.title) : group.title;
+                              const groupDesc = language === "fr" ? (group.descriptionFr || group.description) : language === "pt" ? (group.descriptionPt || group.description) : group.description;
+                              const groupNote = language === "fr" ? (group.noteFr || group.note) : language === "pt" ? (group.notePt || group.note) : group.note;
+                              const flag = language === "en" ? "🇬🇧" : language === "pt" ? "🇵🇹" : "🇫🇷";
+
+                              return (
+                                <div key={gi} className="px-6 py-5">
+                                  <h4 className="font-display text-lg font-bold text-foreground mb-1">{groupTitle}</h4>
+                                  {groupDesc && (
+                                    <p className="text-sm text-muted-foreground mb-3 leading-relaxed">{groupDesc}</p>
+                                  )}
+                                  <div className="space-y-2">
+                                    {group.examples.map((ex, ei) => {
+                                      const translation = language === "en" ? ex.english : language === "pt" ? (ex.portuguese || ex.english) : ex.french;
+                                      return (
+                                        <div key={ei} className="bg-muted/30 rounded-lg px-4 py-3 border border-border/50">
+                                          <p className="font-display font-semibold text-foreground">{ex.lari}</p>
+                                          <p className="text-sm text-muted-foreground mt-0.5">{flag} {translation}</p>
+                                        </div>
+                                      );
+                                    })}
+                                  </div>
+                                  {groupNote && (
+                                    <p className="mt-3 text-sm italic text-accent-foreground/70 border-t border-border pt-3">
+                                      ⚠️ {groupNote}
+                                    </p>
+                                  )}
+                                </div>
+                              );
+                            })}
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </section>
+              )}
+
               {lesson.conjugations && lesson.conjugations.length > 0 && (
                 <section>
                   <h2 className="font-display text-2xl font-bold text-foreground mb-4">
