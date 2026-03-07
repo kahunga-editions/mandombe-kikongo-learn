@@ -4870,6 +4870,8 @@ export const lessons: Lesson[] = [
     titleLari: "Ntalu",
     titleMandombe: "Ntalu",
     description: "Learn how to count things in Kikongo Lari: noun classes, particles, and euphony rules.",
+    descriptionFr: "Apprenez à compter des objets en kikongo lari : classes nominales, particules et règles d'euphonie.",
+    descriptionPt: "Aprenda a contar objetos em kikongo lari: classes nominais, partículas e regras de eufonia.",
     level: "intermediate",
     icon: "🧮",
     vocabulary: [
