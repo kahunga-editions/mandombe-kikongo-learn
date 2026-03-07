@@ -187,6 +187,9 @@ const LessonDetail = () => {
                                       const translation = language === "en" ? ex.english : language === "pt" ? (ex.portuguese || ex.english) : ex.french;
                                       return (
                                         <div key={ei} className="bg-muted/30 rounded-lg px-4 py-3 border border-border/50">
+                                          {ex.mandombe && (
+                                            <p className="font-mandombe text-3xl text-gold mb-2">{ex.mandombe}</p>
+                                          )}
                                           <p className="font-display font-semibold text-foreground">{ex.lari}</p>
                                           <p className="text-sm text-muted-foreground mt-0.5">{flag} {translation}</p>
                                         </div>
