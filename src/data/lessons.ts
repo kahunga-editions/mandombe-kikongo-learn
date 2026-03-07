@@ -359,6 +359,8 @@ export const lessons: Lesson[] = [
     titleLari: "Mia sa mu ba na jingu",
     titleMandombe: "Mia sa mu ba na jingu",
     description: "Master the essential verbs: to be (ba), to do (sa), to eat (dia), to drink (nua), to be able (lenda), to take (bonga), and to know (zaba).",
+    descriptionFr: "Maîtrisez les verbes essentiels : être (ba), faire (sa), manger (dia), boire (nua), pouvoir (lenda), prendre (bonga) et savoir (zaba).",
+    descriptionPt: "Domine os verbos essenciais: ser (ba), fazer (sa), comer (dia), beber (nua), poder (lenda), pegar (bonga) e saber (zaba).",
     level: "intermediate",
     icon: "💪",
     conjugations: [
