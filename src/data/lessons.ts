@@ -1925,6 +1925,8 @@ export const lessons: Lesson[] = [
     titleLari: "Malongi me mu \"Ba\" (2)",
     titleMandombe: "Malongi me mu Ba (2)",
     description: "Expand your Ba- verb mastery with verbs of surprise, combat, craftsmanship, and emotional states — drawn from the Kilari dictionary.",
+    descriptionFr: "Élargissez votre maîtrise des verbes en Ba- avec des verbes de surprise, combat, artisanat et états émotionnels — tirés du dictionnaire kilari.",
+    descriptionPt: "Amplie o seu domínio dos verbos em Ba- com verbos de surpresa, combate, artesanato e estados emocionais — extraídos do dicionário kilari.",
     level: "advanced",
     icon: "⚔️",
     vocabulary: [
