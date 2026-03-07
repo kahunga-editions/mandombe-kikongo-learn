@@ -1200,6 +1200,8 @@ export const lessons: Lesson[] = [
     titleLari: "Malongi me mu \"Bo\" na \"Bu\"",
     titleMandombe: "Malongi me mu Bo na Bu",
     description: "Discover vocabulary starting with 'Bo-' and 'Bu-' — covering concepts from beauty and humanity to healing and places.",
+    descriptionFr: "Découvrez le vocabulaire commençant par « Bo- » et « Bu- » — couvrant des concepts allant de la beauté à l'humanité, de la guérison aux lieux.",
+    descriptionPt: "Descubra o vocabulário começando por 'Bo-' e 'Bu-' — abrangendo conceitos de beleza e humanidade à cura e lugares.",
     level: "advanced",
     icon: "🌍",
     vocabulary: [
