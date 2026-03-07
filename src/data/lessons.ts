@@ -2407,6 +2407,8 @@ export const lessons: Lesson[] = [
     titleLari: "Malongi me mu \"Ba\" (3)",
     titleMandombe: "Malongi me mu Ba (3)",
     description: "Master Ba- verbs of physical movement, bodily actions, and transformation — from turning and running to sticking and peeling.",
+    descriptionFr: "Maîtrisez les verbes Ba- de mouvement physique, d'actions corporelles et de transformation — du retournement à la course, du collage au décollage.",
+    descriptionPt: "Domine os verbos Ba- de movimento físico, ações corporais e transformação — de virar e correr a colar e descolar.",
     level: "advanced",
     icon: "🔄",
     vocabulary: [
