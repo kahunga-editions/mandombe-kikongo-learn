@@ -56,6 +56,7 @@ export type Exercise = MultipleChoiceQuestion | MatchingQuestion | FillInBlankQu
 
 export interface SyntaxExample {
   lari: string;
+  mandombe: string;
   french: string;
   english: string;
   portuguese?: string;
@@ -5361,12 +5362,12 @@ export const lessons: Lesson[] = [
             descriptionFr: "Conjugaison avec les pronoms personnels avec le verbe « yebela » (se laver).",
             descriptionPt: "Conjugação com pronomes pessoais usando o verbo 'yebela' (lavar-se).",
             examples: [
-              { lari: "Yebela ni ta yebela.", french: "Je me lave.", english: "I am washing myself.", portuguese: "Eu estou a lavar-me." },
-              { lari: "Yebela … ta yebela.", french: "Tu te laves.", english: "You are washing yourself.", portuguese: "Tu estás a lavar-te." },
-              { lari: "Yebela ka ta yebela.", french: "Elle se lave.", english: "She is washing herself.", portuguese: "Ela está a lavar-se." },
-              { lari: "Yebela tu ta yebela.", french: "Nous nous lavons.", english: "We are washing ourselves.", portuguese: "Nós estamos a lavar-nos." },
-              { lari: "Yebela lu ta yebela.", french: "Vous vous lavez.", english: "You are washing yourselves.", portuguese: "Vocês estão a lavar-se." },
-              { lari: "Yebela ba ta yebela.", french: "Ils se lavent.", english: "They are washing themselves.", portuguese: "Eles estão a lavar-se." },
+              { lari: "Yebela ni ta yebela.", mandombe: "Yebela ni ta yebela.", french: "Je me lave.", english: "I am washing myself.", portuguese: "Eu estou a lavar-me." },
+              { lari: "Yebela … ta yebela.", mandombe: "Yebela ... ta yebela.", french: "Tu te laves.", english: "You are washing yourself.", portuguese: "Tu estás a lavar-te." },
+              { lari: "Yebela ka ta yebela.", mandombe: "Yebela ka ta yebela.", french: "Elle se lave.", english: "She is washing herself.", portuguese: "Ela está a lavar-se." },
+              { lari: "Yebela tu ta yebela.", mandombe: "Yebela tu ta yebela.", french: "Nous nous lavons.", english: "We are washing ourselves.", portuguese: "Nós estamos a lavar-nos." },
+              { lari: "Yebela lu ta yebela.", mandombe: "Yebela lu ta yebela.", french: "Vous vous lavez.", english: "You are washing yourselves.", portuguese: "Vocês estão a lavar-se." },
+              { lari: "Yebela ba ta yebela.", mandombe: "Yebela ba ta yebela.", french: "Ils se lavent.", english: "They are washing themselves.", portuguese: "Eles estão a lavar-se." },
             ],
           },
           {
@@ -5377,10 +5378,10 @@ export const lessons: Lesson[] = [
             descriptionFr: "La troisième personne du singulier va nécessiter des pronoms spécifiques selon la classe et le nombre de mots qu'il remplace. Pour les noms d'animaux invariables, on utilise « yi » (singulier) et « zi » (pluriel).",
             descriptionPt: "A terceira pessoa do singular requer pronomes específicos conforme a classe e o número de palavras que substitui. Para nomes de animais invariáveis, usa-se 'yi' (singular) e 'zi' (plural).",
             examples: [
-              { lari: "Nuni yebela yi ta yebela.", french: "L'oiseau est en train de se laver.", english: "The bird is washing itself.", portuguese: "O pássaro está a lavar-se." },
-              { lari: "Nuni yebela zi ta yebela.", french: "Les oiseaux sont en train de se laver.", english: "The birds are washing themselves.", portuguese: "Os pássaros estão a lavar-se." },
-              { lari: "Ngulu dia yi ta dia.", french: "Le cochon est en train de manger.", english: "The pig is eating.", portuguese: "O porco está a comer." },
-              { lari: "Ngulu dia zi ta dia.", french: "Les cochons sont en train de manger.", english: "The pigs are eating.", portuguese: "Os porcos estão a comer." },
+              { lari: "Nuni yebela yi ta yebela.", mandombe: "Nuni yebela yi ta yebela.", french: "L'oiseau est en train de se laver.", english: "The bird is washing itself.", portuguese: "O pássaro está a lavar-se." },
+              { lari: "Nuni yebela zi ta yebela.", mandombe: "Nuni yebela zi ta yebela.", french: "Les oiseaux sont en train de se laver.", english: "The birds are washing themselves.", portuguese: "Os pássaros estão a lavar-se." },
+              { lari: "Ngulu dia yi ta dia.", mandombe: "Ngulu dia yi ta dia.", french: "Le cochon est en train de manger.", english: "The pig is eating.", portuguese: "O porco está a comer." },
+              { lari: "Ngulu dia zi ta dia.", mandombe: "Ngulu dia zi ta dia.", french: "Les cochons sont en train de manger.", english: "The pigs are eating.", portuguese: "Os porcos estão a comer." },
             ],
             note: "This pattern applies to all invariable animal nouns: nguvu (hippo), nsusu (chicken), mbua (dog), nkombo (goat), ngulu (pig), nzau (elephant), ngo mbulu (lion), mboma (boa), mpese (cockroach), etc.",
             noteFr: "Ce schéma s'applique à tous les noms d'animaux invariables : nguvu (hippopotame), nsusu (poule), mbua (chien), nkombo (chèvre), ngulu (cochon), nzau (éléphant), ngo mbulu (lion), mboma (boa), mpese (cafard), etc.",
@@ -5394,10 +5395,10 @@ export const lessons: Lesson[] = [
             descriptionFr: "Les mots invariables qui désignent un humain utilisent aussi la structure yi/zi.",
             descriptionPt: "Os nomes invariáveis que designam um humano também usam a estrutura yi/zi.",
             examples: [
-              { lari: "Nzonzi zonza yi ta zonza.", french: "Le juge est en train de parler.", english: "The judge is speaking.", portuguese: "O juiz está a falar." },
-              { lari: "Nzonzi zonza zi ta zonza.", french: "Les juges sont en train de parler.", english: "The judges are speaking.", portuguese: "Os juízes estão a falar." },
-              { lari: "Nganga buka yi ta buka.", french: "Le guérisseur traditionnel est en train de soigner.", english: "The traditional healer is healing.", portuguese: "O curandeiro tradicional está a curar." },
-              { lari: "Nganga buka zi ta buka.", french: "Les guérisseurs traditionnels sont en train de soigner.", english: "The traditional healers are healing.", portuguese: "Os curandeiros tradicionais estão a curar." },
+              { lari: "Nzonzi zonza yi ta zonza.", mandombe: "Nzonzi zonza yi ta zonza.", french: "Le juge est en train de parler.", english: "The judge is speaking.", portuguese: "O juiz está a falar." },
+              { lari: "Nzonzi zonza zi ta zonza.", mandombe: "Nzonzi zonza zi ta zonza.", french: "Les juges sont en train de parler.", english: "The judges are speaking.", portuguese: "Os juízes estão a falar." },
+              { lari: "Nganga buka yi ta buka.", mandombe: "Nganga buka yi ta buka.", french: "Le guérisseur traditionnel est en train de soigner.", english: "The traditional healer is healing.", portuguese: "O curandeiro tradicional está a curar." },
+              { lari: "Nganga buka zi ta buka.", mandombe: "Nganga buka zi ta buka.", french: "Les guérisseurs traditionnels sont en train de soigner.", english: "The traditional healers are healing.", portuguese: "Os curandeiros tradicionais estão a curar." },
             ],
           },
           {
@@ -5408,14 +5409,14 @@ export const lessons: Lesson[] = [
             descriptionFr: "Dans l'ordre canonique du Kikongo Lari, le sujet se place avant le verbe. Chaque classe nominale a sa propre paire de pronoms.",
             descriptionPt: "Na ordem canónica do Kikongo Lari, o sujeito coloca-se antes do verbo. Cada classe nominal tem o seu próprio par de pronomes.",
             examples: [
-              { lari: "Tshinienia yebela tshi ta yebela.", french: "La fourmi est en train de se laver.", english: "The ant is washing itself.", portuguese: "A formiga está a lavar-se." },
-              { lari: "Binienia zonza bi ta zonza.", french: "Les fourmis sont en train de parler.", english: "The ants are speaking.", portuguese: "As formigas estão a falar." },
-              { lari: "Kisari yebela ki ta yebela.", french: "Le travailleur est en train de se laver.", english: "The worker is washing himself.", portuguese: "O trabalhador está a lavar-se." },
-              { lari: "Bisari yebela bi ta yebela.", french: "Les travailleurs sont en train de se laver.", english: "The workers are washing themselves.", portuguese: "Os trabalhadores estão a lavar-se." },
-              { lari: "Nlongi longisa ka ta longisa.", french: "L'enseignant est en train d'enseigner.", english: "The teacher is teaching.", portuguese: "O professor está a ensinar." },
-              { lari: "Milongi longisa mi ta longisa.", french: "Les enseignants sont en train d'enseigner.", english: "The teachers are teaching.", portuguese: "Os professores estão a ensinar." },
-              { lari: "Muana yebela wu ta yebela.", french: "L'enfant est en train de se laver.", english: "The child is washing himself.", portuguese: "A criança está a lavar-se." },
-              { lari: "Bala yebela ba ta yebela.", french: "Les enfants sont en train de se laver.", english: "The children are washing themselves.", portuguese: "As crianças estão a lavar-se." },
+              { lari: "Tshinienia yebela tshi ta yebela.", mandombe: "Tshinienia yebela tshi ta yebela.", french: "La fourmi est en train de se laver.", english: "The ant is washing itself.", portuguese: "A formiga está a lavar-se." },
+              { lari: "Binienia zonza bi ta zonza.", mandombe: "Binienia zonza bi ta zonza.", french: "Les fourmis sont en train de parler.", english: "The ants are speaking.", portuguese: "As formigas estão a falar." },
+              { lari: "Kisari yebela ki ta yebela.", mandombe: "Kisari yebela ki ta yebela.", french: "Le travailleur est en train de se laver.", english: "The worker is washing himself.", portuguese: "O trabalhador está a lavar-se." },
+              { lari: "Bisari yebela bi ta yebela.", mandombe: "Bisari yebela bi ta yebela.", french: "Les travailleurs sont en train de se laver.", english: "The workers are washing themselves.", portuguese: "Os trabalhadores estão a lavar-se." },
+              { lari: "Nlongi longisa ka ta longisa.", mandombe: "Nlongi longisa ka ta longisa.", french: "L'enseignant est en train d'enseigner.", english: "The teacher is teaching.", portuguese: "O professor está a ensinar." },
+              { lari: "Milongi longisa mi ta longisa.", mandombe: "Milongi longisa mi ta longisa.", french: "Les enseignants sont en train d'enseigner.", english: "The teachers are teaching.", portuguese: "Os professores estão a ensinar." },
+              { lari: "Muana yebela wu ta yebela.", mandombe: "Muana yebela wu ta yebela.", french: "L'enfant est en train de se laver.", english: "The child is washing himself.", portuguese: "A criança está a lavar-se." },
+              { lari: "Bala yebela ba ta yebela.", mandombe: "Bala yebela ba ta yebela.", french: "Les enfants sont en train de se laver.", english: "The children are washing themselves.", portuguese: "As crianças estão a lavar-se." },
             ],
           },
           {
@@ -5423,8 +5424,8 @@ export const lessons: Lesson[] = [
             titleFr: "À retenir",
             titlePt: "A reter",
             examples: [
-              { lari: "Mulumi ani yebela wu ta yebela.", french: "Mon mari est en train de se laver.", english: "My husband is washing himself.", portuguese: "O meu marido está a lavar-se." },
-              { lari: "Milumi mieto yebela mi ta yebela.", french: "Nos maris sont en train de se laver.", english: "Our husbands are washing themselves.", portuguese: "Os nossos maridos estão a lavar-se." },
+              { lari: "Mulumi ani yebela wu ta yebela.", mandombe: "Mulumi ani yebela wu ta yebela.", french: "Mon mari est en train de se laver.", english: "My husband is washing himself.", portuguese: "O meu marido está a lavar-se." },
+              { lari: "Milumi mieto yebela mi ta yebela.", mandombe: "Milumi mieto yebela mi ta yebela.", french: "Nos maris sont en train de se laver.", english: "Our husbands are washing themselves.", portuguese: "Os nossos maridos estão a lavar-se." },
             ],
           },
         ],
