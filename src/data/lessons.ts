@@ -2814,6 +2814,8 @@ export const lessons: Lesson[] = [
     titleLari: "Baba na Bakana",
     titleMandombe: "Baba na Bakana",
     description: "Master Ba- verbs for arguing, seizing, surprising, sticking, and emotional states from the Kilari dictionary.",
+    descriptionFr: "Maîtrisez les verbes Ba- pour se disputer, saisir, surprendre, coller et les états émotionnels du dictionnaire kilari.",
+    descriptionPt: "Domine os verbos Ba- para discutir, agarrar, surpreender, colar e estados emocionais do dicionário kilari.",
     level: "intermediate" as const,
     icon: "⚡",
     vocabulary: [
