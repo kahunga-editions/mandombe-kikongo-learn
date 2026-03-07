@@ -4460,6 +4460,8 @@ export const lessons: Lesson[] = [
     titleLari: "Nsatu na Lemina",
     titleMandombe: "Nsatu na Lemina",
     description: "Learn how to express hunger and thirst in Kikongo Lari. 'Nsatu ye nani' = 'I am hungry', 'Lemina die nani' = 'I am thirsty'. Discover food vocabulary and a cultural reference to Franklin Boukaka's protest song 'Dia Bikola'.",
+    descriptionFr: "Apprenez à exprimer la faim et la soif en kikongo lari. « Nsatu ye nani » = « j'ai faim », « Lemina die nani » = « j'ai soif ». Découvrez le vocabulaire alimentaire et une référence culturelle à la chanson de Franklin Boukaka « Dia Bikola ».",
+    descriptionPt: "Aprenda a expressar fome e sede em kikongo lari. 'Nsatu ye nani' = 'tenho fome', 'Lemina die nani' = 'tenho sede'. Descubra vocabulário alimentar e uma referência cultural à canção de Franklin Boukaka 'Dia Bikola'.",
     level: "beginner",
     icon: "🍽️",
     vocabulary: [
