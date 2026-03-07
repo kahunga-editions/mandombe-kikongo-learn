@@ -1318,6 +1318,8 @@ export const lessons: Lesson[] = [
     titleLari: "Ba",
     titleMandombe: "Ba",
     description: "Master the full conjugation of 'to be' (ba), form adjective phrases, and learn the negation pattern 'ka...ko'.",
+    descriptionFr: "Maîtrisez la conjugaison complète de « être » (ba), formez des phrases adjectivales et apprenez la négation « ka…ko ».",
+    descriptionPt: "Domine a conjugação completa de 'ser/estar' (ba), forme frases adjetivais e aprenda a negação 'ka…ko'.",
     level: "advanced",
     icon: "🔤",
     vocabulary: [
