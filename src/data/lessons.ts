@@ -1061,6 +1061,8 @@ export const lessons: Lesson[] = [
     titleLari: "Malongi me mu \"Ba\"",
     titleMandombe: "Malongi me mu Ba",
     description: "Master essential Kikongo Lari verbs starting with 'Ba-' — from remembering to running, from fighting to healing.",
+    descriptionFr: "Maîtrisez les verbes essentiels du kikongo lari commençant par « Ba- » — de la mémoire à la course, du combat à la guérison.",
+    descriptionPt: "Domine os verbos essenciais do kikongo lari começando por 'Ba-' — da memória à corrida, do combate à cura.",
     level: "advanced",
     icon: "🏃",
     vocabulary: [
