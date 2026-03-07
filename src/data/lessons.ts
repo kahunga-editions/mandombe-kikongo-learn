@@ -3839,6 +3839,8 @@ export const lessons: Lesson[] = [
     titleLari: "Mamba na Bilumbu",
     titleMandombe: "Mamba na Bilumbu",
     description: "Learn Ma- vocabulary, the days of the week, and time expressions in Kikongo Lari — essential for daily conversation.",
+    descriptionFr: "Apprenez le vocabulaire en Ma-, les jours de la semaine et les expressions de temps en kikongo lari — essentiels pour la conversation quotidienne.",
+    descriptionPt: "Aprenda o vocabulário em Ma-, os dias da semana e expressões de tempo em kikongo lari — essenciais para a conversa diária.",
     level: "beginner",
     icon: "📅",
     vocabulary: [
