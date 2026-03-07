@@ -246,6 +246,8 @@ export const lessons: Lesson[] = [
     titleLari: "Ntondolo — Mpila ya vuturila matondo",
     titleMandombe: "Ntondolo — Mpila ya vuturila matondo",
     description: "Learn to express gratitude and conjugate the verb 'tonda' (to thank) in present, past, future, and imperative.",
+    descriptionFr: "Apprenez à exprimer la gratitude et à conjuguer le verbe « tonda » (remercier) au présent, passé, futur et impératif.",
+    descriptionPt: "Aprenda a expressar gratidão e a conjugar o verbo 'tonda' (agradecer) no presente, passado, futuro e imperativo.",
     level: "beginner",
     icon: "🙏",
     vocabulary: [
