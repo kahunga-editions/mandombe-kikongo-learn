@@ -4631,6 +4631,8 @@ export const lessons: Lesson[] = [
     titleLari: "Malongi ma Bibulu",
     titleMandombe: "Malongi ma Bibulu",
     description: "Learn the names of animals in Kikongo Lari: wild, domestic, birds, insects, aquatic creatures, and more.",
+    descriptionFr: "Apprenez les noms des animaux en kikongo lari : sauvages, domestiques, oiseaux, insectes, créatures aquatiques, et plus encore.",
+    descriptionPt: "Aprenda os nomes dos animais em kikongo lari: selvagens, domésticos, aves, insetos, criaturas aquáticas, e mais.",
     level: "beginner",
     icon: "🦁",
     vocabulary: [
