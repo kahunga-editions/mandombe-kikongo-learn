@@ -4747,6 +4747,8 @@ export const lessons: Lesson[] = [
     titleLari: "Ntalu",
     titleMandombe: "Ntalu",
     description: "Learn to count in Kikongo Lari from 0 to billions. Discover the patterns behind tens, hundreds, thousands, millions, and beyond.",
+    descriptionFr: "Apprenez à compter en kikongo lari de 0 à des milliards. Découvrez les règles des dizaines, centaines, milliers, millions et au-delà.",
+    descriptionPt: "Aprenda a contar em kikongo lari de 0 a bilhões. Descubra os padrões das dezenas, centenas, milhares, milhões e além.",
     level: "beginner",
     icon: "🔢",
     vocabulary: [
