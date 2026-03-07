@@ -3402,6 +3402,8 @@ export const lessons: Lesson[] = [
     titleLari: "Kaba na Kanda",
     titleMandombe: "Kaba na Kanda",
     description: "Learn essential Ka- verbs and nouns covering sharing, family, justice, and physical actions in Kikongo Lari.",
+    descriptionFr: "Apprenez les verbes et noms essentiels en Ka- couvrant le partage, la famille, la justice et les actions physiques en kikongo lari.",
+    descriptionPt: "Aprenda os verbos e nomes essenciais em Ka- abrangendo partilha, família, justiça e ações físicas em kikongo lari.",
     level: "intermediate",
     icon: "⚖️",
     vocabulary: [
