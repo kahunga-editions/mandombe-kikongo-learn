@@ -904,6 +904,8 @@ export const lessons: Lesson[] = [
     titleLari: "Malongi me mu \"Bi\"",
     titleMandombe: "Malongi me mu Bi",
     description: "Explore essential Kikongo Lari vocabulary starting with 'Bi-'. Each word is shown in Mandombe script with French and English translations.",
+    descriptionFr: "Explorez le vocabulaire essentiel du kikongo lari commençant par « Bi- ». Chaque mot est affiché en écriture mandombe avec ses traductions.",
+    descriptionPt: "Explore o vocabulário essencial do kikongo lari começando por 'Bi-'. Cada palavra é apresentada em escrita mandombe com traduções.",
     level: "advanced",
     icon: "📖",
     vocabulary: [
