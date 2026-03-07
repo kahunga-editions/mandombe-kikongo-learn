@@ -5745,20 +5745,21 @@ export const lessons: Lesson[] = [
           { left: "Yebela ba ta yebela.", right: "Ka ba ta yebela ko." },
         ],
       },
-      // Exercise 17: Crossword — Negation vocabulary
+      // Exercise 17: Crossword — Negation vocabulary (grid matching reference image)
       {
         type: "crossword",
         title: "Crossword: Negation",
         titleFr: "Mots croisés : La négation",
         titlePt: "Palavras cruzadas: A negação",
-        gridSize: 8,
+        gridSize: 10,
         clues: [
-          { answer: "KARILA", clue: "To go back, to return (verb)", clueFr: "Reprendre, retourner en arrière (verbe)", cluePt: "Voltar, retroceder (verbo)", row: 0, col: 0, direction: "across" },
-          { answer: "YEBELA", clue: "To wash oneself", clueFr: "Se laver", cluePt: "Lavar-se", row: 0, col: 0, direction: "down" },
-          { answer: "NUNI", clue: "Bird", clueFr: "Oiseau", cluePt: "Pássaro", row: 2, col: 2, direction: "across" },
-          { answer: "KALA", clue: "To refuse", clueFr: "Refuser", cluePt: "Recusar", row: 0, col: 4, direction: "down" },
-          { answer: "NZONZI", clue: "Judge", clueFr: "Juge", cluePt: "Juiz", row: 4, col: 0, direction: "across" },
-          { answer: "MUANA", clue: "Child", clueFr: "Enfant", cluePt: "Criança", row: 2, col: 5, direction: "down" },
+          { answer: "LONGA", clue: "To teach", clueFr: "Enseigner", cluePt: "Ensinar", row: 0, col: 4, direction: "down" },
+          { answer: "NZONZI", clue: "Judge", clueFr: "Juge", cluePt: "Juiz", row: 2, col: 4, direction: "across" },
+          { answer: "YEBELA", clue: "To wash oneself", clueFr: "Se laver", cluePt: "Lavar-se", row: 3, col: 1, direction: "down" },
+          { answer: "NUNI", clue: "Bird", clueFr: "Oiseau", cluePt: "Pássaro", row: 4, col: 5, direction: "down" },
+          { answer: "BAMBUKA", clue: "To retain", clueFr: "Retenir", cluePt: "Reter", row: 5, col: 1, direction: "across" },
+          { answer: "MBUA", clue: "Dog", clueFr: "Chien", cluePt: "Cão", row: 5, col: 3, direction: "down" },
+          { answer: "KALA", clue: "To refuse", clueFr: "Refuser", cluePt: "Recusar", row: 8, col: 0, direction: "across" },
         ],
       },
       // Exercise 18: Word Search — Negation key words
