@@ -5421,7 +5421,7 @@ export const lessons: Lesson[] = [
           },
           {
             title: "Mia bambuka — Mia sila ntimu",
-            titleFr: "À retenir",
+            titleFr: "Mia shila ntimu — À retenir",
             titlePt: "A reter",
             examples: [
               { lari: "Mulumi ani yebela wu ta yebela.", mandombe: "Mulumi ani yebela wu ta yebela.", french: "Mon mari est en train de se laver.", english: "My husband is washing himself.", portuguese: "O meu marido está a lavar-se." },
