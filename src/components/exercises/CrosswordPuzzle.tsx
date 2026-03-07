@@ -240,29 +240,37 @@ const CrosswordPuzzle = ({ question, onComplete }: Props) => {
       )}
 
       {submitted && (
-        <div className="flex items-center gap-2 text-sm">
-          {clues.every((clue) => {
-            for (let i = 0; i < clue.answer.length; i++) {
-              const r = clue.direction === "down" ? clue.row + i : clue.row;
-              const c = clue.direction === "across" ? clue.col + i : clue.col;
-              if ((grid[`${r}-${c}`] || "").toUpperCase() !== clue.answer[i].toUpperCase()) return false;
-            }
-            return true;
-          }) ? (
-            <>
-              <CheckCircle className="w-5 h-5 text-green-500" />
-              <span className="text-green-500 font-semibold">
-                {language === "fr" ? "Parfait !" : language === "pt" ? "Perfeito!" : "Perfect!"}
-              </span>
-            </>
-          ) : (
-            <>
-              <XCircle className="w-5 h-5 text-destructive" />
-              <span className="text-destructive font-semibold">
-                {language === "fr" ? "Certaines réponses sont incorrectes." : language === "pt" ? "Algumas respostas estão incorretas." : "Some answers are incorrect."}
-              </span>
-            </>
-          )}
+        <div className="space-y-3">
+          <div className="flex items-center gap-2 text-sm">
+            {clues.every((clue) => {
+              for (let i = 0; i < clue.answer.length; i++) {
+                const r = clue.direction === "down" ? clue.row + i : clue.row;
+                const c = clue.direction === "across" ? clue.col + i : clue.col;
+                if ((grid[`${r}-${c}`] || "").toUpperCase() !== clue.answer[i].toUpperCase()) return false;
+              }
+              return true;
+            }) ? (
+              <>
+                <CheckCircle className="w-5 h-5 text-green-500" />
+                <span className="text-green-500 font-semibold">
+                  {language === "fr" ? "Parfait !" : language === "pt" ? "Perfeito!" : "Perfect!"}
+                </span>
+              </>
+            ) : (
+              <>
+                <XCircle className="w-5 h-5 text-destructive" />
+                <span className="text-destructive font-semibold">
+                  {language === "fr" ? "Certaines réponses sont incorrectes." : language === "pt" ? "Algumas respostas estão incorretas." : "Some answers are incorrect."}
+                </span>
+                <button
+                  onClick={handleReveal}
+                  className="ml-2 bg-accent text-accent-foreground px-4 py-1.5 rounded-lg text-sm font-semibold transition-colors hover:bg-accent/80"
+                >
+                  {language === "fr" ? "Voir les réponses" : language === "pt" ? "Ver respostas" : "Show answers"}
+                </button>
+              </>
+            )}
+          </div>
         </div>
       )}
     </div>
