@@ -1774,6 +1774,8 @@ export const lessons: Lesson[] = [
     titleLari: "Malongi me mu \"Bi\"",
     titleMandombe: "Malongi me mu Bi",
     description: "Discover powerful Bi- verbs related to sound, fire, blessing, and physical force — from resonating drums to blazing flames.",
+    descriptionFr: "Découvrez de puissants verbes en Bi- liés au son, au feu, à la bénédiction et à la force physique — des tambours résonnants aux flammes ardentes.",
+    descriptionPt: "Descubra poderosos verbos em Bi- relacionados ao som, fogo, bênção e força física — de tambores ressonantes a chamas ardentes.",
     level: "advanced",
     icon: "🥁",
     vocabulary: [
