@@ -548,6 +548,10 @@ export const lessons: Lesson[] = [
       { lari: "Mpimpa beto ka tu seke ko", mandombe: "Mpimpa beto ka tu seke ko", french: "La nuit dernière nous ne pouvions pas dormir", english: "Last night we couldn't sleep", portuguese: "Ontem à noite não conseguimos dormir" },
       { lari: "Ni luaka ka kue bele", mandombe: "Ni luwaka ka kuwe bele", french: "Il s'inquiète", english: "He is worried", portuguese: "Ele está preocupado" },
       { lari: "Kangeno vungula", mandombe: "Kangeno vungula", french: "Fermez à clef", english: "Lock the door", portuguese: "Tranquem a porta" },
+      { lari: "Lumbu tshi ku zandu mbele", mandombe: "Lumbu tshi ku zandu mbele", french: "Aujourd'hui je suis allée faire mes courses", english: "Today I went shopping", portuguese: "Hoje fui fazer as minhas compras" },
+      { lari: "Lolo muini wena ku", mandombe: "Lolo muini wena ku", french: "Aujourd'hui, il y a du soleil", english: "Today, it is sunny", portuguese: "Hoje, está sol" },
+      { lari: "Laki di mvula yena ku", mandombe: "Laki di mvula yena ku", french: "Aujourd'hui, il pleut", english: "Today, it is raining", portuguese: "Hoje, está a chover" },
+      { lari: "Lumbu tshi njele kuna nzo", mandombe: "Lumbu tshi njele kuna nzo", french: "Aujourd'hui je vais à la maison", english: "Today I am going home", portuguese: "Hoje vou para casa" },
     ],
     exercises: [
       {
