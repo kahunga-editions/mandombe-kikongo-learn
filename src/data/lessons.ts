@@ -52,7 +52,46 @@ export interface FillInBlankQuestion {
   hintPt?: string;
 }
 
-export type Exercise = MultipleChoiceQuestion | MatchingQuestion | FillInBlankQuestion;
+export interface CrosswordClue {
+  answer: string;
+  clue: string;
+  clueFr?: string;
+  cluePt?: string;
+  row: number;
+  col: number;
+  direction: "across" | "down";
+}
+
+export interface CrosswordQuestion {
+  type: "crossword";
+  title?: string;
+  titleFr?: string;
+  titlePt?: string;
+  gridSize: number;
+  clues: CrosswordClue[];
+}
+
+export interface WordSearchClue {
+  word: string;
+  clue: string;
+  clueFr?: string;
+  cluePt?: string;
+  row: number;
+  col: number;
+  direction: "across" | "down" | "diagonal";
+}
+
+export interface WordSearchQuestion {
+  type: "word-search";
+  title?: string;
+  titleFr?: string;
+  titlePt?: string;
+  gridSize: number;
+  words: WordSearchClue[];
+  fillerLetters: string;
+}
+
+export type Exercise = MultipleChoiceQuestion | MatchingQuestion | FillInBlankQuestion | CrosswordQuestion | WordSearchQuestion;
 
 export interface SyntaxExample {
   lari: string;
