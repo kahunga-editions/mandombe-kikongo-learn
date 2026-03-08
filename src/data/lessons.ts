@@ -2625,6 +2625,7 @@ export const lessons: Lesson[] = [
       { lari: "Biampamba", mandombe: "Biyampamba", french: "Les choses, les biens", english: "Things, possessions, goods" },
       { lari: "Bibanzulu", mandombe: "Bibanzulu", french: "Les pensées, les soupçons", english: "Thoughts, suspicions" },
       { lari: "Bibindulu", mandombe: "Bibindulu", french: "Pardon", english: "Forgiveness, pardon" },
+      { lari: "Kingunza", mandombe: "Kingunza", french: "Ordre initiatique Kongo visant à maîtriser le ki (énergie intérieure) en se connectant à l'énergie féminine (ngu) du cosmos (nza)", english: "Kongo initiatic order aiming to master ki (inner energy) by connecting to the feminine energy (ngu) of the cosmos (nza)" },
     ],
     phrases: [
       { lari: "Nzo ka biadila", mandombe: "Nzo ka biyadila", french: "Il a hérité la maison", english: "He inherited the house" },
