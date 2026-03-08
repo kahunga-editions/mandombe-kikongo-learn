@@ -3875,7 +3875,7 @@ export const lessons: Lesson[] = [
       { lari: "Malembe", mandombe: "Malembe", french: "Doucement, lentement", english: "Gently, slowly" },
       { lari: "Mamba", mandombe: "Mamba", french: "Liquide, eau, jus", english: "Liquid, water, juice" },
       { lari: "Mana", mandombe: "Mana", french: "Finir, achever / Élan, énergie, ruse", english: "To finish / Energy, cunning" },
-      { lari: "Mandala", mandombe: "Mandala", french: "Palme, rameau de palmier", english: "Palm branch, palm frond" },
+      { lari: "Mandala", mandombe: "Mandala", french: "Palmes, rameaux de palmier", english: "Palm branches, palm fronds" },
       { lari: "Manga", mandombe: "Manga", french: "Une mangue", english: "A mango" },
       { lari: "Manisa", mandombe: "Manisa", french: "Terminer, achever, conclure", english: "To finish, to conclude" },
       { lari: "Mante", mandombe: "Mante", french: "La bave, la salive", english: "Drool, saliva" },
