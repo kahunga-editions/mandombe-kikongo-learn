@@ -6279,7 +6279,7 @@ export const lessons: Lesson[] = [
       { lari: "Lembo", mandombe: "Lembo", french: "Ne pas", english: "Not", portuguese: "Não" },
       { lari: "Nsatu", mandombe: "Nsatu", french: "La faim", english: "Hunger", portuguese: "Fome" },
       { lari: "Nkesi / Nkeshi", mandombe: "Nkesi / Nkeshi", french: "La colère", english: "Anger", portuguese: "Raiva" },
-      { lari: "Dzuna", mandombe: "Djuna", french: "Se calmer", english: "To calm down", portuguese: "Acalmar-se", note: "Prononcé /dzuna/" },
+      { lari: "Djuna", mandombe: "Djuna", french: "Se calmer", english: "To calm down", portuguese: "Acalmar-se", note: "S'écrit 'Djuna' mais se prononce /dzuna/" },
       { lari: "Bubote", mandombe: "Bubote", french: "Bien", english: "Well", portuguese: "Bem" },
     ],
     syntax: [
