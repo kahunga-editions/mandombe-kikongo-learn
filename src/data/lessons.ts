@@ -2313,7 +2313,7 @@ export const lessons: Lesson[] = [
       { lari: "Bikululu", mandombe: "Bikululu", french: "Quotidien, habituel; rançon", english: "Daily, usual; ransom" },
       { lari: "Bikoyi", mandombe: "Bikoyi", french: "Complaintes, supplications", english: "Complaints, supplications" },
       { lari: "Bingi", mandombe: "Bingi", french: "Nombreux", english: "Numerous, many" },
-      { lari: "Bibyengele", mandombe: "Bibyengele", french: "Menottes", english: "Handcuffs" },
+      { lari: "Bibiengele", mandombe: "Bibiengele", french: "Menottes", english: "Handcuffs" },
       { lari: "Biantwadi", mandombe: "Biantwadi", french: "Richesses, biens communs", english: "Wealth, common goods" },
     ],
     phrases: [
