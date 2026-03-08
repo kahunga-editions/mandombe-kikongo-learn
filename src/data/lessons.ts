@@ -174,6 +174,8 @@ export const lessons: Lesson[] = [
       { lari: "Nkumbu", mandombe: "Nkumbu", french: "Nom", english: "Name", portuguese: "Nome" },
       { lari: "Meno", mandombe: "Meno", french: "Je, moi", english: "I, me", portuguese: "Eu, mim" },
       { lari: "Ani", mandombe: "Ani", french: "Mon, ma, mes", english: "My, mine", portuguese: "Meu, minha" },
+      { lari: "Aku", mandombe: "Aku", french: "Ton, ta, tes, le tien, les tiens", english: "Your, yours", portuguese: "Teu, tua, teus" },
+      { lari: "Andi", mandombe: "Andi", french: "Son, sa, ses, le sien, la sienne, les siennes", english: "His, her, hers, its", portuguese: "Seu, sua, seus" },
       { lari: "Mpangi", mandombe: "Mpangi", french: "Cadet, petit frère, petite soeur, le plus jeune", english: "Younger sibling, youngest", portuguese: "Caçula, irmão/irmã mais novo(a)" },
       { lari: "Yaya", mandombe: "Yaya", french: "Grand frère, grande soeur, aîné(e)", english: "Elder sibling, eldest", portuguese: "Irmão/irmã mais velho(a)" },
       { lari: "Kibushi", mandombe: "Kibushi", french: "La soeur", english: "Sister", portuguese: "Irmã" },
