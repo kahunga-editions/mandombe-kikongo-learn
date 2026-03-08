@@ -7926,7 +7926,6 @@ export const lessons: Lesson[] = [
       },
     ],
   },
-  },
   {
     id: "proverbes-particules",
     title: "Proverbs & Nominal Particles",
