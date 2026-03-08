@@ -771,7 +771,7 @@ export const lessons: Lesson[] = [
       { lari: "Nzo", mandombe: "Nzo", french: "Maison", english: "House", portuguese: "Casa" },
       { lari: "Bisalu", mandombe: "Bisalu", french: "Activités", english: "Activities", portuguese: "Atividades" },
       { lari: "Tshima | Bima", mandombe: "Tshima | Bima", french: "Une chose | Les choses", english: "A thing | Things", portuguese: "Uma coisa | As coisas" },
-      { lari: "Kati", mandombe: "Kati", french: "La chambre", english: "The room", portuguese: "O quarto" },
+      { lari: "Kati", mandombe: "Kati", french: "La chambre, l'intérieur", english: "The room, the inside", portuguese: "O quarto, o interior" },
       { lari: "Mvungula", mandombe: "Mvungula", french: "La clef", english: "The key", portuguese: "A chave" },
       { lari: "Muinda", mandombe: "Muinda", french: "La lampe", english: "The lamp", portuguese: "A lâmpada" },
       { lari: "Muelo", mandombe: "Muelo", french: "Une porte", english: "A door", portuguese: "Uma porta" },
