@@ -1943,7 +1943,7 @@ export const lessons: Lesson[] = [
       { lari: "Badi", mandombe: "Badi", french: "Légume, amarante", english: "Vegetable, amaranth" },
       { lari: "Badika", mandombe: "Badika", french: "Penser, méditer, prendre conscience", english: "To think, to meditate, to realize" },
       { lari: "Badisa", mandombe: "Badisa", french: "Durcir, fortifier, augmenter", english: "To harden, to fortify, to increase" },
-      { lari: "Bafu", mandombe: "Bafu", french: "Petite hache (pirogues, sculpture)", english: "Small axe (canoes, sculpture)" },
+      { lari: "Bafu (pl. Mabafu)", mandombe: "Bafu", french: "Petite hache (pirogues, sculpture)", english: "Small axe (canoes, sculpture)" },
       { lari: "Bafuka", mandombe: "Bafuka", french: "Être enlevé, décollé, se détacher", english: "To be peeled off, to detach" },
       { lari: "Bafuna", mandombe: "Bafuna", french: "Forcer pour ouvrir", english: "To force open" },
       { lari: "Bagu / Bahu", mandombe: "Bagu / Bahu", french: "Capturer, attraper", english: "To capture, to catch" },
