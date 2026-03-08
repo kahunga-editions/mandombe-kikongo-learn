@@ -1084,7 +1084,7 @@ export const lessons: Lesson[] = [
       { lari: "Bumba", mandombe: "Bumba", french: "Embrasser, enlacer", english: "To embrace, to hug" },
       { lari: "Badika", mandombe: "Badika", french: "Penser, méditer", english: "To think, to meditate" },
       { lari: "Bakana", mandombe: "Bakana", french: "Se disputer, se chamailler", english: "To argue, to quarrel" },
-      { lari: "Bagukila", mandombe: "Bagukila", french: "Tomber amoureux, admirer", english: "To fall in love, to admire" },
+      { lari: "Bagukila / Bahukila", mandombe: "Bagukila / Bahukila", french: "Tomber amoureux, admirer", english: "To fall in love, to admire" },
       { lari: "Balabalala", mandombe: "Balabalala", french: "Route, rue, chemin", english: "Road, street, path" },
       { lari: "Mbalu", mandombe: "Mbalu", french: "Cheval", english: "Horse" },
       { lari: "Bandu", mandombe: "Bandu", french: "Origine, genèse", english: "Origin, genesis" },
