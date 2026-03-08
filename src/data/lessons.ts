@@ -4075,6 +4075,7 @@ export const lessons: Lesson[] = [
       { lari: "Yelesa", mandombe: "Yelesa", french: "Faire pousser", english: "To grow, to make grow", portuguese: "Fazer crescer" },
       { lari: "Yooka", mandombe: "Yooka", french: "Brûler, faire un barbecue", english: "To burn, to barbecue", portuguese: "Queimar, fazer churrasco", note: "Le /o:/ est long. Ne pas confondre avec « Yoka » (passer) où le /o/ est court." },
       { lari: "Yoka", mandombe: "Yoka", french: "Passer", english: "To pass", portuguese: "Passar", note: "Le /o/ est court. Ne pas confondre avec « Yooka » (brûler) où le /o:/ est long." },
+      { lari: "Moyo yoka", mandombe: "Moyo yoka", french: "Avoir la diarrhée", english: "To have diarrhea", portuguese: "Ter diarreia" },
       { lari: "Kueta", mandombe: "Kueta", french: "Grincer des dents pour exprimer le mécontentement", english: "To grind one's teeth to express discontent", portuguese: "Ranger os dentes para expressar descontentamento" },
       { lari: "Yetana", mandombe: "Yetana", french: "Errer sans but", english: "To wander aimlessly", portuguese: "Vaguear sem rumo" },
       { lari: "Yetasa", mandombe: "Yetasa", french: "Poser un lapin", english: "To stand someone up", portuguese: "Dar um bolo, não comparecer" },
