@@ -5117,8 +5117,8 @@ export const lessons: Lesson[] = [
       // Neck & Torso
       { lari: "Nsingu", mandombe: "Nsingu", french: "Cou", english: "Neck", portuguese: "Pescoço" },
       { lari: "Koshi", mandombe: "Koshi", french: "Nuque", english: "Nape", portuguese: "Nuca" },
-      { lari: "Hembo", mandombe: "Hembo", french: "Épaule", english: "Shoulder", portuguese: "Ombro" },
-      { lari: "Mahembo", mandombe: "Mahembo", french: "Épaules", english: "Shoulders", portuguese: "Ombros" },
+      { lari: "Hembo|Mahembo", mandombe: "Hembo|Mahembo", french: "Épaule, épaules", english: "Shoulder, shoulders", portuguese: "Ombro, ombros" },
+      
       { lari: "Ntulu", mandombe: "Ntulu", french: "Poitrine", english: "Chest", portuguese: "Peito" },
       { lari: "Beni | Mabeni", mandombe: "Beni | Mabeni", french: "Sein | Seins", english: "Breast | Breasts", portuguese: "Seio | Seios" },
       { lari: "Nima", mandombe: "Nima", french: "Dos", english: "Back", portuguese: "Costas" },
