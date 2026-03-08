@@ -3768,6 +3768,8 @@ export const lessons: Lesson[] = [
       { lari: "Jinga", mandombe: "Jinga", french: "Enrouler", english: "To roll up, to wind" },
       { lari: "Jika", mandombe: "Jika", french: "Enterrer, inhumer", english: "To bury, to inter" },
       { lari: "Jiku|Majiku", mandombe: "Jiku|Majiku", french: "Un foyer", english: "A home, a household" },
+      { lari: "Jimbakana", mandombe: "Jimbakana", french: "Oublier", english: "To forget" },
+      { lari: "Zimbakana", mandombe: "Zimbakana", french: "Oublier, disparaître, être perdu", english: "To forget, to disappear, to be lost" },
       { lari: "Zeka", mandombe: "Zeka", french: "Tourner, tordre, visser", english: "To turn, to twist, to screw" },
       { lari: "Zibula", mandombe: "Zibula", french: "Ouvrir", english: "To open" },
       { lari: "Jibula", mandombe: "Jibula", french: "Ouvrir", english: "To open" },
