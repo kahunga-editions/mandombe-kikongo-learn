@@ -7211,7 +7211,7 @@ export const lessons: Lesson[] = [
       { lari: "Nzo za bilongo", mandombe: "Njo ja bilongo", french: "Une pharmacie", english: "A pharmacy", portuguese: "Uma farmácia" },
       { lari: "Kalaka | Makalaka", mandombe: "Kalaka | Makalaka", french: "Un érudit | Des érudits", english: "A scholar | Scholars", portuguese: "Um erudito | Eruditos", note: "Kalaka (singulier) / Makalaka (pluriel)" },
       { lari: "Laka | Malaka", mandombe: "Laka | Malaka", french: "La gorge | Les gorges", english: "The throat | Throats", portuguese: "A garganta | As gargantas" },
-      { lari: "Lenda", mandombe: "Lenda", french: "Pouvoir (verbe)", english: "Can, to be able to", portuguese: "Poder (verbo)" },
+      { lari: "Lenda", mandombe: "Lenda", french: "Pouvoir (verbe), être capable de", english: "Can, to be able to", portuguese: "Poder (verbo), ser capaz de" },
       { lari: "Lulendo", mandombe: "Lulendo", french: "Pouvoir, puissance, orgueil, possibilité, facilité d'exécuter", english: "Power, might, pride, possibility, ease of execution", portuguese: "Poder, potência, orgulho, possibilidade" },
       { lari: "Mbo", mandombe: "Mbo", french: "Particule du futur", english: "Future tense particle", portuguese: "Partícula de futuro", note: "Mbo se place devant l'expression de résultat pour marquer le futur" },
       { lari: "Nsayi", mandombe: "Nsayi", french: "La joie", english: "Joy, happiness", portuguese: "A alegria" },
