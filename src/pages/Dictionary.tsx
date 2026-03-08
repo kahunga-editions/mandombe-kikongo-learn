@@ -203,9 +203,9 @@ const Dictionary = () => {
                         </span>
                       </div>
                       {/* Translation */}
-                      <p className="mt-2 text-foreground/90 text-lg">
-                        {getTranslation(entry)}
-                      </p>
+                      
+
+                  
                       {entry.note &&
                   <p className="mt-1 text-sm text-muted-foreground italic">
                           {entry.note}
