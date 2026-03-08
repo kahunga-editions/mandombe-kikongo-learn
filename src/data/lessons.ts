@@ -4573,7 +4573,7 @@ export const lessons: Lesson[] = [
       { lari: "Mbala", mandombe: "Mbala", french: "Patate douce", english: "Sweet potato", portuguese: "Batata-doce" },
       { lari: "Nungu", mandombe: "Nungu", french: "Piment (pluriel)", english: "Peppers", portuguese: "Pimentas" },
       { lari: "Lunungu", mandombe: "Lunungu", french: "Piment (singulier)", english: "Pepper", portuguese: "Pimenta" },
-      { lari: "Wandu", mandombe: "Wandu", french: "Pois d'angole", english: "Pigeon peas", portuguese: "Feijão-guandu" },
+      { lari: "N'uandu, Muwandu|Miwandu", mandombe: "Nuandu, Muwandu|Miwandu", french: "Pois d'angole", english: "Pigeon peas", portuguese: "Feijão-guandu" },
       { lari: "Tshintu", mandombe: "Tshintu", french: "Ananas (singulier)", english: "Pineapple", portuguese: "Ananás" },
       { lari: "Bintu", mandombe: "Bintu", french: "Ananas (pluriel)", english: "Pineapples", portuguese: "Ananases" },
       { lari: "Dinkondi", mandombe: "Dinkondi", french: "Banane (singulier)", english: "Banana", portuguese: "Banana" },
