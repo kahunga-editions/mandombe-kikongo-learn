@@ -41,7 +41,7 @@ const buildDictionary = (): DictionaryEntry[] => {
           category: cat,
           categoryFr: catFr,
           categoryPt: catPt,
-          note: item.note,
+          note: item.note
         });
       }
     };
@@ -62,7 +62,7 @@ const buildDictionary = (): DictionaryEntry[] => {
           category: cat,
           categoryFr: catFr,
           categoryPt: catPt,
-          note: p.note,
+          note: p.note
         });
       }
     }
@@ -83,17 +83,17 @@ const Dictionary = () => {
 
   const getTranslation = (entry: DictionaryEntry) => {
     switch (language) {
-      case "fr": return entry.french;
-      case "pt": return entry.portuguese || entry.english;
-      default: return entry.english;
+      case "fr":return entry.french;
+      case "pt":return entry.portuguese || entry.english;
+      default:return entry.english;
     }
   };
 
   const getCategory = (entry: DictionaryEntry) => {
     switch (language) {
-      case "fr": return entry.categoryFr;
-      case "pt": return entry.categoryPt;
-      default: return entry.category;
+      case "fr":return entry.categoryFr;
+      case "pt":return entry.categoryPt;
+      default:return entry.category;
     }
   };
 
@@ -108,10 +108,10 @@ const Dictionary = () => {
       const q = search.toLowerCase().trim();
       results = results.filter(
         (e) =>
-          e.lari.toLowerCase().includes(q) ||
-          e.french.toLowerCase().includes(q) ||
-          e.english.toLowerCase().includes(q) ||
-          (e.portuguese && e.portuguese.toLowerCase().includes(q))
+        e.lari.toLowerCase().includes(q) ||
+        e.french.toLowerCase().includes(q) ||
+        e.english.toLowerCase().includes(q) ||
+        e.portuguese && e.portuguese.toLowerCase().includes(q)
       );
     }
 
@@ -145,10 +145,10 @@ const Dictionary = () => {
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
             <Input
               value={search}
-              onChange={(e) => { setSearch(e.target.value); setActiveLetter(null); }}
+              onChange={(e) => {setSearch(e.target.value);setActiveLetter(null);}}
               placeholder={t("dict.searchPlaceholder")}
-              className="pl-12 h-14 text-lg rounded-xl border-border bg-card shadow-sm focus-visible:ring-primary"
-            />
+              className="pl-12 h-14 text-lg rounded-xl border-border bg-card shadow-sm focus-visible:ring-primary" />
+            
           </div>
 
           {/* Alphabet nav */}
@@ -156,48 +156,48 @@ const Dictionary = () => {
             <button
               onClick={() => setActiveLetter(null)}
               className={`w-9 h-9 rounded-lg text-sm font-bold transition-colors ${
-                !activeLetter
-                  ? "bg-primary text-primary-foreground"
-                  : "bg-card text-muted-foreground hover:bg-accent hover:text-accent-foreground"
-              }`}
-            >
+              !activeLetter ?
+              "bg-primary text-primary-foreground" :
+              "bg-card text-muted-foreground hover:bg-accent hover:text-accent-foreground"}`
+              }>
+              
               {t("dict.all")}
             </button>
-            {alphabet.map((letter) => (
-              <button
-                key={letter}
-                onClick={() => { setActiveLetter(letter); setSearch(""); }}
-                className={`w-9 h-9 rounded-lg text-sm font-bold transition-colors ${
-                  activeLetter === letter
-                    ? "bg-primary text-primary-foreground"
-                    : "bg-card text-muted-foreground hover:bg-accent hover:text-accent-foreground"
-                }`}
-              >
+            {alphabet.map((letter) =>
+            <button
+              key={letter}
+              onClick={() => {setActiveLetter(letter);setSearch("");}}
+              className={`w-9 h-9 rounded-lg text-sm font-bold transition-colors ${
+              activeLetter === letter ?
+              "bg-primary text-primary-foreground" :
+              "bg-card text-muted-foreground hover:bg-accent hover:text-accent-foreground"}`
+              }>
+              
                 {letter}
               </button>
-            ))}
+            )}
           </div>
 
           {/* Results */}
-          {filtered.length === 0 ? (
-            <div className="text-center py-16">
+          {filtered.length === 0 ?
+          <div className="text-center py-16">
               <BookOpen className="w-12 h-12 text-muted-foreground/40 mx-auto mb-4" />
               <p className="text-muted-foreground text-lg">{t("dict.noResults")}</p>
-            </div>
-          ) : (
-            <div className="max-w-4xl mx-auto grid gap-3">
-              {filtered.map((entry, i) => (
-                <div
-                  key={`${entry.lari}-${i}`}
-                  className="group bg-card rounded-xl border border-border p-5 hover:border-primary/30 hover:shadow-md transition-all"
-                >
+            </div> :
+
+          <div className="max-w-4xl mx-auto grid gap-3">
+              {filtered.map((entry, i) =>
+            <div
+              key={`${entry.lari}-${i}`}
+              className="group bg-card rounded-xl border border-border p-5 hover:border-primary/30 hover:shadow-md transition-all">
+              
                   <div className="flex flex-col sm:flex-row sm:items-start gap-3">
                     {/* Lari word */}
                     <div className="flex-1 min-w-0">
                       <div className="flex items-baseline gap-3 flex-wrap">
-                        <span className="text-xl font-bold text-foreground font-display">
-                          {entry.lari}
-                        </span>
+                        
+
+                    
                         <span className="font-mandombe text-2xl text-primary/70 leading-none">
                           {entry.mandombe}
                         </span>
@@ -206,11 +206,11 @@ const Dictionary = () => {
                       <p className="mt-2 text-foreground/90 text-lg">
                         {getTranslation(entry)}
                       </p>
-                      {entry.note && (
-                        <p className="mt-1 text-sm text-muted-foreground italic">
+                      {entry.note &&
+                  <p className="mt-1 text-sm text-muted-foreground italic">
                           {entry.note}
                         </p>
-                      )}
+                  }
                     </div>
                     {/* Category badge */}
                     <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-accent/20 text-accent-foreground whitespace-nowrap">
@@ -225,15 +225,15 @@ const Dictionary = () => {
                     {entry.portuguese && <span>🇵🇹 {entry.portuguese}</span>}
                   </div>
                 </div>
-              ))}
+            )}
             </div>
-          )}
+          }
         </div>
       </main>
 
       <Footer />
-    </div>
-  );
+    </div>);
+
 };
 
 export default Dictionary;
