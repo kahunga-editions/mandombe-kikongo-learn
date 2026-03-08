@@ -151,6 +151,27 @@ const translations: Record<Language, Record<string, string>> = {
     "dict.all": "Tous",
     "dict.noResults": "Aucun mot trouvé. Essayez une autre recherche.",
 
+    // Flashcards
+    "nav.flashcards": "Fiches",
+    "flashcards.eyebrow": "Bitanda bia Nkanda — Fiches de révision",
+    "flashcards.title": "Fiches de révision",
+    "flashcards.subtitle": "Créez vos propres fiches et révisez avec la répétition espacée, comme Anki.",
+    "flashcards.localWarning": "Connectez-vous pour synchroniser vos fiches entre appareils. Sans connexion, elles sont sauvegardées localement dans votre navigateur.",
+    "flashcards.totalCards": "fiches au total",
+    "flashcards.dueToday": "à réviser",
+    "flashcards.learned": "apprises",
+    "flashcards.newCards": "nouvelles",
+    "flashcards.startReview": "Réviser",
+    "flashcards.createCard": "Créer une fiche",
+    "flashcards.browse": "Parcourir",
+    "flashcards.deck": "Paquet",
+    "flashcards.add": "Ajouter la fiche",
+    "flashcards.tapToReveal": "Cliquez pour révéler la réponse",
+    "flashcards.allDone": "Révision terminée !",
+    "flashcards.comeBack": "Revenez plus tard pour continuer à apprendre.",
+    "flashcards.backToDecks": "Retour",
+    "flashcards.noCards": "Aucune fiche pour le moment. Créez votre première fiche !",
+
     // Footer
     "footer.description": "La Maison du Savoir — préserver et enseigner le Kikongo Lari et l'écriture Mandombe pour la diaspora Kongo et le monde.",
     "footer.learnTitle": "Apprendre",
