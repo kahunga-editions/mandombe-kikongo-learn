@@ -951,7 +951,7 @@ export const lessons: Lesson[] = [
     phrases: [
       { lari: "Bi signifie la multiplication de l'etre interieur", mandombe: "Bi", french: "/bi/ signifie la multiplication de l'être intérieur", english: "/bi/ means the multiplication of the inner being" },
       { lari: "Nzo ka biadila", mandombe: "Nzo ka biyadila", french: "Il a hérité la maison", english: "He inherited the house" },
-      { lari: "Beno ngatu, lu zumese, mababa", mandombe: "Beno ngatu, lu zumese, mababa", french: "Vous risqueriez de faire parler les muets", english: "You would risk making the mute speak — don't test our patience" },
+      { lari: "Beno ngatu lu zonzesz mababa.", mandombe: "Beno ngatu lu zonzesz mababa.", french: "Vous risqueriez de faire parler les muets", english: "You would risk making the mute speak — don't test our patience" },
     ],
     exercises: [
       {
@@ -1973,7 +1973,7 @@ export const lessons: Lesson[] = [
       { lari: "Muleke | Baleke", mandombe: "Muleke | Baleke", french: "Un(e) cadet(te), plus jeune", english: "A younger one, junior", note: "Muleke (singulier) / Baleke (pluriel)" },
     ],
     phrases: [
-      { lari: "Beno ngatu, lu zumese, mababa", mandombe: "Beno ngatu, lu zumese, mababa", french: "N'abusez pas de notre patience", english: "Don't test our patience — you'd make the mute speak" },
+      { lari: "Beno ngatu lu zonzesz mababa.", mandombe: "Beno ngatu lu zonzesz mababa.", french: "N'abusez pas de notre patience", english: "Don't test our patience — you'd make the mute speak" },
       { lari: "Banda moyo", mandombe: "Banda moyo", french: "Bas-ventre", english: "Lower belly" },
       { lari: "Banda", mandombe: "Banda", french: "Le sud, le bas de", english: "The south, the bottom of" },
       { lari: "Tandu", mandombe: "Tandu", french: "Le haut, le nord", english: "The top, the north" },
