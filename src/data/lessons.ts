@@ -3796,6 +3796,8 @@ export const lessons: Lesson[] = [
       { lari: "Ziula", mandombe: "Ziula", french: "Déterrer", english: "To dig up, to unearth" },
       { lari: "Jula", mandombe: "Jula", french: "Déterrer, exhumer", english: "To dig up, to exhume" },
       { lari: "Zukumuna", mandombe: "Zukumuna", french: "Lancer quelque chose pour faire tomber quelque chose", english: "To throw something to knock something down" },
+      { lari: "Zuka", mandombe: "Zuka", french: "Faire tournoyer en vue d'un lancement, comme avec une fronde", english: "To whirl around for a throw, as with a sling" },
+      { lari: "Zeloka", mandombe: "Zeloka", french: "Rouiller, être rouillé, être indisposée (pour une femme), avoir ses règles", english: "To rust, to be rusty, to be indisposed (for a woman), to menstruate" },
       { lari: "Lufua", mandombe: "Lufuwa", french: "La mort, le décès, la fin", english: "Death, passing, the end" },
       { lari: "Lufutu", mandombe: "Lufutu", french: "Le paiement, le salaire", english: "Payment, salary" },
       { lari: "Luka", mandombe: "Luka", french: "Vomir", english: "To vomit" },
