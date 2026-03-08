@@ -920,7 +920,7 @@ export const lessons: Lesson[] = [
       { lari: "Bifu", mandombe: "Bifu", french: "Habitudes", english: "Habits" },
       { lari: "Biba", mandombe: "Biba", french: "Esprits des morts", english: "Spirits of the dead" },
       { lari: "Bibungu", mandombe: "Bibungu", french: "Mottes de terre", english: "Clods of earth" },
-      { lari: "Bidiki", mandombe: "Bidiki", french: "Brique", english: "Brick" },
+      { lari: "Bidiki | Bibidiki", mandombe: "Bidiki | Bibidiki", french: "Brique", english: "Brick" },
       { lari: "Bidila", mandombe: "Bidila", french: "Ourlet, natte", english: "Hem, mat" },
       { lari: "Bidima", mandombe: "Bidima", french: "Flamber, être ardent", english: "To blaze, to burn intensely" },
       { lari: "Bidissa", mandombe: "Bidissa", french: "Faire bouillir", english: "To boil" },
