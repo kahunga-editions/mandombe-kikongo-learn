@@ -3779,7 +3779,7 @@ export const lessons: Lesson[] = [
       { lari: "Zibula", mandombe: "Zibula", french: "Ouvrir", english: "To open" },
       { lari: "Jibula", mandombe: "Jibula", french: "Ouvrir", english: "To open" },
       { lari: "Zibuka", mandombe: "Zibuka", french: "Être ouvert, être débouché", english: "To be open, to be uncorked" },
-      { lari: "Zeza", mandombe: "Zeza", french: "Être relâché", english: "To be released, to be loosened" },
+      { lari: "Zeza", mandombe: "Zeza", french: "Être relâché, être desserré", english: "To be released, to be loosened" },
       { lari: "Zakala", mandombe: "Zakala", french: "S'asseoir", english: "To sit down" },
       { lari: "Zandu", mandombe: "Zandu", french: "Le marché", english: "The market" },
       { lari: "Zangula", mandombe: "Zangula", french: "Élever, rehausser", english: "To raise, to elevate" },
