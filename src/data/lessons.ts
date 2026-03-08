@@ -4907,8 +4907,7 @@ export const lessons: Lesson[] = [
       { lari: "Ngombe", mandombe: "Ngombe", french: "Bœuf", english: "Ox / Cow", portuguese: "Boi / Vaca" },
       { lari: "Ngulu", mandombe: "Ngulu", french: "Cochon", english: "Pig", portuguese: "Porco" },
       { lari: "Bitunga", mandombe: "Bitunga", french: "Paniers (plur.)", english: "Baskets (plur.)", portuguese: "Cestos (plur.)" },
-      { lari: "Lele", mandombe: "Lele", french: "Pagne (sing.)", english: "Loincloth (sing.)", portuguese: "Pano (sing.)" },
-      { lari: "Milele", mandombe: "Milele", french: "Pagnes (plur.)", english: "Loincloths (plur.)", portuguese: "Panos (plur.)" },
+      { lari: "Nlele|Milele", mandombe: "Nlele|Milele", french: "Pagne, pagnes", english: "Loincloth, loincloths", portuguese: "Pano, panos" },
     ],
     phrases: [
       // Rule 1: particle between the noun and the number
