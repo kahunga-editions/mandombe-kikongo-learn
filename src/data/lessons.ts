@@ -5240,6 +5240,11 @@ export const lessons: Lesson[] = [
       { lari: "Maluma", mandombe: "Maluma", french: "Sperme", english: "Sperm", portuguese: "Esperma" },
       { lari: "Mante", mandombe: "Mante", french: "Salive", english: "Saliva", portuguese: "Saliva" },
       { lari: "Tuvi | Matuvi", mandombe: "Tuvi | Matuvi", french: "Selles", english: "Feces", portuguese: "Fezes" },
+      { lari: "Nena", mandombe: "Nena", french: "Faire caca, aller à la selle", english: "To defecate, to have a bowel movement", portuguese: "Defecar, evacuar" },
+      { lari: "Suba", mandombe: "Suba", french: "Faire pipi, uriner", english: "To urinate, to pee", portuguese: "Urinar, fazer xixi" },
+      { lari: "Bilusu", mandombe: "Bilusu", french: "Du vomi, tout ce qu'on renvoie", english: "Vomit, anything regurgitated", portuguese: "Vômito, tudo o que se regurgita" },
+      { lari: "Fukutila", mandombe: "Fukutila", french: "La morve", english: "Nasal mucus, snot", portuguese: "Ranho, muco nasal" },
+      { lari: "Futikila", mandombe: "Futikila", french: "La morve", english: "Nasal mucus, snot", portuguese: "Ranho, muco nasal" },
     ],
     exercises: [
       // Exercise 1: Matching — Head & Face
