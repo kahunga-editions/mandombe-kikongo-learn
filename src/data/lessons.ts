@@ -1978,8 +1978,8 @@ export const lessons: Lesson[] = [
       { lari: "Banda", mandombe: "Banda", french: "Le sud, le bas de", english: "The south, the bottom of" },
       { lari: "Tandu", mandombe: "Tandu", french: "Le haut, le nord", english: "The top, the north" },
       { lari: "Londe", mandombe: "Londe", french: "En haut de, en hauteur", english: "Up above, at a height" },
-      { lari: "Wa ku banda kana wa ku mona mfuilu", mandombe: "Wa ku banda kana wa ku mona mfuilu", french: "Celui qui t'est proche assistera à ta mort", english: "The one close to you will witness your death" },
-      { lari: "Banda kana", mandombe: "Banda kana", french: "Être près de, être présent", english: "To be near, to be present" },
+      { lari: "Wa ku bandakana wa ku mona mfuilu", mandombe: "Wa ku bandakana wa ku mona mfuilu", french: "Celui qui t'est proche assistera à ta mort", english: "The one close to you will witness your death" },
+      { lari: "Bandakana", mandombe: "Bandakana", french: "Être près de, être présent", english: "To be near, to be present" },
     ],
     exercises: [
       {
