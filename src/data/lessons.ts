@@ -1067,7 +1067,7 @@ export const lessons: Lesson[] = [
     icon: "🏃",
     vocabulary: [
       { lari: "Baka", mandombe: "Baka", french: "Obtenir, gagner, acquérir", english: "To obtain, to gain, to acquire" },
-      { lari: "Bakala", mandombe: "Bakala", french: "Mâle, homme, époux", english: "Male, man, husband" },
+      { lari: "Bakala | Babakala", mandombe: "Bakala | Babakala", french: "Mâle, homme, époux", english: "Male, man, husband" },
       { lari: "Bakisa", mandombe: "Bakisa", french: "Aider, assister, secourir", english: "To help, to assist, to rescue" },
       { lari: "Bakula", mandombe: "Bakula", french: "Expliquer, répondre", english: "To explain, to answer" },
       { lari: "Bala", mandombe: "Bala", french: "Initier, petit", english: "To initiate; small" },
