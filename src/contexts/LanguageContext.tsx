@@ -394,7 +394,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Dictionary
     "nav.dictionary": "Dicionário",
-    "dict.eyebrow": "Buku dia Bintsono — Dicionário",
+    "dict.eyebrow": "Buku dia Binsono — Dicionário",
     "dict.title": "Dicionário Kikongo Lari",
     "dict.subtitle": "Pesquise uma palavra em lari, francês, inglês ou português e encontre a sua tradução instantaneamente.",
     "dict.searchPlaceholder": "Escreva uma palavra em lari, francês, inglês ou português…",
