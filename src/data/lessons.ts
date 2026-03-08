@@ -3809,6 +3809,7 @@ export const lessons: Lesson[] = [
       { lari: "Zingalakana", mandombe: "Zingalakana", french: "S'entortiller, s'enrouler, s'emmêler", english: "To get tangled, to coil up, to get entangled" },
       { lari: "Zingu", mandombe: "Zingu", french: "La vie, l'existence", english: "Life, existence" },
       { lari: "Tshizingu|Bizingu", mandombe: "Tshizingu|Bizingu", french: "La vie, l'existence", english: "Life, existence" },
+      { lari: "Zingila", mandombe: "Zingila", french: "Durer pour faire quelque chose, traîner, mettre du temps à faire quelque chose, mettre du temps à revenir d'un endroit", english: "To take a long time doing something, to linger, to be slow to return from somewhere" },
       { lari: "Lufua", mandombe: "Lufuwa", french: "La mort, le décès, la fin", english: "Death, passing, the end" },
       { lari: "Lufutu", mandombe: "Lufutu", french: "Le paiement, le salaire", english: "Payment, salary" },
       { lari: "Luka", mandombe: "Luka", french: "Vomir", english: "To vomit" },
