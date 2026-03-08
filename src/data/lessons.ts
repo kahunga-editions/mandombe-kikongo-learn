@@ -5239,7 +5239,7 @@ export const lessons: Lesson[] = [
       { lari: "Masuba", mandombe: "Masuba", french: "Urines", english: "Urine", portuguese: "Urina" },
       { lari: "Maluma", mandombe: "Maluma", french: "Sperme", english: "Sperm", portuguese: "Esperma" },
       { lari: "Mante", mandombe: "Mante", french: "Salive", english: "Saliva", portuguese: "Saliva" },
-      { lari: "Tuvi", mandombe: "Tuvi", french: "Selles", english: "Feces", portuguese: "Fezes" },
+      { lari: "Tuvi | Matuvi", mandombe: "Tuvi | Matuvi", french: "Selles", english: "Feces", portuguese: "Fezes" },
     ],
     exercises: [
       // Exercise 1: Matching — Head & Face
