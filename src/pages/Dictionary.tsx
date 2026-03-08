@@ -195,17 +195,14 @@ const Dictionary = () => {
                     {/* Lari word */}
                     <div className="flex-1 min-w-0">
                       <div className="flex items-baseline gap-3 flex-wrap">
-                        
-
-                    
+                        <h3 className="text-xl font-bold text-foreground">{entry.lari}</h3>
                         <span className="font-mandombe text-2xl text-primary/70 leading-none">
                           {entry.mandombe}
                         </span>
                       </div>
-                      {/* Translation */}
-                      
-
-                  
+                      <p className="mt-1 text-base text-muted-foreground">
+                        {getTranslation(entry)}
+                      </p>
                       {entry.note &&
                   <p className="mt-1 text-sm text-muted-foreground italic">
                           {entry.note}
