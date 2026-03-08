@@ -271,7 +271,7 @@ const Flashcards = () => {
                     onClick={() => handleRate(btn.quality)}
                     className={`px-6 py-3 rounded-xl font-semibold text-sm transition-transform hover:scale-105 ${btn.color}`}
                   >
-                    {btn.label[useLanguage().language] || btn.label.en}
+                    {btn.label[language] || btn.label.en}
                   </button>
                 ))}
               </div>
