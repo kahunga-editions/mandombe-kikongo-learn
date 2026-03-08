@@ -29,6 +29,7 @@ const App = () => (
               <Route path="/lessons" element={<Lessons />} />
               <Route path="/lessons/:lessonId" element={<LessonDetail />} />
               <Route path="/dictionary" element={<Dictionary />} />
+              <Route path="/flashcards" element={<Flashcards />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </AuthProvider>
