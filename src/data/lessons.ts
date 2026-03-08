@@ -6400,7 +6400,7 @@ export const lessons: Lesson[] = [
           { left: "Tomo", right: "Enough", rightFr: "Suffisamment", rightPt: "Suficientemente" },
           { left: "Lembo", right: "Not", rightFr: "Ne pas", rightPt: "Não" },
           { left: "Ngati", right: "So that", rightFr: "Pour que", rightPt: "Para que" },
-          { left: "Dzuna", right: "To calm down", rightFr: "Se calmer", rightPt: "Acalmar-se" },
+          { left: "Djuna", right: "To calm down", rightFr: "Se calmer", rightPt: "Acalmar-se" },
         ],
       },
       // Fill in blank
