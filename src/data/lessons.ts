@@ -2629,6 +2629,7 @@ export const lessons: Lesson[] = [
       { lari: "Nzo ka biadila", mandombe: "Nzo ka biyadila", french: "Il a hérité la maison", english: "He inherited the house" },
       { lari: "Biala kinganga kia Nzambi", mandombe: "Biyala kinganga kiya Nzambi", french: "Devenir prêtre", english: "To become a priest" },
       { lari: "Biangula nkumbu aku", mandombe: "Biyangula nkumbu aku", french: "Appelle ton nom à voix haute", english: "Call out your name loudly" },
+      { lari: "Nkia mvu(la) wa biala?", mandombe: "Nkia mvu(la) wa biyala?", french: "Quand as-tu été consacré ?", english: "When were you consecrated?" },
     ],
     exercises: [
       {
