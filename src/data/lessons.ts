@@ -180,7 +180,7 @@ export const lessons: Lesson[] = [
       { lari: "Mpangi", mandombe: "Mpangi", french: "Cadet, petit frère, petite soeur, le plus jeune", english: "Younger sibling, youngest", portuguese: "Caçula, irmão/irmã mais novo(a)" },
       { lari: "Yaya", mandombe: "Yaya", french: "Grand frère, grande soeur, aîné(e)", english: "Elder sibling, eldest", portuguese: "Irmão/irmã mais velho(a)" },
       { lari: "Kibushi", mandombe: "Kibushi", french: "La soeur", english: "Sister", portuguese: "Irmã" },
-      { lari: "Kanji", mandombe: "Kanji", french: "Le frère (en général)", english: "Brother (general)", portuguese: "Irmão (geral)" },
+      { lari: "Nkaji", mandombe: "Nkaji", french: "Le frère (en général)", english: "Brother (general)", portuguese: "Irmão (geral)" },
       { lari: "Ndiku", mandombe: "Ndiku", french: "Ami(e)", english: "Friend", portuguese: "Amigo/a" },
     ],
     phrases: [
