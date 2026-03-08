@@ -2440,6 +2440,7 @@ export const lessons: Lesson[] = [
       { lari: "Bamvuka", mandombe: "Bamvuka", french: "Se décaper, se décoller tout seul", english: "To peel off by itself" },
       { lari: "Bamvusa", mandombe: "Bamvusa", french: "Éclater, ouvrir par effraction", english: "To burst, to break in" },
       { lari: "Bamvuzuka", mandombe: "Bamvuzuka", french: "Se fendiller, se disloquer", english: "To crack, to dislocate" },
+      { lari: "Basa", mandombe: "Basa", french: "Fendre", english: "To split" },
       { lari: "Basu | Bibasu", mandombe: "Basu | Bibasu", french: "Fendre, fondre", english: "To split, to melt" },
       { lari: "Basuka", mandombe: "Basuka", french: "Se fendre", english: "To split" },
       { lari: "Bandamunwa", mandombe: "Bandamunwa", french: "Étonnement, bouche bée", english: "Astonishment, jaw-dropping" },
