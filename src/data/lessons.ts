@@ -1937,7 +1937,7 @@ export const lessons: Lesson[] = [
       { lari: "Babumuka", mandombe: "Babumuka", french: "Être surpris", english: "To be surprised" },
       { lari: "Babisa", mandombe: "Babisa", french: "Faire brûler, trop griller", english: "To let burn, to over-grill" },
       { lari: "Babonso", mandombe: "Babonso", french: "Tout le monde", english: "Everyone, everybody" },
-      { lari: "Babu", mandombe: "Babu", french: "À l'improviste, brusquement", english: "Suddenly, abruptly" },
+      { lari: "Babu", mandombe: "Babu", french: "Fait de frapper à l'improviste", english: "To strike suddenly, to hit unexpectedly" },
       { lari: "Badi", mandombe: "Badi", french: "Légume, amarante", english: "Vegetable, amaranth" },
       { lari: "Badika", mandombe: "Badika", french: "Penser, méditer, prendre conscience", english: "To think, to meditate, to realize" },
       { lari: "Badisa", mandombe: "Badisa", french: "Durcir, fortifier, augmenter", english: "To harden, to fortify, to increase" },
