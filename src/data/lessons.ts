@@ -2843,7 +2843,7 @@ export const lessons: Lesson[] = [
     phrases: [
       { lari: "Baku nkesi", mandombe: "Baku nkesi", french: "Se fâcher", english: "To get angry" },
       { lari: "Baku nsatu", mandombe: "Baku nsatu", french: "Avoir faim", english: "To be hungry" },
-      { lari: "Babonso ba kwiza", mandombe: "Babonso ba kwija", french: "Tout le monde est venu", english: "Everyone came" },
+      { lari: "Babonso ba kwiza", mandombe: "Babonso ba kwija", french: "Tout le monde va venir", english: "Everyone will come" },
       { lari: "Bakana na mpangi", mandombe: "Bakana na mpangi", french: "Se disputer avec un cadet", english: "To argue with a younger sibling" },
     ],
     exercises: [
