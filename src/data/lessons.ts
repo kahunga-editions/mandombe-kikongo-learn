@@ -3242,7 +3242,7 @@ export const lessons: Lesson[] = [
       { lari: "Futumuna", mandombe: "Futumuna", french: "Ouvrir un couteau ou un poing, déplier", english: "To open a knife or fist, to unfold" },
       { lari: "Fuana", mandombe: "Fuwana", french: "Suffire, convenir, être apte", english: "To suffice, to be suitable, capable" },
       { lari: "Fuanana", mandombe: "Fuwanana", french: "Convenir à, ressembler à", english: "To suit, to resemble" },
-      { lari: "Fuemba", mandombe: "Fuwemba", french: "Se moucher", english: "To blow one's nose" },
+      { lari: "Fuemba", mandombe: "Fuemba", french: "Se moucher", english: "To blow one's nose" },
       { lari: "Fuila", mandombe: "Fuwila", french: "Désir, soif de, besoin", english: "Desire, thirst for, need" },
     ],
     phrases: [
