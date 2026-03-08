@@ -3674,7 +3674,7 @@ export const lessons: Lesson[] = [
       { lari: "Longa bana", mandombe: "Longa bana", french: "Enseigner aux enfants", english: "Teach the children" },
       { lari: "Landa mono", mandombe: "Landa mono", french: "Suis-moi", english: "Follow me" },
       { lari: "Londa biloko", mandombe: "Londa biloko", french: "Réparer les choses", english: "Mend things" },
-      { lari: "Lemba ya bakulu", mandombe: "Lemba ya bakulu", french: "L'école initiatique des ancêtres", english: "The initiation school of the ancestors", note: "Lemba was a prestigious Kongo secret society for healing and social governance." },
+      { lari: "Lemba dia Bakulu", mandombe: "Lemba dia Bakulu", french: "L'école initiatique des ancêtres", english: "The initiation school of the ancestors", note: "Lemba was a prestigious Kongo secret society for healing and social governance." },
     ],
     exercises: [
       {
