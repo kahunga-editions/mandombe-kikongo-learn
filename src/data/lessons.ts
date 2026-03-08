@@ -3645,7 +3645,7 @@ export const lessons: Lesson[] = [
       { lari: "Nlandu|Milandu", mandombe: "Nlandu|Milandu", french: "Enfant né après les jumeaux, enfants nés après les jumeaux", english: "Child born after twins, children born after twins" },
       { lari: "Leba", mandombe: "Leba", french: "Cajoler, caresser, attendrir", english: "To cajole, caress, soften" },
       { lari: "Lebika", mandombe: "Lebika", french: "Armer un fusil, tendre un piège", english: "To arm a gun, to set a trap" },
-      { lari: "Leke", mandombe: "Leke", french: "Un enfant, un cadet, un jeune", english: "A child, a youth" },
+      { lari: "Nleke, Muleke|Baleke", mandombe: "Nleke, Muleke|Baleke", french: "Un enfant, un cadet / une cadette, des cadets / cadettes", english: "A child, a younger sibling, younger siblings" },
       { lari: "Lema", mandombe: "Lema", french: "Être brûlant de fièvre, flamber", english: "To burn with fever, to blaze" },
       { lari: "Lembana", mandombe: "Lembana", french: "Manquer, échouer, abandonner", english: "To fail, to miss, to give up" },
       { lari: "Lemba", mandombe: "Lemba", french: "Ancienne école initiatique Kongo", english: "Ancient Kongo initiation school" },
