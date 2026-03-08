@@ -6324,7 +6324,7 @@ export const lessons: Lesson[] = [
               { lari: "Dia bubote", mandombe: "Dia bubote", french: "Mange bien", english: "Eat well", portuguese: "Come bem" },
               { lari: "Tomo dia, ngatu wa lembo baku nsatu", mandombe: "Tomo dia, ngatu wa lembo baku nsatu", french: "Mange suffisamment pour ne pas avoir faim", english: "Eat enough so that you don't go hungry", portuguese: "Come o suficiente para não teres fome" },
               { lari: "Tomo dia, nga wa lembo baku nsatu", mandombe: "Tomo dia, nga wa lembo baku nsatu", french: "Mange suffisamment pour ne pas avoir faim (contracté)", english: "Eat enough so you don't go hungry (contracted)", portuguese: "Come o suficiente para não teres fome (contraído)" },
-              { lari: "Djuna ngatu wa lembo baku nkeshi", mandombe: "Djuna ngatu wa lembo baku nkeshi", french: "Calme-toi, pour ne pas être en colère", english: "Calm down, so that you don't get angry", portuguese: "Acalma-te, para não ficares com raiva" },
+              { lari: "Dzuna ngatu wa lembo baku nkeshi", mandombe: "Dzuna ngatu wa lembo baku nkeshi", french: "Calme-toi, pour ne pas être en colère", english: "Calm down, so that you don't get angry", portuguese: "Acalma-te, para não ficares com raiva" },
             ],
             note: "'Ngati' peut se contracter en 'nga'. 'Baku nsatu' = être attrapé par la faim. 'Baku nkeshi' = être attrapé par la colère.",
             noteFr: "« Ngati » peut se contracter en « nga ». « Baku nsatu » = être attrapé par la faim. « Baku nkeshi » = être attrapé par la colère.",
