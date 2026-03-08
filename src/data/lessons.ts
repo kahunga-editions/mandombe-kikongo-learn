@@ -2315,6 +2315,10 @@ export const lessons: Lesson[] = [
       { lari: "Bingi", mandombe: "Bingi", french: "Nombreux", english: "Numerous, many" },
       { lari: "Bibiengele", mandombe: "Bibiengele", french: "Menottes", english: "Handcuffs" },
       { lari: "Bindika", mandombe: "Bindika", french: "Attacher avec un bout de bois, attacher les mains derrière le dos", english: "To tie with a stick, to bind hands behind the back" },
+      { lari: "Lusonso", mandombe: "Lusonso", french: "La pointe pour écrire, le clou", english: "Writing tip, nail" },
+      { lari: "Nsonso", mandombe: "Nsonso", french: "Les pointes pour écrire, les clous", english: "Writing tips, nails" },
+      { lari: "Nsonokono", mandombe: "Nsonokono", french: "Stylo, instrument pour écrire, crayon à papier", english: "Pen, writing instrument, pencil" },
+      { lari: "Nsoneka", mandombe: "Nsoneka", french: "Écrire", english: "To write" },
       { lari: "Biantwadi", mandombe: "Biantwadi", french: "Richesses, biens communs", english: "Wealth, common goods" },
     ],
     phrases: [
