@@ -3649,7 +3649,7 @@ export const lessons: Lesson[] = [
       { lari: "Lema", mandombe: "Lema", french: "Être brûlant de fièvre, flamber", english: "To burn with fever, to blaze" },
       { lari: "Lembana", mandombe: "Lembana", french: "Manquer, échouer, abandonner, râter", english: "To fail, to miss, to give up" },
       { lari: "Lemba", mandombe: "Lemba", french: "Ancienne école initiatique Kongo", english: "Ancient Kongo initiation school" },
-      { lari: "Lendo", mandombe: "Lendo", french: "Fierté, orgueil, pouvoir", english: "Pride, power" },
+      { lari: "Lulendo|Tulendo", mandombe: "Lulendo|Tulendo", french: "Fierté, orgueil, pouvoir", english: "Pride, power" },
       { lari: "Lenga", mandombe: "Lenga", french: "Flatter, amadouer, attendrir", english: "To flatter, to coax" },
       { lari: "Lenzo", mandombe: "Lenzo", french: "Éclat, rayon de lumière", english: "Radiance, ray of light" },
       { lari: "Loba", mandombe: "Loba", french: "Pécher", english: "To sin" },
