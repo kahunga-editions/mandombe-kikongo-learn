@@ -1962,6 +1962,8 @@ export const lessons: Lesson[] = [
       { lari: "Bamuka", mandombe: "Bamuka", french: "Se décoller, ne plus adhérer", english: "To peel off, to unstick" },
       { lari: "Bamuna", mandombe: "Bamuna", french: "Décoller, décaper", english: "To remove, to scrape off" },
       { lari: "Salasana", mandombe: "Salasana", french: "S'entraider, se donner un coup de main mutuel", english: "To help each other, to give mutual support" },
+      { lari: "Nleke", mandombe: "Nleke", french: "Un(e) cadet(te), plus jeune", english: "A younger one, junior" },
+      { lari: "Muleke | Baleke", mandombe: "Muleke | Baleke", french: "Un(e) cadet(te), plus jeune", english: "A younger one, junior", note: "Muleke (singulier) / Baleke (pluriel)" },
     ],
     phrases: [
       { lari: "Beno ngatu, lu zumese, mababa", mandombe: "Beno ngatu, lu zumese, mababa", french: "N'abusez pas de notre patience", english: "Don't test our patience — you'd make the mute speak" },
