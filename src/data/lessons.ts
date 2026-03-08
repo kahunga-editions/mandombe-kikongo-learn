@@ -2728,7 +2728,7 @@ export const lessons: Lesson[] = [
       { lari: "Bikuta", mandombe: "Bikuta", french: "Objet pour calmer un bébé", english: "Object to calm a baby" },
       { lari: "Binkambula", mandombe: "Binkambula", french: "Plante de la famille des Tiliaceae dont l'écorce sert à faire des ficelles", english: "Plant of the Tiliaceae family whose bark is used to make string" },
       { lari: "Binkila", mandombe: "Binkila", french: "Genre de vin de table", english: "Type of table wine" },
-      { lari: "Binokena", mandombe: "Binokena", french: "Insecte du manguier dont la sécrétion rend aveugle", english: "Mango tree insect whose secretion causes blindness" },
+      { lari: "Binokena", mandombe: "Binokena", french: "Insecte du manguier dont les sécrétions peuvent rendre aveugle", english: "Mango tree insect whose secretions can cause blindness" },
       { lari: "Binsangu", mandombe: "Binsangu", french: "Nouvelle, annonce, popularité", english: "News, announcement, popularity" },
       { lari: "Bipopo", mandombe: "Bipopo", french: "Scarification au niveau des joues", english: "Scarification on the cheeks" },
       { lari: "Tshikonko", mandombe: "Tshikonko", french: "Le coin", english: "The corner" },
