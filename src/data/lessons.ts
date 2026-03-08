@@ -2773,7 +2773,7 @@ export const lessons: Lesson[] = [
         pairs: [
           { left: "Bideka", right: "Ornamental plants", rightFr: "Plantes d'ornementation", rightPt: "Plantas ornamentais" },
           { left: "Bikekele", right: "Edible plant", rightFr: "Plante comestible", rightPt: "Planta comestível" },
-          { left: "Binkandula", right: "Tiliaceae plant", rightFr: "Plante de la famille des Tiliaceae", rightPt: "Planta da família Tiliaceae" },
+          { left: "Binkambula", right: "Tiliaceae plant", rightFr: "Plante de la famille des Tiliaceae", rightPt: "Planta da família Tiliaceae" },
           { left: "Bifubu", right: "Flexible liana", rightFr: "Liane flexible", rightPt: "Liana flexível" },
           { left: "Binkila", right: "Table wine", rightFr: "Vin de table", rightPt: "Vinho de mesa" },
         ],
