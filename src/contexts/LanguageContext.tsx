@@ -298,6 +298,27 @@ const translations: Record<Language, Record<string, string>> = {
     "dict.all": "All",
     "dict.noResults": "No word found. Try a different search.",
 
+    // Flashcards
+    "nav.flashcards": "Flashcards",
+    "flashcards.eyebrow": "Bitanda bia Nkanda — Flashcards",
+    "flashcards.title": "Flashcards",
+    "flashcards.subtitle": "Create your own flashcards and review with spaced repetition, like Anki.",
+    "flashcards.localWarning": "Sign in to sync your flashcards across devices. Without an account, they are saved locally in your browser.",
+    "flashcards.totalCards": "total cards",
+    "flashcards.dueToday": "due today",
+    "flashcards.learned": "learned",
+    "flashcards.newCards": "new",
+    "flashcards.startReview": "Review",
+    "flashcards.createCard": "Create Card",
+    "flashcards.browse": "Browse",
+    "flashcards.deck": "Deck",
+    "flashcards.add": "Add Card",
+    "flashcards.tapToReveal": "Click to reveal the answer",
+    "flashcards.allDone": "All done!",
+    "flashcards.comeBack": "Come back later to keep learning.",
+    "flashcards.backToDecks": "Back",
+    "flashcards.noCards": "No cards yet. Create your first flashcard!",
+
     // Footer
     "footer.description": "The House of Knowledge — preserving and teaching Kikongo Lari and the Mandombe script for the Kongo diaspora and the world.",
     "footer.learnTitle": "Learn",
