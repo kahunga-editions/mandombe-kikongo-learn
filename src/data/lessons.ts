@@ -5129,8 +5129,7 @@ export const lessons: Lesson[] = [
       { lari: "Koko", mandombe: "Koko", french: "Main, bras", english: "Hand, arm", portuguese: "Mão, braço" },
       { lari: "Nima koko", mandombe: "Nima koko", french: "Dos de la main", english: "Back of the hand", portuguese: "Dorso da mão" },
       { lari: "Mbata", mandombe: "Mbata", french: "Paume", english: "Palm", portuguese: "Palma" },
-      { lari: "Lembo / Mulembo", mandombe: "Lembo", french: "Doigt", english: "Finger", portuguese: "Dedo" },
-      { lari: "Milembo", mandombe: "Milembo", french: "Doigts", english: "Fingers", portuguese: "Dedos" },
+      { lari: "Nlembo, Mulembo|Milembo", mandombe: "Nlembo, Mulembo|Milembo", french: "Doigt, doigts", english: "Finger, fingers", portuguese: "Dedo, dedos" },
       { lari: "Luzala", mandombe: "Luzala", french: "Ongle", english: "Nail", portuguese: "Unha" },
       { lari: "Nzala", mandombe: "Nzala", french: "Ongles", english: "Nails", portuguese: "Unhas" },
       // Legs & Feet
