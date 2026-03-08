@@ -4021,7 +4021,7 @@ export const lessons: Lesson[] = [
       { lari: "Bitunga", mandombe: "Bitunga", french: "Paniers", english: "Baskets", portuguese: "Cestos" },
       { lari: "Mfulu", mandombe: "Mfulu", french: "Lit", english: "Bed", portuguese: "Cama" },
       { lari: "Ngombe", mandombe: "Ngombe", french: "Boeuf", english: "Ox", portuguese: "Boi" },
-      { lari: "Konko", mandombe: "Konko", french: "Sauterelle", english: "Grasshopper", portuguese: "Gafanhoto" },
+      { lari: "Konko|Makonko", mandombe: "Konko|Makonko", french: "Sauterelle, sauterelles", english: "Grasshopper, grasshoppers", portuguese: "Gafanhoto, gafanhotos" },
       { lari: "Nkangabumi", mandombe: "Nkangabumi", french: "Araignée", english: "Spider", portuguese: "Aranha" },
       { lari: "Nungu", mandombe: "Nungu", french: "Piment", english: "Pepper", portuguese: "Pimenta" },
       { lari: "Ngulu", mandombe: "Ngulu", french: "Cochon", english: "Pig", portuguese: "Porco" },
@@ -4899,8 +4899,7 @@ export const lessons: Lesson[] = [
     icon: "🧮",
     vocabulary: [
       { lari: "Mabola", mandombe: "Mabola", french: "Oignons", english: "Onions", portuguese: "Cebolas" },
-      { lari: "Konko", mandombe: "Konko", french: "Sauterelle (sing.)", english: "Grasshopper (sing.)", portuguese: "Gafanhoto (sing.)" },
-      { lari: "Makonko", mandombe: "Makonko", french: "Sauterelles (plur.)", english: "Grasshoppers (plur.)", portuguese: "Gafanhotos (plur.)" },
+      { lari: "Konko|Makonko", mandombe: "Konko|Makonko", french: "Sauterelle, sauterelles", english: "Grasshopper, grasshoppers", portuguese: "Gafanhoto, gafanhotos" },
       { lari: "Mapapa", mandombe: "Mapapa", french: "Chaussures", english: "Shoes", portuguese: "Sapatos" },
       { lari: "Ndongo", mandombe: "Ndongo", french: "Mouton (sing.)", english: "Sheep (sing.)", portuguese: "Ovelha (sing.)" },
       { lari: "Bindongo", mandombe: "Bindongo", french: "Moutons (plur.)", english: "Sheep (plur.)", portuguese: "Ovelhas (plur.)" },
