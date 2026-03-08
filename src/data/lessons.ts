@@ -3653,7 +3653,7 @@ export const lessons: Lesson[] = [
       { lari: "Lenga", mandombe: "Lenga", french: "Flatter, amadouer, attendrir", english: "To flatter, to coax" },
       { lari: "Lenzo", mandombe: "Lenzo", french: "Éclat, rayon de lumière", english: "Radiance, ray of light" },
       { lari: "Loba", mandombe: "Loba", french: "Pécher", english: "To sin" },
-      { lari: "Lobula", mandombe: "Lobula", french: "Cracher", english: "To spit" },
+      { lari: "Lobola", mandombe: "Lobola", french: "Cracher", english: "To spit" },
       { lari: "Loka", mandombe: "Loka", french: "Nuire", english: "To harm" },
       { lari: "Lola", mandombe: "Lola", french: "Aboyer", english: "To bark" },
       { lari: "Lomba", mandombe: "Lomba", french: "Demander, quémander / Noircir, mûrir", english: "To ask, to beg / To darken, to ripen" },
