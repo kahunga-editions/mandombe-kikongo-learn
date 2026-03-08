@@ -392,6 +392,17 @@ const translations: Record<Language, Record<string, string>> = {
     "exercises.hint": "💡 Dica:",
     "exercises.upgrade": "Assinar para desbloquear",
 
+    // Dictionary
+    "nav.dictionary": "Dicionário",
+    "dict.eyebrow": "Nkanda Mambu — Dicionário",
+    "dict.title": "Dicionário Kikongo Lari",
+    "dict.subtitle": "Pesquise uma palavra em lari, francês, inglês ou português e encontre a sua tradução instantaneamente.",
+    "dict.searchPlaceholder": "Escreva uma palavra em lari, francês, inglês ou português…",
+    "dict.entries": "resultados",
+    "dict.total": "palavras no total",
+    "dict.all": "Todos",
+    "dict.noResults": "Nenhuma palavra encontrada. Tente outra pesquisa.",
+
     // Footer
     "footer.description": "A Casa do Saber — preservar e ensinar o Kikongo Lari e a escrita Mandombe para a diáspora Kongo e o mundo.",
     "footer.learnTitle": "Aprender",
