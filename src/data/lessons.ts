@@ -3642,7 +3642,7 @@ export const lessons: Lesson[] = [
       { lari: "Landa", mandombe: "Landa", french: "Suivre", english: "To follow" },
       { lari: "Landana", mandombe: "Landana", french: "Se suivre l'un l'autre", english: "To follow one another" },
       { lari: "Landi", mandombe: "Landi", french: "Successeur, héritier", english: "Successor, heir" },
-      { lari: "Landu", mandombe: "Landu", french: "Enfant né après les jumeaux", english: "Child born after twins" },
+      { lari: "Nlandu|Milandu", mandombe: "Nlandu|Milandu", french: "Enfant né après les jumeaux, enfants nés après les jumeaux", english: "Child born after twins, children born after twins" },
       { lari: "Leba", mandombe: "Leba", french: "Cajoler, caresser, attendrir", english: "To cajole, caress, soften" },
       { lari: "Lebika", mandombe: "Lebika", french: "Armer un fusil, tendre un piège", english: "To arm a gun, to set a trap" },
       { lari: "Leke", mandombe: "Leke", french: "Un enfant, un cadet, un jeune", english: "A child, a youth" },
