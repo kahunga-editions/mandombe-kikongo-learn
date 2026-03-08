@@ -4068,6 +4068,7 @@ export const lessons: Lesson[] = [
       { lari: "Yaka (yaKA)", mandombe: "Yaka", french: "Attraper au vol", english: "To catch mid-air", portuguese: "Apanhar no ar", note: "⚠️ Prononciation : la 2ᵉ syllabe est accentuée (ya-KA). C'est ainsi qu'on le distingue de l'homographe « Yaka » (manioc)." },
       { lari: "Yika", mandombe: "Yika", french: "Ajouter", english: "To add", portuguese: "Adicionar" },
       { lari: "Yuku", mandombe: "Yuku", french: "S'habituer, être habitué(e)", english: "To get used to, to be accustomed", portuguese: "Habituar-se, estar habituado(a)" },
+      { lari: "Yabula", mandombe: "Yabula", french: "Retirer un couvercle (d'une marmite), ouvrir une casserole, une marmite", english: "To remove a lid (from a pot), to open a saucepan, a cooking pot", portuguese: "Retirar a tampa (de uma panela), abrir uma caçarola" },
       { lari: "Yavula", mandombe: "Yavula", french: "Marcher à quatre pattes (pour un bébé)", english: "To crawl on all fours (for a baby)", portuguese: "Engatinhar (para um bebé)" },
       { lari: "Yula", mandombe: "Yula", french: "Demander pour avoir quelque chose de physique, interroger", english: "To ask for something physical, to request", portuguese: "Pedir algo físico, interrogar" },
       { lari: "Mayaka", mandombe: "Mayaka", french: "Maniocs", english: "Cassava (pl.)", portuguese: "Mandiocas" },
