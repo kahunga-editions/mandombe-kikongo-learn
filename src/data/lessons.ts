@@ -6421,7 +6421,7 @@ export const lessons: Lesson[] = [
         sentenceFr: "___ ngatu wa lembo baku nkeshi = Calme-toi pour ne pas être en colère",
         sentencePt: "___ ngatu wa lembo baku nkeshi = Acalma-te para não ficares com raiva",
         sentenceMandombe: "___ ngatu wa lembo baku nkeshi",
-        blank: "dzuna",
+        blank: "djuna",
         hint: "A verb meaning 'to calm down'.",
         hintFr: "Un verbe signifiant « se calmer ».",
         hintPt: "Um verbo que significa 'acalmar-se' (pronunciado /dzuna/).",
