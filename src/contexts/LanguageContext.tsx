@@ -410,3 +410,4 @@ const translations: Record<Language, Record<string, string>> = {
     "footer.copyright": "Honrando o saber ancestral.",
   },
 };
+
