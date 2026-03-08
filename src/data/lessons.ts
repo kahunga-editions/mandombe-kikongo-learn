@@ -4068,7 +4068,7 @@ export const lessons: Lesson[] = [
       { lari: "Yaka (yaKA)", mandombe: "Yaka", french: "Attraper au vol", english: "To catch mid-air", portuguese: "Apanhar no ar", note: "⚠️ Prononciation : la 2ᵉ syllabe est accentuée (ya-KA). C'est ainsi qu'on le distingue de l'homographe « Yaka » (manioc)." },
       { lari: "Yika", mandombe: "Yika", french: "Ajouter", english: "To add", portuguese: "Adicionar" },
       { lari: "Yuku", mandombe: "Yuku", french: "S'habituer, être habitué(e)", english: "To get used to, to be accustomed", portuguese: "Habituar-se, estar habituado(a)" },
-      { lari: "Yula", mandombe: "Yula", french: "Demander, interroger", english: "To ask, to question", portuguese: "Perguntar, interrogar" },
+      { lari: "Yula", mandombe: "Yula", french: "Demander pour avoir quelque chose de physique, interroger", english: "To ask for something physical, to request", portuguese: "Pedir algo físico, interrogar" },
       { lari: "Mayaka", mandombe: "Mayaka", french: "Maniocs", english: "Cassava (pl.)", portuguese: "Mandiocas" },
       { lari: "Buku", mandombe: "Buku", french: "Livre", english: "Book", portuguese: "Livro" },
       { lari: "Mabuku", mandombe: "Mabuku", french: "Livres", english: "Books", portuguese: "Livros" },
