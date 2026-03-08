@@ -2294,7 +2294,7 @@ export const lessons: Lesson[] = [
       { lari: "Bukungolo", mandombe: "Bukungolo", french: "Champignon comestible", english: "Edible mushroom" },
       { lari: "Bugusu", mandombe: "Bugusu", french: "Espèce de champignon", english: "A species of mushroom" },
       { lari: "Bulundu", mandombe: "Bulundu", french: "Espèce de champignon", english: "A species of mushroom" },
-      { lari: "Binokena", mandombe: "Binokena", french: "Insecte du manguier", english: "Mango tree insect" },
+      { lari: "Binokena", mandombe: "Binokena", french: "Insecte du manguier dont les sécrétions peuvent rendre aveugle", english: "Mango tree insect whose secretions can cause blindness" },
       { lari: "Binkubudi", mandombe: "Binkubudi", french: "Puces de poule", english: "Chicken fleas" },
       { lari: "Bifubuzuka", mandombe: "Bifubuzuka", french: "Éruption cutanée (pieds)", english: "Foot rash (children)" },
       { lari: "Bikandu", mandombe: "Bikandu", french: "Protecteur des champs (piège mystique)", english: "Field protector (mystical trap)" },
