@@ -13,7 +13,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from 
 type View = "decks" | "review" | "create" | "browse";
 
 const Flashcards = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const { user } = useAuth();
   const { cards, dueCards, loading, addCard, removeCard, reviewCard } = useFlashcards();
   const [view, setView] = useState<View>("decks");
