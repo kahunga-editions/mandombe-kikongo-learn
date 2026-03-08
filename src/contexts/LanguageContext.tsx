@@ -445,56 +445,6 @@ const translations: Record<Language, Record<string, string>> = {
     "dict.all": "Todos",
     "dict.noResults": "Nenhuma palavra encontrada. Tente outra pesquisa.",
 
-    // Footer
-    "footer.description": "A Casa do Saber — preservar e ensinar o Kikongo Lari e a escrita Mandombe para a diáspora Kongo e o mundo.",
-    "footer.learnTitle": "Aprender",
-    "footer.languagesTitle": "Línguas",
-    "footer.copyright": "Honrando o saber ancestral.",
-  },
-};
-
-    // Flashcards
-    "nav.flashcards": "Fiches",
-    "flashcards.eyebrow": "Bitanda bia Nkanda — Fiches de révision",
-    "flashcards.title": "Fiches de révision",
-    "flashcards.subtitle": "Créez vos propres fiches et révisez avec la répétition espacée, comme Anki.",
-    "flashcards.localWarning": "Connectez-vous pour synchroniser vos fiches entre appareils. Sans connexion, elles sont sauvegardées localement dans votre navigateur.",
-    "flashcards.totalCards": "fiches au total",
-    "flashcards.dueToday": "à réviser",
-    "flashcards.learned": "apprises",
-    "flashcards.newCards": "nouvelles",
-    "flashcards.startReview": "Réviser",
-    "flashcards.createCard": "Créer une fiche",
-    "flashcards.browse": "Parcourir",
-    "flashcards.deck": "Paquet",
-    "flashcards.add": "Ajouter la fiche",
-    "flashcards.tapToReveal": "Cliquez pour révéler la réponse",
-    "flashcards.allDone": "Révision terminée !",
-    "flashcards.comeBack": "Revenez plus tard pour continuer à apprendre.",
-    "flashcards.backToDecks": "Retour",
-    "flashcards.noCards": "Aucune fiche pour le moment. Créez votre première fiche !",
-
-    // Flashcards
-    "nav.flashcards": "Flashcards",
-    "flashcards.eyebrow": "Bitanda bia Nkanda — Flashcards",
-    "flashcards.title": "Flashcards",
-    "flashcards.subtitle": "Create your own flashcards and review with spaced repetition, like Anki.",
-    "flashcards.localWarning": "Sign in to sync your flashcards across devices. Without an account, they are saved locally in your browser.",
-    "flashcards.totalCards": "total cards",
-    "flashcards.dueToday": "due today",
-    "flashcards.learned": "learned",
-    "flashcards.newCards": "new",
-    "flashcards.startReview": "Review",
-    "flashcards.createCard": "Create Card",
-    "flashcards.browse": "Browse",
-    "flashcards.deck": "Deck",
-    "flashcards.add": "Add Card",
-    "flashcards.tapToReveal": "Click to reveal the answer",
-    "flashcards.allDone": "All done!",
-    "flashcards.comeBack": "Come back later to keep learning.",
-    "flashcards.backToDecks": "Back",
-    "flashcards.noCards": "No cards yet. Create your first flashcard!",
-
     // Flashcards
     "nav.flashcards": "Fichas",
     "flashcards.eyebrow": "Bitanda bia Nkanda — Fichas de revisão",
@@ -515,4 +465,12 @@ const translations: Record<Language, Record<string, string>> = {
     "flashcards.comeBack": "Volte mais tarde para continuar a aprender.",
     "flashcards.backToDecks": "Voltar",
     "flashcards.noCards": "Ainda sem fichas. Crie a sua primeira ficha!",
+
+    // Footer
+    "footer.description": "A Casa do Saber — preservar e ensinar o Kikongo Lari e a escrita Mandombe para a diáspora Kongo e o mundo.",
+    "footer.learnTitle": "Aprender",
+    "footer.languagesTitle": "Línguas",
+    "footer.copyright": "Honrando o saber ancestral.",
+  },
+};
 
