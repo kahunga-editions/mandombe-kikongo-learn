@@ -7250,13 +7250,20 @@ export const lessons: Lesson[] = [
         descriptionFr: "En lari, l'ordre canonique de la phrase est : 1. Celui qui parle/fait l'action — 2. Ce dont on parle — 3. Le pronom (qui renvoie au sujet/objet) — 4. Le verbe.",
         descriptionPt: "Em lari, a ordem canónica da frase é: 1. Sujeito (quem fala/age) — 2. Tópico (do que se fala) — 3. Pronome (que remete ao sujeito/objeto) — 4. Verbo.",
         pattern: "Sujet + Objet + Pronom + Verbe",
-        examples: [
+        groups: [
           {
-            lari: "Nzo mikanda makalaka yi dukisa",
-            mandombe: "Njo mikanda makalaka yi dukisa",
-            french: "L'école produit des érudits. (Nzo mikanda = sujet, makalaka = objet, yi = pronom renvoyant à nzo mikanda, dukisa = verbe)",
-            english: "The school produces scholars. (Nzo mikanda = subject, makalaka = object, yi = pronoun referring to nzo mikanda, dukisa = verb)",
-            portuguese: "A escola produz eruditos. (Nzo mikanda = sujeito, makalaka = objeto, yi = pronome referente a nzo mikanda, dukisa = verbo)",
+            title: "Example",
+            titleFr: "Exemple",
+            titlePt: "Exemplo",
+            examples: [
+              {
+                lari: "Nzo mikanda makalaka yi dukisa",
+                mandombe: "Njo mikanda makalaka yi dukisa",
+                french: "L'école produit des érudits. (Nzo mikanda = sujet, makalaka = objet, yi = pronom renvoyant à nzo mikanda, dukisa = verbe)",
+                english: "The school produces scholars. (Nzo mikanda = subject, makalaka = object, yi = pronoun referring to nzo mikanda, dukisa = verb)",
+                portuguese: "A escola produz eruditos. (Nzo mikanda = sujeito, makalaka = objeto, yi = pronome referente a nzo mikanda, dukisa = verbo)",
+              },
+            ],
           },
         ],
       },
@@ -7268,25 +7275,32 @@ export const lessons: Lesson[] = [
         descriptionFr: "Utilisez « Tala » (si) pour introduire une condition. La proposition de résultat utilise « Mbo » pour indiquer le résultat futur.",
         descriptionPt: "Use 'Tala' (se) para introduzir uma condição. A oração de resultado usa 'Mbo' para indicar o resultado futuro.",
         pattern: "Tala + condition, mbo + résultat",
-        examples: [
+        groups: [
           {
-            lari: "Tala lumbu, ndendi tanga kinitu kiaku, mbo ni ba mu nsayi",
-            mandombe: "Tala lumbu, ndendi tanga kinitu kiyaku, mbo ni ba mu nsayi",
-            french: "Si un jour je peux lire ton aura, je serai content",
-            english: "If one day I can read your aura, I will be happy",
-            portuguese: "Se um dia eu puder ler a tua aura, ficarei feliz",
-          },
-          {
-            lari: "Tala lumbu ndendi tanga kinitu kiaku, nsayi mbo yi ku mbaka",
-            mandombe: "Tala lumbu ndendi tanga kinitu kiyaku, nsayi mbo yi ku mbaka",
-            french: "Si un jour je peux lire ton aura, la joie m'attrapera. (yi renvoie à nsayi)",
-            english: "If one day I can read your aura, joy will catch me. (yi refers to nsayi)",
-            portuguese: "Se um dia eu puder ler a tua aura, a alegria me pegará. (yi refere-se a nsayi)",
+            title: "Conditional sentences",
+            titleFr: "Phrases conditionnelles",
+            titlePt: "Frases condicionais",
+            note: "Dans la 2e variante, nsayi (la joie) devient sujet, et yi est le pronom qui y renvoie.",
+            noteFr: "Dans la 2e variante, nsayi (la joie) devient sujet, et yi est le pronom qui y renvoie.",
+            notePt: "Na 2ª variante, nsayi (a alegria) torna-se sujeito, e yi é o pronome que lhe faz referência.",
+            examples: [
+              {
+                lari: "Tala lumbu, ndendi tanga kinitu kiaku, mbo ni ba mu nsayi",
+                mandombe: "Tala lumbu, ndendi tanga kinitu kiyaku, mbo ni ba mu nsayi",
+                french: "Si un jour je peux lire ton aura, je serai content",
+                english: "If one day I can read your aura, I will be happy",
+                portuguese: "Se um dia eu puder ler a tua aura, ficarei feliz",
+              },
+              {
+                lari: "Tala lumbu ndendi tanga kinitu kiaku, nsayi mbo yi ku mbaka",
+                mandombe: "Tala lumbu ndendi tanga kinitu kiyaku, nsayi mbo yi ku mbaka",
+                french: "Si un jour je peux lire ton aura, la joie m'attrapera. (yi renvoie à nsayi)",
+                english: "If one day I can read your aura, joy will catch me. (yi refers to nsayi)",
+                portuguese: "Se um dia eu puder ler a tua aura, a alegria me pegará. (yi refere-se a nsayi)",
+              },
+            ],
           },
         ],
-        note: "Dans la 2e variante, nsayi (la joie) devient sujet, et yi est le pronom qui y renvoie.",
-        noteFr: "Dans la 2e variante, nsayi (la joie) devient sujet, et yi est le pronom qui y renvoie.",
-        notePt: "Na 2ª variante, nsayi (a alegria) torna-se sujeito, e yi é o pronome que lhe faz referência.",
       },
     ],
     exercises: [
