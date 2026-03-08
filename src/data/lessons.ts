@@ -6105,6 +6105,7 @@ export const lessons: Lesson[] = [
       { lari: "Bakento", mandombe: "Bakento", french: "Les femmes", english: "Women" },
       { lari: "Nkesi / Nkeshi", mandombe: "Nkesi / Nkeshi", french: "La colère", english: "Anger" },
       { lari: "Longoka", mandombe: "Longoka", french: "Apprendre", english: "To learn" },
+      { lari: "Nlongi | Milongi", mandombe: "Nlongi | Milongi", french: "Enseignant(e)", english: "Teacher", note: "Nlongi (singulier) / Milongi (pluriel)" },
     ],
     phrases: [
       { lari: "Mbo bakila ngela", mandombe: "Mbo bakila ngela", french: "Tu vas gagner de l'argent", english: "You will earn money", note: "Bakila — tirer profit" },
