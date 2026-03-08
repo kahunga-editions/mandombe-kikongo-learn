@@ -1067,7 +1067,7 @@ export const lessons: Lesson[] = [
     icon: "🏃",
     vocabulary: [
       { lari: "Baka", mandombe: "Baka", french: "Obtenir, gagner, acquérir", english: "To obtain, to gain, to acquire" },
-      { lari: "Bakala", mandombe: "Bakala", french: "Mâle, homme, époux", english: "Male, man, husband" },
+      { lari: "Bakala | Babakala", mandombe: "Bakala | Babakala", french: "Mâle, homme, époux", english: "Male, man, husband" },
       { lari: "Bakisa", mandombe: "Bakisa", french: "Aider, assister, secourir", english: "To help, to assist, to rescue" },
       { lari: "Bakula", mandombe: "Bakula", french: "Expliquer, répondre", english: "To explain, to answer" },
       { lari: "Bala", mandombe: "Bala", french: "Initier, petit", english: "To initiate; small" },
@@ -2832,7 +2832,7 @@ export const lessons: Lesson[] = [
       { lari: "Bakasana", mandombe: "Bakasana", french: "S'entraider, s'assister", english: "To help each other" },
       { lari: "Bakisa", mandombe: "Bakisa", french: "Aider, assister, porter secours", english: "To help, to assist, to rescue" },
       { lari: "Bakitina / Bakishina", mandombe: "Bakitina / Bakishina", french: "Dominer, avoir le dessus", english: "To dominate, to overcome" },
-      { lari: "Bakala", mandombe: "Bakala", french: "Mâle, garçon, homme; mari", english: "Male, boy, man; husband" },
+      { lari: "Bakala | Babakala", mandombe: "Bakala | Babakala", french: "Mâle, garçon, homme; mari", english: "Male, boy, man; husband" },
       { lari: "Baki", mandombe: "Baki", french: "Possesseur, vainqueur", english: "Owner, winner" },
       { lari: "Bakila", mandombe: "Bakila", french: "Tirer profit, gagner", english: "To profit, to win" },
       { lari: "Bakuka", mandombe: "Bakuka", french: "Avoir élucidé, trouver une solution", english: "To have solved, to find a solution" },
