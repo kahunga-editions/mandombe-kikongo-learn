@@ -6275,7 +6275,7 @@ export const lessons: Lesson[] = [
       { lari: "Tomo", mandombe: "Tomo", french: "Suffisamment", english: "Enough / Sufficiently", portuguese: "Suficientemente" },
       { lari: "Dia", mandombe: "Dia", french: "Manger", english: "To eat", portuguese: "Comer" },
       { lari: "Ngati / Ngatu", mandombe: "Ngati / Ngatu", french: "Pour que", english: "So that / In order to", portuguese: "Para que", note: "Ngati peut se contracter en 'nga'" },
-      { lari: "Wa", mandombe: "Wa", french: "Tu (forme contractée)", english: "You (contracted form)", portuguese: "Tu (forma contraída)" },
+      { lari: "Wa", mandombe: "Wa", french: "Tu (selon le contexte)", english: "You (contextual form)", portuguese: "Tu (conforme o contexto)" },
       { lari: "Lembo", mandombe: "Lembo", french: "Ne pas", english: "Not", portuguese: "Não" },
       { lari: "Nsatu", mandombe: "Nsatu", french: "La faim", english: "Hunger", portuguese: "Fome" },
       { lari: "Nkesi / Nkeshi", mandombe: "Nkesi / Nkeshi", french: "La colère", english: "Anger", portuguese: "Raiva" },
