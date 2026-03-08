@@ -1083,6 +1083,8 @@ export const lessons: Lesson[] = [
       { lari: "Banza", mandombe: "Banza", french: "Penser, réfléchir", english: "To think, to reflect" },
       { lari: "Buka", mandombe: "Buka", french: "Soigner, traiter", english: "To heal, to treat" },
       { lari: "Bula", mandombe: "Bula", french: "Casser, jouer", english: "To break, to play" },
+      { lari: "Burisa", mandombe: "Burisa", french: "Faire casser", english: "To cause to break" },
+      { lari: "Burisa matari", mandombe: "Burisa matari", french: "Faire casser des cailloux", english: "To break stones" },
       { lari: "Bumba", mandombe: "Bumba", french: "Embrasser, enlacer", english: "To embrace, to hug" },
       { lari: "Badika", mandombe: "Badika", french: "Penser, méditer", english: "To think, to meditate" },
       { lari: "Bakana", mandombe: "Bakana", french: "Se disputer, se chamailler", english: "To argue, to quarrel" },
