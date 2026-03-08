@@ -2564,7 +2564,7 @@ export const lessons: Lesson[] = [
           { left: "Balumuna ntinu", right: "Run at full speed" },
           { left: "Bunda ntulu", right: "Puff out chest" },
           { left: "Botana kopa", right: "To be drunk" },
-          { left: "Binda-kasa", right: "Cross feet" },
+          { left: "Bindakasa", right: "Cross feet" },
         ],
       },
       {
