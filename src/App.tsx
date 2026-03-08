@@ -9,6 +9,7 @@ import Index from "./pages/Index";
 import Lessons from "./pages/Lessons";
 import LessonDetail from "./pages/LessonDetail";
 import Auth from "./pages/Auth";
+import Dictionary from "./pages/Dictionary";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -26,6 +27,7 @@ const App = () => (
               <Route path="/auth" element={<Auth />} />
               <Route path="/lessons" element={<Lessons />} />
               <Route path="/lessons/:lessonId" element={<LessonDetail />} />
+              <Route path="/dictionary" element={<Dictionary />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </AuthProvider>

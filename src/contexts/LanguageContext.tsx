@@ -140,6 +140,17 @@ const translations: Record<Language, Record<string, string>> = {
     "exercises.hint": "💡 Indice :",
     "exercises.upgrade": "Passer au Premium pour débloquer",
 
+    // Dictionary
+    "nav.dictionary": "Dictionnaire",
+    "dict.eyebrow": "Nkanda Mambu — Dictionnaire",
+    "dict.title": "Dictionnaire Kikongo Lari",
+    "dict.subtitle": "Recherchez un mot en lari, français, anglais ou portugais et trouvez sa traduction instantanément.",
+    "dict.searchPlaceholder": "Tapez un mot en lari, français, anglais ou portugais…",
+    "dict.entries": "résultats",
+    "dict.total": "mots au total",
+    "dict.all": "Tous",
+    "dict.noResults": "Aucun mot trouvé. Essayez une autre recherche.",
+
     // Footer
     "footer.description": "La Maison du Savoir — préserver et enseigner le Kikongo Lari et l'écriture Mandombe pour la diaspora Kongo et le monde.",
     "footer.learnTitle": "Apprendre",
@@ -255,6 +266,17 @@ const translations: Record<Language, Record<string, string>> = {
     "exercises.hint": "💡 Hint:",
     "exercises.upgrade": "Upgrade to unlock",
 
+    // Dictionary
+    "nav.dictionary": "Dictionary",
+    "dict.eyebrow": "Nkanda Mambu — Dictionary",
+    "dict.title": "Kikongo Lari Dictionary",
+    "dict.subtitle": "Search a word in Lari, French, English or Portuguese and find its translation instantly.",
+    "dict.searchPlaceholder": "Type a word in Lari, French, English or Portuguese…",
+    "dict.entries": "results",
+    "dict.total": "words in total",
+    "dict.all": "All",
+    "dict.noResults": "No word found. Try a different search.",
+
     // Footer
     "footer.description": "The House of Knowledge — preserving and teaching Kikongo Lari and the Mandombe script for the Kongo diaspora and the world.",
     "footer.learnTitle": "Learn",
@@ -369,6 +391,17 @@ const translations: Record<Language, Record<string, string>> = {
     "exercises.correctAnswer": "A resposta correta é:",
     "exercises.hint": "💡 Dica:",
     "exercises.upgrade": "Assinar para desbloquear",
+
+    // Dictionary
+    "nav.dictionary": "Dicionário",
+    "dict.eyebrow": "Nkanda Mambu — Dicionário",
+    "dict.title": "Dicionário Kikongo Lari",
+    "dict.subtitle": "Pesquise uma palavra em lari, francês, inglês ou português e encontre a sua tradução instantaneamente.",
+    "dict.searchPlaceholder": "Escreva uma palavra em lari, francês, inglês ou português…",
+    "dict.entries": "resultados",
+    "dict.total": "palavras no total",
+    "dict.all": "Todos",
+    "dict.noResults": "Nenhuma palavra encontrada. Tente outra pesquisa.",
 
     // Footer
     "footer.description": "A Casa do Saber — preservar e ensinar o Kikongo Lari e a escrita Mandombe para a diáspora Kongo e o mundo.",
