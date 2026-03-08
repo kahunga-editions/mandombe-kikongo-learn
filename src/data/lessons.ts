@@ -5198,7 +5198,7 @@ export const lessons: Lesson[] = [
       { lari: "Tshifundu | Bifundu", mandombe: "Tshifundu | Bifundu", french: "Estomac", english: "Stomach", portuguese: "Estômago" },
       { lari: "Midia", mandombe: "Midia", french: "Entrailles", english: "Entrails", portuguese: "Entranhas" },
       { lari: "Nkanda", mandombe: "Nkanda", french: "Peau", english: "Skin", portuguese: "Pele" },
-      { lari: "Yisi", mandombe: "Yisi", french: "Os", english: "Bone", portuguese: "Osso" },
+      { lari: "Hisi|Bihisi", mandombe: "Hisi|Bihisi", french: "Os", english: "Bone", portuguese: "Osso" },
       { lari: "Biyisi", mandombe: "Biyisi", french: "Os (pluriel)", english: "Bones", portuguese: "Ossos" },
       { lari: "Tidi", mandombe: "Tidi", french: "Tendon", english: "Tendon", portuguese: "Tendão" },
       { lari: "Matidi", mandombe: "Matidi", french: "Tendons", english: "Tendons", portuguese: "Tendões" },
