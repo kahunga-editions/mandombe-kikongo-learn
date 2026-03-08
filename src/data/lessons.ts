@@ -2285,7 +2285,7 @@ export const lessons: Lesson[] = [
       { lari: "Bifuku", mandombe: "Bifuku", french: "Chenilles en groupe", english: "Caterpillars in groups" },
       { lari: "Bikola", mandombe: "Bikola", french: "Mélange de plantes (fumigation); légume", english: "Plant mixture (fumigation); vegetable" },
       { lari: "Bikekele", mandombe: "Bikekele", french: "Arbuste (famille Olacaceae)", english: "Shrub (Olacaceae family)" },
-      { lari: "Binkandula", mandombe: "Binkandula", french: "Plante (famille Tiliaceae)", english: "Plant (Tiliaceae family)" },
+      { lari: "Binkambula", mandombe: "Binkambula", french: "Plante (famille Tiliaceae)", english: "Plant (Tiliaceae family)" },
       { lari: "Binkila", mandombe: "Binkila", french: "Genre de vin de table", english: "Type of table wine" },
       { lari: "Banga", mandombe: "Banga", french: "Petite liane (vannerie, alcool)", english: "Small vine (basketry, alcohol)" },
       { lari: "Bibanga", mandombe: "Bibanga", french: "Petites lianes (pluriel)", english: "Small vines (plural)" },
