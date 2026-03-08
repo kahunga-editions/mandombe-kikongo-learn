@@ -1661,7 +1661,7 @@ export const lessons: Lesson[] = [
       { lari: "Mpumbu", mandombe: "Mpumbu", french: "Kinshasa (nom traditionnel)", english: "Kinshasa (traditional name)", portuguese: "Kinshasa (nome tradicional)" },
       { lari: "Matadi", mandombe: "Matadi", french: "Matadi", english: "Matadi", portuguese: "Matadi" },
       { lari: "Mfua", mandombe: "Mfua", french: "Brazzaville (nom traditionnel)", english: "Brazzaville (traditional name)", portuguese: "Brazzaville (nome tradicional)" },
-      { lari: "Linzolo", mandombe: "Linzolo", french: "Linzolo", english: "Linzolo", portuguese: "Linzolo" },
+      { lari: "Linzolo", mandombe: "Linzolo", french: "Linzolo, localité près de Mfua", english: "Linzolo, locality near Mfua", portuguese: "Linzolo, localidade perto de Mfua" },
       { lari: "Kinkala", mandombe: "Kinkala", french: "Kinkala", english: "Kinkala", portuguese: "Kinkala" },
       { lari: "Lubomo", mandombe: "Lubomo", french: "Dolisie (Loubomo)", english: "Dolisie (Loubomo)", portuguese: "Dolisie (Loubomo)" },
       { lari: "Mazuji", mandombe: "Mazuji", french: "Avant-hier", english: "The day before yesterday", portuguese: "Anteontem" },
