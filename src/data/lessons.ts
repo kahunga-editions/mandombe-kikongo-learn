@@ -2452,7 +2452,7 @@ export const lessons: Lesson[] = [
       { lari: "Binga", mandombe: "Binga", french: "Chasser collectivement, traquer", english: "To hunt collectively, to track" },
       { lari: "Mbingu", mandombe: "Mbingu", french: "Chasse collective", english: "Collective hunt" },
       { lari: "Bingila", mandombe: "Bingila", french: "Se hâter, se presser", english: "To hurry, to rush" },
-      { lari: "Bingula", mandombe: "Bingula", french: "Annoncer", english: "To announce" },
+      { lari: "Bingula", mandombe: "Bingula", french: "Annoncer, hêler quelqu'un", english: "To announce, to hail someone" },
       { lari: "Bingumangu", mandombe: "Bingumangu", french: "Fusil à piston", english: "Flintlock rifle" },
       { lari: "Bindusa", mandombe: "Bindusa", french: "Faire croiser", english: "To make cross" },
       { lari: "Binduzuka", mandombe: "Binduzuka", french: "Disparaître, se disperser", english: "To disappear, to scatter" },
