@@ -3360,7 +3360,7 @@ export const lessons: Lesson[] = [
       { lari: "Hana mono mamba", mandombe: "Hana mono mamba", french: "Donne-moi de l'eau", english: "Give me water" },
       { lari: "Hambana bua nzila", mandombe: "Hambana buwa nzila", french: "Se séparer au carrefour", english: "To part ways at the crossroads" },
       { lari: "Hangama na ntima", mandombe: "Hangama na ntima", french: "Se tenir ferme de cœur", english: "To stand firm in one's heart", note: "Expresses inner resolve and courage — a warrior's mindset." },
-      { lari: "Hata ya bakulu", mandombe: "Hata ya bakulu", french: "Le village des ancêtres", english: "The village of the ancestors" },
+      { lari: "Hata dia bakulu", mandombe: "Hata dia bakulu", french: "Le village des ancêtres", english: "The village of the ancestors" },
     ],
     exercises: [
       {
