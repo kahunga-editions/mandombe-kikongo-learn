@@ -2315,7 +2315,7 @@ export const lessons: Lesson[] = [
     phrases: [
       { lari: "Mbiji za biata", mandombe: "Mbiji za biata", french: "Les animaux à calosités", english: "Animals with calluses" },
       { lari: "Nsatu bikululu", mandombe: "Nsatu bikululu", french: "Avoir faim est quotidien", english: "Hunger is a daily lot" },
-      { lari: "Bikwa bye, na ku?", mandombe: "Bikwa bye, na ku?", french: "Combien d'ignames as-tu ?", english: "How many yams do you have?" },
+      { lari: "Bikua bie naku?", mandombe: "Bikua bie naku?", french: "Combien d'ignames as-tu ?", english: "How many yams do you have?" },
       { lari: "Budisa bibidiki", mandombe: "Budisa bibidiki", french: "Faisons fabriquer des briques", english: "Let's have bricks made" },
     ],
     exercises: [
