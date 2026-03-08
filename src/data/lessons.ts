@@ -1331,7 +1331,7 @@ export const lessons: Lesson[] = [
     icon: "🔤",
     vocabulary: [
       
-      { lari: "Kiese", mandombe: "Kiese", french: "Content, heureux", english: "Happy" },
+      { lari: "Kiese", mandombe: "Kiese", french: "Content(e), heureux(se), la joie", english: "Happy, joyful, joy" },
       { lari: "Diela", mandombe: "Diyela", french: "Intelligent", english: "Intelligent" },
       { lari: "Mpasi", mandombe: "Mpasi", french: "Difficile, douloureux", english: "Difficult, painful" },
       { lari: "Mbote", mandombe: "Mbote", french: "Bon, bien", english: "Good, well" },
