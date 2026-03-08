@@ -142,7 +142,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Dictionary
     "nav.dictionary": "Dictionnaire",
-    "dict.eyebrow": "Nkanda Mambu — Dictionnaire",
+    "dict.eyebrow": "Buku dia Bintsono — Dictionnaire",
     "dict.title": "Dictionnaire Kikongo Lari",
     "dict.subtitle": "Recherchez un mot en lari, français, anglais ou portugais et trouvez sa traduction instantanément.",
     "dict.searchPlaceholder": "Tapez un mot en lari, français, anglais ou portugais…",
