@@ -3646,6 +3646,7 @@ export const lessons: Lesson[] = [
       { lari: "Longa", mandombe: "Longa", french: "Instruire, enseigner, conseiller", english: "To instruct, teach, advise" },
       { lari: "Longi", mandombe: "Longi", french: "Un conseil, une instruction", english: "An advice, an instruction" },
       { lari: "Malongi", mandombe: "Malongi", french: "Des leçons, des conseils", english: "Lessons, advice" },
+      { lari: "Malu", mandombe: "Malu", french: "Le vin", english: "Wine", note: "Le /a/ est court" },
       { lari: "Longisa", mandombe: "Longisa", french: "Enseigner, apprendre, initier", english: "To teach, to learn, to initiate" },
       { lari: "Longo", mandombe: "Longo", french: "Un mariage / Un médicament", english: "A marriage / A medicine" },
       { lari: "Losa", mandombe: "Losa", french: "Jeter, rejeter, lancer, abandonner", english: "To throw, to reject, to abandon" },
