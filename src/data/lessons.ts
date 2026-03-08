@@ -1946,7 +1946,7 @@ export const lessons: Lesson[] = [
       { lari: "Bafu | Mabafu", mandombe: "Bafu | Mabafu", french: "Petite hache (pirogues, sculpture)", english: "Small axe (canoes, sculpture)" },
       { lari: "Bafuka", mandombe: "Bafuka", french: "Être enlevé, décollé, se détacher", english: "To be peeled off, to detach" },
       { lari: "Bafuna", mandombe: "Bafuna", french: "Forcer pour ouvrir", english: "To force open" },
-      { lari: "Bagu / Bahu", mandombe: "Bagu / Bahu", french: "Capturer, attraper", english: "To capture, to catch" },
+      { lari: "Bagu / Bahu", mandombe: "Bagu / Bahu", french: "Capturé, attrapé", english: "Captured, caught" },
       { lari: "Baguka / Bahuka", mandombe: "Baguka / Bahuka", french: "Être pris, attrapé; découvrir", english: "To be caught; to discover" },
       { lari: "Bagukisa / Bahukisa", mandombe: "Bagukisa / Bahukisa", french: "Pousser la séduction à l'admiration", english: "To push seduction to admiration" },
       { lari: "Bakama", mandombe: "Bakama", french: "Être surpris, se faire appréhender", english: "To be surprised, to be apprehended" },
