@@ -2300,7 +2300,7 @@ export const lessons: Lesson[] = [
       { lari: "Bikandu", mandombe: "Bikandu", french: "Protecteur des champs (piège mystique)", english: "Field protector (mystical trap)" },
       { lari: "Bikakudi", mandombe: "Bikakudi", french: "Objet de délivrance", english: "Object of deliverance" },
       { lari: "Bikuta", mandombe: "Bikuta", french: "Objet pour calmer un bébé", english: "Baby soothing object" },
-      { lari: "Bidiki", mandombe: "Bidiki", french: "Brique", english: "Brick" },
+      { lari: "Bidiki | Bibidiki", mandombe: "Bidiki | Bibidiki", french: "Brique", english: "Brick" },
       { lari: "Bidila", mandombe: "Bidila", french: "Ourlet, natte", english: "Hem, mat" },
       { lari: "Biko", mandombe: "Biko", french: "Petit paquet", english: "Small packet" },
       { lari: "Bikonko bitatu", mandombe: "Bikonko bitatu", french: "Triangle", english: "Triangle" },
