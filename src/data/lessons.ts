@@ -4087,6 +4087,8 @@ export const lessons: Lesson[] = [
       { lari: "Wela", mandombe: "Wela", french: "Humer", english: "To sniff, to smell", portuguese: "Cheirar, farejar" },
       { lari: "Winda", mandombe: "Winda", french: "Taper avec quelque chose", english: "To hit with something", portuguese: "Bater com algo" },
       { lari: "Windana", mandombe: "Windana", french: "Se taper mutuellement", english: "To hit each other", portuguese: "Bater-se mutuamente" },
+      { lari: "Wuna", mandombe: "Wuna", french: "Mentir, simuler", english: "To lie, to pretend", portuguese: "Mentir, simular" },
+      { lari: "Wunga", mandombe: "Wunga", french: "Paître, garder", english: "To graze, to herd", portuguese: "Pastar, guardar" },
       { lari: "Wuta", mandombe: "Wuta", french: "Aspirer bruyamment", english: "To slurp, to sip noisily", portuguese: "Aspirar ruidosamente" },
       { lari: "Wutuna", mandombe: "Wutuna", french: "Une douleur lancinante", english: "A throbbing pain, a shooting pain", portuguese: "Uma dor latejante" },
       { lari: "Moneka", mandombe: "Moneka", french: "Être vu, réapparaître", english: "To be seen, to reappear", portuguese: "Ser visto, reaparecer" },
