@@ -8731,7 +8731,7 @@ export const lessons: Lesson[] = [
   {
     id: "fruits-tastes",
     title: "Fruits, Tastes & Implicit 'To Be'",
-    titleFr: "Fruits, saveurs et le verbe « être » sous-entendu",
+    titleFr: "Le Goût des choses",
     titlePt: "Frutas, sabores e o verbo 'ser' implícito",
     titleLari: "Luhu lua bima",
     titleMandombe: "Malala, Nsa ye Bote",
