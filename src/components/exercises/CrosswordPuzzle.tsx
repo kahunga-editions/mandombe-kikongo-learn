@@ -149,7 +149,7 @@ const CrosswordPuzzle = ({ question, onComplete }: Props) => {
       {/* Grid */}
       <div className="flex justify-center overflow-x-auto">
         <div
-          className="grid gap-0 border border-border"
+          className="grid gap-0"
           style={{
             gridTemplateColumns: `repeat(${gridSize}, 2.5rem)`,
             gridTemplateRows: `repeat(${gridSize}, 2.5rem)`,
@@ -164,7 +164,7 @@ const CrosswordPuzzle = ({ question, onComplete }: Props) => {
             const status = getCellStatus(key);
 
             if (!isActive) {
-              return <div key={key} className="w-10 h-10 bg-earth-deep" />;
+              return <div key={key} className="w-10 h-10 bg-transparent" />;
             }
 
             return (

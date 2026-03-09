@@ -8683,7 +8683,7 @@ export const lessons: Lesson[] = [
         title: "Salt & Seasoning Crossword",
         titleFr: "Mots croisés — Sel et assaisonnement",
         titlePt: "Palavras cruzadas — Sal e tempero",
-        gridSize: 8,
+        gridSize: 6,
         clues: [
           { answer: "MUNGUA", clue: "Salt", clueFr: "Le sel", cluePt: "O sal", row: 0, col: 0, direction: "across" },
           { answer: "MADIA", clue: "Food", clueFr: "La nourriture", cluePt: "A comida", row: 0, col: 0, direction: "down" },
@@ -8706,7 +8706,7 @@ export const lessons: Lesson[] = [
           { word: "MEKI", clue: "Eggs", clueFr: "Les œufs", cluePt: "Ovos", row: 3, col: 8, direction: "down" },
           { word: "NDUNDA", clue: "Vegetables", clueFr: "Légumes", cluePt: "Legumes", row: 6, col: 2, direction: "across" },
         ],
-        fillerLetters: "ABDIKMNOSTUZ",
+        fillerLetters: "BKUMADTILENZOWAFUSIKGABDMUNYELOTZKANDIBASEWUMFIKLONGADZBATUNEKIWOSALMFUGANDIBAKELOSTZWUMINFADGBKELO",
       },
     ],
   },
