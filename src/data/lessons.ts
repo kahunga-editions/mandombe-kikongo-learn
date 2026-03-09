@@ -4073,6 +4073,7 @@ export const lessons: Lesson[] = [
       { lari: "Yabula", mandombe: "Yabula", french: "Retirer un couvercle (d'une marmite), ouvrir une casserole, une marmite", english: "To remove a lid (from a pot), to open a saucepan, a cooking pot", portuguese: "Retirar a tampa (de uma panela), abrir uma caçarola" },
       { lari: "Wa", mandombe: "Wa", french: "Entendre, sentir, comprendre, écouter", english: "To hear, to feel, to understand, to listen", portuguese: "Ouvir, sentir, compreender, escutar" },
       { lari: "Wela", mandombe: "Wela", french: "Humer", english: "To sniff, to smell", portuguese: "Cheirar, farejar" },
+      { lari: "Winda", mandombe: "Winda", french: "Taper avec quelque chose", english: "To hit with something", portuguese: "Bater com algo" },
       { lari: "Yaba", mandombe: "Yaba", french: "Technique de pêche consistant à faire une digue pour récupérer les poissons en aval", english: "A fishing technique involving building a dam to catch fish downstream", portuguese: "Técnica de pesca que consiste em fazer uma barragem para recuperar os peixes a jusante" },
       { lari: "Yavula", mandombe: "Yavula", french: "Marcher à quatre pattes (pour un bébé)", english: "To crawl on all fours (for a baby)", portuguese: "Engatinhar (para um bebé)" },
       { lari: "Yelesa", mandombe: "Yelesa", french: "Faire pousser", english: "To grow, to make grow", portuguese: "Fazer crescer" },
