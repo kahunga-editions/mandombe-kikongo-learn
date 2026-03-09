@@ -8015,7 +8015,7 @@ export const lessons: Lesson[] = [
       { lari: "Hata", mandombe: "Hata", french: "Le village", english: "The village", portuguese: "A aldeia" },
       { lari: "Mahata", mandombe: "Mahata", french: "Les villages (pluriel)", english: "The villages (plural)", portuguese: "As aldeias (plural)" },
       { lari: "Toma", mandombe: "Toma", french: "Beau, belle", english: "Beautiful", portuguese: "Bonito, bonita" },
-      { lari: "Nkondi", mandombe: "Nkondi", french: "La banane", english: "The banana", portuguese: "A banana" },
+      { lari: "Nkondi", mandombe: "Nkondi", french: "La statuette", english: "The statuette", portuguese: "A estatueta" },
       { lari: "Mankondi", mandombe: "Mankondi", french: "Les bananes (pluriel)", english: "The bananas (plural)", portuguese: "As bananas (plural)" },
       { lari: "Mbuaki", mandombe: "Mbuaki", french: "Mûr, mûre", english: "Ripe", portuguese: "Maduro, madura" },
     ],
