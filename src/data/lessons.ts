@@ -4387,6 +4387,12 @@ export const lessons: Lesson[] = [
       { lari: "Tutu", mandombe: "Tutu", french: "Une souris", english: "A mouse", portuguese: "Um rato" },
       { lari: "Tuema", mandombe: "Tuema", french: "Être essoufflé, respirer fortement", english: "To be out of breath, to breathe heavily", portuguese: "Estar ofegante, respirar forte" },
       { lari: "Wumuna", mandombe: "Wumuna", french: "Respirer", english: "To breathe", portuguese: "Respirar" },
+      { lari: "Butuka", mandombe: "Butuka", french: "Naître", english: "To be born", portuguese: "Nascer" },
+      { lari: "Dika", mandombe: "Dika", french: "Nourrir", english: "To feed, to nourish", portuguese: "Alimentar, nutrir" },
+      { lari: "Kela", mandombe: "Kela", french: "Protéger", english: "To protect", portuguese: "Proteger" },
+      { lari: "Nanguna", mandombe: "Nanguna", french: "Porter", english: "To carry", portuguese: "Carregar" },
+      { lari: "Nkatu", mandombe: "Nkatu", french: "Rien, pas… de", english: "Nothing, not… any", portuguese: "Nada, nenhum" },
+      { lari: "Nuana", mandombe: "Nuana", french: "Lutter", english: "To fight, to struggle", portuguese: "Lutar" },
       { lari: "Banza", mandombe: "Banza", french: "Imaginer", english: "To imagine", portuguese: "Imaginar" },
     ],
     phrases: [
