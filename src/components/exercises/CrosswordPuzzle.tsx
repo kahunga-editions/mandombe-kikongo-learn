@@ -42,11 +42,15 @@ const CrosswordPuzzle = ({ question, onComplete }: Props) => {
     const numbered: Record<string, number> = {};
     let num = 1;
 
-    // Sort clues by position for consistent numbering
-    const sorted = [...clues].sort((a, b) => a.row !== b.row ? a.row - b.row : a.col - b.col);
+    // Build a position-to-original-index mapping for numbering
+    // Sort by position for consistent numbering, but track original indices
+    const indexedClues = clues.map((clue, originalIndex) => ({ clue, originalIndex }));
+    const sorted = [...indexedClues].sort((a, b) =>
+      a.clue.row !== b.clue.row ? a.clue.row - b.clue.row : a.clue.col - b.clue.col
+    );
     const usedPositions = new Set<string>();
 
-    sorted.forEach((clue, ci) => {
+    sorted.forEach(({ clue, originalIndex }) => {
       const posKey = `${clue.row}-${clue.col}`;
       if (!usedPositions.has(posKey)) {
         numbered[posKey] = num++;
@@ -58,7 +62,7 @@ const CrosswordPuzzle = ({ question, onComplete }: Props) => {
         const c = clue.direction === "across" ? clue.col + i : clue.col;
         const key = `${r}-${c}`;
         if (!map[key]) map[key] = { clueIndices: [] };
-        map[key].clueIndices.push(ci);
+        map[key].clueIndices.push(originalIndex);
       }
     });
 
