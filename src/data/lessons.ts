@@ -8518,7 +8518,7 @@ export const lessons: Lesson[] = [
             ],
             note: "Le verbe être se place en fin de phrase et s'accorde avec la classe du nom. me est la contraction de mena (Mankondi), die est la contraction de diena (Dinkondi), bue est la contraction de buena (Buwa), lue est la contraction de luena (Loso).",
             noteFr: "Le verbe être se place en fin de phrase et s'accorde avec la classe du nom. me est la contraction de mena (Mankondi), die est la contraction de diena (Dinkondi), bue est la contraction de buena (Buwa), lue est la contraction de luena (Loso).",
-            noteEn: "The verb 'to be' is placed at the end of the sentence and agrees with the noun class. me is the contraction of mena (Mankondi), die is the contraction of diena (Dinkondi), bue is the contraction of buena (Buwa), lue is the contraction of luena (Loso).",
+            
             notePt: "O verbo ser coloca-se no final da frase e concorda com a classe do nome. me é a contração de mena (Mankondi), die é a contração de diena (Dinkondi), bue é a contração de buena (Buwa), lue é a contração de luena (Loso).",
           },
         ],
