@@ -8706,7 +8706,7 @@ export const lessons: Lesson[] = [
           { word: "MEKI", clue: "Eggs", clueFr: "Les œufs", cluePt: "Ovos", row: 3, col: 8, direction: "down" },
           { word: "NDUNDA", clue: "Vegetables", clueFr: "Légumes", cluePt: "Legumes", row: 6, col: 2, direction: "across" },
         ],
-        fillerLetters: "ABDIKMNOSTUZ",
+        fillerLetters: "BKUMADTILENZOWAFUSIKGABDMUNYELOTZKANDIBASEWUMFIKLONGADZBATUNEKIWOSALMFUGANDIBAKELOSTZWUMINFADGBKELO",
       },
     ],
   },

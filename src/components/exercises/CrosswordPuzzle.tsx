@@ -164,7 +164,7 @@ const CrosswordPuzzle = ({ question, onComplete }: Props) => {
             const status = getCellStatus(key);
 
             if (!isActive) {
-              return <div key={key} className="w-10 h-10 bg-earth-deep" />;
+              return <div key={key} className="w-10 h-10 bg-transparent" />;
             }
 
             return (
