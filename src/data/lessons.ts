@@ -4094,7 +4094,7 @@ export const lessons: Lesson[] = [
       { lari: "Yaba", mandombe: "Yaba", french: "Technique de pêche consistant à faire une digue pour récupérer les poissons en aval", english: "A fishing technique involving building a dam to catch fish downstream", portuguese: "Técnica de pesca que consiste em fazer uma barragem para recuperar os peixes a jusante" },
       { lari: "Yavula", mandombe: "Yavula", french: "Marcher à quatre pattes (pour un bébé)", english: "To crawl on all fours (for a baby)", portuguese: "Engatinhar (para um bebé)" },
       { lari: "Yelesa", mandombe: "Yelesa", french: "Faire pousser", english: "To grow, to make grow", portuguese: "Fazer crescer" },
-      { lari: "Yooka", mandombe: "Yooka", french: "Brûler, faire un barbecue", english: "To burn, to barbecue", portuguese: "Queimar, fazer churrasco", note: "Le /o:/ est long. Ne pas confondre avec « Yoka » (passer) où le /o/ est court." },
+      { lari: "Yoka", mandombe: "Yoka", french: "Brûler, faire un barbecue", english: "To burn, to barbecue", portuguese: "Queimar, fazer churrasco", note: "Le /o:/ est long. Ne pas confondre avec « Yoka » (passer) où le /o/ est court." },
       { lari: "Yoka", mandombe: "Yoka", french: "Passer", english: "To pass", portuguese: "Passar", note: "Le /o/ est court. Ne pas confondre avec « Yooka » (brûler) où le /o:/ est long." },
       { lari: "Moyo yoka", mandombe: "Moyo yoka", french: "Avoir la diarrhée", english: "To have diarrhea", portuguese: "Ter diarreia" },
       { lari: "Kueta", mandombe: "Kueta", french: "Grincer des dents pour exprimer le mécontentement", english: "To grind one's teeth to express discontent", portuguese: "Ranger os dentes para expressar descontentamento" },
