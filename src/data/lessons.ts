@@ -8852,7 +8852,7 @@ export const lessons: Lesson[] = [
             titleFr: "Le jus de canne à sucre",
             titlePt: "Sumo de cana-de-açúcar",
             examples: [
-              { lari: "Mamba ma minshe, ma ma bote", mandombe: "Mamba ma minshe, ma ma bote", french: "Le jus de canne à sucre est bon.", english: "Sugar cane juice is good.", portuguese: "O sumo de cana-de-açúcar é bom." },
+              { lari: "Mamba ma minche, ma ma bote", mandombe: "Mamba ma minche, ma ma bote", french: "Le jus de canne à sucre est bon.", english: "Sugar cane juice is good.", portuguese: "O sumo de cana-de-açúcar é bom." },
             ],
             note: "The first 'ma' refers to 'mamba' (juice). The second 'ma' agrees with 'bote' (good).",
             noteFr: "Le premier « ma » se rapporte à « mamba » (jus). Le deuxième « ma » va avec « bote » (bon).",
