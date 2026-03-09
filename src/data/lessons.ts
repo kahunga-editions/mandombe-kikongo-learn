@@ -8667,17 +8667,68 @@ export const lessons: Lesson[] = [
         ],
       },
       // 10 — Crossword: salt vocabulary
+      // Layout (grid 8x8):
+      //   0 1 2 3 4 5 6 7
+      // 0 M A D I A . . .   ← MADIA across (0,0)
+      // 1 U . . . . . . .
+      // 2 N D U R I . . .   ← NDURI across (2,0)
+      // 3 G . . . . . . .
+      // 4 U . . . . . . .
+      // 5 A . . . . . . .
+      // ↑ MUNGUA down (0,0) — shares M with MADIA, N with NDURI
+      //
+      // LUNDA down (0,2): L(0,2)? No — MADIA has D at (0,2).
+      // LUNDA down (2,2): starts at U — NDURI[2]=U, LUNDA[1]=U ✓
+      //   2,2=U  3,2=N  4,2=D  5,2=A  → but LUNDA[0]=L not U.
+      // Actually let's rethink:
+      //
+      // Final verified layout (grid 7x7):
+      //   0 1 2 3 4 5 6
+      // 0 . . L . . . .
+      // 1 M A D I A . .   ← MADIA across (1,0)
+      // 2 . . N . . . .
+      // 3 . . D . . . .
+      // 4 N D U R I . .   ← NDURI across (4,0)
+      // 5 . . A . . . .
+      // 6 . . . . . . .
+      // ↑ col 0: rows 1,4 → no down word (just MADIA[0] and NDURI[0])
+      // LUNDA down col 2, row 0: L(0,2) U(1,2)? MADIA[2]=D ≠ U ✗
+      //
+      // OK, simpler approach — 3 clean crosses:
       {
         type: "crossword",
         title: "Salt & Seasoning Crossword",
         titleFr: "Mots croisés — Sel et assaisonnement",
         titlePt: "Palavras cruzadas — Sal e tempero",
-        gridSize: 9,
+        gridSize: 8,
+        // Verified layout (8×8):
+        //   0 1 2 3 4 5 6 7
+        // 0 M . . . . . . .
+        // 1 A . . . . . . .
+        // 2 D . . . . . . .
+        // 3 I . . . . . . .
+        // 4 A . . . . . . .
+        // MADIA down col 0 rows 0-4
+        //
+        // MUNGUA across row 0: M(0,0) U(0,1) N(0,2) G(0,3) U(0,4) A(0,5)
+        // shares M at (0,0) ✓
+        //
+        // NDURI across row 2: need to cross MADIA's D at (2,0)
+        // NDURI[1]=D → N(2,-1) ✗
+        // NDURI[0]=N at (2,0)? MADIA[2]=D ≠ N ✗
+        //
+        // Let me just do non-overlapping-start words:
+        // MUNGUA across row 0, col 0
+        // NDURI down col 2, row 0 (N at 0,2 = MUNGUA[2]=N ✓)
+        // LOSO across row 3, col 1 (crosses NDURI's R? NDURI[3]=R at (3,2), LOSO[1]=O ≠ R ✗)
+        // BUWA down col 4, row 0 (MUNGUA[4]=U, BUWA[0]=B ≠ U ✗)
+        //
+        // Simplest valid:
         clues: [
-          { answer: "MUNGUA", clue: "Salt", clueFr: "Le sel", cluePt: "O sal", row: 2, col: 0, direction: "across" },
-          { answer: "NDURI", clue: "Too much (excess)", clueFr: "Trop (excès)", cluePt: "Demais (excesso)", row: 2, col: 2, direction: "down" },
-          { answer: "LUNDA", clue: "To preserve", clueFr: "Conserver", cluePt: "Conservar", row: 4, col: 1, direction: "across" },
-          { answer: "MADIA", clue: "Food", clueFr: "La nourriture", cluePt: "A comida", row: 2, col: 0, direction: "down" },
+          { answer: "MUNGUA", clue: "Salt", clueFr: "Le sel", cluePt: "O sal", row: 0, col: 0, direction: "across" },
+          { answer: "NDURI", clue: "Too much (excess)", clueFr: "Trop (excès)", cluePt: "Demais (excesso)", row: 0, col: 2, direction: "down" },
+          { answer: "LUNDA", clue: "To preserve", clueFr: "Conserver", cluePt: "Conservar", row: 2, col: 1, direction: "across" },
+          { answer: "MADIA", clue: "Food", clueFr: "La nourriture", cluePt: "A comida", row: 0, col: 0, direction: "down" },
         ],
       },
       // 11 — Word search: food nouns
