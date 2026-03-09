@@ -6090,7 +6090,7 @@ export const lessons: Lesson[] = [
           { word: "MUANA", clue: "Child", clueFr: "Enfant", cluePt: "Criança", row: 3, col: 0, direction: "down" },
           { word: "ZONZA", clue: "To speak", clueFr: "Parler", cluePt: "Falar", row: 6, col: 2, direction: "across" },
         ],
-        fillerLetters: "KARILABMTUWIZOLENUNIBALOYEBELAKZMUALUBANGANGADIBAMUNIGKAZONZATBWKFUSILA",
+        fillerLetters: "DWFGTABLNKSIZORVUQHJEPCMXYEWTFUBAKDLNGSIROHVQJCMPXEYWTFBLKANDSGIZOHR",
       },
       // Exercise 19: MCQ — Noun class pronoun yi/zi
       {
@@ -8723,7 +8723,7 @@ export const lessons: Lesson[] = [
           { word: "MEKI", clue: "Eggs", clueFr: "Les œufs", cluePt: "Ovos", row: 5, col: 9, direction: "down" },
           { word: "NDUNDA", clue: "Vegetables", clueFr: "Légumes", cluePt: "Legumes", row: 7, col: 0, direction: "across" },
         ],
-        fillerLetters: "TKWASIDLNFZOKEMBATIWNFSUDGAKETZBWAITLOKENDFSAGZUBITLWKNOAFEDSZMGIBTLWAKNOEDFSZMUGIBTLKAOWNEDFSZU",
+        fillerLetters: "HVQRJCPXEYWOBLNDSGIRZFTAKUHMVQJCPXEYWOBLNDSGIFRZTKAUHMVQJCPXEYWOBLDSGIFRZTAKUHMVQJCPXEYWOBLNDSGI",
       },
     ],
   },
@@ -9023,7 +9023,7 @@ export const lessons: Lesson[] = [
           { word: "NSA", clue: "Sourness", clueFr: "Acidité", cluePt: "Acidez", row: 6, col: 0, direction: "down" },
           { word: "MAMBA", clue: "Water / Juice", clueFr: "Eau / Jus", cluePt: "Água / Sumo", row: 9, col: 3, direction: "across" },
         ],
-        fillerLetters: "TKWZIDGSFEOKWZIDGSFETKWZIDGSFEOKWZIDGSFETKWZIDGSFEMKWZIDGSFETKWZIDGSFEMKWZIDGSFETKWZIDGSFEMKWZIDGSFE",
+        fillerLetters: "VHJRQCPEXYWOBLKAFNDSGIZTRUHMVQJCXPEYWOLBKAFNDSGIZTRUHVMQJCXPEYWOLBKAFNDSGIZTRUHMVQJCXPEYWOLBKAFNDSGI",
       },
     ],
   },
