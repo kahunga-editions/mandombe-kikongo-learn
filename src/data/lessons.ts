@@ -4074,6 +4074,7 @@ export const lessons: Lesson[] = [
       { lari: "Wa", mandombe: "Wa", french: "Entendre, sentir, comprendre, écouter", english: "To hear, to feel, to understand, to listen", portuguese: "Ouvir, sentir, compreender, escutar" },
       { lari: "Wela", mandombe: "Wela", french: "Humer", english: "To sniff, to smell", portuguese: "Cheirar, farejar" },
       { lari: "Winda", mandombe: "Winda", french: "Taper avec quelque chose", english: "To hit with something", portuguese: "Bater com algo" },
+      { lari: "Windana", mandombe: "Windana", french: "Se taper mutuellement", english: "To hit each other", portuguese: "Bater-se mutuamente" },
       { lari: "Moneka", mandombe: "Moneka", french: "Être vu, réapparaître", english: "To be seen, to reappear", portuguese: "Ser visto, reaparecer" },
       { lari: "Monekena", mandombe: "Monekena", french: "Visiter, apparaître à quelqu'un, voir quelqu'un", english: "To visit, to appear to someone, to see someone", portuguese: "Visitar, aparecer a alguém, ver alguém" },
       { lari: "Yaba", mandombe: "Yaba", french: "Technique de pêche consistant à faire une digue pour récupérer les poissons en aval", english: "A fishing technique involving building a dam to catch fish downstream", portuguese: "Técnica de pesca que consiste em fazer uma barragem para recuperar os peixes a jusante" },
