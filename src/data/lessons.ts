@@ -9023,7 +9023,7 @@ export const lessons: Lesson[] = [
           { word: "NSA", clue: "Sourness", clueFr: "Acidité", cluePt: "Acidez", row: 6, col: 0, direction: "down" },
           { word: "MAMBA", clue: "Water / Juice", clueFr: "Eau / Jus", cluePt: "Água / Sumo", row: 9, col: 3, direction: "across" },
         ],
-        fillerLetters: "TKWZIDGSFEOKWZIDGSFETKWZIDGSFEOKWZIDGSFETKWZIDGSFEMKWZIDGSFETKWZIDGSFEMKWZIDGSFETKWZIDGSFEMKWZIDGSFE",
+        fillerLetters: "VHJRQCPEXYWOBLKAFNDSGIZTRUHMVQJCXPEYWOLBKAFNDSGIZTRUHVMQJCXPEYWOLBKAFNDSGIZTRUHMVQJCXPEYWOLBKAFNDSGI",
       },
     ],
   },
