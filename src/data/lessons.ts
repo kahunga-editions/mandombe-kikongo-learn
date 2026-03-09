@@ -6090,7 +6090,7 @@ export const lessons: Lesson[] = [
           { word: "MUANA", clue: "Child", clueFr: "Enfant", cluePt: "Criança", row: 3, col: 0, direction: "down" },
           { word: "ZONZA", clue: "To speak", clueFr: "Parler", cluePt: "Falar", row: 6, col: 2, direction: "across" },
         ],
-        fillerLetters: "KARILABMTUWIZOLENUNIBALOYEBELAKZMUALUBANGANGADIBAMUNIGKAZONZATBWKFUSILA",
+        fillerLetters: "DWFGTABLNKSIZORVUQHJEPCMXYEWTFUBAKDLNGSIROHVQJCMPXEYWTFBLKANDSGIZOHR",
       },
       // Exercise 19: MCQ — Noun class pronoun yi/zi
       {
