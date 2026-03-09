@@ -8667,28 +8667,33 @@ export const lessons: Lesson[] = [
         ],
       },
       // 10 — Crossword: salt vocabulary
-      // Verified layout (8×8):
-      //   0 1 2 3 4 5
-      // 0 M U N G U A   ← MUNGUA across
-      // 1 A . D . . .
-      // 2 D L U N D A   ← LUNDA across (row 2, col 1)
-      // 3 I . R . . .
-      // 4 A . I . . .
-      // ↕     ↕
-      // MADIA  NDURI
-      // down   down
-      // Crosses: (0,0) M=M ✓, (0,2) N=N ✓, (2,2) U=U ✓
+      // Verified layout (7×7):
+      //   0 1 2 3 4 5 6
+      // 0 . . . N . M .
+      // 1 M U N G U A .
+      // 2 . N D U N D A
+      // 3 . . . B . I .
+      // 4 . . . A . A .
+      //         ↕   ↕
+      //       NGUBA MADIA
+      //       down  down
+      // MUNGUA across (1,0), NDUNDA across (2,1)
+      // Intersections:
+      //   (1,3) G: MUNGUA[3]=G, NGUBA[1]=G ✓
+      //   (1,5) A: MUNGUA[5]=A, MADIA[1]=A ✓
+      //   (2,3) U: NGUBA[2]=U, NDUNDA[2]=U ✓
+      //   (2,5) D: MADIA[2]=D, NDUNDA[4]=D ✓
       {
         type: "crossword",
         title: "Salt & Seasoning Crossword",
         titleFr: "Mots croisés — Sel et assaisonnement",
         titlePt: "Palavras cruzadas — Sal e tempero",
-        gridSize: 6,
+        gridSize: 7,
         clues: [
-          { answer: "MUNGUA", clue: "Salt", clueFr: "Le sel", cluePt: "O sal", row: 0, col: 0, direction: "across" },
-          { answer: "NGUBA", clue: "Peanuts", clueFr: "Cacahuètes", cluePt: "Amendoins", row: 0, col: 2, direction: "down" },
-          { answer: "MADIA", clue: "Food", clueFr: "La nourriture", cluePt: "A comida", row: 1, col: 5, direction: "down" },
-          { answer: "NDUNDA", clue: "Vegetables", clueFr: "Légumes", cluePt: "Legumes", row: 2, col: 0, direction: "across" },
+          { answer: "MUNGUA", clue: "Salt", clueFr: "Le sel", cluePt: "O sal", row: 1, col: 0, direction: "across" },
+          { answer: "NGUBA", clue: "Peanuts", clueFr: "Cacahuètes", cluePt: "Amendoins", row: 0, col: 3, direction: "down" },
+          { answer: "MADIA", clue: "Food", clueFr: "La nourriture", cluePt: "A comida", row: 0, col: 5, direction: "down" },
+          { answer: "NDUNDA", clue: "Vegetables", clueFr: "Légumes", cluePt: "Legumes", row: 2, col: 1, direction: "across" },
         ],
       },
       // 11 — Word search: food nouns
