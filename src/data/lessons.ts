@@ -8969,10 +8969,10 @@ export const lessons: Lesson[] = [
         sentence: "Mamba ma ___, ma ma bote.",
         sentenceFr: "Mamba ma ___, ma ma bote.",
         sentencePt: "Mamba ma ___, ma ma bote.",
-        blank: "mintshe",
-        hint: "Plural of muntshe (sugar cane)",
-        hintFr: "Pluriel de muntshe (canne à sucre)",
-        hintPt: "Plural de muntshe (cana-de-açúcar)",
+        blank: "minshe",
+        hint: "Plural of munshe (sugar cane)",
+        hintFr: "Pluriel de munshe (canne à sucre)",
+        hintPt: "Plural de munshe (cana-de-açúcar)",
       },
       // Exercise 9: Fill in blank — implicit verb
       {
