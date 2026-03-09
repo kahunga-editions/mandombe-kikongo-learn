@@ -8686,9 +8686,9 @@ export const lessons: Lesson[] = [
         gridSize: 6,
         clues: [
           { answer: "MUNGUA", clue: "Salt", clueFr: "Le sel", cluePt: "O sal", row: 0, col: 0, direction: "across" },
-          { answer: "MADIA", clue: "Food", clueFr: "La nourriture", cluePt: "A comida", row: 0, col: 0, direction: "down" },
-          { answer: "NDURI", clue: "Too much (excess)", clueFr: "Trop (excès)", cluePt: "Demais (excesso)", row: 0, col: 2, direction: "down" },
-          { answer: "LUNDA", clue: "To preserve", clueFr: "Conserver", cluePt: "Conservar", row: 2, col: 1, direction: "across" },
+          { answer: "NGUBA", clue: "Peanuts", clueFr: "Cacahuètes", cluePt: "Amendoins", row: 0, col: 2, direction: "down" },
+          { answer: "MADIA", clue: "Food", clueFr: "La nourriture", cluePt: "A comida", row: 1, col: 5, direction: "down" },
+          { answer: "NDUNDA", clue: "Vegetables", clueFr: "Légumes", cluePt: "Legumes", row: 2, col: 0, direction: "across" },
         ],
       },
       // 11 — Word search: food nouns
