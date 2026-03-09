@@ -4088,6 +4088,10 @@ export const lessons: Lesson[] = [
       { lari: "Wela", mandombe: "Wela", french: "Humer", english: "To sniff, to smell", portuguese: "Cheirar, farejar" },
       { lari: "Winda", mandombe: "Winda", french: "Taper avec quelque chose", english: "To hit with something", portuguese: "Bater com algo" },
       { lari: "Windana", mandombe: "Windana", french: "Se taper mutuellement", english: "To hit each other", portuguese: "Bater-se mutuamente" },
+      { lari: "Wisa", mandombe: "Wisa", french: "Conseiller, faire entendre raison", english: "To advise, to reason with", portuguese: "Aconselhar, fazer entender razão" },
+      { lari: "Wisana", mandombe: "Wisana", french: "S'entendre mutuellement", english: "To understand each other", portuguese: "Entender-se mutuamente" },
+      { lari: "Wumba", mandombe: "Wumba", french: "Rite de protection contre les fausses couches", english: "Protective rite against miscarriage", portuguese: "Rito de proteção contra abortos espontâneos" },
+      { lari: "Wumuka", mandombe: "Wumuka", french: "Se perdre", english: "To get lost", portuguese: "Perder-se" },
       { lari: "Wuna", mandombe: "Wuna", french: "Mentir, simuler", english: "To lie, to pretend", portuguese: "Mentir, simular" },
       { lari: "Wunga", mandombe: "Wunga", french: "Paître, garder", english: "To graze, to herd", portuguese: "Pastar, guardar" },
       { lari: "Wuta", mandombe: "Wuta", french: "Aspirer bruyamment", english: "To slurp, to sip noisily", portuguese: "Aspirar ruidosamente" },
@@ -4361,6 +4365,7 @@ export const lessons: Lesson[] = [
       // Body & breathing
       { lari: "Nsimu", mandombe: "Nsimu", french: "La mémoire", english: "Memory", portuguese: "A memória" },
       { lari: "Nzieta", mandombe: "Nzieta", french: "Le vertige", english: "Dizziness, vertigo", portuguese: "A vertigem, a tontura" },
+      { lari: "Tuika", mandombe: "Tuika", french: "Faire passer un message, expédier", english: "To pass on a message, to dispatch", portuguese: "Transmitir uma mensagem, expedir" },
       { lari: "Tukuta", mandombe: "Tukuta", french: "Transpirer", english: "To sweat", portuguese: "Transpirar, suar" },
       { lari: "Tuema", mandombe: "Tuema", french: "Être essoufflé, respirer fortement", english: "To be out of breath, to breathe heavily", portuguese: "Estar ofegante, respirar forte" },
       { lari: "Wumuna", mandombe: "Wumuna", french: "Respirer", english: "To breathe", portuguese: "Respirar" },
