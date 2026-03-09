@@ -8727,4 +8727,304 @@ export const lessons: Lesson[] = [
       },
     ],
   },
+  // ─── LESSON: Fruits, Tastes & Implicit Verb "to be" ───
+  {
+    id: "fruits-tastes",
+    title: "Fruits, Tastes & Implicit 'To Be'",
+    titleFr: "Fruits, saveurs et le verbe « être » sous-entendu",
+    titlePt: "Frutas, sabores e o verbo 'ser' implícito",
+    titleLari: "Malala, Nsa ye Bote",
+    titleMandombe: "Malala, Nsa ye Bote",
+    description: "Learn about citrus fruits, taste descriptors (sour, bitter, sweet), and how the verb 'to be' can be omitted in Kikongo Lari without changing the meaning.",
+    descriptionFr: "Découvrez les agrumes, les saveurs (acide, amer, sucré) et comment le verbe « être » peut être omis en kikongo lari sans changer le sens de la phrase.",
+    descriptionPt: "Aprenda sobre frutas cítricas, descritores de sabor (ácido, amargo, doce) e como o verbo 'ser' pode ser omitido em kikongo lari sem alterar o significado.",
+    level: "intermediate",
+    icon: "🍋",
+    vocabulary: [
+      { lari: "Lala | Malala", mandombe: "Lala | Malala", french: "Orange / Citron (agrume) | Oranges", english: "Orange / Lemon (citrus) | Oranges", portuguese: "Laranja / Limão (citrino) | Laranjas", note: "Lala dia nsa = le citron (orange acide)" },
+      { lari: "Nsa", mandombe: "Nsa", french: "Acidité", english: "Acidity / Sourness", portuguese: "Acidez" },
+      { lari: "Nduri", mandombe: "Nduri", french: "Amère / Amer", english: "Bitter", portuguese: "Amargo/a" },
+      { lari: "Nzeki nzeki", mandombe: "Nzeki nzeki", french: "Sucré (fruits & plantes)", english: "Sweet (for fruits & plants)", portuguese: "Doce (para frutas e plantas)" },
+      { lari: "Muntshe | Mintshe", mandombe: "Muntshe | Mintshe", french: "Canne à sucre | Cannes à sucre", english: "Sugar cane | Sugar canes", portuguese: "Cana-de-açúcar | Canas-de-açúcar" },
+      { lari: "Mamba", mandombe: "Mamba", french: "Eau / Jus", english: "Water / Juice", portuguese: "Água / Sumo" },
+      { lari: "Dimpa | Mampa", mandombe: "Dimpa | Mampa", french: "Pain | Pains", english: "Bread | Breads", portuguese: "Pão | Pães" },
+      { lari: "Bikola", mandombe: "Bikola", french: "Légumes", english: "Vegetables", portuguese: "Legumes" },
+      { lari: "Buwa", mandombe: "Buwa", french: "Champignons (pl.)", english: "Mushrooms (pl.)", portuguese: "Cogumelos (pl.)" },
+      { lari: "Luwa", mandombe: "Luwa", french: "Champignon (sg.)", english: "Mushroom (sg.)", portuguese: "Cogumelo (sg.)" },
+      { lari: "Lutundu | Ntundu", mandombe: "Lutundu | Ntundu", french: "Ntundu (fruit sauvage jaune orangé) sg. | pl.", english: "Ntundu (wild yellow-orange fruit) sg. | pl.", portuguese: "Ntundu (fruta selvagem amarelo-alaranjada) sg. | pl." },
+      { lari: "Lusafu | Nsafu", mandombe: "Lusafu | Nsafu", french: "Safou sg. | Safous pl.", english: "Safou (African plum) sg. | pl.", portuguese: "Safou sg. | pl." },
+      { lari: "Bote", mandombe: "Bote", french: "Bon / Bonne", english: "Good", portuguese: "Bom / Boa" },
+      { lari: "Mankondi", mandombe: "Mankondi", french: "Bananes", english: "Bananas", portuguese: "Bananas" },
+    ],
+    syntax: [
+      {
+        title: "Taste Descriptors",
+        titleFr: "Les descripteurs de saveur",
+        titlePt: "Descritores de sabor",
+        description: "In Kikongo Lari, taste words modify noun phrases to describe flavour.",
+        descriptionFr: "En kikongo lari, les mots de saveur modifient les groupes nominaux pour décrire le goût.",
+        descriptionPt: "Em kikongo lari, as palavras de sabor modificam os grupos nominais para descrever o gosto.",
+        pattern: "[Noun] + [taste descriptor]",
+        groups: [
+          {
+            title: "Sourness & Bitterness",
+            titleFr: "Acidité et amertume",
+            titlePt: "Acidez e amargura",
+            examples: [
+              { lari: "Lala dia nsa", mandombe: "Lala dia nsa", french: "Le citron (l'orange acide)", english: "The lemon (the sour orange)", portuguese: "O limão (a laranja ácida)" },
+              { lari: "Lala di nsa die(na)", mandombe: "Lala di nsa diena", french: "Cette orange est acide.", english: "This orange is sour.", portuguese: "Esta laranja é ácida." },
+              { lari: "Malala ma nsa me(na)", mandombe: "Malala ma nsa mena", french: "Ces oranges sont acides.", english: "These oranges are sour.", portuguese: "Estas laranjas são ácidas." },
+            ],
+          },
+          {
+            title: "Sweetness — Nzeki nzeki",
+            titleFr: "Le sucré — Nzeki nzeki",
+            titlePt: "Doçura — Nzeki nzeki",
+            examples: [
+              { lari: "Makondi ma me na nzeki nzeki", mandombe: "Makondi ma me na nzeki nzeki", french: "Ces bananes sont bien sucrées.", english: "These bananas are very sweet.", portuguese: "Estas bananas são bem doces." },
+            ],
+            note: "'Nzeki nzeki' is used specifically for the natural sweetness of fruits and plants.",
+            noteFr: "« Nzeki nzeki » désigne spécifiquement le sucré naturel des fruits et des plantes.",
+            notePt: "'Nzeki nzeki' é usado especificamente para a doçura natural de frutas e plantas.",
+          },
+        ],
+      },
+      {
+        title: "The Implicit Verb 'To Be'",
+        titleFr: "Le verbe « être » sous-entendu",
+        titlePt: "O verbo 'ser' implícito",
+        description: "In Kikongo Lari, the verb 'to be' (diena, mena, biena, etc.) can be omitted without changing the meaning of the sentence. This is a very common construction.",
+        descriptionFr: "En kikongo lari, le verbe « être » (diena, mena, biena, etc.) peut être omis sans changer le sens de la phrase. C'est une construction très courante.",
+        descriptionPt: "Em kikongo lari, o verbo 'ser' (diena, mena, biena, etc.) pode ser omitido sem alterar o significado da frase. É uma construção muito comum.",
+        pattern: "[Noun] + [agreement] + [adjective] (+ optional [verb 'to be'])",
+        groups: [
+          {
+            title: "Di- / Ma- class (Dimpa, Mampa)",
+            titleFr: "Classe Di- / Ma- (Dimpa, Mampa)",
+            titlePt: "Classe Di- / Ma- (Dimpa, Mampa)",
+            examples: [
+              { lari: "Dimpa dia di bote", mandombe: "Dimpa dia di bote", french: "Le pain est bon.", english: "The bread is good.", portuguese: "O pão é bom." },
+              { lari: "Dimpa dia di bote die(na)", mandombe: "Dimpa dia di bote diena", french: "Le pain est bon. (avec le verbe être)", english: "The bread is good. (with the verb 'to be')", portuguese: "O pão é bom. (com o verbo 'ser')" },
+              { lari: "Mampa ma ma bote", mandombe: "Mampa ma ma bote", french: "Les pains sont bons.", english: "The breads are good.", portuguese: "Os pães são bons." },
+              { lari: "Mampa ma ma bote me(na)", mandombe: "Mampa ma ma bote mena", french: "Les pains sont bons. (avec être)", english: "The breads are good. (with 'to be')", portuguese: "Os pães são bons. (com 'ser')" },
+            ],
+            note: "Omitting diena / mena does NOT change the meaning!",
+            noteFr: "Omettre diena / mena ne change PAS le sens de la phrase !",
+            notePt: "Omitir diena / mena NÃO altera o significado da frase!",
+          },
+          {
+            title: "Bi- class (Bikola)",
+            titleFr: "Classe Bi- (Bikola)",
+            titlePt: "Classe Bi- (Bikola)",
+            examples: [
+              { lari: "Bikola bia bi bote", mandombe: "Bikola bia bi bote", french: "Les légumes sont bons.", english: "The vegetables are good.", portuguese: "Os legumes são bons." },
+              { lari: "Bikola bia bi bote bie(na)", mandombe: "Bikola bia bi bote biena", french: "Les légumes sont bons. (avec être)", english: "The vegetables are good. (with 'to be')", portuguese: "Os legumes são bons. (com 'ser')" },
+            ],
+          },
+          {
+            title: "Bu- / Lu- class (Buwa, Luwa)",
+            titleFr: "Classe Bu- / Lu- (Buwa, Luwa)",
+            titlePt: "Classe Bu- / Lu- (Buwa, Luwa)",
+            examples: [
+              { lari: "Buwa bua bu bote", mandombe: "Buwa bua bu bote", french: "Les champignons sont bons.", english: "The mushrooms are good.", portuguese: "Os cogumelos são bons." },
+              { lari: "Buwa bua bu bote bue(na)", mandombe: "Buwa bua bu bote buena", french: "Les champignons sont bons. (avec être)", english: "The mushrooms are good. (with 'to be')", portuguese: "Os cogumelos são bons. (com 'ser')" },
+              { lari: "Luwa lua lu bote", mandombe: "Luwa lua lu bote", french: "Le champignon est bon.", english: "The mushroom is good.", portuguese: "O cogumelo é bom." },
+              { lari: "Luwa lua lu bote lue(na)", mandombe: "Luwa lua lu bote luena", french: "Le champignon est bon. (avec être)", english: "The mushroom is good. (with 'to be')", portuguese: "O cogumelo é bom. (com 'ser')" },
+            ],
+          },
+          {
+            title: "Lu- / N- class (Lutundu, Ntundu, Lusafu, Nsafu)",
+            titleFr: "Classe Lu- / N- (Lutundu, Ntundu, Lusafu, Nsafu)",
+            titlePt: "Classe Lu- / N- (Lutundu, Ntundu, Lusafu, Nsafu)",
+            examples: [
+              { lari: "Lutundu lua lu bote", mandombe: "Lutundu lua lu bote", french: "Le ntundu est bon.", english: "The ntundu is good.", portuguese: "O ntundu é bom." },
+              { lari: "Lutundu lua lu bote lue(na)", mandombe: "Lutundu lua lu bote luena", french: "Le ntundu est bon. (avec être)", english: "The ntundu is good. (with 'to be')", portuguese: "O ntundu é bom. (com 'ser')" },
+              { lari: "Ntundu za mbote", mandombe: "Ntundu za mbote", french: "Les ntundus sont bons.", english: "The ntundus are good.", portuguese: "Os ntundus são bons." },
+              { lari: "Ntundu za mbote ze(na)", mandombe: "Ntundu za mbote zena", french: "Les ntundus sont bons. (avec être)", english: "The ntundus are good. (with 'to be')", portuguese: "Os ntundus são bons. (com 'ser')" },
+              { lari: "Lusafu lua lu bote", mandombe: "Lusafu lua lu bote", french: "Le safou est bon.", english: "The safou is good.", portuguese: "O safou é bom." },
+              { lari: "Lusafu lua lu bote lue(na)", mandombe: "Lusafu lua lu bote luena", french: "Le safou est bon. (avec être)", english: "The safou is good. (with 'to be')", portuguese: "O safou é bom. (com 'ser')" },
+              { lari: "Nsafu za mbote", mandombe: "Nsafu za mbote", french: "Les safous sont bons.", english: "The safous are good.", portuguese: "Os safous são bons." },
+              { lari: "Nsafu za mbote ze(na)", mandombe: "Nsafu za mbote zena", french: "Les safous sont bons. (avec être)", english: "The safous are good. (with 'to be')", portuguese: "Os safous são bons. (com 'ser')" },
+            ],
+          },
+          {
+            title: "Sugar cane juice",
+            titleFr: "Le jus de canne à sucre",
+            titlePt: "Sumo de cana-de-açúcar",
+            examples: [
+              { lari: "Mamba ma mintshe, ma ma bote", mandombe: "Mamba ma mintshe, ma ma bote", french: "Le jus de canne à sucre est bon.", english: "Sugar cane juice is good.", portuguese: "O sumo de cana-de-açúcar é bom." },
+            ],
+            note: "The first 'ma' refers to 'mamba' (juice). The second 'ma' agrees with 'bote' (good).",
+            noteFr: "Le premier « ma » se rapporte à « mamba » (jus). Le deuxième « ma » va avec « bote » (bon).",
+            notePt: "O primeiro 'ma' refere-se a 'mamba' (sumo). O segundo 'ma' acompanha 'bote' (bom).",
+          },
+        ],
+      },
+      {
+        title: "Cultural Note — Sugar in Kongo Tradition",
+        titleFr: "Note culturelle — Le sucre dans la tradition Kongo",
+        titlePt: "Nota cultural — O açúcar na tradição Kongo",
+        description: "Traditionally, the Kongo people did not add sugar to food. The original Kongo did not consume sugar. Certain plants could naturally add sweetness to food.",
+        descriptionFr: "Traditionnellement, les Kongo n'ajoutaient pas de sucre dans la nourriture. Les Kongos originaux ne consommaient pas de sucre. Certaines plantes pouvaient naturellement ajouter du sucré à la nourriture.",
+        descriptionPt: "Tradicionalmente, os Kongo não adicionavam açúcar à comida. Os Kongos originais não consumiam açúcar. Certas plantas podiam naturalmente adoçar a comida.",
+        groups: [],
+      },
+    ],
+    exercises: [
+      // Exercise 1: Multiple choice — What is "Lala dia nsa"?
+      {
+        type: "multiple-choice",
+        question: "What does 'Lala dia nsa' mean?",
+        questionFr: "Que signifie « Lala dia nsa » ?",
+        questionPt: "O que significa 'Lala dia nsa'?",
+        options: ["The sweet orange", "The lemon (sour orange)", "The banana", "The bread"],
+        optionsFr: ["L'orange sucrée", "Le citron (orange acide)", "La banane", "Le pain"],
+        optionsPt: ["A laranja doce", "O limão (laranja ácida)", "A banana", "O pão"],
+        correctIndex: 1,
+        explanation: "'Lala dia nsa' literally means 'the orange of sourness' — i.e. the lemon.",
+        explanationFr: "« Lala dia nsa » signifie littéralement « l'orange d'acidité », c'est-à-dire le citron.",
+        explanationPt: "'Lala dia nsa' significa literalmente 'a laranja da acidez' — ou seja, o limão.",
+      },
+      // Exercise 2: Multiple choice — What does "nzeki nzeki" describe?
+      {
+        type: "multiple-choice",
+        question: "What does 'nzeki nzeki' describe?",
+        questionFr: "Que décrit « nzeki nzeki » ?",
+        questionPt: "O que descreve 'nzeki nzeki'?",
+        options: ["Bitterness", "Sourness", "Sweetness (for fruits & plants)", "Saltiness"],
+        optionsFr: ["L'amertume", "L'acidité", "Le sucré (pour les fruits et plantes)", "Le salé"],
+        optionsPt: ["Amargura", "Acidez", "Doçura (para frutas e plantas)", "Salgado"],
+        correctIndex: 2,
+        explanation: "'Nzeki nzeki' specifically refers to the natural sweetness found in fruits and plants.",
+        explanationFr: "« Nzeki nzeki » désigne spécifiquement le sucré naturel des fruits et des plantes.",
+        explanationPt: "'Nzeki nzeki' refere-se especificamente à doçura natural encontrada em frutas e plantas.",
+      },
+      // Exercise 3: Multiple choice — Implicit verb "to be"
+      {
+        type: "multiple-choice",
+        question: "Which sentence means the same as 'Dimpa dia di bote die(na)'?",
+        questionFr: "Quelle phrase a le même sens que « Dimpa dia di bote die(na) » ?",
+        questionPt: "Qual frase tem o mesmo significado que 'Dimpa dia di bote die(na)'?",
+        options: ["Dimpa dia di bote", "Dimpa dia nduri", "Mampa ma ma bote", "Dimpa dia nsa"],
+        optionsFr: ["Dimpa dia di bote", "Dimpa dia nduri", "Mampa ma ma bote", "Dimpa dia nsa"],
+        optionsPt: ["Dimpa dia di bote", "Dimpa dia nduri", "Mampa ma ma bote", "Dimpa dia nsa"],
+        correctIndex: 0,
+        explanation: "Omitting the verb 'to be' (diena) does not change the meaning. Both forms mean 'The bread is good.'",
+        explanationFr: "Omettre le verbe « être » (diena) ne change pas le sens. Les deux formes signifient « Le pain est bon. »",
+        explanationPt: "Omitir o verbo 'ser' (diena) não altera o significado. Ambas as formas significam 'O pão é bom.'",
+      },
+      // Exercise 4: Matching — Noun class agreements
+      {
+        type: "matching",
+        instruction: "Match the noun with its correct agreement pattern for 'good'.",
+        instructionFr: "Associez le nom avec son accord correct pour « bon ».",
+        instructionPt: "Associe o nome com o seu acordo correto para 'bom'.",
+        pairs: [
+          { left: "Dimpa", right: "dia di bote", rightFr: "dia di bote", rightPt: "dia di bote" },
+          { left: "Mampa", right: "ma ma bote", rightFr: "ma ma bote", rightPt: "ma ma bote" },
+          { left: "Bikola", right: "bia bi bote", rightFr: "bia bi bote", rightPt: "bia bi bote" },
+          { left: "Buwa", right: "bua bu bote", rightFr: "bua bu bote", rightPt: "bua bu bote" },
+          { left: "Luwa", right: "lua lu bote", rightFr: "lua lu bote", rightPt: "lua lu bote" },
+        ],
+      },
+      // Exercise 5: Matching — Singular / Plural pairs
+      {
+        type: "matching",
+        instruction: "Match each singular form with its plural.",
+        instructionFr: "Associez chaque forme singulière avec son pluriel.",
+        instructionPt: "Associe cada forma singular com o seu plural.",
+        pairs: [
+          { left: "Lala", right: "Malala", rightFr: "Malala", rightPt: "Malala" },
+          { left: "Dimpa", right: "Mampa", rightFr: "Mampa", rightPt: "Mampa" },
+          { left: "Luwa", right: "Buwa", rightFr: "Buwa", rightPt: "Buwa" },
+          { left: "Lusafu", right: "Nsafu", rightFr: "Nsafu", rightPt: "Nsafu" },
+          { left: "Lutundu", right: "Ntundu", rightFr: "Ntundu", rightPt: "Ntundu" },
+        ],
+      },
+      // Exercise 6: Fill in blank — agreement
+      {
+        type: "fill-in-blank",
+        sentence: "Bikola ___ bi bote.",
+        sentenceFr: "Bikola ___ bi bote.",
+        sentencePt: "Bikola ___ bi bote.",
+        blank: "bia",
+        hint: "Agreement marker for Bi- class",
+        hintFr: "Marqueur d'accord pour la classe Bi-",
+        hintPt: "Marcador de concordância para a classe Bi-",
+      },
+      // Exercise 7: Fill in blank — taste
+      {
+        type: "fill-in-blank",
+        sentence: "Lala dia ___ = le citron",
+        sentenceFr: "Lala dia ___ = le citron",
+        sentencePt: "Lala dia ___ = o limão",
+        blank: "nsa",
+        hint: "The word for sourness / acidity",
+        hintFr: "Le mot pour acidité",
+        hintPt: "A palavra para acidez",
+      },
+      // Exercise 8: Fill in blank — sugar cane
+      {
+        type: "fill-in-blank",
+        sentence: "Mamba ma ___, ma ma bote.",
+        sentenceFr: "Mamba ma ___, ma ma bote.",
+        sentencePt: "Mamba ma ___, ma ma bote.",
+        blank: "mintshe",
+        hint: "Plural of muntshe (sugar cane)",
+        hintFr: "Pluriel de muntshe (canne à sucre)",
+        hintPt: "Plural de muntshe (cana-de-açúcar)",
+      },
+      // Exercise 9: Fill in blank — implicit verb
+      {
+        type: "fill-in-blank",
+        sentence: "Nsafu za mbote ___(na). (The safous are good.)",
+        sentenceFr: "Nsafu za mbote ___(na). (Les safous sont bons.)",
+        sentencePt: "Nsafu za mbote ___(na). (Os safous são bons.)",
+        blank: "ze",
+        hint: "Agreement form of verb 'to be' for N- class plural",
+        hintFr: "Forme d'accord du verbe « être » pour la classe N- pluriel",
+        hintPt: "Forma de concordância do verbo 'ser' para a classe N- plural",
+      },
+      // Exercise 10: Crossword
+      // Grid 7x7, verified intersections:
+      // MAMBA across row 2, col 0: M(2,0) A(2,1) M(2,2) B(2,3) A(2,4)
+      // NSA down (0,1): N(0,1) S(1,1) A(2,1) → intersects MAMBA at A(2,1) ✓
+      // BOTE down (2,3): B(2,3) O(3,3) T(4,3) E(5,3) → intersects MAMBA at B(2,3) ✓
+      // LALA down (1,4): L(1,4) A(2,4) L(3,4) A(4,4) → intersects MAMBA at A(2,4) ✓
+      {
+        type: "crossword",
+        title: "Crossword — Fruits & Tastes",
+        titleFr: "Mots croisés — Fruits et saveurs",
+        titlePt: "Palavras cruzadas — Frutas e sabores",
+        gridSize: 7,
+        clues: [
+          { answer: "MAMBA", clue: "Water / Juice", clueFr: "Eau / Jus", cluePt: "Água / Sumo", row: 2, col: 0, direction: "across" },
+          { answer: "NSA", clue: "Sourness / Acidity", clueFr: "Acidité", cluePt: "Acidez", row: 0, col: 1, direction: "down" },
+          { answer: "BOTE", clue: "Good", clueFr: "Bon", cluePt: "Bom", row: 2, col: 3, direction: "down" },
+          { answer: "LALA", clue: "Orange (fruit)", clueFr: "Orange (fruit)", cluePt: "Laranja (fruta)", row: 1, col: 4, direction: "down" },
+        ],
+      },
+      // Exercise 11: Word Search 10x10
+      // LALA across (0,0): L(0,0) A(0,1) L(0,2) A(0,3)
+      // BOTE across (2,5): B(2,5) O(2,6) T(2,7) E(2,8)
+      // DIMPA across (4,0): D(4,0) I(4,1) M(4,2) P(4,3) A(4,4)
+      // NSA down (6,0): N(6,0) S(7,0) A(8,0)
+      // MAMBA across (9,3): M(9,3) A(9,4) M(9,5) B(9,6) A(9,7)
+      {
+        type: "word-search",
+        title: "Word Search — Flavours & Food",
+        titleFr: "Mots masqués — Saveurs et aliments",
+        titlePt: "Caça-palavras — Sabores e alimentos",
+        gridSize: 10,
+        words: [
+          { word: "LALA", clue: "Orange (fruit)", clueFr: "Orange (fruit)", cluePt: "Laranja (fruta)", row: 0, col: 0, direction: "across" },
+          { word: "BOTE", clue: "Good", clueFr: "Bon", cluePt: "Bom", row: 2, col: 5, direction: "across" },
+          { word: "DIMPA", clue: "Bread", clueFr: "Pain", cluePt: "Pão", row: 4, col: 0, direction: "across" },
+          { word: "NSA", clue: "Sourness", clueFr: "Acidité", cluePt: "Acidez", row: 6, col: 0, direction: "down" },
+          { word: "MAMBA", clue: "Water / Juice", clueFr: "Eau / Jus", cluePt: "Água / Sumo", row: 9, col: 3, direction: "across" },
+        ],
+        fillerLetters: "TKWZIDGSFEOKWZIDGSFETKWZIDGSFEOKWZIDGSFETKWZIDGSFEMKWZIDGSFETKWZIDGSFEMKWZIDGSFETKWZIDGSFEMKWZIDGSFE",
+      },
+    ],
+  },
 ];
