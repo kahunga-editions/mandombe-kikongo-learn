@@ -4107,6 +4107,7 @@ export const lessons: Lesson[] = [
       { lari: "Yobila", mandombe: "Yobila", french: "Se baigner, prendre un bain, s'inonder, s'enduire d'huile ou de crème", english: "To bathe, to take a bath, to drench oneself, to rub oneself with oil or cream", portuguese: "Banhar-se, tomar banho, inundar-se, untar-se com óleo ou creme", note: "Variante : Yebila." },
       { lari: "Yubulu", mandombe: "Yubulu", french: "Écorcher, peler", english: "To skin, to peel", portuguese: "Esfolar, descascar" },
       { lari: "Yuluma", mandombe: "Yuluma", french: "Être réuni, être entassé, amoncelé", english: "To be gathered, to be piled up, heaped", portuguese: "Estar reunido, estar amontoado, empilhado" },
+      { lari: "Yuma", mandombe: "Yuma", french: "Sécher, être sec", english: "To dry, to be dry", portuguese: "Secar, estar seco" },
       { lari: "Yoka", mandombe: "Yoka", french: "Brûler, faire un barbecue", english: "To burn, to barbecue", portuguese: "Queimar, fazer churrasco", note: "Le /o:/ est long. Ne pas confondre avec « Yoka » (passer) où le /o/ est court." },
       { lari: "Yoka", mandombe: "Yoka", french: "Passer", english: "To pass", portuguese: "Passar", note: "Le /o/ est court. Ne pas confondre avec « Yooka » (brûler) où le /o:/ est long." },
       { lari: "Moyo yoka", mandombe: "Moyo yoka", french: "Avoir la diarrhée", english: "To have diarrhea", portuguese: "Ter diarreia" },
