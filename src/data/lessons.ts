@@ -8741,7 +8741,7 @@ export const lessons: Lesson[] = [
     level: "intermediate",
     icon: "🍋",
     vocabulary: [
-      { lari: "Lala | Malala", mandombe: "Lala | Malala", french: "Orange / Citron (agrume) | Oranges", english: "Orange / Lemon (citrus) | Oranges", portuguese: "Laranja / Limão (citrino) | Laranjas", note: "Lala dia nsa = le citron (orange acide)" },
+      { lari: "Lala | Malala", mandombe: "Lala | Malala", french: "orange | oranges", english: "orange | oranges", portuguese: "laranja | laranjas", note: "Lala dia nsa = le citron (orange acide)" },
       { lari: "Nsa", mandombe: "Nsa", french: "Acidité", english: "Acidity / Sourness", portuguese: "Acidez" },
       { lari: "Nduri", mandombe: "Nduri", french: "Amère / Amer", english: "Bitter", portuguese: "Amargo/a" },
       { lari: "Nzeki nzeki", mandombe: "Nzeki nzeki", french: "Sucré (fruits & plantes)", english: "Sweet (for fruits & plants)", portuguese: "Doce (para frutas e plantas)" },
