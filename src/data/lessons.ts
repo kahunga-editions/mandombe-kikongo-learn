@@ -4072,6 +4072,8 @@ export const lessons: Lesson[] = [
       { lari: "Yangasa nsangu", mandombe: "Yangasa nsangu", french: "Annoncer un événement, populariser quelqu'un, rendre quelqu'un populaire par ce qu'on dit de lui", english: "To announce an event, to make someone popular through what is said about them", portuguese: "Anunciar um evento, popularizar alguém pelo que se diz dele" },
       { lari: "Yabula", mandombe: "Yabula", french: "Retirer un couvercle (d'une marmite), ouvrir une casserole, une marmite", english: "To remove a lid (from a pot), to open a saucepan, a cooking pot", portuguese: "Retirar a tampa (de uma panela), abrir uma caçarola" },
       { lari: "Wa", mandombe: "Wa", french: "Entendre, sentir, comprendre, écouter", english: "To hear, to feel, to understand, to listen", portuguese: "Ouvir, sentir, compreender, escutar" },
+      { lari: "Wadunka", mandombe: "Wadunka", french: "S'écouler contre le mur (pour la pluie en temps de vent)", english: "To flow down against the wall (for rain in windy weather)", portuguese: "Escorrer contra a parede (para chuva em tempo de vento)" },
+      { lari: "Wanda", mandombe: "Wanda", french: "Taper", english: "To hit, to strike", portuguese: "Bater" },
       { lari: "Wela", mandombe: "Wela", french: "Humer", english: "To sniff, to smell", portuguese: "Cheirar, farejar" },
       { lari: "Winda", mandombe: "Winda", french: "Taper avec quelque chose", english: "To hit with something", portuguese: "Bater com algo" },
       { lari: "Windana", mandombe: "Windana", french: "Se taper mutuellement", english: "To hit each other", portuguese: "Bater-se mutuamente" },
