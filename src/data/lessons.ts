@@ -8703,15 +8703,27 @@ export const lessons: Lesson[] = [
         titleFr: "Trouvez les aliments",
         titlePt: "Encontre os alimentos",
         gridSize: 10,
+        // Layout (10×10) — words spaced apart to avoid false readings:
+        //   0 1 2 3 4 5 6 7 8 9
+        // 0 M U N G U A . . . .  ← MUNGUA across
+        // 1 . . . . . . . . . .
+        // 2 . B . . . N G U B A  ← NGUBA across; BUWA↓ starts
+        // 3 . U . . . . . . . .
+        // 4 . W . . . L O S O .  ← LOSO across
+        // 5 . A . . . . . . . M  ← MEKI↓ starts
+        // 6 . . . . . . . . . E
+        // 7 N D U N D A . . . K  ← NDUNDA across
+        // 8 . . . . . . . . . I
+        // 9 . . . . . . . . . .
         words: [
           { word: "MUNGUA", clue: "Salt", clueFr: "Le sel", cluePt: "O sal", row: 0, col: 0, direction: "across" },
-          { word: "NGUBA", clue: "Peanuts", clueFr: "Cacahuètes", cluePt: "Amendoins", row: 2, col: 1, direction: "across" },
-          { word: "LOSO", clue: "Rice", clueFr: "Le riz", cluePt: "O arroz", row: 4, col: 3, direction: "across" },
-          { word: "BUWA", clue: "Mushrooms", clueFr: "Champignons", cluePt: "Cogumelos", row: 1, col: 0, direction: "down" },
-          { word: "MEKI", clue: "Eggs", clueFr: "Les œufs", cluePt: "Ovos", row: 3, col: 8, direction: "down" },
-          { word: "NDUNDA", clue: "Vegetables", clueFr: "Légumes", cluePt: "Legumes", row: 6, col: 2, direction: "across" },
+          { word: "NGUBA", clue: "Peanuts", clueFr: "Cacahuètes", cluePt: "Amendoins", row: 2, col: 5, direction: "across" },
+          { word: "LOSO", clue: "Rice", clueFr: "Le riz", cluePt: "O arroz", row: 4, col: 5, direction: "across" },
+          { word: "BUWA", clue: "Mushrooms", clueFr: "Champignons", cluePt: "Cogumelos", row: 2, col: 1, direction: "down" },
+          { word: "MEKI", clue: "Eggs", clueFr: "Les œufs", cluePt: "Ovos", row: 5, col: 9, direction: "down" },
+          { word: "NDUNDA", clue: "Vegetables", clueFr: "Légumes", cluePt: "Legumes", row: 7, col: 0, direction: "across" },
         ],
-        fillerLetters: "BKUMADTILENZOWAFUSIKGABDMUNYELOTZKANDIBASEWUMFIKLONGADZBATUNEKIWOSALMFUGANDIBAKELOSTZWUMINFADGBKELOA",
+        fillerLetters: "TKWASIDLNFZOKEMBATIWNFSUDGAKETZBWAITLOKENDFSAGZUBITLWKNOAFEDSZMGIBTLWAKNOEDFSZMUGIBTLKAOWNEDFSZU",
       },
     ],
   },
