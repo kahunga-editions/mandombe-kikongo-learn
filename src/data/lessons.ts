@@ -8745,7 +8745,7 @@ export const lessons: Lesson[] = [
       { lari: "Nsa", mandombe: "Nsa", french: "Acidité", english: "Acidity / Sourness", portuguese: "Acidez" },
       { lari: "Nduri", mandombe: "Nduri", french: "Amère / Amer", english: "Bitter", portuguese: "Amargo/a" },
       { lari: "Nzeki nzeki", mandombe: "Nzeki nzeki", french: "Sucré (fruits & plantes)", english: "Sweet (for fruits & plants)", portuguese: "Doce (para frutas e plantas)" },
-      { lari: "Muniche | Miniche", mandombe: "Muniche | Miniche", french: "Canne à sucre | Cannes à sucre", english: "Sugar cane | Sugar canes", portuguese: "Cana-de-açúcar | Canas-de-açúcar" },
+      { lari: "Muniche | Miniche", mandombe: "Muniche | Miniche", french: "Canne à sucre | Cannes à sucre", english: "Sugar cane | Sugar canes", portuguese: "Cana-de-açúcar | Canas-de-açúcar", note: "Prononcer muntshe | mintshe" },
       { lari: "Mamba", mandombe: "Mamba", french: "Eau / Jus", english: "Water / Juice", portuguese: "Água / Sumo" },
       { lari: "Dimpa | Mampa", mandombe: "Dimpa | Mampa", french: "Pain | Pains", english: "Bread | Breads", portuguese: "Pão | Pães" },
       { lari: "Bikola", mandombe: "Bikola", french: "Légumes", english: "Vegetables", portuguese: "Legumes" },
