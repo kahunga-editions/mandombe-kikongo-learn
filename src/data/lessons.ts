@@ -8683,7 +8683,7 @@ export const lessons: Lesson[] = [
         title: "Salt & Seasoning Crossword",
         titleFr: "Mots croisés — Sel et assaisonnement",
         titlePt: "Palavras cruzadas — Sal e tempero",
-        gridSize: 8,
+        gridSize: 6,
         clues: [
           { answer: "MUNGUA", clue: "Salt", clueFr: "Le sel", cluePt: "O sal", row: 0, col: 0, direction: "across" },
           { answer: "MADIA", clue: "Food", clueFr: "La nourriture", cluePt: "A comida", row: 0, col: 0, direction: "down" },
