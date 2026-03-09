@@ -4365,6 +4365,7 @@ export const lessons: Lesson[] = [
       // Body & breathing
       { lari: "Nsimu", mandombe: "Nsimu", french: "La mémoire", english: "Memory", portuguese: "A memória" },
       { lari: "Nzieta", mandombe: "Nzieta", french: "Le vertige", english: "Dizziness, vertigo", portuguese: "A vertigem, a tontura" },
+      { lari: "Tuika", mandombe: "Tuika", french: "Faire passer un message, expédier", english: "To pass on a message, to dispatch", portuguese: "Transmitir uma mensagem, expedir" },
       { lari: "Tukuta", mandombe: "Tukuta", french: "Transpirer", english: "To sweat", portuguese: "Transpirar, suar" },
       { lari: "Tuema", mandombe: "Tuema", french: "Être essoufflé, respirer fortement", english: "To be out of breath, to breathe heavily", portuguese: "Estar ofegante, respirar forte" },
       { lari: "Wumuna", mandombe: "Wumuna", french: "Respirer", english: "To breathe", portuguese: "Respirar" },
