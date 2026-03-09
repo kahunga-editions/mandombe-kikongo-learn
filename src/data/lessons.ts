@@ -8439,7 +8439,7 @@ export const lessons: Lesson[] = [
       { lari: "Mungua", mandombe: "Mungua", french: "Le sel", english: "Salt", portuguese: "O sal" },
       { lari: "Tua", mandombe: "Tua", french: "Taper, frapper", english: "To hit, to strike", portuguese: "Bater", note: "Le participe passé « tuiri » (bien salé) dérive de ce verbe." },
       { lari: "Tuiri", mandombe: "Tuiri", french: "Bien salé (participe passé de Tua)", english: "Well salted (past participle of Tua)", portuguese: "Bem salgado (particípio passado de Tua)" },
-      { lari: "Nduri", mandombe: "Nduri", french: "Trop (excès)", english: "Too much (excess)", portuguese: "Demais (excesso)" },
+      { lari: "Mungua nduri", mandombe: "Mungua nduri", french: "Trop salé (excès de sel)", english: "Too salty (excess of salt)", portuguese: "Demasiado salgado (excesso de sal)" },
       { lari: "Madia", mandombe: "Madia", french: "La nourriture", english: "Food", portuguese: "A comida" },
       { lari: "Lunda", mandombe: "Lunda", french: "Conserver", english: "To preserve, to keep", portuguese: "Conservar" },
       { lari: "Ndunda", mandombe: "Ndunda", french: "Légumes", english: "Vegetables", portuguese: "Legumes" },
