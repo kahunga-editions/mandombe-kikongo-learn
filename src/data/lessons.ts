@@ -8734,7 +8734,7 @@ export const lessons: Lesson[] = [
     titleFr: "Le Goût des choses",
     titlePt: "Frutas, sabores e o verbo 'ser' implícito",
     titleLari: "Luhu lua bima",
-    titleMandombe: "Malala, Nsa ye Bote",
+    titleMandombe: "Luhu lua bima",
     description: "Learn about citrus fruits, taste descriptors (sour, bitter, sweet), and how the verb 'to be' can be omitted in Kikongo Lari without changing the meaning.",
     descriptionFr: "Découvrez les agrumes, les saveurs (acide, amer, sucré) et comment le verbe « être » peut être omis en kikongo lari sans changer le sens de la phrase.",
     descriptionPt: "Aprenda sobre frutas cítricas, descritores de sabor (ácido, amargo, doce) e como o verbo 'ser' pode ser omitido em kikongo lari sem alterar o significado.",
