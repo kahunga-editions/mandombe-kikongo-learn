@@ -4092,6 +4092,7 @@ export const lessons: Lesson[] = [
       { lari: "Moneka", mandombe: "Moneka", french: "Être vu, réapparaître", english: "To be seen, to reappear", portuguese: "Ser visto, reaparecer" },
       { lari: "Monekena", mandombe: "Monekena", french: "Visiter, apparaître à quelqu'un, voir quelqu'un", english: "To visit, to appear to someone, to see someone", portuguese: "Visitar, aparecer a alguém, ver alguém" },
       { lari: "Yaba", mandombe: "Yaba", french: "Technique de pêche consistant à faire une digue pour récupérer les poissons en aval", english: "A fishing technique involving building a dam to catch fish downstream", portuguese: "Técnica de pesca que consiste em fazer uma barragem para recuperar os peixes a jusante" },
+      { lari: "Yaka nsamu", mandombe: "Yaka nsamu", french: "Se mêler d'une affaire", english: "To meddle in an affair, to get involved", portuguese: "Meter-se num assunto, intrometer-se" },
       { lari: "Yavula", mandombe: "Yavula", french: "Marcher à quatre pattes (pour un bébé)", english: "To crawl on all fours (for a baby)", portuguese: "Engatinhar (para um bebé)" },
       { lari: "Yela", mandombe: "Yela", french: "Mûrir, être développé, être adulte", english: "To ripen, to be developed, to be an adult", portuguese: "Amadurecer, estar desenvolvido, ser adulto", note: "Ne pas confondre avec « Yela » (tenter, essayer)." },
       { lari: "Yela", mandombe: "Yela", french: "Tenter, essayer", english: "To attempt, to try", portuguese: "Tentar, experimentar", note: "Ne pas confondre avec « Yela » (mûrir, être adulte)." },
