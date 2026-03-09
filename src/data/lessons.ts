@@ -8745,7 +8745,7 @@ export const lessons: Lesson[] = [
       { lari: "Nsa", mandombe: "Nsa", french: "Acidité", english: "Acidity / Sourness", portuguese: "Acidez" },
       { lari: "Nduri", mandombe: "Nduri", french: "Amère / Amer", english: "Bitter", portuguese: "Amargo/a" },
       { lari: "Nzeki nzeki", mandombe: "Nzeki nzeki", french: "Sucré (fruits & plantes)", english: "Sweet (for fruits & plants)", portuguese: "Doce (para frutas e plantas)" },
-      { lari: "Mu-nche | Mi-nche", mandombe: "Mu-nche | Mi-nche", french: "Canne à sucre | Cannes à sucre", english: "Sugar cane | Sugar canes", portuguese: "Cana-de-açúcar | Canas-de-açúcar" },
+      { lari: "Muniche | Miniche", mandombe: "Muniche | Miniche", french: "Canne à sucre | Cannes à sucre", english: "Sugar cane | Sugar canes", portuguese: "Cana-de-açúcar | Canas-de-açúcar" },
       { lari: "Mamba", mandombe: "Mamba", french: "Eau / Jus", english: "Water / Juice", portuguese: "Água / Sumo" },
       { lari: "Dimpa | Mampa", mandombe: "Dimpa | Mampa", french: "Pain | Pains", english: "Bread | Breads", portuguese: "Pão | Pães" },
       { lari: "Bikola", mandombe: "Bikola", french: "Légumes", english: "Vegetables", portuguese: "Legumes" },
@@ -8852,7 +8852,7 @@ export const lessons: Lesson[] = [
             titleFr: "Le jus de canne à sucre",
             titlePt: "Sumo de cana-de-açúcar",
             examples: [
-              { lari: "Mamba ma mi-nche, ma ma bote", mandombe: "Mamba ma mi-nche, ma ma bote", french: "Le jus de canne à sucre est bon.", english: "Sugar cane juice is good.", portuguese: "O sumo de cana-de-açúcar é bom." },
+              { lari: "Mamba ma miniche, ma ma bote", mandombe: "Mamba ma miniche, ma ma bote", french: "Le jus de canne à sucre est bon.", english: "Sugar cane juice is good.", portuguese: "O sumo de cana-de-açúcar é bom." },
             ],
             note: "The first 'ma' refers to 'mamba' (juice). The second 'ma' agrees with 'bote' (good).",
             noteFr: "Le premier « ma » se rapporte à « mamba » (jus). Le deuxième « ma » va avec « bote » (bon).",
@@ -8969,10 +8969,10 @@ export const lessons: Lesson[] = [
         sentence: "Mamba ma ___, ma ma bote.",
         sentenceFr: "Mamba ma ___, ma ma bote.",
         sentencePt: "Mamba ma ___, ma ma bote.",
-        blank: "mi-nche",
-        hint: "Plural of mu-nche (sugar cane)",
-        hintFr: "Pluriel de mu-nche (canne à sucre)",
-        hintPt: "Plural de mu-nche (cana-de-açúcar)",
+        blank: "miniche",
+        hint: "Plural of muniche (sugar cane)",
+        hintFr: "Pluriel de muniche (canne à sucre)",
+        hintPt: "Plural de muniche (cana-de-açúcar)",
       },
       // Exercise 9: Fill in blank — implicit verb
       {
