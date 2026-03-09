@@ -3551,7 +3551,7 @@ export const lessons: Lesson[] = [
       { lari: "Kuanga", mandombe: "Kuwanga", french: "Abattre, couper, trancher", english: "To fell, to cut, to chop" },
       { lari: "Kuela", mandombe: "Kuwela", french: "Se marier", english: "To marry" },
       { lari: "Kuelana", mandombe: "Kuwelana", french: "S'unir par le mariage", english: "To be united in marriage" },
-      { lari: "Kuenda", mandombe: "Kuwenda", french: "Aller, partir", english: "To go, to leave" },
+      { lari: "Kuenda", mandombe: "Kuenda", french: "Aller, partir", english: "To go, to leave" },
     ],
     phrases: [
       { lari: "Kula na nzala", mandombe: "Kula na nzala", french: "Grandir dans la faim", english: "To grow up in hunger" },
