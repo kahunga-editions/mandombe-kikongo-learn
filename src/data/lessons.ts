@@ -8667,17 +8667,28 @@ export const lessons: Lesson[] = [
         ],
       },
       // 10 — Crossword: salt vocabulary
+      // Verified layout (8×8):
+      //   0 1 2 3 4 5
+      // 0 M U N G U A   ← MUNGUA across
+      // 1 A . D . . .
+      // 2 D L U N D A   ← LUNDA across (row 2, col 1)
+      // 3 I . R . . .
+      // 4 A . I . . .
+      // ↕     ↕
+      // MADIA  NDURI
+      // down   down
+      // Crosses: (0,0) M=M ✓, (0,2) N=N ✓, (2,2) U=U ✓
       {
         type: "crossword",
         title: "Salt & Seasoning Crossword",
         titleFr: "Mots croisés — Sel et assaisonnement",
         titlePt: "Palavras cruzadas — Sal e tempero",
-        gridSize: 9,
+        gridSize: 8,
         clues: [
-          { answer: "MUNGUA", clue: "Salt", clueFr: "Le sel", cluePt: "O sal", row: 2, col: 0, direction: "across" },
-          { answer: "NDURI", clue: "Too much (excess)", clueFr: "Trop (excès)", cluePt: "Demais (excesso)", row: 2, col: 2, direction: "down" },
-          { answer: "LUNDA", clue: "To preserve", clueFr: "Conserver", cluePt: "Conservar", row: 4, col: 1, direction: "across" },
-          { answer: "MADIA", clue: "Food", clueFr: "La nourriture", cluePt: "A comida", row: 2, col: 0, direction: "down" },
+          { answer: "MUNGUA", clue: "Salt", clueFr: "Le sel", cluePt: "O sal", row: 0, col: 0, direction: "across" },
+          { answer: "MADIA", clue: "Food", clueFr: "La nourriture", cluePt: "A comida", row: 0, col: 0, direction: "down" },
+          { answer: "NDURI", clue: "Too much (excess)", clueFr: "Trop (excès)", cluePt: "Demais (excesso)", row: 0, col: 2, direction: "down" },
+          { answer: "LUNDA", clue: "To preserve", clueFr: "Conserver", cluePt: "Conservar", row: 2, col: 1, direction: "across" },
         ],
       },
       // 11 — Word search: food nouns
