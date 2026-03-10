@@ -10815,6 +10815,9 @@ export const lessons: Lesson[] = [
       // 9. Matching — Distant demonstratives
       {
         type: "matching",
+        instruction: "Match each demonstrative with its meaning.",
+        instructionFr: "Associez chaque démonstratif à sa signification.",
+        instructionPt: "Associe cada demonstrativo ao seu significado.",
         pairs: [
           { left: "Bembe dine", right: "Ce pigeon là-bas", rightPt: "Aquele pombo ali" },
           { left: "Nkombo jine", right: "Ces chèvres là-bas", rightPt: "Aquelas cabras ali" },
