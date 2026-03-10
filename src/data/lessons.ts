@@ -9830,12 +9830,15 @@ export const lessons: Lesson[] = [
         title: "The stative form: zezele",
         titleFr: "La forme stative : zezele",
         titlePt: "A forma estativa: zezele",
-        blocks: [
+        description: "The form 'zezele' expresses a resulting state (loosened). It is preceded by the noun class marker matching the subject noun.",
+        descriptionFr: "La forme « zezele » exprime un état résultant (desserré). Elle est précédée du marqueur de classe correspondant au nom sujet.",
+        descriptionPt: "A forma 'zezele' expressa um estado resultante (afrouxado). É precedida pelo marcador de classe correspondente ao substantivo sujeito.",
+        pattern: "[Noun] [class marker] zezele",
+        groups: [
           {
-            label: "State with noun class marker",
-            labelFr: "État avec marqueur de classe nominale",
-            labelPt: "Estado com marcador de classe nominal",
-            pattern: "[Noun] [class marker] zezele",
+            title: "State with noun class marker",
+            titleFr: "État avec marqueur de classe nominale",
+            titlePt: "Estado com marcador de classe nominal",
             examples: [
               { lari: "Nsuki ji zezele.", mandombe: "Nsuki ji zezele.", french: "Les cheveux sont desserrés.", english: "The hair is loosened.", portuguese: "O cabelo está solto." },
               { lari: "Binkuti bi zezele.", mandombe: "Binkuti bi zezele.", french: "Les habits sont desserrés.", english: "The garments are loosened.", portuguese: "As roupas estão soltas." },
@@ -9844,10 +9847,12 @@ export const lessons: Lesson[] = [
             ],
           },
           {
-            label: "Imperative + stative justification",
-            labelFr: "Impératif + justification stative",
-            labelPt: "Imperativo + justificativa estativa",
-            pattern: "Kanga [noun], [class marker] zezele.",
+            title: "Imperative + stative justification",
+            titleFr: "Impératif + justification stative",
+            titlePt: "Imperativo + justificativa estativa",
+            description: "Kanga [noun], [class marker] zezele.",
+            descriptionFr: "Kanga [nom], [marqueur de classe] zezele.",
+            descriptionPt: "Kanga [substantivo], [marcador de classe] zezele.",
             examples: [
               { lari: "Kanga mulele, wu zezele.", mandombe: "Kanga mulele, wu zezele.", french: "Attache le pagne, il s'est desserré.", english: "Tie the wrap, it has come loose.", portuguese: "Amarre o pano, ele se soltou." },
               { lari: "Kanga mapapa, ma zezele.", mandombe: "Kanga mapapa, ma zezele.", french: "Attache les chaussures, elles sont desserrées.", english: "Tie the shoes, they have come loose.", portuguese: "Amarre os sapatos, estão soltos." },
@@ -9857,10 +9862,12 @@ export const lessons: Lesson[] = [
             ],
           },
           {
-            label: "Causative: Zezesa",
-            labelFr: "Causatif : Zezesa",
-            labelPt: "Causativo: Zezesa",
-            pattern: "Nzezesa [noun] = Loosen [noun] for me",
+            title: "Causative: Zezesa",
+            titleFr: "Causatif : Zezesa",
+            titlePt: "Causativo: Zezesa",
+            description: "Nzezesa [noun] = Loosen [noun] for me",
+            descriptionFr: "Nzezesa [nom] = Desserre-moi [nom]",
+            descriptionPt: "Nzezesa [substantivo] = Afrouxa [substantivo] para mim",
             examples: [
               { lari: "Nzezesa nsuki.", mandombe: "Nzezesa nsuki.", french: "Desserre-moi les cheveux.", english: "Loosen my hair (for me).", portuguese: "Afrouxa meu cabelo (para mim)." },
             ],
