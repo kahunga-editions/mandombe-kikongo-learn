@@ -4074,7 +4074,7 @@ export const lessons: Lesson[] = [
       { lari: "Kue", mandombe: "Kuwe", french: "Où ?", english: "Where?", portuguese: "Onde?" },
       { lari: "Kaka", mandombe: "Kaka", french: "Les autres", english: "The others", portuguese: "Os outros" },
       { lari: "Kifua|Bifua", mandombe: "Kifua|Bifua", french: "Forme, formes", english: "Form, forms", portuguese: "Forma, formas" },
-      { lari: "Nkumbi", mandombe: "Nkumbi", french: "Voiture", english: "Car", portuguese: "Carro" },
+      { lari: "Kumbi | Makumbi", mandombe: "Kumbi | Makumbi", french: "Voiture | Voitures", english: "Car | Cars", portuguese: "Carro | Carros" },
       { lari: "Tshikuku", mandombe: "Tshikuku", french: "Cuisine", english: "Kitchen", portuguese: "Cozinha" },
       { lari: "Mulunga", mandombe: "Mulunga", french: "Bracelet", english: "Bracelet", portuguese: "Pulseira" },
       { lari: "Milunga", mandombe: "Milunga", french: "Bracelets", english: "Bracelets", portuguese: "Pulseiras" },
