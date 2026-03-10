@@ -10033,7 +10033,6 @@ export const lessons: Lesson[] = [
       },
     ],
   },
-  },
   // ── Lesson: Zaza & Teketa ──────────────────────────────────────
   {
     id: "zaza-teketa",
