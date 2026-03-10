@@ -1228,7 +1228,7 @@ export const lessons: Lesson[] = [
       { lari: "Buyumba", mandombe: "Buyumba", french: "Bêtise, idiotie", english: "Stupidity, foolishness", portuguese: "Estupidez, idiotice" },
       { lari: "Buzoba", mandombe: "Buzoba", french: "Bêtise, idiotie", english: "Stupidity, foolishness", portuguese: "Estupidez, idiotice" },
       { lari: "Bukuluntu", mandombe: "Bukuluntu", french: "Droit d'aînesse, maturité", english: "Seniority, maturity" },
-      { lari: "Tshikumbi", mandombe: "Tshikumbi", french: "Vierge", english: "Virgin" },
+      { lari: "Tshikumbi | Bikumbi", mandombe: "Tshikumbi | Bikumbi", french: "Vierge | Vierges", english: "Virgin | Virgins" },
       { lari: "Kikumbi | Bikumbi", mandombe: "Kikumbi | Bikumbi", french: "Rite de passage | Rites de passage", english: "Coming-of-age ritual | Coming-of-age rituals" },
     ],
     phrases: [
