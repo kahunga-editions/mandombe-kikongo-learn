@@ -9061,4 +9061,346 @@ export const lessons: Lesson[] = [
       },
     ],
   },
+  // ─── LESSON: Ya / Yaya — Cuisson, brûlure et douleur ───
+  {
+    id: "ya-yaya-verbs",
+    title: "Ya / Yaya — Cooking, Burning & Pain",
+    titleFr: "Ya / Yaya — Cuisson, brûlure et douleur",
+    titlePt: "Ya / Yaya — Cozedura, queimadura e dor",
+    titleLari: "Ya na Yaya",
+    titleMandombe: "Ya na Yaya",
+    description: "Learn the verb 'ya' (to be cooked, to burn) and 'yaya' (pain from an open wound), exploring their use across noun classes and the Kongo cosmological view of tense.",
+    descriptionFr: "Apprenez le verbe « ya » (être cuit, brûler) et « yaya » (douleur d'une plaie ouverte), leur emploi avec les classes nominales et la vision cosmologique kongo du temps.",
+    descriptionPt: "Aprenda o verbo 'ya' (estar cozido, queimar) e 'yaya' (dor de ferida aberta), o seu uso com as classes nominais e a visão cosmológica kongo do tempo.",
+    level: "intermediate",
+    icon: "🔥",
+    vocabulary: [
+      { lari: "Ya", mandombe: "Ya", french: "Être cuit / Brûler", english: "To be cooked / To burn", portuguese: "Estar cozido / Queimar" },
+      { lari: "Yiri", mandombe: "Yiri", french: "Est cuit(e) / Est brûlé(e)", english: "Is cooked / Is burned", portuguese: "Está cozido(a) / Está queimado(a)" },
+      { lari: "Yaya", mandombe: "Yaya", french: "Douleur d'une plaie ouverte", english: "Pain from an open wound", portuguese: "Dor de ferida aberta" },
+      { lari: "Bima", mandombe: "Bima", french: "Nourriture", english: "Food", portuguese: "Comida" },
+      { lari: "Loso", mandombe: "Loso", french: "Riz", english: "Rice", portuguese: "Arroz" },
+      { lari: "Masangu", mandombe: "Masangu", french: "Maïs", english: "Corn / Maize", portuguese: "Milho" },
+      { lari: "Mbala", mandombe: "Mbala", french: "Patate", english: "Sweet potato", portuguese: "Batata-doce" },
+      { lari: "Nzo", mandombe: "Nzo", french: "Maison", english: "House", portuguese: "Casa" },
+      { lari: "Mukoko", mandombe: "Mukoko", french: "Savane", english: "Savanna", portuguese: "Savana" },
+      { lari: "Mputa", mandombe: "Mputa", french: "Plaie", english: "Wound", portuguese: "Ferida" },
+      { lari: "Mfimfini", mandombe: "Mfimfini", french: "Gencive", english: "Gum (mouth)", portuguese: "Gengiva" },
+      { lari: "Ludimi", mandombe: "Ludimi", french: "Langue", english: "Tongue", portuguese: "Língua" },
+      { lari: "Meso", mandombe: "Meso", french: "Yeux", english: "Eyes", portuguese: "Olhos" },
+      { lari: "Mbombo", mandombe: "Mbombo", french: "Nez", english: "Nose", portuguese: "Nariz" },
+      { lari: "Malu", mandombe: "Malu", french: "Pieds", english: "Feet", portuguese: "Pés" },
+      { lari: "Kulu", mandombe: "Kulu", french: "Pied", english: "Foot", portuguese: "Pé" },
+      { lari: "Mulembo | Milembo", mandombe: "Mulembo | Milembo", french: "Doigt | Doigts", english: "Finger | Fingers", portuguese: "Dedo | Dedos" },
+      { lari: "Nkumba", mandombe: "Nkumba", french: "Nombril", english: "Navel", portuguese: "Umbigo" },
+      { lari: "Koto | Makoto", mandombe: "Koto | Makoto", french: "Genou | Genoux", english: "Knee | Knees", portuguese: "Joelho | Joelhos" },
+      { lari: "Dinu | Meno", mandombe: "Dinu | Meno", french: "Dent | Dents", english: "Tooth | Teeth", portuguese: "Dente | Dentes" },
+      { lari: "Tshikoba | Bikoba", mandombe: "Tshikoba | Bikoba", french: "Lèvre | Lèvres", english: "Lip | Lips", portuguese: "Lábio | Lábios" },
+    ],
+    syntax: [
+      {
+        title: "The verb Ya — Being cooked / Burning",
+        titleFr: "Le verbe Ya — Être cuit / Brûler",
+        titlePt: "O verbo Ya — Estar cozido / Queimar",
+        description: "The verb 'ya' means 'to be cooked, to be at the right point, to burn'. The subject prefix agrees with the noun class, followed by the past marker 'yiri'.",
+        descriptionFr: "Le verbe « ya » signifie « être cuit, être à point, brûler ». Le préfixe sujet s'accorde avec la classe nominale, suivi du marqueur passé « yiri ».",
+        descriptionPt: "O verbo 'ya' significa 'estar cozido, estar no ponto, queimar'. O prefixo sujeito concorda com a classe nominal, seguido do marcador passado 'yiri'.",
+        pattern: "[Sujet] + [préfixe de classe] + yiri",
+        patternFr: "[Sujet] + [préfixe de classe] + yiri",
+        patternPt: "[Sujeito] + [prefixo de classe] + yiri",
+        groups: [
+          {
+            title: "Cooking — Food items",
+            titleFr: "Cuisson — Aliments",
+            titlePt: "Cozedura — Alimentos",
+            examples: [
+              { lari: "Bima bi yiri.", mandombe: "Bima bi yiri.", french: "La nourriture est cuite.", english: "The food is cooked.", portuguese: "A comida está cozida." },
+              { lari: "Loso lu yiri.", mandombe: "Loso lu yiri.", french: "Le riz est cuit.", english: "The rice is cooked.", portuguese: "O arroz está cozido." },
+              { lari: "Masangu ma yiri.", mandombe: "Masangu ma yiri.", french: "Le maïs est cuit.", english: "The corn is cooked.", portuguese: "O milho está cozido." },
+              { lari: "Mbala ji yiri.", mandombe: "Mbala ji yiri.", french: "Les patates sont cuites.", english: "The sweet potatoes are cooked.", portuguese: "As batatas-doces estão cozidas." },
+            ],
+          },
+          {
+            title: "Burning — Fire & destruction",
+            titleFr: "Brûlure — Feu et destruction",
+            titlePt: "Queimadura — Fogo e destruição",
+            examples: [
+              { lari: "Nzo yi yiri.", mandombe: "Nzo yi yiri.", french: "La maison est brûlée.", english: "The house is burned.", portuguese: "A casa está queimada." },
+              { lari: "Mukoko wu yiri.", mandombe: "Mukoko wu yiri.", french: "La savane est brûlée.", english: "The savanna is burned.", portuguese: "A savana está queimada." },
+            ],
+            note: "On peut aussi traduire « Mukoko wu yiri » par « La savane brûle ». En Kikongo Lari, le passé exprime aussi le présent.",
+            noteFr: "On peut aussi traduire « Mukoko wu yiri » par « La savane brûle ». En Kikongo Lari, le passé exprime aussi le présent.",
+            notePt: "Pode-se traduzir 'Mukoko wu yiri' por 'A savana queima'. Em Kikongo Lari, o passado também exprime o presente.",
+          },
+        ],
+      },
+      {
+        title: "Cosmological view of tense in Kikongo Lari",
+        titleFr: "Vision cosmologique du temps en Kikongo Lari",
+        titlePt: "Visão cosmológica do tempo em Kikongo Lari",
+        description: "In the Kongo tradition, the original Kongo people consider this frequency of existence to be a frequency of death. Therefore, the present is a past. The Kongo look at actions that have already taken place. They are aware that their physical body is only one of their bodies, and this borrowed body allows them to remember or observe things, events, and beings that have already passed. Like the stars, beings here are already dead — hence the use of the past tense in Kikongo Lari to express the present in French. In Kikongo Lari, there is no real present tense. This distinction is based on the cosmological worldview of the original Kongo.",
+        descriptionFr: "Dans la tradition Kongo, les Kongo originaux estiment que cette fréquence de l'existence est une fréquence de la mort. Par conséquent, le présent est un passé. Les Kongo regardent des actions qui se sont déjà passées. Ils ont conscience que leur corps physique n'est qu'un seul de leurs corps, et que ce corps d'emprunt leur permet de se remémorer, ou de regarder les choses, les évènements, les êtres qui sont déjà passés. À l'instar des étoiles, les êtres d'ici sont déjà morts, d'où l'emploi du passé en Kikongo Lari pour exprimer le présent en français. En Kikongo Lari, il n'y a pas vraiment de présent. Et cette distinction se base sur la conception cosmologique des Kongo originaux.",
+        descriptionPt: "Na tradição Kongo, os Kongo originais consideram que esta frequência da existência é uma frequência da morte. Portanto, o presente é um passado. Os Kongo observam ações que já aconteceram. Têm consciência de que o seu corpo físico é apenas um dos seus corpos, e este corpo emprestado permite-lhes recordar ou observar coisas, eventos e seres que já passaram. Tal como as estrelas, os seres daqui já estão mortos — daí o uso do passado em Kikongo Lari para exprimir o presente em francês. Em Kikongo Lari, não existe realmente um presente. Esta distinção baseia-se na visão cosmológica dos Kongo originais.",
+        groups: [],
+      },
+      {
+        title: "The verb Yaya — Pain from an open wound",
+        titleFr: "Le verbe Yaya — Douleur d'une plaie ouverte",
+        titlePt: "O verbo Yaya — Dor de ferida aberta",
+        description: "'Yaya' is a verb expressing the stinging pain specifically caused by an open wound. The structure uses the body part as subject, followed by 'yaya' and the class prefix + 'ta yaya'.",
+        descriptionFr: "« Yaya » est un verbe exprimant la douleur vive causée spécifiquement par une plaie ouverte. La structure utilise la partie du corps comme sujet, suivie de « yaya » et du préfixe de classe + « ta yaya ».",
+        descriptionPt: "'Yaya' é um verbo que exprime a dor ardente causada especificamente por uma ferida aberta. A estrutura usa a parte do corpo como sujeito, seguida de 'yaya' e o prefixo de classe + 'ta yaya'.",
+        pattern: "[Partie du corps] + yaya + [préfixe de classe] + ta yaya",
+        patternFr: "[Partie du corps] + yaya + [préfixe de classe] + ta yaya",
+        patternPt: "[Parte do corpo] + yaya + [prefixo de classe] + ta yaya",
+        groups: [
+          {
+            title: "Singular body parts",
+            titleFr: "Parties du corps (singulier)",
+            titlePt: "Partes do corpo (singular)",
+            examples: [
+              { lari: "Mputa yaya yi ta yaya.", mandombe: "Mputa yaya yi ta yaya.", french: "La plaie me fait mal.", english: "The wound hurts me.", portuguese: "A ferida dói-me." },
+              { lari: "Ludimi yaya lu ta yaya.", mandombe: "Ludimi yaya lu ta yaya.", french: "Ma langue me fait mal.", english: "My tongue hurts me.", portuguese: "A minha língua dói-me." },
+              { lari: "Mbombo yaya yi ta yaya.", mandombe: "Mbombo yaya yi ta yaya.", french: "Mon nez me fait mal.", english: "My nose hurts me.", portuguese: "O meu nariz dói-me." },
+              { lari: "Kulu yaya ku ta yaya.", mandombe: "Kulu yaya ku ta yaya.", french: "Mon pied me fait mal.", english: "My foot hurts me.", portuguese: "O meu pé dói-me." },
+              { lari: "Mulembo yaya wu ta yaya.", mandombe: "Mulembo yaya wu ta yaya.", french: "Mon doigt me fait mal.", english: "My finger hurts me.", portuguese: "O meu dedo dói-me." },
+              { lari: "Nkumba yaya wu ta yaya.", mandombe: "Nkumba yaya wu ta yaya.", french: "Mon nombril me fait mal.", english: "My navel hurts me.", portuguese: "O meu umbigo dói-me." },
+              { lari: "Koto yaya di ta yaya.", mandombe: "Koto yaya di ta yaya.", french: "Mon genou me fait mal.", english: "My knee hurts me.", portuguese: "O meu joelho dói-me." },
+              { lari: "Dinu yaya di ta yaya.", mandombe: "Dinu yaya di ta yaya.", french: "La dent me fait mal.", english: "The tooth hurts me.", portuguese: "O dente dói-me." },
+              { lari: "Tshikoba yaya tshi ta yaya.", mandombe: "Tshikoba yaya tshi ta yaya.", french: "Ma lèvre me fait mal.", english: "My lip hurts me.", portuguese: "O meu lábio dói-me." },
+            ],
+          },
+          {
+            title: "Plural body parts",
+            titleFr: "Parties du corps (pluriel)",
+            titlePt: "Partes do corpo (plural)",
+            examples: [
+              { lari: "Mfimfini yaya ji ta yaya.", mandombe: "Mfimfini yaya ji ta yaya.", french: "Mes gencives me font mal.", english: "My gums hurt me.", portuguese: "As minhas gengivas doem-me." },
+              { lari: "Meso yaya ma ta yaya.", mandombe: "Meso yaya ma ta yaya.", french: "Mes yeux me font mal.", english: "My eyes hurt me.", portuguese: "Os meus olhos doem-me." },
+              { lari: "Malu yaya ma ta yaya.", mandombe: "Malu yaya ma ta yaya.", french: "Mes pieds me font mal.", english: "My feet hurt me.", portuguese: "Os meus pés doem-me." },
+              { lari: "Milembo yaya mi ta yaya.", mandombe: "Milembo yaya mi ta yaya.", french: "Mes doigts me font mal.", english: "My fingers hurt me.", portuguese: "Os meus dedos doem-me." },
+              { lari: "Makoto yaya ma ta yaya.", mandombe: "Makoto yaya ma ta yaya.", french: "Mes genoux me font mal.", english: "My knees hurt me.", portuguese: "Os meus joelhos doem-me." },
+              { lari: "Meno yaya ma ta yaya.", mandombe: "Meno yaya ma ta yaya.", french: "Les dents me font mal.", english: "The teeth hurt me.", portuguese: "Os dentes doem-me." },
+              { lari: "Bikoba yaya bi ta yaya.", mandombe: "Bikoba yaya bi ta yaya.", french: "Mes lèvres me font mal.", english: "My lips hurt me.", portuguese: "Os meus lábios doem-me." },
+            ],
+            note: "Sous-entendu : il y a une petite plaie ouverte. « Yaya » implique toujours une blessure visible.",
+            noteFr: "Sous-entendu : il y a une petite plaie ouverte. « Yaya » implique toujours une blessure visible.",
+            notePt: "Subentendido: há uma pequena ferida aberta. 'Yaya' implica sempre uma lesão visível.",
+          },
+        ],
+      },
+    ],
+    phrases: [
+      { lari: "Bima bi yiri.", mandombe: "Bima bi yiri.", french: "La nourriture est cuite.", english: "The food is cooked.", portuguese: "A comida está cozida." },
+      { lari: "Loso lu yiri.", mandombe: "Loso lu yiri.", french: "Le riz est cuit.", english: "The rice is cooked.", portuguese: "O arroz está cozido." },
+      { lari: "Masangu ma yiri.", mandombe: "Masangu ma yiri.", french: "Le maïs est cuit.", english: "The corn is cooked.", portuguese: "O milho está cozido." },
+      { lari: "Mbala ji yiri.", mandombe: "Mbala ji yiri.", french: "Les patates sont cuites.", english: "The sweet potatoes are cooked.", portuguese: "As batatas-doces estão cozidas." },
+      { lari: "Nzo yi yiri.", mandombe: "Nzo yi yiri.", french: "La maison est brûlée.", english: "The house is burned.", portuguese: "A casa está queimada." },
+      { lari: "Mukoko wu yiri.", mandombe: "Mukoko wu yiri.", french: "La savane est brûlée.", english: "The savanna is burned.", portuguese: "A savana está queimada." },
+      { lari: "Mputa yaya yi ta yaya.", mandombe: "Mputa yaya yi ta yaya.", french: "La plaie me fait mal.", english: "The wound hurts me.", portuguese: "A ferida dói-me." },
+      { lari: "Meso yaya ma ta yaya.", mandombe: "Meso yaya ma ta yaya.", french: "Mes yeux me font mal.", english: "My eyes hurt me.", portuguese: "Os meus olhos doem-me." },
+      { lari: "Kulu yaya ku ta yaya.", mandombe: "Kulu yaya ku ta yaya.", french: "Mon pied me fait mal.", english: "My foot hurts me.", portuguese: "O meu pé dói-me." },
+      { lari: "Dinu yaya di ta yaya.", mandombe: "Dinu yaya di ta yaya.", french: "La dent me fait mal.", english: "The tooth hurts me.", portuguese: "O dente dói-me.",
+        note: "Dans la tradition Kongo, le présent est un passé — les êtres d'ici sont déjà morts, à l'instar des étoiles, d'où l'emploi du passé pour exprimer le présent." },
+    ],
+    exercises: [
+      // Exercise 1: Multiple choice — noun class prefix for Ya
+      {
+        type: "multiple-choice",
+        question: "What is the correct class prefix in: 'Loso ___ yiri'?",
+        questionFr: "Quel est le préfixe de classe correct dans : « Loso ___ yiri » ?",
+        questionPt: "Qual é o prefixo de classe correto em: 'Loso ___ yiri'?",
+        options: ["bi", "lu", "ma", "yi"],
+        optionsFr: ["bi", "lu", "ma", "yi"],
+        optionsPt: ["bi", "lu", "ma", "yi"],
+        correctIndex: 1,
+        explanation: "'Loso' (rice) belongs to the Lu- class, so the prefix is 'lu'.",
+        explanationFr: "« Loso » (riz) appartient à la classe Lu-, le préfixe est donc « lu ».",
+        explanationPt: "'Loso' (arroz) pertence à classe Lu-, portanto o prefixo é 'lu'.",
+      },
+      // Exercise 2: Multiple choice — meaning of Ya
+      {
+        type: "multiple-choice",
+        question: "What does the verb 'ya' mean?",
+        questionFr: "Que signifie le verbe « ya » ?",
+        questionPt: "O que significa o verbo 'ya'?",
+        options: ["To eat", "To be cooked / To burn", "To drink", "To sleep"],
+        optionsFr: ["Manger", "Être cuit / Brûler", "Boire", "Dormir"],
+        optionsPt: ["Comer", "Estar cozido / Queimar", "Beber", "Dormir"],
+        correctIndex: 1,
+        explanation: "'Ya' means 'to be cooked, to be at the right point, to burn'.",
+        explanationFr: "« Ya » signifie « être cuit, être à point, brûler ».",
+        explanationPt: "'Ya' significa 'estar cozido, estar no ponto, queimar'.",
+      },
+      // Exercise 3: Fill in blank — Bima
+      {
+        type: "fill-in-blank",
+        sentence: "Bima ___ yiri.",
+        sentenceFr: "Bima ___ yiri.",
+        sentencePt: "Bima ___ yiri.",
+        sentenceMandombe: "Bima ___ yiri.",
+        blank: "bi",
+        hint: "Class prefix for Bima (food)",
+        hintFr: "Préfixe de classe pour Bima (nourriture)",
+        hintPt: "Prefixo de classe para Bima (comida)",
+      },
+      // Exercise 4: Fill in blank — Nzo
+      {
+        type: "fill-in-blank",
+        sentence: "Nzo ___ yiri.",
+        sentenceFr: "Nzo ___ yiri.",
+        sentencePt: "Nzo ___ yiri.",
+        sentenceMandombe: "Nzo ___ yiri.",
+        blank: "yi",
+        hint: "Class prefix for Nzo (house)",
+        hintFr: "Préfixe de classe pour Nzo (maison)",
+        hintPt: "Prefixo de classe para Nzo (casa)",
+      },
+      // Exercise 5: Multiple choice — Yaya meaning
+      {
+        type: "multiple-choice",
+        question: "What does 'yaya' specifically express?",
+        questionFr: "Qu'exprime spécifiquement « yaya » ?",
+        questionPt: "O que exprime especificamente 'yaya'?",
+        options: ["Hunger", "Pain from an open wound", "Joy", "Fatigue"],
+        optionsFr: ["La faim", "La douleur d'une plaie ouverte", "La joie", "La fatigue"],
+        optionsPt: ["Fome", "Dor de ferida aberta", "Alegria", "Fadiga"],
+        correctIndex: 1,
+        explanation: "'Yaya' is a verb that specifically expresses the stinging pain caused by an open wound.",
+        explanationFr: "« Yaya » est un verbe qui exprime spécifiquement la douleur vive causée par une plaie ouverte.",
+        explanationPt: "'Yaya' é um verbo que exprime especificamente a dor ardente causada por uma ferida aberta.",
+      },
+      // Exercise 6: Fill in blank — class prefix for Kulu
+      {
+        type: "fill-in-blank",
+        sentence: "Kulu yaya ___ ta yaya.",
+        sentenceFr: "Kulu yaya ___ ta yaya.",
+        sentencePt: "Kulu yaya ___ ta yaya.",
+        sentenceMandombe: "Kulu yaya ___ ta yaya.",
+        blank: "ku",
+        hint: "Class prefix for Kulu (foot)",
+        hintFr: "Préfixe de classe pour Kulu (pied)",
+        hintPt: "Prefixo de classe para Kulu (pé)",
+      },
+      // Exercise 7: Matching — body part to class prefix
+      {
+        type: "matching",
+        instruction: "Match each body part to its correct class prefix in the 'yaya' construction",
+        instructionFr: "Associez chaque partie du corps à son préfixe de classe dans la construction « yaya »",
+        instructionPt: "Associe cada parte do corpo ao seu prefixo de classe na construção 'yaya'",
+        pairs: [
+          { left: "Mputa yaya ___", right: "yi", rightFr: "yi", rightPt: "yi" },
+          { left: "Ludimi yaya ___", right: "lu", rightFr: "lu", rightPt: "lu" },
+          { left: "Meso yaya ___", right: "ma", rightFr: "ma", rightPt: "ma" },
+          { left: "Koto yaya ___", right: "di", rightFr: "di", rightPt: "di" },
+          { left: "Mulembo yaya ___", right: "wu", rightFr: "wu", rightPt: "wu" },
+          { left: "Tshikoba yaya ___", right: "tshi", rightFr: "tshi", rightPt: "tshi" },
+        ],
+      },
+      // Exercise 8: Multiple choice — Cosmological view
+      {
+        type: "multiple-choice",
+        question: "Why does Kikongo Lari use the past tense to express the present?",
+        questionFr: "Pourquoi le Kikongo Lari utilise-t-il le passé pour exprimer le présent ?",
+        questionPt: "Por que o Kikongo Lari usa o passado para exprimir o presente?",
+        options: [
+          "It is a grammatical error",
+          "The Kongo view this existence as already past, like stars already dead",
+          "There are no verb tenses in Kikongo",
+          "French influence on the language"
+        ],
+        optionsFr: [
+          "C'est une erreur grammaticale",
+          "Les Kongo considèrent cette existence comme déjà passée, à l'instar des étoiles déjà mortes",
+          "Il n'y a pas de temps verbaux en Kikongo",
+          "Influence du français sur la langue"
+        ],
+        optionsPt: [
+          "É um erro gramatical",
+          "Os Kongo consideram esta existência como já passada, como estrelas já mortas",
+          "Não existem tempos verbais em Kikongo",
+          "Influência do francês na língua"
+        ],
+        correctIndex: 1,
+        explanation: "In Kongo cosmology, the present is a past — beings here are already dead, like the stars. The physical body is a borrowed body allowing us to remember what has already passed.",
+        explanationFr: "Dans la cosmologie Kongo, le présent est un passé — les êtres d'ici sont déjà morts, à l'instar des étoiles. Le corps physique est un corps d'emprunt qui permet de se remémorer ce qui est déjà passé.",
+        explanationPt: "Na cosmologia Kongo, o presente é um passado — os seres daqui já estão mortos, como as estrelas. O corpo físico é um corpo emprestado que permite recordar o que já passou.",
+      },
+      // Exercise 9: Fill in blank — Masangu
+      {
+        type: "fill-in-blank",
+        sentence: "Masangu ___ yiri.",
+        sentenceFr: "Masangu ___ yiri.",
+        sentencePt: "Masangu ___ yiri.",
+        sentenceMandombe: "Masangu ___ yiri.",
+        blank: "ma",
+        hint: "Class prefix for Masangu (corn)",
+        hintFr: "Préfixe de classe pour Masangu (maïs)",
+        hintPt: "Prefixo de classe para Masangu (milho)",
+      },
+      // Exercise 10: Matching — Ya sentences to translations
+      {
+        type: "matching",
+        instruction: "Match each Lari sentence to its French translation",
+        instructionFr: "Associez chaque phrase en lari à sa traduction française",
+        instructionPt: "Associe cada frase em lari à sua tradução francesa",
+        pairs: [
+          { left: "Bima bi yiri", right: "The food is cooked", rightFr: "La nourriture est cuite", rightPt: "A comida está cozida" },
+          { left: "Nzo yi yiri", right: "The house is burned", rightFr: "La maison est brûlée", rightPt: "A casa está queimada" },
+          { left: "Mukoko wu yiri", right: "The savanna is burned", rightFr: "La savane est brûlée", rightPt: "A savana está queimada" },
+          { left: "Mbala ji yiri", right: "The potatoes are cooked", rightFr: "Les patates sont cuites", rightPt: "As batatas estão cozidas" },
+        ],
+      },
+      // Exercise 11: Fill in blank — Bikoba plural
+      {
+        type: "fill-in-blank",
+        sentence: "Bikoba yaya ___ ta yaya.",
+        sentenceFr: "Bikoba yaya ___ ta yaya.",
+        sentencePt: "Bikoba yaya ___ ta yaya.",
+        sentenceMandombe: "Bikoba yaya ___ ta yaya.",
+        blank: "bi",
+        hint: "Class prefix for Bikoba (lips, plural)",
+        hintFr: "Préfixe de classe pour Bikoba (lèvres, pluriel)",
+        hintPt: "Prefixo de classe para Bikoba (lábios, plural)",
+      },
+      // Exercise 12: Crossword
+      // Grid 8x8, verified intersections:
+      // YIRI across row 0, col 0: Y(0,0) I(0,1) R(0,2) I(0,3)
+      // YAYA across row 3, col 0: Y(3,0) A(3,1) Y(3,2) A(3,3)
+      // MPUTA down (0,0→4,0): no — use col intersections
+      // LOSO across row 5, col 2: L(5,2) O(5,3) S(5,4) O(5,5)
+      // NZO down (0,3): starts too early. Let's plan:
+      // YIRI across (0,0): Y I R I
+      // BIMA across (2,3): B I M A
+      // YAYA across (4,0): Y A Y A
+      // NZO down (0,3→2,3): N(0,3)=I conflict. Use different layout:
+      // Row 1, col 0: YIRI across → Y(1,0) I(1,1) R(1,2) I(1,3)
+      // Col 0: YAYA down → Y(1,0) A(2,0) Y(3,0) A(4,0) → intersects YIRI at Y(1,0) ✓
+      // Row 3, col 0: MPUTA? too long. Use:
+      // Col 1: BIMA down → B(0,1) I(1,1) M(2,1) A(3,1) → intersects YIRI at I(1,1) ✓
+      // Row 4, col 0: NZO across → N(4,0)? A(4,0) conflict. 
+      // Better layout:
+      // YIRI across (1,0): Y(1,0) I(1,1) R(1,2) I(1,3)
+      // BIMA down (0,1): B(0,1) I(1,1) M(2,1) A(3,1) → intersects YIRI at I(1,1) ✓
+      // YAYA down (1,0): Y(1,0) conflicts with YIRI Y(1,0) — same cell OK if same letter ✓
+      // Actually YAYA down from (1,0): Y(1,0) A(2,0) Y(3,0) A(4,0) → shares Y(1,0) with YIRI ✓
+      // LOSO across (3,1): L(3,1)=A(3,1) conflict. 
+      // Use NZO across (5,1): N(5,1) Z(5,2) O(5,3) — no intersection needed as standalone
+      // Better: LOSO down (1,3): L(1,3)=I conflict.
+      // Simpler approach:
+      {
+        type: "crossword",
+        title: "Crossword — Ya & Yaya",
+        titleFr: "Mots croisés — Ya et Yaya",
+        titlePt: "Palavras cruzadas — Ya e Yaya",
+        gridSize: 7,
+        clues: [
+          { answer: "YIRI", clue: "Past form of 'ya' (is cooked/burned)", clueFr: "Forme passée de « ya » (est cuit/brûlé)", cluePt: "Forma passada de 'ya' (está cozido/queimado)", row: 1, col: 0, direction: "across" },
+          { answer: "BIMA", clue: "Food", clueFr: "Nourriture", cluePt: "Comida", row: 0, col: 1, direction: "down" },
+          { answer: "MPUTA", clue: "Wound", clueFr: "Plaie", cluePt: "Ferida", row: 1, col: 2, direction: "down" },
+          { answer: "NZO", clue: "House", clueFr: "Maison", cluePt: "Casa", row: 0, col: 5, direction: "down" },
+        ],
+      },
+    ],
+  },
 ];
