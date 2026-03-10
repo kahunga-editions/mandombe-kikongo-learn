@@ -2754,6 +2754,13 @@ export const lessons: Lesson[] = [
       { lari: "Lukami | Nkami", mandombe: "Lukami | Nkami", french: "Fourmi rouge", english: "Red ant", portuguese: "Formiga vermelha" },
       { lari: "Ngondaa", mandombe: "Ngondaa", french: "Les règles", english: "Menstruation", portuguese: "A menstruação" },
       { lari: "Mundengué | Minengue", mandombe: "Mundengué | Minengue", french: "Le corossol(s)", english: "Soursop(s)", portuguese: "A graviola(s)" },
+      { lari: "Poto-poto", mandombe: "Poto-poto", french: "Marécage", english: "Swamp, marsh", portuguese: "Pântano" },
+      { lari: "Lubakala", mandombe: "Lubakala", french: "L'est", english: "The east", portuguese: "O leste" },
+      { lari: "Lukento", mandombe: "Lukento", french: "L'ouest", english: "The west", portuguese: "O oeste" },
+      { lari: "Nto", mandombe: "Nto", french: "La rivière", english: "The river", portuguese: "O rio" },
+      { lari: "Mua nto", mandombe: "Mua nto", french: "Ruisseau", english: "Stream, brook", portuguese: "Riacho" },
+      { lari: "Mbutu", mandombe: "Mbutu", french: "Fruit, bourgeon", english: "Fruit, bud", portuguese: "Fruto, broto" },
+      { lari: "Tshitari | Bitari", mandombe: "Tshitari | Bitari", french: "Miroir(s)", english: "Mirror(s)", portuguese: "Espelho(s)" },
     ],
     phrases: [
       { lari: "Budisa bibidiki", mandombe: "Budisa bibidiki", french: "Faisons fabriquer des briques", english: "Let's have bricks made" },
@@ -4407,6 +4414,9 @@ export const lessons: Lesson[] = [
       { lari: "Pina", mandombe: "Pina", french: "Punir", english: "To punish", portuguese: "Punir" },
       { lari: "Katuka", mandombe: "Katuka", french: "Quitter", english: "To leave, to depart", portuguese: "Partir, sair" },
       { lari: "Ta nsamu", mandombe: "Ta nsamu", french: "Raconter", english: "To tell, to narrate", portuguese: "Contar, narrar" },
+      { lari: "Luata", mandombe: "Luata", french: "Vêtir", english: "To dress, to clothe", portuguese: "Vestir" },
+      { lari: "Tangisa", mandombe: "Tangisa", french: "Faire lire, faire compter, apprendre à lire, apprendre à compter", english: "To teach to read, to teach to count", portuguese: "Ensinar a ler, ensinar a contar" },
+      { lari: "Teba", mandombe: "Teba", french: "Être mou, gluant", english: "To be soft, sticky", portuguese: "Ser mole, pegajoso" },
     ],
     phrases: [
       { lari: "Tolo tue nani", mandombe: "Tolo tuwe nani", french: "J'ai sommeil", english: "I am sleepy", portuguese: "Tenho sono", note: "Mot à mot : le sommeil est avec moi" },
