@@ -2470,6 +2470,9 @@ export const lessons: Lesson[] = [
       { lari: "Boboka", mandombe: "Boboka", french: "S'affaler, s'effondrer", english: "To collapse, to crumble" },
       { lari: "Botana", mandombe: "Botana", french: "Heurter, se cogner; boire du vin", english: "To bump; to drink wine" },
       { lari: "Bunda", mandombe: "Bunda", french: "Bomber, se pavaner", english: "To puff out, to strut" },
+      { lari: "Nkanda", mandombe: "Nkanda", french: "La peau", english: "The skin", portuguese: "A pele" },
+      { lari: "Misisi", mandombe: "Misisi", french: "Artère, la veine", english: "Artery, vein", portuguese: "Artéria, veia" },
+      { lari: "Nsingu", mandombe: "Nsingu", french: "Le cou", english: "The neck", portuguese: "O pescoço" },
     ],
     phrases: [
       { lari: "Balumuna ntinu", mandombe: "Balumuna ntinu", french: "Courir à toute vitesse", english: "To run at full speed" },
