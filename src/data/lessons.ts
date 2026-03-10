@@ -9126,7 +9126,7 @@ export const lessons: Lesson[] = [
             titlePt: "Queimadura — Fogo e destruição",
             examples: [
               { lari: "Nzo yi yiri.", mandombe: "Nzo yi yiri.", french: "La maison est brûlée.", english: "The house is burned.", portuguese: "A casa está queimada." },
-              { lari: "Mukoko wu yiri.", mandombe: "Mukoko wu yiri.", french: "La savane est brûlée.", english: "The savanna is burned.", portuguese: "A savana está queimada." },
+              { lari: "Mukobo wu yiri.", mandombe: "Mukobo wu yiri.", french: "La savane est brûlée.", english: "The savanna is burned.", portuguese: "A savana está queimada." },
             ],
             note: "On peut aussi traduire « Mukoko wu yiri » par « La savane brûle ». En Kikongo Lari, le passé exprime aussi le présent.",
             noteFr: "On peut aussi traduire « Mukoko wu yiri » par « La savane brûle ». En Kikongo Lari, le passé exprime aussi le présent.",
