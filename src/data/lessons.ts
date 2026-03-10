@@ -9347,7 +9347,7 @@ export const lessons: Lesson[] = [
         pairs: [
           { left: "Bima bi yiri", right: "The food is cooked", rightFr: "La nourriture est cuite", rightPt: "A comida está cozida" },
           { left: "Nzo yi yiri", right: "The house is burned", rightFr: "La maison est brûlée", rightPt: "A casa está queimada" },
-          { left: "Mukoko wu yiri", right: "The savanna is burned", rightFr: "La savane est brûlée", rightPt: "A savana está queimada" },
+          { left: "Mukobo wu yiri", right: "The savanna is burned", rightFr: "La savane est brûlée", rightPt: "A savana está queimada" },
           { left: "Mbala ji yiri", right: "The potatoes are cooked", rightFr: "Les patates sont cuites", rightPt: "As batatas estão cozidas" },
         ],
       },
