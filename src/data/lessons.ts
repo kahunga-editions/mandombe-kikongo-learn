@@ -3827,7 +3827,7 @@ export const lessons: Lesson[] = [
       { lari: "Lufua", mandombe: "Lufuwa", french: "La mort, le décès, la fin", english: "Death, passing, the end" },
       { lari: "Lufutu", mandombe: "Lufutu", french: "Le paiement, le salaire", english: "Payment, salary" },
       { lari: "Luka", mandombe: "Luka", french: "Vomir", english: "To vomit" },
-      { lari: "Lukaya", mandombe: "Lukaya", french: "Une feuille, un billet de banque", english: "A leaf, a banknote" },
+      { lari: "Lukaya | Makaya", mandombe: "Lukaya | Makaya", french: "Une feuille, un billet de banque | Des feuilles, des billets de banque", english: "A leaf, a banknote | Leaves, banknotes" },
       { lari: "Luketo", mandombe: "Luketo", french: "La hanche, les reins", english: "The hip, the waist" },
       { lari: "Lukubi", mandombe: "Lukubi", french: "Une odeur", english: "A smell, an odour" },
       { lari: "Lukuba", mandombe: "Lukuba", french: "Un coussin", english: "A cushion" },
