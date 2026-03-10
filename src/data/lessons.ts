@@ -4403,6 +4403,10 @@ export const lessons: Lesson[] = [
       { lari: "Nkatu", mandombe: "Nkatu", french: "Rien, pas… de", english: "Nothing, not… any", portuguese: "Nada, nenhum" },
       { lari: "Nuana", mandombe: "Nuana", french: "Lutter", english: "To fight, to struggle", portuguese: "Lutar" },
       { lari: "Banza", mandombe: "Banza", french: "Imaginer", english: "To imagine", portuguese: "Imaginar" },
+      { lari: "Defisa", mandombe: "Defisa", french: "Prêter", english: "To lend", portuguese: "Emprestar" },
+      { lari: "Pina", mandombe: "Pina", french: "Punir", english: "To punish", portuguese: "Punir" },
+      { lari: "Katuka", mandombe: "Katuka", french: "Quitter", english: "To leave, to depart", portuguese: "Partir, sair" },
+      { lari: "Ta nsamu", mandombe: "Ta nsamu", french: "Raconter", english: "To tell, to narrate", portuguese: "Contar, narrar" },
     ],
     phrases: [
       { lari: "Tolo tue nani", mandombe: "Tolo tuwe nani", french: "J'ai sommeil", english: "I am sleepy", portuguese: "Tenho sono", note: "Mot à mot : le sommeil est avec moi" },
