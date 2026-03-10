@@ -9083,7 +9083,7 @@ export const lessons: Lesson[] = [
       { lari: "Masangu", mandombe: "Masangu", french: "Maïs", english: "Corn / Maize", portuguese: "Milho" },
       { lari: "Mbala", mandombe: "Mbala", french: "Patate", english: "Sweet potato", portuguese: "Batata-doce" },
       { lari: "Nzo", mandombe: "Nzo", french: "Maison", english: "House", portuguese: "Casa" },
-      { lari: "Mukoko", mandombe: "Mukoko", french: "Savane", english: "Savanna", portuguese: "Savana" },
+      { lari: "Mukobo", mandombe: "Mukobo", french: "Savane", english: "Savanna", portuguese: "Savana" },
       { lari: "Mputa", mandombe: "Mputa", french: "Plaie", english: "Wound", portuguese: "Ferida" },
       { lari: "Mfimfini", mandombe: "Mfimfini", french: "Gencive", english: "Gum (mouth)", portuguese: "Gengiva" },
       { lari: "Ludimi", mandombe: "Ludimi", french: "Langue", english: "Tongue", portuguese: "Língua" },
