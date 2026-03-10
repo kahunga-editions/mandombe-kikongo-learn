@@ -9164,7 +9164,7 @@ export const lessons: Lesson[] = [
               { lari: "Mbombo yaya yi ta yaya.", mandombe: "Mbombo yaya yi ta yaya.", french: "Mon nez me fait mal.", english: "My nose hurts me.", portuguese: "O meu nariz dói-me." },
               { lari: "Kulu yaya ku ta yaya.", mandombe: "Kulu yaya ku ta yaya.", french: "Mon pied me fait mal.", english: "My foot hurts me.", portuguese: "O meu pé dói-me." },
               { lari: "Mulembo yaya wu ta yaya.", mandombe: "Mulembo yaya wu ta yaya.", french: "Mon doigt me fait mal.", english: "My finger hurts me.", portuguese: "O meu dedo dói-me." },
-              { lari: "Nkumba yaya wu ta yaya.", mandombe: "Nkumba yaya wu ta yaya.", french: "Mon nombril me fait mal.", english: "My navel hurts me.", portuguese: "O meu umbigo dói-me." },
+              { lari: "Mukumba yaya wu ta yaya.", mandombe: "Mukumba yaya wu ta yaya.", french: "Mon nombril me fait mal.", english: "My navel hurts me.", portuguese: "O meu umbigo dói-me." },
               { lari: "Koto yaya di ta yaya.", mandombe: "Koto yaya di ta yaya.", french: "Mon genou me fait mal.", english: "My knee hurts me.", portuguese: "O meu joelho dói-me." },
               { lari: "Dinu yaya di ta yaya.", mandombe: "Dinu yaya di ta yaya.", french: "La dent me fait mal.", english: "The tooth hurts me.", portuguese: "O dente dói-me." },
               { lari: "Tshikoba yaya tshi ta yaya.", mandombe: "Tshikoba yaya tshi ta yaya.", french: "Ma lèvre me fait mal.", english: "My lip hurts me.", portuguese: "O meu lábio dói-me." },
