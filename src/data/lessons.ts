@@ -9387,7 +9387,17 @@ export const lessons: Lesson[] = [
       // LOSO across (3,1): L(3,1)=A(3,1) conflict. 
       // Use NZO across (5,1): N(5,1) Z(5,2) O(5,3) — no intersection needed as standalone
       // Better: LOSO down (1,3): L(1,3)=I conflict.
-      // Simpler approach:
+      // Crossword layout (gridSize 7):
+      // Row 1:  . Y . . .
+      // Row 2: B I D I A
+      // Row 3:  . R . . .
+      // Row 4: D I N U .
+      // Row 5:  . . Z . .
+      // Row 6:  . . O . .
+      // Intersections:
+      //   BIDIA(2,0) across ↔ YIRI(1,1) down at I(2,1) ✓
+      //   YIRI(1,1) down ↔ DINU(4,0) across at I(4,1) ✓
+      //   DINU(4,0) across ↔ NZO(4,2) down at N(4,2) ✓
       {
         type: "crossword",
         title: "Crossword — Ya & Yaya",
@@ -9395,10 +9405,10 @@ export const lessons: Lesson[] = [
         titlePt: "Palavras cruzadas — Ya e Yaya",
         gridSize: 7,
         clues: [
-          { answer: "YIRI", clue: "Past form of 'ya' (is cooked/burned)", clueFr: "Forme passée de « ya » (est cuit/brûlé)", cluePt: "Forma passada de 'ya' (está cozido/queimado)", row: 1, col: 0, direction: "across" },
-          { answer: "BIMA", clue: "Food", clueFr: "Nourriture", cluePt: "Comida", row: 0, col: 1, direction: "down" },
-          { answer: "MPUTA", clue: "Wound", clueFr: "Plaie", cluePt: "Ferida", row: 1, col: 2, direction: "down" },
-          { answer: "NZO", clue: "House", clueFr: "Maison", cluePt: "Casa", row: 0, col: 5, direction: "down" },
+          { answer: "BIDIA", clue: "Food", clueFr: "Nourriture", cluePt: "Comida", row: 2, col: 0, direction: "across" },
+          { answer: "YIRI", clue: "Past form of 'ya' (is cooked/burned)", clueFr: "Forme passée de « ya » (est cuit/brûlé)", cluePt: "Forma passada de 'ya' (está cozido/queimado)", row: 1, col: 1, direction: "down" },
+          { answer: "DINU", clue: "Tooth", clueFr: "Dent", cluePt: "Dente", row: 4, col: 0, direction: "across" },
+          { answer: "NZO", clue: "House", clueFr: "Maison", cluePt: "Casa", row: 4, col: 2, direction: "down" },
         ],
       },
     ],
