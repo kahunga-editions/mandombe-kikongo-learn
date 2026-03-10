@@ -10801,6 +10801,9 @@ export const lessons: Lesson[] = [
       // 8. Matching — Possessives
       {
         type: "matching",
+        instruction: "Match each possessive expression with its meaning.",
+        instructionFr: "Associez chaque expression possessive à sa signification.",
+        instructionPt: "Associe cada expressão possessiva ao seu significado.",
         pairs: [
           { left: "Luse luani", right: "Mon visage", rightPt: "Meu rosto" },
           { left: "Tuto tuaku", right: "Tes cuillères", rightPt: "Tuas colheres" },
