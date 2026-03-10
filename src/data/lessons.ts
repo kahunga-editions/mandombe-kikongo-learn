@@ -10301,4 +10301,242 @@ export const lessons: Lesson[] = [
       },
     ],
   },
+  {
+    id: "yala",
+    title: "Yala — To Spread / Extend",
+    titleFr: "Yala — Étendre, Étaler",
+    titlePt: "Yala — Estender, Espalhar",
+    titleLari: "Yala",
+    titleMandombe: "Yala",
+    description: "Learn the verb 'Yala' (to spread, extend) with present progressive conjugation and discover the cultural story behind Yalavunga.",
+    descriptionFr: "Apprenez le verbe « Yala » (étendre, étaler) avec la conjugaison au présent progressif et découvrez l'histoire culturelle de Yalavunga.",
+    descriptionPt: "Aprenda o verbo 'Yala' (estender, espalhar) com a conjugação no presente progressivo e descubra a história cultural de Yalavunga.",
+    level: "intermediate",
+    icon: "🏘️",
+    vocabulary: [
+      { lari: "Yala", mandombe: "Yala", french: "Étendre, étaler", english: "To spread, to extend", portuguese: "Estender, espalhar" },
+      { lari: "Njila / Nzila", mandombe: "Njila / Nzila", french: "Chemin, route", english: "Path, road", portuguese: "Caminho, estrada" },
+      { lari: "Nkuala", mandombe: "Nkuala", french: "Natte", english: "Mat", portuguese: "Esteira" },
+      { lari: "Vunga", mandombe: "Vunga", french: "Couverture", english: "Blanket", portuguese: "Cobertor" },
+      { lari: "Mala", mandombe: "Mala", french: "Loin", english: "Far", portuguese: "Longe" },
+      { lari: "Hata", mandombe: "Hata", french: "Village", english: "Village", portuguese: "Aldeia" },
+      { lari: "Ha", mandombe: "Ha", french: "Au niveau de, à", english: "At, at the level of", portuguese: "No nível de, em" },
+      { lari: "Ha ma hambu", mandombe: "Ha ma hambu", french: "À l'intersection", english: "At the intersection", portuguese: "Na interseção" },
+    ],
+    syntax: [
+      {
+        title: "Present progressive — Yala (to spread)",
+        titleFr: "Présent progressif — Yala (étendre)",
+        titlePt: "Presente progressivo — Yala (estender)",
+        description: "The present progressive of 'Yala' follows the pattern: Object + pronoun + ta + yala. The object (Nkuala, Vunga…) comes first.",
+        descriptionFr: "Le présent progressif de « Yala » suit le schéma : Objet + pronom + ta + yala. L'objet (Nkuala, Vunga…) vient en premier.",
+        descriptionPt: "O presente progressivo de 'Yala' segue o padrão: Objeto + pronome + ta + yala. O objeto (Nkuala, Vunga…) vem primeiro.",
+        pattern: "Objet + pronom + ta + yala",
+        groups: [
+          {
+            title: "Nkuala (mat) — Full conjugation",
+            titleFr: "Nkuala (natte) — Conjugaison complète",
+            titlePt: "Nkuala (esteira) — Conjugação completa",
+            examples: [
+              { lari: "Nkuala ni ta yala.", mandombe: "Nkuala ni ta yala.", french: "Je suis en train d'étendre une natte.", english: "I am spreading a mat.", portuguese: "Estou a estender uma esteira." },
+              { lari: "Nkuala ta yala.", mandombe: "Nkuala ta yala.", french: "Tu es en train d'étendre une natte.", english: "You are spreading a mat.", portuguese: "Estás a estender uma esteira." },
+              { lari: "Nkuala ka ta yala.", mandombe: "Nkuala ka ta yala.", french: "Il/elle est en train d'étendre une natte.", english: "He/she is spreading a mat.", portuguese: "Ele/ela está a estender uma esteira." },
+              { lari: "Nkuala tu ta yala.", mandombe: "Nkuala tu ta yala.", french: "Nous sommes en train d'étendre une natte.", english: "We are spreading a mat.", portuguese: "Estamos a estender uma esteira." },
+              { lari: "Nkuala lu ta yala.", mandombe: "Nkuala lu ta yala.", french: "Vous êtes en train d'étendre une natte.", english: "You are spreading a mat.", portuguese: "Estão a estender uma esteira." },
+              { lari: "Nkuala ba ta yala.", mandombe: "Nkuala ba ta yala.", french: "Ils/elles sont en train d'étendre une natte.", english: "They are spreading a mat.", portuguese: "Eles/elas estão a estender uma esteira." },
+            ],
+          },
+          {
+            title: "Vunga (blanket)",
+            titleFr: "Vunga (couverture)",
+            titlePt: "Vunga (cobertor)",
+            examples: [
+              { lari: "Vunga ni ta yala.", mandombe: "Vunga ni ta yala.", french: "Je suis en train d'étendre une couverture.", english: "I am spreading a blanket.", portuguese: "Estou a estender um cobertor." },
+            ],
+          },
+        ],
+      },
+    ],
+    phrases: [
+      {
+        lari: "Yalavunga ka mala ko na Tshinkala, mu njila ya Mfua.",
+        mandombe: "Yalavunga ka mala ko na Tshinkala, mu njila ya Mfua.",
+        french: "Yalavunga n'est pas loin de Kinkala, sur la route de Mfua.",
+        english: "Yalavunga is not far from Kinkala, on the road to Mfua.",
+        portuguese: "Yalavunga não é longe de Kinkala, na estrada de Mfua.",
+        note: "Yalavunga est un patelin situé avant Kinkala. Son nom vient de « yala vunga » (étendre la couverture). Kinkala est la préfecture dont dépend Mbamu, un village célèbre pour son séminaire où beaucoup d'hommes politiques ont été formés dans les années 50-60.",
+      },
+      {
+        lari: "Hata die mpe ha ma hambu ma njila ya Boko na Kinkala.",
+        mandombe: "Hata die mpe ha ma hambu ma njila ya Boko na Kinkala.",
+        french: "Ce village est à l'intersection de la route de Boko et Kinkala.",
+        english: "This village is at the intersection of the road to Boko and Kinkala.",
+        portuguese: "Esta aldeia está na interseção da estrada de Boko e Kinkala.",
+      },
+    ],
+    exercises: [
+      // 1. Multiple choice — meaning of Yala
+      {
+        type: "multiple-choice",
+        question: "What does 'Yala' mean?",
+        questionFr: "Que signifie « Yala » ?",
+        questionPt: "O que significa 'Yala'?",
+        options: ["To cook", "To spread / extend", "To walk", "To build"],
+        optionsFr: ["Cuisiner", "Étendre / étaler", "Marcher", "Construire"],
+        optionsPt: ["Cozinhar", "Estender / espalhar", "Caminhar", "Construir"],
+        correctIndex: 1,
+        explanation: "'Yala' means to spread or extend — e.g. a mat or a blanket.",
+        explanationFr: "« Yala » signifie étendre ou étaler — par ex. une natte ou une couverture.",
+        explanationPt: "'Yala' significa estender ou espalhar — por ex. uma esteira ou um cobertor.",
+      },
+      // 2. Multiple choice — meaning of Nkuala
+      {
+        type: "multiple-choice",
+        question: "What is 'Nkuala'?",
+        questionFr: "Qu'est-ce qu'un « Nkuala » ?",
+        questionPt: "O que é 'Nkuala'?",
+        options: ["A blanket", "A road", "A mat", "A village"],
+        optionsFr: ["Une couverture", "Un chemin", "Une natte", "Un village"],
+        optionsPt: ["Um cobertor", "Uma estrada", "Uma esteira", "Uma aldeia"],
+        correctIndex: 2,
+        explanation: "'Nkuala' is a mat, typically a woven mat used to sit or sleep on.",
+        explanationFr: "« Nkuala » est une natte, typiquement une natte tressée pour s'asseoir ou dormir.",
+        explanationPt: "'Nkuala' é uma esteira, tipicamente uma esteira trançada para sentar ou dormir.",
+      },
+      // 3. Fill-in-blank — 1st person pronoun
+      {
+        type: "fill-in-blank",
+        sentence: "Nkuala ___ ta yala. (I am spreading a mat.)",
+        sentenceFr: "Nkuala ___ ta yala. (Je suis en train d'étendre une natte.)",
+        sentencePt: "Nkuala ___ ta yala. (Estou a estender uma esteira.)",
+        blank: "ni",
+        hint: "1st person singular pronoun",
+        hintFr: "Pronom de la 1ère personne du singulier",
+        hintPt: "Pronome da 1ª pessoa do singular",
+      },
+      // 4. Fill-in-blank — 3rd person singular
+      {
+        type: "fill-in-blank",
+        sentence: "Nkuala ___ ta yala. (He/she is spreading a mat.)",
+        sentenceFr: "Nkuala ___ ta yala. (Il/elle est en train d'étendre une natte.)",
+        sentencePt: "Nkuala ___ ta yala. (Ele/ela está a estender uma esteira.)",
+        blank: "ka",
+        hint: "3rd person singular pronoun",
+        hintFr: "Pronom de la 3ème personne du singulier",
+        hintPt: "Pronome da 3ª pessoa do singular",
+      },
+      // 5. Fill-in-blank — 1st person plural
+      {
+        type: "fill-in-blank",
+        sentence: "Nkuala ___ ta yala. (We are spreading a mat.)",
+        sentenceFr: "Nkuala ___ ta yala. (Nous sommes en train d'étendre une natte.)",
+        sentencePt: "Nkuala ___ ta yala. (Estamos a estender uma esteira.)",
+        blank: "tu",
+        hint: "1st person plural pronoun",
+        hintFr: "Pronom de la 1ère personne du pluriel",
+        hintPt: "Pronome da 1ª pessoa do plural",
+      },
+      // 6. Multiple choice — Yalavunga location
+      {
+        type: "multiple-choice",
+        question: "Where is Yalavunga located?",
+        questionFr: "Où se trouve Yalavunga ?",
+        questionPt: "Onde fica Yalavunga?",
+        options: ["Far from Brazzaville", "Near Kinkala, on the road to Mfua", "In Pointe-Noire", "Near Dolisie"],
+        optionsFr: ["Loin de Brazzaville", "Près de Kinkala, sur la route de Mfua", "À Pointe-Noire", "Près de Dolisie"],
+        optionsPt: ["Longe de Brazzaville", "Perto de Kinkala, na estrada de Mfua", "Em Pointe-Noire", "Perto de Dolisie"],
+        correctIndex: 1,
+        explanation: "Yalavunga is a small village near Kinkala, on the road to Mfua. Its name comes from 'yala vunga' (to spread a blanket).",
+        explanationFr: "Yalavunga est un petit patelin près de Kinkala, sur la route de Mfua. Son nom vient de « yala vunga » (étendre la couverture).",
+        explanationPt: "Yalavunga é uma pequena aldeia perto de Kinkala, na estrada de Mfua. O seu nome vem de 'yala vunga' (estender o cobertor).",
+      },
+      // 7. Matching — vocabulary
+      {
+        type: "matching",
+        instruction: "Match each Lari word to its meaning",
+        instructionFr: "Associez chaque mot lari à sa signification",
+        instructionPt: "Associe cada palavra lari ao seu significado",
+        pairs: [
+          { left: "Yala", right: "To spread / extend", rightFr: "Étendre / étaler", rightPt: "Estender / espalhar" },
+          { left: "Nkuala", right: "Mat", rightFr: "Natte", rightPt: "Esteira" },
+          { left: "Vunga", right: "Blanket", rightFr: "Couverture", rightPt: "Cobertor" },
+          { left: "Njila", right: "Path / road", rightFr: "Chemin / route", rightPt: "Caminho / estrada" },
+          { left: "Hata", right: "Village", rightFr: "Village", rightPt: "Aldeia" },
+          { left: "Mala", right: "Far", rightFr: "Loin", rightPt: "Longe" },
+        ],
+      },
+      // 8. Fill-in-blank — 2nd person (no pronoun)
+      {
+        type: "fill-in-blank",
+        sentence: "Nkuala ___ yala. (You are spreading a mat.)",
+        sentenceFr: "Nkuala ___ yala. (Tu es en train d'étendre une natte.)",
+        sentencePt: "Nkuala ___ yala. (Estás a estender uma esteira.)",
+        blank: "ta",
+        hint: "The progressive marker — 2nd person has no extra pronoun",
+        hintFr: "Le marqueur du progressif — la 2ème personne n'a pas de pronom supplémentaire",
+        hintPt: "O marcador do progressivo — a 2ª pessoa não tem pronome extra",
+      },
+      // 9. Multiple choice — meaning of 'ha ma hambu'
+      {
+        type: "multiple-choice",
+        question: "What does 'ha ma hambu' mean?",
+        questionFr: "Que signifie « ha ma hambu » ?",
+        questionPt: "O que significa 'ha ma hambu'?",
+        options: ["At the intersection", "On the hill", "In the forest", "Near the river"],
+        optionsFr: ["À l'intersection", "Sur la colline", "Dans la forêt", "Près du fleuve"],
+        optionsPt: ["Na interseção", "Na colina", "Na floresta", "Perto do rio"],
+        correctIndex: 0,
+        explanation: "'Ha ma hambu' means 'at the intersection' — 'ha' indicates location.",
+        explanationFr: "« Ha ma hambu » signifie « à l'intersection » — « ha » indique la localisation.",
+        explanationPt: "'Ha ma hambu' significa 'na interseção' — 'ha' indica localização.",
+      },
+      // 10. Crossword
+      // Layout (6x6):
+      //   YALA(0,0) across ↔ HATA(0,3) down at A(0,3)
+      //   NJILA(2,0) across ↔ YALA(0,0) down shares Y(0,0)→not needed
+      //   MALA(4,1) across ↔ NJILA col overlap
+      // Simplified interconnected grid (7x7):
+      //   Row 0: YALA across (0,0)
+      //   Row 0 col 3: A starts HATA down (0,3)
+      //   Row 2: NJILA across (2,1) — shares col 3 with HATA at (2,3)=T? No.
+      // Let me design properly:
+      //   VUNGA(0,0) across 5 letters → V(0,0) U(0,1) N(0,2) G(0,3) A(0,4)
+      //   HATA(0,3) down 4 letters → H? No, conflicts with G.
+      // Simple design:
+      //   Row 1: YALA across (1,0) → Y(1,0) A(1,1) L(1,2) A(1,3)
+      //   Col 1: MALA down (0,1) → M(0,1) A(1,1) L(2,1) A(3,1) — shares A(1,1)
+      //   Row 3: HATA across (3,0) → H(3,0) A(3,1) T(3,2) A(3,3) — shares A(3,1) with MALA
+      //   Col 3: NJILA down? Too long. 
+      //   Col 0: VUNGA? Not enough room.
+      // Keep it simple 6x6:
+      {
+        type: "crossword",
+        title: "Crossword — Yala",
+        titleFr: "Mots croisés — Yala",
+        titlePt: "Palavras cruzadas — Yala",
+        gridSize: 6,
+        clues: [
+          { answer: "YALA", clue: "To spread / extend", clueFr: "Étendre, étaler", cluePt: "Estender, espalhar", row: 1, col: 0, direction: "across" },
+          { answer: "MALA", clue: "Far", clueFr: "Loin", cluePt: "Longe", row: 0, col: 1, direction: "down" },
+          { answer: "HATA", clue: "Village", clueFr: "Village", cluePt: "Aldeia", row: 3, col: 0, direction: "across" },
+        ],
+      },
+      // 11. Word search
+      {
+        type: "word-search",
+        title: "Word Search — Yala vocabulary",
+        titleFr: "Mots mêlés — Vocabulaire de Yala",
+        titlePt: "Caça-palavras — Vocabulário de Yala",
+        gridSize: 8,
+        words: [
+          { word: "YALA", clue: "To spread", clueFr: "Étendre", cluePt: "Estender", row: 0, col: 2, direction: "across" },
+          { word: "VUNGA", clue: "Blanket", clueFr: "Couverture", cluePt: "Cobertor", row: 2, col: 0, direction: "across" },
+          { word: "HATA", clue: "Village", clueFr: "Village", cluePt: "Aldeia", row: 4, col: 3, direction: "down" },
+          { word: "MALA", clue: "Far", clueFr: "Loin", cluePt: "Longe", row: 6, col: 1, direction: "across" },
+          { word: "NJILA", clue: "Path", clueFr: "Chemin", cluePt: "Caminho", row: 1, col: 3, direction: "down" },
+        ],
+        fillerLetters: "BKDMTSWNZLAYUFGHONPEKIMBASULANTOVEDZAKIBUNGAMEFITOSHILAWENKUZOMBADYATSELUBAKA",
+      },
+    ],
+  },
 ];
