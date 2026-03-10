@@ -4181,7 +4181,7 @@ export const lessons: Lesson[] = [
       },
     ],
     phrases: [
-      { lari: "Nkumbi kue diena?", mandombe: "Nkumbi kuwe diyena?", french: "Où est la voiture ?", english: "Where is the car?", portuguese: "Onde está o carro?" },
+      { lari: "Kumbi kue diena?", mandombe: "Kumbi kuwe diyena?", french: "Où est la voiture ?", english: "Where is the car?", portuguese: "Onde está o carro?" },
       { lari: "Tshikuku mala tshe(na).", mandombe: "Tshikuku mala tshe(na).", french: "La cuisine est loin.", english: "The kitchen is far.", portuguese: "A cozinha é longe." },
       { lari: "Mulunga kue we(na)?", mandombe: "Mulunga kuwe we(na)?", french: "Où est le bracelet ?", english: "Where is the bracelet?", portuguese: "Onde está a pulseira?" },
       { lari: "Milunga kue miena?", mandombe: "Milunga kuwe miyena?", french: "Où sont les bracelets ?", english: "Where are the bracelets?", portuguese: "Onde estão as pulseiras?" },
