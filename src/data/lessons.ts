@@ -9420,9 +9420,9 @@ export const lessons: Lesson[] = [
     titlePt: "Yoya, Yuna, Futikila & Luzolo",
     titleLari: "Yoya ye Yuna",
     titleMandombe: "Yoya ye Yuna",
-    description: "Learn 'Yoya' (to be well ripe) with fruit sentences using demonstrative markers, and 'Yuna' (to skin/flay) with its full past tense conjugation.",
-    descriptionFr: "Apprenez « Yoya » (être bien mûr) avec des phrases sur les fruits utilisant les marqueurs démonstratifs, et « Yuna » (écorcher) avec sa conjugaison complète au passé.",
-    descriptionPt: "Aprenda 'Yoya' (estar bem maduro) com frases sobre frutas usando marcadores demonstrativos, e 'Yuna' (esfolar) com sua conjugação completa no passado.",
+    description: "Learn 'Yoya' (ripe), 'Yuna' (to skin), 'Futikila' (to have a cold), 'Tshiyimba' (snot), and 'Luzolo' (love) with full conjugations and exercises.",
+    descriptionFr: "Apprenez « Yoya » (bien mûr), « Yuna » (écorcher), « Futikila » (être enrhumé), « Tshiyimba » (morve) et « Luzolo » (amour) avec conjugaisons et exercices.",
+    descriptionPt: "Aprenda 'Yoya' (maduro), 'Yuna' (esfolar), 'Futikila' (estar resfriado), 'Tshiyimba' (ranho) e 'Luzolo' (amor) com conjugações e exercícios.",
     level: "intermediate",
     icon: "🍊",
     vocabulary: [
@@ -9434,6 +9434,11 @@ export const lessons: Lesson[] = [
       { lari: "Malala", mandombe: "Malala", french: "Oranges", english: "Oranges", portuguese: "Laranjas" },
       { lari: "Malala ma nsa", mandombe: "Malala ma nsa", french: "Citrons", english: "Lemons", portuguese: "Limões" },
       { lari: "Mulumba", mandombe: "Mulumba", french: "Lapin", english: "Rabbit", portuguese: "Coelho" },
+      { lari: "Tshiyimba, Kiyimba, Yimba | Biyimba", mandombe: "Tshiyimba, Kiyimba, Yimba | Biyimba", french: "Morve", english: "Snot, mucus", portuguese: "Ranho, muco" },
+      { lari: "Futikila", mandombe: "Futikila", french: "Être enrhumé(e)", english: "To have a cold", portuguese: "Estar resfriado(a)" },
+      { lari: "Luzolo", mandombe: "Luzolo", french: "Amour", english: "Love", portuguese: "Amor" },
+      { lari: "Zololo", mandombe: "Zololo", french: "Aimer, vouloir", english: "To love, to want", portuguese: "Amar, querer" },
+      { lari: "Muana", mandombe: "Muana", french: "Enfant", english: "Child", portuguese: "Criança" },
     ],
     syntax: [
       {
