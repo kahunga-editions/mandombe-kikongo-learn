@@ -9415,9 +9415,9 @@ export const lessons: Lesson[] = [
   },
   {
     id: "yoya-yuna",
-    title: "Yoya & Yuna — Ripeness and Skinning",
-    titleFr: "Yoya & Yuna — Maturité et écorchage",
-    titlePt: "Yoya & Yuna — Maturidade e esfolar",
+    title: "Yoya, Yuna, Futikila & Luzolo",
+    titleFr: "Yoya, Yuna, Futikila & Luzolo",
+    titlePt: "Yoya, Yuna, Futikila & Luzolo",
     titleLari: "Yoya ye Yuna",
     titleMandombe: "Yoya ye Yuna",
     description: "Learn 'Yoya' (to be well ripe) with fruit sentences using demonstrative markers, and 'Yuna' (to skin/flay) with its full past tense conjugation.",
