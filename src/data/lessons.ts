@@ -9196,7 +9196,7 @@ export const lessons: Lesson[] = [
       { lari: "Masangu ma yiri.", mandombe: "Masangu ma yiri.", french: "Le maïs est cuit.", english: "The corn is cooked.", portuguese: "O milho está cozido." },
       { lari: "Mbala ji yiri.", mandombe: "Mbala ji yiri.", french: "Les patates sont cuites.", english: "The sweet potatoes are cooked.", portuguese: "As batatas-doces estão cozidas." },
       { lari: "Nzo yi yiri.", mandombe: "Nzo yi yiri.", french: "La maison est brûlée.", english: "The house is burned.", portuguese: "A casa está queimada." },
-      { lari: "Mukoko wu yiri.", mandombe: "Mukoko wu yiri.", french: "La savane est brûlée.", english: "The savanna is burned.", portuguese: "A savana está queimada." },
+      { lari: "Mukobo wu yiri.", mandombe: "Mukobo wu yiri.", french: "La savane est brûlée.", english: "The savanna is burned.", portuguese: "A savana está queimada." },
       { lari: "Mputa yaya yi ta yaya.", mandombe: "Mputa yaya yi ta yaya.", french: "La plaie me fait mal.", english: "The wound hurts me.", portuguese: "A ferida dói-me." },
       { lari: "Meso yaya ma ta yaya.", mandombe: "Meso yaya ma ta yaya.", french: "Mes yeux me font mal.", english: "My eyes hurt me.", portuguese: "Os meus olhos doem-me." },
       { lari: "Kulu yaya ku ta yaya.", mandombe: "Kulu yaya ku ta yaya.", french: "Mon pied me fait mal.", english: "My foot hurts me.", portuguese: "O meu pé dói-me." },
