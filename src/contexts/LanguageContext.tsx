@@ -142,7 +142,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Dictionary
     "nav.dictionary": "Dictionnaire",
-    "dict.eyebrow": "Buku dia Binsono — Dictionnaire",
+    "dict.eyebrow": "Buku dia nsonokono na nzonzolo Kikongo Lari — Dictionnaire",
     "dict.title": "Dictionnaire Kikongo Lari",
     "dict.subtitle": "Recherchez un mot en lari, français, anglais ou portugais et trouvez sa traduction instantanément.",
     "dict.searchPlaceholder": "Tapez un mot en lari, français, anglais ou portugais…",
@@ -289,7 +289,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Dictionary
     "nav.dictionary": "Dictionary",
-    "dict.eyebrow": "Buku dia Binsono — Dictionary",
+    "dict.eyebrow": "Buku dia nsonokono na nzonzolo Kikongo Lari — Dictionary",
     "dict.title": "Kikongo Lari Dictionary",
     "dict.subtitle": "Search a word in Lari, French, English or Portuguese and find its translation instantly.",
     "dict.searchPlaceholder": "Type a word in Lari, French, English or Portuguese…",
@@ -436,7 +436,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Dictionary
     "nav.dictionary": "Dicionário",
-    "dict.eyebrow": "Buku dia Binsono — Dicionário",
+    "dict.eyebrow": "Buku dia nsonokono na nzonzolo Kikongo Lari — Dicionário",
     "dict.title": "Dicionário Kikongo Lari",
     "dict.subtitle": "Pesquise uma palavra em lari, francês, inglês ou português e encontre a sua tradução instantaneamente.",
     "dict.searchPlaceholder": "Escreva uma palavra em lari, francês, inglês ou português…",
