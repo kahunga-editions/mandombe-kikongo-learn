@@ -5537,8 +5537,8 @@ export const lessons: Lesson[] = [
       {
         type: "fill-in-blank",
         sentence: "The navel (nombril) is called ___ in Lari.",
-        blank: "Nkumba",
-        hint: "Starts with 'Nk'.",
+        blank: "Mukumba",
+        hint: "Starts with 'Mu'.",
         hintPt: "Começa com 'Nk'.",
       },
       // Exercise 21: MCQ — Eyelash
