@@ -2479,7 +2479,7 @@ export const lessons: Lesson[] = [
       { lari: "Bindakasa", mandombe: "Bindakasa", french: "Croiser les pieds; entrelacer", english: "To cross feet; to intertwine" },
       { lari: "Bunda ntulu", mandombe: "Bunda ntulu", french: "Bomber le torse", english: "To puff out one's chest" },
       { lari: "Botana kopa", mandombe: "Botana kopa", french: "Être soûl", english: "To be drunk" },
-      { lari: "Bamba la kana", mandombe: "Bamba la kana", french: "Longer, côtoyer; éviter", english: "To go alongside; to avoid" },
+      { lari: "Bambalakana", mandombe: "Bambalakana", french: "Longer, côtoyer; éviter", english: "To go alongside; to avoid" },
     ],
     exercises: [
       {
