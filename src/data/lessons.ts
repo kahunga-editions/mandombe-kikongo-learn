@@ -2754,6 +2754,13 @@ export const lessons: Lesson[] = [
       { lari: "Lukami | Nkami", mandombe: "Lukami | Nkami", french: "Fourmi rouge", english: "Red ant", portuguese: "Formiga vermelha" },
       { lari: "Ngondaa", mandombe: "Ngondaa", french: "Les règles", english: "Menstruation", portuguese: "A menstruação" },
       { lari: "Mundengué | Minengue", mandombe: "Mundengué | Minengue", french: "Le corossol(s)", english: "Soursop(s)", portuguese: "A graviola(s)" },
+      { lari: "Poto-poto", mandombe: "Poto-poto", french: "Marécage", english: "Swamp, marsh", portuguese: "Pântano" },
+      { lari: "Lubakala", mandombe: "Lubakala", french: "L'est", english: "The east", portuguese: "O leste" },
+      { lari: "Lukento", mandombe: "Lukento", french: "L'ouest", english: "The west", portuguese: "O oeste" },
+      { lari: "Nto", mandombe: "Nto", french: "La rivière", english: "The river", portuguese: "O rio" },
+      { lari: "Mua nto", mandombe: "Mua nto", french: "Ruisseau", english: "Stream, brook", portuguese: "Riacho" },
+      { lari: "Mbutu", mandombe: "Mbutu", french: "Fruit, bourgeon", english: "Fruit, bud", portuguese: "Fruto, broto" },
+      { lari: "Tshitari | Bitari", mandombe: "Tshitari | Bitari", french: "Miroir(s)", english: "Mirror(s)", portuguese: "Espelho(s)" },
     ],
     phrases: [
       { lari: "Budisa bibidiki", mandombe: "Budisa bibidiki", french: "Faisons fabriquer des briques", english: "Let's have bricks made" },
