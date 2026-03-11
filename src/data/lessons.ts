@@ -11426,6 +11426,9 @@ export const lessons: Lesson[] = [
         title: "KUE — Where",
         titleFr: "KUE — Où",
         titlePt: "KUE — Onde",
+        description: "KUE means 'where'. Kikongo Lari allows very reduced phrases when context is clear — sometimes just 'Kue' + pronoun suffices.",
+        descriptionFr: "KUE signifie « où ». Le Kikongo Lari permet des phrases très réduites lorsque le contexte est clair — parfois « Kue » + pronom suffit.",
+        descriptionPt: "KUE significa « onde ». O Kikongo Lari permite frases muito reduzidas quando o contexto é claro — por vezes « Kue » + pronome basta.",
         pattern: "Kue + (sujet / verbe) ?",
         groups: [
           {
