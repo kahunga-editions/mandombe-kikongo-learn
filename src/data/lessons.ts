@@ -11647,7 +11647,7 @@ export const lessons: Lesson[] = [
           { word: "KOTA", clue: "To enter", clueFr: "Entrer", cluePt: "Entrar", row: 5, col: 3, direction: "down" },
           { word: "DILA", clue: "To cry", clueFr: "Pleurer", cluePt: "Chorar", row: 7, col: 5, direction: "across" },
         ],
-        fillerLetters: "BUESAFMLZWMIYASVNOFLFASTELEWMYLOVAWISFGKBYMZWNKIFUULSKAVWFMENWFOSAYZLVGAMTSDILAYU FWALSVMOZSILYMAFWVO",
+        fillerLetters: "BUESAFMLZWMIYASVNOFLFASTELEWMYLOVAWISFGKBYMZWNKIFUULSKAVWFMENWFOSAYZLVGAMTSDILAYUFWALSVMOZSILYMAFWVO",
       },
     ],
   },
