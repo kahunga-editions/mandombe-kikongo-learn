@@ -11083,7 +11083,7 @@ export const lessons: Lesson[] = [
       { lari: "Funda", mandombe: "Funda", french: "Un paquet", english: "A package, a parcel", portuguese: "Um pacote" },
       { lari: "Fumu", mandombe: "Fumu", french: "Tabac", english: "Tobacco", portuguese: "Tabaco" },
       { lari: "Funana", mandombe: "Funana", french: "Se multiplier", english: "To multiply", portuguese: "Multiplicar-se" },
-      { lari: "Fumba", mandombe: "Fumba", french: "Une roue", english: "A wheel", portuguese: "Uma roda" },
+      { lari: "Mfumba, Mufumba | Mifumba", mandombe: "Mfumba, Mufumba | Mifumba", french: "Une roue", english: "A wheel", portuguese: "Uma roda" },
       { lari: "Fua", mandombe: "Fua", french: "Mourir, être mort", english: "To die, to be dead", portuguese: "Morrer, estar morto" },
       { lari: "Fiantakana", mandombe: "Fiantakana", french: "Maigrir, s'affaisser", english: "To lose weight, to subside", portuguese: "Emagrecer, ceder" },
       { lari: "Fidila", mandombe: "Fidila", french: "Mener, conduire", english: "To lead, to drive", portuguese: "Conduzir, levar" },
