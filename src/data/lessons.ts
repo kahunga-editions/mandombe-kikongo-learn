@@ -3335,6 +3335,51 @@ export const lessons: Lesson[] = [
         options: ["A drum", "Matches / matchbox", "A river", "A basket"],
         correctIndex: 1,
       },
+      // ── Crossword: Fi- / Fu- Verbs ──
+      // Grid 9x9
+      // FUSA across (1,3): F(1,3) U(1,4) S(1,5) A(1,6)
+      // FILA down col 3 (1-4): F(1,3) I(2,3) L(3,3) A(4,3) — shares F at (1,3) ✓
+      // FUILA across (2,1): F(2,1) U(2,2) I(2,3) L(2,4) A(2,5) — shares I at (2,3) with FILA ✓
+      // FUTA across (4,0): F(4,0) U(4,1) T(4,2) A(4,3) — shares A at (4,3) with FILA ✓
+      // FIOTI down col 0 (4-8): F(4,0) I(5,0) O(6,0) T(7,0) I(8,0) — shares F at (4,0) with FUTA ✓
+      {
+        type: "crossword",
+        title: "Crossword — Fi- & Fu- Verbs",
+        titleFr: "Mots croisés — Verbes Fi- & Fu-",
+        titlePt: "Palavras cruzadas — Verbos Fi- & Fu-",
+        gridSize: 9,
+        clues: [
+          { answer: "FUSA", clue: "To dig out, to go mouldy", clueFr: "Extraire en creusant, moisir", cluePt: "Extrair cavando, mofar", row: 1, col: 3, direction: "across" },
+          { answer: "FILA", clue: "To lead, to escort", clueFr: "Conduire, mener, escorter", cluePt: "Conduzir, levar, escoltar", row: 1, col: 3, direction: "down" },
+          { answer: "FUILA", clue: "Desire, thirst for, need", clueFr: "Désir, soif de, besoin", cluePt: "Desejo, sede de, necessidade", row: 2, col: 1, direction: "across" },
+          { answer: "FUTA", clue: "To pay, reimburse", clueFr: "Payer, rembourser", cluePt: "Pagar, reembolsar", row: 4, col: 0, direction: "across" },
+          { answer: "FIOTI", clue: "Small, little", clueFr: "Petit, peu", cluePt: "Pequeno, pouco", row: 4, col: 0, direction: "down" },
+        ],
+      },
+      // ── Word Search: Fi- / Fu- Verbs ──
+      // Grid 10x10
+      // FUTA across (0,0): F(0,0) U(0,1) T(0,2) A(0,3)
+      // FILA across (2,5): F(2,5) I(2,6) L(2,7) A(2,8)
+      // FUSA down (4,0): F(4,0) U(5,0) S(6,0) A(7,0)
+      // FIOTI down (1,9): F(1,9) I(2,9) O(3,9) T(4,9) I(5,9)
+      // FUEMBA across (8,2): F(8,2) U(8,3) E(8,4) M(8,5) B(8,6) A(8,7)
+      // FUTUKA across (6,3): F(6,3) U(6,4) T(6,5) U(6,6) K(6,7) A(6,8)
+      {
+        type: "word-search",
+        title: "Word Search — Fi- & Fu- Verbs",
+        titleFr: "Mots masqués — Verbes Fi- & Fu-",
+        titlePt: "Caça-palavras — Verbos Fi- & Fu-",
+        gridSize: 10,
+        words: [
+          { word: "FUTA", clue: "To pay, reimburse", clueFr: "Payer, rembourser", cluePt: "Pagar, reembolsar", row: 0, col: 0, direction: "across" },
+          { word: "FILA", clue: "To lead, to escort", clueFr: "Conduire, escorter", cluePt: "Conduzir, escoltar", row: 2, col: 5, direction: "across" },
+          { word: "FUSA", clue: "To dig out, to go mouldy", clueFr: "Extraire en creusant, moisir", cluePt: "Extrair cavando, mofar", row: 4, col: 0, direction: "down" },
+          { word: "FIOTI", clue: "Small, little", clueFr: "Petit, peu", cluePt: "Pequeno, pouco", row: 1, col: 9, direction: "down" },
+          { word: "FUEMBA", clue: "To blow one's nose", clueFr: "Se moucher", cluePt: "Assoar-se", row: 8, col: 2, direction: "across" },
+          { word: "FUTUKA", clue: "To swell, to inflate", clueFr: "S'enfler, se gonfler", cluePt: "Inchar, inflar", row: 6, col: 3, direction: "across" },
+        ],
+        fillerLetters: "BTKANLDSEMZNYOAGKLBTDSAKUNMSENGTOLANDNASETUKMDAONDBLANMTESBKUOALNKDGEZMAOYTSBNLIEUDMKNGTAS",
+      },
     ],
   },
 
