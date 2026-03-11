@@ -11608,20 +11608,34 @@ export const lessons: Lesson[] = [
         title: "Crossword — Interrogative Words",
         titleFr: "Mots croisés — Mots interrogatifs",
         titlePt: "Palavras cruzadas — Palavras interrogativas",
-        gridSize: 4,
-        // Layout 4×4 — 87 % filled, all words connected via TELE (col 2):
-        //   0 1 2 3
-        // 0 K O T A      ← KOTA across
-        // 1 K U E .      ← KUE  across  (E shares with TELE)
-        // 2 D I L A      ← DILA across  (L shares with TELE)
-        // 3 B U E .      ← BUE  across  (E shares with TELE)
-        //       ↑ TELE down
+        gridSize: 7,
+        // Proper criss-cross layout 7×7 — 6 genuine intersections:
+        //
+        //      0  1  2  3  4  5  6
+        //  0:  .  .  K  .  .  .  .        ↓KUE
+        //  1:  .  B→ U  N  G  U  .        →BUNGU  (↓BUE at B, ↓KUE at U, ↓NKI at N)
+        //  2:  .  U  E  K→ O  T  A        →KOTA   (↓NKI at K, ↓TELE at T)
+        //  3:  .  E  .  I  .  E  .        ↓BUE E, ↓NKI I, ↓TELE E
+        //  4:  .  .  .  D→ I  L  A        →DILA   (↓TELE at L)
+        //  5:  .  .  .  .  .  E  .        ↓TELE E
+        //
+        // Intersections:
+        //   (1,1) BUNGU[0]=B ↔ BUE[0]=B ✓
+        //   (1,2) BUNGU[1]=U ↔ KUE[1]=U ✓
+        //   (1,3) BUNGU[2]=N ↔ NKI[0]=N ✓
+        //   (2,3) KOTA[0]=K  ↔ NKI[1]=K ✓
+        //   (2,5) KOTA[2]=T  ↔ TELE[0]=T ✓
+        //   (4,5) DILA[2]=L  ↔ TELE[2]=L ✓
         clues: [
-          { answer: "KOTA", clue: "To enter", clueFr: "Entrer", cluePt: "Entrar", row: 0, col: 0, direction: "across" },
-          { answer: "KUE", clue: "Where?", clueFr: "Où ?", cluePt: "Onde?", row: 1, col: 0, direction: "across" },
-          { answer: "DILA", clue: "To cry", clueFr: "Pleurer", cluePt: "Chorar", row: 2, col: 0, direction: "across" },
-          { answer: "BUE", clue: "What? How?", clueFr: "Qu'est-ce que, comment", cluePt: "O quê? Como?", row: 3, col: 0, direction: "across" },
-          { answer: "TELE", clue: "Said (past tense)", clueFr: "Dire (au passé)", cluePt: "Disse (passado)", row: 0, col: 2, direction: "down" },
+          // Across
+          { answer: "BUNGU", clue: "Reason, motive", clueFr: "Raison, motif", cluePt: "Razão, motivo", row: 1, col: 1, direction: "across" },
+          { answer: "KOTA", clue: "To enter", clueFr: "Entrer", cluePt: "Entrar", row: 2, col: 3, direction: "across" },
+          { answer: "DILA", clue: "To cry", clueFr: "Pleurer", cluePt: "Chorar", row: 4, col: 3, direction: "across" },
+          // Down
+          { answer: "KUE", clue: "Where?", clueFr: "Où ?", cluePt: "Onde?", row: 0, col: 2, direction: "down" },
+          { answer: "BUE", clue: "What? How?", clueFr: "Qu'est-ce que, comment", cluePt: "O quê? Como?", row: 1, col: 1, direction: "down" },
+          { answer: "NKI", clue: "Why / What?", clueFr: "Pourquoi / Qu'est-ce que ?", cluePt: "Porquê / O que é que?", row: 1, col: 3, direction: "down" },
+          { answer: "TELE", clue: "Said (past tense)", clueFr: "Dire (au passé)", cluePt: "Disse (passado)", row: 2, col: 5, direction: "down" },
         ],
       },
       // ── Word Search 10×10 ──
