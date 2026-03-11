@@ -11235,4 +11235,389 @@ export const lessons: Lesson[] = [
       },
     ],
   },
+
+  // ─── LESSON: Interrogative Words — Bue, Nki, Kue ───
+  {
+    id: "interrogative-bue-nki-kue",
+    title: "Interrogative Words — Bue, Nki, Kue",
+    titleFr: "Mots interrogatifs — Bue, Nki, Kue",
+    titlePt: "Palavras interrogativas — Bue, Nki, Kue",
+    titleLari: "Bue, Nki na Kue",
+    titleMandombe: "Bue, Nki na Kue",
+    description: "Learn the key Kikongo Lari interrogative words: Bue (what did...say), Nki (why / what), and Kue (where), along with their conjugation patterns and contextual nuances.",
+    descriptionFr: "Apprenez les mots interrogatifs essentiels du Kikongo Lari : Bue (qu'a-t-il dit), Nki (pourquoi / qu'est-ce que) et Kue (où), avec leurs conjugaisons et subtilités contextuelles.",
+    descriptionPt: "Aprenda as palavras interrogativas essenciais do Kikongo Lari: Bue (o que disse), Nki (porquê / o que é que) e Kue (onde), com as suas conjugações e nuances contextuais.",
+    level: "intermediate",
+    icon: "❓",
+    vocabulary: [
+      { lari: "Bue", mandombe: "Bue", french: "Comment, qu'a-t-il dit ?", english: "What did...say?", portuguese: "O que disse...?" },
+      { lari: "Nki", mandombe: "Nki", french: "Pourquoi / Qu'est-ce que ?", english: "Why / What?", portuguese: "Porquê / O que é que?", note: "Le sens de NKI change selon la forme du verbe qui le suit." },
+      { lari: "Kue", mandombe: "Kue", french: "Où", english: "Where", portuguese: "Onde" },
+      { lari: "Ku", mandombe: "Ku", french: "À (préposition de lieu)", english: "At, to (preposition of place)", portuguese: "A, em (preposição de lugar)" },
+      { lari: "Keti", mandombe: "Keti", french: "Ou (conjonction)", english: "Or (conjunction)", portuguese: "Ou (conjunção)" },
+      { lari: "Kota", mandombe: "Kota", french: "Entrer", english: "To enter", portuguese: "Entrar" },
+      { lari: "Dila", mandombe: "Dila", french: "Pleurer", english: "To cry", portuguese: "Chorar" },
+      { lari: "Dia", mandombe: "Dia", french: "Manger", english: "To eat", portuguese: "Comer" },
+      { lari: "Dirila", mandombe: "Dirila", french: "Forme progressive interrogative de Dila (pleurer)", english: "Progressive interrogative form of Dila (to cry)", portuguese: "Forma progressiva interrogativa de Dila (chorar)" },
+      { lari: "Tele", mandombe: "Tele", french: "Dire (au passé)", english: "Said (past tense)", portuguese: "Disse (passado)" },
+      { lari: "Mu nkia bungu", mandombe: "Mu nkia bungu", french: "Pour quelle raison", english: "For what reason", portuguese: "Por que razão" },
+      { lari: "Bungu | Mabungu", mandombe: "Bungu | Mabungu", french: "Raison, motif", english: "Reason, motive", portuguese: "Razão, motivo" },
+      { lari: "Tshibungu | Bibungu", mandombe: "Tshibungu | Bibungu", french: "Des mottes de terre", english: "Clods of earth", portuguese: "Torrões de terra" },
+      { lari: "Nkia", mandombe: "Nkia", french: "Quelle (se prononce /ntshia/)", english: "Which, what (pronounced /ntshia/)", portuguese: "Qual (pronuncia-se /ntshia/)" },
+      { lari: "Nzo mikanda", mandombe: "Nzo mikanda", french: "École", english: "School", portuguese: "Escola" },
+    ],
+    phrases: [
+      // BUE — Qu'a-t-il/elle dit ?
+      { lari: "Bue ntele?", mandombe: "Bue ntele?", french: "Qu'ai-je dit ?", english: "What did I say?", portuguese: "O que disse eu?" },
+      { lari: "Bue tele?", mandombe: "Bue tele?", french: "Qu'as-tu dit ?", english: "What did you say?", portuguese: "O que disseste?" },
+      { lari: "Bue ka tele?", mandombe: "Bue ka tele?", french: "Qu'a-t-elle dit ?", english: "What did she say?", portuguese: "O que disse ela?" },
+      { lari: "Bue tu tele?", mandombe: "Bue tu tele?", french: "Qu'avons-nous dit ?", english: "What did we say?", portuguese: "O que dissemos?" },
+      { lari: "Bue lu tele?", mandombe: "Bue lu tele?", french: "Qu'avez-vous dit ?", english: "What did you (pl.) say?", portuguese: "O que dissestes?" },
+      { lari: "Bue ba tele?", mandombe: "Bue ba tele?", french: "Qu'ont-ils dit ?", english: "What did they say?", portuguese: "O que disseram?" },
+      // NKI + DIRILA — Pourquoi (pleurer)
+      { lari: "Nki ni ta dirila?", mandombe: "Nki ni ta dirila?", french: "Pourquoi je pleure ?", english: "Why am I crying?", portuguese: "Por que estou a chorar?" },
+      { lari: "Nki ta dirila?", mandombe: "Nki ta dirila?", french: "Pourquoi tu pleures ?", english: "Why are you crying?", portuguese: "Por que estás a chorar?" },
+      { lari: "Nki ka ta dirila?", mandombe: "Nki ka ta dirila?", french: "Pourquoi elle pleure ?", english: "Why is she crying?", portuguese: "Por que está ela a chorar?" },
+      { lari: "Nki tu ta dirila?", mandombe: "Nki tu ta dirila?", french: "Pourquoi pleurons-nous ?", english: "Why are we crying?", portuguese: "Por que estamos a chorar?" },
+      { lari: "Nki lu ta dirila?", mandombe: "Nki lu ta dirila?", french: "Pourquoi pleurez-vous ?", english: "Why are you (pl.) crying?", portuguese: "Por que estais a chorar?" },
+      { lari: "Nki ba ta dirila?", mandombe: "Nki ba ta dirila?", french: "Pourquoi pleurent-elles ?", english: "Why are they crying?", portuguese: "Por que estão a chorar?" },
+      // DILA — Présent progressif
+      { lari: "Dila ni ta dila", mandombe: "Dila ni ta dila", french: "Je suis en train de pleurer", english: "I am crying", portuguese: "Estou a chorar" },
+      { lari: "Dila ta dila", mandombe: "Dila ta dila", french: "Tu es en train de pleurer", english: "You are crying", portuguese: "Estás a chorar" },
+      { lari: "Dila ka ta dila", mandombe: "Dila ka ta dila", french: "Il/elle est en train de pleurer", english: "He/she is crying", portuguese: "Ele/ela está a chorar" },
+      { lari: "Dila tu ta dila", mandombe: "Dila tu ta dila", french: "Nous sommes en train de pleurer", english: "We are crying", portuguese: "Estamos a chorar" },
+      { lari: "Dila lu ta dila", mandombe: "Dila lu ta dila", french: "Vous êtes en train de pleurer", english: "You (pl.) are crying", portuguese: "Estais a chorar" },
+      { lari: "Dila ba ta dila", mandombe: "Dila ba ta dila", french: "Ils sont en train de pleurer", english: "They are crying", portuguese: "Estão a chorar" },
+      // NKI + DIA (infinitif) — Qu'est-ce que (manger)
+      { lari: "Nki ta dia?", mandombe: "Nki ta dia?", french: "Qu'est-ce que tu manges ?", english: "What are you eating?", portuguese: "O que estás a comer?" },
+      { lari: "Nki ni ta dia?", mandombe: "Nki ni ta dia?", french: "Qu'est-ce que je mange ?", english: "What am I eating?", portuguese: "O que estou a comer?" },
+      { lari: "Nki ka ta dia?", mandombe: "Nki ka ta dia?", french: "Qu'est-ce qu'elle mange ?", english: "What is she eating?", portuguese: "O que está ela a comer?" },
+      { lari: "Nki tu ta dia?", mandombe: "Nki tu ta dia?", french: "Qu'est-ce que nous mangeons ?", english: "What are we eating?", portuguese: "O que estamos a comer?" },
+      { lari: "Nki lu ta dia?", mandombe: "Nki lu ta dia?", french: "Qu'est-ce que vous mangez ?", english: "What are you (pl.) eating?", portuguese: "O que estais a comer?" },
+      { lari: "Nki ba ta dia?", mandombe: "Nki ba ta dia?", french: "Qu'est-ce qu'ils mangent ?", english: "What are they eating?", portuguese: "O que estão a comer?" },
+      // NKI + DILA (DIA progressif) — Pourquoi (manger)
+      { lari: "Nki ni ta dila?", mandombe: "Nki ni ta dila?", french: "Pourquoi je mange ?", english: "Why am I eating?", portuguese: "Por que estou a comer?", note: "DILA ici vient de DIA (manger) à la forme progressive interrogative. Le /i/ est long, ce qui le distingue de DILA (pleurer)." },
+      { lari: "Nki ta dila?", mandombe: "Nki ta dila?", french: "Pourquoi tu manges ?", english: "Why are you eating?", portuguese: "Por que estás a comer?" },
+      { lari: "Nki ka ta dila?", mandombe: "Nki ka ta dila?", french: "Pourquoi il/elle mange ?", english: "Why is he/she eating?", portuguese: "Por que está ele/ela a comer?" },
+      { lari: "Nki tu ta dila?", mandombe: "Nki tu ta dila?", french: "Pourquoi nous mangeons ?", english: "Why are we eating?", portuguese: "Por que estamos a comer?" },
+      { lari: "Nki lu ta dila?", mandombe: "Nki lu ta dila?", french: "Pourquoi vous mangez ?", english: "Why are you (pl.) eating?", portuguese: "Por que estais a comer?" },
+      { lari: "Nki ba ta dila?", mandombe: "Nki ba ta dila?", french: "Pourquoi ils mangent ?", english: "Why are they eating?", portuguese: "Por que estão a comer?" },
+      // MU NKIA BUNGU
+      { lari: "Nkia bungu lembolo kuijila?", mandombe: "Nkia bungu lembolo kuijila?", french: "Pour quelle raison n'es-tu pas venu ?", english: "For what reason didn't you come?", portuguese: "Por que razão não vieste?" },
+      // KUE — Où
+      { lari: "Kue ta kuenda?", mandombe: "Kue ta kuenda?", french: "Où vas-tu ?", english: "Where are you going?", portuguese: "Onde vais?" },
+      { lari: "Kue ke(na)?", mandombe: "Kue ke(na)?", french: "Où est-elle ?", english: "Where is she?", portuguese: "Onde está ela?" },
+      { lari: "Kue kotela (ka)?", mandombe: "Kue kotela (ka)?", french: "Où vas-tu à l'école ?", english: "Where do you go to school?", portuguese: "Onde vais à escola?", note: "\"À l'école\" est sous-entendu. Le contexte permet de réduire la phrase au maximum en Kikongo Lari." },
+      { lari: "Kue ka?", mandombe: "Kue ka?", french: "Où va-t-elle à l'école ?", english: "Where does she go to school?", portuguese: "Onde vai ela à escola?" },
+      { lari: "Kue ba?", mandombe: "Kue ba?", french: "Où vont-elles à l'école ?", english: "Where do they go to school?", portuguese: "Onde vão elas à escola?" },
+      { lari: "Kue lu?", mandombe: "Kue lu?", french: "Où allez-vous à l'école ?", english: "Where do you (pl.) go to school?", portuguese: "Onde ides à escola?" },
+      { lari: "Nzo mikanda aku kue ye(na)?", mandombe: "Nzo mikanda aku kue ye(na)?", french: "Où vas-tu à l'école ?", english: "Where do you go to school?", portuguese: "Onde vais à escola?" },
+      { lari: "Nzo mikanda andi kue ye(na)?", mandombe: "Nzo mikanda andi kue ye(na)?", french: "Où va-t-elle à l'école ?", english: "Where does she go to school?", portuguese: "Onde vai ela à escola?" },
+      { lari: "Nzo mikanda eno kue ye(na)?", mandombe: "Nzo mikanda eno kue ye(na)?", french: "Où allez-vous à l'école ?", english: "Where do you (pl.) go to school?", portuguese: "Onde ides à escola?" },
+      { lari: "Nzo mikanda awu kue ye(na)?", mandombe: "Nzo mikanda awu kue ye(na)?", french: "Où vont-ils à l'école ?", english: "Where do they go to school?", portuguese: "Onde vão eles à escola?" },
+    ],
+    syntax: [
+      {
+        title: "BUE — What did...say?",
+        titleFr: "BUE — Qu'a-t-il dit ?",
+        titlePt: "BUE — O que disse?",
+        pattern: "Bue + pronom sujet + tele ?",
+        groups: [
+          {
+            title: "Conjugation of BUE...TELE",
+            titleFr: "Conjugaison de BUE…TELE",
+            titlePt: "Conjugação de BUE…TELE",
+            examples: [
+              { lari: "Bue ntele?", mandombe: "Bue ntele?", french: "Qu'ai-je dit ?", english: "What did I say?", portuguese: "O que disse eu?" },
+              { lari: "Bue tele?", mandombe: "Bue tele?", french: "Qu'as-tu dit ?", english: "What did you say?", portuguese: "O que disseste?" },
+              { lari: "Bue ka tele?", mandombe: "Bue ka tele?", french: "Qu'a-t-elle dit ?", english: "What did she say?", portuguese: "O que disse ela?" },
+              { lari: "Bue tu tele?", mandombe: "Bue tu tele?", french: "Qu'avons-nous dit ?", english: "What did we say?", portuguese: "O que dissemos?" },
+              { lari: "Bue lu tele?", mandombe: "Bue lu tele?", french: "Qu'avez-vous dit ?", english: "What did you (pl.) say?", portuguese: "O que dissestes?" },
+              { lari: "Bue ba tele?", mandombe: "Bue ba tele?", french: "Qu'ont-ils dit ?", english: "What did they say?", portuguese: "O que disseram?" },
+            ],
+          },
+        ],
+      },
+      {
+        title: "NKI — Why (with progressive verb form)",
+        titleFr: "NKI — Pourquoi (avec la forme progressive du verbe)",
+        titlePt: "NKI — Porquê (com a forma progressiva do verbo)",
+        pattern: "Nki + (pronom sujet) + ta + verbe progressif ?",
+        groups: [
+          {
+            title: "NKI + DIRILA (Why...crying?)",
+            titleFr: "NKI + DIRILA (Pourquoi…pleurer ?)",
+            titlePt: "NKI + DIRILA (Porquê…chorar?)",
+            examples: [
+              { lari: "Nki ni ta dirila?", mandombe: "Nki ni ta dirila?", french: "Pourquoi je pleure ?", english: "Why am I crying?", portuguese: "Por que estou a chorar?" },
+              { lari: "Nki ta dirila?", mandombe: "Nki ta dirila?", french: "Pourquoi tu pleures ?", english: "Why are you crying?", portuguese: "Por que estás a chorar?" },
+              { lari: "Nki ka ta dirila?", mandombe: "Nki ka ta dirila?", french: "Pourquoi elle pleure ?", english: "Why is she crying?", portuguese: "Por que está ela a chorar?" },
+              { lari: "Nki tu ta dirila?", mandombe: "Nki tu ta dirila?", french: "Pourquoi pleurons-nous ?", english: "Why are we crying?", portuguese: "Por que estamos a chorar?" },
+              { lari: "Nki lu ta dirila?", mandombe: "Nki lu ta dirila?", french: "Pourquoi pleurez-vous ?", english: "Why are you (pl.) crying?", portuguese: "Por que estais a chorar?" },
+              { lari: "Nki ba ta dirila?", mandombe: "Nki ba ta dirila?", french: "Pourquoi pleurent-elles ?", english: "Why are they crying?", portuguese: "Por que estão a chorar?" },
+            ],
+          },
+        ],
+      },
+      {
+        title: "NKI — What (with infinitive verb form)",
+        titleFr: "NKI — Qu'est-ce que (avec le verbe à l'infinitif)",
+        titlePt: "NKI — O que é que (com o verbo no infinitivo)",
+        pattern: "Nki + (pronom sujet) + ta + verbe infinitif ?",
+        groups: [
+          {
+            title: "NKI + DIA (What...eating?)",
+            titleFr: "NKI + DIA (Qu'est-ce que…manger ?)",
+            titlePt: "NKI + DIA (O que é que…comer?)",
+            examples: [
+              { lari: "Nki ta dia?", mandombe: "Nki ta dia?", french: "Qu'est-ce que tu manges ?", english: "What are you eating?", portuguese: "O que estás a comer?" },
+              { lari: "Nki ni ta dia?", mandombe: "Nki ni ta dia?", french: "Qu'est-ce que je mange ?", english: "What am I eating?", portuguese: "O que estou a comer?" },
+              { lari: "Nki ka ta dia?", mandombe: "Nki ka ta dia?", french: "Qu'est-ce qu'elle mange ?", english: "What is she eating?", portuguese: "O que está ela a comer?" },
+              { lari: "Nki tu ta dia?", mandombe: "Nki tu ta dia?", french: "Qu'est-ce que nous mangeons ?", english: "What are we eating?", portuguese: "O que estamos a comer?" },
+              { lari: "Nki lu ta dia?", mandombe: "Nki lu ta dia?", french: "Qu'est-ce que vous mangez ?", english: "What are you (pl.) eating?", portuguese: "O que estais a comer?" },
+              { lari: "Nki ba ta dia?", mandombe: "Nki ba ta dia?", french: "Qu'est-ce qu'ils mangent ?", english: "What are they eating?", portuguese: "O que estão a comer?" },
+            ],
+          },
+          {
+            title: "Key rule: NKI meaning depends on verb form",
+            titleFr: "Règle clé : Le sens de NKI dépend de la forme du verbe",
+            titlePt: "Regra chave: O significado de NKI depende da forma do verbo",
+            examples: [
+              { lari: "Nki ta dila?", mandombe: "Nki ta dila?", french: "Pourquoi tu manges ? (DILA = forme progressive de DIA, /i/ long)", english: "Why are you eating? (DILA = progressive form of DIA, long /i/)", portuguese: "Por que comes? (DILA = forma progressiva de DIA, /i/ longo)" },
+              { lari: "Nki ta dia?", mandombe: "Nki ta dia?", french: "Qu'est-ce que tu manges ? (DIA = infinitif)", english: "What are you eating? (DIA = infinitive)", portuguese: "O que comes? (DIA = infinitivo)" },
+            ],
+          },
+        ],
+      },
+      {
+        title: "Present progressive of DILA (to cry)",
+        titleFr: "Présent progressif de DILA (pleurer)",
+        titlePt: "Presente progressivo de DILA (chorar)",
+        pattern: "Dila + pronom sujet + ta + dila",
+        groups: [
+          {
+            title: "Full conjugation",
+            titleFr: "Conjugaison complète",
+            titlePt: "Conjugação completa",
+            examples: [
+              { lari: "Dila ni ta dila", mandombe: "Dila ni ta dila", french: "Je suis en train de pleurer", english: "I am crying", portuguese: "Estou a chorar" },
+              { lari: "Dila ta dila", mandombe: "Dila ta dila", french: "Tu es en train de pleurer", english: "You are crying", portuguese: "Estás a chorar" },
+              { lari: "Dila ka ta dila", mandombe: "Dila ka ta dila", french: "Il/elle est en train de pleurer", english: "He/she is crying", portuguese: "Ele/ela está a chorar" },
+              { lari: "Dila tu ta dila", mandombe: "Dila tu ta dila", french: "Nous sommes en train de pleurer", english: "We are crying", portuguese: "Estamos a chorar" },
+              { lari: "Dila lu ta dila", mandombe: "Dila lu ta dila", french: "Vous êtes en train de pleurer", english: "You (pl.) are crying", portuguese: "Estais a chorar" },
+              { lari: "Dila ba ta dila", mandombe: "Dila ba ta dila", french: "Ils sont en train de pleurer", english: "They are crying", portuguese: "Estão a chorar" },
+            ],
+          },
+        ],
+      },
+      {
+        title: "KUE — Where",
+        titleFr: "KUE — Où",
+        titlePt: "KUE — Onde",
+        pattern: "Kue + (sujet / verbe) ?",
+        groups: [
+          {
+            title: "KUE with implicit context",
+            titleFr: "KUE avec contexte implicite",
+            titlePt: "KUE com contexto implícito",
+            examples: [
+              { lari: "Kue ta kuenda?", mandombe: "Kue ta kuenda?", french: "Où vas-tu ?", english: "Where are you going?", portuguese: "Onde vais?" },
+              { lari: "Kue ke(na)?", mandombe: "Kue ke(na)?", french: "Où est-elle ?", english: "Where is she?", portuguese: "Onde está ela?" },
+              { lari: "Kue kotela (ka)?", mandombe: "Kue kotela (ka)?", french: "Où vas-tu à l'école ?", english: "Where do you go to school?", portuguese: "Onde vais à escola?" },
+              { lari: "Kue ka?", mandombe: "Kue ka?", french: "Où va-t-elle ?", english: "Where is she going?", portuguese: "Onde vai ela?" },
+              { lari: "Kue ba?", mandombe: "Kue ba?", french: "Où vont-elles ?", english: "Where are they going?", portuguese: "Onde vão elas?" },
+              { lari: "Kue lu?", mandombe: "Kue lu?", french: "Où allez-vous ?", english: "Where are you (pl.) going?", portuguese: "Onde ides?" },
+            ],
+          },
+          {
+            title: "KUE with NZO MIKANDA (school)",
+            titleFr: "KUE avec NZO MIKANDA (école)",
+            titlePt: "KUE com NZO MIKANDA (escola)",
+            examples: [
+              { lari: "Nzo mikanda aku kue ye(na)?", mandombe: "Nzo mikanda aku kue ye(na)?", french: "Où vas-tu à l'école ?", english: "Where do you go to school?", portuguese: "Onde vais à escola?" },
+              { lari: "Nzo mikanda andi kue ye(na)?", mandombe: "Nzo mikanda andi kue ye(na)?", french: "Où va-t-elle à l'école ?", english: "Where does she go to school?", portuguese: "Onde vai ela à escola?" },
+              { lari: "Nzo mikanda eno kue ye(na)?", mandombe: "Nzo mikanda eno kue ye(na)?", french: "Où allez-vous à l'école ?", english: "Where do you (pl.) go to school?", portuguese: "Onde ides à escola?" },
+              { lari: "Nzo mikanda awu kue ye(na)?", mandombe: "Nzo mikanda awu kue ye(na)?", french: "Où vont-ils à l'école ?", english: "Where do they go to school?", portuguese: "Onde vão eles à escola?" },
+            ],
+          },
+        ],
+      },
+      {
+        title: "MU NKIA BUNGU — For what reason",
+        titleFr: "MU NKIA BUNGU — Pour quelle raison",
+        titlePt: "MU NKIA BUNGU — Por que razão",
+        pattern: "Nkia bungu + verbe ?",
+        groups: [
+          {
+            title: "Example",
+            titleFr: "Exemple",
+            titlePt: "Exemplo",
+            examples: [
+              { lari: "Nkia bungu lembolo kuijila?", mandombe: "Nkia bungu lembolo kuijila?", french: "Pour quelle raison n'es-tu pas venu ?", english: "For what reason didn't you come?", portuguese: "Por que razão não vieste?" },
+            ],
+          },
+        ],
+      },
+    ],
+    exercises: [
+      // ── Multiple choice ──
+      {
+        type: "multiple-choice",
+        question: "What does 'Bue ka tele?' mean?",
+        questionFr: "Que signifie « Bue ka tele ? » ?",
+        questionPt: "O que significa « Bue ka tele? »?",
+        options: ["Where is she?", "What did she say?", "Why is she crying?", "What is she eating?"],
+        optionsFr: ["Où est-elle ?", "Qu'a-t-elle dit ?", "Pourquoi pleure-t-elle ?", "Qu'est-ce qu'elle mange ?"],
+        optionsPt: ["Onde está ela?", "O que disse ela?", "Por que está ela a chorar?", "O que está ela a comer?"],
+        correctIndex: 1,
+        explanation: "'Bue' combined with 'tele' (said) asks 'What did...say?'. 'Ka' is the 3rd person pronoun.",
+        explanationFr: "« Bue » combiné avec « tele » (dire au passé) pose la question « Qu'a-t-il/elle dit ? ». « Ka » est le pronom de la 3e personne.",
+        explanationPt: "« Bue » combinado com « tele » (dizer no passado) pergunta « O que disse ele/ela? ». « Ka » é o pronome da 3ª pessoa.",
+      },
+      {
+        type: "multiple-choice",
+        question: "In 'Nki ta dia?', what does NKI mean?",
+        questionFr: "Dans « Nki ta dia ? », que signifie NKI ?",
+        questionPt: "Em « Nki ta dia? », o que significa NKI?",
+        options: ["Why", "Where", "What", "Who"],
+        optionsFr: ["Pourquoi", "Où", "Qu'est-ce que", "Qui"],
+        optionsPt: ["Porquê", "Onde", "O que é que", "Quem"],
+        correctIndex: 2,
+        explanation: "When NKI is followed by a verb in its infinitive form (DIA), it means 'What?' (Qu'est-ce que). When followed by the progressive form (DILA), it means 'Why?'.",
+        explanationFr: "Lorsque NKI est suivi d'un verbe à l'infinitif (DIA), il signifie « Qu'est-ce que ? ». Lorsqu'il est suivi de la forme progressive (DILA), il signifie « Pourquoi ? ».",
+        explanationPt: "Quando NKI é seguido de um verbo no infinitivo (DIA), significa « O que é que? ». Quando seguido da forma progressiva (DILA), significa « Porquê? ».",
+      },
+      {
+        type: "multiple-choice",
+        question: "In 'Nki ta dila?', what does NKI mean?",
+        questionFr: "Dans « Nki ta dila ? », que signifie NKI ?",
+        questionPt: "Em « Nki ta dila? », o que significa NKI?",
+        options: ["What", "Where", "Why", "When"],
+        optionsFr: ["Qu'est-ce que", "Où", "Pourquoi", "Quand"],
+        optionsPt: ["O que é que", "Onde", "Porquê", "Quando"],
+        correctIndex: 2,
+        explanation: "DILA here is the progressive interrogative form (of either DILA/to cry or DIA/to eat with long /i/). With this verb form, NKI means 'Why?'.",
+        explanationFr: "DILA ici est la forme progressive interrogative (de DILA/pleurer ou DIA/manger avec /i/ long). Avec cette forme verbale, NKI signifie « Pourquoi ? ».",
+        explanationPt: "DILA aqui é a forma progressiva interrogativa (de DILA/chorar ou DIA/comer com /i/ longo). Com esta forma verbal, NKI significa « Porquê? ».",
+      },
+      {
+        type: "multiple-choice",
+        question: "What does 'Kue ta kuenda?' mean?",
+        questionFr: "Que signifie « Kue ta kuenda ? » ?",
+        questionPt: "O que significa « Kue ta kuenda? »?",
+        options: ["What are you doing?", "Why are you leaving?", "Where are you going?", "Who is coming?"],
+        optionsFr: ["Que fais-tu ?", "Pourquoi pars-tu ?", "Où vas-tu ?", "Qui vient ?"],
+        optionsPt: ["O que fazes?", "Por que partes?", "Onde vais?", "Quem vem?"],
+        correctIndex: 2,
+        explanation: "'Kue' means 'where'. Combined with 'ta kuenda' (are going), it asks 'Where are you going?'.",
+        explanationFr: "« Kue » signifie « où ». Combiné avec « ta kuenda » (être en train d'aller), la question est « Où vas-tu ? ».",
+        explanationPt: "« Kue » significa « onde ». Combinado com « ta kuenda » (estar a ir), a pergunta é « Onde vais? ».",
+      },
+      // ── Matching ──
+      {
+        type: "matching",
+        instruction: "Match the interrogative words to their meanings.",
+        instructionFr: "Associez les mots interrogatifs à leur signification.",
+        instructionPt: "Associe as palavras interrogativas ao seu significado.",
+        pairs: [
+          { left: "Bue", right: "What did...say?", rightFr: "Qu'a-t-il dit ?", rightPt: "O que disse?" },
+          { left: "Nki (+ infinitif)", right: "What?", rightFr: "Qu'est-ce que ?", rightPt: "O que é que?" },
+          { left: "Nki (+ progressif)", right: "Why?", rightFr: "Pourquoi ?", rightPt: "Porquê?" },
+          { left: "Kue", right: "Where?", rightFr: "Où ?", rightPt: "Onde?" },
+          { left: "Mu nkia bungu", right: "For what reason?", rightFr: "Pour quelle raison ?", rightPt: "Por que razão?" },
+        ],
+      },
+      {
+        type: "matching",
+        instruction: "Match the Kikongo Lari questions to their French translations.",
+        instructionFr: "Associez les questions Kikongo Lari à leur traduction française.",
+        instructionPt: "Associe as perguntas Kikongo Lari à sua tradução em francês.",
+        pairs: [
+          { left: "Bue tele?", right: "What did you say?", rightFr: "Qu'as-tu dit ?", rightPt: "O que disseste?" },
+          { left: "Nki ta dirila?", right: "Why are you crying?", rightFr: "Pourquoi tu pleures ?", rightPt: "Por que estás a chorar?" },
+          { left: "Nki ta dia?", right: "What are you eating?", rightFr: "Qu'est-ce que tu manges ?", rightPt: "O que estás a comer?" },
+          { left: "Kue ta kuenda?", right: "Where are you going?", rightFr: "Où vas-tu ?", rightPt: "Onde vais?" },
+          { left: "Kue ke(na)?", right: "Where is she?", rightFr: "Où est-elle ?", rightPt: "Onde está ela?" },
+        ],
+      },
+      // ── Fill-in-blank ──
+      {
+        type: "fill-in-blank",
+        sentence: "___ ka tele? = What did she say?",
+        sentenceFr: "___ ka tele ? = Qu'a-t-elle dit ?",
+        sentencePt: "___ ka tele? = O que disse ela?",
+        blank: "bue",
+        hint: "The interrogative word meaning 'what did...say'",
+        hintFr: "Le mot interrogatif signifiant « qu'a-t-il dit »",
+        hintPt: "A palavra interrogativa que significa « o que disse »",
+      },
+      {
+        type: "fill-in-blank",
+        sentence: "___ ta kuenda? = Where are you going?",
+        sentenceFr: "___ ta kuenda ? = Où vas-tu ?",
+        sentencePt: "___ ta kuenda? = Onde vais?",
+        blank: "kue",
+        hint: "The interrogative word for 'where'",
+        hintFr: "Le mot interrogatif pour « où »",
+        hintPt: "A palavra interrogativa para « onde »",
+      },
+      {
+        type: "fill-in-blank",
+        sentence: "___ ta dirila? = Why are you crying?",
+        sentenceFr: "___ ta dirila ? = Pourquoi tu pleures ?",
+        sentencePt: "___ ta dirila? = Por que estás a chorar?",
+        blank: "nki",
+        hint: "When followed by a progressive verb form, this word means 'why'",
+        hintFr: "Suivi d'une forme verbale progressive, ce mot signifie « pourquoi »",
+        hintPt: "Seguido de uma forma verbal progressiva, esta palavra significa « porquê »",
+      },
+      // ── Crossword ──
+      // Grid 6x6
+      // KOTA across (0,0): K(0,0) O(0,1) T(0,2) A(0,3)
+      // KUE across (1,0): K(1,0) U(1,1) E(1,2)
+      // DILA across (2,0): D(2,0) I(2,1) L(2,2) A(2,3)
+      // BUE across (3,0): B(3,0) U(3,1) E(3,2)
+      // TELE down col 2 (0-3): T(0,2) E(1,2) L(2,2) E(3,2) — shares T with KOTA ✓, E with KUE ✓, L with DILA ✓, E with BUE ✓
+      {
+        type: "crossword",
+        title: "Crossword — Interrogative Words",
+        titleFr: "Mots croisés — Mots interrogatifs",
+        titlePt: "Palavras cruzadas — Palavras interrogativas",
+        gridSize: 6,
+        clues: [
+          { answer: "KOTA", clue: "To enter", clueFr: "Entrer", cluePt: "Entrar", row: 0, col: 0, direction: "across" },
+          { answer: "KUE", clue: "Where?", clueFr: "Où ?", cluePt: "Onde?", row: 1, col: 0, direction: "across" },
+          { answer: "DILA", clue: "To cry", clueFr: "Pleurer", cluePt: "Chorar", row: 2, col: 0, direction: "across" },
+          { answer: "BUE", clue: "What did...say?", clueFr: "Qu'a-t-il dit ?", cluePt: "O que disse?", row: 3, col: 0, direction: "across" },
+          { answer: "TELE", clue: "Said (past tense)", clueFr: "Dire (au passé)", cluePt: "Disse (passado)", row: 0, col: 2, direction: "down" },
+        ],
+      },
+      // ── Word Search ──
+      // Grid 10x10
+      // BUE across (0,0): B(0,0) U(0,1) E(0,2)
+      // NKI across (1,5): N(1,5) K(1,6) I(1,7)
+      // KUE down (2,9): K(2,9) U(3,9) E(4,9)
+      // DILA across (3,3): D(3,3) I(3,4) L(3,5) A(3,6)
+      // KOTA down (5,1): K(5,1) O(6,1) T(7,1) A(8,1)
+      // BUNGU across (6,4): B(6,4) U(6,5) N(6,6) G(6,7) U(6,8)
+      // TELE down (6,3): T(6,3) E(7,3) L(8,3) E(9,3)
+      {
+        type: "word-search",
+        title: "Word Search — Interrogative Words",
+        titleFr: "Mots masqués — Mots interrogatifs",
+        titlePt: "Caça-palavras — Palavras interrogativas",
+        gridSize: 10,
+        words: [
+          { word: "BUE", clue: "What did...say?", clueFr: "Qu'a-t-il dit ?", cluePt: "O que disse?", row: 0, col: 0, direction: "across" },
+          { word: "NKI", clue: "Why / What?", clueFr: "Pourquoi / Qu'est-ce que ?", cluePt: "Porquê / O que é que?", row: 1, col: 5, direction: "across" },
+          { word: "KUE", clue: "Where?", clueFr: "Où ?", cluePt: "Onde?", row: 2, col: 9, direction: "down" },
+          { word: "DILA", clue: "To cry", clueFr: "Pleurer", cluePt: "Chorar", row: 3, col: 3, direction: "across" },
+          { word: "KOTA", clue: "To enter", clueFr: "Entrer", cluePt: "Entrar", row: 5, col: 1, direction: "down" },
+          { word: "BUNGU", clue: "Reason, motive", clueFr: "Raison, motif", cluePt: "Razão, motivo", row: 6, col: 4, direction: "across" },
+          { word: "TELE", clue: "Said (past tense)", clueFr: "Dire (au passé)", cluePt: "Disse (passado)", row: 6, col: 3, direction: "down" },
+        ],
+        fillerLetters: "NTALDSEMGKZBMNYOGALKTBADSNKULMSNETOGBLNDASTEUMKGDAONBLDSANMETSBUKOALNKDGEZMAOYSTNBLEIDUMKTNGAS",
+      },
+    ],
+  },
 ];
