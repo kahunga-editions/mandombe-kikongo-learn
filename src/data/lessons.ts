@@ -3335,6 +3335,51 @@ export const lessons: Lesson[] = [
         options: ["A drum", "Matches / matchbox", "A river", "A basket"],
         correctIndex: 1,
       },
+      // ── Crossword: Fi- / Fu- Verbs ──
+      // Grid 9x9
+      // FUSA across (1,3): F(1,3) U(1,4) S(1,5) A(1,6)
+      // FILA down col 3 (1-4): F(1,3) I(2,3) L(3,3) A(4,3) — shares F at (1,3) ✓
+      // FUILA across (2,1): F(2,1) U(2,2) I(2,3) L(2,4) A(2,5) — shares I at (2,3) with FILA ✓
+      // FUTA across (4,0): F(4,0) U(4,1) T(4,2) A(4,3) — shares A at (4,3) with FILA ✓
+      // FIOTI down col 0 (4-8): F(4,0) I(5,0) O(6,0) T(7,0) I(8,0) — shares F at (4,0) with FUTA ✓
+      {
+        type: "crossword",
+        title: "Crossword — Fi- & Fu- Verbs",
+        titleFr: "Mots croisés — Verbes Fi- & Fu-",
+        titlePt: "Palavras cruzadas — Verbos Fi- & Fu-",
+        gridSize: 9,
+        clues: [
+          { answer: "FUSA", clue: "To dig out, to go mouldy", clueFr: "Extraire en creusant, moisir", cluePt: "Extrair cavando, mofar", row: 1, col: 3, direction: "across" },
+          { answer: "FILA", clue: "To lead, to escort", clueFr: "Conduire, mener, escorter", cluePt: "Conduzir, levar, escoltar", row: 1, col: 3, direction: "down" },
+          { answer: "FUILA", clue: "Desire, thirst for, need", clueFr: "Désir, soif de, besoin", cluePt: "Desejo, sede de, necessidade", row: 2, col: 1, direction: "across" },
+          { answer: "FUTA", clue: "To pay, reimburse", clueFr: "Payer, rembourser", cluePt: "Pagar, reembolsar", row: 4, col: 0, direction: "across" },
+          { answer: "FIOTI", clue: "Small, little", clueFr: "Petit, peu", cluePt: "Pequeno, pouco", row: 4, col: 0, direction: "down" },
+        ],
+      },
+      // ── Word Search: Fi- / Fu- Verbs ──
+      // Grid 10x10
+      // FUTA across (0,0): F(0,0) U(0,1) T(0,2) A(0,3)
+      // FILA across (2,5): F(2,5) I(2,6) L(2,7) A(2,8)
+      // FUSA down (4,0): F(4,0) U(5,0) S(6,0) A(7,0)
+      // FIOTI down (1,9): F(1,9) I(2,9) O(3,9) T(4,9) I(5,9)
+      // FUEMBA across (8,2): F(8,2) U(8,3) E(8,4) M(8,5) B(8,6) A(8,7)
+      // FUTUKA across (6,3): F(6,3) U(6,4) T(6,5) U(6,6) K(6,7) A(6,8)
+      {
+        type: "word-search",
+        title: "Word Search — Fi- & Fu- Verbs",
+        titleFr: "Mots masqués — Verbes Fi- & Fu-",
+        titlePt: "Caça-palavras — Verbos Fi- & Fu-",
+        gridSize: 10,
+        words: [
+          { word: "FUTA", clue: "To pay, reimburse", clueFr: "Payer, rembourser", cluePt: "Pagar, reembolsar", row: 0, col: 0, direction: "across" },
+          { word: "FILA", clue: "To lead, to escort", clueFr: "Conduire, escorter", cluePt: "Conduzir, escoltar", row: 2, col: 5, direction: "across" },
+          { word: "FUSA", clue: "To dig out, to go mouldy", clueFr: "Extraire en creusant, moisir", cluePt: "Extrair cavando, mofar", row: 4, col: 0, direction: "down" },
+          { word: "FIOTI", clue: "Small, little", clueFr: "Petit, peu", cluePt: "Pequeno, pouco", row: 1, col: 9, direction: "down" },
+          { word: "FUEMBA", clue: "To blow one's nose", clueFr: "Se moucher", cluePt: "Assoar-se", row: 8, col: 2, direction: "across" },
+          { word: "FUTUKA", clue: "To swell, to inflate", clueFr: "S'enfler, se gonfler", cluePt: "Inchar, inflar", row: 6, col: 3, direction: "across" },
+        ],
+        fillerLetters: "BTKANLDSEMZNYOAGKLBTDSAKUNMSENGTOLANDNASETUKMDAONDBLANMTESBKUOALNKDGEZMAOYTSBNLIEUDMKNGTAS",
+      },
     ],
   },
 
@@ -11144,6 +11189,50 @@ export const lessons: Lesson[] = [
       { lari: "N'kolo / Mukolo", mandombe: "N'kolo / Mukolo", french: "La fatigue", english: "Fatigue, tiredness", portuguese: "A fadiga, o cansaço" },
     ],
     phrases: [],
-    exercises: [],
+    exercises: [
+      // ── Crossword: Fu- & Fi- Dictionary ──
+      // Grid 8x8
+      // FINGA across (2,2): F(2,2) I(2,3) N(2,4) G(2,5) A(2,6)
+      // FUNDA down col 4 (0-4): F(0,4) U(1,4) N(2,4) D(3,4) A(4,4) — shares N at (2,4) ✓
+      // FUMPA across (4,0): F(4,0) U(4,1) M(4,2) P(4,3) A(4,4) — shares A at (4,4) with FUNDA ✓
+      // FUMU down col 0 (4-7): F(4,0) U(5,0) M(6,0) U(7,0) — shares F at (4,0) with FUMPA ✓
+      {
+        type: "crossword",
+        title: "Crossword — Fu- & Fi- Vocabulary",
+        titleFr: "Mots croisés — Vocabulaire Fu- & Fi-",
+        titlePt: "Palavras cruzadas — Vocabulário Fu- & Fi-",
+        gridSize: 8,
+        clues: [
+          { answer: "FINGA", clue: "To insult", clueFr: "Injurier", cluePt: "Insultar", row: 2, col: 2, direction: "across" },
+          { answer: "FUNDA", clue: "A package, a parcel", clueFr: "Un paquet", cluePt: "Um pacote", row: 0, col: 4, direction: "down" },
+          { answer: "FUMPA", clue: "To overflow when boiling", clueFr: "Déborder quand ça bout", cluePt: "Transbordar ao ferver", row: 4, col: 0, direction: "across" },
+          { answer: "FUMU", clue: "Tobacco", clueFr: "Tabac", cluePt: "Tabaco", row: 4, col: 0, direction: "down" },
+        ],
+      },
+      // ── Word Search: Fu- & Fi- Dictionary ──
+      // Grid 10x10
+      // FINGA across (0,1): F(0,1) I(0,2) N(0,3) G(0,4) A(0,5)
+      // FUNDA down (3,0): F(3,0) U(4,0) N(5,0) D(6,0) A(7,0)
+      // FUMPA across (9,0): F(9,0) U(9,1) M(9,2) P(9,3) A(9,4)
+      // FUMU down (1,8): F(1,8) U(2,8) M(3,8) U(4,8)
+      // FIDILA across (6,2): F(6,2) I(6,3) D(6,4) I(6,5) L(6,6) A(6,7)
+      // FISUKA down (0,7): F(0,7) I(1,7) S(2,7) U(3,7) K(4,7) A(5,7)
+      {
+        type: "word-search",
+        title: "Word Search — Fu- & Fi- Vocabulary",
+        titleFr: "Mots masqués — Vocabulaire Fu- & Fi-",
+        titlePt: "Caça-palavras — Vocabulário Fu- & Fi-",
+        gridSize: 10,
+        words: [
+          { word: "FINGA", clue: "To insult", clueFr: "Injurier", cluePt: "Insultar", row: 0, col: 1, direction: "across" },
+          { word: "FUNDA", clue: "A package, a parcel", clueFr: "Un paquet", cluePt: "Um pacote", row: 3, col: 0, direction: "down" },
+          { word: "FUMPA", clue: "To overflow when boiling", clueFr: "Déborder quand ça bout", cluePt: "Transbordar ao ferver", row: 9, col: 0, direction: "across" },
+          { word: "FUMU", clue: "Tobacco", clueFr: "Tabac", cluePt: "Tabaco", row: 1, col: 8, direction: "down" },
+          { word: "FIDILA", clue: "To lead, to drive", clueFr: "Mener, conduire", cluePt: "Conduzir, levar", row: 6, col: 2, direction: "across" },
+          { word: "FISUKA", clue: "To twist, to sprain", clueFr: "Se tordre, se fouler", cluePt: "Torcer, entorsar", row: 0, col: 7, direction: "down" },
+        ],
+        fillerLetters: "MKDLANTSBEGNZOALKTBDSNAKLUMSENTGOBLNDAESTUKMGAONDBLSANMTESBOKUALNKDGEZMAOYTSNBLEIDUMKGNTASLZ",
+      },
+    ],
   },
 ];
