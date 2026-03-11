@@ -3941,7 +3941,7 @@ export const lessons: Lesson[] = [
       { lari: "Nsila", mandombe: "Nsila", french: "Lundi", english: "Monday" },
       { lari: "Misila", mandombe: "Misila", french: "Mardi", english: "Tuesday" },
       { lari: "Mpika", mandombe: "Mpika", french: "Mercredi", english: "Wednesday" },
-      { lari: "Nkoiyi", mandombe: "Nkoiyi", french: "Jeudi", english: "Thursday" },
+      { lari: "Nkoyi", mandombe: "Nkoyi", french: "Jeudi", english: "Thursday" },
       { lari: "Bukonzo", mandombe: "Bukonzo", french: "Vendredi", english: "Friday" },
       { lari: "Sabala", mandombe: "Sabala", french: "Samedi", english: "Saturday" },
       { lari: "Mpimpa", mandombe: "Mpimpa", french: "La nuit", english: "The night" },
