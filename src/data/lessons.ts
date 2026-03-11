@@ -11117,7 +11117,7 @@ export const lessons: Lesson[] = [
       { lari: "Kobo", mandombe: "Kobo", french: "Lourd, épais", english: "Heavy, thick", portuguese: "Pesado, espesso" },
       { lari: "Koka", mandombe: "Koka", french: "Tirer, traîner", english: "To pull, to drag", portuguese: "Puxar, arrastar" },
       { lari: "Kokoto", mandombe: "Kokoto", french: "Être solide, dur", english: "To be solid, hard", portuguese: "Ser sólido, duro" },
-      { lari: "Mfunia", mandombe: "Mfunia", french: "Méchanceté, cruauté", english: "Wickedness, cruelty", portuguese: "Maldade, crueldade" },
+      { lari: "Bumfunia", mandombe: "Bumfunia", french: "Méchanceté, cruauté", english: "Wickedness, cruelty", portuguese: "Maldade, crueldade" },
       { lari: "Mona tiya", mandombe: "Mona tiya", french: "Avoir chaud", english: "To feel hot", portuguese: "Ter calor" },
       { lari: "Mona tioji", mandombe: "Mona tioji", french: "Avoir froid", english: "To feel cold", portuguese: "Ter frio" },
       { lari: "Mona mpashi", mandombe: "Mona mpashi", french: "Souffrir, avoir mal", english: "To suffer, to feel pain", portuguese: "Sofrer, ter dor" },
