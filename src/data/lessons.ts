@@ -11608,34 +11608,32 @@ export const lessons: Lesson[] = [
         title: "Crossword — Interrogative Words",
         titleFr: "Mots croisés — Mots interrogatifs",
         titlePt: "Palavras cruzadas — Palavras interrogativas",
-        gridSize: 7,
-        // Proper criss-cross layout 7×7 — 6 genuine intersections:
+        gridSize: 9,
+        // True criss-cross — every adjacent cell pair belongs to the same word.
+        // No fake horizontal/vertical readings.
         //
-        //      0  1  2  3  4  5  6
-        //  0:  .  .  K  .  .  .  .        ↓KUE
-        //  1:  .  B→ U  N  G  U  .        →BUNGU  (↓BUE at B, ↓KUE at U, ↓NKI at N)
-        //  2:  .  U  E  K→ O  T  A        →KOTA   (↓NKI at K, ↓TELE at T)
-        //  3:  .  E  .  I  .  E  .        ↓BUE E, ↓NKI I, ↓TELE E
-        //  4:  .  .  .  D→ I  L  A        →DILA   (↓TELE at L)
-        //  5:  .  .  .  .  .  E  .        ↓TELE E
+        //      0  1  2  3  4  5  6  7  8
+        //  0:  .  .  .  .  .  .  .  .  K     ↓KUE
+        //  1:  N→ K  I  .  B→ U  N  G  U     →NKI (1,0)  →BUNGU (1,4)
+        //  2:  .  O  .  .  U  .  .  .  E     ↓KOTA        ↓BUE        ↓KUE
+        //  3:  .  T→ E  L  E  .  .  .  .     →TELE (3,1)
+        //  4:  .  A  .  .  .  .  .  .  .     ↓KOTA end
         //
-        // Intersections:
-        //   (1,1) BUNGU[0]=B ↔ BUE[0]=B ✓
-        //   (1,2) BUNGU[1]=U ↔ KUE[1]=U ✓
-        //   (1,3) BUNGU[2]=N ↔ NKI[0]=N ✓
-        //   (2,3) KOTA[0]=K  ↔ NKI[1]=K ✓
-        //   (2,5) KOTA[2]=T  ↔ TELE[0]=T ✓
-        //   (4,5) DILA[2]=L  ↔ TELE[2]=L ✓
+        // Intersections (5):
+        //   (1,1) NKI[1]=K   ↔ KOTA[0]=K ✓
+        //   (1,4) BUNGU[0]=B ↔ BUE[0]=B  ✓
+        //   (1,8) BUNGU[4]=U ↔ KUE[1]=U  ✓
+        //   (3,1) KOTA[2]=T  ↔ TELE[0]=T ✓
+        //   (3,4) BUE[2]=E   ↔ TELE[3]=E ✓
         clues: [
           // Across
-          { answer: "BUNGU", clue: "Reason, motive", clueFr: "Raison, motif", cluePt: "Razão, motivo", row: 1, col: 1, direction: "across" },
-          { answer: "KOTA", clue: "To enter", clueFr: "Entrer", cluePt: "Entrar", row: 2, col: 3, direction: "across" },
-          { answer: "DILA", clue: "To cry", clueFr: "Pleurer", cluePt: "Chorar", row: 4, col: 3, direction: "across" },
+          { answer: "NKI", clue: "Why / What?", clueFr: "Pourquoi / Qu'est-ce que ?", cluePt: "Porquê / O que é que?", row: 1, col: 0, direction: "across" },
+          { answer: "BUNGU", clue: "Reason, motive", clueFr: "Raison, motif", cluePt: "Razão, motivo", row: 1, col: 4, direction: "across" },
+          { answer: "TELE", clue: "Said (past tense)", clueFr: "Dire (au passé)", cluePt: "Disse (passado)", row: 3, col: 1, direction: "across" },
           // Down
-          { answer: "KUE", clue: "Where?", clueFr: "Où ?", cluePt: "Onde?", row: 0, col: 2, direction: "down" },
-          { answer: "BUE", clue: "What? How?", clueFr: "Qu'est-ce que, comment", cluePt: "O quê? Como?", row: 1, col: 1, direction: "down" },
-          { answer: "NKI", clue: "Why / What?", clueFr: "Pourquoi / Qu'est-ce que ?", cluePt: "Porquê / O que é que?", row: 1, col: 3, direction: "down" },
-          { answer: "TELE", clue: "Said (past tense)", clueFr: "Dire (au passé)", cluePt: "Disse (passado)", row: 2, col: 5, direction: "down" },
+          { answer: "KOTA", clue: "To enter", clueFr: "Entrer", cluePt: "Entrar", row: 1, col: 1, direction: "down" },
+          { answer: "BUE", clue: "What? How?", clueFr: "Qu'est-ce que, comment", cluePt: "O quê? Como?", row: 1, col: 4, direction: "down" },
+          { answer: "KUE", clue: "Where?", clueFr: "Où ?", cluePt: "Onde?", row: 0, col: 8, direction: "down" },
         ],
       },
       // ── Word Search 10×10 ──
