@@ -11321,6 +11321,9 @@ export const lessons: Lesson[] = [
         title: "BUE — What did...say?",
         titleFr: "BUE — Qu'a-t-il dit ?",
         titlePt: "BUE — O que disse?",
+        description: "Use BUE with TELE (said) to ask what someone said. The subject pronoun goes between BUE and TELE.",
+        descriptionFr: "Utilisez BUE avec TELE (dire au passé) pour demander ce que quelqu'un a dit. Le pronom sujet se place entre BUE et TELE.",
+        descriptionPt: "Use BUE com TELE (disse) para perguntar o que alguém disse. O pronome sujeito vai entre BUE e TELE.",
         pattern: "Bue + pronom sujet + tele ?",
         groups: [
           {
