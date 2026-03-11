@@ -11003,14 +11003,13 @@ export const lessons: Lesson[] = [
         titleFr: "Mots croisés — La fatigue et le vocabulaire",
         titlePt: "Palavras cruzadas — Fadiga e vocabulário",
         gridSize: 9,
-        words: [
-          { word: "NKOLO", clue: "Fatigue, tiredness", clueFr: "La fatigue", cluePt: "A fadiga", row: 0, col: 0, direction: "across" },
-          { word: "NANI", clue: "Pronoun suffix: I / me", clueFr: "Suffixe pronominal : je / moi", cluePt: "Sufixo pronominal: eu", row: 0, col: 0, direction: "down" },
-          { word: "NAKU", clue: "Pronoun suffix: you (singular)", clueFr: "Suffixe pronominal : tu / toi", cluePt: "Sufixo pronominal: tu", row: 2, col: 1, direction: "across" },
-          { word: "NETO", clue: "Pronoun suffix: we / us", clueFr: "Suffixe pronominal : nous", cluePt: "Sufixo pronominal: nós", row: 0, col: 4, direction: "down" },
-          { word: "NAWU", clue: "Pronoun suffix: they / them", clueFr: "Suffixe pronominal : ils / elles", cluePt: "Sufixo pronominal: eles/elas", row: 4, col: 0, direction: "across" },
-          { word: "MPUNGI", clue: "A horn, a trumpet", clueFr: "Un klaxon, une trompette", cluePt: "Uma buzina, uma trombeta", row: 2, col: 5, direction: "down" },
-          { word: "NANDI", clue: "Pronoun suffix: he / she", clueFr: "Suffixe pronominal : il / elle", cluePt: "Sufixo pronominal: ele/ela", row: 0, col: 0, direction: "across" },
+        clues: [
+          { answer: "NKOLO", clue: "Fatigue, tiredness", clueFr: "La fatigue", cluePt: "A fadiga", row: 0, col: 0, direction: "across" },
+          { answer: "NANI", clue: "Pronoun suffix: I / me", clueFr: "Suffixe pronominal : je / moi", cluePt: "Sufixo pronominal: eu", row: 0, col: 0, direction: "down" },
+          { answer: "NAKU", clue: "Pronoun suffix: you (singular)", clueFr: "Suffixe pronominal : tu / toi", cluePt: "Sufixo pronominal: tu", row: 2, col: 1, direction: "across" },
+          { answer: "NETO", clue: "Pronoun suffix: we / us", clueFr: "Suffixe pronominal : nous", cluePt: "Sufixo pronominal: nós", row: 0, col: 4, direction: "down" },
+          { answer: "NAWU", clue: "Pronoun suffix: they / them", clueFr: "Suffixe pronominal : ils / elles", cluePt: "Sufixo pronominal: eles/elas", row: 4, col: 0, direction: "across" },
+          { answer: "MPUNGI", clue: "A horn, a trumpet", clueFr: "Un klaxon, une trompette", cluePt: "Uma buzina, uma trombeta", row: 2, col: 5, direction: "down" },
         ],
       },
       {
