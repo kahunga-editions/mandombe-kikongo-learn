@@ -4007,7 +4007,7 @@ export const lessons: Lesson[] = [
           { left: "Lumingu", right: "Sunday" },
           { left: "Nsila", right: "Monday" },
           { left: "Mpika", right: "Wednesday" },
-          { left: "Nkoiyi", right: "Thursday" },
+          { left: "Nkoyi", right: "Thursday" },
           { left: "Sabala", right: "Saturday" },
         ],
       },
