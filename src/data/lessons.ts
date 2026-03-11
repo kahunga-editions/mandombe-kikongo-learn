@@ -11076,6 +11076,8 @@ export const lessons: Lesson[] = [
       { lari: "Ndoyi", mandombe: "Ndoyi", french: "Un homonyme", english: "A namesake", portuguese: "Um homônimo" },
       { lari: "Nani?", mandombe: "Nani?", french: "Qui ?", english: "Who?", portuguese: "Quem?" },
       { lari: "Nena", mandombe: "Nena", french: "Déféquer, faire caca, aller à la selle", english: "To defecate", portuguese: "Defecar" },
+      { lari: "Mpungi", mandombe: "Mpungi", french: "Un klaxon, une trompette", english: "A horn, a trumpet", portuguese: "Uma buzina, uma trombeta" },
+      { lari: "N'kolo / Mukolo", mandombe: "N'kolo / Mukolo", french: "La fatigue", english: "Fatigue, tiredness", portuguese: "A fadiga, o cansaço" },
     ],
     phrases: [],
     exercises: [],
