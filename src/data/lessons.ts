@@ -11538,7 +11538,7 @@ export const lessons: Lesson[] = [
         instructionFr: "Associez les mots interrogatifs à leur signification.",
         instructionPt: "Associe as palavras interrogativas ao seu significado.",
         pairs: [
-          { left: "Bue", right: "What did...say?", rightFr: "Qu'a-t-il dit ?", rightPt: "O que disse?" },
+          { left: "Bue", right: "What did...say?", rightFr: "Qu'est-ce que ?", rightPt: "O que disse?" },
           { left: "Nki (+ infinitif)", right: "What?", rightFr: "Qu'est-ce que ?", rightPt: "O que é que?" },
           { left: "Nki (+ progressif)", right: "Why?", rightFr: "Pourquoi ?", rightPt: "Porquê?" },
           { left: "Kue", right: "Where?", rightFr: "Où ?", rightPt: "Onde?" },
@@ -11566,7 +11566,7 @@ export const lessons: Lesson[] = [
         sentencePt: "___ ka tele? = O que disse ela?",
         blank: "bue",
         hint: "The interrogative word meaning 'what did...say'",
-        hintFr: "Le mot interrogatif signifiant « qu'a-t-il dit »",
+        hintFr: "Le mot interrogatif signifiant « qu'est-ce que »",
         hintPt: "A palavra interrogativa que significa « o que disse »",
       },
       {
