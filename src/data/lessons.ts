@@ -11189,6 +11189,50 @@ export const lessons: Lesson[] = [
       { lari: "N'kolo / Mukolo", mandombe: "N'kolo / Mukolo", french: "La fatigue", english: "Fatigue, tiredness", portuguese: "A fadiga, o cansaço" },
     ],
     phrases: [],
-    exercises: [],
+    exercises: [
+      // ── Crossword: Fu- & Fi- Dictionary ──
+      // Grid 8x8
+      // FINGA across (2,2): F(2,2) I(2,3) N(2,4) G(2,5) A(2,6)
+      // FUNDA down col 4 (0-4): F(0,4) U(1,4) N(2,4) D(3,4) A(4,4) — shares N at (2,4) ✓
+      // FUMPA across (4,0): F(4,0) U(4,1) M(4,2) P(4,3) A(4,4) — shares A at (4,4) with FUNDA ✓
+      // FUMU down col 0 (4-7): F(4,0) U(5,0) M(6,0) U(7,0) — shares F at (4,0) with FUMPA ✓
+      {
+        type: "crossword",
+        title: "Crossword — Fu- & Fi- Vocabulary",
+        titleFr: "Mots croisés — Vocabulaire Fu- & Fi-",
+        titlePt: "Palavras cruzadas — Vocabulário Fu- & Fi-",
+        gridSize: 8,
+        clues: [
+          { answer: "FINGA", clue: "To insult", clueFr: "Injurier", cluePt: "Insultar", row: 2, col: 2, direction: "across" },
+          { answer: "FUNDA", clue: "A package, a parcel", clueFr: "Un paquet", cluePt: "Um pacote", row: 0, col: 4, direction: "down" },
+          { answer: "FUMPA", clue: "To overflow when boiling", clueFr: "Déborder quand ça bout", cluePt: "Transbordar ao ferver", row: 4, col: 0, direction: "across" },
+          { answer: "FUMU", clue: "Tobacco", clueFr: "Tabac", cluePt: "Tabaco", row: 4, col: 0, direction: "down" },
+        ],
+      },
+      // ── Word Search: Fu- & Fi- Dictionary ──
+      // Grid 10x10
+      // FINGA across (0,1): F(0,1) I(0,2) N(0,3) G(0,4) A(0,5)
+      // FUNDA down (3,0): F(3,0) U(4,0) N(5,0) D(6,0) A(7,0)
+      // FUMPA across (9,0): F(9,0) U(9,1) M(9,2) P(9,3) A(9,4)
+      // FUMU down (1,8): F(1,8) U(2,8) M(3,8) U(4,8)
+      // FIDILA across (6,2): F(6,2) I(6,3) D(6,4) I(6,5) L(6,6) A(6,7)
+      // FISUKA down (0,7): F(0,7) I(1,7) S(2,7) U(3,7) K(4,7) A(5,7)
+      {
+        type: "word-search",
+        title: "Word Search — Fu- & Fi- Vocabulary",
+        titleFr: "Mots masqués — Vocabulaire Fu- & Fi-",
+        titlePt: "Caça-palavras — Vocabulário Fu- & Fi-",
+        gridSize: 10,
+        words: [
+          { word: "FINGA", clue: "To insult", clueFr: "Injurier", cluePt: "Insultar", row: 0, col: 1, direction: "across" },
+          { word: "FUNDA", clue: "A package, a parcel", clueFr: "Un paquet", cluePt: "Um pacote", row: 3, col: 0, direction: "down" },
+          { word: "FUMPA", clue: "To overflow when boiling", clueFr: "Déborder quand ça bout", cluePt: "Transbordar ao ferver", row: 9, col: 0, direction: "across" },
+          { word: "FUMU", clue: "Tobacco", clueFr: "Tabac", cluePt: "Tabaco", row: 1, col: 8, direction: "down" },
+          { word: "FIDILA", clue: "To lead, to drive", clueFr: "Mener, conduire", cluePt: "Conduzir, levar", row: 6, col: 2, direction: "across" },
+          { word: "FISUKA", clue: "To twist, to sprain", clueFr: "Se tordre, se fouler", cluePt: "Torcer, entorsar", row: 0, col: 7, direction: "down" },
+        ],
+        fillerLetters: "MKDLANTSBEGNZOALKTBDSNAKLUMSENTGOBLNDAESTUKMGAONDBLSANMTESBOKUALNKDGEZMAOYTSNBLEIDUMKGNTASLZ",
+      },
+    ],
   },
 ];
