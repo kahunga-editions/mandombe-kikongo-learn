@@ -11461,6 +11461,9 @@ export const lessons: Lesson[] = [
         title: "MU NKIA BUNGU — For what reason",
         titleFr: "MU NKIA BUNGU — Pour quelle raison",
         titlePt: "MU NKIA BUNGU — Por que razão",
+        description: "MU NKIA BUNGU is a formal way to ask 'for what reason'. NKIA is pronounced /ntshia/.",
+        descriptionFr: "MU NKIA BUNGU est une manière formelle de demander « pour quelle raison ». NKIA se prononce /ntshia/.",
+        descriptionPt: "MU NKIA BUNGU é uma forma formal de perguntar « por que razão ». NKIA pronuncia-se /ntshia/.",
         pattern: "Nkia bungu + verbe ?",
         groups: [
           {
