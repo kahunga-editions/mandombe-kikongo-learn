@@ -11369,6 +11369,9 @@ export const lessons: Lesson[] = [
         title: "NKI — What (with infinitive verb form)",
         titleFr: "NKI — Qu'est-ce que (avec le verbe à l'infinitif)",
         titlePt: "NKI — O que é que (com o verbo no infinitivo)",
+        description: "When NKI is followed by a verb in its infinitive form (e.g. DIA), it means 'What?' (Qu'est-ce que). The meaning of NKI changes based on the verb form.",
+        descriptionFr: "Lorsque NKI est suivi d'un verbe à l'infinitif (ex. DIA), il signifie « Qu'est-ce que ? ». Le sens de NKI change selon la forme du verbe.",
+        descriptionPt: "Quando NKI é seguido de um verbo no infinitivo (ex. DIA), significa « O que é que? ». O significado de NKI muda conforme a forma do verbo.",
         pattern: "Nki + (pronom sujet) + ta + verbe infinitif ?",
         groups: [
           {
