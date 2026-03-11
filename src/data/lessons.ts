@@ -2752,7 +2752,7 @@ export const lessons: Lesson[] = [
       { lari: "Ntunga", mandombe: "Ntunga", french: "La tique", english: "The tick", portuguese: "O carrapato" },
       { lari: "Lunguenia | Tunguenia", mandombe: "Lunguenia | Tunguenia", french: "Caméléon(s)", english: "Chameleon(s)", portuguese: "Camaleão(ões)" },
       { lari: "Lukami | Nkami", mandombe: "Lukami | Nkami", french: "Fourmi rouge", english: "Red ant", portuguese: "Formiga vermelha" },
-      { lari: "Ngondaa", mandombe: "Ngondaa", french: "Les règles", english: "Menstruation", portuguese: "A menstruação" },
+      { lari: "Ngonda", mandombe: "Ngonda", french: "Les règles", english: "Menstruation", portuguese: "A menstruação" },
       { lari: "Mundengué | Minengue", mandombe: "Mundengué | Minengue", french: "Le corossol(s)", english: "Soursop(s)", portuguese: "A graviola(s)" },
       { lari: "Poto-poto", mandombe: "Poto-poto", french: "Marécage", english: "Swamp, marsh", portuguese: "Pântano" },
       { lari: "Lubakala", mandombe: "Lubakala", french: "L'est", english: "The east", portuguese: "O leste" },
