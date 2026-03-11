@@ -11250,7 +11250,7 @@ export const lessons: Lesson[] = [
     level: "intermediate",
     icon: "❓",
     vocabulary: [
-      { lari: "Bue", mandombe: "Bue", french: "Comment, quoi", english: "What did...say?", portuguese: "O que disse...?" },
+      { lari: "Bue", mandombe: "Bue", french: "Qu'est-ce que, comment", english: "What did...say?", portuguese: "O que disse...?" },
       { lari: "Nki", mandombe: "Nki", french: "Pourquoi / Qu'est-ce que ?", english: "Why / What?", portuguese: "Porquê / O que é que?", note: "Le sens de NKI change selon la forme du verbe qui le suit." },
       { lari: "Kue", mandombe: "Kue", french: "Où", english: "Where", portuguese: "Onde" },
       { lari: "Ku", mandombe: "Ku", french: "À (préposition de lieu)", english: "At, to (preposition of place)", portuguese: "A, em (preposição de lugar)" },
