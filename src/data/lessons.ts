@@ -11608,15 +11608,20 @@ export const lessons: Lesson[] = [
         title: "Crossword — Interrogative Words",
         titleFr: "Mots croisés — Mots interrogatifs",
         titlePt: "Palavras cruzadas — Palavras interrogativas",
-        gridSize: 9,
+        gridSize: 4,
+        // Layout 4×4 — 87 % filled, all words connected via TELE (col 2):
+        //   0 1 2 3
+        // 0 K O T A      ← KOTA across
+        // 1 K U E .      ← KUE  across  (E shares with TELE)
+        // 2 D I L A      ← DILA across  (L shares with TELE)
+        // 3 B U E .      ← BUE  across  (E shares with TELE)
+        //       ↑ TELE down
         clues: [
-          { answer: "KOTA", clue: "To enter", clueFr: "Entrer", cluePt: "Entrar", row: 1, col: 0, direction: "across" },
-          { answer: "TELE", clue: "Said (past tense)", clueFr: "Dire (au passé)", cluePt: "Disse (passado)", row: 1, col: 2, direction: "down" },
-          { answer: "DILA", clue: "To cry", clueFr: "Pleurer", cluePt: "Chorar", row: 3, col: 0, direction: "across" },
-          { answer: "BUE", clue: "What? How?", clueFr: "Comment, quoi", cluePt: "O quê? Como?", row: 4, col: 0, direction: "across" },
-          { answer: "BUNGU", clue: "Reason, motive", clueFr: "Raison, motif", cluePt: "Razão, motivo", row: 4, col: 0, direction: "down" },
-          { answer: "NKIA", clue: "Which?", clueFr: "Quelle ?", cluePt: "Qual?", row: 6, col: 0, direction: "across" },
-          { answer: "KUE", clue: "Where?", clueFr: "Où ?", cluePt: "Onde?", row: 6, col: 1, direction: "down" },
+          { answer: "KOTA", clue: "To enter", clueFr: "Entrer", cluePt: "Entrar", row: 0, col: 0, direction: "across" },
+          { answer: "KUE", clue: "Where?", clueFr: "Où ?", cluePt: "Onde?", row: 1, col: 0, direction: "across" },
+          { answer: "DILA", clue: "To cry", clueFr: "Pleurer", cluePt: "Chorar", row: 2, col: 0, direction: "across" },
+          { answer: "BUE", clue: "What? How?", clueFr: "Qu'est-ce que, comment", cluePt: "O quê? Como?", row: 3, col: 0, direction: "across" },
+          { answer: "TELE", clue: "Said (past tense)", clueFr: "Dire (au passé)", cluePt: "Disse (passado)", row: 0, col: 2, direction: "down" },
         ],
       },
       // ── Word Search 10x10 ──
