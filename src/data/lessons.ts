@@ -11126,7 +11126,7 @@ export const lessons: Lesson[] = [
       { lari: "Mpashi", mandombe: "Mpashi", french: "Souffrance, pénible, difficile", english: "Suffering, painful, difficult", portuguese: "Sofrimento, penoso, difícil" },
       { lari: "Mpila", mandombe: "Mpila", french: "Manière, façon, genre, espèce, modèle, aspect", english: "Way, manner, kind, species, model, aspect", portuguese: "Maneira, modo, gênero, espécie, modelo, aspecto" },
       { lari: "Mpini", mandombe: "Mpini", french: "Invisibilité", english: "Invisibility", portuguese: "Invisibilidade" },
-      { lari: "Mpoka", mandombe: "Mpoka", french: "Corne d'un animal", english: "Animal horn", portuguese: "Chifre de um animal" },
+      { lari: "Dim. mpoka, Mpoka | Mampoka", mandombe: "Dim. mpoka, Mpoka | Mampoka", french: "Corne d'un animal", english: "Animal horn", portuguese: "Chifre de um animal" },
       { lari: "Mukulu", mandombe: "Mukulu", french: "Un ancien", english: "An elder", portuguese: "Um ancião" },
       { lari: "Mungongo", mandombe: "Mungongo", french: "Le dos, l'épine dorsale", english: "The back, the spine", portuguese: "As costas, a espinha dorsal" },
       { lari: "Musanga", mandombe: "Musanga", french: "Collier de perles", english: "Pearl necklace", portuguese: "Colar de pérolas" },
