@@ -11345,6 +11345,9 @@ export const lessons: Lesson[] = [
         title: "NKI — Why (with progressive verb form)",
         titleFr: "NKI — Pourquoi (avec la forme progressive du verbe)",
         titlePt: "NKI — Porquê (com a forma progressiva do verbo)",
+        description: "When NKI is followed by a verb in its progressive form (e.g. DIRILA), it means 'Why?'.",
+        descriptionFr: "Lorsque NKI est suivi d'un verbe à la forme progressive (ex. DIRILA), il signifie « Pourquoi ? ».",
+        descriptionPt: "Quando NKI é seguido de um verbo na forma progressiva (ex. DIRILA), significa « Porquê? ».",
         pattern: "Nki + (pronom sujet) + ta + verbe progressif ?",
         groups: [
           {
