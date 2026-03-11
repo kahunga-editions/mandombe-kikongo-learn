@@ -11624,14 +11624,14 @@ export const lessons: Lesson[] = [
           { answer: "TELE", clue: "Said (past tense)", clueFr: "Dire (au passé)", cluePt: "Disse (passado)", row: 0, col: 2, direction: "down" },
         ],
       },
-      // ── Word Search 10x10 ──
-      // TELE diagonal (0,0): T(0,0) E(1,1) L(2,2) E(3,3)
-      // BUE down (0,4): B(0,4) U(1,4) E(2,4)
-      // BUNGU across (2,5): B(2,5) U(2,6) N(2,7) G(2,8) U(2,9)
-      // KOTA down (4,7): K(4,7) O(5,7) T(6,7) A(7,7)
-      // NKI across (5,0): N(5,0) K(5,1) I(5,2)
-      // DILA diagonal (6,3): D(6,3) I(7,4) L(8,5) A(9,6)
-      // KUE across (8,0): K(8,0) U(8,1) E(8,2)
+      // ── Word Search 10×10 ──
+      // BUE across (0,0): B(0,0) U(0,1) E(0,2)
+      // TELE across (2,3): T(2,3) E(2,4) L(2,5) E(2,6)
+      // BUNGU down (4,0): B(4,0) U(5,0) N(6,0) G(7,0) U(8,0)
+      // KUE down (3,9): K(3,9) U(4,9) E(5,9)
+      // NKI across (4,5): N(4,5) K(4,6) I(4,7)
+      // KOTA down (5,3): K(5,3) O(6,3) T(7,3) A(8,3)
+      // DILA across (7,5): D(7,5) I(7,6) L(7,7) A(7,8)
       {
         type: "word-search",
         title: "Word Search — Interrogative Words",
@@ -11639,15 +11639,15 @@ export const lessons: Lesson[] = [
         titlePt: "Caça-palavras — Palavras interrogativas",
         gridSize: 10,
         words: [
-          { word: "TELE", clue: "Said (past tense)", clueFr: "Dire (au passé)", cluePt: "Disse (passado)", row: 0, col: 0, direction: "diagonal" },
-          { word: "BUE", clue: "What? How?", clueFr: "Comment, quoi", cluePt: "O quê? Como?", row: 0, col: 4, direction: "down" },
-          { word: "BUNGU", clue: "Reason, motive", clueFr: "Raison, motif", cluePt: "Razão, motivo", row: 2, col: 5, direction: "across" },
-          { word: "KOTA", clue: "To enter", clueFr: "Entrer", cluePt: "Entrar", row: 4, col: 7, direction: "down" },
-          { word: "NKI", clue: "Why / What?", clueFr: "Pourquoi / Qu'est-ce que ?", cluePt: "Porquê / O que é que?", row: 5, col: 0, direction: "across" },
-          { word: "DILA", clue: "To cry", clueFr: "Pleurer", cluePt: "Chorar", row: 6, col: 3, direction: "diagonal" },
-          { word: "KUE", clue: "Where?", clueFr: "Où ?", cluePt: "Onde?", row: 8, col: 0, direction: "across" },
+          { word: "BUE", clue: "What? How?", clueFr: "Qu'est-ce que, comment", cluePt: "O quê? Como?", row: 0, col: 0, direction: "across" },
+          { word: "TELE", clue: "Said (past tense)", clueFr: "Dire (au passé)", cluePt: "Disse (passado)", row: 2, col: 3, direction: "across" },
+          { word: "BUNGU", clue: "Reason, motive", clueFr: "Raison, motif", cluePt: "Razão, motivo", row: 4, col: 0, direction: "down" },
+          { word: "KUE", clue: "Where?", clueFr: "Où ?", cluePt: "Onde?", row: 3, col: 9, direction: "down" },
+          { word: "NKI", clue: "Why / What?", clueFr: "Pourquoi / Qu'est-ce que ?", cluePt: "Porquê / O que é que?", row: 4, col: 5, direction: "across" },
+          { word: "KOTA", clue: "To enter", clueFr: "Entrer", cluePt: "Entrar", row: 5, col: 3, direction: "down" },
+          { word: "DILA", clue: "To cry", clueFr: "Pleurer", cluePt: "Chorar", row: 7, col: 5, direction: "across" },
         ],
-        fillerLetters: "GASENLMDFKOATINBDSMULETGINOADBFKSAGETNLMIDOBFUNASEKTGINLOADBFSMAKETGINLOADBFSMAKETGINLOADBFSMAKE",
+        fillerLetters: "BUESAFMLZWMIYASVNOFLFASTELEWMYLOVAWISFGKBYMZWNKIFUULSKAVWFMENWFOSAYZLVGAMTSDILAYFWALSVMOZSILYMAFWVO",
       },
     ],
   },
