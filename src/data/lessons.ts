@@ -11566,7 +11566,7 @@ export const lessons: Lesson[] = [
         sentencePt: "___ ka tele? = O que disse ela?",
         blank: "bue",
         hint: "The interrogative word meaning 'what did...say'",
-        hintFr: "Le mot interrogatif signifiant « qu'a-t-il dit »",
+        hintFr: "Le mot interrogatif signifiant « qu'est-ce que »",
         hintPt: "A palavra interrogativa que significa « o que disse »",
       },
       {
