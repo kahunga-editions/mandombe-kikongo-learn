@@ -10871,7 +10871,6 @@ export const lessons: Lesson[] = [
       },
     ],
   },
-  },
   {
     id: "fu-fi-dictionary",
     title: "Fu- & Fi- Verbs & Nouns",
