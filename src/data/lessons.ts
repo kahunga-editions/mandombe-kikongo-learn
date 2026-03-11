@@ -11113,7 +11113,7 @@ export const lessons: Lesson[] = [
       { lari: "Kanga", mandombe: "Kanga", french: "Fermer, attacher", english: "To close, to tie", portuguese: "Fechar, amarrar" },
       { lari: "Kela", mandombe: "Kela", french: "Écosser", english: "To shell, to husk", portuguese: "Descascar" },
       { lari: "Kema", mandombe: "Kema", french: "Pousser pour accoucher / déféquer, pousser", english: "To push (for childbirth / defecation), to push", portuguese: "Empurrar (para parir / defecar), empurrar" },
-      { lari: "Keto", mandombe: "Keto", french: "Désir ardent, convoitise", english: "Burning desire, covetousness", portuguese: "Desejo ardente, cobiça" },
+      { lari: "Keto", mandombe: "Keto", french: "Désir ardent de vengeance, convoitise", english: "Burning desire for revenge, covetousness", portuguese: "Desejo ardente de vingança, cobiça" },
       { lari: "Kobo", mandombe: "Kobo", french: "Lourd, épais", english: "Heavy, thick", portuguese: "Pesado, espesso" },
       { lari: "Koka", mandombe: "Koka", french: "Tirer, traîner", english: "To pull, to drag", portuguese: "Puxar, arrastar" },
       { lari: "Kokoto", mandombe: "Kokoto", french: "Être solide, dur", english: "To be solid, hard", portuguese: "Ser sólido, duro" },
