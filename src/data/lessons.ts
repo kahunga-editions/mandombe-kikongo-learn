@@ -11018,13 +11018,13 @@ export const lessons: Lesson[] = [
         titleFr: "Mots croisés — La fatigue",
         titlePt: "Palavras cruzadas — A fadiga",
         gridSize: 8,
-        words: [
-          { word: "MUKOLO", clue: "Fatigue (variant form)", clueFr: "La fatigue (forme variante)", cluePt: "A fadiga (forma variante)", row: 0, col: 1, direction: "down" },
-          { word: "NAKU", clue: "Suffix: you are tired", clueFr: "Suffixe : tu es fatigué(e)", cluePt: "Sufixo: estás cansado/a", row: 1, col: 0, direction: "across" },
-          { word: "NENO", clue: "Suffix: you (pl.) are tired", clueFr: "Suffixe : vous êtes fatigué(e)s", cluePt: "Sufixo: vocês estão cansados/as", row: 3, col: 0, direction: "across" },
-          { word: "NANDI", clue: "Suffix: he/she is tired", clueFr: "Suffixe : il/elle est fatigué(e)", cluePt: "Sufixo: ele/ela está cansado/a", row: 5, col: 0, direction: "across" },
-          { word: "NANI", clue: "Suffix: I am tired", clueFr: "Suffixe : je suis fatigué(e)", cluePt: "Sufixo: estou cansado/a", row: 3, col: 0, direction: "down" },
-          { word: "MPUNGI", clue: "A horn, a trumpet", clueFr: "Un klaxon, une trompette", cluePt: "Uma buzina, uma trombeta", row: 0, col: 4, direction: "down" },
+        clues: [
+          { answer: "MUKOLO", clue: "Fatigue (variant form)", clueFr: "La fatigue (forme variante)", cluePt: "A fadiga (forma variante)", row: 0, col: 1, direction: "down" },
+          { answer: "NAKU", clue: "Suffix: you are tired", clueFr: "Suffixe : tu es fatigué(e)", cluePt: "Sufixo: estás cansado/a", row: 1, col: 0, direction: "across" },
+          { answer: "NENO", clue: "Suffix: you (pl.) are tired", clueFr: "Suffixe : vous êtes fatigué(e)s", cluePt: "Sufixo: vocês estão cansados/as", row: 3, col: 0, direction: "across" },
+          { answer: "NANDI", clue: "Suffix: he/she is tired", clueFr: "Suffixe : il/elle est fatigué(e)", cluePt: "Sufixo: ele/ela está cansado/a", row: 5, col: 0, direction: "across" },
+          { answer: "NANI", clue: "Suffix: I am tired", clueFr: "Suffixe : je suis fatigué(e)", cluePt: "Sufixo: estou cansado/a", row: 3, col: 0, direction: "down" },
+          { answer: "MPUNGI", clue: "A horn, a trumpet", clueFr: "Un klaxon, une trompette", cluePt: "Uma buzina, uma trombeta", row: 0, col: 4, direction: "down" },
         ],
       },
       {
