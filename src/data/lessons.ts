@@ -11402,6 +11402,9 @@ export const lessons: Lesson[] = [
         title: "Present progressive of DILA (to cry)",
         titleFr: "Présent progressif de DILA (pleurer)",
         titlePt: "Presente progressivo de DILA (chorar)",
+        description: "The present progressive of DILA (to cry) follows the standard pattern: Verb + subject pronoun + ta + verb.",
+        descriptionFr: "Le présent progressif de DILA (pleurer) suit le schéma standard : Verbe + pronom sujet + ta + verbe.",
+        descriptionPt: "O presente progressivo de DILA (chorar) segue o padrão: Verbo + pronome sujeito + ta + verbo.",
         pattern: "Dila + pronom sujet + ta + dila",
         groups: [
           {
