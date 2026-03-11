@@ -11551,7 +11551,7 @@ export const lessons: Lesson[] = [
         instructionFr: "Associez les questions Kikongo Lari à leur traduction française.",
         instructionPt: "Associe as perguntas Kikongo Lari à sua tradução em francês.",
         pairs: [
-          { left: "Bue tele?", right: "What did you say?", rightFr: "Qu'as-tu dit ?", rightPt: "O que disseste?" },
+          { left: "Bue tele?", right: "What did you say?", rightFr: "Qu'est-ce que tu as dit ?", rightPt: "O que disseste?" },
           { left: "Nki ta dirila?", right: "Why are you crying?", rightFr: "Pourquoi tu pleures ?", rightPt: "Por que estás a chorar?" },
           { left: "Nki ta dia?", right: "What are you eating?", rightFr: "Qu'est-ce que tu manges ?", rightPt: "O que estás a comer?" },
           { left: "Kue ta kuenda?", right: "Where are you going?", rightFr: "Où vas-tu ?", rightPt: "Onde vais?" },
