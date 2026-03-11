@@ -10881,7 +10881,7 @@ export const lessons: Lesson[] = [
     description: "Discover Fu- and Fi- vocabulary covering verbs of action, movement, and essential nouns from the Kilari dictionary.",
     descriptionFr: "Découvrez le vocabulaire Fu- et Fi- couvrant des verbes d'action, de mouvement et des noms essentiels du dictionnaire kilari.",
     descriptionPt: "Descubra o vocabulário Fu- e Fi- abrangendo verbos de ação, movimento e substantivos essenciais do dicionário kilari.",
-    category: "dictionary",
+    icon: "📖",
     level: "intermediate",
     vocabulary: [
       { lari: "Finga", mandombe: "Finga", french: "Injurier", english: "To insult", portuguese: "Insultar" },
@@ -10901,7 +10901,6 @@ export const lessons: Lesson[] = [
       { lari: "Funda (v.)", mandombe: "Funda", french: "Accuser, comparaître en justice", english: "To accuse, to appear in court", portuguese: "Acusar, comparecer em tribunal", note: "Homographe : 'Funda' (nom) = un paquet ; 'Funda' (verbe) = accuser." },
     ],
     phrases: [],
-    grammar: [],
     exercises: [],
   },
 ];
