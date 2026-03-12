@@ -3730,6 +3730,10 @@ export const lessons: Lesson[] = [
       { lari: "Loso", mandombe: "Loso", french: "Le riz", english: "Rice" },
       { lari: "Lota", mandombe: "Lota", french: "Rêver / Une dermatose", english: "To dream / A skin disease" },
       { lari: "Loto", mandombe: "Loto", french: "Une cuillère", english: "A spoon" },
+      { lari: "Lebakasa", mandombe: "Lebakasa", french: "Séduire, induire en erreur", english: "To seduce, to mislead" },
+      { lari: "Lebalala", mandombe: "Lebalala", french: "S'affaiblir", english: "To weaken, to become weak" },
+      { lari: "Lebalakani", mandombe: "Lebalakani", french: "Affaibli, faible, mou", english: "Weakened, weak, soft" },
+      { lari: "Lebakana", mandombe: "Lebakana", french: "Être trompé, induit en erreur", english: "To be deceived, misled" },
     ],
     phrases: [
       { lari: "Longa bana", mandombe: "Longa bana", french: "Enseigner aux enfants", english: "Teach the children" },
