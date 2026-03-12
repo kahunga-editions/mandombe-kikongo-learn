@@ -55,6 +55,7 @@ const Navbar = () => {
           <a href="#vocabulary" className="text-cream/80 hover:text-gold transition-colors text-sm font-medium tracking-wide uppercase">{t("nav.vocabulary")}</a>
           <a href="/dictionary" className="text-cream/80 hover:text-gold transition-colors text-sm font-medium tracking-wide uppercase">{t("nav.dictionary")}</a>
           <a href="/flashcards" className="text-cream/80 hover:text-gold transition-colors text-sm font-medium tracking-wide uppercase">{t("nav.flashcards")}</a>
+          <a href="/mandombe" className="text-cream/80 hover:text-gold transition-colors text-sm font-medium tracking-wide uppercase">{t("nav.mandombe")}</a>
           <a href="#stories" className="text-cream/80 hover:text-gold transition-colors text-sm font-medium tracking-wide uppercase">{t("nav.stories")}</a>
           <a href="#kilolaka" className="text-cream/80 hover:text-gold transition-colors text-sm font-medium tracking-wide uppercase">{t("nav.kilolaka")}</a>
         </div>

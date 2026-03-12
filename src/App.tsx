@@ -31,6 +31,7 @@ const App = () => (
               <Route path="/lessons/:lessonId" element={<LessonDetail />} />
               <Route path="/dictionary" element={<Dictionary />} />
               <Route path="/flashcards" element={<Flashcards />} />
+              <Route path="/mandombe" element={<MandombeScript />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </AuthProvider>
