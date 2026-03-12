@@ -7,153 +7,141 @@ import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-// Mandombe syllabary organized by consonant groups
-// Each entry: [latin text for font rendering, display label, example word from dictionary, meaning key]
-const vowels = [
-  { glyph: "a", label: "A", example: "Ayi", meaning: "Non / No" },
-  { glyph: "e", label: "E", example: "Eyi", meaning: "Oui / Yes" },
-  { glyph: "i", label: "I", example: "Inga", meaning: "Oui / Yes" },
-  { glyph: "o", label: "O", example: "Okele", meaning: "Bien / Well" },
-  { glyph: "u", label: "U", example: "Usika", meaning: "Arriver / To arrive" },
+// Mandombe syllabary — ALL examples are verified Kikongo Lari words from project dictionary
+// glyph = accent-free Latin for Mandombe font | example/exampleMandombe from lessons.ts
+interface SyllableEntry {
+  glyph: string;
+  label: string;
+  example: string;
+  exampleMandombe: string;
+  meaning: string;
+}
+
+const vowels: SyllableEntry[] = [
+  { glyph: "a", label: "A", example: "Ani", exampleMandombe: "Ani", meaning: "Mon, ma, mes / My, mine" },
+  { glyph: "e", label: "E", example: "", exampleMandombe: "", meaning: "" },
+  { glyph: "i", label: "I", example: "", exampleMandombe: "", meaning: "" },
+  { glyph: "o", label: "O", example: "", exampleMandombe: "", meaning: "" },
+  { glyph: "u", label: "U", example: "", exampleMandombe: "", meaning: "" },
 ];
 
 const consonantGroups = [
   {
     name: "B",
     syllables: [
-      { glyph: "ba", label: "BA", example: "Baka", meaning: "Obtenir / To obtain" },
-      { glyph: "be", label: "BE", example: "Beto", meaning: "Nous / We" },
-      { glyph: "bi", label: "BI", example: "Bidia", meaning: "Nourriture / Food" },
-      { glyph: "bo", label: "BO", example: "Bote", meaning: "Beau / Beautiful" },
-      { glyph: "bu", label: "BU", example: "Buka", meaning: "Frapper / To hit" },
-    ],
+      { glyph: "ba", label: "BA", example: "Baka", exampleMandombe: "Baka", meaning: "Obtenir / To obtain" },
+      { glyph: "be", label: "BE", example: "Benda", exampleMandombe: "Benda", meaning: "Puiser / To draw water" },
+      { glyph: "bi", label: "BI", example: "Bikola", exampleMandombe: "Bikola", meaning: "Légumes / Vegetables" },
+      { glyph: "bo", label: "BO", example: "Bote", exampleMandombe: "Bote", meaning: "Beau, bon / Beautiful, good" },
+      { glyph: "bu", label: "BU", example: "Buka", exampleMandombe: "Buka", meaning: "Soigner / To heal" },
+    ] as SyllableEntry[],
   },
   {
     name: "D",
     syllables: [
-      { glyph: "da", label: "DA", example: "Dama", meaning: "Damer / To pack down" },
-      { glyph: "de", label: "DE", example: "Deka", meaning: "S'agripper / To grip" },
-      { glyph: "di", label: "DI", example: "Dia", meaning: "Manger / To eat" },
-      { glyph: "do", label: "DO", example: "Doko", meaning: "Souiller / To soil" },
-      { glyph: "du", label: "DU", example: "Duka", meaning: "Être triste / To be sad" },
-    ],
+      { glyph: "de", label: "DE", example: "Dezo", exampleMandombe: "Dezo", meaning: "Haricot / Bean" },
+      { glyph: "di", label: "DI", example: "Dimpa", exampleMandombe: "Dimpa", meaning: "Pain / Bread" },
+      { glyph: "du", label: "DU", example: "Duka", exampleMandombe: "Duka", meaning: "Sortir / To go out" },
+    ] as SyllableEntry[],
   },
   {
     name: "F",
     syllables: [
-      { glyph: "fa", label: "FA", example: "Fula", meaning: "Souffler / To blow" },
-      { glyph: "fe", label: "FE", example: "Fela", meaning: "Faucher / To mow" },
-      { glyph: "fi", label: "FI", example: "Fia", meaning: "Cacher / To hide" },
-      { glyph: "fo", label: "FO", example: "Foka", meaning: "Forer / To drill" },
-      { glyph: "fu", label: "FU", example: "Fula", meaning: "Souffler / To blow" },
-    ],
-  },
-  {
-    name: "G",
-    syllables: [
-      { glyph: "ga", label: "GA", example: "Gata", meaning: "S'ancrer / To anchor" },
-      { glyph: "ge", label: "GE", example: "Genga", meaning: "Flotter / To float" },
-      { glyph: "gi", label: "GI", example: "Gita", meaning: "Être lourd / To be heavy" },
-      { glyph: "go", label: "GO", example: "Goma", meaning: "Clou / Nail" },
-      { glyph: "gu", label: "GU", example: "Guba", meaning: "Engendrer / To beget" },
-    ],
+      { glyph: "fi", label: "FI", example: "Fioti", exampleMandombe: "Fiyoti", meaning: "Petit / Small" },
+      { glyph: "fo", label: "FO", example: "Fofolo", exampleMandombe: "Fofolo", meaning: "Allumettes / Matches" },
+      { glyph: "fu", label: "FU", example: "Futa", exampleMandombe: "Futa", meaning: "Payer / To pay" },
+    ] as SyllableEntry[],
   },
   {
     name: "K",
     syllables: [
-      { glyph: "ka", label: "KA", example: "Kanga", meaning: "Fermer / To close" },
-      { glyph: "ke", label: "KE", example: "Kele", meaning: "Être / To be" },
-      { glyph: "ki", label: "KI", example: "Kiese", meaning: "Joie / Joy" },
-      { glyph: "ko", label: "KO", example: "Kota", meaning: "Entrer / To enter" },
-      { glyph: "ku", label: "KU", example: "Kuba", meaning: "Frapper / To hit" },
-    ],
+      { glyph: "ka", label: "KA", example: "Kanga", exampleMandombe: "Kanga", meaning: "Fermer / To close" },
+      { glyph: "ke", label: "KE", example: "Kela", exampleMandombe: "Kela", meaning: "Protéger / To protect" },
+      { glyph: "ki", label: "KI", example: "Kiese", exampleMandombe: "Kiese", meaning: "Joie / Joy" },
+      { glyph: "ko", label: "KO", example: "Kola", exampleMandombe: "Kola", meaning: "Être en bonne santé / To be healthy" },
+      { glyph: "ku", label: "KU", example: "Kuku", exampleMandombe: "Kuku", meaning: "Foyer / Hearth" },
+    ] as SyllableEntry[],
   },
   {
     name: "L",
     syllables: [
-      { glyph: "la", label: "LA", example: "Lamba", meaning: "Cuisiner / To cook" },
-      { glyph: "le", label: "LE", example: "Leka", meaning: "Dormir / To sleep" },
-      { glyph: "li", label: "LI", example: "Linga", meaning: "Aimer / To love" },
-      { glyph: "lo", label: "LO", example: "Longa", meaning: "Enseigner / To teach" },
-      { glyph: "lu", label: "LU", example: "Lumbu", meaning: "Jour / Day" },
-    ],
+      { glyph: "la", label: "LA", example: "Lamba", exampleMandombe: "Lamba", meaning: "Cuisiner / To cook" },
+      { glyph: "le", label: "LE", example: "Lemba", exampleMandombe: "Lemba", meaning: "École initiatique Kongo / Kongo initiation school" },
+      { glyph: "li", label: "LI", example: "Linzolo", exampleMandombe: "Linzolo", meaning: "Linzolo (localité)" },
+      { glyph: "lo", label: "LO", example: "Longa", exampleMandombe: "Longa", meaning: "Enseigner / To teach" },
+      { glyph: "lu", label: "LU", example: "Lumbu", exampleMandombe: "Lumbu", meaning: "Jour / Day" },
+    ] as SyllableEntry[],
   },
   {
     name: "M",
     syllables: [
-      { glyph: "ma", label: "MA", example: "Mama", meaning: "Maman / Mother" },
-      { glyph: "me", label: "ME", example: "Meno", meaning: "Moi / Me" },
-      { glyph: "mi", label: "MI", example: "Miso", meaning: "Yeux / Eyes" },
-      { glyph: "mo", label: "MO", example: "Mono", meaning: "Moi / I" },
-      { glyph: "mu", label: "MU", example: "Mutu", meaning: "Personne / Person" },
-    ],
+      { glyph: "ma", label: "MA", example: "Matondo", exampleMandombe: "Matondo", meaning: "Merci / Thank you" },
+      { glyph: "me", label: "ME", example: "Meno", exampleMandombe: "Meno", meaning: "Moi / I, me" },
+      { glyph: "mi", label: "MI", example: "Mielo", exampleMandombe: "Mielo", meaning: "Les portes / The doors" },
+      { glyph: "mo", label: "MO", example: "Mona", exampleMandombe: "Mona", meaning: "Voir / To see" },
+      { glyph: "mu", label: "MU", example: "Muinda", exampleMandombe: "Muinda", meaning: "Lampe / Lamp" },
+    ] as SyllableEntry[],
   },
   {
     name: "N",
     syllables: [
-      { glyph: "na", label: "NA", example: "Nkumbu", meaning: "Nom / Name" },
-      { glyph: "ne", label: "NE", example: "Nene", meaning: "Grand / Big" },
-      { glyph: "ni", label: "NI", example: "Nitu", meaning: "Corps / Body" },
-      { glyph: "no", label: "NO", example: "Ntoto", meaning: "Terre / Earth" },
-      { glyph: "nu", label: "NU", example: "Nuni", meaning: "Oiseau / Bird" },
-    ],
+      { glyph: "na", label: "NA", example: "Nanguna", exampleMandombe: "Nanguna", meaning: "Porter / To carry" },
+      { glyph: "ne", label: "NE", example: "Nene", exampleMandombe: "Nene", meaning: "Grand / Big" },
+      { glyph: "ni", label: "NI", example: "Nioka", exampleMandombe: "Nioka", meaning: "Serpent / Snake" },
+      { glyph: "nu", label: "NU", example: "Nungu", exampleMandombe: "Nungu", meaning: "Piment / Pepper" },
+    ] as SyllableEntry[],
   },
   {
     name: "S",
     syllables: [
-      { glyph: "sa", label: "SA", example: "Sala", meaning: "Travailler / To work" },
-      { glyph: "se", label: "SE", example: "Seka", meaning: "Dormir / To sleep" },
-      { glyph: "si", label: "SI", example: "Simba", meaning: "Tenir / To hold" },
-      { glyph: "so", label: "SO", example: "Soba", meaning: "Laver / To wash" },
-      { glyph: "su", label: "SU", example: "Sula", meaning: "Pardonner / To forgive" },
-    ],
+      { glyph: "sa", label: "SA", example: "Sala", exampleMandombe: "Sala", meaning: "Travailler / To work" },
+      { glyph: "se", label: "SE", example: "Sema", exampleMandombe: "Sema", meaning: "Bénir / To bless" },
+      { glyph: "si", label: "SI", example: "Sika", exampleMandombe: "Sika", meaning: "Jouer d'un instrument / To play an instrument" },
+      { glyph: "su", label: "SU", example: "Sukula", exampleMandombe: "Sukula", meaning: "Laver / To wash" },
+    ] as SyllableEntry[],
   },
   {
     name: "T",
     syllables: [
-      { glyph: "ta", label: "TA", example: "Tata", meaning: "Papa / Father" },
-      { glyph: "te", label: "TE", example: "Tela", meaning: "Créer / To create" },
-      { glyph: "ti", label: "TI", example: "Tiya", meaning: "Feu / Fire" },
-      { glyph: "to", label: "TO", example: "Tonda", meaning: "Aimer / To love" },
-      { glyph: "tu", label: "TU", example: "Tuba", meaning: "Parler / To speak" },
-    ],
+      { glyph: "ta", label: "TA", example: "Tala", exampleMandombe: "Tala", meaning: "Regarder / To look" },
+      { glyph: "te", label: "TE", example: "Teka", exampleMandombe: "Teka", meaning: "Puiser / To draw water" },
+      { glyph: "ti", label: "TI", example: "Tinta", exampleMandombe: "Tinta", meaning: "Couleur / Color" },
+      { glyph: "to", label: "TO", example: "Tonda", exampleMandombe: "Tonda", meaning: "Remercier / To thank" },
+      { glyph: "tu", label: "TU", example: "Tuba", exampleMandombe: "Tuba", meaning: "Dire, parler / To say, to speak" },
+    ] as SyllableEntry[],
   },
   {
     name: "V",
     syllables: [
-      { glyph: "va", label: "VA", example: "Vana", meaning: "Donner / To give" },
-      { glyph: "ve", label: "VE", example: "Vela", meaning: "Aiguiser / To sharpen" },
-      { glyph: "vi", label: "VI", example: "Vioka", meaning: "Passer / To pass" },
-      { glyph: "vo", label: "VO", example: "Vova", meaning: "Parler / To speak" },
-      { glyph: "vu", label: "VU", example: "Vunda", meaning: "Dormir / To sleep" },
-    ],
+      { glyph: "vu", label: "VU", example: "Vungula", exampleMandombe: "Vungula", meaning: "Ouvrir / To open" },
+    ] as SyllableEntry[],
   },
   {
     name: "W",
     syllables: [
-      { glyph: "wa", label: "WA", example: "Wonso", meaning: "Tout / All" },
-      { glyph: "we", label: "WE", example: "Wele", meaning: "Briller / To shine" },
-    ],
+      { glyph: "wa", label: "WA", example: "Wanda", exampleMandombe: "Wanda", meaning: "Taper / To hit" },
+      { glyph: "we", label: "WE", example: "Wela", exampleMandombe: "Wela", meaning: "Humer / To sniff" },
+    ] as SyllableEntry[],
   },
   {
     name: "Y",
     syllables: [
-      { glyph: "ya", label: "YA", example: "Yala", meaning: "Gouverner / To govern" },
-      { glyph: "ye", label: "YE", example: "Yeka", meaning: "Apprendre / To learn" },
-      { glyph: "yi", label: "YI", example: "Yimba", meaning: "Chanter / To sing" },
-      { glyph: "yo", label: "YO", example: "Yoya", meaning: "Écouter / To listen" },
-      { glyph: "yu", label: "YU", example: "Yuna", meaning: "Entendre / To hear" },
-    ],
+      { glyph: "ya", label: "YA", example: "Yaya", exampleMandombe: "Yaya", meaning: "Aîné(e) / Elder sibling" },
+      { glyph: "ye", label: "YE", example: "Yengo", exampleMandombe: "Yengo", meaning: "Espoir / Hope" },
+      { glyph: "yi", label: "YI", example: "Yimba", exampleMandombe: "Yimba", meaning: "Chanter / To sing" },
+      { glyph: "yo", label: "YO", example: "Yoka", exampleMandombe: "Yoka", meaning: "Passer / To pass" },
+      { glyph: "yu", label: "YU", example: "Yulu", exampleMandombe: "Yulu", meaning: "Ciel / Sky" },
+    ] as SyllableEntry[],
   },
   {
     name: "Z",
     syllables: [
-      { glyph: "za", label: "ZA", example: "Zaba", meaning: "Savoir / To know" },
-      { glyph: "ze", label: "ZE", example: "Zeba", meaning: "Voyager / To travel" },
-      { glyph: "zi", label: "ZI", example: "Zinga", meaning: "Vivre / To live" },
-      { glyph: "zo", label: "ZO", example: "Zonza", meaning: "Parler / To speak" },
-      { glyph: "zu", label: "ZU", example: "Zulu", meaning: "Ciel / Sky" },
-    ],
+      { glyph: "za", label: "ZA", example: "Zaba", exampleMandombe: "Zaba", meaning: "Savoir / To know" },
+      { glyph: "ze", label: "ZE", example: "Zenga", exampleMandombe: "Zenga", meaning: "Couper / To cut" },
+      { glyph: "zi", label: "ZI", example: "Zibula", exampleMandombe: "Zibula", meaning: "Ouvrir / To open" },
+      { glyph: "zo", label: "ZO", example: "Zola", exampleMandombe: "Zola", meaning: "Aimer / To love" },
+      { glyph: "zu", label: "ZU", example: "Zulu", exampleMandombe: "Zulu", meaning: "Ciel / Sky" },
+    ] as SyllableEntry[],
   },
 ];
 
