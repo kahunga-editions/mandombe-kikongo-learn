@@ -299,13 +299,13 @@ const MandombeScript = () => {
                 {t("mandombe.wordPractice")}
               </h2>
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-                {currentSyllables.map((s) => (
+                {currentSyllables.filter((s) => s.example).map((s) => (
                   <div
                     key={s.label}
                     className="bg-card rounded-xl border border-border p-4 text-center hover:border-primary/30 transition-colors cursor-pointer"
                     onClick={() => setSelectedGlyph(s)}
                   >
-                    <p className="font-mandombe text-2xl text-gold mb-1">{s.example}</p>
+                    <p className="font-mandombe text-2xl text-gold mb-1">{s.exampleMandombe}</p>
                     <p className="font-semibold text-sm text-foreground">{s.example}</p>
                     <p className="text-xs text-muted-foreground mt-1">{s.meaning}</p>
                   </div>
