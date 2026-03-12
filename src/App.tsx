@@ -11,6 +11,7 @@ import LessonDetail from "./pages/LessonDetail";
 import Auth from "./pages/Auth";
 import Dictionary from "./pages/Dictionary";
 import Flashcards from "./pages/Flashcards";
+import MandombeScript from "./pages/MandombeScript";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
