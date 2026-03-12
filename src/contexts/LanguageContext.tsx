@@ -172,6 +172,20 @@ const translations: Record<Language, Record<string, string>> = {
     "flashcards.backToDecks": "Retour",
     "flashcards.noCards": "Aucune fiche pour le moment. Créez votre première fiche !",
 
+    // Mandombe Script
+    "nav.mandombe": "Mandombe",
+    "mandombe.eyebrow": "Nsonokono Mandombe — Écriture sacrée",
+    "mandombe.title": "Apprendre l'écriture Mandombe",
+    "mandombe.subtitle": "Découvrez les glyphes du Mandombe, tracez-les du bout des doigts et apprenez à écrire la langue sacrée du peuple Kongo.",
+    "mandombe.vowels": "Voyelles",
+    "mandombe.reference": "Glyphe de référence",
+    "mandombe.exampleWord": "Mot exemple",
+    "mandombe.practice": "Pratiquez le tracé",
+    "mandombe.traceInstruction": "Tracez le glyphe sur le canevas ci-dessous. Activez le guide pour voir la forme à reproduire.",
+    "mandombe.guide": "Guide",
+    "mandombe.clear": "Effacer",
+    "mandombe.wordPractice": "Mots à pratiquer",
+
     // Footer
     "footer.description": "La Maison du Savoir — préserver et enseigner le Kikongo Lari et l'écriture Mandombe pour la diaspora Kongo et le monde.",
     "footer.learnTitle": "Apprendre",
@@ -319,6 +333,20 @@ const translations: Record<Language, Record<string, string>> = {
     "flashcards.backToDecks": "Back",
     "flashcards.noCards": "No cards yet. Create your first flashcard!",
 
+    // Mandombe Script
+    "nav.mandombe": "Mandombe",
+    "mandombe.eyebrow": "Nsonokono Mandombe — Sacred Script",
+    "mandombe.title": "Learn the Mandombe Script",
+    "mandombe.subtitle": "Discover the Mandombe glyphs, trace them with your fingertips and learn to write the sacred language of the Kongo people.",
+    "mandombe.vowels": "Vowels",
+    "mandombe.reference": "Reference glyph",
+    "mandombe.exampleWord": "Example word",
+    "mandombe.practice": "Practice tracing",
+    "mandombe.traceInstruction": "Trace the glyph on the canvas below. Toggle the guide to see the shape to reproduce.",
+    "mandombe.guide": "Guide",
+    "mandombe.clear": "Clear",
+    "mandombe.wordPractice": "Words to practice",
+
     // Footer
     "footer.description": "The House of Knowledge — preserving and teaching Kikongo Lari and the Mandombe script for the Kongo diaspora and the world.",
     "footer.learnTitle": "Learn",
@@ -465,6 +493,20 @@ const translations: Record<Language, Record<string, string>> = {
     "flashcards.comeBack": "Volte mais tarde para continuar a aprender.",
     "flashcards.backToDecks": "Voltar",
     "flashcards.noCards": "Ainda sem fichas. Crie a sua primeira ficha!",
+
+    // Mandombe Script
+    "nav.mandombe": "Mandombe",
+    "mandombe.eyebrow": "Nsonokono Mandombe — Escrita sagrada",
+    "mandombe.title": "Aprender a escrita Mandombe",
+    "mandombe.subtitle": "Descubra os glifos do Mandombe, trace-os com a ponta dos dedos e aprenda a escrever a língua sagrada do povo Kongo.",
+    "mandombe.vowels": "Vogais",
+    "mandombe.reference": "Glifo de referência",
+    "mandombe.exampleWord": "Palavra exemplo",
+    "mandombe.practice": "Pratique o traçado",
+    "mandombe.traceInstruction": "Trace o glifo na tela abaixo. Ative o guia para ver a forma a reproduzir.",
+    "mandombe.guide": "Guia",
+    "mandombe.clear": "Limpar",
+    "mandombe.wordPractice": "Palavras para praticar",
 
     // Footer
     "footer.description": "A Casa do Saber — preservar e ensinar o Kikongo Lari e a escrita Mandombe para a diáspora Kongo e o mundo.",
