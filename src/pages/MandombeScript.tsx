@@ -266,16 +266,18 @@ const MandombeScript = () => {
                   <span className="font-mandombe text-[120px] text-foreground leading-none">{selectedGlyph.glyph}</span>
                 </div>
                 <p className="font-display text-2xl font-bold text-foreground mb-1">{selectedGlyph.label}</p>
-                <div className="mt-4 bg-muted/50 rounded-lg px-4 py-3 w-full">
-                  <p className="text-xs text-muted-foreground uppercase tracking-wider mb-1">{t("mandombe.exampleWord")}</p>
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <p className="font-semibold text-foreground">{selectedGlyph.example}</p>
-                      <p className="text-sm text-muted-foreground">{selectedGlyph.meaning}</p>
+                {selectedGlyph.example && (
+                  <div className="mt-4 bg-muted/50 rounded-lg px-4 py-3 w-full">
+                    <p className="text-xs text-muted-foreground uppercase tracking-wider mb-1">{t("mandombe.exampleWord")}</p>
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <p className="font-semibold text-foreground">{selectedGlyph.example}</p>
+                        <p className="text-sm text-muted-foreground">{selectedGlyph.meaning}</p>
+                      </div>
+                      <span className="font-mandombe text-2xl text-gold">{selectedGlyph.exampleMandombe}</span>
                     </div>
-                    <span className="font-mandombe text-2xl text-gold">{selectedGlyph.example}</span>
                   </div>
-                </div>
+                )}
               </div>
 
               {/* Tracing canvas */}
