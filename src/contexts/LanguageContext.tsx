@@ -172,6 +172,20 @@ const translations: Record<Language, Record<string, string>> = {
     "flashcards.backToDecks": "Retour",
     "flashcards.noCards": "Aucune fiche pour le moment. Créez votre première fiche !",
 
+    // Mandombe Script
+    "nav.mandombe": "Mandombe",
+    "mandombe.eyebrow": "Nsonokono Mandombe — Écriture sacrée",
+    "mandombe.title": "Apprendre l'écriture Mandombe",
+    "mandombe.subtitle": "Découvrez les glyphes du Mandombe, tracez-les du bout des doigts et apprenez à écrire la langue sacrée du peuple Kongo.",
+    "mandombe.vowels": "Voyelles",
+    "mandombe.reference": "Glyphe de référence",
+    "mandombe.exampleWord": "Mot exemple",
+    "mandombe.practice": "Pratiquez le tracé",
+    "mandombe.traceInstruction": "Tracez le glyphe sur le canevas ci-dessous. Activez le guide pour voir la forme à reproduire.",
+    "mandombe.guide": "Guide",
+    "mandombe.clear": "Effacer",
+    "mandombe.wordPractice": "Mots à pratiquer",
+
     // Footer
     "footer.description": "La Maison du Savoir — préserver et enseigner le Kikongo Lari et l'écriture Mandombe pour la diaspora Kongo et le monde.",
     "footer.learnTitle": "Apprendre",
