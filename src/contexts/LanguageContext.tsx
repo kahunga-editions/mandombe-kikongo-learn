@@ -333,6 +333,20 @@ const translations: Record<Language, Record<string, string>> = {
     "flashcards.backToDecks": "Back",
     "flashcards.noCards": "No cards yet. Create your first flashcard!",
 
+    // Mandombe Script
+    "nav.mandombe": "Mandombe",
+    "mandombe.eyebrow": "Nsonokono Mandombe — Sacred Script",
+    "mandombe.title": "Learn the Mandombe Script",
+    "mandombe.subtitle": "Discover the Mandombe glyphs, trace them with your fingertips and learn to write the sacred language of the Kongo people.",
+    "mandombe.vowels": "Vowels",
+    "mandombe.reference": "Reference glyph",
+    "mandombe.exampleWord": "Example word",
+    "mandombe.practice": "Practice tracing",
+    "mandombe.traceInstruction": "Trace the glyph on the canvas below. Toggle the guide to see the shape to reproduce.",
+    "mandombe.guide": "Guide",
+    "mandombe.clear": "Clear",
+    "mandombe.wordPractice": "Words to practice",
+
     // Footer
     "footer.description": "The House of Knowledge — preserving and teaching Kikongo Lari and the Mandombe script for the Kongo diaspora and the world.",
     "footer.learnTitle": "Learn",
