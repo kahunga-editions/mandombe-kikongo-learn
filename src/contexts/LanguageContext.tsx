@@ -184,6 +184,7 @@ const translations: Record<Language, Record<string, string>> = {
     "mandombe.traceInstruction": "Tracez le glyphe sur le canevas ci-dessous. Activez le guide pour voir la forme à reproduire.",
     "mandombe.guide": "Guide",
     "mandombe.clear": "Effacer",
+    "mandombe.animate": "Animer",
     "mandombe.wordPractice": "Mots à pratiquer",
 
     // Footer
