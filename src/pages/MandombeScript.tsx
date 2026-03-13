@@ -455,7 +455,7 @@ const MandombeScript = () => {
                       : "bg-muted text-muted-foreground hover:bg-muted/80"
                   }`}
                 >
-                  {g.name === "vowels" ? t("mandombe.vowels") : g.name}
+                  {g.name === "vowels" ? "Bisimba" : g.name}
                 </button>
               ))}
             </div>
