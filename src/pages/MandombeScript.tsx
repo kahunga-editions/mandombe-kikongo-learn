@@ -338,14 +338,14 @@ const allSpecialGroups: GroupDef[] = [
 ];
 
 const allGroupDefs: GroupDef[] = [
-  { name: "vowels", label: "Mazita (Voyelles)", syllables: vowels },
+  { name: "vowels", label: "Bisimba (Voyelles)", syllables: vowels },
   ...consonantGroups,
   ...allSpecialGroups,
 ];
 
 // Section categories for tab organization
 const sectionTabs = [
-  { id: "basic", label: "Mazita & Consonnes" },
+  { id: "basic", label: "Bisimba & Mvuala" },
   { id: "prenasalized", label: "Prénasalisées" },
   { id: "mazindinga", label: "Mazindinga" },
   { id: "special", label: "Vita · Kimpa · Ntalu" },
@@ -354,7 +354,7 @@ const sectionTabs = [
 const getSectionGroups = (sectionId: string): GroupDef[] => {
   switch (sectionId) {
     case "basic":
-      return [{ name: "vowels", label: "Mazita (Voyelles)", syllables: vowels }, ...consonantGroups];
+      return [{ name: "vowels", label: "Bisimba (Voyelles)", syllables: vowels }, ...consonantGroups];
     case "prenasalized":
       return prenasalizedGroups;
     case "mazindinga":
@@ -455,7 +455,7 @@ const MandombeScript = () => {
                       : "bg-muted text-muted-foreground hover:bg-muted/80"
                   }`}
                 >
-                  {g.name === "vowels" ? t("mandombe.vowels") : g.name}
+                  {g.name === "vowels" ? "Bisimba" : g.name}
                 </button>
               ))}
             </div>
