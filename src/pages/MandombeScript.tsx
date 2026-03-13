@@ -4,11 +4,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import GlyphTracingCanvas from "@/components/GlyphTracingCanvas";
 import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-// Mandombe syllabary — ALL examples are verified Kikongo Lari words from project dictionary
-// glyph = accent-free Latin for Mandombe font | example/exampleMandombe from lessons.ts
 interface SyllableEntry {
   glyph: string;
   label: string;
@@ -17,12 +14,13 @@ interface SyllableEntry {
   meaning: string;
 }
 
+// Vowels in canonical dimensionalization order: i, u, e, o, a
 const vowels: SyllableEntry[] = [
-  { glyph: "a", label: "A", example: "Ani", exampleMandombe: "Ani", meaning: "Mon, ma, mes / My, mine" },
-  { glyph: "e", label: "E", example: "", exampleMandombe: "", meaning: "" },
-  { glyph: "i", label: "I", example: "", exampleMandombe: "", meaning: "" },
-  { glyph: "o", label: "O", example: "", exampleMandombe: "", meaning: "" },
-  { glyph: "u", label: "U", example: "", exampleMandombe: "", meaning: "" },
+  { glyph: "i", label: "I", example: "", exampleMandombe: "", meaning: "i = Intériorité / Innerness" },
+  { glyph: "u", label: "U", example: "", exampleMandombe: "", meaning: "u = Principe féminin / Feminine principle" },
+  { glyph: "e", label: "E", example: "", exampleMandombe: "", meaning: "e = Réception / Reception" },
+  { glyph: "o", label: "O", example: "", exampleMandombe: "", meaning: "o = Ascension / Ascension" },
+  { glyph: "a", label: "A", example: "Ani", exampleMandombe: "Ani", meaning: "a = Manifestation — Ani: Mon, ma / My, mine" },
 ];
 
 const consonantGroups = [
@@ -66,7 +64,7 @@ const consonantGroups = [
     name: "L",
     syllables: [
       { glyph: "la", label: "LA", example: "Lamba", exampleMandombe: "Lamba", meaning: "Cuisiner / To cook" },
-      { glyph: "le", label: "LE", example: "Lemba", exampleMandombe: "Lemba", meaning: "École initiatique Kongo / Kongo initiation school" },
+      { glyph: "le", label: "LE", example: "Lemba", exampleMandombe: "Lemba", meaning: "École initiatique / Initiation school" },
       { glyph: "li", label: "LI", example: "Linzolo", exampleMandombe: "Linzolo", meaning: "Linzolo (localité)" },
       { glyph: "lo", label: "LO", example: "Longa", exampleMandombe: "Longa", meaning: "Enseigner / To teach" },
       { glyph: "lu", label: "LU", example: "Lumbu", exampleMandombe: "Lumbu", meaning: "Jour / Day" },
@@ -96,7 +94,7 @@ const consonantGroups = [
     syllables: [
       { glyph: "sa", label: "SA", example: "Sala", exampleMandombe: "Sala", meaning: "Travailler / To work" },
       { glyph: "se", label: "SE", example: "Sema", exampleMandombe: "Sema", meaning: "Bénir / To bless" },
-      { glyph: "si", label: "SI", example: "Sika", exampleMandombe: "Sika", meaning: "Jouer d'un instrument / To play an instrument" },
+      { glyph: "si", label: "SI", example: "Sika", exampleMandombe: "Sika", meaning: "Jouer d'un instrument / To play" },
       { glyph: "su", label: "SU", example: "Sukula", exampleMandombe: "Sukula", meaning: "Laver / To wash" },
     ] as SyllableEntry[],
   },
@@ -107,12 +105,13 @@ const consonantGroups = [
       { glyph: "te", label: "TE", example: "Teka", exampleMandombe: "Teka", meaning: "Puiser / To draw water" },
       { glyph: "ti", label: "TI", example: "Tinta", exampleMandombe: "Tinta", meaning: "Couleur / Color" },
       { glyph: "to", label: "TO", example: "Tonda", exampleMandombe: "Tonda", meaning: "Remercier / To thank" },
-      { glyph: "tu", label: "TU", example: "Tuba", exampleMandombe: "Tuba", meaning: "Dire, parler / To say, to speak" },
+      { glyph: "tu", label: "TU", example: "Tuba", exampleMandombe: "Tuba", meaning: "Dire, parler / To say" },
     ] as SyllableEntry[],
   },
   {
     name: "V",
     syllables: [
+      { glyph: "va", label: "VA", example: "Vunga", exampleMandombe: "Vunga", meaning: "Couverture / Blanket" },
       { glyph: "vu", label: "VU", example: "Vungula", exampleMandombe: "Vungula", meaning: "Ouvrir / To open" },
     ] as SyllableEntry[],
   },
@@ -145,27 +144,253 @@ const consonantGroups = [
   },
 ];
 
+// Prenasalized consonants
+const prenasalizedGroups = [
+  {
+    name: "MB",
+    syllables: [
+      { glyph: "mba", label: "MBA", example: "Mba", exampleMandombe: "Mba", meaning: "Le feu manifesté / The manifested fire" },
+      { glyph: "mbi", label: "MBI", example: "Mbi", exampleMandombe: "Mbi", meaning: "Le feu intérieur / The inner fire" },
+    ] as SyllableEntry[],
+  },
+  {
+    name: "ND",
+    syllables: [
+      { glyph: "ndu", label: "NDU", example: "Ndumba", exampleMandombe: "Ndumba", meaning: "Jeune fille / Young girl" },
+    ] as SyllableEntry[],
+  },
+  {
+    name: "NG",
+    syllables: [
+      { glyph: "ngu", label: "NGU", example: "Nguba", exampleMandombe: "Nguba", meaning: "Cacahuète, arachide / Peanut" },
+      { glyph: "nge", label: "NGE", example: "Nge", exampleMandombe: "Nge", meaning: "Tu, toi, te / You" },
+      { glyph: "ngu", label: "NGU (2)", example: "Ngumba", exampleMandombe: "Ngumba", meaning: "Porc-épic / Porcupine" },
+    ] as SyllableEntry[],
+  },
+  {
+    name: "MF",
+    syllables: [
+      { glyph: "mfi", label: "MFI", example: "Mfinda", exampleMandombe: "Mfinda", meaning: "Le bois / The wood, forest" },
+      { glyph: "mfu", label: "MFU", example: "Mfuka", exampleMandombe: "Mfuka", meaning: "Dette, dette énergétique / Debt, energetic debt" },
+    ] as SyllableEntry[],
+  },
+  {
+    name: "NK",
+    syllables: [
+      { glyph: "nku", label: "NKU", example: "Nkunki", exampleMandombe: "Nkunki", meaning: "Une bosse / A bump" },
+      { glyph: "nku", label: "NKU (2)", example: "Nkuba", exampleMandombe: "Nkuba", meaning: "Défaite, raclée / Defeat" },
+      { glyph: "nku", label: "NKU (3)", example: "Nkuala", exampleMandombe: "Nkuala", meaning: "Natte / Mat" },
+    ] as SyllableEntry[],
+  },
+  {
+    name: "NL",
+    syllables: [
+      { glyph: "nle", label: "NLE", example: "Nleke", exampleMandombe: "Nleke", meaning: "Cadet(te), plus jeune / Youngest" },
+      { glyph: "nlu", label: "NLU", example: "Nlumi", exampleMandombe: "Nlumi", meaning: "Époux, mari / Husband" },
+      { glyph: "nlo", label: "NLO", example: "Nlonga", exampleMandombe: "Nlonga", meaning: "File, alignement / Line, row" },
+    ] as SyllableEntry[],
+  },
+  {
+    name: "MV",
+    syllables: [
+      { glyph: "mvi", label: "MVI", example: "Mvita", exampleMandombe: "Mvita", meaning: "Combat, guerre / War, combat" },
+      { glyph: "mvu", label: "MVU", example: "Mvukani", exampleMandombe: "Mvukani", meaning: "Réunion / Meeting" },
+      { glyph: "mvu", label: "MVU (2)", example: "Mvula", exampleMandombe: "Mvula", meaning: "Année, pluie, âge / Year, rain, age" },
+      { glyph: "mvu", label: "MVU (3)", example: "Mvutu", exampleMandombe: "Mvutu", meaning: "Réponse / Answer" },
+    ] as SyllableEntry[],
+  },
+  {
+    name: "NS",
+    syllables: [
+      { glyph: "nsa", label: "NSA", example: "Nsala", exampleMandombe: "Nsala", meaning: "Crevettes, écrevisses / Shrimp" },
+      { glyph: "nsa", label: "NSA (2)", example: "Nsaka", exampleMandombe: "Nsaka", meaning: "Le jeu / The game" },
+      { glyph: "nsa", label: "NSA (3)", example: "Nsa", exampleMandombe: "Nsa", meaning: "Acidité / Acidity" },
+      { glyph: "nse", label: "NSE", example: "Nsende", exampleMandombe: "Nsende", meaning: "Épines / Thorns" },
+      { glyph: "nsi", label: "NSI", example: "Nsi", exampleMandombe: "Nsi", meaning: "Terre, pays, dimension / Land, country" },
+      { glyph: "nso", label: "NSO", example: "Nsoni", exampleMandombe: "Nsoni", meaning: "Honte / Shame" },
+      { glyph: "nsu", label: "NSU", example: "Nsuki", exampleMandombe: "Nsuki", meaning: "Cheveux / Hair" },
+    ] as SyllableEntry[],
+  },
+  {
+    name: "NT",
+    syllables: [
+      { glyph: "nta", label: "NTA", example: "Ntalu", exampleMandombe: "Ntalu", meaning: "Prix, valeur, chiffres / Price, value" },
+      { glyph: "nte", label: "NTE", example: "Ntete", exampleMandombe: "Ntete", meaning: "Le premier / The first" },
+      { glyph: "nti", label: "NTI", example: "Ntima", exampleMandombe: "Ntima", meaning: "Le cœur / The heart" },
+      { glyph: "nto", label: "NTO", example: "Nto", exampleMandombe: "Nto", meaning: "Rivière / River" },
+      { glyph: "ntu", label: "NTU", example: "Ntulu", exampleMandombe: "Ntulu", meaning: "Poitrine / Chest" },
+    ] as SyllableEntry[],
+  },
+  {
+    name: "NY",
+    syllables: [
+      { glyph: "nya", label: "NYA", example: "Nyama", exampleMandombe: "Nyama", meaning: "Viande / Meat" },
+    ] as SyllableEntry[],
+  },
+];
+
+// Mazita ma mazindinga — Migratory characters
+const mazindingaGroup = [
+  {
+    name: "SH",
+    label: "Mazita ma mazindinga",
+    syllables: [
+      { glyph: "shi", label: "SHI", example: "Shisa", exampleMandombe: "Shisa", meaning: "Laisser, abandonner / To leave" },
+    ] as SyllableEntry[],
+  },
+  {
+    name: "J",
+    syllables: [
+      { glyph: "ji", label: "JI", example: "Jibula", exampleMandombe: "Jibula", meaning: "Ouvrir / To open" },
+      { glyph: "ji", label: "JI (2)", example: "Jimbakana", exampleMandombe: "Jimbakana", meaning: "Oublier / To forget" },
+      { glyph: "ja", label: "JA", example: "Jango", exampleMandombe: "Jango", meaning: "Danse Kongo de Cuba / Kongo dance from Cuba" },
+    ] as SyllableEntry[],
+  },
+  {
+    name: "DJ",
+    syllables: [
+      { glyph: "dja", label: "DJA", example: "Djambala", exampleMandombe: "Djambala", meaning: "Commune du Pool, Kongo Mfua / Town in the Pool" },
+    ] as SyllableEntry[],
+  },
+  {
+    name: "NZ",
+    syllables: [
+      { glyph: "nzo", label: "NZO", example: "Nzo", exampleMandombe: "Nzo", meaning: "Maison / House" },
+      { glyph: "nza", label: "NZA", example: "Nzambi", exampleMandombe: "Nzambi", meaning: "Être de la 15e dimension / Being of the 15th dimension" },
+    ] as SyllableEntry[],
+  },
+  {
+    name: "TSH",
+    syllables: [
+      { glyph: "tshi", label: "TSHI", example: "Tshiba", exampleMandombe: "Tshiba", meaning: "Esprit, être sans corps / Spirit, being without body" },
+      { glyph: "tshu", label: "TSHU", example: "Tshula", exampleMandombe: "Tshula", meaning: "Crapaud / Toad" },
+    ] as SyllableEntry[],
+  },
+];
+
+// N'K — Ntentia (apostrophe)
+const ntentiaGroup = [
+  {
+    name: "N'K",
+    label: "Ntentia (apostrophe)",
+    syllables: [
+      { glyph: "n'ke", label: "N'KE", example: "N'kento", exampleMandombe: "N'kento", meaning: "Femme / Woman" },
+      { glyph: "n'ka", label: "N'KA", example: "N'kama", exampleMandombe: "N'kama", meaning: "Épouses d'un lignage / Wives of a lineage" },
+    ] as SyllableEntry[],
+  },
+];
+
+// Vita — Complementary vowels
+const vitaGroup = [
+  {
+    name: "VITA",
+    label: "Vita — Voyelles complémentaires",
+    syllables: [
+      { glyph: "ia", label: "IA", example: "Dia", exampleMandombe: "Dia", meaning: "Manger / To eat" },
+      { glyph: "ue", label: "UE", example: "Bue", exampleMandombe: "Bue", meaning: "Comment, qu'est-ce que / How, what" },
+      { glyph: "io", label: "IO", example: "Dio", exampleMandombe: "Dio", meaning: "Le (ex: yika dio = ajoute-le) / The, it" },
+    ] as SyllableEntry[],
+  },
+];
+
+// Kimpa — Complementary vowels
+const kimpaGroup = [
+  {
+    name: "KIMPA",
+    label: "Kimpa — Voyelles complémentaires",
+    syllables: [
+      { glyph: "ui", label: "UI", example: "Kuizila", exampleMandombe: "Kuizila", meaning: "Forme qui vient de venir / Form that just arrived" },
+      { glyph: "iu", label: "IU", example: "Biu", exampleMandombe: "Biu", meaning: "" },
+    ] as SyllableEntry[],
+  },
+];
+
+// Ntalu — Numbers 0-9
+const ntaluGroup = [
+  {
+    name: "NTALU",
+    label: "Ntalu — Chiffres / Numbers",
+    syllables: [
+      { glyph: "0", label: "0", example: "Mpavala", exampleMandombe: "Mpavala", meaning: "Zéro / Zero" },
+      { glyph: "1", label: "1", example: "Moshi", exampleMandombe: "Moshi", meaning: "Un / One" },
+      { glyph: "2", label: "2", example: "Zole", exampleMandombe: "Zole", meaning: "Deux / Two" },
+      { glyph: "3", label: "3", example: "Tatu", exampleMandombe: "Tatu", meaning: "Trois / Three" },
+      { glyph: "4", label: "4", example: "Ya", exampleMandombe: "Ya", meaning: "Quatre / Four" },
+      { glyph: "5", label: "5", example: "Tanu", exampleMandombe: "Tanu", meaning: "Cinq / Five" },
+      { glyph: "6", label: "6", example: "Sambanu", exampleMandombe: "Sambanu", meaning: "Six / Six" },
+      { glyph: "7", label: "7", example: "Nsambuadi", exampleMandombe: "Nsambuadi", meaning: "Sept / Seven" },
+      { glyph: "8", label: "8", example: "Nana", exampleMandombe: "Nana", meaning: "Huit / Eight" },
+      { glyph: "9", label: "9", example: "Vua", exampleMandombe: "Vua", meaning: "Neuf / Nine" },
+    ] as SyllableEntry[],
+  },
+];
+
+// Combine all special groups into a flat structure for navigation
+type GroupDef = { name: string; label?: string; syllables: SyllableEntry[] };
+
+const allSpecialGroups: GroupDef[] = [
+  ...prenasalizedGroups,
+  ...mazindingaGroup,
+  ...ntentiaGroup,
+  ...vitaGroup,
+  ...kimpaGroup,
+  ...ntaluGroup,
+];
+
+const allGroupDefs: GroupDef[] = [
+  { name: "vowels", label: "Mazita (Voyelles)", syllables: vowels },
+  ...consonantGroups,
+  ...allSpecialGroups,
+];
+
+// Section categories for tab organization
+const sectionTabs = [
+  { id: "basic", label: "Mazita & Consonnes" },
+  { id: "prenasalized", label: "Prénasalisées" },
+  { id: "mazindinga", label: "Mazindinga" },
+  { id: "special", label: "Vita · Kimpa · Ntalu" },
+];
+
+const getSectionGroups = (sectionId: string): GroupDef[] => {
+  switch (sectionId) {
+    case "basic":
+      return [{ name: "vowels", label: "Mazita (Voyelles)", syllables: vowels }, ...consonantGroups];
+    case "prenasalized":
+      return prenasalizedGroups;
+    case "mazindinga":
+      return [...mazindingaGroup, ...ntentiaGroup];
+    case "special":
+      return [...vitaGroup, ...kimpaGroup, ...ntaluGroup];
+    default:
+      return [];
+  }
+};
+
 const MandombeScript = () => {
   const { t } = useLanguage();
+  const [activeSection, setActiveSection] = useState("basic");
   const [activeGroup, setActiveGroup] = useState("vowels");
-  const [selectedGlyph, setSelectedGlyph] = useState(vowels[0]);
+  const [selectedGlyph, setSelectedGlyph] = useState<SyllableEntry>(vowels[0]);
 
-  const currentSyllables = activeGroup === "vowels"
-    ? vowels
-    : consonantGroups.find((g) => g.name === activeGroup)?.syllables || [];
+  const sectionGroups = getSectionGroups(activeSection);
 
-  const allGroups = ["vowels", ...consonantGroups.map((g) => g.name)];
-  const currentGroupIndex = allGroups.indexOf(activeGroup);
+  const currentSyllables =
+    allGroupDefs.find((g) => g.name === activeGroup)?.syllables || [];
 
-  const navigateGroup = (dir: -1 | 1) => {
-    const newIdx = currentGroupIndex + dir;
-    if (newIdx >= 0 && newIdx < allGroups.length) {
-      const newGroup = allGroups[newIdx];
-      setActiveGroup(newGroup);
-      const syllables = newGroup === "vowels"
-        ? vowels
-        : consonantGroups.find((g) => g.name === newGroup)?.syllables || [];
-      setSelectedGlyph(syllables[0]);
+  const handleSectionChange = (sectionId: string) => {
+    setActiveSection(sectionId);
+    const groups = getSectionGroups(sectionId);
+    if (groups.length > 0) {
+      setActiveGroup(groups[0].name);
+      setSelectedGlyph(groups[0].syllables[0]);
+    }
+  };
+
+  const handleGroupChange = (groupName: string) => {
+    setActiveGroup(groupName);
+    const group = allGroupDefs.find((g) => g.name === groupName);
+    if (group && group.syllables.length > 0) {
+      setSelectedGlyph(group.syllables[0]);
     }
   };
 
@@ -191,62 +416,65 @@ const MandombeScript = () => {
             </p>
           </div>
 
-          {/* Group navigation */}
-          <div className="max-w-5xl mx-auto mb-8">
-            <div className="flex items-center justify-center gap-2 mb-6">
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={() => navigateGroup(-1)}
-                disabled={currentGroupIndex === 0}
-                className="text-muted-foreground"
-              >
-                <ChevronLeft className="w-5 h-5" />
-              </Button>
-              <div className="flex flex-wrap justify-center gap-1.5">
+          <div className="max-w-5xl mx-auto">
+            {/* Section tabs */}
+            <div className="flex flex-wrap justify-center gap-2 mb-6">
+              {sectionTabs.map((tab) => (
                 <button
-                  onClick={() => { setActiveGroup("vowels"); setSelectedGlyph(vowels[0]); }}
+                  key={tab.id}
+                  onClick={() => handleSectionChange(tab.id)}
+                  className={`px-4 py-2 rounded-lg text-sm font-semibold transition-colors ${
+                    activeSection === tab.id
+                      ? "bg-primary text-primary-foreground shadow-md"
+                      : "bg-card text-muted-foreground hover:bg-muted border border-border"
+                  }`}
+                >
+                  {tab.label}
+                </button>
+              ))}
+            </div>
+
+            {/* Section description for mazindinga */}
+            {activeSection === "mazindinga" && (
+              <div className="text-center mb-4 bg-accent/10 rounded-lg px-4 py-3 max-w-xl mx-auto">
+                <p className="text-sm text-muted-foreground italic">
+                  <span className="font-semibold text-foreground">Mazita ma mazindinga</span> — Caractères migratoires
+                </p>
+              </div>
+            )}
+
+            {/* Group navigation */}
+            <div className="flex flex-wrap justify-center gap-1.5 mb-8">
+              {sectionGroups.map((g) => (
+                <button
+                  key={g.name}
+                  onClick={() => handleGroupChange(g.name)}
                   className={`px-3 py-1.5 rounded-md text-sm font-semibold transition-colors ${
-                    activeGroup === "vowels"
+                    activeGroup === g.name
                       ? "bg-primary text-primary-foreground"
                       : "bg-muted text-muted-foreground hover:bg-muted/80"
                   }`}
                 >
-                  {t("mandombe.vowels")}
+                  {g.name === "vowels" ? t("mandombe.vowels") : g.name}
                 </button>
-                {consonantGroups.map((g) => (
-                  <button
-                    key={g.name}
-                    onClick={() => { setActiveGroup(g.name); setSelectedGlyph(g.syllables[0]); }}
-                    className={`px-3 py-1.5 rounded-md text-sm font-semibold transition-colors ${
-                      activeGroup === g.name
-                        ? "bg-primary text-primary-foreground"
-                        : "bg-muted text-muted-foreground hover:bg-muted/80"
-                    }`}
-                  >
-                    {g.name}-
-                  </button>
-                ))}
-              </div>
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={() => navigateGroup(1)}
-                disabled={currentGroupIndex === allGroups.length - 1}
-                className="text-muted-foreground"
-              >
-                <ChevronRight className="w-5 h-5" />
-              </Button>
+              ))}
             </div>
 
-            {/* Syllable selector */}
+            {/* Group label if available */}
+            {allGroupDefs.find((g) => g.name === activeGroup)?.label && (
+              <p className="text-center text-sm font-semibold text-accent mb-4">
+                {allGroupDefs.find((g) => g.name === activeGroup)?.label}
+              </p>
+            )}
+
+            {/* Syllable selector — glyphs in boxes */}
             <div className="flex justify-center gap-3 flex-wrap mb-10">
-              {currentSyllables.map((s) => (
+              {currentSyllables.map((s, idx) => (
                 <button
-                  key={s.label}
+                  key={`${s.label}-${idx}`}
                   onClick={() => setSelectedGlyph(s)}
                   className={`flex flex-col items-center gap-1 p-3 rounded-xl border-2 transition-all min-w-[72px] ${
-                    selectedGlyph.label === s.label
+                    selectedGlyph.label === s.label && selectedGlyph.example === s.example
                       ? "border-primary bg-primary/5 shadow-md"
                       : "border-border hover:border-primary/30 bg-card"
                   }`}
@@ -299,15 +527,15 @@ const MandombeScript = () => {
                 {t("mandombe.wordPractice")}
               </h2>
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-                {currentSyllables.filter((s) => s.example).map((s) => (
+                {currentSyllables.filter((s) => s.example).map((s, idx) => (
                   <div
-                    key={s.label}
+                    key={`${s.label}-${idx}`}
                     className="bg-card rounded-xl border border-border p-4 text-center hover:border-primary/30 transition-colors cursor-pointer"
                     onClick={() => setSelectedGlyph(s)}
                   >
                     <p className="font-mandombe text-2xl text-gold mb-1">{s.exampleMandombe}</p>
                     <p className="font-semibold text-sm text-foreground">{s.example}</p>
-                    <p className="text-xs text-muted-foreground mt-1">{s.meaning}</p>
+                    <p className="text-xs text-muted-foreground mt-1 line-clamp-2">{s.meaning}</p>
                   </div>
                 ))}
               </div>
