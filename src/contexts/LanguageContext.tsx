@@ -346,6 +346,7 @@ const translations: Record<Language, Record<string, string>> = {
     "mandombe.traceInstruction": "Trace the glyph on the canvas below. Toggle the guide to see the shape to reproduce.",
     "mandombe.guide": "Guide",
     "mandombe.clear": "Clear",
+    "mandombe.animate": "Animate",
     "mandombe.wordPractice": "Words to practice",
 
     // Footer
