@@ -345,7 +345,7 @@ const allGroupDefs: GroupDef[] = [
 
 // Section categories for tab organization
 const sectionTabs = [
-  { id: "basic", label: "Mazita & Consonnes" },
+  { id: "basic", label: "Bisimba & Mvuala" },
   { id: "prenasalized", label: "Prénasalisées" },
   { id: "mazindinga", label: "Mazindinga" },
   { id: "special", label: "Vita · Kimpa · Ntalu" },
