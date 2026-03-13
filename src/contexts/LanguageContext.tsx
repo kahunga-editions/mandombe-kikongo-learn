@@ -508,6 +508,7 @@ const translations: Record<Language, Record<string, string>> = {
     "mandombe.traceInstruction": "Trace o glifo na tela abaixo. Ative o guia para ver a forma a reproduzir.",
     "mandombe.guide": "Guia",
     "mandombe.clear": "Limpar",
+    "mandombe.animate": "Animar",
     "mandombe.wordPractice": "Palavras para praticar",
 
     // Footer
