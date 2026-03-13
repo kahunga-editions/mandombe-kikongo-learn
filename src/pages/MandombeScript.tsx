@@ -354,7 +354,7 @@ const sectionTabs = [
 const getSectionGroups = (sectionId: string): GroupDef[] => {
   switch (sectionId) {
     case "basic":
-      return [{ name: "vowels", label: "Mazita (Voyelles)", syllables: vowels }, ...consonantGroups];
+      return [{ name: "vowels", label: "Bisimba (Voyelles)", syllables: vowels }, ...consonantGroups];
     case "prenasalized":
       return prenasalizedGroups;
     case "mazindinga":
