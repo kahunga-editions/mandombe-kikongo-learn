@@ -338,7 +338,7 @@ const allSpecialGroups: GroupDef[] = [
 ];
 
 const allGroupDefs: GroupDef[] = [
-  { name: "vowels", label: "Mazita (Voyelles)", syllables: vowels },
+  { name: "vowels", label: "Bisimba (Voyelles)", syllables: vowels },
   ...consonantGroups,
   ...allSpecialGroups,
 ];
