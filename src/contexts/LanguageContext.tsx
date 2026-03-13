@@ -184,6 +184,7 @@ const translations: Record<Language, Record<string, string>> = {
     "mandombe.traceInstruction": "Tracez le glyphe sur le canevas ci-dessous. Activez le guide pour voir la forme à reproduire.",
     "mandombe.guide": "Guide",
     "mandombe.clear": "Effacer",
+    "mandombe.animate": "Animer",
     "mandombe.wordPractice": "Mots à pratiquer",
 
     // Footer
@@ -345,6 +346,7 @@ const translations: Record<Language, Record<string, string>> = {
     "mandombe.traceInstruction": "Trace the glyph on the canvas below. Toggle the guide to see the shape to reproduce.",
     "mandombe.guide": "Guide",
     "mandombe.clear": "Clear",
+    "mandombe.animate": "Animate",
     "mandombe.wordPractice": "Words to practice",
 
     // Footer
@@ -506,6 +508,7 @@ const translations: Record<Language, Record<string, string>> = {
     "mandombe.traceInstruction": "Trace o glifo na tela abaixo. Ative o guia para ver a forma a reproduzir.",
     "mandombe.guide": "Guia",
     "mandombe.clear": "Limpar",
+    "mandombe.animate": "Animar",
     "mandombe.wordPractice": "Palavras para praticar",
 
     // Footer
