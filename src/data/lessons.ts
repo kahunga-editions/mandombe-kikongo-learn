@@ -1191,7 +1191,7 @@ export const lessons: Lesson[] = [
         type: "fill-in-blank",
         sentence: "___ means 'road, street, path'",
         sentenceMandombe: "___",
-        blank: "balabalala",
+        blank: "balabala",
         hint: "A reduplicated Ba- word",
       },
     ],
