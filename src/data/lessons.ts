@@ -1072,7 +1072,7 @@ export const lessons: Lesson[] = [
       { lari: "Bakala | Babakala", mandombe: "Bakala | Babakala", french: "Mâle, homme, époux", english: "Male, man, husband" },
       { lari: "Bakisa", mandombe: "Bakisa", french: "Aider, assister, secourir", english: "To help, to assist, to rescue" },
       { lari: "Bakula", mandombe: "Bakula", french: "Expliquer, répondre", english: "To explain, to answer" },
-      { lari: "Bala", mandombe: "Bala", french: "Initier, petit", english: "To initiate; small" },
+      { lari: "Bala", mandombe: "Bala", french: "Enfants", english: "Children", portuguese: "Crianças", note: "Pluriel de muana" },
       { lari: "Baluka", mandombe: "Baluka", french: "Tourner, retourner", english: "To turn, to return" },
       { lari: "Balula", mandombe: "Balula", french: "Traduire, retourner", english: "To translate, to turn over" },
       { lari: "Bamba", mandombe: "Bamba", french: "Coudre, raccommoder", english: "To sew, to mend" },
