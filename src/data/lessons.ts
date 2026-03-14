@@ -5343,7 +5343,7 @@ export const lessons: Lesson[] = [
       { lari: "Mukumba | Mikumba", mandombe: "Mukumba | Mikumba", french: "Nombril | Nombrils", english: "Navel | Navels", portuguese: "Umbigo | Umbigos" },
       { lari: "Luketo", mandombe: "Luketo", french: "Reins", english: "Lower back, kidneys", portuguese: "Rins, lombar" },
       { lari: "Suku", mandombe: "Suku", french: "Postérieur", english: "Posterior, backside", portuguese: "Traseiro" },
-      { lari: "Tuku", mandombe: "Tuku", french: "Fesse", english: "Buttock", portuguese: "Nádega" },
+      { lari: "Taku", mandombe: "Taku", french: "Fesse", english: "Buttock", portuguese: "Nádega", note: "Aussi : le pied de l'arbre. Taku dia ba = le pied du palmier. Taku dia muti = le pied de l'arbre." },
       { lari: "Mataku", mandombe: "Mataku", french: "Fesses", english: "Buttocks", portuguese: "Nádegas" },
       // Arms & Hands
       { lari: "Koko", mandombe: "Koko", french: "Main, bras", english: "Hand, arm", portuguese: "Mão, braço" },
