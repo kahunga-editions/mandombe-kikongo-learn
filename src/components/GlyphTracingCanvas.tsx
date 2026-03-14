@@ -9,6 +9,16 @@ interface GlyphTracingCanvasProps {
 }
 
 const CANVAS_SIZE = 280;
+const FONT_NAME = "Masono Mandombe";
+
+// Wait for the Mandombe font to be available
+const waitForFont = async () => {
+  try {
+    await document.fonts.load(`120px '${FONT_NAME}'`);
+  } catch {
+    // Font API not supported or font not available, proceed anyway
+  }
+};
 
 const GlyphTracingCanvas = ({ glyph, label }: GlyphTracingCanvasProps) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -17,10 +27,16 @@ const GlyphTracingCanvas = ({ glyph, label }: GlyphTracingCanvasProps) => {
   const [hasDrawn, setHasDrawn] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
   const [animProgress, setAnimProgress] = useState(0);
+  const [fontReady, setFontReady] = useState(false);
   const animFrameRef = useRef<number>(0);
   const { t } = useLanguage();
 
-  // Render the glyph to an offscreen canvas and return it
+  // Ensure font is loaded
+  useEffect(() => {
+    waitForFont().then(() => setFontReady(true));
+  }, []);
+
+  // Render the glyph to an offscreen canvas using Mandombe font
   const renderGlyphOffscreen = useCallback(() => {
     const offscreen = document.createElement("canvas");
     offscreen.width = CANVAS_SIZE;
@@ -28,7 +44,7 @@ const GlyphTracingCanvas = ({ glyph, label }: GlyphTracingCanvasProps) => {
     const ctx = offscreen.getContext("2d");
     if (!ctx) return null;
 
-    ctx.font = "120px 'Masono Mandombe'";
+    ctx.font = `120px '${FONT_NAME}'`;
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
     ctx.fillStyle = "hsl(16, 70%, 45%)";
@@ -37,7 +53,7 @@ const GlyphTracingCanvas = ({ glyph, label }: GlyphTracingCanvasProps) => {
     return offscreen;
   }, [glyph]);
 
-  // Find the bounding box of non-transparent pixels in the offscreen glyph
+  // Find bounding box of visible pixels
   const getGlyphBounds = useCallback((offscreen: HTMLCanvasElement) => {
     const ctx = offscreen.getContext("2d");
     if (!ctx) return { left: 0, right: CANVAS_SIZE, top: 0, bottom: CANVAS_SIZE };
@@ -56,6 +72,7 @@ const GlyphTracingCanvas = ({ glyph, label }: GlyphTracingCanvasProps) => {
     return { left, right: right + 1, top, bottom: bottom + 1 };
   }, []);
 
+  // Draw guide: grid lines + transparent Mandombe glyph
   const drawGuide = useCallback(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -77,21 +94,23 @@ const GlyphTracingCanvas = ({ glyph, label }: GlyphTracingCanvasProps) => {
     ctx.stroke();
     ctx.setLineDash([]);
 
-    // Guide glyph
-    if (showGuide) {
-      ctx.font = "120px 'Masono Mandombe'";
+    // Guide glyph in Mandombe font (transparent)
+    if (showGuide && fontReady) {
+      ctx.font = `120px '${FONT_NAME}'`;
       ctx.textAlign = "center";
       ctx.textBaseline = "middle";
       ctx.fillStyle = "hsla(40, 80%, 55%, 0.15)";
       ctx.fillText(glyph, mid, canvas.height / 2 + 10);
     }
-  }, [glyph, showGuide]);
+  }, [glyph, showGuide, fontReady]);
 
   useEffect(() => {
     drawGuide();
   }, [drawGuide]);
 
-  // Smooth progressive reveal animation (like KONDE app)
+  // Animation: progressive reveal following Singini (entry point) concept
+  // In Mandombe, writing starts from the Singini and follows the consonant shape.
+  // We simulate this with a radial/directional reveal from the glyph's natural start point.
   const playAnimation = useCallback(() => {
     if (isAnimating) return;
     setIsAnimating(true);
@@ -115,56 +134,91 @@ const GlyphTracingCanvas = ({ glyph, label }: GlyphTracingCanvasProps) => {
       return;
     }
 
-    const totalFrames = 90; // ~1.5s at 60fps
+    // Find the Singini (entry point) - top-left most visible pixel of the glyph
+    const offCtx = offscreen.getContext("2d");
+    let singiniX = bounds.left;
+    let singiniY = bounds.top;
+    if (offCtx) {
+      const imgData = offCtx.getImageData(bounds.left, bounds.top, glyphWidth, glyphHeight);
+      outerLoop:
+      for (let y = 0; y < glyphHeight; y++) {
+        for (let x = 0; x < glyphWidth; x++) {
+          if (imgData.data[(y * glyphWidth + x) * 4 + 3] > 50) {
+            singiniX = bounds.left + x;
+            singiniY = bounds.top + y;
+            break outerLoop;
+          }
+        }
+      }
+    }
+
+    // Calculate max distance from singini to any corner of glyph bounds
+    const maxDist = Math.sqrt(
+      Math.max(
+        (bounds.right - singiniX) ** 2 + (bounds.bottom - singiniY) ** 2,
+        (singiniX - bounds.left) ** 2 + (bounds.bottom - singiniY) ** 2,
+        (bounds.right - singiniX) ** 2 + (singiniY - bounds.top) ** 2,
+        (singiniX - bounds.left) ** 2 + (singiniY - bounds.top) ** 2,
+      )
+    );
+
+    const totalFrames = 90;
     let frame = 0;
 
     const animate = () => {
       frame++;
       const progress = Math.min(frame / totalFrames, 1);
-      // Ease-out curve for natural writing feel
-      const easedProgress = 1 - Math.pow(1 - progress, 2);
+      // Ease-in-out for natural writing feel
+      const easedProgress = progress < 0.5
+        ? 2 * progress * progress
+        : 1 - Math.pow(-2 * progress + 2, 2) / 2;
 
-      // Redraw guide base
       drawGuide();
 
-      // Progressive reveal: sweep from left to right using clipping
-      const revealX = bounds.left + glyphWidth * easedProgress;
+      // Radial reveal from Singini point
+      const revealRadius = maxDist * easedProgress;
 
       ctx.save();
       ctx.beginPath();
-      ctx.rect(0, 0, revealX, CANVAS_SIZE);
+      ctx.arc(singiniX, singiniY, revealRadius, 0, Math.PI * 2);
       ctx.clip();
       ctx.drawImage(offscreen, 0, 0);
       ctx.restore();
 
-      // Draw pen tip indicator at the leading edge
-      if (progress < 1) {
-        // Find the vertical center of visible pixels at revealX column
-        const offCtx = offscreen.getContext("2d");
-        if (offCtx) {
-          const col = Math.floor(revealX);
-          const colData = offCtx.getImageData(Math.max(0, col - 1), bounds.top, 2, glyphHeight);
-          let sumY = 0, count = 0;
-          for (let y = 0; y < glyphHeight; y++) {
-            for (let dx = 0; dx < 2; dx++) {
-              if (colData.data[(y * 2 + dx) * 4 + 3] > 30) {
-                sumY += bounds.top + y;
-                count++;
-              }
-            }
-          }
-          if (count > 0) {
-            const tipY = sumY / count;
-            // Pen tip circle
-            ctx.beginPath();
-            ctx.arc(revealX, tipY, 6, 0, Math.PI * 2);
-            ctx.fillStyle = "hsl(40, 75%, 55%)";
-            ctx.fill();
-            ctx.strokeStyle = "hsl(40, 75%, 40%)";
-            ctx.lineWidth = 1.5;
-            ctx.stroke();
-          }
-        }
+      // Draw Singini marker (entry point)
+      if (progress < 0.15) {
+        ctx.beginPath();
+        ctx.arc(singiniX, singiniY, 5, 0, Math.PI * 2);
+        ctx.fillStyle = "hsl(0, 80%, 55%)";
+        ctx.fill();
+        ctx.strokeStyle = "hsl(0, 80%, 40%)";
+        ctx.lineWidth = 1.5;
+        ctx.stroke();
+
+        // Label
+        ctx.font = "10px sans-serif";
+        ctx.fillStyle = "hsl(0, 80%, 45%)";
+        ctx.textAlign = "left";
+        ctx.fillText("Singini", singiniX + 8, singiniY + 4);
+      }
+
+      // Draw pen tip at the edge of reveal
+      if (progress > 0.05 && progress < 1) {
+        // Find a visible pixel at the edge of the reveal radius
+        const angle = Math.atan2(
+          bounds.top + glyphHeight / 2 - singiniY,
+          bounds.left + glyphWidth / 2 - singiniX
+        ) + (progress - 0.5) * Math.PI * 0.5;
+        const tipX = singiniX + Math.cos(angle) * revealRadius;
+        const tipY = singiniY + Math.sin(angle) * revealRadius;
+
+        ctx.beginPath();
+        ctx.arc(tipX, tipY, 5, 0, Math.PI * 2);
+        ctx.fillStyle = "hsl(40, 75%, 55%)";
+        ctx.fill();
+        ctx.strokeStyle = "hsl(40, 75%, 40%)";
+        ctx.lineWidth = 1.5;
+        ctx.stroke();
       }
 
       setAnimProgress(Math.round(progress * 100));
@@ -172,7 +226,6 @@ const GlyphTracingCanvas = ({ glyph, label }: GlyphTracingCanvasProps) => {
       if (frame < totalFrames) {
         animFrameRef.current = requestAnimationFrame(animate);
       } else {
-        // Hold the completed glyph briefly, then fade back to guide
         setTimeout(() => {
           setIsAnimating(false);
           setAnimProgress(0);
@@ -181,7 +234,20 @@ const GlyphTracingCanvas = ({ glyph, label }: GlyphTracingCanvasProps) => {
       }
     };
 
-    animFrameRef.current = requestAnimationFrame(animate);
+    // Show Singini point first, then animate
+    drawGuide();
+    ctx.beginPath();
+    ctx.arc(singiniX, singiniY, 6, 0, Math.PI * 2);
+    ctx.fillStyle = "hsl(0, 80%, 55%)";
+    ctx.fill();
+    ctx.font = "11px sans-serif";
+    ctx.fillStyle = "hsl(0, 80%, 45%)";
+    ctx.textAlign = "left";
+    ctx.fillText("Singini ●", singiniX + 10, singiniY + 4);
+
+    setTimeout(() => {
+      animFrameRef.current = requestAnimationFrame(animate);
+    }, 800);
   }, [isAnimating, drawGuide, renderGlyphOffscreen, getGlyphBounds]);
 
   useEffect(() => {
