@@ -5393,6 +5393,13 @@ export const lessons: Lesson[] = [
       { lari: "Bilusu", mandombe: "Bilusu", french: "Du vomi, tout ce qu'on renvoie", english: "Vomit, anything regurgitated", portuguese: "Vômito, tudo o que se regurgita" },
       { lari: "Fukutila", mandombe: "Fukutila", french: "La morve", english: "Nasal mucus, snot", portuguese: "Ranho, muco nasal" },
       { lari: "Futikila", mandombe: "Futikila", french: "La morve", english: "Nasal mucus, snot", portuguese: "Ranho, muco nasal" },
+      // Additional body terms
+      { lari: "Bihakani", mandombe: "Bihakani", french: "Les poils des aisselles", english: "Armpit hair", portuguese: "Pelos das axilas" },
+      { lari: "Mulembo wa kulu", mandombe: "Mulembo wa kulu", french: "Un orteil", english: "A toe", portuguese: "Um dedo do pé" },
+      { lari: "Milembo mia malu", mandombe: "Milembo mia malu", french: "Des doigts de pied", english: "Toes", portuguese: "Dedos do pé" },
+      { lari: "Njevo | Manjevo", mandombe: "Njevo | Manjevo", french: "Moustache(s)", english: "Moustache(s)", portuguese: "Bigode(s)" },
+      { lari: "Nkundu", mandombe: "Nkundu", french: "Les poils pubiens", english: "Pubic hair", portuguese: "Pelos pubianos" },
+      { lari: "Mpakani", mandombe: "Mpakani", french: "Les aisselles", english: "Armpits", portuguese: "Axilas" },
     ],
     exercises: [
       // Exercise 1: Matching — Head & Face
