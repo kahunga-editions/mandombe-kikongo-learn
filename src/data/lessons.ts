@@ -12507,7 +12507,7 @@ export const lessons: Lesson[] = [
             { lari: "Na we ku nima nzo?", mandombe: "Na we ku nima nzo?", french: "Qui est derrière la maison ?", english: "Who is behind the house?" },
             { lari: "Ta Malongo ku nima nzo ke(na).", mandombe: "Ta Malongo ku nima nzo kena.", french: "Ta Malongo est derrière la maison.", english: "Ta Malongo is behind the house." },
             { lari: "Mulala ku nima nzo we(na).", mandombe: "Mulala ku nima nzo wena.", french: "L'oranger est derrière la maison.", english: "The orange tree is behind the house." },
-            { lari: "Ku nima nzo mulala we(na) ko.", mandombe: "Ku nima nzo mulala wena ko.", french: "Il y a un oranger derrière la maison.", english: "There is an orange tree behind the house.", note: "KO traduit « il y a » (uniquement pour le lieu)" },
+            { lari: "Ku nima nzo mulala we(na) ko.", mandombe: "Ku nima nzo mulala wena ko.", french: "Il y a un oranger derrière la maison. (KO traduit « il y a », uniquement pour le lieu)", english: "There is an orange tree behind the house. (KO = 'there is', location only)" },
           ],
         },
         {
