@@ -12069,7 +12069,7 @@ export const lessons: Lesson[] = [
             { lari: "Buku ku banda mfulu die(na).", mandombe: "Buku ku banda mfulu diena.", french: "Le livre est en bas du lit.", english: "The book is at the foot of the bed.", portuguese: "O livro está na parte inferior da cama." },
             { lari: "Mabuku ku banda mfulu me(na).", mandombe: "Mabuku ku banda mfulu mena.", french: "Les livres sont en bas du lit.", english: "The books are at the foot of the bed.", portuguese: "Os livros estão na parte inferior da cama." },
           ],
-          note: "La copule change selon la classe nominale : die(na) pour classe 5, ye(na) pour classe 9, me(na) pour pluriel classe 6.",
+          note: "La copule change selon la classe nominale : die(na) pour classe 5, ye(na) pour classe 9, me(na) pour pluriel classe 6, bie(na) pour classe 8 (bi-), we(na) pour classe 3 (mu-), mie(na) pour classe 4 (mi-), lue(na) pour classe 11 (lu-), tue(na) pour classe 13 (tu-), tshe(na) pour classe 7 (tshi-/ki-), ze(na) pour pluriel classe 10.",
           noteFr: "La copule change selon la classe nominale du sujet.",
         },
         {
