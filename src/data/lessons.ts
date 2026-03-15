@@ -12384,7 +12384,7 @@ export const lessons: Lesson[] = [
             { lari: "Nzo ani ha ndeko nto ye(na).", mandombe: "Nzo ani ha ndeko nto yena.", french: "Ma maison est à côté de la rivière.", english: "My house is next to the river." },
             { lari: "Muntu ha ndeko nti we(na).", mandombe: "Muntu ha ndeko nti wena.", french: "La personne est à côté de l'arbre.", english: "The person is next to the tree." },
             { lari: "Mundele ha ndeko nzo mikanda we(na).", mandombe: "Mundele ha ndeko nzo mikanda wena.", french: "Le Blanc est à côté de l'école.", english: "The white person is next to the school." },
-            { lari: "Ta Masamba ha ndeko nzo mikanda ke(na).", mandombe: "Ta Masamba ha ndeko nzo mikanda kena.", french: "Ta Masamba est à côté de l'école.", english: "Ta Masamba is next to the school.", note: "Nom propre → copule ke(na)" },
+            { lari: "Ta Masamba ha ndeko nzo mikanda ke(na).", mandombe: "Ta Masamba ha ndeko nzo mikanda kena.", french: "Ta Masamba est à côté de l'école. (Nom propre → copule ke(na))", english: "Ta Masamba is next to the school. (Proper name → copula ke(na))" },
             { lari: "Ba ha ndeko n'ti/muti die(na).", mandombe: "Ba ha ndeko nti diena.", french: "Le palmier est à côté de l'arbre.", english: "The palm tree is next to the tree." },
           ],
           note: "Ta Masamba est un nom propre, il n'est associé à aucune classe de mots, donc on utilise ke(na).",
