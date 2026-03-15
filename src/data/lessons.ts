@@ -12012,11 +12012,11 @@ export const lessons: Lesson[] = [
 
  {
   id: "locations-positions",
-  title: "Locations & Positions",
-  titleFr: "Lieux et positions — Nzo ya Nsi",
-  titlePt: "Locais e posições — Nzo ya Nsi",
-  titleLari: "Nzo ya Nsi — Ku banda, ku nkia, ha ntandu",
-  titleMandombe: "Nzo ya Nsi — Ku banda, ku nkia, ha ntandu",
+  title: "Mbuka — Locations & Positions",
+  titleFr: "Mbuka — Les lieux, les endroits",
+  titlePt: "Mbuka — Locais e posições",
+  titleLari: "Mbuka — Ku banda, ku nkia, ha ntandu",
+  titleMandombe: "Mbuka — Ku banda, ku nkia, ha ntandu",
   description: "Learn to express where things and people are located using Kikongo prepositions: ku banda (below/at the bottom), ku nkia (under), ha ntandu (above). Includes present and past tense.",
   descriptionFr: "Apprenez à exprimer où se trouvent les choses et les personnes en kikongo : ku banda (en bas), ku nkia (sous), ha ntandu (au-dessus). Avec présent et passé.",
   descriptionPt: "Aprenda a expressar onde estão as coisas e as pessoas em kikongo: ku banda (embaixo), ku nkia (sob), ha ntandu (acima). Com presente e passado.",
