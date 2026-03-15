@@ -2614,7 +2614,7 @@ export const lessons: Lesson[] = [
     description: "Explore words of consecration, crowning, inheritance, and calling — the Bia- root family from the dictionary.",
     descriptionFr: "Explorez les mots de consécration, couronnement, héritage et vocation — la famille de racines Bia- du dictionnaire.",
     descriptionPt: "Explore palavras de consagração, coroação, herança e vocação — a família de raízes Bia- do dicionário.",
-    level: "advanced" as const,
+    level: "advanced" ,
     icon: "👑",
     vocabulary: [
       { lari: "Bia", mandombe: "Biya", french: "Élu, promu", english: "Elected, promoted" },
@@ -2726,7 +2726,7 @@ export const lessons: Lesson[] = [
     description: "Discover the rich Bi- vocabulary for plants, insects, household objects, and natural phenomena from the Kilari dictionary.",
     descriptionFr: "Découvrez le riche vocabulaire Bi- pour les plantes, insectes, objets du quotidien et phénomènes naturels du dictionnaire kilari.",
     descriptionPt: "Descubra o rico vocabulário Bi- para plantas, insetos, objetos do quotidiano e fenómenos naturais do dicionário kilari.",
-    level: "intermediate" as const,
+    level: "intermediate" ,
     icon: "🌿",
     vocabulary: [
       { lari: "Bideka", mandombe: "Bideka", french: "Plantes d'ornementation en général", english: "Ornamental plants in general" },
@@ -2853,7 +2853,7 @@ export const lessons: Lesson[] = [
     description: "Master Ba- verbs for arguing, seizing, surprising, sticking, and emotional states from the Kilari dictionary.",
     descriptionFr: "Maîtrisez les verbes Ba- pour se disputer, saisir, surprendre, coller et les états émotionnels du dictionnaire kilari.",
     descriptionPt: "Domine os verbos Ba- para discutir, agarrar, surpreender, colar e estados emocionais do dicionário kilari.",
-    level: "intermediate" as const,
+    level: "intermediate" ,
     icon: "⚡",
     vocabulary: [
       { lari: "Baba", mandombe: "Baba", french: "Muet; être carbonisé; croûte", english: "Mute; carbonized; crust" },
@@ -2967,7 +2967,7 @@ export const lessons: Lesson[] = [
     description: "Learn Bo- vocabulary for striking, immersing, prospering, and physical world concepts from the Kilari dictionary.",
     descriptionFr: "Apprenez le vocabulaire Bo- pour frapper, immerger, prospérer et les concepts du monde physique du dictionnaire kilari.",
     descriptionPt: "Aprenda o vocabulário Bo- para bater, imergir, prosperar e conceitos do mundo físico do dicionário kilari.",
-    level: "intermediate" as const,
+    level: "intermediate" ,
     icon: "🌊",
     vocabulary: [
       { lari: "Bota", mandombe: "Bota", french: "Cogner, frapper, jeter à terre", english: "To hit, to strike, to throw down" },
@@ -3080,7 +3080,7 @@ export const lessons: Lesson[] = [
     description: "Explore advanced Bu- concepts for social bonds, spirituality, character traits, and community life from the Kilari dictionary.",
     descriptionFr: "Explorez les concepts avancés en Bu- pour les liens sociaux, la spiritualité, les traits de caractère et la vie communautaire du dictionnaire kilari.",
     descriptionPt: "Explore conceitos avançados em Bu- para laços sociais, espiritualidade, traços de carácter e vida comunitária do dicionário kilari.",
-    level: "advanced" as const,
+    level: "advanced" ,
     icon: "🕊️",
     vocabulary: [
       { lari: "Buntuadi", mandombe: "Buntuadi", french: "Alliance, entente, union communautaire", english: "Alliance, agreement, communal union" },
@@ -10890,11 +10890,11 @@ export const lessons: Lesson[] = [
         titlePt: "Palavras cruzadas — Vocabulário Yela & Sukula",
         gridSize: 8,
         clues: [
-          { answer: "SUKULA", clue: "To wash", clueFr: "Laver", cluePt: "Lavar", row: 0, col: 0, direction: "across" as const },
-          { answer: "LUSE", clue: "Face", clueFr: "Visage", cluePt: "Rosto", row: 0, col: 2, direction: "down" as const },
-          { answer: "YELA", clue: "To try", clueFr: "Essayer", cluePt: "Tentar", row: 2, col: 1, direction: "across" as const },
-          { answer: "LUTO", clue: "Spoon", clueFr: "Cuillère", cluePt: "Colher", row: 2, col: 3, direction: "down" as const },
-          { answer: "MOKO", clue: "Hands", clueFr: "Mains", cluePt: "Mãos", row: 5, col: 3, direction: "across" as const },
+          { answer: "SUKULA", clue: "To wash", clueFr: "Laver", cluePt: "Lavar", row: 0, col: 0, direction: "across"  },
+          { answer: "LUSE", clue: "Face", clueFr: "Visage", cluePt: "Rosto", row: 0, col: 2, direction: "down"  },
+          { answer: "YELA", clue: "To try", clueFr: "Essayer", cluePt: "Tentar", row: 2, col: 1, direction: "across"  },
+          { answer: "LUTO", clue: "Spoon", clueFr: "Cuillère", cluePt: "Colher", row: 2, col: 3, direction: "down"  },
+          { answer: "MOKO", clue: "Hands", clueFr: "Mains", cluePt: "Mãos", row: 5, col: 3, direction: "across"  },
         ],
       },
       // 11. Word search
@@ -12008,26 +12008,7 @@ export const lessons: Lesson[] = [
       },
     ],
   },
-  // ============================================================
-// FICHIER DE MISE À JOUR — src/data/lessons.ts
-// À AJOUTER dans le tableau lessons[] existant
-// ============================================================
-//
-// INSTRUCTIONS :
-// 1. Ouvrez src/data/lessons.ts dans GitHub (bouton Edit / crayon)
-// 2. Allez tout en bas, avant le ]; final
-// 3. Ajoutez une virgule après la dernière leçon existante
-// 4. Collez le contenu des SECTION 2 et SECTION 3 ci-dessous
-//
-// Pour les entrées dictionnaire (SECTION 1) :
-// Elles s'ajoutent automatiquement via la leçon "locations-positions"
-// et "gifler-wuinda" qui contiennent les nouveaux vocabulaires.
-// ============================================================
 
-
-// ============================================================
-// SECTION 1 — NOUVELLES ENTRÉES DICTIONNAIRE STANDALONE
-// À ajouter dans la leçon "greetings" existante OU dans une
 
  {
   id: "locations-positions",
@@ -12039,7 +12020,7 @@ export const lessons: Lesson[] = [
   description: "Learn to express where things and people are located using Kikongo prepositions: ku banda (below/at the bottom), ku nkia (under), ha ntandu (above). Includes present and past tense.",
   descriptionFr: "Apprenez à exprimer où se trouvent les choses et les personnes en kikongo : ku banda (en bas), ku nkia (sous), ha ntandu (au-dessus). Avec présent et passé.",
   descriptionPt: "Aprenda a expressar onde estão as coisas e as pessoas em kikongo: ku banda (embaixo), ku nkia (sob), ha ntandu (acima). Com presente e passado.",
-  level: "beginner" as const,
+ level: "beginner",
   icon: "🗺️",
   vocabulary: [
     { lari: "Ku banda", mandombe: "Ku banda", french: "En bas de, au bas de", english: "Below, at the bottom of", portuguese: "Embaixo de, na parte inferior" },
@@ -12152,7 +12133,7 @@ export const lessons: Lesson[] = [
   ],
   exercises: [
     {
-      type: "multiple-choice" as const,
+      type: "multiple-choice" ,
       question: "How do you say 'The book is under the bed'?",
       questionFr: "Comment dit-on 'Le livre est sous le lit' ?",
       options: ["Buku ha mfulu diena", "Buku ku nkia mfulu diena", "Buku ku banda mfulu diena", "Buku ku ntandu mfulu diena"],
@@ -12161,7 +12142,7 @@ export const lessons: Lesson[] = [
       explanationFr: "'Ku nkia' signifie 'sous'. 'Ku banda' signifie 'en bas de'.",
     },
     {
-      type: "multiple-choice" as const,
+      type: "multiple-choice" ,
       question: "What is the past tense copula for class 5 (die-) nouns?",
       questionFr: "Quelle est la copule au passé pour les noms de classe 5 ?",
       options: ["diena", "dieri", "die", "dieko"],
@@ -12170,15 +12151,15 @@ export const lessons: Lesson[] = [
       explanationFr: "La copule au passé remplace -(n)a par -ri : die(na) → dieri.",
     },
     {
-      type: "fill-in-blank" as const,
+      type: "fill-in-blank" ,
       sentence: "Tshula ___ lukaya tshena. (The toad is ON the leaf)",
       sentenceFr: "Tshula ___ lukaya tshena. (Le crapaud est SUR la feuille)",
       blank: "ha",
       hint: "'On top of / on' in Kikongo",
-      hintFr: "'Sur / au-dessus' en kikongo",
+      hintFr: "'Sr / au-dessus' en kikongo",
     },
     {
-      type: "matching" as const,
+      type: "matching" ,
       instruction: "Match each preposition with its meaning.",
       instructionFr: "Reliez chaque préposition à son sens.",
       pairs: [
@@ -12189,7 +12170,7 @@ export const lessons: Lesson[] = [
       ],
     },
     {
-      type: "fill-in-blank" as const,
+      type: "fill-in-blank" ,
       sentence: "Vungula ku nkia nkuala ___. (The key WAS under the mat — past tense)",
       sentenceFr: "Vungula ku nkia nkuala ___. (La clef ÉTAIT sous la natte — passé)",
       blank: "yeri",
@@ -12197,7 +12178,7 @@ export const lessons: Lesson[] = [
       hintFr: "Passé de ye(na)",
     },
     {
-      type: "multiple-choice" as const,
+      type: "multiple-choice" ,
       question: "What is the deeper meaning of NZARI (the name of the Kongo River)?",
       questionFr: "Quel est le sens profond de NZARI (le nom du fleuve Kongo) ?",
       options: ["Large river", "Universe of the Inner Sun", "Sacred water", "Blue river"],
@@ -12225,7 +12206,7 @@ export const lessons: Lesson[] = [
   description: "Learn to conjugate the verb 'wuinda' (to slap/to give a blow) in past and future tenses, with direct objects and subject variations.",
   descriptionFr: "Apprenez à conjuguer le verbe 'wuinda' (gifler, donner une gifle) au passé et au futur, avec les pronoms sujets et objets.",
   descriptionPt: "Aprenda a conjugar o verbo 'wuinda' (esbofetear, dar uma bofetada) no passado e no futuro, com pronomes sujeito e objeto.",
-  level: "intermediate" as const,
+  level: "intermediate" ,
   icon: "✋",
   vocabulary: [
     { lari: "Wuinda", mandombe: "Wuinda", french: "Gifler, donner une gifle", english: "To slap, to give a slap", portuguese: "Esbofetear, dar uma bofetada" },
@@ -12305,7 +12286,7 @@ export const lessons: Lesson[] = [
   ],
   exercises: [
     {
-      type: "multiple-choice" as const,
+      type: "multiple-choice" ,
       question: "What is the future tense particle in Kikongo Lari?",
       questionFr: "Quelle est la particule du futur en Kikongo Lari ?",
       options: ["Na", "Ka", "Mbo", "Ba"],
@@ -12314,7 +12295,7 @@ export const lessons: Lesson[] = [
       explanationFr: "'Mbo' se place avant le sujet pour former le futur.",
     },
     {
-      type: "multiple-choice" as const,
+      type: "multiple-choice" ,
       question: "How do you say 'He slapped me' in Kikongo Lari?",
       questionFr: "Comment dit-on 'Il m'a giflé(e)' en Kikongo Lari ?",
       options: ["Mbata ni wuindiri", "Mbata ka nguindiri", "Mbata mu wuindiri", "Mbo ka wuinda"],
@@ -12323,7 +12304,7 @@ export const lessons: Lesson[] = [
       explanationFr: "'Mbata ka nguindiri' = Il m'a giflé. 'Ka' = il/elle, 'nguindiri' = m'a giflé.",
     },
     {
-      type: "matching" as const,
+      type: "matching" ,
       instruction: "Match each sentence with its translation.",
       instructionFr: "Reliez chaque phrase à sa traduction.",
       pairs: [
@@ -12334,7 +12315,7 @@ export const lessons: Lesson[] = [
       ],
     },
     {
-      type: "fill-in-blank" as const,
+      type: "fill-in-blank" ,
       sentence: "Mbo ___ wuinda muntu mbata (We will slap someone)",
       sentenceFr: "Mbo ___ wuinda muntu mbata (Nous giflerons quelqu'un)",
       blank: "tu",
@@ -12342,7 +12323,7 @@ export const lessons: Lesson[] = [
       hintFr: "Pronom sujet 'nous'",
     },
     {
-      type: "fill-in-blank" as const,
+      type: "fill-in-blank" ,
       sentence: "Mbaji ___ ni wuinda muntu mbata (Tomorrow, I will slap someone)",
       sentenceFr: "Mbaji ___ ni wuinda muntu mbata (Demain, je giflerai quelqu'un)",
       blank: "mbo",
@@ -12350,7 +12331,7 @@ export const lessons: Lesson[] = [
       hintFr: "Particule du futur",
     },
     {
-      type: "multiple-choice" as const,
+      type: "multiple-choice" ,
       question: "Which sentence means 'You slapped someone'?",
       questionFr: "Quelle phrase signifie 'Tu as giflé quelqu'un' ?",
       options: ["Muntu ka wuindiri mbata", "Muntu wuindiri mbata", "Muntu lu wuindiri mbata", "Muntu ba wuindiri mbata"],
