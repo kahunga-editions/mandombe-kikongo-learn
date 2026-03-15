@@ -12407,7 +12407,7 @@ export const lessons: Lesson[] = [
           titleFr: "Identifier — Nka muana we ?",
           examples: [
             { lari: "Nka muana we?", mandombe: "Nka muana we?", french: "Quel enfant ?", english: "Which child?" },
-            { lari: "Wo wena na mpu.", mandombe: "Wo wena na mpu.", french: "Celui est avec le chapeau.", english: "The one with the hat.", note: "Le na est omis après wena pour éviter la dysphonie wena na → wena mpu." },
+            { lari: "Wo wena na mpu.", mandombe: "Wo wena na mpu.", french: "Celui est avec le chapeau. (Le na de 'avec' est omis après wena pour des raisons d'euphonie)", english: "The one with the hat. (The 'na' is omitted after wena for euphonic reasons)" },
             { lari: "Wo weri na mpu.", mandombe: "Wo weri na mpu.", french: "Celui était avec le chapeau.", english: "The one who had the hat." },
           ],
           note: "Ici le /na/ de 'avec' est omis après wena pour des raisons d'euphonie : wena na mpu serait dysphonique.",
