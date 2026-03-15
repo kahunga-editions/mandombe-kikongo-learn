@@ -2695,7 +2695,7 @@ export const lessons: Lesson[] = [
         pairs: [
           { left: "Bianga", right: "To summon" },
           { left: "Biangula", right: "To call loudly" },
-          { left: "Biangulu", right: "A call" },
+          { left: "Bingula", right: "A call" },
           { left: "Biangusu", right: "To be elected" },
         ],
       },
