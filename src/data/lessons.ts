@@ -12028,172 +12028,8 @@ export const lessons: Lesson[] = [
 // ============================================================
 // SECTION 1 — NOUVELLES ENTRÉES DICTIONNAIRE STANDALONE
 // À ajouter dans la leçon "greetings" existante OU dans une
-// nouvelle leçon dédiée. Voici le bloc vocabulary complet
-// avec vérification anti-doublons (zaba déjà présent → omis).
-// ============================================================
 
-// Nouveaux mots — prêts à intégrer dans lessons.ts
-// (ne pas copier ce commentaire, juste les objets)
-
-export const newVocabularyEntries = [
-  // === B ===
-  { lari: "Banda", mandombe: "Banda", french: "Battre, compacter, damer le sol", english: "To beat, to compact, to tamp the ground", portuguese: "Bater, compactar, pisar o chão" },
-  { lari: "Banda mbata", mandombe: "Banda mbata", french: "Gifler, taper", english: "To slap, to hit", portuguese: "Esbofetear, bater" },
-  { lari: "Banda", mandombe: "Banda", french: "Donner la route", english: "To give way, to lead the way", portuguese: "Dar caminho", note: "Sens de 'ouvrir/indiquer le chemin'" },
-  { lari: "Bandakasa", mandombe: "Bandakasa", french: "Se rapprocher", english: "To draw closer, to approach", portuguese: "Aproximar-se" },
-  { lari: "Mbandu", mandombe: "Mbandu", french: "Mbandu (côté, flanc)", english: "Side, flank", portuguese: "Lado, flanco" },
-  { lari: "Kimbanga", mandombe: "Kimbanga", french: "Ganglion", english: "Ganglion, lymph node", portuguese: "Gânglio" },
-  { lari: "Mbangela", mandombe: "Mbangela", french: "Le bâton", english: "The stick, the rod", portuguese: "O bastão, a vara" },
-  { lari: "Nganga | Banganga", mandombe: "Nganga | Banganga", french: "Le médecin énergétique", english: "The energetic healer, traditional doctor", portuguese: "O médico energético, curandeiro", note: "Nganga = singulier, Banganga = pluriel" },
-  { lari: "Mbangi", mandombe: "Mbangi", french: "Témoin de mariage", english: "Wedding witness, best man/maid of honor", portuguese: "Testemunha de casamento" },
-  { lari: "Mubangu | Mibangu", mandombe: "Mubangu | Mibangu", french: "Poutre des maisons", english: "House beam, roof beam", portuguese: "Viga das casas", note: "Mubangu = singulier, Mibangu = pluriel" },
-  { lari: "Wuinda mbata", mandombe: "Wuinda mbata", french: "Donner une gifle", english: "To give a slap", portuguese: "Dar uma bofetada" },
-
-  // === N ===
-  { lari: "Nzikulu", mandombe: "Nzikulu", french: "L'enterrement", english: "The burial, the funeral", portuguese: "O enterro, o funeral" },
-  { lari: "Ndiamu", mandombe: "Ndiamu", french: "L'enterrement", english: "The burial", portuguese: "O enterro", note: "Synonyme de Nzikulu" },
-
-  // === J ===
-  { lari: "Jimbakana", mandombe: "Jimbakana", french: "Se perdre, oublier, ne plus se souvenir", english: "To get lost, to forget, to no longer remember", portuguese: "Perder-se, esquecer, não se lembrar mais" },
-
-  // === Z ===
-  { lari: "Zim | Mazimi", mandombe: "Zim | Mazimi", french: "La grossesse", english: "Pregnancy", portuguese: "A gravidez", note: "Zim = singulier, Mazimi = pluriel" },
-  { lari: "Jimi", mandombe: "Jimi", french: "La grossesse", english: "Pregnancy", portuguese: "A gravidez", note: "Variante de Zim" },
-  { lari: "Zimi dia koko", mandombe: "Zimi diya koko", french: "Le biceps", english: "The bicep", portuguese: "O bíceps", note: "Litt. 'grosseur du bras'" },
-  { lari: "Zimi dia ntanga", mandombe: "Zimi diya ntanga", french: "Le mollet", english: "The calf (leg)", portuguese: "A panturrilha", note: "Litt. 'grosseur du mollet'" },
-  { lari: "Zinga", mandombe: "Zinga", french: "Emballer, enrouler, croiser les bras", english: "To wrap, to roll up, to cross one's arms", portuguese: "Embrulhar, enrolar, cruzar os braços" },
-  { lari: "Zinga moko", mandombe: "Zinga moko", french: "Croiser les bras", english: "To cross one's arms", portuguese: "Cruzar os braços" },
-  { lari: "Zingila", mandombe: "Zingila", french: "Durer, vivre longtemps, s'attarder", english: "To last, to live long, to linger", portuguese: "Durar, viver muito tempo, demorar-se" },
-  { lari: "Zinga", mandombe: "Zinga", french: "La fontaine", english: "The fountain, the spring", portuguese: "A fonte", note: "Sens différent de 'emballer'" },
-  { lari: "Zingu", mandombe: "Zingu", french: "La durée, la vie", english: "Duration, life", portuguese: "A duração, a vida" },
-  { lari: "Zingu kia muntu", mandombe: "Zingu kiya muntu", french: "La vie de l'humain", english: "The life of a human being", portuguese: "A vida do ser humano" },
-  { lari: "Nzingu | Muzingu | Mizingu", mandombe: "Nzingu | Muzingu | Mizingu", french: "Guerre", english: "War", portuguese: "Guerra" },
-  { lari: "Nzingula", mandombe: "Nzingula", french: "La dispute, les chicanes", english: "Dispute, quarrel, bickering", portuguese: "A disputa, as brigas" },
-  { lari: "Bizingumuka", mandombe: "Bizingumuka", french: "Les reptiles", english: "Reptiles", portuguese: "Os répteis" },
-  { lari: "Luziolo", mandombe: "Luziolo", french: "Les oiseaux", english: "Birds", portuguese: "Os pássaros" },
-  { lari: "Zitisa", mandombe: "Zitisa", french: "Respecter", english: "To respect", portuguese: "Respeitar" },
-  { lari: "Ziula", mandombe: "Ziula", french: "Déterrer", english: "To dig up, to unearth", portuguese: "Desenterrar" },
-  { lari: "Buzitu", mandombe: "Buzitu", french: "Le respect", english: "Respect", portuguese: "O respeito" },
-  { lari: "Nzizia | Muzizia", mandombe: "Nzizia | Muzizia", french: "Le froid", english: "Cold", portuguese: "O frio", note: "Nzizia = singulier, Muzizia = pluriel/intensif" },
-  { lari: "Nzo nkanda", mandombe: "Nzo nkanda", french: "L'école", english: "The school", portuguese: "A escola", note: "Litt. 'maison du livre/de l'écriture'" },
-  { lari: "Nzo ya ntoto", mandombe: "Nzo ya ntoto", french: "Maison en pisé (terre)", english: "Earthen house, rammed earth house", portuguese: "Casa de barro, casa de terra", note: "Construction en terre qui régule la température naturellement" },
-  { lari: "Zoba", mandombe: "Zoba", french: "Idiot", english: "Idiot, foolish", portuguese: "Idiota, tolo" },
-  { lari: "Buzoba", mandombe: "Buzoba", french: "Stupidité, idiotie", english: "Stupidity, foolishness", portuguese: "Estupidez, idiotice" },
-  { lari: "Nzobo", mandombe: "Nzobo", french: "La civette", english: "The civet (animal)", portuguese: "A civeta (animal)" },
-  { lari: "Zokozona", mandombe: "Zokozona", french: "Froisser, chiffonner", english: "To crumple, to crease", portuguese: "Amassar, enrugar" },
-  { lari: "Zolo | Zololo", mandombe: "Zolo | Zololo", french: "Aimer, vouloir, désirer", english: "To love, to want, to desire", portuguese: "Amar, querer, desejar" },
-  { lari: "Luzolo", mandombe: "Luzolo", french: "Amour", english: "Love", portuguese: "Amor" },
-  { lari: "Nzombo", mandombe: "Nzombo", french: "Liane du couvreur", english: "Roofer's vine, thatching vine", portuguese: "Cipó do cobrador, liana para cobertura" },
-  { lari: "Nzongo", mandombe: "Nzongo", french: "Charge de poudre", english: "Powder charge (gunpowder)", portuguese: "Carga de pólvora" },
-  { lari: "Zongo", mandombe: "Zongo", french: "Détonation, coup de fusil", english: "Detonation, gunshot", portuguese: "Detonação, tiro de espingarda" },
-  { lari: "Zonza", mandombe: "Zonza", french: "Parler", english: "To speak, to talk", portuguese: "Falar" },
-  { lari: "Zonzeka", mandombe: "Zonzeka", french: "Entasser, réunir", english: "To pile up, to gather together", portuguese: "Amontoar, reunir" },
-  { lari: "Nzonzi", mandombe: "Nzonzi", french: "Le défenseur, l'avocat", english: "The defender, the advocate, the lawyer", portuguese: "O defensor, o advogado" },
-  { lari: "Nzonzolo", mandombe: "Nzonzolo", french: "Langage", english: "Language, speech", portuguese: "Linguagem, fala" },
-  { lari: "Zu", mandombe: "Zu", french: "La voix", english: "The voice", portuguese: "A voz" },
-  { lari: "Kinsu", mandombe: "Kinsu", french: "Marmite", english: "Pot, cooking pot", portuguese: "Panela, tacho" },
-  { lari: "Nzundu", mandombe: "Nzundu", french: "Marteau", english: "Hammer", portuguese: "Martelo" },
-  { lari: "Zunga", mandombe: "Zunga", french: "Entourer", english: "To surround, to encircle", portuguese: "Rodear, cercar" },
-  { lari: "Zungana", mandombe: "Zungana", french: "Faire une ronde, tourner", english: "To go around, to turn in a circle", portuguese: "Fazer uma ronda, girar" },
-  { lari: "Nsungu", mandombe: "Nsungu", french: "Casserole", english: "Saucepan, casserole", portuguese: "Caçarola, frigideira" },
-  { lari: "Nzuzi", mandombe: "Nzuzi", french: "Chat tigre", english: "Wildcat, tiger cat", portuguese: "Gato selvagem, gato tigre" },
-  { lari: "Nzwengi", mandombe: "Nzwengi", french: "Fil de fer", english: "Wire, iron wire", portuguese: "Arame, fio de ferro" },
-
-  // === Y ===
-  { lari: "Mayuma", mandombe: "Mayuma", french: "Dispute", english: "Dispute, argument", portuguese: "Disputa, discussão" },
-  { lari: "Yumana", mandombe: "Yumana", french: "Se disputer", english: "To argue, to quarrel", portuguese: "Disputar-se, brigar" },
-  { lari: "Yuma", mandombe: "Yuma", french: "Enlever un vêtement, dépouiller", english: "To remove clothing, to strip", portuguese: "Tirar uma roupa, despojar" },
-  { lari: "Yundula", mandombe: "Yundula", french: "Élever, nourrir", english: "To raise, to nurture, to feed", portuguese: "Criar, alimentar, nutrir" },
-  { lari: "Kiyungila", mandombe: "Kiyungila", french: "Insecte", english: "Insect", portuguese: "Inseto" },
-  { lari: "Yunuka", mandombe: "Yunuka", french: "S'écouler", english: "To flow, to stream out", portuguese: "Escorrer, fluir" },
-  { lari: "Luzabu", mandombe: "Luzabu", french: "La connaissance", english: "Knowledge", portuguese: "O conhecimento" },
-  { lari: "Zabikisa", mandombe: "Zabikisa", french: "Avertir, faire connaître, annoncer", english: "To warn, to make known, to announce", portuguese: "Avisar, fazer conhecer, anunciar" },
-  { lari: "Zakala", mandombe: "Zakala", french: "S'asseoir", english: "To sit down", portuguese: "Sentar-se" },
-  { lari: "Zala", mandombe: "Zala", french: "Dépotoir pour balayures", english: "Rubbish heap, dump for sweepings", portuguese: "Lixeira, depósito de varreduras" },
-  { lari: "Nzala", mandombe: "Nzala", french: "Besoin, désir, faim", english: "Need, desire, hunger", portuguese: "Necessidade, desejo, fome" },
-  { lari: "Nzala mamba", mandombe: "Nzala mamba", french: "La soif", english: "Thirst", portuguese: "A sede", note: "Litt. 'faim d'eau'" },
-  { lari: "Luzala", mandombe: "Luzala", french: "L'ongle, la griffe", english: "The nail, the claw", portuguese: "A unha, a garra" },
-  { lari: "Nzalu", mandombe: "Nzalu", french: "La fourchette", english: "The fork", portuguese: "O garfo" },
-  { lari: "Nzanda", mandombe: "Nzanda", french: "Grande quantité", english: "Large quantity, abundance", portuguese: "Grande quantidade" },
-  { lari: "Minzanda", mandombe: "Minzanda", french: "Franges", english: "Fringes, tassels", portuguese: "Franjas" },
-  { lari: "Zandu", mandombe: "Zandu", french: "Le marché", english: "The market", portuguese: "O mercado" },
-  { lari: "Zanga", mandombe: "Zanga", french: "L'étang, le lac", english: "The pond, the lake", portuguese: "O lago, o tanque" },
-  { lari: "Zanga dia ntebe", mandombe: "Zanga diya ntebe", french: "Le marais", english: "The marsh, the swamp", portuguese: "O pântano" },
-  { lari: "Zangana", mandombe: "Zangana", french: "Se tenir en l'air au-dessus de quelque chose", english: "To hover above something", portuguese: "Pairar acima de algo" },
-  { lari: "Kizangu", mandombe: "Kizangu", french: "Piège à oiseaux", english: "Bird trap", portuguese: "Armadilha para pássaros" },
-  { lari: "Zanza", mandombe: "Zanza", french: "Le nid", english: "The nest", portuguese: "O ninho" },
-  { lari: "Nzari", mandombe: "Nzari", french: "Fleuve / Univers du Soleil Intérieur", english: "River / Universe of the Inner Sun", portuguese: "Rio / Universo do Sol Interior", note: "NZARI est le nom originel du fleuve Kongo. En Kikongo ancien, il signifie 'l'Univers du Soleil Intérieur', et non simplement 'fleuve'." },
-  { lari: "Nzari a mungua", mandombe: "Nzari a mungua", french: "La mer", english: "The sea", portuguese: "O mar", note: "Litt. 'fleuve de sel'" },
-  { lari: "Zavoni", mandombe: "Zavoni", french: "Le savon", english: "The soap", portuguese: "O sabão" },
-  { lari: "Nzazi", mandombe: "Nzazi", french: "La foudre", english: "Lightning, thunder", portuguese: "O raio, o trovão" },
-  { lari: "Zeba", mandombe: "Zeba", french: "Se promener", english: "To walk around, to stroll", portuguese: "Passear, caminhar" },
-  { lari: "Seka", mandombe: "Seka", french: "Tordre", english: "To twist, to wring", portuguese: "Torcer" },
-  { lari: "Bunzeki", mandombe: "Bunzeki", french: "Fourberie", english: "Trickery, deceitfulness", portuguese: "Trapaça, astúcia maligna" },
-  { lari: "Zeloka", mandombe: "Zeloka", french: "Rouiller, avoir ses règles", english: "To rust, to menstruate", portuguese: "Enferrujar, menstruar" },
-  { lari: "Zembeka", mandombe: "Zembeka", french: "Peser", english: "To weigh", portuguese: "Pesar" },
-  { lari: "Binzembele", mandombe: "Binzembele", french: "Boucles d'oreilles", english: "Earrings", portuguese: "Brincos" },
-  { lari: "Zenga nsamu", mandombe: "Zenga nsamu", french: "Trancher une affaire", english: "To settle a matter, to cut through a case", portuguese: "Cortar um assunto, resolver uma questão" },
-  { lari: "Zenga mambu", mandombe: "Zenga mambu", french: "Condamner, trancher les paroles", english: "To condemn, to pass judgment", portuguese: "Condenar, julgar" },
-  { lari: "Zengi", mandombe: "Zengi", french: "Le sot, l'insensé", english: "The fool, the senseless one", portuguese: "O tolo, o insensato" },
-  { lari: "Buzungi", mandombe: "Buzungi", french: "La bêtise", english: "Foolishness, stupidity", portuguese: "A tolice, a estupidez" },
-  { lari: "Nzonga", mandombe: "Nzonga", french: "Nouveau venu", english: "Newcomer", portuguese: "Recém-chegado" },
-  { lari: "Nzennze", mandombe: "Nzennze", french: "Grillon", english: "Cricket (insect)", portuguese: "Grilo (inseto)" },
-  { lari: "Nzieta", mandombe: "Nzieta", french: "L'épilepsie", english: "Epilepsy", portuguese: "A epilepsia" },
-  { lari: "Zika", mandombe: "Zika", french: "Enfouir", english: "To bury, to hide in the ground", portuguese: "Enterrar, soterrar" },
-  { lari: "Zikama", mandombe: "Zikama", french: "Être enterré", english: "To be buried", portuguese: "Estar enterrado" },
-  { lari: "Ziku", mandombe: "Ziku", french: "Le foyer", english: "The hearth, the home", portuguese: "O lar, a lareira" },
-  { lari: "Yangalala", mandombe: "Yangalala", french: "Se réjouir, exulter", english: "To rejoice, to exult", portuguese: "Alegrar-se, exultar" },
-  { lari: "Ni yangi", mandombe: "Ni yangi", french: "Léger", english: "Light (not heavy)", portuguese: "Leve" },
-  { lari: "Yanika", mandombe: "Yanika", french: "Boucaner, fumer", english: "To smoke (food), to cure", portuguese: "Defumar, curar no fumo" },
-  { lari: "Yarika", mandombe: "Yarika", french: "Vendre", english: "To sell", portuguese: "Vender" },
-  { lari: "Yaula", mandombe: "Yaula", french: "Gémir, soupirer", english: "To moan, to sigh", portuguese: "Gemer, suspirar" },
-  { lari: "Yaya", mandombe: "Yaya", french: "Fermenter, pétiller", english: "To ferment, to fizz", portuguese: "Fermentar, borbulhar", note: "Sens différent de Yaya = aîné(e)" },
-  { lari: "Yayana", mandombe: "Yayana", french: "S'embrouiller, se mettre en désordre", english: "To get tangled up, to become disordered", portuguese: "Embaralhar-se, desordenar-se" },
-  { lari: "Yebela", mandombe: "Yebela", french: "Se baigner", english: "To bathe, to swim", portuguese: "Banhar-se, nadar" },
-  { lari: "Yela", mandombe: "Yela", french: "Mûrir", english: "To ripen, to mature", portuguese: "Amadurecer" },
-  { lari: "Kie yela", mandombe: "Kie yela", french: "Mûr", english: "Ripe, mature", portuguese: "Maduro" },
-  { lari: "Buyelele", mandombe: "Buyelele", french: "La finesse, la ruse", english: "Finesse, cunning, cleverness", portuguese: "A fineza, a esperteza" },
-  { lari: "Yema", mandombe: "Yema", french: "Téter", english: "To suckle, to breastfeed", portuguese: "Mamar, amamentar" },
-  { lari: "Yembe", mandombe: "Yembe", french: "La mouche rouge", english: "The red fly", portuguese: "A mosca vermelha" },
-  { lari: "Yemeka", mandombe: "Yemeka", french: "Allaiter", english: "To breastfeed, to nurse", portuguese: "Amamentar" },
-  { lari: "Yengi", mandombe: "Yengi", french: "L'amitié", english: "Friendship", portuguese: "A amizade" },
-  { lari: "Yengo", mandombe: "Yengo", french: "Espoir frustré", english: "Frustrated hope, dashed hope", portuguese: "Esperança frustrada" },
-  { lari: "Yetana", mandombe: "Yetana", french: "Errer", english: "To wander, to roam", portuguese: "Errar, vagar" },
-  { lari: "Yetela", mandombe: "Yetela", french: "Se chauffer", english: "To warm oneself", portuguese: "Aquecer-se" },
-  { lari: "Luyi", mandombe: "Luyi", french: "Gifle", english: "Slap", portuguese: "Bofetada, tapa" },
-  { lari: "Yidika", mandombe: "Yidika", french: "Arranger, créer, fabriquer", english: "To arrange, to create, to make", portuguese: "Arranjar, criar, fabricar" },
-  { lari: "Yika", mandombe: "Yika", french: "Ajouter", english: "To add", portuguese: "Adicionar, acrescentar" },
-  { lari: "Yikama", mandombe: "Yikama", french: "Augmenter", english: "To increase, to grow", portuguese: "Aumentar, crescer" },
-  { lari: "Yina", mandombe: "Yina", french: "Demander plus, demander une augmentation", english: "To ask for more, to request a raise", portuguese: "Pedir mais, pedir aumento" },
-  { lari: "Yikidi", mandombe: "Yikidi", french: "Indique une action ayant succédé à une autre", english: "Indicates an action that followed another", portuguese: "Indica uma ação que sucedeu outra" },
-  { lari: "Yila", mandombe: "Yila", french: "Se coucher (au soleil)", english: "To lie down (in the sun)", portuguese: "Deitar-se (ao sol)" },
-  { lari: "Yilulu", mandombe: "Yilulu", french: "Rester longtemps dans un état", english: "To remain in a state for a long time", portuguese: "Permanecer muito tempo num estado" },
-  { lari: "Yimbila", mandombe: "Yimbila", french: "Chanter", english: "To sing", portuguese: "Cantar" },
-  { lari: "Yimina", mandombe: "Yimina", french: "Défendre, empêcher, refuser quelque chose", english: "To defend, to prevent, to refuse something", portuguese: "Defender, impedir, recusar algo" },
-  { lari: "Yindula", mandombe: "Yindula", french: "Changer de place, déplacer", english: "To change place, to move", portuguese: "Mudar de lugar, deslocar" },
-  { lari: "Yinga", mandombe: "Yinga", french: "Flatter pour obtenir, mendier", english: "To flatter to obtain, to beg", portuguese: "Lisonjear para obter, mendigar" },
-  { lari: "Yinga mbungu", mandombe: "Yinga mbungu", french: "Par-dessus", english: "Over, on top, above", portuguese: "Por cima, acima" },
-  { lari: "Yingana", mandombe: "Yingana", french: "Succéder", english: "To succeed, to follow after", portuguese: "Suceder, seguir" },
-  { lari: "Yingasa", mandombe: "Yingasa", french: "Remplacer quelque chose", english: "To replace something", portuguese: "Substituir algo" },
-  { lari: "Yinika", mandombe: "Yinika", french: "Rouir", english: "To ret (to soak fiber for softening)", portuguese: "Curtir, pôr de molho (fibras)" },
-  { lari: "Yituku", mandombe: "Yituku", french: "S'étonner", english: "To be surprised, to be amazed", portuguese: "Admirar-se, surpreender-se" },
-  { lari: "Yoka", mandombe: "Yoka", french: "Brûler quelque chose", english: "To burn something", portuguese: "Queimar algo" },
-  { lari: "Yoka", mandombe: "Yoka", french: "Surpasser, excéder", english: "To surpass, to exceed", portuguese: "Superar, exceder", note: "Sens différent de 'brûler'" },
-  { lari: "Biyoki", mandombe: "Biyoki", french: "Eau de vie, alcool fort", english: "Spirits, strong alcohol", portuguese: "Aguardente, álcool forte" },
-  { lari: "Yeta zandu", mandombe: "Yeta zandu", french: "Faire le message, porter une nouvelle au marché", english: "To spread news, to gossip at the market", portuguese: "Fazer recado, espalhar novidades no mercado" },
-  { lari: "Yubula", mandombe: "Yubula", french: "Muer (pour un serpent)", english: "To shed skin (snake)", portuguese: "Mudar de pele (cobra)" },
-  { lari: "Yuki", mandombe: "Yuki", french: "Cruche", english: "Jug, pitcher", portuguese: "Jarro, cântaro" },
-  { lari: "Yuku", mandombe: "Yuku", french: "S'habituer", english: "To get used to, to accustom oneself", portuguese: "Habituar-se, acostumar-se" },
-  { lari: "Yula", mandombe: "Yula", french: "Interroger", english: "To interrogate, to question", portuguese: "Interrogar, questionar" },
-  { lari: "Yukuta", mandombe: "Yukuta", french: "Se rassasier", english: "To be satisfied (with food), to be full", portuguese: "Saciar-se, ficar satisfeito" },
-];
-
-
-// ============================================================
-// SECTION 2 — NOUVELLE LEÇON : Positions et lieux (Nzo ya Nsi)
-// ============================================================
-
-export const lessonLocationsPositions = {
+ {
   id: "locations-positions",
   title: "Locations & Positions",
   titleFr: "Lieux et positions — Nzo ya Nsi",
@@ -12379,7 +12215,7 @@ export const lessonLocationsPositions = {
 // Conjugaison complète du verbe wuinda — passé et futur
 // ============================================================
 
-export const lessonWuindaMbata = {
+,{
   id: "wuinda-mbata",
   title: "The Verb Wuinda — Giving a Slap",
   titleFr: "Le verbe Wuinda — Donner une gifle",
@@ -12886,15 +12722,8 @@ export const lessonLocationsPositions = {
       explanationFr: "NZARI est le nom originel du fleuve Kongo. En Kikongo ancien, il signifie 'l'Univers du Soleil Intérieur' — et non simplement 'fleuve'.",
     },
   ],
-};
-
-
-// ============================================================
-// SECTION 3 — NOUVELLE LEÇON : Wuinda Mbata (La gifle)
-// Conjugaison complète du verbe wuinda — passé et futur
-// ============================================================
-
-export const lessonWuindaMbata = {
+},
+ {
   id: "wuinda-mbata",
   title: "The Verb Wuinda — Giving a Slap",
   titleFr: "Le verbe Wuinda — Donner une gifle",
