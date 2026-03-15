@@ -3828,7 +3828,7 @@ export const lessons: Lesson[] = [
       { lari: "Ndinga", mandombe: "Ndinga", french: "La langue (idiome)", english: "The language (idiom)" },
       { lari: "Zu|Mazu", mandombe: "Zu|Mazu", french: "La langue, la voix", english: "The language, the voice" },
       { lari: "Zonza", mandombe: "Zonza", french: "Parler", english: "To speak, to talk" },
-      { lari: "Nzozolo", mandombe: "Nzozolo", french: "La façon de parler", english: "The way of speaking" },
+      { lari: "Nzonzolo", mandombe: "Nzonzolo", french: "La façon de parler", english: "The way of speaking" },
       { lari: "Zinga", mandombe: "Zinga", french: "Enrouler", english: "To roll up, to wind" },
       { lari: "Jinga", mandombe: "Jinga", french: "Enrouler", english: "To roll up, to wind" },
       { lari: "Jika", mandombe: "Jika", french: "Enterrer, inhumer", english: "To bury, to inter" },
