@@ -2628,7 +2628,7 @@ export const lessons: Lesson[] = [
       { lari: "Biakati", mandombe: "Biyakati", french: "Entrailles, intestins, tripes", english: "Entrails, intestines" },
       { lari: "Bianga", mandombe: "Biyanga", french: "Appeler, faire venir, convoquer", english: "To call, to summon, to convene" },
       { lari: "Biangula", mandombe: "Biyangula", french: "Appeler à voix haute", english: "To call out loudly" },
-      { lari: "Biangulu", mandombe: "Biyangulu", french: "Appel", english: "A call, summons" },
+      { lari: "Bingula", mandombe: "Bingula", french: "Un appel", english: "A call, summons" },
       { lari: "Biangusu", mandombe: "Biyangusu", french: "Appeler, choisir, être élu, accepter", english: "To call, to choose, to be elected" },
       { lari: "Biampamba", mandombe: "Biyampamba", french: "Les choses, les biens", english: "Things, possessions, goods" },
       { lari: "Bibanzulu", mandombe: "Bibanzulu", french: "Les pensées, les soupçons", english: "Thoughts, suspicions" },
