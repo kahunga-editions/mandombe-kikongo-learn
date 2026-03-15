@@ -25,6 +25,7 @@ const buildDictionary = (): DictionaryEntry[] => {
   const entries: DictionaryEntry[] = [];
 
   for (const lesson of lessons) {
+    if (!lesson) continue;
     const cat = lesson.title;
     const catFr = lesson.titleFr || lesson.title;
     const catPt = lesson.titlePt || lesson.title;
