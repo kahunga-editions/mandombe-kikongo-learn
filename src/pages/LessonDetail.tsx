@@ -13,7 +13,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 const LessonDetail = () => {
   const { lessonId } = useParams<{ lessonId: string }>();
-  const lesson = lessons.find((l) => l && l.id === lessonId);
+  const lesson = (lessons || []).filter(Boolean).find((l) => l.id === lessonId);
   const [results, setResults] = useState<Record<number, boolean>>({});
   const [activeTab, setActiveTab] = useState<"learn" | "exercises">("learn");
   const { language, t } = useLanguage();
