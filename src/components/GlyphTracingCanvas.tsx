@@ -11,14 +11,244 @@ interface GlyphTracingCanvasProps {
 const CANVAS_SIZE = 280;
 const FONT_NAME = "Masono Mandombe";
 
-// Wait for the Mandombe font to be available
+// ─────────────────────────────────────────────────────────────────
+// MANDOMBE CANONICAL STROKE PATHS
+// Each glyph is described as an ordered list of SVG-style path
+// commands (relative to a 280×280 canvas). The first point of the
+// first stroke is the SINGINI (canonical entry point).
+//
+// The 5 and 2 shapes and their rotations/reflections are the basis.
+// Strokes follow the canonical teaching order:
+//   1. Start at Singini (top-left of the form)
+//   2. Trace horizontal top bar
+//   3. Descend vertical
+//   4. Trace bottom horizontal
+//   5. (For 5-shape) small interior notch
+// ─────────────────────────────────────────────────────────────────
+
+type Point = [number, number];
+type Stroke = Point[]; // ordered points defining a single stroke
+
+// Helper: scale a stroke from a 100×100 design space to canvas size
+const scale = (stroke: Stroke, cx = 140, cy = 150, size = 90): Stroke =>
+  stroke.map(([x, y]) => [
+    cx + (x - 50) * (size / 50),
+    cy + (y - 50) * (size / 50),
+  ]);
+
+// ── SHAPE PRIMITIVES (in 0–100 design space, centred at 50,50) ──
+
+// The "5" shape (base form of Mandombe)
+// Singini at top-left
+const shape5: Stroke[] = [
+  // Stroke 1: top horizontal bar (left → right)
+  [[15, 15], [85, 15]],
+  // Stroke 2: right vertical (down)
+  [[85, 15], [85, 50]],
+  // Stroke 3: middle horizontal (right → left)
+  [[85, 50], [15, 50]],
+  // Stroke 4: left vertical (down, shorter)
+  [[15, 50], [15, 85]],
+  // Stroke 5: bottom horizontal (left → right)
+  [[15, 85], [85, 85]],
+];
+
+// The "2" shape
+const shape2: Stroke[] = [
+  // Stroke 1: top arc / horizontal
+  [[15, 15], [85, 15]],
+  // Stroke 2: right vertical (down)
+  [[85, 15], [85, 50]],
+  // Stroke 3: diagonal sweep (right-down → left)
+  [[85, 50], [15, 85]],
+  // Stroke 4: bottom horizontal
+  [[15, 85], [85, 85]],
+];
+
+// Vowel "i" — single vertical stroke
+const shapeI: Stroke[] = [
+  [[50, 10], [50, 90]],
+];
+
+// Vowel "u" — bowl shape
+const shapeU: Stroke[] = [
+  [[20, 15], [20, 75], [50, 90], [80, 75], [80, 15]],
+];
+
+// Vowel "e" — horizontal strokes
+const shapeE: Stroke[] = [
+  [[20, 25], [80, 25]],
+  [[20, 50], [65, 50]],
+  [[20, 75], [80, 75]],
+];
+
+// Vowel "o" — circle/oval
+const shapeO: Stroke[] = [
+  buildCircle(50, 50, 35, 64),
+];
+
+// Vowel "a" — triangle-ish
+const shapeA: Stroke[] = [
+  [[50, 10], [85, 80]],
+  [[85, 80], [15, 80]],
+  [[15, 80], [50, 10]],
+];
+
+function buildCircle(cx: number, cy: number, r: number, steps: number): Point[] {
+  const pts: Point[] = [];
+  for (let i = 0; i <= steps; i++) {
+    const angle = (i / steps) * Math.PI * 2 - Math.PI / 2;
+    pts.push([cx + Math.cos(angle) * r, cy + Math.sin(angle) * r]);
+  }
+  return pts;
+}
+
+// ── GLYPH STROKE MAP ──────────────────────────────────────────────
+// Maps font character to its canonical stroke sequence.
+// We use the Mandombe font glyph labels (lowercase syllable keys).
+// For syllables not explicitly defined, we fall back to the base
+// consonant shape with a vowel diacritic approximation.
+
+const GLYPH_STROKES: Record<string, Stroke[]> = {
+  // Standalone vowels
+  i: shapeI.map(s => scale(s, 140, 150, 80)),
+  u: [scale(shapeU[0], 140, 150, 80)],
+  e: shapeE.map(s => scale(s, 140, 150, 80)),
+  o: [scale(shapeO[0], 140, 150, 80)],
+  a: shapeA.map(s => scale(s, 140, 150, 80)),
+
+  // B-series: shape "5" normal
+  bi: shape5.map(s => scale(s, 140, 145, 85)),
+  bu: shape5.map(s => scale(s, 140, 145, 85)),
+  be: shape5.map(s => scale(s, 140, 145, 85)),
+  bo: shape5.map(s => scale(s, 140, 145, 85)),
+  ba: shape5.map(s => scale(s, 140, 145, 85)),
+
+  // D-series: shape "2" normal
+  di: shape2.map(s => scale(s, 140, 145, 85)),
+  du: shape2.map(s => scale(s, 140, 145, 85)),
+  de: shape2.map(s => scale(s, 140, 145, 85)),
+  do: shape2.map(s => scale(s, 140, 145, 85)),
+  da: shape2.map(s => scale(s, 140, 145, 85)),
+
+  // K-series: shape "5" mirrored horizontally
+  ki: shape5.map(s => scale(mirrorH(s), 140, 145, 85)),
+  ku: shape5.map(s => scale(mirrorH(s), 140, 145, 85)),
+  ke: shape5.map(s => scale(mirrorH(s), 140, 145, 85)),
+  ko: shape5.map(s => scale(mirrorH(s), 140, 145, 85)),
+  ka: shape5.map(s => scale(mirrorH(s), 140, 145, 85)),
+
+  // T-series: shape "2" mirrored horizontally
+  ti: shape2.map(s => scale(mirrorH(s), 140, 145, 85)),
+  tu: shape2.map(s => scale(mirrorH(s), 140, 145, 85)),
+  te: shape2.map(s => scale(mirrorH(s), 140, 145, 85)),
+  to: shape2.map(s => scale(mirrorH(s), 140, 145, 85)),
+  ta: shape2.map(s => scale(mirrorH(s), 140, 145, 85)),
+
+  // M-series: shape "5" rotated 180°
+  mi: shape5.map(s => scale(rotate180(s), 140, 145, 85)),
+  mu: shape5.map(s => scale(rotate180(s), 140, 145, 85)),
+  me: shape5.map(s => scale(rotate180(s), 140, 145, 85)),
+  mo: shape5.map(s => scale(rotate180(s), 140, 145, 85)),
+  ma: shape5.map(s => scale(rotate180(s), 140, 145, 85)),
+
+  // N-series: shape "2" rotated 180°
+  ni: shape2.map(s => scale(rotate180(s), 140, 145, 85)),
+  nu: shape2.map(s => scale(rotate180(s), 140, 145, 85)),
+  ne: shape2.map(s => scale(rotate180(s), 140, 145, 85)),
+  no: shape2.map(s => scale(rotate180(s), 140, 145, 85)),
+  na: shape2.map(s => scale(rotate180(s), 140, 145, 85)),
+
+  // L-series: shape "5" mirrored vertically
+  li: shape5.map(s => scale(mirrorV(s), 140, 145, 85)),
+  lu: shape5.map(s => scale(mirrorV(s), 140, 145, 85)),
+  le: shape5.map(s => scale(mirrorV(s), 140, 145, 85)),
+  lo: shape5.map(s => scale(mirrorV(s), 140, 145, 85)),
+  la: shape5.map(s => scale(mirrorV(s), 140, 145, 85)),
+
+  // S-series: shape "2" mirrored vertically
+  si: shape2.map(s => scale(mirrorV(s), 140, 145, 85)),
+  su: shape2.map(s => scale(mirrorV(s), 140, 145, 85)),
+  se: shape2.map(s => scale(mirrorV(s), 140, 145, 85)),
+  so: shape2.map(s => scale(mirrorV(s), 140, 145, 85)),
+  sa: shape2.map(s => scale(mirrorV(s), 140, 145, 85)),
+};
+
+// ── Transformation helpers (operate in 0–100 design space) ────────
+
+function mirrorH(stroke: Stroke): Stroke {
+  return stroke.map(([x, y]) => [100 - x, y]);
+}
+function mirrorV(stroke: Stroke): Stroke {
+  return stroke.map(([x, y]) => [x, 100 - y]);
+}
+function rotate180(stroke: Stroke): Stroke {
+  return stroke.map(([x, y]) => [100 - x, 100 - y]);
+}
+
+// ─────────────────────────────────────────────────────────────────
+// Build a flat list of points from stroke array (with pen-up gaps)
+// ─────────────────────────────────────────────────────────────────
+
+interface AnimPoint {
+  x: number;
+  y: number;
+  penDown: boolean; // false = move without drawing (pen up)
+}
+
+function buildAnimPoints(strokes: Stroke[]): AnimPoint[] {
+  const pts: AnimPoint[] = [];
+  for (const stroke of strokes) {
+    stroke.forEach((pt, idx) => {
+      pts.push({ x: pt[0], y: pt[1], penDown: idx > 0 });
+    });
+  }
+  return pts;
+}
+
+// Interpolate along the full path at [0..1]
+function interpolatePath(pts: AnimPoint[], t: number): { x: number; y: number; penDown: boolean } {
+  if (pts.length === 0) return { x: 140, y: 140, penDown: false };
+  if (t <= 0) return { ...pts[0], penDown: false };
+  if (t >= 1) return pts[pts.length - 1];
+
+  // Compute total segment lengths
+  const lengths: number[] = [0];
+  for (let i = 1; i < pts.length; i++) {
+    const dx = pts[i].x - pts[i - 1].x;
+    const dy = pts[i].y - pts[i - 1].y;
+    lengths.push(lengths[i - 1] + (pts[i].penDown ? Math.sqrt(dx * dx + dy * dy) : 0));
+  }
+  const total = lengths[lengths.length - 1] || 1;
+  const target = t * total;
+
+  for (let i = 1; i < pts.length; i++) {
+    if (lengths[i] >= target) {
+      const segLen = lengths[i] - lengths[i - 1];
+      const segT = segLen > 0 ? (target - lengths[i - 1]) / segLen : 0;
+      return {
+        x: pts[i - 1].x + segT * (pts[i].x - pts[i - 1].x),
+        y: pts[i - 1].y + segT * (pts[i].y - pts[i - 1].y),
+        penDown: pts[i].penDown,
+      };
+    }
+  }
+  return pts[pts.length - 1];
+}
+
+// ─────────────────────────────────────────────────────────────────
+// Font loading
+// ─────────────────────────────────────────────────────────────────
+
 const waitForFont = async () => {
   try {
     await document.fonts.load(`120px '${FONT_NAME}'`);
-  } catch {
-    // Font API not supported or font not available, proceed anyway
-  }
+  } catch { /* proceed anyway */ }
 };
+
+// ─────────────────────────────────────────────────────────────────
+// COMPONENT
+// ─────────────────────────────────────────────────────────────────
 
 const GlyphTracingCanvas = ({ glyph, label }: GlyphTracingCanvasProps) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -26,265 +256,316 @@ const GlyphTracingCanvas = ({ glyph, label }: GlyphTracingCanvasProps) => {
   const [showGuide, setShowGuide] = useState(true);
   const [hasDrawn, setHasDrawn] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
-  const [animProgress, setAnimProgress] = useState(0);
   const [fontReady, setFontReady] = useState(false);
   const animFrameRef = useRef<number>(0);
   const { t } = useLanguage();
 
-  // Ensure font is loaded
   useEffect(() => {
     waitForFont().then(() => setFontReady(true));
   }, []);
 
-  // Render the glyph to an offscreen canvas using Mandombe font
-  const renderGlyphOffscreen = useCallback(() => {
-    const offscreen = document.createElement("canvas");
-    offscreen.width = CANVAS_SIZE;
-    offscreen.height = CANVAS_SIZE;
-    const ctx = offscreen.getContext("2d");
-    if (!ctx) return null;
+  // ── Draw background guide ──────────────────────────────────────
+  const drawGuide = useCallback((ctx: CanvasRenderingContext2D) => {
+    ctx.clearRect(0, 0, CANVAS_SIZE, CANVAS_SIZE);
 
-    ctx.font = `120px '${FONT_NAME}'`;
-    ctx.textAlign = "center";
-    ctx.textBaseline = "middle";
-    ctx.fillStyle = "hsl(16, 70%, 45%)";
-    ctx.fillText(glyph, CANVAS_SIZE / 2, CANVAS_SIZE / 2 + 10);
-
-    return offscreen;
-  }, [glyph]);
-
-  // Find bounding box of visible pixels
-  const getGlyphBounds = useCallback((offscreen: HTMLCanvasElement) => {
-    const ctx = offscreen.getContext("2d");
-    if (!ctx) return { left: 0, right: CANVAS_SIZE, top: 0, bottom: CANVAS_SIZE };
-    const imageData = ctx.getImageData(0, 0, CANVAS_SIZE, CANVAS_SIZE);
-    let left = CANVAS_SIZE, right = 0, top = CANVAS_SIZE, bottom = 0;
-    for (let y = 0; y < CANVAS_SIZE; y++) {
-      for (let x = 0; x < CANVAS_SIZE; x++) {
-        if (imageData.data[(y * CANVAS_SIZE + x) * 4 + 3] > 30) {
-          if (x < left) left = x;
-          if (x > right) right = x;
-          if (y < top) top = y;
-          if (y > bottom) bottom = y;
-        }
-      }
-    }
-    return { left, right: right + 1, top, bottom: bottom + 1 };
-  }, []);
-
-  // Draw guide: grid lines + transparent Mandombe glyph
-  const drawGuide = useCallback(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext("2d");
-    if (!ctx) return;
-
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    // Grid lines
+    // Grid
     ctx.strokeStyle = "hsl(30, 25%, 82%)";
     ctx.lineWidth = 0.5;
-    const mid = canvas.width / 2;
     ctx.setLineDash([4, 4]);
     ctx.beginPath();
-    ctx.moveTo(mid, 0);
-    ctx.lineTo(mid, canvas.height);
-    ctx.moveTo(0, canvas.height / 2);
-    ctx.lineTo(canvas.width, canvas.height / 2);
+    const mid = CANVAS_SIZE / 2;
+    ctx.moveTo(mid, 0); ctx.lineTo(mid, CANVAS_SIZE);
+    ctx.moveTo(0, mid); ctx.lineTo(CANVAS_SIZE, mid);
     ctx.stroke();
     ctx.setLineDash([]);
 
-    // Guide glyph in Mandombe font (transparent)
+    // Ghost glyph
     if (showGuide && fontReady) {
       ctx.font = `120px '${FONT_NAME}'`;
       ctx.textAlign = "center";
       ctx.textBaseline = "middle";
-      ctx.fillStyle = "hsla(40, 80%, 55%, 0.15)";
-      ctx.fillText(glyph, mid, canvas.height / 2 + 10);
+      ctx.fillStyle = "hsla(40, 80%, 55%, 0.12)";
+      ctx.fillText(glyph, mid, mid + 10);
     }
   }, [glyph, showGuide, fontReady]);
 
+  // Redraw guide when props change
   useEffect(() => {
-    drawGuide();
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+    drawGuide(ctx);
   }, [drawGuide]);
 
-  // Animation: progressive reveal following Singini (entry point) concept
-  // In Mandombe, writing starts from the Singini and follows the consonant shape.
-  // We simulate this with a radial/directional reveal from the glyph's natural start point.
+  // ── Draw strokes up to progress t ─────────────────────────────
+  const drawStrokesUpTo = useCallback(
+    (ctx: CanvasRenderingContext2D, animPts: AnimPoint[], t: number) => {
+      if (animPts.length === 0) return;
+
+      // How many points to draw
+      const count = animPts.length;
+      const drawCount = Math.ceil(t * (count - 1));
+
+      ctx.lineCap = "round";
+      ctx.lineJoin = "round";
+      ctx.lineWidth = 5;
+      ctx.strokeStyle = "hsl(20, 40%, 18%)";
+
+      let inPath = false;
+      for (let i = 0; i <= drawCount && i < count; i++) {
+        const pt = animPts[i];
+        if (!pt.penDown || !inPath) {
+          if (inPath) ctx.stroke();
+          ctx.beginPath();
+          ctx.moveTo(pt.x, pt.y);
+          inPath = true;
+        } else {
+          ctx.lineTo(pt.x, pt.y);
+        }
+      }
+      if (inPath) ctx.stroke();
+    },
+    []
+  );
+
+  // ── Draw the animated pen tip ──────────────────────────────────
+  const drawPenTip = (ctx: CanvasRenderingContext2D, x: number, y: number, t: number) => {
+    // Outer glow
+    const grad = ctx.createRadialGradient(x, y, 1, x, y, 14);
+    grad.addColorStop(0, "hsla(40, 90%, 60%, 0.6)");
+    grad.addColorStop(1, "hsla(40, 90%, 60%, 0)");
+    ctx.beginPath();
+    ctx.arc(x, y, 14, 0, Math.PI * 2);
+    ctx.fillStyle = grad;
+    ctx.fill();
+
+    // Pen dot
+    ctx.beginPath();
+    ctx.arc(x, y, 5, 0, Math.PI * 2);
+    ctx.fillStyle = "hsl(40, 90%, 55%)";
+    ctx.fill();
+    ctx.strokeStyle = "hsl(40, 70%, 35%)";
+    ctx.lineWidth = 1.5;
+    ctx.stroke();
+
+    // Small ink drop effect early in animation
+    if (t < 0.08) {
+      ctx.beginPath();
+      ctx.arc(x, y, 3, 0, Math.PI * 2);
+      ctx.fillStyle = "hsl(20, 40%, 18%)";
+      ctx.fill();
+    }
+  };
+
+  // ── Draw Singini marker ────────────────────────────────────────
+  const drawSingini = (ctx: CanvasRenderingContext2D, x: number, y: number) => {
+    ctx.beginPath();
+    ctx.arc(x, y, 6, 0, Math.PI * 2);
+    ctx.fillStyle = "hsl(0, 75%, 55%)";
+    ctx.fill();
+    ctx.strokeStyle = "hsl(0, 75%, 35%)";
+    ctx.lineWidth = 1.5;
+    ctx.stroke();
+
+    ctx.font = "bold 10px 'Source Sans 3', sans-serif";
+    ctx.fillStyle = "hsl(0, 65%, 45%)";
+    ctx.textAlign = "left";
+    ctx.textBaseline = "middle";
+    ctx.fillText("Singini", x + 10, y);
+  };
+
+  // ── Main animation ─────────────────────────────────────────────
   const playAnimation = useCallback(() => {
     if (isAnimating) return;
-    setIsAnimating(true);
-    setHasDrawn(false);
-    setAnimProgress(0);
 
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    const offscreen = renderGlyphOffscreen();
-    if (!offscreen) { setIsAnimating(false); return; }
-
-    const bounds = getGlyphBounds(offscreen);
-    const glyphWidth = bounds.right - bounds.left;
-    const glyphHeight = bounds.bottom - bounds.top;
-
-    if (glyphWidth <= 0 || glyphHeight <= 0) {
-      setIsAnimating(false);
+    // Get canonical strokes for this glyph
+    const strokes = GLYPH_STROKES[glyph.toLowerCase()];
+    if (!strokes || strokes.length === 0) {
+      // Fallback: font-pixel reveal for unknown glyphs
+      playFontRevealAnimation(ctx);
       return;
     }
 
-    // Find the Singini (entry point) - top-left most visible pixel of the glyph
+    setIsAnimating(true);
+    setHasDrawn(false);
+    cancelAnimationFrame(animFrameRef.current);
+
+    const animPts = buildAnimPoints(strokes);
+    const singini = animPts[0];
+
+    // Phase 1: Show Singini for 700ms
+    drawGuide(ctx);
+    drawSingini(ctx, singini.x, singini.y);
+
+    const TOTAL_DURATION = 2200; // ms
+    let startTime: number | null = null;
+
+    const animate = (timestamp: number) => {
+      if (!startTime) startTime = timestamp;
+      const elapsed = timestamp - startTime;
+      const raw = Math.min(elapsed / TOTAL_DURATION, 1);
+
+      // Ease in-out cubic
+      const t = raw < 0.5
+        ? 4 * raw * raw * raw
+        : 1 - Math.pow(-2 * raw + 2, 3) / 2;
+
+      drawGuide(ctx);
+      drawStrokesUpTo(ctx, animPts, t);
+
+      // Current pen tip position
+      const tip = interpolatePath(animPts, t);
+      drawPenTip(ctx, tip.x, tip.y, t);
+
+      // Show Singini marker for first 15% of animation
+      if (raw < 0.15) {
+        drawSingini(ctx, singini.x, singini.y);
+      }
+
+      if (raw < 1) {
+        animFrameRef.current = requestAnimationFrame(animate);
+      } else {
+        // Final state: show complete glyph
+        setTimeout(() => {
+          if (!canvas) return;
+          const finalCtx = canvas.getContext("2d");
+          if (!finalCtx) return;
+          drawGuide(finalCtx);
+          drawStrokesUpTo(finalCtx, animPts, 1);
+          setIsAnimating(false);
+        }, 400);
+      }
+    };
+
+    // Small delay to show Singini first
+    setTimeout(() => {
+      animFrameRef.current = requestAnimationFrame(animate);
+    }, 700);
+  }, [isAnimating, glyph, drawGuide, drawStrokesUpTo]);
+
+  // ── Fallback: pixel-based reveal for glyphs without stroke data ──
+  const playFontRevealAnimation = useCallback((ctx: CanvasRenderingContext2D) => {
+    setIsAnimating(true);
+
+    const offscreen = document.createElement("canvas");
+    offscreen.width = CANVAS_SIZE;
+    offscreen.height = CANVAS_SIZE;
     const offCtx = offscreen.getContext("2d");
-    let singiniX = bounds.left;
-    let singiniY = bounds.top;
-    if (offCtx) {
-      const imgData = offCtx.getImageData(bounds.left, bounds.top, glyphWidth, glyphHeight);
-      outerLoop:
-      for (let y = 0; y < glyphHeight; y++) {
-        for (let x = 0; x < glyphWidth; x++) {
-          if (imgData.data[(y * glyphWidth + x) * 4 + 3] > 50) {
-            singiniX = bounds.left + x;
-            singiniY = bounds.top + y;
-            break outerLoop;
-          }
+    if (!offCtx) { setIsAnimating(false); return; }
+
+    offCtx.font = `120px '${FONT_NAME}'`;
+    offCtx.textAlign = "center";
+    offCtx.textBaseline = "middle";
+    offCtx.fillStyle = "hsl(20, 40%, 18%)";
+    offCtx.fillText(glyph, CANVAS_SIZE / 2, CANVAS_SIZE / 2 + 10);
+
+    // Find top-most pixel as Singini
+    const imgData = offCtx.getImageData(0, 0, CANVAS_SIZE, CANVAS_SIZE);
+    let singX = CANVAS_SIZE / 2, singY = CANVAS_SIZE / 2;
+    outerFind:
+    for (let y = 0; y < CANVAS_SIZE; y++) {
+      for (let x = 0; x < CANVAS_SIZE; x++) {
+        if (imgData.data[(y * CANVAS_SIZE + x) * 4 + 3] > 50) {
+          singX = x; singY = y; break outerFind;
         }
       }
     }
 
-    // Calculate max distance from singini to any corner of glyph bounds
-    const maxDist = Math.sqrt(
-      Math.max(
-        (bounds.right - singiniX) ** 2 + (bounds.bottom - singiniY) ** 2,
-        (singiniX - bounds.left) ** 2 + (bounds.bottom - singiniY) ** 2,
-        (bounds.right - singiniX) ** 2 + (singiniY - bounds.top) ** 2,
-        (singiniX - bounds.left) ** 2 + (singiniY - bounds.top) ** 2,
-      )
-    );
+    drawGuide(ctx);
+    drawSingini(ctx, singX, singY);
 
-    const totalFrames = 90;
+    const TOTAL_FRAMES = 80;
     let frame = 0;
+
+    // Build sorted pixel list: scan top→bottom, left→right from Singini
+    const pixels: [number, number][] = [];
+    for (let y = 0; y < CANVAS_SIZE; y++) {
+      for (let x = 0; x < CANVAS_SIZE; x++) {
+        if (imgData.data[(y * CANVAS_SIZE + x) * 4 + 3] > 30) {
+          pixels.push([x, y]);
+        }
+      }
+    }
 
     const animate = () => {
       frame++;
-      const progress = Math.min(frame / totalFrames, 1);
-      // Ease-in-out for natural writing feel
-      const easedProgress = progress < 0.5
-        ? 2 * progress * progress
-        : 1 - Math.pow(-2 * progress + 2, 2) / 2;
+      const t = frame / TOTAL_FRAMES;
+      const eased = t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+      const drawCount = Math.floor(eased * pixels.length);
 
-      drawGuide();
+      drawGuide(ctx);
 
-      // Radial reveal from Singini point
-      const revealRadius = maxDist * easedProgress;
-
-      ctx.save();
-      ctx.beginPath();
-      ctx.arc(singiniX, singiniY, revealRadius, 0, Math.PI * 2);
-      ctx.clip();
-      ctx.drawImage(offscreen, 0, 0);
-      ctx.restore();
-
-      // Draw Singini marker (entry point)
-      if (progress < 0.15) {
-        ctx.beginPath();
-        ctx.arc(singiniX, singiniY, 5, 0, Math.PI * 2);
-        ctx.fillStyle = "hsl(0, 80%, 55%)";
-        ctx.fill();
-        ctx.strokeStyle = "hsl(0, 80%, 40%)";
-        ctx.lineWidth = 1.5;
-        ctx.stroke();
-
-        // Label
-        ctx.font = "10px sans-serif";
-        ctx.fillStyle = "hsl(0, 80%, 45%)";
-        ctx.textAlign = "left";
-        ctx.fillText("Singini", singiniX + 8, singiniY + 4);
+      // Draw pixels revealed so far
+      for (let i = 0; i < drawCount; i++) {
+        const [px, py] = pixels[i];
+        ctx.fillStyle = "hsl(20, 40%, 18%)";
+        ctx.fillRect(px, py, 1, 1);
       }
 
-      // Draw pen tip at the edge of reveal
-      if (progress > 0.05 && progress < 1) {
-        // Find a visible pixel at the edge of the reveal radius
-        const angle = Math.atan2(
-          bounds.top + glyphHeight / 2 - singiniY,
-          bounds.left + glyphWidth / 2 - singiniX
-        ) + (progress - 0.5) * Math.PI * 0.5;
-        const tipX = singiniX + Math.cos(angle) * revealRadius;
-        const tipY = singiniY + Math.sin(angle) * revealRadius;
-
-        ctx.beginPath();
-        ctx.arc(tipX, tipY, 5, 0, Math.PI * 2);
-        ctx.fillStyle = "hsl(40, 75%, 55%)";
-        ctx.fill();
-        ctx.strokeStyle = "hsl(40, 75%, 40%)";
-        ctx.lineWidth = 1.5;
-        ctx.stroke();
+      // Pen tip
+      if (drawCount < pixels.length) {
+        const [tipX, tipY] = pixels[Math.min(drawCount, pixels.length - 1)];
+        drawPenTip(ctx, tipX, tipY, t);
       }
+      if (t < 0.15) drawSingini(ctx, singX, singY);
 
-      setAnimProgress(Math.round(progress * 100));
-
-      if (frame < totalFrames) {
+      if (frame < TOTAL_FRAMES) {
         animFrameRef.current = requestAnimationFrame(animate);
       } else {
         setTimeout(() => {
+          const c = canvasRef.current;
+          if (!c) return;
+          const fc = c.getContext("2d");
+          if (!fc) return;
+          drawGuide(fc);
+          fc.drawImage(offscreen, 0, 0);
           setIsAnimating(false);
-          setAnimProgress(0);
-          drawGuide();
-        }, 2000);
+        }, 600);
       }
     };
-
-    // Show Singini point first, then animate
-    drawGuide();
-    ctx.beginPath();
-    ctx.arc(singiniX, singiniY, 6, 0, Math.PI * 2);
-    ctx.fillStyle = "hsl(0, 80%, 55%)";
-    ctx.fill();
-    ctx.font = "11px sans-serif";
-    ctx.fillStyle = "hsl(0, 80%, 45%)";
-    ctx.textAlign = "left";
-    ctx.fillText("Singini ●", singiniX + 10, singiniY + 4);
 
     setTimeout(() => {
       animFrameRef.current = requestAnimationFrame(animate);
-    }, 800);
-  }, [isAnimating, drawGuide, renderGlyphOffscreen, getGlyphBounds]);
+    }, 700);
+  }, [glyph, drawGuide]);
 
+  // Cleanup on unmount
   useEffect(() => {
-    return () => {
-      if (animFrameRef.current) {
-        cancelAnimationFrame(animFrameRef.current);
-      }
-    };
+    return () => cancelAnimationFrame(animFrameRef.current);
   }, []);
 
-  const getPos = (e: React.MouseEvent | React.TouchEvent) => {
+  // ── Freehand drawing ──────────────────────────────────────────
+  const getPos = (e: React.MouseEvent | React.TouchEvent): Point => {
     const canvas = canvasRef.current!;
     const rect = canvas.getBoundingClientRect();
     const scaleX = canvas.width / rect.width;
     const scaleY = canvas.height / rect.height;
     if ("touches" in e) {
-      return {
-        x: (e.touches[0].clientX - rect.left) * scaleX,
-        y: (e.touches[0].clientY - rect.top) * scaleY,
-      };
+      return [
+        (e.touches[0].clientX - rect.left) * scaleX,
+        (e.touches[0].clientY - rect.top) * scaleY,
+      ];
     }
-    return {
-      x: (e.clientX - rect.left) * scaleX,
-      y: (e.clientY - rect.top) * scaleY,
-    };
+    return [
+      (e.clientX - rect.left) * scaleX,
+      (e.clientY - rect.top) * scaleY,
+    ];
   };
 
   const startDraw = (e: React.MouseEvent | React.TouchEvent) => {
     if (isAnimating) return;
     e.preventDefault();
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext("2d");
+    const ctx = canvasRef.current?.getContext("2d");
     if (!ctx) return;
     setIsDrawing(true);
     setHasDrawn(true);
-    const { x, y } = getPos(e);
+    const [x, y] = getPos(e);
     ctx.beginPath();
     ctx.moveTo(x, y);
     ctx.strokeStyle = "hsl(20, 40%, 15%)";
@@ -294,35 +575,28 @@ const GlyphTracingCanvas = ({ glyph, label }: GlyphTracingCanvasProps) => {
   };
 
   const draw = (e: React.MouseEvent | React.TouchEvent) => {
-    if (isAnimating) return;
+    if (isAnimating || !isDrawing) return;
     e.preventDefault();
-    if (!isDrawing) return;
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext("2d");
+    const ctx = canvasRef.current?.getContext("2d");
     if (!ctx) return;
-    const { x, y } = getPos(e);
+    const [x, y] = getPos(e);
     ctx.lineTo(x, y);
     ctx.stroke();
   };
 
-  const endDraw = () => {
-    setIsDrawing(false);
-  };
+  const endDraw = () => setIsDrawing(false);
 
   const clearCanvas = () => {
-    setHasDrawn(false);
-    if (animFrameRef.current) {
-      cancelAnimationFrame(animFrameRef.current);
-    }
+    cancelAnimationFrame(animFrameRef.current);
     setIsAnimating(false);
-    setAnimProgress(0);
-    drawGuide();
+    setHasDrawn(false);
+    const ctx = canvasRef.current?.getContext("2d");
+    if (ctx) drawGuide(ctx);
   };
 
   return (
     <div className="flex flex-col items-center gap-3">
-      <div className="relative border-2 border-border rounded-xl overflow-hidden bg-cream dark:bg-card touch-none">
+      <div className="relative border-2 border-border rounded-xl overflow-hidden bg-cream dark:bg-card touch-none shadow-sm">
         <canvas
           ref={canvasRef}
           width={CANVAS_SIZE}
@@ -339,9 +613,10 @@ const GlyphTracingCanvas = ({ glyph, label }: GlyphTracingCanvasProps) => {
         <div className="absolute top-2 left-2 text-xs font-body text-muted-foreground bg-background/80 px-2 py-0.5 rounded">
           {label}
         </div>
-        {isAnimating && (
-          <div className="absolute bottom-2 right-2 bg-primary/90 text-primary-foreground text-[10px] font-bold px-2 py-0.5 rounded-full">
-            {animProgress}%
+        {/* Singini label in top bar */}
+        {!isAnimating && !hasDrawn && (
+          <div className="absolute top-2 right-2 text-[10px] text-muted-foreground/60 italic">
+            Singini → point d'entrée du tracé
           </div>
         )}
       </div>
@@ -354,16 +629,16 @@ const GlyphTracingCanvas = ({ glyph, label }: GlyphTracingCanvasProps) => {
           className="text-xs gap-1.5"
         >
           <Play className="w-3.5 h-3.5" />
-          {t("mandombe.animate")}
+          {isAnimating ? "…" : (t("mandombe.animate") || "Animer")}
         </Button>
         <Button
           variant="outline"
           size="sm"
-          onClick={() => setShowGuide(!showGuide)}
+          onClick={() => setShowGuide(g => !g)}
           className="text-xs gap-1.5"
         >
           {showGuide ? <EyeOff className="w-3.5 h-3.5" /> : <Eye className="w-3.5 h-3.5" />}
-          {t("mandombe.guide")}
+          {t("mandombe.guide") || "Guide"}
         </Button>
         <Button
           variant="outline"
@@ -373,7 +648,7 @@ const GlyphTracingCanvas = ({ glyph, label }: GlyphTracingCanvasProps) => {
           className="text-xs gap-1.5"
         >
           <RotateCcw className="w-3.5 h-3.5" />
-          {t("mandombe.clear")}
+          {t("mandombe.clear") || "Effacer"}
         </Button>
       </div>
     </div>
