@@ -12207,7 +12207,7 @@ export const lessons: Lesson[] = [
       explanationFr: "NZARI est le nom originel du fleuve Kongo. En Kikongo ancien, il signifie 'l'Univers du Soleil Intérieur' — et non simplement 'fleuve'.",
     },
   ],
-};
+},
 
 
 // ============================================================
