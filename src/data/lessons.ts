@@ -1011,7 +1011,7 @@ export const lessons: Lesson[] = [
         instruction: "Match these Bi- words with their English meanings.",
         pairs: [
           { left: "Bibindulu", right: "Forgiveness" },
-          { left: "Biangulu", right: "A call" },
+          { left: "Bingula", right: "A call" },
           { left: "Bikula", right: "To prophesy" },
           { left: "Biadila", right: "Heir" },
         ],
