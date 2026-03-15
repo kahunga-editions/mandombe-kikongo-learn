@@ -938,7 +938,7 @@ export const lessons: Lesson[] = [
       { lari: "Biakati", mandombe: "Biyakati", french: "Entrailles, intestins", english: "Entrails, intestines" },
       { lari: "Biampamba", mandombe: "Biyampamba", french: "Les choses, les biens", english: "Things, goods" },
       { lari: "Bianga", mandombe: "Biyanga", french: "Appeler, convoquer", english: "To call, to summon" },
-      { lari: "Biangulu", mandombe: "Biyangulu", french: "Appel", english: "A call" },
+      { lari: "Bingula", mandombe: "Bingula", french: "Un appel", english: "A call" },
       { lari: "Bibanzulu", mandombe: "Bibanzulu", french: "Les pensées, les soupçons", english: "Thoughts, suspicions" },
       { lari: "Bibindulu", mandombe: "Bibindulu", french: "Pardon", english: "Forgiveness" },
       { lari: "Biala", mandombe: "Biyala", french: "Être consacré, couronné", english: "To be consecrated, crowned" },
