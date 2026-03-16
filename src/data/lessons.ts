@@ -13274,7 +13274,7 @@ export const lessons: Lesson[] = [
     { lari: "Mbongo", mandombe: "Mbongo", french: "(Avoir ses) règles / Argent", english: "(To have one's) period / Money", portuguese: "Regras (menstruais) / Dinheiro" },
     { lari: "Zibika", mandombe: "Zibika", french: "Fermer, boucher", english: "To close, to plug", portuguese: "Fechar, tapar" },
     { lari: "Buyelele", mandombe: "Buyelele", french: "La finesse, la vivacité, la sagacité", english: "Finesse, vivacity, sagacity", portuguese: "Fineza, vivacidade, sagacidade" },
-    { lari: "Mfuengue", mandombe: "Mfuwengue", french: "Le renard", english: "The fox", portuguese: "A raposa" },
+    { lari: "Mfuenge", mandombe: "Mfuwenge", french: "Le renard", english: "The fox", portuguese: "A raposa" },
     { lari: "Yema", mandombe: "Yema", french: "Téter", english: "To suckle", portuguese: "Mamar" },
     { lari: "Yemeka", mandombe: "Yemeka", french: "Allaiter", english: "To breastfeed", portuguese: "Amamentar" },
     { lari: "Yengo", mandombe: "Yengo", french: "Espoir frustré", english: "Frustrated hope", portuguese: "Esperança frustrada" },
@@ -13310,7 +13310,7 @@ export const lessons: Lesson[] = [
           title: "Buyelele — cunning & proverbs",
           titleFr: "Buyelele — la ruse et proverbes",
           examples: [
-            { lari: "Mfuengue buyelele bue nandi.", mandombe: "Mfuwengue buyelele buwe nandi.", french: "Le renard est rusé.", english: "The fox is cunning.", portuguese: "A raposa é astuta." },
+            { lari: "Mfuenge buyelele bue nandi.", mandombe: "Mfuwenge buyelele buwe nandi.", french: "Le renard est rusé.", english: "The fox is cunning.", portuguese: "A raposa é astuta." },
           ],
         },
         {
@@ -13346,8 +13346,8 @@ export const lessons: Lesson[] = [
     },
     {
       type: "multiple-choice",
-      question: "What does 'Mfuengue buyelele bue nandi' mean?",
-      questionFr: "Que signifie 'Mfuengue buyelele bue nandi' ?",
+      question: "What does 'Mfuenge buyelele bue nandi' mean?",
+      questionFr: "Que signifie 'Mfuenge buyelele bue nandi' ?",
       options: ["The fox is hungry", "The fox is cunning", "The fox is sleeping", "The fox is running"],
       optionsFr: ["Le renard a faim", "Le renard est rusé", "Le renard dort", "Le renard court"],
       correctIndex: 1,
