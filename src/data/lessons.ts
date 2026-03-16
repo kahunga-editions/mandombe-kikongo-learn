@@ -13346,8 +13346,8 @@ export const lessons: Lesson[] = [
     },
     {
       type: "multiple-choice",
-      question: "What does 'Mfuengue buyelele bue nandi' mean?",
-      questionFr: "Que signifie 'Mfuengue buyelele bue nandi' ?",
+      question: "What does 'Mfuenge buyelele bue nandi' mean?",
+      questionFr: "Que signifie 'Mfuenge buyelele bue nandi' ?",
       options: ["The fox is hungry", "The fox is cunning", "The fox is sleeping", "The fox is running"],
       optionsFr: ["Le renard a faim", "Le renard est rusé", "Le renard dort", "Le renard court"],
       correctIndex: 1,
