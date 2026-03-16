@@ -15,7 +15,7 @@ const waitForFont = async () => {
   try { await document.fonts.load(`120px '${FONT_NAME}'`); } catch { /**/ }
 };
 
-const ease = (t: number) => t < 0.5 ? 4*t*t*t : 1 - Math.pow(-2*t+2, 3)/2;
+const ease = (t: number) => t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
 
 // ─── RENDER GLYPH TO OFFSCREEN CANVAS ────────────────────────────
 function renderGlyph(glyph: string): HTMLCanvasElement {
@@ -48,49 +48,164 @@ function getGlyphBBox(imgData: ImageData) {
   return { minX, maxX, minY, maxY };
 }
 
-// ─── BUILD SCAN-LINE STROKE PATH ─────────────────────────────────
-// Traces the glyph as a single continuous stroke by scanning
-// column by column (left to right), collecting the vertical
-// extent of ink in each column. The pen moves top→bottom in
-// each column, then jumps to the next column.
-// This produces a natural writing motion following the glyph shape.
-function buildStrokePath(imgData: ImageData, bbox: ReturnType<typeof getGlyphBBox>): Array<{x:number,y:number,penDown:boolean}> {
+// ─── BUILD CANONICAL STROKE PATH ─────────────────────────────────
+// Mandombe glyphs are built from curved geometric forms.
+// We extract the centerline (skeleton) of the glyph by finding
+// the medial point of ink runs in each row, then order these
+// points by contour-following (nearest-neighbor) from the Singini.
+// This produces a natural writing motion that follows the actual
+// stroke shape rather than a mechanical column scan.
+function buildStrokePath(
+  imgData: ImageData,
+  bbox: ReturnType<typeof getGlyphBBox>
+): Array<{ x: number; y: number; penDown: boolean }> {
   const { data, width } = imgData;
   const { minX, maxX, minY, maxY } = bbox;
-  const pts: Array<{x:number,y:number,penDown:boolean}> = [];
 
-  // Scan every 2nd column for performance
+  // Step 1: Extract skeleton points (centerline of ink runs)
+  // For each row, find contiguous runs of ink and record their centers.
+  // Also do the same for columns to capture vertical strokes.
+  const rawPts: Array<{ x: number; y: number }> = [];
+  const visited = new Set<string>();
+
+  const addPt = (x: number, y: number) => {
+    const key = `${Math.round(x)},${Math.round(y)}`;
+    if (!visited.has(key)) {
+      visited.add(key);
+      rawPts.push({ x, y });
+    }
+  };
+
+  // Row-based skeleton (captures horizontal & diagonal strokes)
   const step = 2;
-  let lastY = -1;
-  let goingDown = true;
-
-  for (let x = minX; x <= maxX; x += step) {
-    // Find all inked pixels in this column
-    const inkY: number[] = [];
-    for (let y = minY; y <= maxY; y++) {
-      if (data[(y * width + x) * 4 + 3] > 30) {
-        inkY.push(y);
+  for (let y = minY; y <= maxY; y += step) {
+    let inRun = false;
+    let runStart = 0;
+    for (let x = minX; x <= maxX + 1; x++) {
+      const isInk = x <= maxX && data[(y * width + x) * 4 + 3] > 30;
+      if (isInk && !inRun) { runStart = x; inRun = true; }
+      if (!isInk && inRun) {
+        addPt((runStart + x - 1) / 2, y);
+        inRun = false;
       }
     }
-    if (inkY.length === 0) continue;
+  }
 
-    // Alternate direction for natural serpentine motion
-    const colPts = goingDown ? inkY : [...inkY].reverse();
-    goingDown = !goingDown;
+  // Column-based skeleton (captures vertical strokes)
+  for (let x = minX; x <= maxX; x += step) {
+    let inRun = false;
+    let runStart = 0;
+    for (let y = minY; y <= maxY + 1; y++) {
+      const isInk = y <= maxY && data[(y * width + x) * 4 + 3] > 30;
+      if (isInk && !inRun) { runStart = y; inRun = true; }
+      if (!isInk && inRun) {
+        addPt(x, (runStart + y - 1) / 2);
+        inRun = false;
+      }
+    }
+  }
 
-    colPts.forEach((y, i) => {
-      // Connect to previous point if close enough
-      const penDown = i > 0 || (lastY >= 0 && Math.abs(y - lastY) < 40);
-      pts.push({ x, y, penDown });
-      lastY = y;
-    });
+  if (rawPts.length === 0) return [];
+
+  // Step 2: Order points by nearest-neighbor chain starting from Singini
+  // Singini = top-left of bounding box (canonical entry point)
+  const singiniX = minX;
+  const singiniY = minY;
+
+  // Find starting point closest to Singini
+  let bestIdx = 0;
+  let bestDist = Infinity;
+  for (let i = 0; i < rawPts.length; i++) {
+    const d = Math.hypot(rawPts[i].x - singiniX, rawPts[i].y - singiniY);
+    if (d < bestDist) { bestDist = d; bestIdx = i; }
+  }
+
+  // Greedy nearest-neighbor ordering
+  const ordered: Array<{ x: number; y: number }> = [];
+  const used = new Uint8Array(rawPts.length);
+  let current = bestIdx;
+
+  for (let i = 0; i < rawPts.length; i++) {
+    ordered.push(rawPts[current]);
+    used[current] = 1;
+
+    let nearestIdx = -1;
+    let nearestDist = Infinity;
+    for (let j = 0; j < rawPts.length; j++) {
+      if (used[j]) continue;
+      const d = Math.hypot(rawPts[j].x - rawPts[current].x, rawPts[j].y - rawPts[current].y);
+      if (d < nearestDist) { nearestDist = d; nearestIdx = j; }
+    }
+
+    if (nearestIdx === -1) break;
+    current = nearestIdx;
+  }
+
+  // Step 3: Build path with pen-up for jumps
+  const jumpThreshold = 18; // pixels — pen lifts for larger gaps
+  const pts: Array<{ x: number; y: number; penDown: boolean }> = [];
+
+  for (let i = 0; i < ordered.length; i++) {
+    const p = ordered[i];
+    if (i === 0) {
+      pts.push({ x: p.x, y: p.y, penDown: false });
+    } else {
+      const prev = ordered[i - 1];
+      const dist = Math.hypot(p.x - prev.x, p.y - prev.y);
+      pts.push({ x: p.x, y: p.y, penDown: dist < jumpThreshold });
+    }
   }
 
   return pts;
 }
 
-// ─── COMPONENT ────────────────────────────────────────────────────
+// ─── SMOOTH QUADRATIC CURVE DRAWING ──────────────────────────────
+function drawSmoothStroke(
+  ctx: CanvasRenderingContext2D,
+  pts: Array<{ x: number; y: number; penDown: boolean }>,
+  upTo: number
+) {
+  ctx.lineCap = "round";
+  ctx.lineJoin = "round";
+  ctx.lineWidth = 3.5;
+  ctx.strokeStyle = "hsl(20,40%,18%)";
 
+  let i = 0;
+  while (i <= upTo) {
+    // Find start of a continuous segment
+    while (i <= upTo && !pts[i].penDown && i > 0) i++;
+    if (i > upTo) break;
+
+    // Collect continuous segment
+    const seg: Array<{ x: number; y: number }> = [pts[i]];
+    i++;
+    while (i <= upTo && pts[i].penDown) {
+      seg.push(pts[i]);
+      i++;
+    }
+
+    if (seg.length < 2) continue;
+
+    // Draw smooth quadratic curve through segment points
+    ctx.beginPath();
+    ctx.moveTo(seg[0].x, seg[0].y);
+
+    if (seg.length === 2) {
+      ctx.lineTo(seg[1].x, seg[1].y);
+    } else {
+      for (let j = 1; j < seg.length - 1; j++) {
+        const midX = (seg[j].x + seg[j + 1].x) / 2;
+        const midY = (seg[j].y + seg[j + 1].y) / 2;
+        ctx.quadraticCurveTo(seg[j].x, seg[j].y, midX, midY);
+      }
+      const last = seg[seg.length - 1];
+      ctx.lineTo(last.x, last.y);
+    }
+    ctx.stroke();
+  }
+}
+
+// ─── COMPONENT ────────────────────────────────────────────────────
 const GlyphTracingCanvas = ({ glyph, label }: GlyphTracingCanvasProps) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [isDrawing, setIsDrawing] = useState(false);
@@ -162,7 +277,6 @@ const GlyphTracingCanvas = ({ glyph, label }: GlyphTracingCanvasProps) => {
     setIsAnimating(true);
     setHasDrawn(false);
 
-    // Render glyph to offscreen to get pixel data
     const off = renderGlyph(glyph);
     const offCtx = off.getContext("2d")!;
     const imgData = offCtx.getImageData(0, 0, CANVAS_SIZE, CANVAS_SIZE);
@@ -170,11 +284,9 @@ const GlyphTracingCanvas = ({ glyph, label }: GlyphTracingCanvasProps) => {
 
     if (bbox.maxX <= bbox.minX) { setIsAnimating(false); return; }
 
-    // Singini = top-left of glyph bounding box
     const singiniX = bbox.minX;
     const singiniY = bbox.minY;
 
-    // Build stroke path following the glyph pixels
     const pts = buildStrokePath(imgData, bbox);
     if (pts.length === 0) { setIsAnimating(false); return; }
 
@@ -182,7 +294,7 @@ const GlyphTracingCanvas = ({ glyph, label }: GlyphTracingCanvasProps) => {
     drawBg(ctx);
     drawSingini(ctx, singiniX, singiniY);
 
-    const DURATION = 2400;
+    const DURATION = 2800;
     let t0: number | null = null;
 
     const animate = (ts: number) => {
@@ -193,22 +305,8 @@ const GlyphTracingCanvas = ({ glyph, label }: GlyphTracingCanvasProps) => {
 
       drawBg(ctx);
 
-      // Draw stroke path up to current point
-      ctx.lineCap = "round";
-      ctx.lineJoin = "round";
-      ctx.lineWidth = 4;
-      ctx.strokeStyle = "hsl(20,40%,18%)";
-      let open = false;
-      for (let i = 0; i <= upTo; i++) {
-        const p = pts[i];
-        if (!p.penDown || !open) {
-          if (open) ctx.stroke();
-          ctx.beginPath(); ctx.moveTo(p.x, p.y); open = true;
-        } else {
-          ctx.lineTo(p.x, p.y);
-        }
-      }
-      if (open) ctx.stroke();
+      // Draw smooth stroke up to current point
+      drawSmoothStroke(ctx, pts, upTo);
 
       // Pen tip at current position
       if (upTo < pts.length) {
@@ -221,7 +319,6 @@ const GlyphTracingCanvas = ({ glyph, label }: GlyphTracingCanvasProps) => {
       if (raw < 1) {
         animRef.current = requestAnimationFrame(animate);
       } else {
-        // Final: show crisp font glyph
         setTimeout(() => {
           const c = canvasRef.current?.getContext("2d");
           if (!c) return;
