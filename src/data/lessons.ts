@@ -13310,7 +13310,7 @@ export const lessons: Lesson[] = [
           title: "Buyelele — cunning & proverbs",
           titleFr: "Buyelele — la ruse et proverbes",
           examples: [
-            { lari: "Mfuenge buyelele bue nandi.", mandombe: "Mfuwenge buyelele buwe nandi.", french: "Le renard est rusé.", english: "The fox is cunning.", portuguese: "A raposa é astuta." },
+            { lari: "Mfuenge buyelele bue nandi.", mandombe: "Mfuenge buyelele buwe nandi.", french: "Le renard est rusé.", english: "The fox is cunning.", portuguese: "A raposa é astuta." },
           ],
         },
         {
