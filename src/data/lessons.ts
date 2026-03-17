@@ -13274,7 +13274,7 @@ export const lessons: Lesson[] = [
     { lari: "Mbongo", mandombe: "Mbongo", french: "(Avoir ses) règles / Argent", english: "(To have one's) period / Money", portuguese: "Regras (menstruais) / Dinheiro" },
     { lari: "Zibika", mandombe: "Zibika", french: "Fermer, boucher", english: "To close, to plug", portuguese: "Fechar, tapar" },
     { lari: "Buyelele", mandombe: "Buyelele", french: "La finesse, la vivacité, la sagacité", english: "Finesse, vivacity, sagacity", portuguese: "Fineza, vivacidade, sagacidade" },
-    { lari: "Mfuenge", mandombe: "Mfuwenge", french: "Le renard", english: "The fox", portuguese: "A raposa" },
+    { lari: "Mfuenge", mandombe: "Mfuenge", french: "Le renard", english: "The fox", portuguese: "A raposa" },
     { lari: "Yema", mandombe: "Yema", french: "Téter", english: "To suckle", portuguese: "Mamar" },
     { lari: "Yemeka", mandombe: "Yemeka", french: "Allaiter", english: "To breastfeed", portuguese: "Amamentar" },
     { lari: "Yengo", mandombe: "Yengo", french: "Espoir frustré", english: "Frustrated hope", portuguese: "Esperança frustrada" },
