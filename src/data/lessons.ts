@@ -13324,13 +13324,14 @@ export const lessons: Lesson[] = [
           ],
         },
         {
-          title: "Yengo — frustrated hope",
-          titleFr: "Yengo — l'espoir déçu",
+          title: "Yengo — hope",
+          titleFr: "Yengo — l'espoir",
           examples: [
+            { lari: "Yengo dia mpamba.", mandombe: "Yengo diya mpamba.", french: "Un espoir déçu.", english: "A disappointed hope.", portuguese: "Uma esperança frustrada." },
             { lari: "Yengo dia buna / mpamba.", mandombe: "Yengo diya buna / mpamba.", french: "J'ai espéré pour rien.", english: "I hoped for nothing.", portuguese: "Esperei por nada." },
           ],
-          note: "Buna = rien, mpamba = vide. L'expression exprime une espérance déçue.",
-          noteFr: "Buna = rien, mpamba = vide. L'expression exprime une espérance déçue.",
+          note: "Yengo = l'espoir. Yengo dia mpamba = un espoir déçu. Buna = rien, mpamba = vide.",
+          noteFr: "Yengo = l'espoir. Yengo dia mpamba = un espoir déçu. Buna = rien, mpamba = vide.",
         },
       ],
     },
