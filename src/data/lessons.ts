@@ -13047,7 +13047,8 @@ export const lessons: Lesson[] = [
     { lari: "Mutu beni", mandombe: "Mutu beni", french: "Le téton", english: "The nipple" },
     { lari: "Mitu mia mabeni", mandombe: "Mitu miya mabeni", french: "Les tétons", english: "The nipples" },
     { lari: "Yengi, Kiyengi | Biyengi", mandombe: "Yengi, Kiyengi | Biyengi", french: "Amitié", english: "Friendship" },
-    { lari: "Yengo", mandombe: "Yengo", french: "Espoir frustré", english: "Frustrated hope" },
+    { lari: "Yengo", mandombe: "Yengo", french: "L'espoir", english: "Hope" },
+    { lari: "Yengo dia mpamba", mandombe: "Yengo diya mpamba", french: "Un espoir déçu", english: "A disappointed hope" },
     // Z continued
     { lari: "Zabasana", mandombe: "Zabasana", french: "Se connaître mutuellement", english: "To know each other mutually" },
     { lari: "Zabana", mandombe: "Zabana", french: "Se connaître l'un l'autre", english: "To know one another" },
