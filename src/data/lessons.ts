@@ -15511,6 +15511,8 @@ export const lessons: Lesson[] = [
   titleMandombe: "Nitu na binyama",
   icon: "🦎",
   level: "intermediate" as const,
+  description: "Body, insects & nature vocabulary",
+  descriptionFr: "Body, insects & nature vocabulary",
   vocabulary: [
     { lari: "Nitu", mandombe: "Nitu", french: "Le corps", english: "The body" },
     { lari: "Mbula n'kama", mandombe: "Mbula nkama", french: "Sorte de grillon, insecte", english: "A type of cricket, insect" },
@@ -15544,6 +15546,8 @@ export const lessons: Lesson[] = [
   titleMandombe: "Meka, Menga na Mf-",
   icon: "🩸",
   level: "advanced" as const,
+  description: "Cries, blood & sensations vocabulary",
+  descriptionFr: "Cries, blood & sensations vocabulary",
   vocabulary: [
     { lari: "Meka", mandombe: "Meka", french: "Bêler (pour un mouton), crier", english: "To bleat (sheep), to cry out" },
     { lari: "Mekana", mandombe: "Mekana", french: "Bêler, crier longtemps", english: "To bleat/cry for a long time" },
@@ -15597,6 +15601,8 @@ export const lessons: Lesson[] = [
   titleMandombe: "Minza, Mataba na Mp-",
   icon: "🧵",
   level: "advanced" as const,
+  description: "Expressions, cloth & intelligence vocabulary",
+  descriptionFr: "Expressions, cloth & intelligence vocabulary",
   vocabulary: [
     { lari: "Minza", mandombe: "Minza", french: "Faire la grimace, la moue", english: "To make a face, to pout" },
     { lari: "Mataba", mandombe: "Mataba", french: "Des chiffons", english: "Rags" },
@@ -15653,6 +15659,8 @@ export const lessons: Lesson[] = [
   titleMandombe: "Muboba, Mufide na Mu-",
   icon: "🥭",
   level: "intermediate" as const,
+  description: "Habits, fruits & people vocabulary",
+  descriptionFr: "Habits, fruits & people vocabulary",
   vocabulary: [
     { lari: "Muboba|miboba", mandombe: "Muboba", french: "L'habitude de brader, de casser les prix", english: "Habit of selling cheaply" },
     { lari: "Mubobela|mibobela", mandombe: "Mubobela", french: "La pourriture, fumier", english: "Rot, manure" },
@@ -15687,6 +15695,8 @@ export const lessons: Lesson[] = [
   titleMandombe: "Maji, Malu na Ma-",
   icon: "🍖",
   level: "beginner" as const,
+  description: "Food, body & time vocabulary",
+  descriptionFr: "Food, body & time vocabulary",
   vocabulary: [
     { lari: "Maji", mandombe: "Maji", french: "La graisse, l'huile", english: "Fat, oil" },
     { lari: "Baku malavu", mandombe: "Baku malavu", french: "Se saoûler", english: "To get drunk" },
@@ -15733,6 +15743,8 @@ export const lessons: Lesson[] = [
   titleMandombe: "Lombo, Londa na Lo-",
   icon: "🍊",
   level: "intermediate" as const,
+  description: "Fruits, sewing & learning vocabulary",
+  descriptionFr: "Fruits, sewing & learning vocabulary",
   vocabulary: [
     { lari: "Lombo", mandombe: "Lombo", french: "Le fruit (en général)", english: "Fruit (in general)" },
     { lari: "Londa", mandombe: "Londa", french: "Coudre, raccommoder", english: "To sew, to mend" },
@@ -15769,6 +15781,8 @@ export const lessons: Lesson[] = [
   titleMandombe: "Bileko, Lamu na La-",
   icon: "💎",
   level: "intermediate" as const,
+  description: "Wealth, duration & bridges vocabulary",
+  descriptionFr: "Wealth, duration & bridges vocabulary",
   vocabulary: [
     { lari: "Bileko", mandombe: "Bileko", french: "Objets de valeur, richesse", english: "Valuables, wealth" },
     { lari: "Leboka", mandombe: "Leboka", french: "Se faner", english: "To wither" },
@@ -15820,6 +15834,8 @@ export const lessons: Lesson[] = [
   titleMandombe: "Hambu, Bika na B-",
   icon: "🏡",
   level: "advanced" as const,
+  description: "Separation, customs & heritage vocabulary",
+  descriptionFr: "Separation, customs & heritage vocabulary",
   vocabulary: [
     { lari: "Hambu", mandombe: "Hambu", french: "La bifurcation", english: "Fork, bifurcation" },
     { lari: "Hambula", mandombe: "Hambula", french: "Séparer", english: "To separate" },
@@ -15879,6 +15895,8 @@ export const lessons: Lesson[] = [
   titleMandombe: "Nkala, Nguya na Nk-",
   icon: "🦀",
   level: "intermediate" as const,
+  description: "Animals, nature & tools vocabulary",
+  descriptionFr: "Animals, nature & tools vocabulary",
   vocabulary: [
     { lari: "Koto|bikoto", mandombe: "Koto", french: "Le bec", english: "Beak" },
     { lari: "Kamika", mandombe: "Kamika", french: "Barrer un ruisseau", english: "To dam a stream" },
@@ -15936,6 +15954,8 @@ export const lessons: Lesson[] = [
   titleMandombe: "Kuba, Kuwela na Ku-",
   icon: "🏘️",
   level: "advanced" as const,
+  description: "Places, actions & community vocabulary",
+  descriptionFr: "Places, actions & community vocabulary",
   vocabulary: [
     { lari: "Kubama", mandombe: "Kubama", french: "Se préparer", english: "To prepare" },
     { lari: "Kubuka", mandombe: "Kubuka", french: "Éclater", english: "To burst" },
@@ -16025,6 +16045,8 @@ export const lessons: Lesson[] = [
   titleMandombe: "Nkaba, Kazu na Ka-",
   icon: "🌿",
   level: "advanced" as const,
+  description: "Manioc, cola & family vocabulary",
+  descriptionFr: "Manioc, cola & family vocabulary",
   vocabulary: [
     { lari: "Nkaba", mandombe: "Nkaba", french: "Racine de manioc; antilope ordinaire", english: "Manioc root; common antelope", note: "Les initiés de la tradition Kongo ne consommaient pas de manioc" },
     { lari: "Kabila", mandombe: "Kabila", french: "Partager, distribuer", english: "To share, to distribute" },
@@ -16077,6 +16099,8 @@ export const lessons: Lesson[] = [
   titleMandombe: "Lubula, Nludi na L-",
   icon: "🏠",
   level: "intermediate" as const,
+  description: "Wisdom, roof & nature vocabulary",
+  descriptionFr: "Wisdom, roof & nature vocabulary",
   vocabulary: [
     { lari: "Lubula", mandombe: "Lubula", french: "Rendre intelligent(e)", english: "To make intelligent" },
     { lari: "Nludi", mandombe: "Nludi", french: "Le toit", english: "Roof" },
@@ -16111,6 +16135,8 @@ export const lessons: Lesson[] = [
   titleMandombe: "Kuwa na Ambo",
   icon: "❓",
   level: "intermediate" as const,
+  description: "Learn to ask questions about quantities, ownership, and identity using Kua, Ambo, and Na(ni).",
+  descriptionFr: "Learn to ask questions about quantities, ownership, and identity using Kua, Ambo, and Na(ni).",
   vocabulary: [
     { lari: "Kua", mandombe: "Kuwa", french: "Combien", english: "How many/much" },
     { lari: "Ambo", mandombe: "Ambo", french: "Particule interrogative (sans équivalent en français)", english: "Interrogative particle (no French equivalent)" },
@@ -16127,9 +16153,9 @@ export const lessons: Lesson[] = [
       title: "KUA — How many / How much",
       titleFr: "KUA — Combien",
       titlePt: "KUA — Quanto",
-      blocks: [
+      groups: [
         {
-          pattern: "Noun + kua + copula class marker + (locative)?",
+          title: "Noun + kua + copula class marker + (locative)?",
           explanation: "Use 'kua' after the noun to ask 'how many'. The copula marker matches the noun class.",
           explanationFr: "Utilisez 'kua' après le nom pour demander 'combien'. Le marqueur copulatif correspond à la classe du nom.",
           examples: [
@@ -16142,9 +16168,7 @@ export const lessons: Lesson[] = [
           ],
         },
         {
-          pattern: "Locative + Noun + class copula + (locative marker)",
-          explanation: "For 'there are many...', use 'mingi' (many) with the class marker.",
-          explanationFr: "Pour 'il y a beaucoup de...', utilisez 'mingi' (beaucoup) avec le marqueur de classe.",
+          title: "Locative + Noun + class copula + (locative marker)",
           examples: [
             { lari: "Ku nsaba ku miti mia mingi mie(na) ku.", mandombe: "Ku nsaba ku miti mia mingi mie(na) ku.", french: "Il y a beaucoup d'arbres dans ce jardin.", english: "There are many trees in this garden." },
             { lari: "Ha zandu ha, mampa ma mingi me(na) ha.", mandombe: "Ha zandu ha, mampa ma mingi me(na) ha.", french: "Il y a beaucoup de pains dans ce marché.", english: "There are many loaves in this market." },
@@ -16157,9 +16181,9 @@ export const lessons: Lesson[] = [
       title: "AMBO — Interrogative particle",
       titleFr: "AMBO — Particule interrogative",
       titlePt: "AMBO — Partícula interrogativa",
-      blocks: [
+      groups: [
         {
-          pattern: "Ambo + question",
+          title: "Ambo + question",
           explanation: "Ambo introduces an interrogative form. It has no French equivalent.",
           explanationFr: "Ambo introduit une forme interrogative. Il n'a pas d'équivalent en français.",
           examples: [
@@ -16178,9 +16202,9 @@ export const lessons: Lesson[] = [
       title: "KUA — Asking age",
       titleFr: "KUA — Demander l'âge",
       titlePt: "KUA — Perguntar a idade",
-      blocks: [
+      groups: [
         {
-          pattern: "Mvula kua ze + possessive?",
+          title: "Mvula kua ze + possessive?",
           explanation: "To ask someone's age, use 'Mvula kua ze' + possessive pronoun.",
           explanationFr: "Pour demander l'âge, utilisez 'Mvula kua ze' + pronom possessif.",
           examples: [
@@ -16195,9 +16219,9 @@ export const lessons: Lesson[] = [
       title: "NA(NI) — Asking 'Who' / 'Whose'",
       titleFr: "NA(NI) — Demander 'Qui' / 'À qui'",
       titlePt: "NA(NI) — Perguntar 'Quem' / 'De quem'",
-      blocks: [
+      groups: [
         {
-          pattern: "Na(ni) + verb + object? / Noun + class marker + na(ni)?",
+          title: "Na(ni) + verb + object? / Noun + class marker + na(ni)?",
           explanation: "Na(ni) is used to ask 'who' or 'whose'. Ownership uses: Noun + class marker + na(ni)?",
           explanationFr: "Na(ni) sert à demander 'qui' ou 'à qui'. La possession utilise: Nom + marqueur de classe + na(ni)?",
           examples: [
@@ -16218,9 +16242,9 @@ export const lessons: Lesson[] = [
       title: "Nzangu — Contextual dialogue",
       titleFr: "Nzangu — Dialogue contextuel",
       titlePt: "Nzangu — Diálogo contextual",
-      blocks: [
+      groups: [
         {
-          pattern: "Contextual exchange using Ambo, Nki, Kue",
+          title: "Contextual exchange using Ambo, Nki, Kue",
           explanation: "Various interrogative particles combine in natural dialogue.",
           explanationFr: "Différentes particules interrogatives se combinent dans le dialogue naturel.",
           examples: [
@@ -16290,6 +16314,8 @@ export const lessons: Lesson[] = [
   titleMandombe: "Nuwa na Malavu",
   icon: "🍷",
   level: "beginner" as const,
+  description: "Learn vocabulary related to drinks, beverages, and drinking culture.",
+  descriptionFr: "Learn vocabulary related to drinks, beverages, and drinking culture.",
   vocabulary: [
     { lari: "Nua", mandombe: "Nuwa", french: "Boire", english: "To drink" },
     { lari: "Malavu", mandombe: "Malavu", french: "Le vin de palme", english: "Palm wine" },
@@ -16330,9 +16356,9 @@ export const lessons: Lesson[] = [
     {
       title: "Drinking — Expressions & Context",
       titleFr: "Boire — Expressions & contexte",
-      blocks: [
+      groups: [
         {
-          pattern: "Common expressions with Nua and related terms",
+          title: "Common expressions with Nua and related terms",
           explanation: "Drinking-related phrases using vocabulary from the lesson.",
           explanationFr: "Expressions liées aux boissons utilisant le vocabulaire de la leçon.",
           examples: [
