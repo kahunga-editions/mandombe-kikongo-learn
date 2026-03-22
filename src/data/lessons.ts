@@ -16728,5 +16728,5 @@ export const lessons: Lesson[] = [
           { left: "nkandu", right: "position kisimba/mvuala en mandombe" },
         ],
       },
-    ],];
+    ];
 
