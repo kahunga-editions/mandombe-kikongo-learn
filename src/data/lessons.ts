@@ -17762,7 +17762,7 @@ export const lessons: Lesson[] = [
               { lari: "Mu diambu dio.", mandombe: "Mu diambu dio.", french: "C'est pour ça.", english: "That's why.", portuguese: "É por isso." },
               { lari: "Mu nkiangu dio.", mandombe: "Mu nkiangu dio.", french: "C'est comme ça.", english: "That's how it is.", portuguese: "É assim.", note: "Prononcer /ntshiangu/" },
               { lari: "Mu mpila yo.", mandombe: "Mu mpila yo.", french: "Comme ça.", english: "Like this.", portuguese: "Assim." },
-              { lari: "Mu kia bungu.", mandombe: "Mu kia bungu.", french: "Pourquoi ?", english: "Why?", portuguese: "Porquê?", note: "Prononcer /tshia/" },
+              { lari: "Mu kia bungu.", mandombe: "Mu kia bungu.", french: "Pourquoi ? (prononcer /tshia/).", english: "Why?", portuguese: "Porquê?" },
               { lari: "Nzala ku yula.", mandombe: "Nzala ku yula.", french: "J'ai bien envie de te demander.", english: "I really want to ask you.", portuguese: "Tenho muita vontade de te perguntar." },
               { lari: "Nge zebi longesa.", mandombe: "Nge zebi longesa.", french: "Tu sais enseigner.", english: "You know how to teach.", portuguese: "Tu sabes ensinar." },
               { lari: "Ngiendi kuani ju zeba.", mandombe: "Ngiendi kuani ju zeba.", french: "Je me promène.", english: "I'm taking a walk.", portuguese: "Estou a passear." },
