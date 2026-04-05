@@ -16605,9 +16605,6 @@ export const lessons: Lesson[] = [
     phrases: [],
     exercises: [],
   },
-],
-    exercises: [],
-  },
   {
     id: "mandombe-terminologie",
     title: "Kisimba, Mvuala, Zita...",
