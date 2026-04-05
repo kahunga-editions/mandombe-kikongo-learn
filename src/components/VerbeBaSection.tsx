@@ -1,6 +1,4 @@
 import { useState } from "react";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 
@@ -35,15 +33,15 @@ const DATA: ConjEntry[] = [
 type Tense = "c" | "f" | "p";
 
 const tenseColors: Record<Tense, string> = {
-  c: "bg-gold/20 text-gold border-gold/40 hover:bg-gold/30",
-  f: "bg-emerald-500/20 text-emerald-400 border-emerald-500/40 hover:bg-emerald-500/30",
-  p: "bg-blue-500/20 text-blue-400 border-blue-500/40 hover:bg-blue-500/30",
+  c: "bg-amber-500/30 text-amber-300 border-amber-400/50 hover:bg-amber-500/40",
+  f: "bg-emerald-500/30 text-emerald-300 border-emerald-400/50 hover:bg-emerald-500/40",
+  p: "bg-blue-500/30 text-blue-300 border-blue-400/50 hover:bg-blue-500/40",
 };
 
 const tenseBadgeColors: Record<Tense, string> = {
-  c: "bg-gold/20 text-gold",
-  f: "bg-emerald-500/20 text-emerald-400",
-  p: "bg-blue-500/20 text-blue-400",
+  c: "bg-amber-500/30 text-amber-300",
+  f: "bg-emerald-500/30 text-emerald-300",
+  p: "bg-blue-500/30 text-blue-300",
 };
 
 const tenseLabels: Record<Tense, { fr: string; en: string; pt: string }> = {
@@ -52,7 +50,7 @@ const tenseLabels: Record<Tense, { fr: string; en: string; pt: string }> = {
   p: { fr: "Passé", en: "Past", pt: "Passado" },
 };
 
-const VerbeBa = () => {
+const VerbeBaSection = () => {
   const { language } = useLanguage();
   const [selected, setSelected] = useState<{ entry: ConjEntry; tense: Tense } | null>(null);
 
@@ -69,13 +67,12 @@ const VerbeBa = () => {
   });
 
   return (
-    <div className="min-h-screen bg-background">
-      <Navbar />
-      <main className="container mx-auto px-4 pt-24 pb-16">
+    <section id="verbe-ba" className="py-16 bg-background">
+      <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
-          <h1 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-2">
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-2">
             BA= · {language === "en" ? "The verb \"to be\" in Kilari" : language === "pt" ? "O verbo \"ser/estar\" em Kilari" : "Le verbe « être » en Kilari"}
-          </h1>
+          </h2>
           <p className="text-muted-foreground mb-6">
             {language === "en"
               ? "Click on a verb form to see the translation and kifuani (example)"
@@ -88,7 +85,7 @@ const VerbeBa = () => {
           <div className="flex flex-wrap gap-4 mb-6">
             {(["c", "f", "p"] as Tense[]).map((t) => (
               <div key={t} className="flex items-center gap-2">
-                <div className={`w-3 h-3 rounded-full ${t === "c" ? "bg-gold" : t === "f" ? "bg-emerald-500" : "bg-blue-500"}`} />
+                <div className={`w-3 h-3 rounded-full ${t === "c" ? "bg-amber-400" : t === "f" ? "bg-emerald-400" : "bg-blue-400"}`} />
                 <span className="text-sm text-muted-foreground">{getTenseLabel(t)}</span>
               </div>
             ))}
@@ -102,16 +99,16 @@ const VerbeBa = () => {
                   <th className="text-left px-4 py-3 text-muted-foreground font-medium">
                     {language === "en" ? "Pronoun / Noun" : language === "pt" ? "Pronome / Substantivo" : "Pronom / Substantif"}
                   </th>
-                  <th className="text-center px-4 py-3 text-gold font-medium">{getTenseLabel("c")}</th>
-                  <th className="text-center px-4 py-3 text-emerald-400 font-medium">{getTenseLabel("f")}</th>
-                  <th className="text-center px-4 py-3 text-blue-400 font-medium">{getTenseLabel("p")}</th>
+                  <th className="text-center px-4 py-3 text-amber-400 font-medium">{getTenseLabel("c")}</th>
+                  <th className="text-center px-4 py-3 text-emerald-300 font-medium">{getTenseLabel("f")}</th>
+                  <th className="text-center px-4 py-3 text-blue-300 font-medium">{getTenseLabel("p")}</th>
                 </tr>
               </thead>
               <tbody>
                 {DATA.map((entry, i) => (
                   <tr key={i} className="border-b border-border/50 last:border-0">
                     <td className="px-4 py-3">
-                      <div className="font-mandombe text-lg text-foreground">{entry.classe}</div>
+                      <div className="font-mandombe text-2xl text-foreground mb-3">{entry.classe}</div>
                       <div className="text-xs text-muted-foreground">{entry.classe_fr}</div>
                     </td>
                     {(["c", "f", "p"] as Tense[]).map((tense) => (
@@ -120,7 +117,7 @@ const VerbeBa = () => {
                           onClick={() => setSelected({ entry, tense })}
                           className={`inline-flex flex-col items-center gap-1 px-3 py-2 rounded-lg border transition-all cursor-pointer ${tenseColors[tense]}`}
                         >
-                          <span className="font-mandombe text-xl">{getForm(entry, tense)}</span>
+                          <span className="font-mandombe text-3xl">{getForm(entry, tense)}</span>
                           <span className="text-[10px] opacity-70">{getForm(entry, tense)}</span>
                         </button>
                       </td>
@@ -131,7 +128,7 @@ const VerbeBa = () => {
             </table>
           </div>
         </div>
-      </main>
+      </div>
 
       {/* Detail Modal */}
       <Dialog open={!!selected} onOpenChange={() => setSelected(null)}>
@@ -143,7 +140,7 @@ const VerbeBa = () => {
               <>
                 <DialogHeader>
                   <DialogTitle className="flex items-center gap-3">
-                    <span className="font-mandombe text-3xl text-foreground">{getForm(entry, tense)}</span>
+                    <span className="font-mandombe text-4xl text-foreground">{getForm(entry, tense)}</span>
                     <span className={`text-xs px-2 py-1 rounded-full ${tenseBadgeColors[tense]}`}>
                       {getTenseLabel(tense)}
                     </span>
@@ -155,7 +152,7 @@ const VerbeBa = () => {
                       {language === "en" ? "Pronoun / Noun" : "Pronom / Substantif"}
                     </div>
                     <div className="text-foreground font-medium">
-                      <span className="font-mandombe text-lg mr-2">{entry.classe}</span>
+                      <span className="font-mandombe text-2xl mr-2">{entry.classe}</span>
                       <span className="text-muted-foreground">({entry.classe_fr})</span>
                     </div>
                   </div>
@@ -173,7 +170,7 @@ const VerbeBa = () => {
                   </div>
                   <div className="bg-muted/50 rounded-lg p-4 space-y-2">
                     <div className="text-xs text-muted-foreground uppercase tracking-wide mb-2">Kifuani</div>
-                    <div className="font-mandombe text-xl text-foreground">{kif.mandombe}</div>
+                    <div className="font-mandombe text-2xl text-foreground">{kif.mandombe}</div>
                     <div className="text-sm text-foreground/80 italic">{kif.latin}</div>
                     <div className="text-sm text-muted-foreground">{kif.french}</div>
                   </div>
@@ -183,10 +180,8 @@ const VerbeBa = () => {
           })()}
         </DialogContent>
       </Dialog>
-
-      <Footer />
-    </div>
+    </section>
   );
 };
 
-export default VerbeBa;
+export default VerbeBaSection;
