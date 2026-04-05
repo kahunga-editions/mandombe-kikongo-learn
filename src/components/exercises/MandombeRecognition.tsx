@@ -115,7 +115,7 @@ const MandombeRecognition = ({ question, onComplete }: MandombeRecognitionProps)
                 language === "pt" ? "Qual palavra corresponde a este glifo?" :
                   "Which word matches this glyph?"}
             </p>
-            <p className="font-mandombe text-6xl md:text-7xl text-gold mb-3">{item.mandombe}</p>
+            <p className="font-mandombe text-6xl md:text-7xl text-gold mb-8" style={{ lineHeight: '2.2', paddingBottom: '0.5em', overflow: 'visible' }}>{item.mandombe}</p>
             {selected && (
               <p className="text-sm text-muted-foreground italic mt-2">💡 {hint}</p>
             )}
