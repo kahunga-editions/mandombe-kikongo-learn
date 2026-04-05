@@ -1,50 +1,39 @@
 
 
-# Ajouter des exercices de reconnaissance Mandombe à toutes les leçons
+# Corriger l'erreur de build + Ajouter la conjugaison du verbe "BA=" (être)
 
-## Constat
+## Problème de build
 
-- **124 leçons** au total, dont seulement **9** possèdent déjà des exercices `mandombe-recognition`.
-- **115 leçons** doivent recevoir un exercice de déchiffrage des glyphes Mandombe.
-- Le fichier `lessons.ts` fait déjà 18 438 lignes.
+4 blocs `mandombe-recognition` sont insérés **en dehors** du tableau `exercises`, juste après la fermeture `],` du tableau `vocabulary`. Ils flottent entre `vocabulary` et `exercises`, ce qui casse la syntaxe TypeScript.
 
-## Approche
+**Lignes concernées** : 12698-12713, 18227-18242, 18402-18417, 18453-18468
 
-Écrire un script Python qui parcourt toutes les leçons, et pour chacune qui n'a pas encore d'exercice `mandombe-recognition`, en génère un automatiquement à partir du vocabulaire existant de la leçon :
+**Correction** : Pour chaque bloc, le déplacer à l'intérieur du `exercises: []` qui suit (transformer `exercises: []` en `exercises: [{ ... le bloc ... }]`), et supprimer le bloc de son emplacement incorrect.
 
-1. **Extraire 6-8 mots** du `vocabulary` de chaque leçon (ceux qui ont un champ `mandombe`).
-2. **Générer des distracteurs** à partir du vocabulaire des autres leçons (mots Lari similaires en longueur/sonorité).
-3. **Alterner les modes** `glyph-to-latin` et `latin-to-glyph` pour varier l'exercice.
-4. **Insérer** l'exercice à la fin du tableau `exercises` de chaque leçon.
+## Ajout du contenu "BA=" — Le verbe être en Kilari
 
-## Structure de chaque exercice généré
+Le fichier HTML uploadé contient un tableau interactif de conjugaison du verbe "être" (BA=) en Kilari avec 15 classes nominales × 3 temps (Présent contracté, Présent plein, Passé), avec exemples (kifuani) et rendus Mandombe.
 
-```typescript
-{
-  type: "mandombe-recognition" as const,
-  titleFr: "Déchiffrer le Mandombe – [Nom de la leçon]",
-  title: "Read Mandombe – [Lesson name]",
-  titlePt: "Decifrar o Mandombe – [Nome da lição]",
-  items: [
-    { mandombe: "mbote", lari: "mbote", distractors: ["mboji", "mbele", "mbazi"],
-      french: "Bonjour", mode: "glyph-to-latin" },
-    // ... 5-7 autres items alternant les modes
-  ]
-}
-```
+### Ce qui sera créé
 
-## Règles respectées
+1. **Nouvelle page `/verbe-ba`** — `src/pages/VerbeBa.tsx`
+   - Tableau de conjugaison interactif reproduisant le contenu HTML
+   - 15 lignes (yandi, bantu, lumbembemba, tumbembemba, mapapa, buishi, binzu, papa, kinzu, mbua sg, mbua pl, milumba, kulu, huma)
+   - 3 colonnes de temps avec glyphes Mandombe cliquables
+   - Modal avec détails : pronom, forme latine, traduction, kifuani (phrase Mandombe + transcription + traduction française)
+   - Légende couleur : Présent contracté (doré), Présent plein (vert), Passé (bleu)
 
-- Pas de doublons avec les exercices existants.
-- Les indices (`french`, `english`, `portuguese`) restent cachés jusqu'à la sélection (conformément aux principes pédagogiques).
-- Les distracteurs sont des vrais mots Lari (pas inventés) pour que le font Mandombe les affiche correctement.
-- Les mots avec `|` (pluriels) sont nettoyés pour ne garder que la forme simple.
+2. **Route ajoutée** dans `src/App.tsx` — `/verbe-ba`
 
-## Fichier modifié
+3. **Lien de navigation** dans le Navbar ou la page Lessons pour accéder à cette conjugaison
 
-- `src/data/lessons.ts` — insertion d'un bloc `mandombe-recognition` dans le tableau `exercises` de chaque leçon manquante.
+### Données extraites du HTML (15 entrées)
 
-## Volume estimé
+Chaque entrée contient : classe nominale, forme contractée/pleine/passée, traductions, et exemples kifuani en Mandombe + Latin + Français.
 
-~115 insertions × ~15 lignes chacune ≈ **~1 700 lignes ajoutées**.
+## Fichiers modifiés
+
+- `src/data/lessons.ts` — correction des 4 blocs mal placés
+- `src/pages/VerbeBa.tsx` — nouvelle page de conjugaison interactive
+- `src/App.tsx` — ajout de la route `/verbe-ba`
 
