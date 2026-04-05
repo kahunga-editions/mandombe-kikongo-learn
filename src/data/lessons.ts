@@ -117,6 +117,7 @@ export interface SyntaxExample {
   french: string;
   english: string;
   portuguese?: string;
+  note?: string;
 }
 
 export interface SyntaxGroup {
