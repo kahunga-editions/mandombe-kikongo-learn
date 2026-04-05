@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import LearningPaths from "@/components/LearningPaths";
+import VerbeBaSection from "@/components/VerbeBaSection";
 import VocabularyPreview from "@/components/VocabularyPreview";
 import StoryPreview from "@/components/StoryPreview";
 import KilolakaPreview from "@/components/KilolakaPreview";
