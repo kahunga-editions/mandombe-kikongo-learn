@@ -13,6 +13,7 @@ const Index = () => {
       <Navbar />
       <HeroSection />
       <LearningPaths />
+      <VerbeBaSection />
       <VocabularyPreview />
       <StoryPreview />
       <KilolakaPreview />
