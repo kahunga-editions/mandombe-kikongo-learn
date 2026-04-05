@@ -8,6 +8,7 @@ import MatchingExercise from "@/components/exercises/MatchingExercise";
 import FillInBlank from "@/components/exercises/FillInBlank";
 import CrosswordPuzzle from "@/components/exercises/CrosswordPuzzle";
 import WordSearchPuzzle from "@/components/exercises/WordSearchPuzzle";
+import MandombeRecognition from "@/components/exercises/MandombeRecognition";
 import { ArrowLeft, BookOpen, Trophy } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -349,6 +350,12 @@ const LessonDetail = () => {
                   {exercise.type === "word-search" && (
                     <WordSearchPuzzle
                       question={exercise}
+                      onComplete={(correct) => handleExerciseComplete(i, correct)}
+                    />
+                  )}
+                  {exercise.type === "mandombe-recognition" && (
+                    <MandombeRecognition
+                      question={exercise as any}
                       onComplete={(correct) => handleExerciseComplete(i, correct)}
                     />
                   )}
