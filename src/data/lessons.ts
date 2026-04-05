@@ -16528,7 +16528,10 @@ export const lessons: Lesson[] = [
       { lari: "sanza", mandombe: "sanza", french: "nid de rats, de rongeurs en général", english: "rat's nest, rodent nest", note: "pluriel: masanza" },
       { lari: "mbamina", mandombe: "mbamina", french: "le tonnerre", english: "thunder" },
       { lari: "bamina", mandombe: "bamina", french: "gronder (tonnerre), réprimander", english: "to rumble (thunder), to reprimand" },
-      {
+    ],
+    exercises: [],
+  },
+  {
     id: "kikongo-nouvelles-entrees-2024",
     title: "Nouvelles entrées Kikongo",
     titleFr: "Nouvelles entrées Kikongo",
