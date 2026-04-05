@@ -17327,7 +17327,7 @@ export const lessons: Lesson[] = [
     title: "The Kongo Seasons",
     titleFr: "Les saisons Kongo",
     titlePt: "As estações Kongo",
-    titleLari: "Mbangala",
+    titleLari: "Bina",
     titleMandombe: "Mbangala",
     description: "Learn the 12 traditional Kongo seasons and their corresponding months.",
     descriptionFr: "Apprenez les 12 saisons traditionnelles Kongo et les mois correspondants.",
