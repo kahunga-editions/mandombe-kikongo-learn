@@ -91,7 +91,25 @@ export interface WordSearchQuestion {
   fillerLetters: string;
 }
 
-export type Exercise = MultipleChoiceQuestion | MatchingQuestion | FillInBlankQuestion | CrosswordQuestion | WordSearchQuestion;
+export interface MandombeRecognitionItem {
+  mandombe: string;
+  lari: string;
+  distractors: string[];
+  french: string;
+  english?: string;
+  portuguese?: string;
+  mode: "glyph-to-latin" | "latin-to-glyph";
+}
+
+export interface MandombeRecognitionQuestion {
+  type: "mandombe-recognition";
+  title?: string;
+  titleFr?: string;
+  titlePt?: string;
+  items: MandombeRecognitionItem[];
+}
+
+export type Exercise = MultipleChoiceQuestion | MatchingQuestion | FillInBlankQuestion | CrosswordQuestion | WordSearchQuestion | MandombeRecognitionQuestion;
 
 export interface SyntaxExample {
   lari: string;
