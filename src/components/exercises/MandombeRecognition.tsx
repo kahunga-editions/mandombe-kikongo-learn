@@ -157,7 +157,7 @@ const MandombeRecognition = ({ question, onComplete }: MandombeRecognitionProps)
               {item.mode === "glyph-to-latin" ? (
                 <span className="font-display text-lg font-semibold">{option}</span>
               ) : (
-                <span className="font-mandombe text-4xl text-gold">{option}</span>
+                <span className="font-mandombe text-4xl text-gold" style={{ lineHeight: '2', overflow: 'visible', display: 'inline-block', paddingBottom: '0.3em' }}>{option}</span>
               )}
             </button>
           );
