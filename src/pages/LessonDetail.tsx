@@ -353,6 +353,12 @@ const LessonDetail = () => {
                       onComplete={(correct) => handleExerciseComplete(i, correct)}
                     />
                   )}
+                  {exercise.type === "mandombe-recognition" && (
+                    <MandombeRecognition
+                      question={exercise as any}
+                      onComplete={(correct) => handleExerciseComplete(i, correct)}
+                    />
+                  )}
                 </div>
               ))}
             </div>
