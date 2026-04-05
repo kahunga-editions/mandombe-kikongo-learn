@@ -1,59 +1,27 @@
 
 
-# Plan : Remplacer tous les mots cachés par des exercices de reconnaissance Mandombe
+# Plan : Séparer clairement glyphe Mandombe et texte latin dans les exercices de reconnaissance
 
 ## Problème
 
-Les grilles de mots cachés (word-search) sont remplies de "X" partout, ce qui les rend triviales — aucun défi pour l'apprenant. La technique n'est pas maîtrisée et le résultat nuit à l'expérience.
+En mode `glyph-to-latin`, le glyphe Mandombe affiché en haut est rendu via `font-mandombe` sur le même texte latin que les options de réponse. L'apprenant peut deviner la réponse en comparant visuellement les lettres. De plus, l'indice (traduction française) rend l'exercice encore plus facile.
 
 ## Solution
 
-Remplacer **les 14 exercices `word-search`** existants dans toutes les leçons par des exercices `mandombe-recognition`, qui mettent le Mandombe à l'honneur :
-- L'apprenant voit un glyphe Mandombe (sans translittération latine) et doit identifier le bon mot parmi 4 options
-- Ou inversement : il voit un mot latin et doit trouver le bon glyphe Mandombe
+Modifier `MandombeRecognition.tsx` pour :
 
-Chaque ancien word-search sera remplacé par 6-8 items de reconnaissance, tirés du vocabulaire de la leçon concernée.
-
-## Exercices à remplacer (14 au total)
-
-1. **Ligne ~3389** — Fi- & Fu- Verbs (leçon verbes Fi-/Fu-)
-2. **Ligne ~6194** — Negation key words
-3. **Ligne ~8812** — Find the Foods
-4. **Ligne ~9125** — Flavours & Food
-5. **Ligne ~10603** — Yala vocabulary
-6. **Ligne ~10923** — Body & Objects
-7. **Ligne ~11108** — Fatigue
-8. **Ligne ~11126** — Pronouns & Fatigue
-9. **Ligne ~11253** — Fu- & Fi- Vocabulary
-10. **Ligne ~11680** — Interrogative Words
-11. **Ligne ~16935** — Verbes cachés (leçon verbes-actions-etendus)
-12. **Ligne ~17125** — Animals & Nature (leçon nature-animaux-objets-etendus)
-13. **Ligne ~17310** — Tradition Kongo (leçon tradition-kongo-societe)
-14. Vérifier s'il y en a dans les 6 nouvelles leçons aussi
-
-## Format de remplacement
-
-Chaque word-search devient :
-```typescript
-{
-  type: "mandombe-recognition" as const,
-  titleFr: "Reconnaître le Mandombe",
-  titlePt: "Reconhecer o Mandombe",
-  title: "Recognize Mandombe",
-  items: [
-    { mandombe: "mot", lari: "mot", distractors: ["x", "y", "z"], french: "traduction", mode: "glyph-to-latin" },
-    // 5-7 autres items alternant les deux modes
-  ]
-}
-```
-
-Les mots et distracteurs seront tirés du vocabulaire de chaque leçon respective.
+1. **Supprimer l'indice `💡 hint`** de l'affichage principal — il sera montré uniquement après la sélection (en feedback), pas avant
+2. **En mode `glyph-to-latin`** : afficher le glyphe Mandombe en grand (déjà correct) mais sans aucun texte latin ni traduction visible. Les 4 options restent en texte latin. L'apprenant doit reconnaître le glyphe sans aide
+3. **En mode `latin-to-glyph`** : afficher le mot latin + la traduction française en question. Les 4 options sont en Mandombe (glyphes). L'apprenant doit associer le mot au bon glyphe
+4. **Après sélection** : afficher la traduction comme feedback (pour apprentissage) avec le résultat correct/incorrect
 
 ## Fichier modifié
 
-- `src/data/lessons.ts` — 14 blocs word-search remplacés par mandombe-recognition
+- `src/components/exercises/MandombeRecognition.tsx`
 
-## Résultat
+## Changements concrets
 
-Plus aucune grille de X. À la place, des exercices interactifs de lecture du Mandombe dans chaque leçon.
+- Lignes 118-119 : supprimer la ligne `💡 {hint}` en mode `glyph-to-latin`
+- Lignes 128-129 : garder le hint en mode `latin-to-glyph` (car là c'est utile pour comprendre le mot)
+- Après la sélection (quand `selected` n'est pas null), afficher un petit texte de feedback avec la traduction
 
