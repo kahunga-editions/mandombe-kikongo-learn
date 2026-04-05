@@ -16933,7 +16933,6 @@ export const lessons: Lesson[] = [
         ],
       },
       {
-      {
         type: "mandombe-recognition" as const,
         title: "Recognize Mandombe — Hidden Verbs",
         titleFr: "Reconnaître le Mandombe — Verbes cachés",
@@ -17130,7 +17129,6 @@ export const lessons: Lesson[] = [
         ],
       },
       {
-      {
         type: "mandombe-recognition" as const,
         title: "Recognize Mandombe — Animals & Nature",
         titleFr: "Reconnaître le Mandombe — Animaux & Nature",
@@ -17321,7 +17319,6 @@ export const lessons: Lesson[] = [
           { mandombe: "keti", lari: "keti", distractors: ["keli", "kesi", "keni"], french: "ou", mode: "glyph-to-latin" as const },
         ],
       },
-      {
       {
         type: "mandombe-recognition" as const,
         title: "Recognize Mandombe — Kongo Tradition",
