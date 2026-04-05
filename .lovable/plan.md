@@ -1,53 +1,59 @@
 
 
-# Plan : Créer 6 nouvelles leçons à partir du contenu fourni
+# Plan : Remplacer tous les mots cachés par des exercices de reconnaissance Mandombe
 
-## Leçons à créer
+## Problème
 
-### 1. `"saisons-kongo"` — Les saisons Kongo
-**Titre Lari** : « Mbangala » (une saison tirée de la liste)
-12 entrées de vocabulaire (kintombo, nkiela, luanza, shihu, lunkiesa, senza kiamasanza, mbangala, kumpua, vila, akunde, kundi, kundi kianene) avec les périodes correspondantes.
-Exercices : QCM + matching + reconnaissance Mandombe.
+Les grilles de mots cachés (word-search) sont remplies de "X" partout, ce qui les rend triviales — aucun défi pour l'apprenant. La technique n'est pas maîtrisée et le résultat nuit à l'expérience.
 
-### 2. `"binama-bia-nitu"` — Binama bia nitu
-**Titre Lari** : « Binama bia nitu » (fourni par l'utilisateur)
-Vocabulaire : moyo, bubelo, nsuki, disu dia kulu, meso ma kulu, ntu, bunda, etc.
-Phrases : les conjugaisons « muana shiri ku nima », « sakalala », « nsuki ni sukula », les expressions de douleur/maladie.
-Conjugaisons : « sakalala » (6 personnes), « nsuki ni … sukula » (6 personnes).
-Exercices : QCM + fill-in-blank + reconnaissance Mandombe.
+## Solution
 
-### 3. `"mpashi-zo-ntama"` — Mpashi zo ntama za tuka
-**Titre Lari** : « Mpashi zo ntama za tuka »
-Vocabulaire : ntama, tuka, nsoni, mpasi, vuka, tambula, matondo, nsaba, dema, fumu, ndala, etc.
-Phrases : les conjugaisons « Ku Mputu tukidi » (6 personnes), les proverbes (malavu, ngunza), expressions temporelles (mazono, buaubu, mbaji).
-Conjugaisons : « tuka » venir de (6 personnes).
-Exercices : QCM + matching + fill-in-blank + reconnaissance Mandombe.
+Remplacer **les 14 exercices `word-search`** existants dans toutes les leçons par des exercices `mandombe-recognition`, qui mettent le Mandombe à l'honneur :
+- L'apprenant voit un glyphe Mandombe (sans translittération latine) et doit identifier le bon mot parmi 4 options
+- Ou inversement : il voit un mot latin et doit trouver le bon glyphe Mandombe
 
-### 4. `"nkombo-kue-ye"` — Nkombo kue ye?
-**Titre Lari** : « Nkombo kue ye? »
-Vocabulaire : nkombo, ngulu, nuni, binkuti, mampa, dimpa, mbua, mbuma, nsafu, luzala, lukuba, bitenda, etc.
-Phrases : les questions « kue ye/kue yena/kue ze/kue zena » pour singulier/pluriel, les nombres (bole, tatu, makumatatu na tanu), « Djoka Milou! ».
-Syntaxe : le système de localisation « kue ye » vs « kue yena ».
-Exercices : QCM + matching + fill-in-blank + reconnaissance Mandombe.
+Chaque ancien word-search sera remplacé par 6-8 items de reconnaissance, tirés du vocabulaire de la leçon concernée.
 
-### 5. `"bala-ba-ngulu-bia-bitatu"` — Bala ba ngulu bia bitatu
-**Titre Lari** : « Bala ba ngulu bia bitatu »
-Vocabulaire : bilongo, nsayi, tolo, duka, dia, telama, zakala, sala, diama, bangula, nsamba, bikua, nsatu, tshibete, nkekoso, tshivvuadangu, etc.
-Phrases : conjugaisons « nsayi ye na- » (6 personnes), impératifs (duka/dukeno, telama/telameno, zakala/zakaleno, sala/saleno, dia/dieno), proverbes (« Bo bu wa tshiri na meno, dia masangu »), négation (« ka njena na nsatu ko »).
-Exercices : QCM + matching + fill-in-blank + reconnaissance Mandombe.
+## Exercices à remplacer (14 au total)
 
-### 6. `"mvula-ze-nani"` — Mvula makumatatu na tanu ze nani
-**Titre Lari** : « Mvula makumatatu na tanu ze nani »
-Vocabulaire : mvula, mvuka, muatu, mpeho, yelo, binsono, ndinga, vuku, etc.
-Phrases : dire son âge (« mvula … ze nani/naku »), démonstratifs (« ba wu bo, wa wu wo, koko ku, kulu ku, buku dio, ndinga yo »), possessifs (« ya me, ya nge, ya yandi, ya beto, ya beno, ya bawu »), « est en train de » (yeka/keka), « vuku » (faillir).
-Exercices : QCM + matching + fill-in-blank + reconnaissance Mandombe.
+1. **Ligne ~3389** — Fi- & Fu- Verbs (leçon verbes Fi-/Fu-)
+2. **Ligne ~6194** — Negation key words
+3. **Ligne ~8812** — Find the Foods
+4. **Ligne ~9125** — Flavours & Food
+5. **Ligne ~10603** — Yala vocabulary
+6. **Ligne ~10923** — Body & Objects
+7. **Ligne ~11108** — Fatigue
+8. **Ligne ~11126** — Pronouns & Fatigue
+9. **Ligne ~11253** — Fu- & Fi- Vocabulary
+10. **Ligne ~11680** — Interrogative Words
+11. **Ligne ~16935** — Verbes cachés (leçon verbes-actions-etendus)
+12. **Ligne ~17125** — Animals & Nature (leçon nature-animaux-objets-etendus)
+13. **Ligne ~17310** — Tradition Kongo (leçon tradition-kongo-societe)
+14. Vérifier s'il y en a dans les 6 nouvelles leçons aussi
 
-## Détails techniques
+## Format de remplacement
 
-- **Fichier** : `src/data/lessons.ts` — insertion avant `];` (ligne 17326)
-- **Mandombe** : champ `mandombe` = spelling latin exact du `lari` (pas d'Adlam)
-- **Titres** : tous tirés directement des phrases fournies par l'utilisateur
-- **Doublons** : vérification contre les entrées existantes, ajout de `note` pour les homonymes
-- **Exercices par leçon** : 3-4 QCM, 1-2 matching, 1-2 fill-in-blank, 1 reconnaissance Mandombe
-- **Intégralité** : toutes les phrases, conjugaisons et vocabulaire fournis seront inclus
+Chaque word-search devient :
+```typescript
+{
+  type: "mandombe-recognition" as const,
+  titleFr: "Reconnaître le Mandombe",
+  titlePt: "Reconhecer o Mandombe",
+  title: "Recognize Mandombe",
+  items: [
+    { mandombe: "mot", lari: "mot", distractors: ["x", "y", "z"], french: "traduction", mode: "glyph-to-latin" },
+    // 5-7 autres items alternant les deux modes
+  ]
+}
+```
+
+Les mots et distracteurs seront tirés du vocabulaire de chaque leçon respective.
+
+## Fichier modifié
+
+- `src/data/lessons.ts` — 14 blocs word-search remplacés par mandombe-recognition
+
+## Résultat
+
+Plus aucune grille de X. À la place, des exercices interactifs de lecture du Mandombe dans chaque leçon.
 
