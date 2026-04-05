@@ -17,6 +17,45 @@ const waitForFont = async () => {
 
 const ease = (t: number) => t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
 
+// ─── CANONICAL STROKE DEFINITIONS ────────────────────────────────
+// Each stroke is an array of {x, y} points normalized to 0–1 range
+// within the glyph bounding box. Strokes are drawn in order.
+// Use quadratic/cubic curves between points for smooth Mandombe arcs.
+
+type StrokePoint = { x: number; y: number };
+type CanonicalStroke = StrokePoint[];
+
+// Canonical stroke maps keyed by glyph label (syllable name)
+// Points are normalized 0–1 within the glyph's bounding box
+const CANONICAL_STROKES: Record<string, CanonicalStroke[]> = {
+  // NTSHI – Based on user reference image showing 5 numbered strokes
+  "NTSHI": [
+    // Stroke 1: Top horizontal arc curving right
+    [{ x: 0.1, y: 0.15 }, { x: 0.3, y: 0.08 }, { x: 0.55, y: 0.1 }, { x: 0.75, y: 0.18 }, { x: 0.9, y: 0.3 }],
+    // Stroke 2: Right vertical curve going down
+    [{ x: 0.9, y: 0.3 }, { x: 0.92, y: 0.45 }, { x: 0.88, y: 0.6 }, { x: 0.8, y: 0.72 }],
+    // Stroke 3: Bottom curve sweeping left
+    [{ x: 0.8, y: 0.72 }, { x: 0.65, y: 0.82 }, { x: 0.45, y: 0.88 }, { x: 0.25, y: 0.85 }, { x: 0.1, y: 0.75 }],
+    // Stroke 4: Left side going up
+    [{ x: 0.1, y: 0.75 }, { x: 0.08, y: 0.6 }, { x: 0.1, y: 0.45 }, { x: 0.15, y: 0.35 }],
+    // Stroke 5: Inner detail / cross element
+    [{ x: 0.3, y: 0.35 }, { x: 0.5, y: 0.4 }, { x: 0.65, y: 0.5 }, { x: 0.6, y: 0.65 }],
+  ],
+  // NSHMU – Based on user reference image showing numbered strokes
+  "NSHMU": [
+    // Stroke 1: Left vertical descending
+    [{ x: 0.15, y: 0.1 }, { x: 0.12, y: 0.3 }, { x: 0.1, y: 0.5 }, { x: 0.12, y: 0.7 }, { x: 0.18, y: 0.85 }],
+    // Stroke 2: Top horizontal rightward
+    [{ x: 0.15, y: 0.1 }, { x: 0.35, y: 0.08 }, { x: 0.55, y: 0.12 }, { x: 0.75, y: 0.2 }],
+    // Stroke 3: Right vertical curve descending
+    [{ x: 0.75, y: 0.2 }, { x: 0.82, y: 0.35 }, { x: 0.85, y: 0.55 }, { x: 0.8, y: 0.72 }],
+    // Stroke 4: Bottom horizontal leftward
+    [{ x: 0.8, y: 0.72 }, { x: 0.6, y: 0.82 }, { x: 0.4, y: 0.85 }, { x: 0.18, y: 0.85 }],
+    // Stroke 5: Middle horizontal bar
+    [{ x: 0.2, y: 0.48 }, { x: 0.4, y: 0.45 }, { x: 0.6, y: 0.48 }, { x: 0.75, y: 0.52 }],
+  ],
+};
+
 // ─── RENDER GLYPH TO OFFSCREEN CANVAS ────────────────────────────
 function renderGlyph(glyph: string): HTMLCanvasElement {
   const off = document.createElement("canvas");
@@ -48,23 +87,14 @@ function getGlyphBBox(imgData: ImageData) {
   return { minX, maxX, minY, maxY };
 }
 
-// ─── BUILD CANONICAL STROKE PATH ─────────────────────────────────
-// Mandombe glyphs are built from curved geometric forms.
-// We extract the centerline (skeleton) of the glyph by finding
-// the medial point of ink runs in each row, then order these
-// points by contour-following (nearest-neighbor) from the Singini.
-// This produces a natural writing motion that follows the actual
-// stroke shape rather than a mechanical column scan.
-function buildStrokePath(
+// ─── BUILD FALLBACK STROKE PATH (heuristic) ──────────────────────
+function buildFallbackStrokePath(
   imgData: ImageData,
   bbox: ReturnType<typeof getGlyphBBox>
 ): Array<{ x: number; y: number; penDown: boolean }> {
   const { data, width } = imgData;
   const { minX, maxX, minY, maxY } = bbox;
 
-  // Step 1: Extract skeleton points (centerline of ink runs)
-  // For each row, find contiguous runs of ink and record their centers.
-  // Also do the same for columns to capture vertical strokes.
   const rawPts: Array<{ x: number; y: number }> = [];
   const visited = new Set<string>();
 
@@ -76,7 +106,6 @@ function buildStrokePath(
     }
   };
 
-  // Row-based skeleton (captures horizontal & diagonal strokes)
   const step = 2;
   for (let y = minY; y <= maxY; y += step) {
     let inRun = false;
@@ -91,7 +120,6 @@ function buildStrokePath(
     }
   }
 
-  // Column-based skeleton (captures vertical strokes)
   for (let x = minX; x <= maxX; x += step) {
     let inRun = false;
     let runStart = 0;
@@ -107,12 +135,9 @@ function buildStrokePath(
 
   if (rawPts.length === 0) return [];
 
-  // Step 2: Order points by nearest-neighbor chain starting from Singini
-  // Singini = top-left of bounding box (canonical entry point)
   const singiniX = minX;
   const singiniY = minY;
 
-  // Find starting point closest to Singini
   let bestIdx = 0;
   let bestDist = Infinity;
   for (let i = 0; i < rawPts.length; i++) {
@@ -120,7 +145,6 @@ function buildStrokePath(
     if (d < bestDist) { bestDist = d; bestIdx = i; }
   }
 
-  // Greedy nearest-neighbor ordering
   const ordered: Array<{ x: number; y: number }> = [];
   const used = new Uint8Array(rawPts.length);
   let current = bestIdx;
@@ -141,8 +165,7 @@ function buildStrokePath(
     current = nearestIdx;
   }
 
-  // Step 3: Build path with pen-up for jumps
-  const jumpThreshold = 18; // pixels — pen lifts for larger gaps
+  const jumpThreshold = 18;
   const pts: Array<{ x: number; y: number; penDown: boolean }> = [];
 
   for (let i = 0; i < ordered.length; i++) {
@@ -159,24 +182,65 @@ function buildStrokePath(
   return pts;
 }
 
+// ─── CONVERT CANONICAL STROKES TO PIXEL PATH ─────────────────────
+function canonicalToPixelPath(
+  strokes: CanonicalStroke[],
+  bbox: ReturnType<typeof getGlyphBBox>
+): Array<{ x: number; y: number; penDown: boolean; strokeIdx: number }> {
+  const { minX, maxX, minY, maxY } = bbox;
+  const w = maxX - minX;
+  const h = maxY - minY;
+  const pts: Array<{ x: number; y: number; penDown: boolean; strokeIdx: number }> = [];
+
+  for (let s = 0; s < strokes.length; s++) {
+    const stroke = strokes[s];
+    // Interpolate between control points for smoothness
+    const interpolated: StrokePoint[] = [];
+    for (let i = 0; i < stroke.length - 1; i++) {
+      const a = stroke[i];
+      const b = stroke[i + 1];
+      const steps = 12; // sub-steps per segment for smoothness
+      for (let t = 0; t <= steps; t++) {
+        const frac = t / steps;
+        interpolated.push({
+          x: a.x + (b.x - a.x) * frac,
+          y: a.y + (b.y - a.y) * frac,
+        });
+      }
+    }
+
+    for (let i = 0; i < interpolated.length; i++) {
+      const p = interpolated[i];
+      pts.push({
+        x: minX + p.x * w,
+        y: minY + p.y * h,
+        penDown: i > 0, // pen up at start of each stroke
+        strokeIdx: s,
+      });
+    }
+  }
+
+  return pts;
+}
+
 // ─── SMOOTH QUADRATIC CURVE DRAWING ──────────────────────────────
-function drawSmoothStroke(
+function drawSmoothPath(
   ctx: CanvasRenderingContext2D,
   pts: Array<{ x: number; y: number; penDown: boolean }>,
-  upTo: number
+  upTo: number,
+  strokeColor = "hsl(20,40%,18%)",
+  lineWidth = 3.5
 ) {
   ctx.lineCap = "round";
   ctx.lineJoin = "round";
-  ctx.lineWidth = 3.5;
-  ctx.strokeStyle = "hsl(20,40%,18%)";
+  ctx.lineWidth = lineWidth;
+  ctx.strokeStyle = strokeColor;
 
   let i = 0;
   while (i <= upTo) {
-    // Find start of a continuous segment
     while (i <= upTo && !pts[i].penDown && i > 0) i++;
     if (i > upTo) break;
 
-    // Collect continuous segment
     const seg: Array<{ x: number; y: number }> = [pts[i]];
     i++;
     while (i <= upTo && pts[i].penDown) {
@@ -186,7 +250,6 @@ function drawSmoothStroke(
 
     if (seg.length < 2) continue;
 
-    // Draw smooth quadratic curve through segment points
     ctx.beginPath();
     ctx.moveTo(seg[0].x, seg[0].y);
 
@@ -205,6 +268,25 @@ function drawSmoothStroke(
   }
 }
 
+// ─── DRAW STROKE NUMBER LABEL ────────────────────────────────────
+function drawStrokeNumber(ctx: CanvasRenderingContext2D, x: number, y: number, num: number) {
+  ctx.font = "bold 11px sans-serif";
+  ctx.fillStyle = "hsl(210,70%,50%)";
+  ctx.textAlign = "center";
+  ctx.textBaseline = "middle";
+  // Small circle background
+  ctx.beginPath();
+  ctx.arc(x, y, 9, 0, Math.PI * 2);
+  ctx.fillStyle = "hsla(210,80%,95%,0.9)";
+  ctx.fill();
+  ctx.strokeStyle = "hsl(210,70%,50%)";
+  ctx.lineWidth = 1.2;
+  ctx.stroke();
+  // Number
+  ctx.fillStyle = "hsl(210,70%,40%)";
+  ctx.fillText(String(num), x, y + 1);
+}
+
 // ─── COMPONENT ────────────────────────────────────────────────────
 const GlyphTracingCanvas = ({ glyph, label }: GlyphTracingCanvasProps) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -215,6 +297,12 @@ const GlyphTracingCanvas = ({ glyph, label }: GlyphTracingCanvasProps) => {
   const [fontReady, setFontReady] = useState(false);
   const animRef = useRef<number>(0);
   const { t } = useLanguage();
+
+  // Check if this glyph has a canonical stroke definition
+  const canonicalKey = Object.keys(CANONICAL_STROKES).find(
+    (k) => k.toUpperCase() === label.toUpperCase()
+  );
+  const hasCanonical = !!canonicalKey;
 
   useEffect(() => { waitForFont().then(() => setFontReady(true)); }, []);
 
@@ -287,14 +375,37 @@ const GlyphTracingCanvas = ({ glyph, label }: GlyphTracingCanvasProps) => {
     const singiniX = bbox.minX;
     const singiniY = bbox.minY;
 
-    const pts = buildStrokePath(imgData, bbox);
+    // Choose canonical or fallback path
+    let pts: Array<{ x: number; y: number; penDown: boolean; strokeIdx?: number }>;
+    let isCanonical = false;
+
+    if (canonicalKey && CANONICAL_STROKES[canonicalKey]) {
+      pts = canonicalToPixelPath(CANONICAL_STROKES[canonicalKey], bbox);
+      isCanonical = true;
+    } else {
+      pts = buildFallbackStrokePath(imgData, bbox).map(p => ({ ...p, strokeIdx: 0 }));
+    }
+
     if (pts.length === 0) { setIsAnimating(false); return; }
 
     // Show Singini first
     drawBg(ctx);
     drawSingini(ctx, singiniX, singiniY);
 
-    const DURATION = 2800;
+    // For canonical, also show stroke numbers at start of each stroke
+    if (isCanonical) {
+      const strokeStarts: Array<{ x: number; y: number; num: number }> = [];
+      let lastStroke = -1;
+      for (const p of pts) {
+        if (p.strokeIdx !== undefined && p.strokeIdx !== lastStroke) {
+          strokeStarts.push({ x: p.x, y: p.y, num: p.strokeIdx + 1 });
+          lastStroke = p.strokeIdx;
+        }
+      }
+      // We'll draw these during animation
+    }
+
+    const DURATION = isCanonical ? 3500 : 2800; // Longer for canonical to show clearly
     let t0: number | null = null;
 
     const animate = (ts: number) => {
@@ -306,7 +417,26 @@ const GlyphTracingCanvas = ({ glyph, label }: GlyphTracingCanvasProps) => {
       drawBg(ctx);
 
       // Draw smooth stroke up to current point
-      drawSmoothStroke(ctx, pts, upTo);
+      drawSmoothPath(ctx, pts, upTo);
+
+      // For canonical mode, show stroke numbers at the start of completed strokes
+      if (isCanonical) {
+        let lastStroke = -1;
+        for (let i = 0; i <= Math.min(upTo, pts.length - 1); i++) {
+          const p = pts[i];
+          if (p.strokeIdx !== undefined && p.strokeIdx !== lastStroke) {
+            lastStroke = p.strokeIdx;
+          }
+        }
+        // Draw numbers for all strokes that have started
+        let prevStroke = -1;
+        for (const p of pts) {
+          if (p.strokeIdx !== undefined && p.strokeIdx !== prevStroke && p.strokeIdx <= lastStroke) {
+            drawStrokeNumber(ctx, p.x - 12, p.y - 12, p.strokeIdx + 1);
+            prevStroke = p.strokeIdx;
+          }
+        }
+      }
 
       // Pen tip at current position
       if (upTo < pts.length) {
@@ -324,13 +454,26 @@ const GlyphTracingCanvas = ({ glyph, label }: GlyphTracingCanvasProps) => {
           if (!c) return;
           drawBg(c);
           c.drawImage(off, 0, 0);
+
+          // Show final stroke numbers overlay for canonical
+          if (isCanonical && canonicalKey) {
+            const finalStrokes = CANONICAL_STROKES[canonicalKey];
+            const { minX, maxX, minY, maxY } = bbox;
+            const w = maxX - minX;
+            const h = maxY - minY;
+            for (let s = 0; s < finalStrokes.length; s++) {
+              const first = finalStrokes[s][0];
+              drawStrokeNumber(c, minX + first.x * w - 12, minY + first.y * h - 12, s + 1);
+            }
+          }
+
           setIsAnimating(false);
         }, 400);
       }
     };
 
     setTimeout(() => { animRef.current = requestAnimationFrame(animate); }, 700);
-  }, [isAnimating, fontReady, glyph, drawBg]);
+  }, [isAnimating, fontReady, glyph, drawBg, canonicalKey]);
 
   useEffect(() => () => cancelAnimationFrame(animRef.current), []);
 
@@ -377,6 +520,11 @@ const GlyphTracingCanvas = ({ glyph, label }: GlyphTracingCanvasProps) => {
           onTouchStart={startDraw} onTouchMove={draw} onTouchEnd={endDraw}
         />
         <div className="absolute top-2 left-2 text-xs font-body text-muted-foreground bg-background/80 px-2 py-0.5 rounded">{label}</div>
+        {hasCanonical && (
+          <div className="absolute bottom-2 left-2 text-[9px] text-primary/60 bg-background/80 px-1.5 py-0.5 rounded">
+            ✓ Tracé canonique
+          </div>
+        )}
         {!isAnimating && !hasDrawn && (
           <div className="absolute top-2 right-2 text-[10px] text-muted-foreground/50 italic pr-1">
             Singini → point d'entrée
