@@ -116,7 +116,9 @@ const MandombeRecognition = ({ question, onComplete }: MandombeRecognitionProps)
                   "Which word matches this glyph?"}
             </p>
             <p className="font-mandombe text-6xl md:text-7xl text-gold mb-3">{item.mandombe}</p>
-            <p className="text-sm text-muted-foreground italic">💡 {hint}</p>
+            {selected && (
+              <p className="text-sm text-muted-foreground italic mt-2">💡 {hint}</p>
+            )}
           </>
         ) : (
           <>
