@@ -1,27 +1,38 @@
 
 
-# Plan : Séparer clairement glyphe Mandombe et texte latin dans les exercices de reconnaissance
+# Ajouter les nouvelles entrées au dictionnaire
 
-## Problème
+## Analyse des doublons
 
-En mode `glyph-to-latin`, le glyphe Mandombe affiché en haut est rendu via `font-mandombe` sur le même texte latin que les options de réponse. L'apprenant peut deviner la réponse en comparant visuellement les lettres. De plus, l'indice (traduction française) rend l'exercice encore plus facile.
+- **Musa** → EXISTE DÉJÀ (ligne 7311) comme "Oseille (légume)". On mettra à jour pour ajouter le pluriel `Musa | Misa`.
+- **Tshina, kina | bina** (saison) → `Tshina tsha mvula` existe (ligne 16542) mais pas l'entrée générique "Tshina = saison". À ajouter.
+- **Kindoki, Ndoki, Muloki, Musaka, Dia misa, Mayela ma mpimpa, Tshina (interdiction)** → AUCUN DOUBLON trouvé.
 
-## Solution
+## Entrées à ajouter (7 nouvelles) + 1 mise à jour
 
-Modifier `MandombeRecognition.tsx` pour :
+### 1. Mise à jour — `Musa` (ligne 7311)
+Modifier l'entrée existante pour inclure le pluriel : `Musa | Misa`
 
-1. **Supprimer l'indice `💡 hint`** de l'affichage principal — il sera montré uniquement après la sélection (en feedback), pas avant
-2. **En mode `glyph-to-latin`** : afficher le glyphe Mandombe en grand (déjà correct) mais sans aucun texte latin ni traduction visible. Les 4 options restent en texte latin. L'apprenant doit reconnaître le glyphe sans aide
-3. **En mode `latin-to-glyph`** : afficher le mot latin + la traduction française en question. Les 4 options sont en Mandombe (glyphes). L'apprenant doit associer le mot au bon glyphe
-4. **Après sélection** : afficher la traduction comme feedback (pour apprentissage) avec le résultat correct/incorrect
+### 2. Nouvelles entrées dans "Tradition Kongo & Société" (après ligne 17223)
+Ces entrées correspondent thématiquement à la tradition Kongo :
+
+| Lari | Français | English |
+|------|----------|---------|
+| Kindoki | Science, énergie intérieure utilisant la vitesse de la lumière ascensionnelle pour contrôler les particules intérieures (tradition Kongo) | Science, inner energy using the speed of ascending light to control inner particles (Kongo tradition) |
+| Ndoki | Scientifique mystique, praticien du kindoki | Mystical scientist, kindoki practitioner |
+| Muloki \| Miloki | Ensorcelleur(s) | Sorcerer(s) |
+| Mayela ma mpimpa | L'intelligence de la nuit | The intelligence of the night |
+| Dia misa | Onomatopée qu'on fait quand on est préoccupé | Onomatopoeia expressing preoccupation |
+| Musaka \| Misaka | Grand cône d'environ 1 mètre, fait à base de lattes de palmier pour pêcher | Large cone (~1m) made of palm slats for fishing |
+
+### 3. Nouvelles entrées dans la leçon des saisons (après ligne 16544, près de "Tshina tsha mvula")
+
+| Lari | Français | English | Note |
+|------|----------|---------|------|
+| Tshina, Kina \| Bina | Saison | Season | |
+| Tshina \| Bina | Interdiction | Prohibition, taboo | Avec un /i:/ long |
 
 ## Fichier modifié
 
-- `src/components/exercises/MandombeRecognition.tsx`
-
-## Changements concrets
-
-- Lignes 118-119 : supprimer la ligne `💡 {hint}` en mode `glyph-to-latin`
-- Lignes 128-129 : garder le hint en mode `latin-to-glyph` (car là c'est utile pour comprendre le mot)
-- Après la sélection (quand `selected` n'est pas null), afficher un petit texte de feedback avec la traduction
+- `src/data/lessons.ts` — 3 modifications : 1 update ligne 7311, insertions après ligne 16544, insertions après ligne 17223
 
