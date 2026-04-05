@@ -12,6 +12,7 @@ import Auth from "./pages/Auth";
 import Dictionary from "./pages/Dictionary";
 import Flashcards from "./pages/Flashcards";
 import MandombeScript from "./pages/MandombeScript";
+import VerbeBa from "./pages/VerbeBa";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -32,6 +33,7 @@ const App = () => (
               <Route path="/dictionary" element={<Dictionary />} />
               <Route path="/flashcards" element={<Flashcards />} />
               <Route path="/mandombe" element={<MandombeScript />} />
+              <Route path="/verbe-ba" element={<VerbeBa />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </AuthProvider>
