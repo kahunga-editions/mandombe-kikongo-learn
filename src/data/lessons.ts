@@ -3387,13 +3387,20 @@ export const lessons: Lesson[] = [
       // FUEMBA across (8,2): F(8,2) U(8,3) E(8,4) M(8,5) B(8,6) A(8,7)
       // FUTUKA across (6,3): F(6,3) U(6,4) T(6,5) U(6,6) K(6,7) A(6,8)
       {
-        type: "word-search",
-        title: "Word Search — Fi- & Fu- Verbs",
-        titleFr: "Mots masqués — Verbes Fi- & Fu-",
-        titlePt: "Caça-palavras — Verbos Fi- & Fu-",
-        gridSize: 10,
-        words: [
-          { word: "FUTA", clue: "To pay, reimburse", clueFr: "Payer, rembourser", cluePt: "Pagar, reembolsar", row: 0, col: 0, direction: "across" },
+      {
+        type: "mandombe-recognition" as const,
+        title: "Recognize Mandombe — Fi- & Fu- Verbs",
+        titleFr: "Reconnaître le Mandombe — Verbes Fi- & Fu-",
+        titlePt: "Reconhecer o Mandombe — Verbos Fi- & Fu-",
+        items: [
+          { mandombe: "Futa", lari: "Futa", distractors: ["Fila", "Fusa", "Fioti"], french: "payer, rembourser", mode: "glyph-to-latin" as const },
+          { mandombe: "Fila", lari: "Fila", distractors: ["Futa", "Fusa", "Futuka"], french: "conduire, escorter", mode: "glyph-to-latin" as const },
+          { mandombe: "Fusa", lari: "Fusa", distractors: ["Futa", "Fila", "Fuemba"], french: "extraire en creusant, moisir", mode: "latin-to-glyph" as const },
+          { mandombe: "Fioti", lari: "Fioti", distractors: ["Futuka", "Futa", "Fila"], french: "petit, peu", mode: "glyph-to-latin" as const },
+          { mandombe: "Fuemba", lari: "Fuemba", distractors: ["Futuka", "Fusa", "Futa"], french: "se moucher", mode: "latin-to-glyph" as const },
+          { mandombe: "Futuka", lari: "Futuka", distractors: ["Futa", "Fila", "Fioti"], french: "s'enfler, se gonfler", mode: "glyph-to-latin" as const },
+        ],
+      },
           { word: "FILA", clue: "To lead, to escort", clueFr: "Conduire, escorter", cluePt: "Conduzir, escoltar", row: 2, col: 5, direction: "across" },
           { word: "FUSA", clue: "To dig out, to go mouldy", clueFr: "Extraire en creusant, moisir", cluePt: "Extrair cavando, mofar", row: 4, col: 0, direction: "down" },
           { word: "FIOTI", clue: "Small, little", clueFr: "Petit, peu", cluePt: "Pequeno, pouco", row: 1, col: 9, direction: "down" },
@@ -6192,13 +6199,18 @@ export const lessons: Lesson[] = [
       },
       // Exercise 18: Word Search — Negation key words
       {
-        type: "word-search",
-        title: "Word Search: Find the Lari words",
-        titleFr: "Mots fléchés : Trouvez les mots lari",
-        titlePt: "Caça-palavras: Encontre as palavras lari",
-        gridSize: 8,
-        words: [
-          { word: "KARILA", clue: "To go back, to return", clueFr: "Reprendre, retourner en arrière", cluePt: "Voltar, retroceder", row: 0, col: 0, direction: "across" },
+      {
+        type: "mandombe-recognition" as const,
+        title: "Recognize Mandombe — Negation",
+        titleFr: "Reconnaître le Mandombe — Négation",
+        titlePt: "Reconhecer o Mandombe — Negação",
+        items: [
+          { mandombe: "Karila", lari: "Karila", distractors: ["Yebela", "Zonza", "Muana"], french: "reprendre, retourner", mode: "glyph-to-latin" as const },
+          { mandombe: "Yebela", lari: "Yebela", distractors: ["Karila", "Zonza", "Muana"], french: "se laver", mode: "glyph-to-latin" as const },
+          { mandombe: "Muana", lari: "Muana", distractors: ["Karila", "Yebela", "Zonza"], french: "enfant", mode: "latin-to-glyph" as const },
+          { mandombe: "Zonza", lari: "Zonza", distractors: ["Karila", "Yebela", "Muana"], french: "parler", mode: "glyph-to-latin" as const },
+        ],
+      },
           { word: "YEBELA", clue: "To wash oneself", clueFr: "Se laver", cluePt: "Lavar-se", row: 2, col: 0, direction: "across" },
           { word: "MUANA", clue: "Child", clueFr: "Enfant", cluePt: "Criança", row: 3, col: 0, direction: "down" },
           { word: "ZONZA", clue: "To speak", clueFr: "Parler", cluePt: "Falar", row: 6, col: 2, direction: "across" },
@@ -8810,25 +8822,20 @@ export const lessons: Lesson[] = [
       },
       // 11 — Word search: food nouns
       {
-        type: "word-search",
-        title: "Find the Foods",
-        titleFr: "Trouvez les aliments",
-        titlePt: "Encontre os alimentos",
-        gridSize: 10,
-        // Layout (10×10) — words spaced apart to avoid false readings:
-        //   0 1 2 3 4 5 6 7 8 9
-        // 0 M U N G U A . . . .  ← MUNGUA across
-        // 1 . . . . . . . . . .
-        // 2 . B . . . N G U B A  ← NGUBA across; BUWA↓ starts
-        // 3 . U . . . . . . . .
-        // 4 . W . . . L O S O .  ← LOSO across
-        // 5 . A . . . . . . . M  ← MEKI↓ starts
-        // 6 . . . . . . . . . E
-        // 7 N D U N D A . . . K  ← NDUNDA across
-        // 8 . . . . . . . . . I
-        // 9 . . . . . . . . . .
-        words: [
-          { word: "MUNGUA", clue: "Salt", clueFr: "Le sel", cluePt: "O sal", row: 0, col: 0, direction: "across" },
+      {
+        type: "mandombe-recognition" as const,
+        title: "Recognize Mandombe — Foods",
+        titleFr: "Reconnaître le Mandombe — Aliments",
+        titlePt: "Reconhecer o Mandombe — Alimentos",
+        items: [
+          { mandombe: "Mungua", lari: "Mungua", distractors: ["Nguba", "Loso", "Ndunda"], french: "le sel", mode: "glyph-to-latin" as const },
+          { mandombe: "Nguba", lari: "Nguba", distractors: ["Mungua", "Loso", "Buwa"], french: "cacahuètes", mode: "glyph-to-latin" as const },
+          { mandombe: "Loso", lari: "Loso", distractors: ["Mungua", "Nguba", "Meki"], french: "le riz", mode: "latin-to-glyph" as const },
+          { mandombe: "Buwa", lari: "Buwa", distractors: ["Nguba", "Ndunda", "Meki"], french: "champignons", mode: "glyph-to-latin" as const },
+          { mandombe: "Meki", lari: "Meki", distractors: ["Loso", "Mungua", "Buwa"], french: "les œufs", mode: "latin-to-glyph" as const },
+          { mandombe: "Ndunda", lari: "Ndunda", distractors: ["Nguba", "Loso", "Mungua"], french: "légumes", mode: "glyph-to-latin" as const },
+        ],
+      },
           { word: "NGUBA", clue: "Peanuts", clueFr: "Cacahuètes", cluePt: "Amendoins", row: 2, col: 5, direction: "across" },
           { word: "LOSO", clue: "Rice", clueFr: "Le riz", cluePt: "O arroz", row: 4, col: 5, direction: "across" },
           { word: "BUWA", clue: "Mushrooms", clueFr: "Champignons", cluePt: "Cogumelos", row: 2, col: 1, direction: "down" },
@@ -9123,13 +9130,19 @@ export const lessons: Lesson[] = [
       // NSA down (6,0): N(6,0) S(7,0) A(8,0)
       // MAMBA across (9,3): M(9,3) A(9,4) M(9,5) B(9,6) A(9,7)
       {
-        type: "word-search",
-        title: "Word Search — Flavours & Food",
-        titleFr: "Mots masqués — Saveurs et aliments",
-        titlePt: "Caça-palavras — Sabores e alimentos",
-        gridSize: 10,
-        words: [
-          { word: "LALA", clue: "Orange (fruit)", clueFr: "Orange (fruit)", cluePt: "Laranja (fruta)", row: 0, col: 0, direction: "across" },
+      {
+        type: "mandombe-recognition" as const,
+        title: "Recognize Mandombe — Flavours & Food",
+        titleFr: "Reconnaître le Mandombe — Saveurs et aliments",
+        titlePt: "Reconhecer o Mandombe — Sabores e alimentos",
+        items: [
+          { mandombe: "Lala", lari: "Lala", distractors: ["Bote", "Dimpa", "Mamba"], french: "orange", mode: "glyph-to-latin" as const },
+          { mandombe: "Bote", lari: "Bote", distractors: ["Lala", "Nsa", "Dimpa"], french: "bon", mode: "latin-to-glyph" as const },
+          { mandombe: "Dimpa", lari: "Dimpa", distractors: ["Mamba", "Lala", "Nsa"], french: "pain", mode: "glyph-to-latin" as const },
+          { mandombe: "Nsa", lari: "Nsa", distractors: ["Bote", "Lala", "Mamba"], french: "acidité", mode: "glyph-to-latin" as const },
+          { mandombe: "Mamba", lari: "Mamba", distractors: ["Dimpa", "Nsa", "Bote"], french: "eau / jus", mode: "latin-to-glyph" as const },
+        ],
+      },
           { word: "BOTE", clue: "Good", clueFr: "Bon", cluePt: "Bom", row: 2, col: 5, direction: "across" },
           { word: "DIMPA", clue: "Bread", clueFr: "Pain", cluePt: "Pão", row: 4, col: 0, direction: "across" },
           { word: "NSA", clue: "Sourness", clueFr: "Acidité", cluePt: "Acidez", row: 6, col: 0, direction: "down" },
@@ -10601,13 +10614,19 @@ export const lessons: Lesson[] = [
       },
       // 11. Word search
       {
-        type: "word-search",
-        title: "Word Search — Yala vocabulary",
-        titleFr: "Mots mêlés — Vocabulaire de Yala",
-        titlePt: "Caça-palavras — Vocabulário de Yala",
-        gridSize: 8,
-        words: [
-          { word: "YALA", clue: "To spread", clueFr: "Étendre", cluePt: "Estender", row: 0, col: 0, direction: "across" },
+      {
+        type: "mandombe-recognition" as const,
+        title: "Recognize Mandombe — Yala Vocabulary",
+        titleFr: "Reconnaître le Mandombe — Vocabulaire de Yala",
+        titlePt: "Reconhecer o Mandombe — Vocabulário de Yala",
+        items: [
+          { mandombe: "Yala", lari: "Yala", distractors: ["Vunga", "Njila", "Hata"], french: "étendre", mode: "glyph-to-latin" as const },
+          { mandombe: "Vunga", lari: "Vunga", distractors: ["Yala", "Hata", "Mala"], french: "couverture", mode: "glyph-to-latin" as const },
+          { mandombe: "Njila", lari: "Njila", distractors: ["Yala", "Vunga", "Mala"], french: "chemin", mode: "latin-to-glyph" as const },
+          { mandombe: "Hata", lari: "Hata", distractors: ["Njila", "Yala", "Vunga"], french: "village", mode: "glyph-to-latin" as const },
+          { mandombe: "Mala", lari: "Mala", distractors: ["Hata", "Njila", "Yala"], french: "loin", mode: "latin-to-glyph" as const },
+        ],
+      },
           { word: "VUNGA", clue: "Blanket", clueFr: "Couverture", cluePt: "Cobertor", row: 2, col: 3, direction: "across" },
           { word: "NJILA", clue: "Path", clueFr: "Chemin", cluePt: "Caminho", row: 4, col: 0, direction: "across" },
           { word: "HATA", clue: "Village", clueFr: "Village", cluePt: "Aldeia", row: 6, col: 2, direction: "across" },
@@ -10921,13 +10940,19 @@ export const lessons: Lesson[] = [
       },
       // 11. Word search
       {
-        type: "word-search",
-        title: "Word Search — Body & Objects",
-        titleFr: "Mots mêlés — Corps et objets",
-        titlePt: "Caça-palavras — Corpo e objetos",
-        gridSize: 9,
-        words: [
-          { word: "LUSE", clue: "Face", clueFr: "Visage", cluePt: "Rosto", row: 0, col: 0, direction: "across" },
+      {
+        type: "mandombe-recognition" as const,
+        title: "Recognize Mandombe — Body & Objects",
+        titleFr: "Reconnaître le Mandombe — Corps et objets",
+        titlePt: "Reconhecer o Mandombe — Corpo e objetos",
+        items: [
+          { mandombe: "Luse", lari: "Luse", distractors: ["Sukula", "Mbombo", "Moko"], french: "visage", mode: "glyph-to-latin" as const },
+          { mandombe: "Sukula", lari: "Sukula", distractors: ["Luse", "Yela", "Moko"], french: "laver", mode: "latin-to-glyph" as const },
+          { mandombe: "Mbombo", lari: "Mbombo", distractors: ["Luse", "Sukula", "Yela"], french: "nez", mode: "glyph-to-latin" as const },
+          { mandombe: "Yela", lari: "Yela", distractors: ["Mbombo", "Moko", "Luse"], french: "essayer", mode: "glyph-to-latin" as const },
+          { mandombe: "Moko", lari: "Moko", distractors: ["Luse", "Mbombo", "Sukula"], french: "mains", mode: "latin-to-glyph" as const },
+        ],
+      },
           { word: "SUKULA", clue: "To wash", clueFr: "Laver", cluePt: "Lavar", row: 2, col: 3, direction: "across" },
           { word: "MBOMBO", clue: "Nose", clueFr: "Nez", cluePt: "Nariz", row: 4, col: 0, direction: "across" },
           { word: "YELA", clue: "To try", clueFr: "Essayer", cluePt: "Tentar", row: 6, col: 2, direction: "across" },
@@ -11106,13 +11131,20 @@ export const lessons: Lesson[] = [
         ],
       },
       {
-        type: "word-search",
-        title: "Word Search — Fatigue",
-        titleFr: "Mots mêlés — La fatigue",
-        titlePt: "Caça-palavras — A fadiga",
-        gridSize: 10,
-        words: [
-          { word: "NKOLO", clue: "Fatigue, tiredness", clueFr: "La fatigue", cluePt: "A fadiga", row: 0, col: 0, direction: "across" },
+      {
+        type: "mandombe-recognition" as const,
+        title: "Recognize Mandombe — Fatigue",
+        titleFr: "Reconnaître le Mandombe — La fatigue",
+        titlePt: "Reconhecer o Mandombe — A fadiga",
+        items: [
+          { mandombe: "N'kolo", lari: "N'kolo", distractors: ["Mukolo", "Mpungi", "Nani"], french: "la fatigue", mode: "glyph-to-latin" as const },
+          { mandombe: "Mukolo", lari: "Mukolo", distractors: ["N'kolo", "Naku", "Nawu"], french: "la fatigue (variante)", mode: "latin-to-glyph" as const },
+          { mandombe: "Mpungi", lari: "Mpungi", distractors: ["N'kolo", "Mukolo", "Neto"], french: "un klaxon, une trompette", mode: "glyph-to-latin" as const },
+          { mandombe: "Nani", lari: "Nani", distractors: ["Naku", "Nandi", "Neto"], french: "je / moi", mode: "glyph-to-latin" as const },
+          { mandombe: "Naku", lari: "Naku", distractors: ["Nani", "Nawu", "Neno"], french: "tu / toi", mode: "latin-to-glyph" as const },
+          { mandombe: "Nawu", lari: "Nawu", distractors: ["Nani", "Naku", "Nandi"], french: "ils / elles", mode: "glyph-to-latin" as const },
+        ],
+      },
           { word: "MUKOLO", clue: "Fatigue (variant)", clueFr: "La fatigue (variante)", cluePt: "A fadiga (variante)", row: 2, col: 4, direction: "down" },
           { word: "NANI", clue: "I / me", clueFr: "Je / moi", cluePt: "Eu", row: 1, col: 0, direction: "down" },
           { word: "NAKU", clue: "You (singular)", clueFr: "Tu / toi", cluePt: "Tu", row: 5, col: 0, direction: "across" },
@@ -11124,13 +11156,19 @@ export const lessons: Lesson[] = [
         fillerLetters: "BKTWELZADMFUYISOKGBANTKELOZIDMFYASIBKTWEZODMFUYISAGBKNTELOZIDMFYASITKWELOZADMFUYISAGBKNTELOZIDMFYASIBKTW",
       },
       {
-        type: "word-search",
-        title: "Word Search — Pronouns & Fatigue",
-        titleFr: "Mots mêlés — Pronoms et fatigue",
-        titlePt: "Caça-palavras — Pronomes e fadiga",
-        gridSize: 9,
-        words: [
-          { word: "MUKOLO", clue: "Fatigue (variant)", clueFr: "La fatigue (variante)", cluePt: "A fadiga (variante)", row: 0, col: 0, direction: "across" },
+      {
+        type: "mandombe-recognition" as const,
+        title: "Recognize Mandombe — Pronouns & Fatigue",
+        titleFr: "Reconnaître le Mandombe — Pronoms et fatigue",
+        titlePt: "Reconhecer o Mandombe — Pronomes e fadiga",
+        items: [
+          { mandombe: "Mukolo", lari: "Mukolo", distractors: ["N'kolo", "Neno", "Nani"], french: "la fatigue (variante)", mode: "glyph-to-latin" as const },
+          { mandombe: "N'kolo", lari: "N'kolo", distractors: ["Mukolo", "Nawu", "Neno"], french: "la fatigue", mode: "latin-to-glyph" as const },
+          { mandombe: "Neno", lari: "Neno", distractors: ["Nani", "Nawu", "Nandi"], french: "vous", mode: "glyph-to-latin" as const },
+          { mandombe: "Nandi", lari: "Nandi", distractors: ["Nani", "Naku", "Neto"], french: "il / elle", mode: "latin-to-glyph" as const },
+          { mandombe: "Neto", lari: "Neto", distractors: ["Neno", "Nawu", "Nani"], french: "nous", mode: "glyph-to-latin" as const },
+        ],
+      },
           { word: "MPUNGI", clue: "A horn, a trumpet", clueFr: "Un klaxon, une trompette", cluePt: "Uma buzina, uma trombeta", row: 0, col: 0, direction: "down" },
           { word: "NKOLO", clue: "Fatigue", clueFr: "La fatigue", cluePt: "A fadiga", row: 2, col: 4, direction: "down" },
           { word: "NAWU", clue: "They / them", clueFr: "Ils / elles", cluePt: "Eles/elas", row: 7, col: 2, direction: "across" },
@@ -11251,13 +11289,20 @@ export const lessons: Lesson[] = [
       // FIDILA across (6,2): F(6,2) I(6,3) D(6,4) I(6,5) L(6,6) A(6,7)
       // FISUKA down (0,7): F(0,7) I(1,7) S(2,7) U(3,7) K(4,7) A(5,7)
       {
-        type: "word-search",
-        title: "Word Search — Fu- & Fi- Vocabulary",
-        titleFr: "Mots masqués — Vocabulaire Fu- & Fi-",
-        titlePt: "Caça-palavras — Vocabulário Fu- & Fi-",
-        gridSize: 10,
-        words: [
-          { word: "FINGA", clue: "To insult", clueFr: "Injurier", cluePt: "Insultar", row: 0, col: 1, direction: "across" },
+      {
+        type: "mandombe-recognition" as const,
+        title: "Recognize Mandombe — Fu- & Fi- Vocabulary",
+        titleFr: "Reconnaître le Mandombe — Vocabulaire Fu- & Fi-",
+        titlePt: "Reconhecer o Mandombe — Vocabulário Fu- & Fi-",
+        items: [
+          { mandombe: "Finga", lari: "Finga", distractors: ["Funda", "Fumpa", "Fidila"], french: "injurier", mode: "glyph-to-latin" as const },
+          { mandombe: "Funda", lari: "Funda", distractors: ["Finga", "Fumu", "Fisuka"], french: "un paquet", mode: "latin-to-glyph" as const },
+          { mandombe: "Fumpa", lari: "Fumpa", distractors: ["Finga", "Fumu", "Fidila"], french: "déborder quand ça bout", mode: "glyph-to-latin" as const },
+          { mandombe: "Fumu", lari: "Fumu", distractors: ["Fumpa", "Funda", "Fisuka"], french: "tabac", mode: "glyph-to-latin" as const },
+          { mandombe: "Fidila", lari: "Fidila", distractors: ["Finga", "Funda", "Fumu"], french: "mener, conduire", mode: "latin-to-glyph" as const },
+          { mandombe: "Fisuka", lari: "Fisuka", distractors: ["Fidila", "Finga", "Fumpa"], french: "se tordre, se fouler", mode: "glyph-to-latin" as const },
+        ],
+      },
           { word: "FUNDA", clue: "A package, a parcel", clueFr: "Un paquet", cluePt: "Um pacote", row: 3, col: 0, direction: "down" },
           { word: "FUMPA", clue: "To overflow when boiling", clueFr: "Déborder quand ça bout", cluePt: "Transbordar ao ferver", row: 9, col: 0, direction: "across" },
           { word: "FUMU", clue: "Tobacco", clueFr: "Tabac", cluePt: "Tabaco", row: 1, col: 8, direction: "down" },
@@ -11678,13 +11723,20 @@ export const lessons: Lesson[] = [
       // KOTA down (5,3): K(5,3) O(6,3) T(7,3) A(8,3)
       // DILA across (7,5): D(7,5) I(7,6) L(7,7) A(7,8)
       {
-        type: "word-search",
-        title: "Word Search — Interrogative Words",
-        titleFr: "Mots masqués — Mots interrogatifs",
-        titlePt: "Caça-palavras — Palavras interrogativas",
-        gridSize: 10,
-        words: [
-          { word: "BUE", clue: "What? How?", clueFr: "Qu'est-ce que, comment", cluePt: "O quê? Como?", row: 0, col: 0, direction: "across" },
+      {
+        type: "mandombe-recognition" as const,
+        title: "Recognize Mandombe — Interrogative Words",
+        titleFr: "Reconnaître le Mandombe — Mots interrogatifs",
+        titlePt: "Reconhecer o Mandombe — Palavras interrogativas",
+        items: [
+          { mandombe: "Bue", lari: "Bue", distractors: ["Nki", "Kue", "Tele"], french: "qu'est-ce que, comment", mode: "glyph-to-latin" as const },
+          { mandombe: "Tele", lari: "Tele", distractors: ["Bue", "Kue", "Dila"], french: "dire (au passé)", mode: "latin-to-glyph" as const },
+          { mandombe: "Nki", lari: "Nki", distractors: ["Bue", "Kue", "Kota"], french: "pourquoi / qu'est-ce que", mode: "glyph-to-latin" as const },
+          { mandombe: "Kue", lari: "Kue", distractors: ["Nki", "Bue", "Dila"], french: "où", mode: "glyph-to-latin" as const },
+          { mandombe: "Kota", lari: "Kota", distractors: ["Dila", "Bue", "Tele"], french: "entrer", mode: "latin-to-glyph" as const },
+          { mandombe: "Dila", lari: "Dila", distractors: ["Kota", "Nki", "Kue"], french: "pleurer", mode: "glyph-to-latin" as const },
+        ],
+      },
           { word: "TELE", clue: "Said (past tense)", clueFr: "Dire (au passé)", cluePt: "Disse (passado)", row: 2, col: 3, direction: "across" },
           { word: "BUNGU", clue: "Reason, motive", clueFr: "Raison, motif", cluePt: "Razão, motivo", row: 4, col: 0, direction: "down" },
           { word: "KUE", clue: "Where?", clueFr: "Où ?", cluePt: "Onde?", row: 3, col: 9, direction: "down" },
@@ -16933,13 +16985,20 @@ export const lessons: Lesson[] = [
         ],
       },
       {
-        type: "word-search" as const,
-        title: "Verbes cachés",
-        titleFr: "Verbes cachés",
-        titlePt: "Verbos escondidos",
-        gridSize: 10,
-        words: [
-          { word: "BUMBA", clue: "To hug", clueFr: "Embrasser", row: 0, col: 0, direction: "across" as const },
+      {
+        type: "mandombe-recognition" as const,
+        title: "Recognize Mandombe — Hidden Verbs",
+        titleFr: "Reconnaître le Mandombe — Verbes cachés",
+        titlePt: "Reconhecer o Mandombe — Verbos escondidos",
+        items: [
+          { mandombe: "bumba", lari: "bumba", distractors: ["handa", "zinga", "loba"], french: "embrasser", mode: "glyph-to-latin" as const },
+          { mandombe: "handa", lari: "handa", distractors: ["bumba", "vuza", "kamba"], french: "s'initier", mode: "latin-to-glyph" as const },
+          { mandombe: "zinga", lari: "zinga", distractors: ["vuza", "loba", "bumba"], french: "entourer", mode: "glyph-to-latin" as const },
+          { mandombe: "vuza", lari: "vuza", distractors: ["zinga", "handa", "kamba"], french: "arracher", mode: "glyph-to-latin" as const },
+          { mandombe: "loba", lari: "loba", distractors: ["kamba", "bumba", "handa"], french: "parler", mode: "latin-to-glyph" as const },
+          { mandombe: "kamba", lari: "kamba", distractors: ["loba", "zinga", "vuza"], french: "bavarder", mode: "glyph-to-latin" as const },
+        ],
+      },
           { word: "HANDA", clue: "To be initiated", clueFr: "S'initier", row: 2, col: 0, direction: "across" as const },
           { word: "ZINGA", clue: "To surround", clueFr: "Entourer", row: 3, col: 0, direction: "across" as const },
           { word: "VUZA", clue: "To uproot", clueFr: "Arracher", row: 4, col: 0, direction: "across" as const },
@@ -17123,13 +17182,20 @@ export const lessons: Lesson[] = [
         ],
       },
       {
-        type: "word-search" as const,
-        title: "Animals & Nature",
-        titleFr: "Animaux & Nature",
-        titlePt: "Animais & Natureza",
-        gridSize: 10,
-        words: [
-          { word: "MENGA", clue: "Blood", clueFr: "Sang", row: 0, col: 0, direction: "across" as const },
+      {
+        type: "mandombe-recognition" as const,
+        title: "Recognize Mandombe — Animals & Nature",
+        titleFr: "Reconnaître le Mandombe — Animaux & Nature",
+        titlePt: "Reconhecer o Mandombe — Animais & Natureza",
+        items: [
+          { mandombe: "nsumba", lari: "nsumba", distractors: ["mputa", "menga", "makaya"], french: "poisson-chat", mode: "glyph-to-latin" as const },
+          { mandombe: "menga", lari: "menga", distractors: ["nsumba", "nitu", "lembe"], french: "sang", mode: "latin-to-glyph" as const },
+          { mandombe: "nitu", lari: "nitu", distractors: ["menga", "mputa", "makaya"], french: "le corps", mode: "glyph-to-latin" as const },
+          { mandombe: "makaya", lari: "makaya", distractors: ["nsumba", "lembe", "mputa"], french: "feuilles", mode: "glyph-to-latin" as const },
+          { mandombe: "lembe", lari: "lembe", distractors: ["nsumba", "nitu", "menga"], french: "cigogne", mode: "latin-to-glyph" as const },
+          { mandombe: "mputa", lari: "mputa", distractors: ["nitu", "menga", "makaya"], french: "blessure", mode: "glyph-to-latin" as const },
+        ],
+      },
           { word: "NSUMBA", clue: "Catfish", clueFr: "Poisson-chat", row: 1, col: 0, direction: "across" as const },
           { word: "MPUTA", clue: "Wound", clueFr: "Blessure", row: 3, col: 0, direction: "across" as const },
           { word: "NITU", clue: "Body", clueFr: "Corps", row: 7, col: 3, direction: "across" as const },
@@ -17308,13 +17374,20 @@ export const lessons: Lesson[] = [
         ],
       },
       {
-        type: "word-search" as const,
-        title: "Kongo Tradition",
-        titleFr: "Tradition Kongo",
-        titlePt: "Tradição Kongo",
-        gridSize: 10,
-        words: [
-          { word: "SIMBI", clue: "Spirits", clueFr: "Esprits", row: 0, col: 0, direction: "across" as const },
+      {
+        type: "mandombe-recognition" as const,
+        title: "Recognize Mandombe — Kongo Tradition",
+        titleFr: "Reconnaître le Mandombe — Tradition Kongo",
+        titlePt: "Reconhecer o Mandombe — Tradição Kongo",
+        items: [
+          { mandombe: "simbi", lari: "simbi", distractors: ["ntemo", "lema", "mbuka"], french: "esprits", mode: "glyph-to-latin" as const },
+          { mandombe: "ntemo", lari: "ntemo", distractors: ["simbi", "keti", "lema"], french: "la lumière du nza", mode: "latin-to-glyph" as const },
+          { mandombe: "lema", lari: "lema", distractors: ["simbi", "ntemo", "mbuka"], french: "l'esprit", mode: "glyph-to-latin" as const },
+          { mandombe: "keti", lari: "keti", distractors: ["lema", "simbi", "mbuka"], french: "ou", mode: "glyph-to-latin" as const },
+          { mandombe: "mbuka", lari: "mbuka", distractors: ["simbi", "ntemo", "keti"], french: "le lieu", mode: "latin-to-glyph" as const },
+          { mandombe: "mboko", lari: "mboko", distractors: ["mbuka", "lema", "keti"], french: "ensuite, après", mode: "glyph-to-latin" as const },
+        ],
+      },
           { word: "NTEMO", clue: "Light of nza", clueFr: "La lumière du nza", row: 1, col: 0, direction: "across" as const },
           { word: "LEMA", clue: "The spirit", clueFr: "L'esprit", row: 2, col: 0, direction: "across" as const },
           { word: "KETI", clue: "Or", clueFr: "Ou", row: 3, col: 0, direction: "across" as const },
