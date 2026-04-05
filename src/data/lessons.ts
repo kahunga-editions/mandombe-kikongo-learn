@@ -122,7 +122,7 @@ export interface SyntaxBlock {
   title: string;
   titleFr?: string;
   titlePt?: string;
-  description: string;
+  description?: string;
   descriptionFr?: string;
   descriptionPt?: string;
   pattern?: string;
