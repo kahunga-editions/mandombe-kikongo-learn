@@ -3378,15 +3378,30 @@ export const lessons: Lesson[] = [
           { answer: "FIOTI", clue: "Small, little", clueFr: "Petit, peu", cluePt: "Pequeno, pouco", row: 4, col: 0, direction: "down" },
         ],
       },
-export interface WordSearchQuestion {
-  type: "word-search";
-  title?: string;
-  titleFr?: string;
-  titlePt?: string;
-  gridSize: number;
-  words: WordSearchClue[];
-  fillerLetters: string;
-}
+      // ── Word Search: Fi- / Fu- Verbs ──
+      // Grid 10x10
+      // FUTA across (0,0): F(0,0) U(0,1) T(0,2) A(0,3)
+      // FILA across (2,5): F(2,5) I(2,6) L(2,7) A(2,8)
+      // FUSA down (4,0): F(4,0) U(5,0) S(6,0) A(7,0)
+      // FIOTI down (1,9): F(1,9) I(2,9) O(3,9) T(4,9) I(5,9)
+      // FUEMBA across (8,2): F(8,2) U(8,3) E(8,4) M(8,5) B(8,6) A(8,7)
+      // FUTUKA across (6,3): F(6,3) U(6,4) T(6,5) U(6,6) K(6,7) A(6,8)
+      {
+        type: "word-search",
+        title: "Word Search — Fi- & Fu- Verbs",
+        titleFr: "Mots masqués — Verbes Fi- & Fu-",
+        titlePt: "Caça-palavras — Verbos Fi- & Fu-",
+        gridSize: 10,
+        words: [
+          { word: "FUTA", clue: "To pay, reimburse", clueFr: "Payer, rembourser", cluePt: "Pagar, reembolsar", row: 0, col: 0, direction: "across" },
+          { word: "FILA", clue: "To lead, to escort", clueFr: "Conduire, escorter", cluePt: "Conduzir, escoltar", row: 2, col: 5, direction: "across" },
+          { word: "FUSA", clue: "To dig out, to go mouldy", clueFr: "Extraire en creusant, moisir", cluePt: "Extrair cavando, mofar", row: 4, col: 0, direction: "down" },
+          { word: "FIOTI", clue: "Small, little", clueFr: "Petit, peu", cluePt: "Pequeno, pouco", row: 1, col: 9, direction: "down" },
+          { word: "FUEMBA", clue: "To blow one's nose", clueFr: "Se moucher", cluePt: "Assoar-se", row: 8, col: 2, direction: "across" },
+          { word: "FUTUKA", clue: "To swell, to inflate", clueFr: "S'enfler, se gonfler", cluePt: "Inchar, inflar", row: 6, col: 3, direction: "across" },
+        ],
+        fillerLetters: "BTKANLDSEMZNYOAGKLBTDSAKUNMSENGTOLANDNASETUKMDAONDBLANMTESBKUOALNKDGEZMAOYTSBNLIEUDMKNGTAS",
+      },
     ],
   },
 
@@ -6175,21 +6190,20 @@ export interface WordSearchQuestion {
           { left: "Yebela ba ta yebela.", right: "Ka ba ta yebela ko." },
         ],
       },
+      // Exercise 18: Word Search — Negation key words
       {
         type: "word-search",
-        title: "Word Search — Fi- & Fu- Verbs",
-        titleFr: "Mots masqués — Verbes Fi- & Fu-",
-        titlePt: "Caça-palavras — Verbos Fi- & Fu-",
-        gridSize: 10,
+        title: "Word Search: Find the Lari words",
+        titleFr: "Mots fléchés : Trouvez les mots lari",
+        titlePt: "Caça-palavras: Encontre as palavras lari",
+        gridSize: 8,
         words: [
-          { word: "FUTA", clue: "To pay, reimburse", clueFr: "Payer, rembourser", cluePt: "Pagar, reembolsar", row: 0, col: 0, direction: "across" },
-          { word: "FILA", clue: "To lead, to escort", clueFr: "Conduire, escorter", cluePt: "Conduzir, escoltar", row: 2, col: 5, direction: "across" },
-          { word: "FUSA", clue: "To dig out, to go mouldy", clueFr: "Extraire en creusant, moisir", cluePt: "Extrair cavando, mofar", row: 4, col: 0, direction: "down" },
-          { word: "FIOTI", clue: "Small, little", clueFr: "Petit, peu", cluePt: "Pequeno, pouco", row: 1, col: 9, direction: "down" },
-          { word: "FUEMBA", clue: "To blow one's nose", clueFr: "Se moucher", cluePt: "Assoar-se", row: 8, col: 2, direction: "across" },
-          { word: "FUTUKA", clue: "To swell, to inflate", clueFr: "S'enfler, se gonfler", cluePt: "Inchar, inflar", row: 6, col: 3, direction: "across" },
+          { word: "KARILA", clue: "To go back, to return", clueFr: "Reprendre, retourner en arrière", cluePt: "Voltar, retroceder", row: 0, col: 0, direction: "across" },
+          { word: "YEBELA", clue: "To wash oneself", clueFr: "Se laver", cluePt: "Lavar-se", row: 2, col: 0, direction: "across" },
+          { word: "MUANA", clue: "Child", clueFr: "Enfant", cluePt: "Criança", row: 3, col: 0, direction: "down" },
+          { word: "ZONZA", clue: "To speak", clueFr: "Parler", cluePt: "Falar", row: 6, col: 2, direction: "across" },
         ],
-        fillerLetters: "BTKANLDSEMZNYOAGKLBTDSAKUNMSENGTOLANDNASETUKMDAONDBLANMTESBKUOALNKDGEZMAOYTSBNLIEUDMKNGTAS",
+        fillerLetters: "DWFGTABLNKSIZORVUQHJEPCMXYEWTFUBAKDLNGSIROHVQJCMPXEYWTFBLKANDSGIZOHR",
       },
       // Exercise 19: MCQ — Noun class pronoun yi/zi
       {
@@ -8794,19 +8808,34 @@ export interface WordSearchQuestion {
           { answer: "NDUNDA", clue: "Vegetables", clueFr: "Légumes", cluePt: "Legumes", row: 2, col: 1, direction: "across" },
         ],
       },
+      // 11 — Word search: food nouns
       {
         type: "word-search",
-        title: "Word Search: Find the Lari words",
-        titleFr: "Mots fléchés : Trouvez les mots lari",
-        titlePt: "Caça-palavras: Encontre as palavras lari",
-        gridSize: 8,
+        title: "Find the Foods",
+        titleFr: "Trouvez les aliments",
+        titlePt: "Encontre os alimentos",
+        gridSize: 10,
+        // Layout (10×10) — words spaced apart to avoid false readings:
+        //   0 1 2 3 4 5 6 7 8 9
+        // 0 M U N G U A . . . .  ← MUNGUA across
+        // 1 . . . . . . . . . .
+        // 2 . B . . . N G U B A  ← NGUBA across; BUWA↓ starts
+        // 3 . U . . . . . . . .
+        // 4 . W . . . L O S O .  ← LOSO across
+        // 5 . A . . . . . . . M  ← MEKI↓ starts
+        // 6 . . . . . . . . . E
+        // 7 N D U N D A . . . K  ← NDUNDA across
+        // 8 . . . . . . . . . I
+        // 9 . . . . . . . . . .
         words: [
-          { word: "KARILA", clue: "To go back, to return", clueFr: "Reprendre, retourner en arrière", cluePt: "Voltar, retroceder", row: 0, col: 0, direction: "across" },
-          { word: "YEBELA", clue: "To wash oneself", clueFr: "Se laver", cluePt: "Lavar-se", row: 2, col: 0, direction: "across" },
-          { word: "MUANA", clue: "Child", clueFr: "Enfant", cluePt: "Criança", row: 3, col: 0, direction: "down" },
-          { word: "ZONZA", clue: "To speak", clueFr: "Parler", cluePt: "Falar", row: 6, col: 2, direction: "across" },
+          { word: "MUNGUA", clue: "Salt", clueFr: "Le sel", cluePt: "O sal", row: 0, col: 0, direction: "across" },
+          { word: "NGUBA", clue: "Peanuts", clueFr: "Cacahuètes", cluePt: "Amendoins", row: 2, col: 5, direction: "across" },
+          { word: "LOSO", clue: "Rice", clueFr: "Le riz", cluePt: "O arroz", row: 4, col: 5, direction: "across" },
+          { word: "BUWA", clue: "Mushrooms", clueFr: "Champignons", cluePt: "Cogumelos", row: 2, col: 1, direction: "down" },
+          { word: "MEKI", clue: "Eggs", clueFr: "Les œufs", cluePt: "Ovos", row: 5, col: 9, direction: "down" },
+          { word: "NDUNDA", clue: "Vegetables", clueFr: "Légumes", cluePt: "Legumes", row: 7, col: 0, direction: "across" },
         ],
-        fillerLetters: "DWFGTABLNKSIZORVUQHJEPCMXYEWTFUBAKDLNGSIROHVQJCMPXEYWTFBLKANDSGIZOHR",
+        fillerLetters: "HVQRJCPXEYWOBLNDSGIRZFTAKUHMVQJCPXEYWOBLNDSGIFRZTKAUHMVQJCPXEYWOBLDSGIFRZTAKUHMVQJCPXEYWOBLNDSGI",
       },
     ],
   },
@@ -9087,33 +9116,26 @@ export interface WordSearchQuestion {
           { answer: "LALA", clue: "Orange (fruit)", clueFr: "Orange (fruit)", cluePt: "Laranja (fruta)", row: 1, col: 4, direction: "down" },
         ],
       },
+      // Exercise 11: Word Search 10x10
+      // LALA across (0,0): L(0,0) A(0,1) L(0,2) A(0,3)
+      // BOTE across (2,5): B(2,5) O(2,6) T(2,7) E(2,8)
+      // DIMPA across (4,0): D(4,0) I(4,1) M(4,2) P(4,3) A(4,4)
+      // NSA down (6,0): N(6,0) S(7,0) A(8,0)
+      // MAMBA across (9,3): M(9,3) A(9,4) M(9,5) B(9,6) A(9,7)
       {
         type: "word-search",
-        title: "Find the Foods",
-        titleFr: "Trouvez les aliments",
-        titlePt: "Encontre os alimentos",
+        title: "Word Search — Flavours & Food",
+        titleFr: "Mots masqués — Saveurs et aliments",
+        titlePt: "Caça-palavras — Sabores e alimentos",
         gridSize: 10,
-        // Layout (10×10) — words spaced apart to avoid false readings:
-        //   0 1 2 3 4 5 6 7 8 9
-        // 0 M U N G U A . . . .  ← MUNGUA across
-        // 1 . . . . . . . . . .
-        // 2 . B . . . N G U B A  ← NGUBA across; BUWA↓ starts
-        // 3 . U . . . . . . . .
-        // 4 . W . . . L O S O .  ← LOSO across
-        // 5 . A . . . . . . . M  ← MEKI↓ starts
-        // 6 . . . . . . . . . E
-        // 7 N D U N D A . . . K  ← NDUNDA across
-        // 8 . . . . . . . . . I
-        // 9 . . . . . . . . . .
         words: [
-          { word: "MUNGUA", clue: "Salt", clueFr: "Le sel", cluePt: "O sal", row: 0, col: 0, direction: "across" },
-          { word: "NGUBA", clue: "Peanuts", clueFr: "Cacahuètes", cluePt: "Amendoins", row: 2, col: 5, direction: "across" },
-          { word: "LOSO", clue: "Rice", clueFr: "Le riz", cluePt: "O arroz", row: 4, col: 5, direction: "across" },
-          { word: "BUWA", clue: "Mushrooms", clueFr: "Champignons", cluePt: "Cogumelos", row: 2, col: 1, direction: "down" },
-          { word: "MEKI", clue: "Eggs", clueFr: "Les œufs", cluePt: "Ovos", row: 5, col: 9, direction: "down" },
-          { word: "NDUNDA", clue: "Vegetables", clueFr: "Légumes", cluePt: "Legumes", row: 7, col: 0, direction: "across" },
+          { word: "LALA", clue: "Orange (fruit)", clueFr: "Orange (fruit)", cluePt: "Laranja (fruta)", row: 0, col: 0, direction: "across" },
+          { word: "BOTE", clue: "Good", clueFr: "Bon", cluePt: "Bom", row: 2, col: 5, direction: "across" },
+          { word: "DIMPA", clue: "Bread", clueFr: "Pain", cluePt: "Pão", row: 4, col: 0, direction: "across" },
+          { word: "NSA", clue: "Sourness", clueFr: "Acidité", cluePt: "Acidez", row: 6, col: 0, direction: "down" },
+          { word: "MAMBA", clue: "Water / Juice", clueFr: "Eau / Jus", cluePt: "Água / Sumo", row: 9, col: 3, direction: "across" },
         ],
-        fillerLetters: "HVQRJCPXEYWOBLNDSGIRZFTAKUHMVQJCPXEYWOBLNDSGIFRZTKAUHMVQJCPXEYWOBLDSGIFRZTAKUHMVQJCPXEYWOBLNDSGI",
+        fillerLetters: "VHJRQCPEXYWOBLKAFNDSGIZTRUHMVQJCXPEYWOLBKAFNDSGIZTRUHVMQJCXPEYWOLBKAFNDSGIZTRUHMVQJCXPEYWOLBKAFNDSGI",
       },
     ],
   },
@@ -10577,20 +10599,21 @@ export interface WordSearchQuestion {
           { answer: "HATA", clue: "Village", clueFr: "Village", cluePt: "Aldeia", row: 3, col: 0, direction: "across" },
         ],
       },
+      // 11. Word search
       {
         type: "word-search",
-        title: "Word Search — Flavours & Food",
-        titleFr: "Mots masqués — Saveurs et aliments",
-        titlePt: "Caça-palavras — Sabores e alimentos",
-        gridSize: 10,
+        title: "Word Search — Yala vocabulary",
+        titleFr: "Mots mêlés — Vocabulaire de Yala",
+        titlePt: "Caça-palavras — Vocabulário de Yala",
+        gridSize: 8,
         words: [
-          { word: "LALA", clue: "Orange (fruit)", clueFr: "Orange (fruit)", cluePt: "Laranja (fruta)", row: 0, col: 0, direction: "across" },
-          { word: "BOTE", clue: "Good", clueFr: "Bon", cluePt: "Bom", row: 2, col: 5, direction: "across" },
-          { word: "DIMPA", clue: "Bread", clueFr: "Pain", cluePt: "Pão", row: 4, col: 0, direction: "across" },
-          { word: "NSA", clue: "Sourness", clueFr: "Acidité", cluePt: "Acidez", row: 6, col: 0, direction: "down" },
-          { word: "MAMBA", clue: "Water / Juice", clueFr: "Eau / Jus", cluePt: "Água / Sumo", row: 9, col: 3, direction: "across" },
+          { word: "YALA", clue: "To spread", clueFr: "Étendre", cluePt: "Estender", row: 0, col: 0, direction: "across" },
+          { word: "VUNGA", clue: "Blanket", clueFr: "Couverture", cluePt: "Cobertor", row: 2, col: 3, direction: "across" },
+          { word: "NJILA", clue: "Path", clueFr: "Chemin", cluePt: "Caminho", row: 4, col: 0, direction: "across" },
+          { word: "HATA", clue: "Village", clueFr: "Village", cluePt: "Aldeia", row: 6, col: 2, direction: "across" },
+          { word: "MALA", clue: "Far", clueFr: "Loin", cluePt: "Longe", row: 7, col: 4, direction: "across" },
         ],
-        fillerLetters: "VHJRQCPEXYWOBLKAFNDSGIZTRUHMVQJCXPEYWOLBKAFNDSGIZTRUHVMQJCXPEYWOLBKAFNDSGIZTRUHMVQJCXPEYWOLBKAFNDSGI",
+        fillerLetters: "BKDMTSWNNZLKUFGHONPEKIMBZVULANTOSEDZAKIBUNGAMEFITOSHILAWENKUZOMBADYATSELUBAKA",
       },
     ],
   },
@@ -10896,20 +10919,21 @@ export interface WordSearchQuestion {
           { answer: "MOKO", clue: "Hands", clueFr: "Mains", cluePt: "Mãos", row: 5, col: 3, direction: "across"  },
         ],
       },
+      // 11. Word search
       {
         type: "word-search",
-        title: "Word Search — Yala vocabulary",
-        titleFr: "Mots mêlés — Vocabulaire de Yala",
-        titlePt: "Caça-palavras — Vocabulário de Yala",
-        gridSize: 8,
+        title: "Word Search — Body & Objects",
+        titleFr: "Mots mêlés — Corps et objets",
+        titlePt: "Caça-palavras — Corpo e objetos",
+        gridSize: 9,
         words: [
-          { word: "YALA", clue: "To spread", clueFr: "Étendre", cluePt: "Estender", row: 0, col: 0, direction: "across" },
-          { word: "VUNGA", clue: "Blanket", clueFr: "Couverture", cluePt: "Cobertor", row: 2, col: 3, direction: "across" },
-          { word: "NJILA", clue: "Path", clueFr: "Chemin", cluePt: "Caminho", row: 4, col: 0, direction: "across" },
-          { word: "HATA", clue: "Village", clueFr: "Village", cluePt: "Aldeia", row: 6, col: 2, direction: "across" },
-          { word: "MALA", clue: "Far", clueFr: "Loin", cluePt: "Longe", row: 7, col: 4, direction: "across" },
+          { word: "LUSE", clue: "Face", clueFr: "Visage", cluePt: "Rosto", row: 0, col: 0, direction: "across" },
+          { word: "SUKULA", clue: "To wash", clueFr: "Laver", cluePt: "Lavar", row: 2, col: 3, direction: "across" },
+          { word: "MBOMBO", clue: "Nose", clueFr: "Nez", cluePt: "Nariz", row: 4, col: 0, direction: "across" },
+          { word: "YELA", clue: "To try", clueFr: "Essayer", cluePt: "Tentar", row: 6, col: 2, direction: "across" },
+          { word: "MOKO", clue: "Hands", clueFr: "Mains", cluePt: "Mãos", row: 8, col: 5, direction: "across" },
         ],
-        fillerLetters: "BKDMTSWNNZLKUFGHONPEKIMBZVULANTOSEDZAKIBUNGAMEFITOSHILAWENKUZOMBADYATSELUBAKA",
+        fillerLetters: "NKZATUBWMDEKIFANZVOBKWLETONGASHIMBAZOKUVUNDANETFIKASELBUWOMDZAKATOSHINGAMBETULOWENZ",
       },
       // 12. Multiple choice — distant demonstrative plural
       {
@@ -11083,21 +11107,6 @@ export interface WordSearchQuestion {
       },
       {
         type: "word-search",
-        title: "Word Search — Body & Objects",
-        titleFr: "Mots mêlés — Corps et objets",
-        titlePt: "Caça-palavras — Corpo e objetos",
-        gridSize: 9,
-        words: [
-          { word: "LUSE", clue: "Face", clueFr: "Visage", cluePt: "Rosto", row: 0, col: 0, direction: "across" },
-          { word: "SUKULA", clue: "To wash", clueFr: "Laver", cluePt: "Lavar", row: 2, col: 3, direction: "across" },
-          { word: "MBOMBO", clue: "Nose", clueFr: "Nez", cluePt: "Nariz", row: 4, col: 0, direction: "across" },
-          { word: "YELA", clue: "To try", clueFr: "Essayer", cluePt: "Tentar", row: 6, col: 2, direction: "across" },
-          { word: "MOKO", clue: "Hands", clueFr: "Mains", cluePt: "Mãos", row: 8, col: 5, direction: "across" },
-        ],
-        fillerLetters: "NKZATUBWMDEKIFANZVOBKWLETONGASHIMBAZOKUVUNDANETFIKASELBUWOMDZAKATOSHINGAMBETULOWENZ",
-      },
-      {
-        type: "word-search",
         title: "Word Search — Fatigue",
         titleFr: "Mots mêlés — La fatigue",
         titlePt: "Caça-palavras — A fadiga",
@@ -11113,6 +11122,22 @@ export interface WordSearchQuestion {
           { word: "MPUNGI", clue: "A horn, a trumpet", clueFr: "Un klaxon, une trompette", cluePt: "Uma buzina, uma trombeta", row: 0, col: 6, direction: "down" },
         ],
         fillerLetters: "BKTWELZADMFUYISOKGBANTKELOZIDMFYASIBKTWEZODMFUYISAGBKNTELOZIDMFYASITKWELOZADMFUYISAGBKNTELOZIDMFYASIBKTW",
+      },
+      {
+        type: "word-search",
+        title: "Word Search — Pronouns & Fatigue",
+        titleFr: "Mots mêlés — Pronoms et fatigue",
+        titlePt: "Caça-palavras — Pronomes e fadiga",
+        gridSize: 9,
+        words: [
+          { word: "MUKOLO", clue: "Fatigue (variant)", clueFr: "La fatigue (variante)", cluePt: "A fadiga (variante)", row: 0, col: 0, direction: "across" },
+          { word: "MPUNGI", clue: "A horn, a trumpet", clueFr: "Un klaxon, une trompette", cluePt: "Uma buzina, uma trombeta", row: 0, col: 0, direction: "down" },
+          { word: "NKOLO", clue: "Fatigue", clueFr: "La fatigue", cluePt: "A fadiga", row: 2, col: 4, direction: "down" },
+          { word: "NAWU", clue: "They / them", clueFr: "Ils / elles", cluePt: "Eles/elas", row: 7, col: 2, direction: "across" },
+          { word: "NENO", clue: "You (plural)", clueFr: "Vous", cluePt: "Vocês", row: 4, col: 0, direction: "across" },
+          { word: "NANI", clue: "I / me", clueFr: "Je / moi", cluePt: "Eu", row: 6, col: 0, direction: "across" },
+        ],
+        fillerLetters: "DKAWZELFIBTYOSGNDMAKWZELFIDBTYOGSNMAKWEZLIFDBTOYGSNDMAKWZELFIDTBOYGSNMAKWEZLIFDBTOY",
       },
     ],
   },
@@ -11217,21 +11242,29 @@ export interface WordSearchQuestion {
           { answer: "FUMU", clue: "Tobacco", clueFr: "Tabac", cluePt: "Tabaco", row: 4, col: 0, direction: "down" },
         ],
       },
+      // ── Word Search: Fu- & Fi- Dictionary ──
+      // Grid 10x10
+      // FINGA across (0,1): F(0,1) I(0,2) N(0,3) G(0,4) A(0,5)
+      // FUNDA down (3,0): F(3,0) U(4,0) N(5,0) D(6,0) A(7,0)
+      // FUMPA across (9,0): F(9,0) U(9,1) M(9,2) P(9,3) A(9,4)
+      // FUMU down (1,8): F(1,8) U(2,8) M(3,8) U(4,8)
+      // FIDILA across (6,2): F(6,2) I(6,3) D(6,4) I(6,5) L(6,6) A(6,7)
+      // FISUKA down (0,7): F(0,7) I(1,7) S(2,7) U(3,7) K(4,7) A(5,7)
       {
         type: "word-search",
-        title: "Word Search — Pronouns & Fatigue",
-        titleFr: "Mots mêlés — Pronoms et fatigue",
-        titlePt: "Caça-palavras — Pronomes e fadiga",
-        gridSize: 9,
+        title: "Word Search — Fu- & Fi- Vocabulary",
+        titleFr: "Mots masqués — Vocabulaire Fu- & Fi-",
+        titlePt: "Caça-palavras — Vocabulário Fu- & Fi-",
+        gridSize: 10,
         words: [
-          { word: "MUKOLO", clue: "Fatigue (variant)", clueFr: "La fatigue (variante)", cluePt: "A fadiga (variante)", row: 0, col: 0, direction: "across" },
-          { word: "MPUNGI", clue: "A horn, a trumpet", clueFr: "Un klaxon, une trompette", cluePt: "Uma buzina, uma trombeta", row: 0, col: 0, direction: "down" },
-          { word: "NKOLO", clue: "Fatigue", clueFr: "La fatigue", cluePt: "A fadiga", row: 2, col: 4, direction: "down" },
-          { word: "NAWU", clue: "They / them", clueFr: "Ils / elles", cluePt: "Eles/elas", row: 7, col: 2, direction: "across" },
-          { word: "NENO", clue: "You (plural)", clueFr: "Vous", cluePt: "Vocês", row: 4, col: 0, direction: "across" },
-          { word: "NANI", clue: "I / me", clueFr: "Je / moi", cluePt: "Eu", row: 6, col: 0, direction: "across" },
+          { word: "FINGA", clue: "To insult", clueFr: "Injurier", cluePt: "Insultar", row: 0, col: 1, direction: "across" },
+          { word: "FUNDA", clue: "A package, a parcel", clueFr: "Un paquet", cluePt: "Um pacote", row: 3, col: 0, direction: "down" },
+          { word: "FUMPA", clue: "To overflow when boiling", clueFr: "Déborder quand ça bout", cluePt: "Transbordar ao ferver", row: 9, col: 0, direction: "across" },
+          { word: "FUMU", clue: "Tobacco", clueFr: "Tabac", cluePt: "Tabaco", row: 1, col: 8, direction: "down" },
+          { word: "FIDILA", clue: "To lead, to drive", clueFr: "Mener, conduire", cluePt: "Conduzir, levar", row: 6, col: 2, direction: "across" },
+          { word: "FISUKA", clue: "To twist, to sprain", clueFr: "Se tordre, se fouler", cluePt: "Torcer, entorsar", row: 0, col: 7, direction: "down" },
         ],
-        fillerLetters: "DKAWZELFIBTYOSGNDMAKWZELFIDBTYOGSNMAKWEZLIFDBTOYGSNDMAKWZELFIDTBOYGSNMAKWEZLIFDBTOY",
+        fillerLetters: "MKDLANTSBEGNZOALKTBDSNAKLUMSENTGOBLNDAESTUKMGAONDBLSANMTESBOKUALNKDGEZMAOYTSNBLEIDUMKGNTASLZ",
       },
     ],
   },
@@ -11636,21 +11669,30 @@ export interface WordSearchQuestion {
           { answer: "KUE", clue: "Where?", clueFr: "Où ?", cluePt: "Onde?", row: 0, col: 8, direction: "down" },
         ],
       },
+      // ── Word Search 10×10 ──
+      // BUE across (0,0): B(0,0) U(0,1) E(0,2)
+      // TELE across (2,3): T(2,3) E(2,4) L(2,5) E(2,6)
+      // BUNGU down (4,0): B(4,0) U(5,0) N(6,0) G(7,0) U(8,0)
+      // KUE down (3,9): K(3,9) U(4,9) E(5,9)
+      // NKI across (4,5): N(4,5) K(4,6) I(4,7)
+      // KOTA down (5,3): K(5,3) O(6,3) T(7,3) A(8,3)
+      // DILA across (7,5): D(7,5) I(7,6) L(7,7) A(7,8)
       {
         type: "word-search",
-        title: "Word Search — Fu- & Fi- Vocabulary",
-        titleFr: "Mots masqués — Vocabulaire Fu- & Fi-",
-        titlePt: "Caça-palavras — Vocabulário Fu- & Fi-",
+        title: "Word Search — Interrogative Words",
+        titleFr: "Mots masqués — Mots interrogatifs",
+        titlePt: "Caça-palavras — Palavras interrogativas",
         gridSize: 10,
         words: [
-          { word: "FINGA", clue: "To insult", clueFr: "Injurier", cluePt: "Insultar", row: 0, col: 1, direction: "across" },
-          { word: "FUNDA", clue: "A package, a parcel", clueFr: "Un paquet", cluePt: "Um pacote", row: 3, col: 0, direction: "down" },
-          { word: "FUMPA", clue: "To overflow when boiling", clueFr: "Déborder quand ça bout", cluePt: "Transbordar ao ferver", row: 9, col: 0, direction: "across" },
-          { word: "FUMU", clue: "Tobacco", clueFr: "Tabac", cluePt: "Tabaco", row: 1, col: 8, direction: "down" },
-          { word: "FIDILA", clue: "To lead, to drive", clueFr: "Mener, conduire", cluePt: "Conduzir, levar", row: 6, col: 2, direction: "across" },
-          { word: "FISUKA", clue: "To twist, to sprain", clueFr: "Se tordre, se fouler", cluePt: "Torcer, entorsar", row: 0, col: 7, direction: "down" },
+          { word: "BUE", clue: "What? How?", clueFr: "Qu'est-ce que, comment", cluePt: "O quê? Como?", row: 0, col: 0, direction: "across" },
+          { word: "TELE", clue: "Said (past tense)", clueFr: "Dire (au passé)", cluePt: "Disse (passado)", row: 2, col: 3, direction: "across" },
+          { word: "BUNGU", clue: "Reason, motive", clueFr: "Raison, motif", cluePt: "Razão, motivo", row: 4, col: 0, direction: "down" },
+          { word: "KUE", clue: "Where?", clueFr: "Où ?", cluePt: "Onde?", row: 3, col: 9, direction: "down" },
+          { word: "NKI", clue: "Why / What?", clueFr: "Pourquoi / Qu'est-ce que ?", cluePt: "Porquê / O que é que?", row: 4, col: 5, direction: "across" },
+          { word: "KOTA", clue: "To enter", clueFr: "Entrer", cluePt: "Entrar", row: 5, col: 3, direction: "down" },
+          { word: "DILA", clue: "To cry", clueFr: "Pleurer", cluePt: "Chorar", row: 7, col: 5, direction: "across" },
         ],
-        fillerLetters: "MKDLANTSBEGNZOALKTBDSNAKLUMSENTGOBLNDAESTUKMGAONDBLSANMTESBOKUALNKDGEZMAOYTSNBLEIDUMKGNTASLZ",
+        fillerLetters: "BUESAFMLZWMIYASVNOFLFASTELEWMYLOVAWISFGKBYMZWNKIFUULSKAVWFMENWFOSAYZLVGAMTSDILAYUFWALSVMOZSILYMAFWVO",
       },
     ],
   },
