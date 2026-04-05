@@ -109,6 +109,9 @@ export interface SyntaxGroup {
   description?: string;
   descriptionFr?: string;
   descriptionPt?: string;
+  explanation?: string;
+  explanationFr?: string;
+  explanationPt?: string;
   examples: SyntaxExample[];
   note?: string;
   noteFr?: string;
