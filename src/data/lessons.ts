@@ -12695,6 +12695,7 @@ export const lessons: Lesson[] = [
       { lari: "Mulendi | Milendi", mandombe: "Mulendi | Milendi", french: "Dépouille, cadavre", english: "Remains, corpse", portuguese: "Restos mortais, cadáver" },
       { lari: "Duka ku mafua", mandombe: "Duka ku mafuwa", french: "Ressusciter", english: "To resurrect", portuguese: "Ressuscitar" },
     ],
+    exercises: [
       {
         type: "mandombe-recognition" as const,
         title: "Read Mandombe – Vu- / Ho- / Fu- — Cooking, Waking & Crafting",
@@ -12711,7 +12712,8 @@ export const lessons: Lesson[] = [
             { mandombe: "Vumbuka", lari: "Vumbuka", distractors: ["Ngonda ya mukaka ka shiri ku hata", "Kikulu", "Tshibuka tshi tsha muntu teshe?"], french: "Se réveiller", english: "To wake up", portuguese: "Acordar-se", mode: "latin-to-glyph" as const },
         ],
       },
-    exercises: [],
+
+    ],
   },
   // ===================== LESSON: BUBOLO — LAZINESS =====================
   {
@@ -18224,6 +18226,7 @@ export const lessons: Lesson[] = [
       { lari: "mue", mandombe: "mue", french: "éclairant, éclairé", english: "illuminating, illuminated" },
       { lari: "muekese", mandombe: "muekese", french: "l'épine du porc-épic, dard, épine", english: "porcupine quill, sting, thorn" },
     ],
+    exercises: [
       {
         type: "mandombe-recognition" as const,
         title: "Read Mandombe – Muisisa, Muivi, Muanzi...",
@@ -18240,7 +18243,8 @@ export const lessons: Lesson[] = [
             { mandombe: "nsekoso", lari: "nsekoso", distractors: ["Hata di", "Ngulu kue ye?", "Dimpa kue die?"], french: "oiseaux tisserands qui aiment nicher sur les bambous", english: "weaver birds that nest on bamboo", mode: "latin-to-glyph" as const },
         ],
       },
-    exercises: [],
+
+    ],
   },{
     id: "nouvelles-entrees-2",
     title: "Ngansua, Nsende, Kebo...",
@@ -18399,6 +18403,7 @@ export const lessons: Lesson[] = [
       { lari: "Nsende", mandombe: "Nsende", french: "Les épines, les arêtes de poisson", english: "Thorns, fish bones", portuguese: "Espinhos, espinhas de peixe" }
     ],
     phrases: [],
+    exercises: [
       {
         type: "mandombe-recognition" as const,
         title: "Read Mandombe – Nouvelles entrées Kikongo",
@@ -18415,7 +18420,8 @@ export const lessons: Lesson[] = [
             { mandombe: "Sungamana", lari: "Sungamana", distractors: ["Fueti", "muana nsusu", "Hata dio dia toma die."], french: "Regarder avec étonnement", english: "To look with astonishment", portuguese: "Olhar com espanto", mode: "latin-to-glyph" as const },
         ],
       },
-    exercises: [],
+
+    ],
   },
   {
     id: "mandombe-terminologie",
@@ -18450,6 +18456,7 @@ export const lessons: Lesson[] = [
       { lari: "Mvuala za kimbangu", mandombe: "Mvuala za kimbangu", french: "groupe consonantique", english: "consonant cluster" },
       { lari: "Mvuala za mazindinga", mandombe: "Mvuala za mazindinga", french: "consonnes migratoires", english: "migratory consonants" },
     ],
+    exercises: [
       {
         type: "mandombe-recognition" as const,
         title: "Read Mandombe – Kisimba, Mvuala, Zita...",
@@ -18466,7 +18473,8 @@ export const lessons: Lesson[] = [
             { mandombe: "Mvuala za mazindinga", lari: "Mvuala za mazindinga", distractors: ["Kata", "mufuta", "mahasimbi"], french: "consonnes migratoires", english: "migratory consonants", mode: "latin-to-glyph" as const },
         ],
       },
-    exercises: [],
+
+    ],
   },
 
   // ─── Leçon: Verbes & Actions (Extended) ───
