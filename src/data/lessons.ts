@@ -17302,7 +17302,7 @@ export const lessons: Lesson[] = [
           { mandombe: "buzitu", lari: "buzitu", distractors: ["busitu", "bukitu", "bulitu"], french: "le respect", mode: "glyph-to-latin" as const },
           { mandombe: "ntela", lari: "ntela", distractors: ["nkela", "ntala", "ntila"], french: "la maturité", mode: "latin-to-glyph" as const },
           { mandombe: "mboko", lari: "mboko", distractors: ["mboki", "mboku", "mboka"], french: "ensuite, après", mode: "glyph-to-latin" as const },
-          { mandombe: "lema", lari: "lema", distractors: ["lema", "luma", "lima"], french: "l'esprit", mode: "latin-to-glyph" as const },
+          { mandombe: "lema", lari: "lema", distractors: ["lema", "luma", "lima"], french: "l'esprit", mode: "glyph-to-latin" as const },
           { mandombe: "keti", lari: "keti", distractors: ["keli", "kesi", "keni"], french: "ou", mode: "glyph-to-latin" as const },
         ],
       },
