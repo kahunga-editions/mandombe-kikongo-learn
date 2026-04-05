@@ -3387,7 +3387,6 @@ export const lessons: Lesson[] = [
       // FUEMBA across (8,2): F(8,2) U(8,3) E(8,4) M(8,5) B(8,6) A(8,7)
       // FUTUKA across (6,3): F(6,3) U(6,4) T(6,5) U(6,6) K(6,7) A(6,8)
       {
-      {
         type: "mandombe-recognition" as const,
         title: "Recognize Mandombe — Fi- & Fu- Verbs",
         titleFr: "Reconnaître le Mandombe — Verbes Fi- & Fu-",
