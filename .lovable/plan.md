@@ -1,35 +1,31 @@
 
 
-# Plan : Ajouter ~350 nouvelles entrées au dictionnaire
+# Plan : Corriger les glyphes Mandombe (Adlam → Latin)
 
-## Approche
+## Problème
 
-Créer **3 nouvelles leçons thématiques** à la fin du tableau `lessons` (avant le `];` final, ligne 16643), chacune regroupant les entrées par thème pour faciliter la navigation dans les leçons et le dictionnaire.
+Les 3 leçons ajoutées récemment (`verbes-actions-etendus`, `nature-animaux-objets-etendus`, `tradition-kongo-societe`) utilisent des caractères Unicode **Adlam** (𞤢, 𞤦, 𞤥…) dans le champ `mandombe` au lieu des **spellings latins** que la police Masono Mandombe attend.
 
-## Leçons à créer
+La police Masono Mandombe fonctionne par mapping interne : elle prend du texte latin (ex: `"Adi"`) et affiche le glyphe Mandombe correspondant. Les caractères Adlam ne sont pas reconnus par la police, d'où les glyphes aléatoires/carrés affichés.
 
-### 1. `"verbes-actions-etendus"` — Verbes & Actions (Extended)
-Regroupe les verbes d'action et d'état :
-- fomba, defa, kinkasa, nimba, fumba, fumbama, fumfula, fulamana, fulamasa, defesa, dekakana, buota, buotana, buotasa, buotoka, buoboka, buongozoka, buila, buirila, buela, buesa, bueyesa, bueza, vuza, vuama, vuanda, vuaza, vueza, vuika, kola, bambuka, potesa, muisa, muala, yakamba, mueta, muesa, muina, diata, duka, burika/budika, pinzumuka, koseka, haula, sakalala, sompa, telama, diama, bvuama, djunisa, bueta, bumba, bonga, yumisa, sosa, handa, sungamana, tisama, wakasa, djoka, zinga, shisa, buisa, jingila, kuna, lobola, leboka, lambula, lambalala, lamina, lamuna, lema, lembama, lemesa, lemvokela, lenga, kubama, kubuka, kuluku, fimpa, fimba, sabika, karisa
-- Plus les noms dérivés : nsululu, n'kelo, kinimbi, kinkenene, kinkento, ngantu/nganti, buimi, lukokoto, lunomo, mvuamvua, mvuaza, mvuo, mvuemba, bulebua, bunokena, mvuemvue, nieka, mvuomvuo, vuotona, muendo, muendololo, muemuenge, humumu, muisu, nkuizulu, muonso, muyibi, muini, mueni, nsambi, muaka, muakila, muamba, etc.
+**~258 lignes sont affectées** dans les 3 nouvelles leçons (lignes 16643–17061).
 
-### 2. `"nature-animaux-objets-etendus"` — Nature, Animaux & Objets
-- Animaux : nsumba, ngola, make, lembe, munkiobo, munganga, mushikimbila, minsala, nkusu, muana mbua, muana nsusu, bimpete, binienia, munturia, musonia
-- Nature : mpolo, tisama, kikuku/bikuku, nsende, makaya, kifulu, luvu, kuluku, mfiela, nsati, tshiba tsha nioshi, tshitari, makenko
-- Objets : kitunga, kalu, mpu, kisu/su, bikanga, muiku, muina (lance), muinga, muindu, muidila, dimbu, bitenda, sabukulu, lukuni/nkuni, tshitari (miroir), lulembeso, buatu, buluku
-- Corps : tshivumu/kivumu, disu dia kulu, nlembo wa nguri, tshinkoso tia koko, lutambi, mutu beni, bunda, bito, ndia/mudia, lundindi
-- Nourriture : muamba, muamba ngumba, makayabu, meki, bimpete karingu, mbiji mamba, mbiji sangi, mampa, mfunmfungu
+## Correction
 
-### 3. `"tradition-kongo-societe"` — Tradition Kongo & Société
-- Tradition : mbawu, mba, nza dia kenza, nza kingunda, simbi/bisimbi, mahasimbi, walesa, lowa, ntemo, kinkeko, bukongo, ntuni, kintamina, ntela, kinzo, adi, nsi ya ya, bena nsilulu, banzayi, kundu, kimvuama, mvuanungunu, mpungu mvuaza
-- Société : nsendo, kinselia, ngeli, nduya, bununu, bukuluntu, buyaya, buzitu, luyalu, kimayala, kinkodia, bibutu, bishi, diatulu, bungungu, ntantu, ntalu, nkana, lumingu, ngonda
-- Expressions : bue ba tele, lumingu lu kwiza, ngonda yi kuiza, buedi ntama, buedi ntete, ha manima, mu pari, ku manima, ku nima, ma landila, tsha nkoyi, muaumun, na tendi, etc.
-- Lieux & noms : Kinimbi, Mbanza Kongo, Mzansi, Mutshila Mamba, tshibuka, mbuka, funda na nkama nsambuadi na nsambuadi
+Pour chaque entrée dans ces 3 leçons, remplacer le champ `mandombe` par la valeur du champ `lari` avec la casse appropriée (première lettre en majuscule pour les noms propres, sinon identique au `lari`).
 
-## Détails techniques
+**Règle** : `mandombe` = spelling latin exact du mot Lari, car c'est ce que la police convertit en glyphes Mandombe.
 
-- **Fichier** : `src/data/lessons.ts` — insertion avant la ligne 16643 (`];`)
-- **Doublons** : Le dictionnaire (`Dictionary.tsx`) dédoublonne déjà via `seen.has(key)` sur `lari.toLowerCase().trim()`. Je vérifierai manuellement les entrées les plus courantes (kola, kala, bonga, nimba, etc.) qui existent déjà et ajouterai une `note` pour désambiguër les homonymes.
-- **Traductions** : Chaque entrée aura `lari`, `mandombe`, `french`, `english`, `portuguese`, et `note` quand pertinent.
-- **Pas de leçons inventées** : Pas de phrases ni d'exercices ajoutés sauf ceux fournis explicitement.
+### Exemples de corrections :
+- `mandombe: "𞤬𞤮𞤥𞤦𞤢"` → `mandombe: "fomba"`
+- `mandombe: "𞤢𞤣𞤭"` → `mandombe: "Adi"`
+- `mandombe: "𞤲𞤧𞤵𞤥𞤦𞤢"` → `mandombe: "nsumba"`
+
+## Fichier modifié
+
+- `src/data/lessons.ts` — lignes 16643 à 17061 : remplacement systématique de tous les champs `mandombe` contenant des caractères Adlam par le spelling latin correspondant (copié depuis le champ `lari`).
+
+## Résultat attendu
+
+Tous les mots du dictionnaire affichent les vrais glyphes Mandombe via la police Masono Mandombe, au lieu de caractères Adlam non reconnus.
 
