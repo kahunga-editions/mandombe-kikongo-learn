@@ -16637,7 +16637,7 @@ export const lessons: Lesson[] = [
     ],
     exercises: [],
   },
-<!DOCTYPE html>
+];
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
