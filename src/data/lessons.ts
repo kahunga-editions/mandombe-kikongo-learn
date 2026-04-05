@@ -16952,8 +16952,6 @@ export const lessons: Lesson[] = [
           { word: "LOBA", clue: "To speak", clueFr: "Parler", row: 7, col: 0, direction: "across" as const },
           { word: "KAMBA", clue: "To chat", clueFr: "Bavarder", row: 6, col: 0, direction: "across" as const },
         ],
-        fillerLetters: "ABDEFGIKLMNOPSTUVYZ",
-      },
     ],
   },
 
@@ -17147,8 +17145,6 @@ export const lessons: Lesson[] = [
           { word: "NITU", clue: "Body", clueFr: "Corps", row: 7, col: 3, direction: "across" as const },
           { word: "MAKAYA", clue: "Leaves", clueFr: "Feuilles", row: 6, col: 2, direction: "across" as const },
         ],
-        fillerLetters: "ABDEFGIKLMNOPSTUVYZ",
-      },
     ],
   },
 
@@ -17338,8 +17334,6 @@ export const lessons: Lesson[] = [
           { word: "KETI", clue: "Or", clueFr: "Ou", row: 3, col: 0, direction: "across" as const },
           { word: "MBUKA", clue: "The place", clueFr: "Le lieu", row: 4, col: 0, direction: "across" as const },
         ],
-        fillerLetters: "ABDEFGIKLMNOPSTUVYZ",
-      },
     ],
   },
 
