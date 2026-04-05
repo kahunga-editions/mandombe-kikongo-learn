@@ -12199,7 +12199,7 @@ export const lessons: Lesson[] = [
 // Conjugaison complète du verbe wuinda — passé et futur
 // ============================================================
 
-,{
+{
   id: "wuinda-mbata",
   title: "The Verb Wuinda — Giving a Slap",
   titleFr: "Le verbe Wuinda — Donner une gifle",
