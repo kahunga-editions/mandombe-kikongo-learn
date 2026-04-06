@@ -848,7 +848,7 @@ export const lessons: Lesson[] = [
       { lari: "Lumbu tshi ku zandu mbele", mandombe: "Lumbu tshi ku zandu mbele", french: "Aujourd'hui je suis allée faire mes courses", english: "Today I went shopping", portuguese: "Hoje fui fazer as minhas compras" },
       { lari: "Lolo muini we ku", mandombe: "Lolo muini we ku", french: "Aujourd'hui, il y a du soleil", english: "Today, it is sunny", portuguese: "Hoje, está sol" },
       { lari: "Laki di mvula ye ku", mandombe: "Laki di mvula ye ku", french: "Aujourd'hui, il pleut", english: "Today, it is raining", portuguese: "Hoje, está a chover" },
-      { lari: "Lumbu tshi njele kuna nzo", mandombe: "Lumbu tshi njele kuna nzo", french: "Aujourd'hui je vais à la maison", english: "Today I am going home", portuguese: "Hoje vou para casa" },
+      { lari: "Lumbu tshi njele kuna nzo", mandombe: "Lumbu tshi ngiele kuna nzo", french: "Aujourd'hui je vais à la maison", english: "Today I am going home", portuguese: "Hoje vou para casa" },
     ],
     exercises: [
       {
@@ -17352,7 +17352,7 @@ export const lessons: Lesson[] = [
           title: "Yilulu — Past tense (ku mamba)",
           titleFr: "Yilulu — Passé (ku mamba)",
           examples: [
-            { lari: "Njele yilulu ku mamba.", mandombe: "Njele yilulu ku mamba.", french: "J'ai mis du temps à la rivière.", english: "I spent a long time at the river.", portuguese: "Demorei muito tempo no rio." },
+            { lari: "Njele yilulu ku mamba.", mandombe: "Ngiele yilulu ku mamba.", french: "J'ai mis du temps à la rivière.", english: "I spent a long time at the river.", portuguese: "Demorei muito tempo no rio." },
             { lari: "Wele yilulu ku mamba.", mandombe: "Wele yilulu ku mamba.", french: "Tu as mis du temps à la rivière.", english: "You spent a long time at the river.", portuguese: "Demoraste muito tempo no rio." },
             { lari: "Wele yilulu ku mamba.", mandombe: "Wele yilulu ku mamba.", french: "Il a mis du temps à la rivière.", english: "He spent a long time at the river.", portuguese: "Ele demorou muito tempo no rio." },
             { lari: "Tuele yilulu ku mamba.", mandombe: "Tuele yilulu ku mamba.", french: "Nous avons mis du temps à la rivière.", english: "We spent a long time at the river.", portuguese: "Demorámos muito tempo no rio." },
@@ -17364,7 +17364,7 @@ export const lessons: Lesson[] = [
           title: "Kuenda — Past tense (mu njila Kongo)",
           titleFr: "Kuenda — Passé (mu njila Kongo)",
           examples: [
-            { lari: "Njele mu njila Kongo.", mandombe: "Njele mu njila Kongo.", french: "Je vais sur la route Kongo.", english: "I go on the Kongo road.", portuguese: "Vou pela estrada Kongo." },
+            { lari: "Njele mu njila Kongo.", mandombe: "Ngiele mu njila Kongo.", french: "Je vais sur la route Kongo.", english: "I go on the Kongo road.", portuguese: "Vou pela estrada Kongo." },
             { lari: "Wele mu njila Kongo.", mandombe: "Wele mu njila Kongo.", french: "Tu vas sur la route Kongo.", english: "You go on the Kongo road.", portuguese: "Vais pela estrada Kongo." },
             { lari: "Wele mu njila Kongo.", mandombe: "Wele mu njila Kongo.", french: "Elle va sur la route Kongo.", english: "She goes on the Kongo road.", portuguese: "Ela vai pela estrada Kongo." },
             { lari: "Tuele mu njila Kongo.", mandombe: "Tuele mu njila Kongo.", french: "Nous allons sur la route Kongo.", english: "We go on the Kongo road.", portuguese: "Vamos pela estrada Kongo." },
@@ -17400,7 +17400,7 @@ export const lessons: Lesson[] = [
       tenseFr: "Passé",
       tensePt: "Pretérito",
       rows: [
-        { person: "1sg", lari: "Njele yilulu ku mamba", mandombe: "Njele yilulu ku mamba" },
+        { person: "1sg", lari: "Njele yilulu ku mamba", mandombe: "Ngiele yilulu ku mamba" },
         { person: "2sg", lari: "Wele yilulu ku mamba", mandombe: "Wele yilulu ku mamba" },
         { person: "3sg", lari: "Wele yilulu ku mamba", mandombe: "Wele yilulu ku mamba" },
         { person: "1pl", lari: "Tuele yilulu ku mamba", mandombe: "Tuele yilulu ku mamba" },
@@ -20439,7 +20439,7 @@ export const lessons: Lesson[] = [
       { lari: "Saleno.", mandombe: "Saleno.", french: "Restez.", english: "Stay (plural).", portuguese: "Fiquem." },
       { lari: "Ba sala!", mandombe: "Ba sala!", french: "Qu'ils/elles restent !", english: "Let them stay!", portuguese: "Que fiquem!" },
       { lari: "Saleno mbote.", mandombe: "Saleno mbote.", french: "Au revoir à vous.", english: "Goodbye to you all.", portuguese: "Adeus a vocês." },
-      { lari: "Bilongo njele sumba.", mandombe: "Bilongo njele sumba.", french: "Je vais acheter des médicaments.", english: "I'm going to buy medicine.", portuguese: "Vou comprar medicamentos." },
+      { lari: "Bilongo njele sumba.", mandombe: "Bilongo ngiele sumba.", french: "Je vais acheter des médicaments.", english: "I'm going to buy medicine.", portuguese: "Vou comprar medicamentos." },
       { lari: "Nge bikua ku zololo a bio ko.", mandombe: "Nge bikua ku zololo a bio ko.", french: "Toi, tu n'aimes pas les ignames.", english: "You don't like yams.", portuguese: "Tu não gostas de inhames.", note: "Quand on met NGE en tête de phrase, c'est pour l'emphase" },
       { lari: "Ka njena na nsatu ko.", mandombe: "Ka njena na nsatu ko.", french: "Je n'ai pas faim.", english: "I'm not hungry.", portuguese: "Não tenho fome." },
       { lari: "Kuena na nsatu ko.", mandombe: "Kuena na nsatu ko.", french: "Tu n'as pas faim.", english: "You're not hungry.", portuguese: "Não tens fome." },
