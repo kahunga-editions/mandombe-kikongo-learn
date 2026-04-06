@@ -13637,7 +13637,7 @@ export const lessons: Lesson[] = [
           titleFr: "Ku banda — en bas de",
           titleMandombe: "Ku banda",
           examples: [
-            { lari: "Njila Mbamu ku banda dia Nzari yena.", mandombe: "Njila Mbamu ku banda diya Nzari yena.", french: "Le chemin de Mbamu est en bas du fleuve Kongo.", english: "Mbamu's path is at the bottom of the Kongo River.", portuguese: "O caminho de Mbamu fica abaixo do rio Kongo." },
+            { lari: "Njila Mbamu ku banda dia Nzari yena.", mandombe: "Nzila Mbamu ku banda diya Nzari yena.", french: "Le chemin de Mbamu est en bas du fleuve Kongo.", english: "Mbamu's path is at the bottom of the Kongo River.", portuguese: "O caminho de Mbamu fica abaixo do rio Kongo." },
             { lari: "Buku ku banda mfulu die(na).", mandombe: "Buku ku banda mfulu diena.", french: "Le livre est en bas du lit.", english: "The book is at the foot of the bed.", portuguese: "O livro está na parte inferior da cama." },
             { lari: "Mabuku ku banda mfulu me(na).", mandombe: "Mabuku ku banda mfulu mena.", french: "Les livres sont en bas du lit.", english: "The books are at the foot of the bed.", portuguese: "Os livros estão na parte inferior da cama." },
           ],
