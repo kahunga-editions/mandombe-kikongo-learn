@@ -872,20 +872,16 @@ export const lessons: Lesson[] = [
         title: "Mazuji + ku [lieu] + [pronom] + yele/bele",
         titleFr: "Mazuji + ku [lieu] + [pronom] + yele/bele",
         titlePt: "Mazuji + ku [lugar] + [pronome] + yele/bele",
-        blocks: [
+        description: "Pattern for 'The day before yesterday I/you/he was at [place]'",
+        groups: [
           {
-            description: "Pattern for 'The day before yesterday I/you/he was at [place]'",
-            groups: [
-              {
-                explanation: "The verb 'to be' in the past conjugates differently depending on the person: yele (1st sg), wele (2nd sg), bele (3rd sg), tuele (1st pl), luele (2nd pl), bele (3rd pl).",
-                explanationFr: "Le verbe 'être' au passé se conjugue différemment selon la personne : yele (1re sg), wele (2e sg), bele (3e sg), tuele (1re pl), luele (2e pl), bele (3e pl).",
-                explanationPt: "O verbo 'ser/estar' no passado conjuga-se de forma diferente consoante a pessoa: yele (1ª sg), wele (2ª sg), bele (3ª sg), tuele (1ª pl), luele (2ª pl), bele (3ª pl).",
-                examples: [
-                  { lari: "Mazuji ku Brazza mono yele", mandombe: "Mazuji ku Brazza mono yele", french: "Avant-hier j'étais à Brazza", english: "The day before yesterday I was in Brazza", portuguese: "Anteontem eu estava em Brazza" },
-                  { lari: "Mazuji ku Brazza nge wele", mandombe: "Mazuji ku Brazza nge wele", french: "Avant-hier tu étais à Brazza", english: "The day before yesterday you were in Brazza", portuguese: "Anteontem tu estavas em Brazza" },
-                  { lari: "Mazuji ku Brazza yandi bele", mandombe: "Mazuji ku Brazza yandi bele", french: "Avant-hier il/elle était à Brazza", english: "The day before yesterday he/she was in Brazza", portuguese: "Anteontem ele/ela estava em Brazza" },
-                ],
-              },
+            explanation: "The verb 'to be' in the past conjugates differently depending on the person: yele (1st sg), wele (2nd sg), bele (3rd sg), tuele (1st pl), luele (2nd pl), bele (3rd pl).",
+            explanationFr: "Le verbe 'être' au passé se conjugue différemment selon la personne : yele (1re sg), wele (2e sg), bele (3e sg), tuele (1re pl), luele (2e pl), bele (3e pl).",
+            explanationPt: "O verbo 'ser/estar' no passado conjuga-se de forma diferente consoante a pessoa: yele (1ª sg), wele (2ª sg), bele (3ª sg), tuele (1ª pl), luele (2ª pl), bele (3ª pl).",
+            examples: [
+              { lari: "Mazuji ku Brazza mono yele", mandombe: "Mazuji ku Brazza mono yele", french: "Avant-hier j'étais à Brazza", english: "The day before yesterday I was in Brazza", portuguese: "Anteontem eu estava em Brazza" },
+              { lari: "Mazuji ku Brazza nge wele", mandombe: "Mazuji ku Brazza nge wele", french: "Avant-hier tu étais à Brazza", english: "The day before yesterday you were in Brazza", portuguese: "Anteontem tu estavas em Brazza" },
+              { lari: "Mazuji ku Brazza yandi bele", mandombe: "Mazuji ku Brazza yandi bele", french: "Avant-hier il/elle était à Brazza", english: "The day before yesterday he/she was in Brazza", portuguese: "Anteontem ele/ela estava em Brazza" },
             ],
           },
         ],
@@ -1042,19 +1038,15 @@ export const lessons: Lesson[] = [
         title: "Vula — Formes",
         titleFr: "Vula — Formes",
         titlePt: "Vula — Formas",
-        blocks: [
+        description: "Present continuous and past forms of 'vula' (to undo)",
+        groups: [
           {
-            description: "Present continuous and past forms of 'vula' (to undo)",
-            groups: [
-              {
-                explanation: "'Ni ta vula' = present continuous (I am undoing). 'Mvuridi' = past participle (undone). The object prefix changes based on context.",
-                explanationFr: "'Ni ta vula' = présent continu (je défais). 'Mvuridi' = participe passé (défait). Le préfixe objet change selon le contexte.",
-                explanationPt: "'Ni ta vula' = presente contínuo (estou a desfazer). 'Mvuridi' = particípio passado (desfeito). O prefixo objeto muda consoante o contexto.",
-                examples: [
-                  { lari: "Nsuki ni ta vula", mandombe: "Nsuki ni ta vula", french: "Je défais les cheveux", english: "I am undoing the hair", portuguese: "Estou a desfazer o cabelo" },
-                  { lari: "Nsuki zani mvuridi", mandombe: "Nsuki zani mvuridi", french: "Mes cheveux sont défaits", english: "My hair is undone", portuguese: "O meu cabelo está desfeito" },
-                ],
-              },
+            explanation: "'Ni ta vula' = present continuous (I am undoing). 'Mvuridi' = past participle (undone). The object prefix changes based on context.",
+            explanationFr: "'Ni ta vula' = présent continu (je défais). 'Mvuridi' = participe passé (défait). Le préfixe objet change selon le contexte.",
+            explanationPt: "'Ni ta vula' = presente contínuo (estou a desfazer). 'Mvuridi' = particípio passado (desfeito). O prefixo objeto muda consoante o contexto.",
+            examples: [
+              { lari: "Nsuki ni ta vula", mandombe: "Nsuki ni ta vula", french: "Je défais les cheveux", english: "I am undoing the hair", portuguese: "Estou a desfazer o cabelo" },
+              { lari: "Nsuki zani mvuridi", mandombe: "Nsuki zani mvuridi", french: "Mes cheveux sont défaits", english: "My hair is undone", portuguese: "O meu cabelo está desfeito" },
             ],
           },
         ],
