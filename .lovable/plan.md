@@ -1,35 +1,40 @@
 
 
-# Correction : "Dzuna" en Lari, "Djuna" en Mandombe
+# Correction : "njila" en Lari, "nzila" en Mandombe
 
 ## Règle linguistique
 
-- **Prononciation Kikongo Lari** : /dzuna/ → champs `lari` doivent utiliser **"Dzuna"**
-- **Écriture Mandombe** : → champs `mandombe` gardent **"Djuna"**
-
-Actuellement, tout a été uniformisé en "Djuna" partout. Il faut rétablir "Dzuna" dans les champs Lari uniquement.
+- **Prononciation Kikongo Lari** : /njila/ → champs `lari` utilisent **"njila"**
+- **Écriture Mandombe** : → champs `mandombe` utilisent **"nzila"**
+- Note de prononciation : "Se prononce /njila/ en Lari, s'écrit nzila en Mandombe"
 
 ## Modifications dans `src/data/lessons.ts`
 
-### 1. Champs `lari` et `sentence` : "Djuna"/"djuna" → "Dzuna"/"dzuna"
-Environ 25 occurrences à corriger :
-- Vocabulaire : `lari: "Djuna"` → `lari: "Dzuna"`
-- Phrases : `lari: "Djuna ngatu wa lembo..."` → `lari: "Dzuna ngatu wa lembo..."`
-- Exercices fill-in-blank : `blank: "djuna"` → `blank: "dzuna"`
-- Distracteurs en contexte Lari : "Djuna" → "Dzuna"
-- Matching `left` en contexte Lari : "Djuna" → "Dzuna", "Kwa djuna" → "Kwa dzuna"
+### 1. Champs `lari` : remplacer "nzila" par "njila" (~12 occurrences)
+- Ligne 4336 : `lari: "Hambana bua nzila"` → `"Hambana bua njila"`
+- Ligne 4566 : `lari: "Kuenda na nzila"` → `"Kuenda na njila"`
+- Ligne 11844 : `lari: "...mu nzila ya Mfua."` → `"...mu njila ya Mfua."`
+- Ligne 11852 : `lari: "...ma nzila ya Boko..."` → `"...ma njila ya Boko..."`
+- Ligne 17367-17372 : 6 conjugaisons `lari: "...mu nzila Kongo."` → `"...mu njila Kongo."`
+- Ligne 17364-17365 : titres de section `"mu nzila Kongo"` → `"mu njila Kongo"`
 
-### 2. Champs `mandombe` : restent "Djuna"/"djuna" (déjà correct)
+### 2. Champs `mandombe` : garder "nzila" (déjà correct partout)
 
-### 3. Titres de leçon
-La leçon `sa-mayela-djuna-lungu` : les titres `title`, `titleFr`, `titlePt`, `titleLari` → "Sa mayela, Dzuna, Lungu". Le `titleMandombe` reste "Sa mayela, Djuna, Lungu".
+### 3. Vocabulaire : corriger les entrées doubles
+- Ligne 11800 : `lari: "Njila / Nzila"` → `lari: "Njila"`, `mandombe: "Nzila"` + note de prononciation
+- Ligne 13622 : `lari: "Njila"` déjà correct, `mandombe: "Njila"` → `mandombe: "Nzila"`
+- Ligne 12030 : item recognition `mandombe: "Njila / Nzila"` → `mandombe: "Nzila"`, `lari: "Njila"`
 
-### 4. Note de prononciation
-Mettre à jour la note existante : `"Se prononce /dzuna/, s'écrit djuna en Mandombe"`
+### 4. Distracteurs
+- Ligne 3419 : distracteur `"Njila Mbamu..."` — contexte Mandombe (latin-to-glyph) → garder ou corriger selon le contexte d'affichage
+- Ligne 5114 : distracteur `"Hambana bua nzila"` en mode glyph-to-latin → `"Hambana bua njila"`
+- Ligne 16998 : distracteur `"Bele mu nzila Kongo."` en mode glyph-to-latin → `"Bele mu njila Kongo."`
+- Ligne 17661 : distracteur `"Njila"` en mode glyph-to-latin → reste "Njila" (correct)
 
-### 5. Distracteurs dans les exercices mandombe-recognition
-Les distracteurs qui apparaissent dans un contexte Mandombe (mode `latin-to-glyph`) gardent "Djuna". Ceux dans un contexte non-Mandombe → "Dzuna".
+### 5. Cas spéciaux à ne PAS toucher
+- Ligne 16177 : `"Bisinzila"` — mot différent (petites souches), ne pas modifier
+- Ligne 17456 : item en mode `latin-to-glyph` → les champs `mandombe` et `lari` affichent dans leur contexte respectif
 
 ## Fichier modifié
-- `src/data/lessons.ts` — ~30 remplacements ciblés
+- `src/data/lessons.ts` — ~20 remplacements ciblés
 
