@@ -7709,7 +7709,7 @@ export const lessons: Lesson[] = [
       { lari: "Lembo", mandombe: "Lembo", french: "Ne pas", english: "Not", portuguese: "Não" },
       { lari: "Nsatu", mandombe: "Nsatu", french: "La faim", english: "Hunger", portuguese: "Fome" },
       { lari: "Nkesi / Nkeshi", mandombe: "Nkesi / Nkeshi", french: "La colère", english: "Anger", portuguese: "Raiva" },
-      { lari: "Djuna", mandombe: "Djuna", french: "Se calmer", english: "To calm down", portuguese: "Acalmar-se", note: "S'écrit 'Djuna' mais se prononce /djuna/" },
+      { lari: "Djuna", mandombe: "Djuna", french: "Se calmer", english: "To calm down", portuguese: "Acalmar-se", note: "S'écrit 'Djuna' mais se prononce /dzuna/" },
       { lari: "Bubote", mandombe: "Bubote", french: "Bien", english: "Well", portuguese: "Bem" },
     ],
     syntax: [
@@ -7854,7 +7854,7 @@ export const lessons: Lesson[] = [
         blank: "djuna",
         hint: "A verb meaning 'to calm down'.",
         hintFr: "Un verbe signifiant « se calmer ».",
-        hintPt: "Um verbo que significa 'acalmar-se' (pronunciado /djuna/).",
+        hintPt: "Um verbo que significa 'acalmar-se' (pronunciado /dzuna/).",
       },
       {
         type: "fill-in-blank",
@@ -22248,18 +22248,18 @@ export const lessons: Lesson[] = [
     ],
   },
 
-  // ===== LESSON: SOCIAL CONCEPTS — Buzitu ye Bumwana =====
+  // ===== LESSON: SOCIAL CONCEPTS — Buzitu na Bumwana =====
   {
     id: "social-concepts",
-    title: "Buzitu ye Bumwana",
+    title: "Buzitu na Bumwana",
     titleFr: "Respect et Enfance — Concepts sociaux",
     titlePt: "Respeito e Infância — Conceitos sociais",
     description: "Learn abstract social concepts and everyday words in Kikongo Lari",
     descriptionFr: "Apprenez les concepts sociaux abstraits et les mots du quotidien en Kikongo Lari",
     descriptionPt: "Aprenda conceitos sociais abstratos e palavras do cotidiano em Kikongo Lari",
     level: "intermediate" as const,
-    titleLari: "Buzitu ye Bumwana",
-    titleMandombe: "Buzitu ye Bumwana",
+    titleLari: "Buzitu na Bumwana",
+    titleMandombe: "Buzitu na Bumwana",
     icon: "🤝",
     vocabulary: [
       { lari: "Bumwana", mandombe: "Bumwana", french: "Enfance", english: "Childhood", portuguese: "Infância" },
