@@ -875,6 +875,9 @@ export const lessons: Lesson[] = [
         description: "Pattern for 'The day before yesterday I/you/he was at [place]'",
         groups: [
           {
+            title: "Conjugaison de 'être' au passé avec Mazuji",
+            titleFr: "Conjugaison de 'être' au passé avec Mazuji",
+            titlePt: "Conjugação de 'ser/estar' no passado com Mazuji",
             explanation: "The verb 'to be' in the past conjugates differently depending on the person: yele (1st sg), wele (2nd sg), bele (3rd sg), tuele (1st pl), luele (2nd pl), bele (3rd pl).",
             explanationFr: "Le verbe 'être' au passé se conjugue différemment selon la personne : yele (1re sg), wele (2e sg), bele (3e sg), tuele (1re pl), luele (2e pl), bele (3e pl).",
             explanationPt: "O verbo 'ser/estar' no passado conjuga-se de forma diferente consoante a pessoa: yele (1ª sg), wele (2ª sg), bele (3ª sg), tuele (1ª pl), luele (2ª pl), bele (3ª pl).",
@@ -1041,6 +1044,9 @@ export const lessons: Lesson[] = [
         description: "Present continuous and past forms of 'vula' (to undo)",
         groups: [
           {
+            title: "Présent continu et passé de Vula",
+            titleFr: "Présent continu et passé de Vula",
+            titlePt: "Presente contínuo e passado de Vula",
             explanation: "'Ni ta vula' = present continuous (I am undoing). 'Mvuridi' = past participle (undone). The object prefix changes based on context.",
             explanationFr: "'Ni ta vula' = présent continu (je défais). 'Mvuridi' = participe passé (défait). Le préfixe objet change selon le contexte.",
             explanationPt: "'Ni ta vula' = presente contínuo (estou a desfazer). 'Mvuridi' = particípio passado (desfeito). O prefixo objeto muda consoante o contexto.",
