@@ -1,34 +1,23 @@
 
 
-# Intégrer le tableau BA= dans la section Apprendre + corrections visuelles
+# Rendre les glyphes et textes visibles dans le tableau BA=
 
-## Changements
+## Problème
 
-### 1. Déplacer le contenu BA= dans la page principale
-- Extraire le tableau de conjugaison de `VerbeBa.tsx` en un composant autonome `src/components/VerbeBaSection.tsx` (sans Navbar/Footer, avec un `id="verbe-ba"`)
-- L'ajouter dans `src/pages/Index.tsx` après `<LearningPaths />` (ou après `<VocabularyPreview />`)
-- Supprimer la route `/verbe-ba` de `src/App.tsx`
-- Supprimer le lien "BA=" du `Navbar.tsx`
-- Supprimer `src/pages/VerbeBa.tsx`
+Les couleurs actuelles (`text-amber-300`, `text-emerald-300`, `text-blue-300`) sont quasi invisibles sur fond clair. Les fonds des boutons (`bg-amber-500/30`) sont aussi trop transparents.
 
-### 2. Agrandir les glyphes Mandombe
-- Boutons de conjugaison : `text-xl` → `text-3xl`
-- Colonne pronom/substantif : `text-lg` → `text-2xl`
-- Modal : `text-3xl` → `text-4xl`
+## Corrections
 
-### 3. Couleurs plus foncées (plus visibles)
-- Présent contracté : `text-gold` → `text-amber-400`, border/bg plus opaques
-- Présent plein : `text-emerald-400` → `text-emerald-300`
-- Passé : `text-blue-400` → `text-blue-300`
-- Fonds des boutons : opacité de `/20` → `/30`
+### Fichier : `src/components/VerbeBaSection.tsx`
 
-### 4. Espacement pronom / substantif
-- Ajouter `mb-3` entre le Mandombe et le texte latin dans la colonne pronom/substantif (actuellement aucun margin)
+**Couleurs des boutons (tenseColors)** — utiliser des teintes foncées visibles sur fond clair :
+- Contracté : `bg-amber-100 text-amber-800 border-amber-400 hover:bg-amber-200` (dark: `dark:bg-amber-900/40 dark:text-amber-300 dark:border-amber-500`)
+- Plein : `bg-emerald-100 text-emerald-800 border-emerald-400 hover:bg-emerald-200` (dark: `dark:bg-emerald-900/40 dark:text-emerald-300`)
+- Passé : `bg-blue-100 text-blue-800 border-blue-400 hover:bg-blue-200` (dark: `dark:bg-blue-900/40 dark:text-blue-300`)
 
-## Fichiers modifiés
-- `src/components/VerbeBaSection.tsx` — nouveau composant (contenu extrait)
-- `src/pages/Index.tsx` — import + ajout du composant
-- `src/App.tsx` — suppression route `/verbe-ba`
-- `src/components/Navbar.tsx` — suppression lien "BA="
-- `src/pages/VerbeBa.tsx` — suppression
+**Badges (tenseBadgeColors)** — même logique foncée.
+
+**En-têtes de colonnes** — `text-amber-400` → `text-amber-700 dark:text-amber-400`, idem vert/bleu.
+
+**Légende (dots)** — `bg-amber-400` → `bg-amber-600 dark:bg-amber-400`, etc.
 
