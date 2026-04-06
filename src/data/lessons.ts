@@ -4333,7 +4333,7 @@ export const lessons: Lesson[] = [
     ],
     phrases: [
       { lari: "Hana mono mamba", mandombe: "Hana mono mamba", french: "Donne-moi de l'eau", english: "Give me water" },
-      { lari: "Hambana bua nzila", mandombe: "Hambana buwa nzila", french: "Se séparer au carrefour", english: "To part ways at the crossroads" },
+      { lari: "Hambana bua njila", mandombe: "Hambana buwa nzila", french: "Se séparer au carrefour", english: "To part ways at the crossroads" },
       { lari: "Hangama na ntima", mandombe: "Hangama na ntima", french: "Se tenir ferme de cœur", english: "To stand firm in one's heart", note: "Expresses inner resolve and courage — a warrior's mindset." },
       { lari: "Hata dia bakulu", mandombe: "Hata dia bakulu", french: "Le village des ancêtres", english: "The village of the ancestors" },
     ],
@@ -4563,7 +4563,7 @@ export const lessons: Lesson[] = [
     phrases: [
       { lari: "Kula na nzala", mandombe: "Kula na nzala", french: "Grandir dans la faim", english: "To grow up in hunger" },
       { lari: "Kuela na luzolo", mandombe: "Kuwela na luzolo", french: "Se marier par amour", english: "To marry for love" },
-      { lari: "Kuenda na nzila", mandombe: "Kuwenda na nzila", french: "Aller sur le chemin", english: "To go on the road" },
+      { lari: "Kuenda na njila", mandombe: "Kuwenda na nzila", french: "Aller sur le chemin", english: "To go on the road" },
       { lari: "Komba nzo", mandombe: "Komba nzo", french: "Balayer la maison", english: "Sweep the house" },
       { lari: "Kuwa malongi", mandombe: "Kuwa malongi", french: "Écouter les leçons", english: "To listen to the lessons", note: "Kuwa emphasises deep listening — following advice, not just hearing." },
     ],
@@ -5111,7 +5111,7 @@ export const lessons: Lesson[] = [
             { mandombe: "Nkokila", lari: "Nkokila", distractors: ["kinzo", "Lu ta sa nki?", "Funana"], french: "Le soir", english: "The evening", mode: "latin-to-glyph" as const },
             { mandombe: "Suka", lari: "Suka", distractors: ["Lualuna", "Mbanza Kongo", "Zanza"], french: "Le matin", english: "The morning", mode: "glyph-to-latin" as const },
             { mandombe: "Sabala", lari: "Sabala", distractors: ["Balumuna ntinu", "lufulu", "Luzolanu"], french: "Samedi", english: "Saturday", mode: "latin-to-glyph" as const },
-            { mandombe: "Luweka", lari: "Lueka", distractors: ["Tshitunga tshine", "fulamana", "Hambana bua nzila"], french: "La moitié, le flanc, un morceau", english: "Half, side, a piece", mode: "glyph-to-latin" as const },
+            { mandombe: "Luweka", lari: "Lueka", distractors: ["Tshitunga tshine", "fulamana", "Hambana bua njila"], french: "La moitié, le flanc, un morceau", english: "Half, side, a piece", mode: "glyph-to-latin" as const },
             { mandombe: "Lumingu kiya mbote", lari: "Lumingu kia mbote", distractors: ["Yayana", "Leho", "Kilongokelo"], french: "Bon dimanche", english: "Happy Sunday", mode: "latin-to-glyph" as const },
         ],
       },
@@ -11797,7 +11797,7 @@ export const lessons: Lesson[] = [
     icon: "🏘️",
     vocabulary: [
       { lari: "Yala", mandombe: "Yala", french: "Étendre, étaler", english: "To spread, to extend", portuguese: "Estender, espalhar" },
-      { lari: "Njila / Nzila", mandombe: "Njila / Nzila", french: "Chemin, route", english: "Path, road", portuguese: "Caminho, estrada" },
+      { lari: "Njila", mandombe: "Nzila", note: "Se prononce /njila/ en Lari, s'écrit nzila en Mandombe", french: "Chemin, route", english: "Path, road", portuguese: "Caminho, estrada" },
       { lari: "Nkuala", mandombe: "Nkuala", french: "Natte", english: "Mat", portuguese: "Esteira" },
       { lari: "Vunga", mandombe: "Vunga", french: "Couverture", english: "Blanket", portuguese: "Cobertor" },
       { lari: "Mala", mandombe: "Mala", french: "Loin", english: "Far", portuguese: "Longe" },
@@ -11841,7 +11841,7 @@ export const lessons: Lesson[] = [
     ],
     phrases: [
       {
-        lari: "Yalavunga ka mala ko na Tshinkala, mu nzila ya Mfua.",
+        lari: "Yalavunga ka mala ko na Tshinkala, mu njila ya Mfua.",
         mandombe: "Yalavunga ka mala ko na Tshinkala, mu nzila ya Mfua.",
         french: "Yalavunga n'est pas loin de Kinkala, sur la route de Mfua.",
         english: "Yalavunga is not far from Kinkala, on the road to Mfua.",
@@ -11849,7 +11849,7 @@ export const lessons: Lesson[] = [
         note: "Yalavunga est un patelin situé avant Kinkala. Son nom vient de « yala vunga » (étendre la couverture). Kinkala est la préfecture dont dépend Mbamu, un village célèbre pour son séminaire où beaucoup d'hommes politiques ont été formés dans les années 50-60.",
       },
       {
-        lari: "Hata die mpe ha ma hambu ma nzila ya Boko na Kinkala.",
+        lari: "Hata die mpe ha ma hambu ma njila ya Boko na Kinkala.",
         mandombe: "Hata die mpe ha ma hambu ma nzila ya Boko na Kinkala.",
         french: "Ce village est à l'intersection de la route de Boko et Kinkala.",
         english: "This village is at the intersection of the road to Boko and Kinkala.",
@@ -12027,7 +12027,7 @@ export const lessons: Lesson[] = [
         items: [
             { mandombe: "Nkuala ni ta yala.", lari: "Nkuala ni ta yala.", distractors: ["Sanduku dia mvumbi", "Zeka", "Mampa makumatatu na ma tanu."], french: "Je suis en train d'étendre une natte.", english: "I am spreading a mat.", portuguese: "Estou a estender uma esteira.", mode: "glyph-to-latin" as const },
             { mandombe: "Hata", lari: "Hata", distractors: ["Nzo mikanda", "Sola", "Maba lu ta baka."], french: "Village", english: "Village", portuguese: "Aldeia", mode: "latin-to-glyph" as const },
-            { mandombe: "Njila / Nzila", lari: "Njila / Nzila", distractors: ["Lenge", "Nzo ani ha ndeko nto ye(na).", "Basu"], french: "Chemin, route", english: "Path, road", portuguese: "Caminho, estrada", mode: "glyph-to-latin" as const },
+            { mandombe: "Nzila", lari: "Njila", distractors: ["Lenge", "Nzo ani ha ndeko nto ye(na).", "Basu"], french: "Chemin, route", english: "Path, road", portuguese: "Caminho, estrada", mode: "glyph-to-latin" as const },
             { mandombe: "Nkuala ka ta yala.", lari: "Nkuala ka ta yala.", distractors: ["Nzalu", "Kumpua", "Mpuina ye nandi"], french: "Il/elle est en train d'étendre une natte.", english: "He/she is spreading a mat.", portuguese: "Ele/ela está a estender uma esteira.", mode: "latin-to-glyph" as const },
             { mandombe: "Yala", lari: "Yala", distractors: ["Seka", "muasu", "Vungula ku nkia nkuala ye(na)."], french: "Étendre, étaler", english: "To spread, to extend", portuguese: "Estender, espalhar", mode: "glyph-to-latin" as const },
             { mandombe: "Nkuala", lari: "Nkuala", distractors: ["Yinga mbungu", "Kituizi", "Lufunia"], french: "Natte", english: "Mat", portuguese: "Esteira", mode: "latin-to-glyph" as const },
@@ -13619,7 +13619,7 @@ export const lessons: Lesson[] = [
     { lari: "Bisari", mandombe: "Bisari", french: "Les travailleurs", english: "The workers", portuguese: "Os trabalhadores" },
     { lari: "Nsaba", mandombe: "Nsaba", french: "Le jardin", english: "The garden", portuguese: "O jardim" },
     { lari: "Lukaya", mandombe: "Lukaya", french: "La feuille", english: "The leaf", portuguese: "A folha" },
-    { lari: "Njila", mandombe: "Njila", french: "Le chemin", english: "The path, the road", portuguese: "O caminho" },
+    { lari: "Njila", mandombe: "Nzila", french: "Le chemin", english: "The path, the road", portuguese: "O caminho" },
     { lari: "Nzari", mandombe: "Nzari", french: "Le fleuve / L'Univers du Soleil Intérieur", english: "The river / The Universe of the Inner Sun", portuguese: "O rio / O Universo do Sol Interior", note: "Nom originel du fleuve Kongo. Nzari ne signifie pas simplement 'fleuve' — c'est le nom sacré du fleuve Kongo." },
   ],
   syntax: [
@@ -16995,7 +16995,7 @@ export const lessons: Lesson[] = [
         items: [
             { mandombe: "Nkari", lari: "Nkari", distractors: ["Mpimpingi", "Bembe / Mabembe", "Zingu"], french: "Le commerce", english: "Commerce, trade", portuguese: "O comércio", mode: "glyph-to-latin" as const },
             { mandombe: "Ngitu", lari: "Ngitu", distractors: ["Sensa", "mushikimbila", "Kopa"], french: "Si jamais…, afin que", english: "If ever…, so that", portuguese: "Se alguma vez…, para que", mode: "latin-to-glyph" as const },
-            { mandombe: "Nama", lari: "Nama", distractors: ["Bele mu nzila Kongo.", "Yangi", "Fionena"], french: "S'allumer", english: "To light up, to ignite", portuguese: "Acender-se", mode: "glyph-to-latin" as const },
+            { mandombe: "Nama", lari: "Nama", distractors: ["Bele mu njila Kongo.", "Yangi", "Fionena"], french: "S'allumer", english: "To light up, to ignite", portuguese: "Acender-se", mode: "glyph-to-latin" as const },
             { mandombe: "Ninga", lari: "Ninga", distractors: ["Fioti fioti", "Bala ba ngulu bia bitatu.", "Mielo"], french: "Oui", english: "Yes", portuguese: "Sim", mode: "latin-to-glyph" as const },
             { mandombe: "Namisa", lari: "Namisa", distractors: ["muangalakani", "Vutula matondo", "Kua kuo nso."], french: "Allumer", english: "To light, to turn on", portuguese: "Acender", mode: "glyph-to-latin" as const },
             { mandombe: "Nienga", lari: "Nienga", distractors: ["Kuena", "Mpeho ya nene ye.", "Ka njena na nsatu ko."], french: "Se fondre", english: "To melt", portuguese: "Derreter-se", mode: "latin-to-glyph" as const },
@@ -17361,15 +17361,15 @@ export const lessons: Lesson[] = [
           ],
         },
         {
-          title: "Kuenda — Past tense (mu nzila Kongo)",
-          titleFr: "Kuenda — Passé (mu nzila Kongo)",
+          title: "Kuenda — Past tense (mu njila Kongo)",
+          titleFr: "Kuenda — Passé (mu njila Kongo)",
           examples: [
-            { lari: "Njele mu nzila Kongo.", mandombe: "Ngiele mu nzila Kongo.", french: "Je vais sur la route Kongo.", english: "I go on the Kongo road.", portuguese: "Vou pela estrada Kongo." },
-            { lari: "Wele mu nzila Kongo.", mandombe: "Wele mu nzila Kongo.", french: "Tu vas sur la route Kongo.", english: "You go on the Kongo road.", portuguese: "Vais pela estrada Kongo." },
-            { lari: "Wele mu nzila Kongo.", mandombe: "Wele mu nzila Kongo.", french: "Elle va sur la route Kongo.", english: "She goes on the Kongo road.", portuguese: "Ela vai pela estrada Kongo." },
-            { lari: "Tuele mu nzila Kongo.", mandombe: "Tuele mu nzila Kongo.", french: "Nous allons sur la route Kongo.", english: "We go on the Kongo road.", portuguese: "Vamos pela estrada Kongo." },
-            { lari: "Luele mu nzila Kongo.", mandombe: "Luele mu nzila Kongo.", french: "Vous allez sur la route Kongo.", english: "You go on the Kongo road.", portuguese: "Vocês vão pela estrada Kongo." },
-            { lari: "Bele mu nzila Kongo.", mandombe: "Bele mu nzila Kongo.", french: "Ils vont sur la route Kongo.", english: "They go on the Kongo road.", portuguese: "Eles vão pela estrada Kongo." },
+            { lari: "Njele mu njila Kongo.", mandombe: "Ngiele mu nzila Kongo.", french: "Je vais sur la route Kongo.", english: "I go on the Kongo road.", portuguese: "Vou pela estrada Kongo." },
+            { lari: "Wele mu njila Kongo.", mandombe: "Wele mu nzila Kongo.", french: "Tu vas sur la route Kongo.", english: "You go on the Kongo road.", portuguese: "Vais pela estrada Kongo." },
+            { lari: "Wele mu njila Kongo.", mandombe: "Wele mu nzila Kongo.", french: "Elle va sur la route Kongo.", english: "She goes on the Kongo road.", portuguese: "Ela vai pela estrada Kongo." },
+            { lari: "Tuele mu njila Kongo.", mandombe: "Tuele mu nzila Kongo.", french: "Nous allons sur la route Kongo.", english: "We go on the Kongo road.", portuguese: "Vamos pela estrada Kongo." },
+            { lari: "Luele mu njila Kongo.", mandombe: "Luele mu nzila Kongo.", french: "Vous allez sur la route Kongo.", english: "You go on the Kongo road.", portuguese: "Vocês vão pela estrada Kongo." },
+            { lari: "Bele mu njila Kongo.", mandombe: "Bele mu nzila Kongo.", french: "Ils vont sur la route Kongo.", english: "They go on the Kongo road.", portuguese: "Eles vão pela estrada Kongo." },
           ],
         },
       ],
@@ -17453,7 +17453,7 @@ export const lessons: Lesson[] = [
         titlePt: "Decifrar o Mandombe – Yengo, Yetela na Yilulu",
         items: [
             { mandombe: "Wele yilulu ku mamba.", lari: "Wele yilulu ku mamba.", distractors: ["Muntu", "bununu", "Kuakua"], french: "Tu as mis du temps à la rivière.", english: "You spent a long time at the river.", portuguese: "Demoraste muito tempo no rio.", mode: "glyph-to-latin" as const },
-            { mandombe: "Tuele mu nzila Kongo.", lari: "Tuele mu nzila Kongo.", distractors: ["Nsamu wa nuikila", "Mfuomboso", "Bikola bia bi bote"], french: "Nous allons sur la route Kongo.", english: "We go on the Kongo road.", portuguese: "Vamos pela estrada Kongo.", mode: "latin-to-glyph" as const },
+            { mandombe: "Tuele mu nzila Kongo.", lari: "Tuele mu njila Kongo.", distractors: ["Nsamu wa nuikila", "Mfuomboso", "Bikola bia bi bote"], french: "Nous allons sur la route Kongo.", english: "We go on the Kongo road.", portuguese: "Vamos pela estrada Kongo.", mode: "latin-to-glyph" as const },
             { mandombe: "Mazono wa yetele.", lari: "Mazono wa yetele.", distractors: ["Futisa", "Muandala", "Ta mana sa bubolo"], french: "Hier tu t'étais mis près du feu.", english: "Yesterday you were warming yourself by the fire.", portuguese: "Ontem estavas a aquecer-te junto ao fogo.", mode: "glyph-to-latin" as const },
             { mandombe: "Mazono wa yetele.", lari: "Mazono wa yetele.", distractors: ["Kilenga", "Sita", "Kintu"], french: "Hier il s'était mis près du feu.", english: "Yesterday he was warming himself by the fire.", portuguese: "Ontem ele estava a aquecer-se junto ao fogo.", mode: "latin-to-glyph" as const },
             { mandombe: "Tuele yilulu ku mamba.", lari: "Tuele yilulu ku mamba.", distractors: ["Mabuku kue mena?", "Ha mamba biyungila bia bingi bieri ho.", "Zibika nzo."], french: "Nous avons mis du temps à la rivière.", english: "We spent a long time at the river.", portuguese: "Demorámos muito tempo no rio.", mode: "glyph-to-latin" as const },
