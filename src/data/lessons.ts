@@ -608,6 +608,11 @@ export const lessons: Lesson[] = [
       { lari: "Laki", mandombe: "Laki", french: "Aujourd'hui", english: "Today", portuguese: "Hoje" },
       { lari: "Lumbu", mandombe: "Lumbu", french: "Jour", english: "Day", portuguese: "Dia" },
       { lari: "Ku zandu", mandombe: "Ku zandu", french: "Au marché", english: "At the market", portuguese: "No mercado" },
+      { lari: "Mazuji", mandombe: "Mazuji", french: "Avant-hier", english: "The day before yesterday", portuguese: "Anteontem" },
+      { lari: "Muna mbaji", mandombe: "Muna mbaji", french: "Après-demain", english: "The day after tomorrow", portuguese: "Depois de amanhã" },
+      { lari: "Lumbu tshatshi", mandombe: "Lumbu tshatshi", french: "Aujourd'hui (synonyme)", english: "Today (synonym)", portuguese: "Hoje (sinónimo)" },
+      { lari: "Lumbu ki", mandombe: "Lumbu ki", french: "Aujourd'hui (synonyme)", english: "Today (synonym)", portuguese: "Hoje (sinónimo)" },
+      { lari: "Lumbu liaki", mandombe: "Lumbu liaki", french: "Aujourd'hui (synonyme)", english: "Today (synonym)", portuguese: "Hoje (sinónimo)" },
     ],
     phrases: [
       { lari: "Mpimpa beto ka tu seke ko", mandombe: "Mpimpa beto ka tu seke ko", french: "La nuit dernière nous ne pouvions pas dormir", english: "Last night we couldn't sleep", portuguese: "Ontem à noite não conseguimos dormir" },
