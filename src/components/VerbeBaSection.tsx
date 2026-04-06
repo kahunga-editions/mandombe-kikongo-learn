@@ -33,15 +33,15 @@ const DATA: ConjEntry[] = [
 type Tense = "c" | "f" | "p";
 
 const tenseColors: Record<Tense, string> = {
-  c: "bg-amber-500/30 text-amber-300 border-amber-400/50 hover:bg-amber-500/40",
-  f: "bg-emerald-500/30 text-emerald-300 border-emerald-400/50 hover:bg-emerald-500/40",
-  p: "bg-blue-500/30 text-blue-300 border-blue-400/50 hover:bg-blue-500/40",
+  c: "bg-amber-100 text-amber-800 border-amber-400 hover:bg-amber-200 dark:bg-amber-900/40 dark:text-amber-300 dark:border-amber-500 dark:hover:bg-amber-900/60",
+  f: "bg-emerald-100 text-emerald-800 border-emerald-400 hover:bg-emerald-200 dark:bg-emerald-900/40 dark:text-emerald-300 dark:border-emerald-500 dark:hover:bg-emerald-900/60",
+  p: "bg-blue-100 text-blue-800 border-blue-400 hover:bg-blue-200 dark:bg-blue-900/40 dark:text-blue-300 dark:border-blue-500 dark:hover:bg-blue-900/60",
 };
 
 const tenseBadgeColors: Record<Tense, string> = {
-  c: "bg-amber-500/30 text-amber-300",
-  f: "bg-emerald-500/30 text-emerald-300",
-  p: "bg-blue-500/30 text-blue-300",
+  c: "bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-300",
+  f: "bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-300",
+  p: "bg-blue-100 text-blue-800 dark:bg-blue-900/40 dark:text-blue-300",
 };
 
 const tenseLabels: Record<Tense, { fr: string; en: string; pt: string }> = {
@@ -85,7 +85,7 @@ const VerbeBaSection = () => {
           <div className="flex flex-wrap gap-4 mb-6">
             {(["c", "f", "p"] as Tense[]).map((t) => (
               <div key={t} className="flex items-center gap-2">
-                <div className={`w-3 h-3 rounded-full ${t === "c" ? "bg-amber-400" : t === "f" ? "bg-emerald-400" : "bg-blue-400"}`} />
+                <div className={`w-3 h-3 rounded-full ${t === "c" ? "bg-amber-600 dark:bg-amber-400" : t === "f" ? "bg-emerald-600 dark:bg-emerald-400" : "bg-blue-600 dark:bg-blue-400"}`} />
                 <span className="text-sm text-muted-foreground">{getTenseLabel(t)}</span>
               </div>
             ))}
@@ -99,9 +99,9 @@ const VerbeBaSection = () => {
                   <th className="text-left px-4 py-3 text-muted-foreground font-medium">
                     {language === "en" ? "Pronoun / Noun" : language === "pt" ? "Pronome / Substantivo" : "Pronom / Substantif"}
                   </th>
-                  <th className="text-center px-4 py-3 text-amber-400 font-medium">{getTenseLabel("c")}</th>
-                  <th className="text-center px-4 py-3 text-emerald-300 font-medium">{getTenseLabel("f")}</th>
-                  <th className="text-center px-4 py-3 text-blue-300 font-medium">{getTenseLabel("p")}</th>
+                  <th className="text-center px-4 py-3 text-amber-700 dark:text-amber-400 font-medium">{getTenseLabel("c")}</th>
+                  <th className="text-center px-4 py-3 text-emerald-700 dark:text-emerald-300 font-medium">{getTenseLabel("f")}</th>
+                  <th className="text-center px-4 py-3 text-blue-700 dark:text-blue-300 font-medium">{getTenseLabel("p")}</th>
                 </tr>
               </thead>
               <tbody>
