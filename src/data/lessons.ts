@@ -21154,9 +21154,9 @@ export const lessons: Lesson[] = [
         title: "Expressing Senses with Wa and Mona",
         titleFr: "Exprimer les sens avec Wa et Mona",
         titlePt: "Expressar os sentidos com Wa e Mona",
-        explanation: "In Kikongo Lari, 'wa' is used with smell (nsunga) and hearing, while 'mona' is used for cold (tshioji), heat (tiya), hunger (nsatu), and pain.",
-        explanationFr: "En Kikongo Lari, 'wa' s'utilise avec l'odeur (nsunga) et l'ouïe, tandis que 'mona' s'utilise pour le froid (tshioji), la chaleur (tiya), la faim (nsatu) et la douleur.",
-        explanationPt: "Em Kikongo Lari, 'wa' usa-se com o cheiro (nsunga) e a audição, enquanto 'mona' usa-se para o frio (tshioji), o calor (tiya), a fome (nsatu) e a dor.",
+        description: "In Kikongo Lari, 'wa' is used with smell (nsunga) and hearing, while 'mona' is used for cold (tshioji), heat (tiya), hunger (nsatu), and pain.",
+        descriptionFr: "En Kikongo Lari, 'wa' s'utilise avec l'odeur (nsunga) et l'ouïe, tandis que 'mona' s'utilise pour le froid (tshioji), la chaleur (tiya), la faim (nsatu) et la douleur.",
+        descriptionPt: "Em Kikongo Lari, 'wa' usa-se com o cheiro (nsunga) e a audição, enquanto 'mona' usa-se para o frio (tshioji), o calor (tiya), a fome (nsatu) e a dor.",
         groups: [
           {
             title: "Smell — Nsunga",
