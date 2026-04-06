@@ -21443,9 +21443,8 @@ export const lessons: Lesson[] = [
     description: "Learn adjectives and how they agree with noun classes in Lari.",
     descriptionFr: "Apprendre les adjectifs et leurs accords avec les classes nominales en Lari.",
     descriptionPt: "Aprenda adjetivos e seus acordos com classes nominais em Lari.",
-    category: "grammar",
     level: "intermediate",
-    isPremium: false,
+    icon: "📝",
     vocabulary: [
       { lari: "Mvindu", mandombe: "Mvindu", french: "Sale", english: "Dirty", portuguese: "Sujo" },
       { lari: "Toma", mandombe: "Toma", french: "Beau/Belle", english: "Beautiful", portuguese: "Bonito/a" },
@@ -21616,9 +21615,8 @@ export const lessons: Lesson[] = [
     description: "Express states, emotions, and imperatives: attention, calm, boredom, silence.",
     descriptionFr: "Exprimer les états, émotions et impératifs : attention, calme, ennui, silence.",
     descriptionPt: "Expressar estados, emoções e imperativos: atenção, calma, tédio, silêncio.",
-    category: "grammar",
     level: "intermediate",
-    isPremium: false,
+    icon: "😌",
     vocabulary: [
       { lari: "Sa mayela", mandombe: "Sa mayela", french: "Fais attention", english: "Be careful / Pay attention", portuguese: "Presta atenção" },
       { lari: "Tomo sa mayela", mandombe: "Tomo sa mayela", french: "Sois très prudent", english: "Be very careful", portuguese: "Tenha muito cuidado" },
@@ -21776,9 +21774,8 @@ export const lessons: Lesson[] = [
     description: "Learn the superlative with 'yokele' and negation with the 'ka...ko' pattern. Conjugate 'longoka' and 'nimba'.",
     descriptionFr: "Apprendre le superlatif avec 'yokele' et la négation avec le schéma 'ka...ko'. Conjuguer 'longoka' et 'nimba'.",
     descriptionPt: "Aprenda o superlativo com 'yokele' e a negação com o padrão 'ka...ko'. Conjugar 'longoka' e 'nimba'.",
-    category: "grammar",
     level: "intermediate",
-    isPremium: false,
+    icon: "🏆",
     vocabulary: [
       { lari: "Yokele", mandombe: "Yokele", french: "Surpasser / Le plus", english: "To surpass / The most", portuguese: "Superar / O mais" },
       { lari: "Ka...ko", mandombe: "Ka...ko", french: "Négation (ne...pas)", english: "Negation (not)", portuguese: "Negação (não)" },
