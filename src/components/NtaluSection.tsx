@@ -138,7 +138,7 @@ const NtaluSection = () => {
           <div className="flex flex-wrap gap-4 mb-6">
             {NUM_KEYS.map((k) => (
               <div key={k} className="flex items-center gap-2">
-                <div className={`w-3 h-3 rounded-full ${dotColors[k]}`} />
+                <div className="w-3 h-3 rounded-full" style={{ backgroundColor: numPalette[k].dot }} />
                 <span className="text-sm text-muted-foreground">{k}</span>
               </div>
             ))}
@@ -180,7 +180,8 @@ const NtaluSection = () => {
                         <td key={numKey} className="text-center px-2 py-3">
                           <button
                             onClick={() => setSelected({ entry, numKey })}
-                            className={`inline-flex flex-col items-center gap-1 px-3 py-2 rounded-lg border transition-all cursor-pointer ${numColors[numKey]}`}
+                            className="inline-flex flex-col items-center gap-1 px-3 py-2 rounded-lg border transition-all cursor-pointer hover:opacity-80"
+                            style={{ backgroundColor: numPalette[numKey].bg, color: TEXT_COLOR, borderColor: numPalette[numKey].border }}
                           >
                             <span className="font-mandombe text-xl">{cell.form}</span>
                             <span className="text-[10px] opacity-70">{cell.form}</span>
@@ -208,7 +209,7 @@ const NtaluSection = () => {
                 <DialogHeader>
                   <DialogTitle className="flex items-center gap-3">
                     <span className="font-mandombe text-3xl text-foreground">{cell.form}</span>
-                    <span className={`text-xs px-2 py-1 rounded-full ${numBadgeColors[numKey]}`}>
+                    <span className="text-xs px-2 py-1 rounded-full" style={{ backgroundColor: numPalette[numKey].bg, color: TEXT_COLOR }}>
                       {numKey}
                     </span>
                   </DialogTitle>
