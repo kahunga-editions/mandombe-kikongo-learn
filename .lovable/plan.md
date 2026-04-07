@@ -1,27 +1,35 @@
 
 
-# Remplacement de "dialecte(s)" par "langue(s)" partout
+# Tableau d'accord des nombres (Ntalu) — avec buatu
 
-## Contexte
+## Correction demandée
 
-Le mot "dialecte" / "dialect" / "dialeto" apparaît **6 fois** dans `src/data/lessons.ts`, dans 2 leçons (`kongo-languages` et `kongo-languages-2`). Il faut le remplacer par "langue" / "language" / "língua" respectivement.
+Dans la classe **bu**, remplacer **buwa (champignon)** par **buatu (pirogue)**, pluriel **matu**.
 
-## Modifications dans `src/data/lessons.ts`
+## Données du tableau
 
-### 1. Leçon kongo-languages (descriptions)
-- Ligne 15353 : `"dialects"` → `"languages"`
-- Ligne 15354 : `"dialectes"` → `"langues"`
-- Ligne 15355 : `"dialetos"` → `"línguas"`
+| Classe | Exemple | 1 | 2 | 3 | 4 | 5 | 35 |
+|--------|---------|---|---|---|---|---|---|
+| mu/ba | muntu/bantu | mu moshi | bole | ba tatu | ba ya | ba tanu | makumatatu na ba tanu |
+| mu/mi | mulele/milele | — | miole | mi tatu | mi ya | mi tanu | makumatatu na mi tanu |
+| di/ma | ba/maba | di moshi | mole | ma tatu | ma ya | ma tanu | makumatatu na ma tanu |
+| ki/bi | kifulu/bifulu | ki moshi | biole | bi tatu | bi ya | bi tanu | makumatatu na bi tanu |
+| n' | ngo | moshi | zole | tatu | ya | tanu | makumatatu na tanu |
+| lu/tu | lumbembemba/tumpungunzala | lu moshi | tuole | tu tatu | tu ya | tu tanu | makumatatu na tu tanu |
+| **bu** | **buatu (pirogue) / matu** | bu moshi | — | — | — | — | — |
+| ku | koko (main) | ku moshi | — | — | — | — | — |
 
-### 2. Leçon kongo-languages (exercice multiple-choice)
-- Ligne 15414 : `"A simple dialect"` → `"A simple language"`
-- Ligne 15415 : `"Un simple dialecte"` → `"Une simple langue"`
+## Architecture
 
-### 3. Leçon kongo-languages-2 (descriptions)
-- Ligne 16742 : `"dialects"` → `"languages"`
-- Ligne 16743 : `"dialectes"` → `"langues"`
-- Ligne 16744 : `"dialetos"` → `"línguas"`
+- **Creer** `src/components/NtaluSection.tsx` (~200 lignes), calque de `VerbeBaSection.tsx`
+  - Tableau avec colonnes : Classe nominale | 1 | 2 | 3 | 4 | 5 | 35
+  - Cellules Mandombe cliquables → Dialog affichant le kifuani (exemple)
+  - Cellules vides pour bu et ku (seulement singulier)
+  - Palette de couleurs distincte du verbe BA
+- **Modifier** `src/pages/Index.tsx` — import + placement apres `<VerbeBaSection />`
 
-## Fichier modifié
-- `src/data/lessons.ts` — 8 remplacements
+## Fichiers
+
+- `src/components/NtaluSection.tsx` (nouveau)
+- `src/pages/Index.tsx` (ajout import + composant)
 
