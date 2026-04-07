@@ -1,35 +1,42 @@
 
 
-# Tableau d'accord des nombres (Ntalu) — avec buatu
+# Ajouter les chiffres Mandombe dans l'en-tete du tableau Ntalu
 
-## Correction demandée
+## Ce qui change
 
-Dans la classe **bu**, remplacer **buwa (champignon)** par **buatu (pirogue)**, pluriel **matu**.
+Dans `src/components/NtaluSection.tsx`, modifier la ligne d'en-tete (`<thead>`) pour afficher au-dessus de chaque numero (1, 2, 3, 4, 5, 35) le glyphe Mandombe correspondant.
 
-## Données du tableau
+## Modification
 
-| Classe | Exemple | 1 | 2 | 3 | 4 | 5 | 35 |
-|--------|---------|---|---|---|---|---|---|
-| mu/ba | muntu/bantu | mu moshi | bole | ba tatu | ba ya | ba tanu | makumatatu na ba tanu |
-| mu/mi | mulele/milele | — | miole | mi tatu | mi ya | mi tanu | makumatatu na mi tanu |
-| di/ma | ba/maba | di moshi | mole | ma tatu | ma ya | ma tanu | makumatatu na ma tanu |
-| ki/bi | kifulu/bifulu | ki moshi | biole | bi tatu | bi ya | bi tanu | makumatatu na bi tanu |
-| n' | ngo | moshi | zole | tatu | ya | tanu | makumatatu na tanu |
-| lu/tu | lumbembemba/tumpungunzala | lu moshi | tuole | tu tatu | tu ya | tu tanu | makumatatu na tu tanu |
-| **bu** | **buatu (pirogue) / matu** | bu moshi | — | — | — | — | — |
-| ku | koko (main) | ku moshi | — | — | — | — | — |
+Fichier : `src/components/NtaluSection.tsx`, ligne 172
 
-## Architecture
+Remplacer le contenu des `<th>` de nombres :
+```
+<th key={k} className="text-center px-4 py-3 text-muted-foreground font-medium">{k}</th>
+```
 
-- **Creer** `src/components/NtaluSection.tsx` (~200 lignes), calque de `VerbeBaSection.tsx`
-  - Tableau avec colonnes : Classe nominale | 1 | 2 | 3 | 4 | 5 | 35
-  - Cellules Mandombe cliquables → Dialog affichant le kifuani (exemple)
-  - Cellules vides pour bu et ku (seulement singulier)
-  - Palette de couleurs distincte du verbe BA
-- **Modifier** `src/pages/Index.tsx` — import + placement apres `<VerbeBaSection />`
+Par une version avec le glyphe Mandombe au-dessus du chiffre latin :
+```
+<th key={k} className="text-center px-4 py-3">
+  <span className="font-mandombe text-2xl text-gold block mb-1">{k}</span>
+  <span className="text-muted-foreground font-medium text-xs">{k}</span>
+</th>
+```
 
-## Fichiers
+La police Mandombe (`font-mandombe`) mappe directement les caracteres "1", "2", "3", "4", "5" vers les glyphes Mandombe correspondants. Pour "35", les deux glyphes 3 et 5 s'afficheront cote a cote.
 
-- `src/components/NtaluSection.tsx` (nouveau)
-- `src/pages/Index.tsx` (ajout import + composant)
+## Resultat visuel
+
+```text
+┌──────────────┬───────┬───────┬───────┬───────┬───────┬───────┐
+│ Classe nom.  │  𝟏   │  𝟐   │  𝟑   │  𝟒   │  𝟓   │  𝟑𝟓  │
+│              │   1   │   2   │   3   │   4   │   5   │  35   │
+├──────────────┼───────┼───────┼───────┼───────┼───────┼───────┤
+│ mu/ba        │ ...   │ ...   │ ...   │ ...   │ ...   │ ...   │
+```
+
+(Les chiffres du haut seront en glyphes Mandombe dores, ceux du bas en petit texte latin gris)
+
+## Fichier modifie
+- `src/components/NtaluSection.tsx` — 1 ligne modifiee dans le `<thead>`
 
