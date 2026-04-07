@@ -169,7 +169,10 @@ const NtaluSection = () => {
                     {language === "en" ? "Noun class" : language === "pt" ? "Classe nominal" : "Classe nominale"}
                   </th>
                   {NUM_KEYS.map((k) => (
-                    <th key={k} className="text-center px-4 py-3 text-muted-foreground font-medium">{k}</th>
+                    <th key={k} className="text-center px-4 py-3">
+                      <span className="font-mandombe text-2xl text-gold block mb-1">{k}</span>
+                      <span className="text-muted-foreground font-medium text-xs">{k}</span>
+                    </th>
                   ))}
                 </tr>
               </thead>
