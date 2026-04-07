@@ -200,6 +200,7 @@ const StoryPreview = () => {
                   panelNumber={i + 1}
                   layout={layouts[i % 3]}
                   lari={panel.lari}
+                  mandombe={panel.mandombe}
                   french={panel.french}
                 />
               ))}
@@ -216,6 +217,7 @@ const StoryPreview = () => {
                       panelNumber={i + 4}
                       layout={layouts[(i + 3) % 3]}
                       lari={panel.lari}
+                      mandombe={panel.mandombe}
                       french={panel.french}
                     />
                   ))}
