@@ -242,12 +242,14 @@ const ComicPanel = ({
   panelNumber,
   layout,
   lari,
+  mandombe,
   french,
 }: {
   image: string;
   panelNumber: number;
   layout: "wide" | "left" | "right";
   lari: string;
+  mandombe?: string;
   french: string;
 }) => {
   const isWide = layout === "wide";
@@ -277,7 +279,7 @@ const ComicPanel = ({
       <div className={`p-4 md:p-6 flex flex-col justify-center space-y-3 ${isWide ? "" : ""}`}>
         {/* Mandombe script (Lari text rendered in Mandombe font) */}
         <div className="bg-earth-deep/5 dark:bg-earth-deep/20 rounded-lg p-3 border border-gold/20">
-          <p className="font-mandombe text-lg md:text-xl text-gold leading-relaxed">{lari}</p>
+          <p className="font-mandombe text-lg md:text-xl text-gold leading-relaxed">{mandombe || lari}</p>
         </div>
 
         {/* Lari (Latin script) */}
