@@ -104,32 +104,16 @@ const DATA: NtaluEntry[] = [
 
 const NUM_KEYS = ["1", "2", "3", "4", "5", "35"];
 
-const numColors: Record<string, string> = {
-  "1": "bg-amber-100 text-amber-800 border-amber-400 hover:bg-amber-200 dark:bg-amber-900/40 dark:text-amber-300 dark:border-amber-500 dark:hover:bg-amber-900/60",
-  "2": "bg-emerald-100 text-emerald-800 border-emerald-400 hover:bg-emerald-200 dark:bg-emerald-900/40 dark:text-emerald-300 dark:border-emerald-500 dark:hover:bg-emerald-900/60",
-  "3": "bg-sky-100 text-sky-800 border-sky-400 hover:bg-sky-200 dark:bg-sky-900/40 dark:text-sky-300 dark:border-sky-500 dark:hover:bg-sky-900/60",
-  "4": "bg-violet-100 text-violet-800 border-violet-400 hover:bg-violet-200 dark:bg-violet-900/40 dark:text-violet-300 dark:border-violet-500 dark:hover:bg-violet-900/60",
-  "5": "bg-indigo-100 text-indigo-800 border-indigo-400 hover:bg-indigo-200 dark:bg-indigo-900/40 dark:text-indigo-300 dark:border-indigo-500 dark:hover:bg-indigo-900/60",
-  "35": "bg-teal-100 text-teal-800 border-teal-400 hover:bg-teal-200 dark:bg-teal-900/40 dark:text-teal-300 dark:border-teal-500 dark:hover:bg-teal-900/60",
+const numPalette: Record<string, { bg: string; border: string; dot: string }> = {
+  "1":  { bg: "#fea347", border: "#e8922e", dot: "#d07b1a" },
+  "2":  { bg: "#f88e55", border: "#e07a3e", dot: "#c56a2e" },
+  "3":  { bg: "#ffcb60", border: "#e6b44a", dot: "#c89a30" },
+  "4":  { bg: "#ffdab9", border: "#e6c4a0", dot: "#c8a880" },
+  "5":  { bg: "#f5c1b4", border: "#d9a89a", dot: "#b8887a" },
+  "35": { bg: "#e8a090", border: "#d08878", dot: "#b07060" },
 };
 
-const numBadgeColors: Record<string, string> = {
-  "1": "bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-300",
-  "2": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-300",
-  "3": "bg-sky-100 text-sky-800 dark:bg-sky-900/40 dark:text-sky-300",
-  "4": "bg-violet-100 text-violet-800 dark:bg-violet-900/40 dark:text-violet-300",
-  "5": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900/40 dark:text-indigo-300",
-  "35": "bg-teal-100 text-teal-800 dark:bg-teal-900/40 dark:text-teal-300",
-};
-
-const dotColors: Record<string, string> = {
-  "1": "bg-amber-600 dark:bg-amber-400",
-  "2": "bg-emerald-600 dark:bg-emerald-400",
-  "3": "bg-sky-600 dark:bg-sky-400",
-  "4": "bg-violet-600 dark:bg-violet-400",
-  "5": "bg-indigo-600 dark:bg-indigo-400",
-  "35": "bg-teal-600 dark:bg-teal-400",
-};
+const TEXT_COLOR = "#5a3e2b";
 
 const NtaluSection = () => {
   const { language } = useLanguage();
@@ -154,7 +138,7 @@ const NtaluSection = () => {
           <div className="flex flex-wrap gap-4 mb-6">
             {NUM_KEYS.map((k) => (
               <div key={k} className="flex items-center gap-2">
-                <div className={`w-3 h-3 rounded-full ${dotColors[k]}`} />
+                <div className="w-3 h-3 rounded-full" style={{ backgroundColor: numPalette[k].dot }} />
                 <span className="text-sm text-muted-foreground">{k}</span>
               </div>
             ))}
@@ -196,7 +180,8 @@ const NtaluSection = () => {
                         <td key={numKey} className="text-center px-2 py-3">
                           <button
                             onClick={() => setSelected({ entry, numKey })}
-                            className={`inline-flex flex-col items-center gap-1 px-3 py-2 rounded-lg border transition-all cursor-pointer ${numColors[numKey]}`}
+                            className="inline-flex flex-col items-center gap-1 px-3 py-2 rounded-lg border transition-all cursor-pointer hover:opacity-80"
+                            style={{ backgroundColor: numPalette[numKey].bg, color: TEXT_COLOR, borderColor: numPalette[numKey].border }}
                           >
                             <span className="font-mandombe text-xl">{cell.form}</span>
                             <span className="text-[10px] opacity-70">{cell.form}</span>
@@ -224,7 +209,7 @@ const NtaluSection = () => {
                 <DialogHeader>
                   <DialogTitle className="flex items-center gap-3">
                     <span className="font-mandombe text-3xl text-foreground">{cell.form}</span>
-                    <span className={`text-xs px-2 py-1 rounded-full ${numBadgeColors[numKey]}`}>
+                    <span className="text-xs px-2 py-1 rounded-full" style={{ backgroundColor: numPalette[numKey].bg, color: TEXT_COLOR }}>
                       {numKey}
                     </span>
                   </DialogTitle>
