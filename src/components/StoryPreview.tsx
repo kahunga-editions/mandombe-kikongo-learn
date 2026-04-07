@@ -69,16 +69,19 @@ const storyPanels = [
   {
     image: nsayiPanel8,
     lari: "Mabuku ma ka zolo mu tanga, weri zolo mpe mu kue tsoneka binsamu.",
+    mandombe: "Mabuku ma ka zolo mu tanga, weri zolo mpe mu kue NSONEKA binsamu.",
     french: "Elle adorait lire des livres et écrire des histoires.",
   },
   {
     image: nsayiPanel9,
     lari: "Weri tomo wirikila mieri longesa ba milongi miandi, mboko keri tsoneka mi mingi mu mikanda miandi.",
+    mandombe: "Weri tomo wirikila mieri longesa ba milongi miandi, mboko keri NSONEKA mi mingi mu mikanda miandi.",
     french: "En classe, elle écoutait attentivement ses professeurs et prenait des notes dans son cahier.",
   },
   {
     image: nsayiPanel10,
     lari: "Bu keri kala kuna nzo andi ntangu ya yingi keri bonga mu tanga ma buku na mu tsoneka binsamu bia ba nduku zandi.",
+    mandombe: "Bu keri kala kuna nzo andi ntangu ya yingi keri bonga mu tanga ma buku na mu kue NSONEKA binsamu bia ba nduku zandi.",
     french: "Lorsqu'elle rentrait chez elle, elle passait des heures à lire et à écrire des histoires pour ses amis.",
   },
   {
