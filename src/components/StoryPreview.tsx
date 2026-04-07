@@ -47,11 +47,13 @@ const storyPanels = [
   {
     image: nsayiPanel4,
     lari: "Tshibuka tshia ntangu beri tala : bula tshini tshiyau bueri ba hana ntangu.",
+    mandombe: "Tshibuka KIA ntangu beri tala : bula tshini tshiyau bueri ba hana ntangu.",
     french: "Ils regardaient la position du soleil dans le ciel pour estimer l'heure en se basant sur la longueur de leur ombre.",
   },
   {
     image: nsayiPanel5,
     lari: "Tala tshini tshia tshiri tshia fioti, ntangu ya kala ku nzo mikanda yi fueni kue bale ba.",
+    mandombe: "Tala tshini KIA tshiri KIA fioti, ntangu ya kala ku nzo mikanda yi fueni kue bale ba.",
     french: "Si l'ombre était proche de toi, tu savais qu'il fallait repartir pour l'école, pour les écoliers par exemple.",
   },
   {
@@ -198,6 +200,7 @@ const StoryPreview = () => {
                   panelNumber={i + 1}
                   layout={layouts[i % 3]}
                   lari={panel.lari}
+                  mandombe={panel.mandombe}
                   french={panel.french}
                 />
               ))}
@@ -214,6 +217,7 @@ const StoryPreview = () => {
                       panelNumber={i + 4}
                       layout={layouts[(i + 3) % 3]}
                       lari={panel.lari}
+                      mandombe={panel.mandombe}
                       french={panel.french}
                     />
                   ))}
@@ -240,12 +244,14 @@ const ComicPanel = ({
   panelNumber,
   layout,
   lari,
+  mandombe,
   french,
 }: {
   image: string;
   panelNumber: number;
   layout: "wide" | "left" | "right";
   lari: string;
+  mandombe?: string;
   french: string;
 }) => {
   const isWide = layout === "wide";
@@ -275,7 +281,7 @@ const ComicPanel = ({
       <div className={`p-4 md:p-6 flex flex-col justify-center space-y-3 ${isWide ? "" : ""}`}>
         {/* Mandombe script (Lari text rendered in Mandombe font) */}
         <div className="bg-earth-deep/5 dark:bg-earth-deep/20 rounded-lg p-3 border border-gold/20">
-          <p className="font-mandombe text-lg md:text-xl text-gold leading-relaxed">{lari}</p>
+          <p className="font-mandombe text-lg md:text-xl text-gold leading-relaxed">{mandombe || lari}</p>
         </div>
 
         {/* Lari (Latin script) */}
