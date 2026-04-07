@@ -1,34 +1,33 @@
 
 
-# Appliquer la palette personnalisée au tableau Ntalu
+# Recadrer le premier panneau — visages visibles
 
-## Couleurs fournies
+## Probleme
 
-| Code | Teinte |
-|------|--------|
-| #f5c1b4 | Rose saumon clair |
-| #fea347 | Orange doré |
-| #f88e55 | Orange vif |
-| #ffdab9 | Pêche clair |
-| #ffcb60 | Jaune doré |
+Le panneau 1 utilise `object-cover` avec une hauteur fixe (`h-56 md:h-72`), ce qui coupe le haut de l'image et mange les visages de Nsayi et Sunda.
 
-5 couleurs pour 6 nombres — je propose de réutiliser un mélange pour le 35e (par ex. #f5c1b4 légèrement assombri ou une des couleurs existantes en variante). Attribution :
+## Solution
 
-| Nombre | Couleur |
-|--------|---------|
-| 1 | #fea347 (orange doré) |
-| 2 | #f88e55 (orange vif) |
-| 3 | #ffcb60 (jaune doré) |
-| 4 | #ffdab9 (pêche) |
-| 5 | #f5c1b4 (rose saumon) |
-| 35 | #e8a090 (version plus foncée du saumon) |
+Dans `src/components/StoryPreview.tsx`, ligne 265 : changer `object-cover` en `object-contain` pour le layout "wide" du premier panneau, et augmenter la hauteur pour laisser l'image respirer. Alternativement, ajouter `object-top` pour que le recadrage preserve le haut de l'image (les visages).
 
-## Modification dans `src/components/NtaluSection.tsx`
+Approche retenue : ajouter `object-top` a la classe de l'image quand le layout est "wide". Cela garde `object-cover` (pas de bandes vides) mais ancre l'image en haut, preservant les visages.
 
-Remplacer les 3 objets de couleur (lignes 107-132) par des styles inline utilisant ces codes hex directement, via des objets de style au lieu de classes Tailwind (puisque ce sont des couleurs custom).
+## Modification
 
-Concrètement, chaque bouton cliquable et badge utilisera `style={{ backgroundColor, color, borderColor }}` avec les hex fournis, texte en brun foncé (#5a3e2b) pour la lisibilité. En dark mode, les couleurs seront légèrement assombries via opacity.
+Fichier : `src/components/StoryPreview.tsx`, ligne 265
 
-## Fichier modifié
-- `src/components/NtaluSection.tsx` — remplacement des 3 objets couleur + adaptation des classes en styles inline
+```
+// Avant
+className={`w-full object-cover ${isWide ? "h-56 md:h-72" : "h-56 md:h-full"}`}
+
+// Apres
+className={`w-full object-cover ${isWide ? "h-64 md:h-80 object-top" : "h-56 md:h-full"}`}
+```
+
+Cela :
+- Augmente legerement la hauteur (h-56→h-64, h-72→h-80) pour montrer plus de l'image
+- Ajoute `object-top` en mode wide pour ancrer l'image en haut et preserver les visages
+
+## Fichier modifie
+- `src/components/StoryPreview.tsx` — 1 ligne
 
