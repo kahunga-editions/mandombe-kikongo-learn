@@ -1,42 +1,34 @@
 
 
-# Ajouter les chiffres Mandombe dans l'en-tete du tableau Ntalu
+# Appliquer la palette personnalisée au tableau Ntalu
 
-## Ce qui change
+## Couleurs fournies
 
-Dans `src/components/NtaluSection.tsx`, modifier la ligne d'en-tete (`<thead>`) pour afficher au-dessus de chaque numero (1, 2, 3, 4, 5, 35) le glyphe Mandombe correspondant.
+| Code | Teinte |
+|------|--------|
+| #f5c1b4 | Rose saumon clair |
+| #fea347 | Orange doré |
+| #f88e55 | Orange vif |
+| #ffdab9 | Pêche clair |
+| #ffcb60 | Jaune doré |
 
-## Modification
+5 couleurs pour 6 nombres — je propose de réutiliser un mélange pour le 35e (par ex. #f5c1b4 légèrement assombri ou une des couleurs existantes en variante). Attribution :
 
-Fichier : `src/components/NtaluSection.tsx`, ligne 172
+| Nombre | Couleur |
+|--------|---------|
+| 1 | #fea347 (orange doré) |
+| 2 | #f88e55 (orange vif) |
+| 3 | #ffcb60 (jaune doré) |
+| 4 | #ffdab9 (pêche) |
+| 5 | #f5c1b4 (rose saumon) |
+| 35 | #e8a090 (version plus foncée du saumon) |
 
-Remplacer le contenu des `<th>` de nombres :
-```
-<th key={k} className="text-center px-4 py-3 text-muted-foreground font-medium">{k}</th>
-```
+## Modification dans `src/components/NtaluSection.tsx`
 
-Par une version avec le glyphe Mandombe au-dessus du chiffre latin :
-```
-<th key={k} className="text-center px-4 py-3">
-  <span className="font-mandombe text-2xl text-gold block mb-1">{k}</span>
-  <span className="text-muted-foreground font-medium text-xs">{k}</span>
-</th>
-```
+Remplacer les 3 objets de couleur (lignes 107-132) par des styles inline utilisant ces codes hex directement, via des objets de style au lieu de classes Tailwind (puisque ce sont des couleurs custom).
 
-La police Mandombe (`font-mandombe`) mappe directement les caracteres "1", "2", "3", "4", "5" vers les glyphes Mandombe correspondants. Pour "35", les deux glyphes 3 et 5 s'afficheront cote a cote.
+Concrètement, chaque bouton cliquable et badge utilisera `style={{ backgroundColor, color, borderColor }}` avec les hex fournis, texte en brun foncé (#5a3e2b) pour la lisibilité. En dark mode, les couleurs seront légèrement assombries via opacity.
 
-## Resultat visuel
-
-```text
-┌──────────────┬───────┬───────┬───────┬───────┬───────┬───────┐
-│ Classe nom.  │  𝟏   │  𝟐   │  𝟑   │  𝟒   │  𝟓   │  𝟑𝟓  │
-│              │   1   │   2   │   3   │   4   │   5   │  35   │
-├──────────────┼───────┼───────┼───────┼───────┼───────┼───────┤
-│ mu/ba        │ ...   │ ...   │ ...   │ ...   │ ...   │ ...   │
-```
-
-(Les chiffres du haut seront en glyphes Mandombe dores, ceux du bas en petit texte latin gris)
-
-## Fichier modifie
-- `src/components/NtaluSection.tsx` — 1 ligne modifiee dans le `<thead>`
+## Fichier modifié
+- `src/components/NtaluSection.tsx` — remplacement des 3 objets couleur + adaptation des classes en styles inline
 
