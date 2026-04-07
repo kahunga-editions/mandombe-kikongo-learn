@@ -15,6 +15,7 @@ const Index = () => {
       <HeroSection />
       <LearningPaths />
       <VerbeBaSection />
+      <NtaluSection />
       <VocabularyPreview />
       <StoryPreview />
       <KilolakaPreview />
