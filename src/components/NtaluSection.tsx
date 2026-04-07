@@ -105,30 +105,30 @@ const DATA: NtaluEntry[] = [
 const NUM_KEYS = ["1", "2", "3", "4", "5", "35"];
 
 const numColors: Record<string, string> = {
-  "1": "bg-rose-100 text-rose-800 border-rose-400 hover:bg-rose-200 dark:bg-rose-900/40 dark:text-rose-300 dark:border-rose-500 dark:hover:bg-rose-900/60",
-  "2": "bg-violet-100 text-violet-800 border-violet-400 hover:bg-violet-200 dark:bg-violet-900/40 dark:text-violet-300 dark:border-violet-500 dark:hover:bg-violet-900/60",
-  "3": "bg-cyan-100 text-cyan-800 border-cyan-400 hover:bg-cyan-200 dark:bg-cyan-900/40 dark:text-cyan-300 dark:border-cyan-500 dark:hover:bg-cyan-900/60",
-  "4": "bg-orange-100 text-orange-800 border-orange-400 hover:bg-orange-200 dark:bg-orange-900/40 dark:text-orange-300 dark:border-orange-500 dark:hover:bg-orange-900/60",
-  "5": "bg-teal-100 text-teal-800 border-teal-400 hover:bg-teal-200 dark:bg-teal-900/40 dark:text-teal-300 dark:border-teal-500 dark:hover:bg-teal-900/60",
-  "35": "bg-pink-100 text-pink-800 border-pink-400 hover:bg-pink-200 dark:bg-pink-900/40 dark:text-pink-300 dark:border-pink-500 dark:hover:bg-pink-900/60",
+  "1": "bg-amber-100 text-amber-800 border-amber-400 hover:bg-amber-200 dark:bg-amber-900/40 dark:text-amber-300 dark:border-amber-500 dark:hover:bg-amber-900/60",
+  "2": "bg-emerald-100 text-emerald-800 border-emerald-400 hover:bg-emerald-200 dark:bg-emerald-900/40 dark:text-emerald-300 dark:border-emerald-500 dark:hover:bg-emerald-900/60",
+  "3": "bg-sky-100 text-sky-800 border-sky-400 hover:bg-sky-200 dark:bg-sky-900/40 dark:text-sky-300 dark:border-sky-500 dark:hover:bg-sky-900/60",
+  "4": "bg-violet-100 text-violet-800 border-violet-400 hover:bg-violet-200 dark:bg-violet-900/40 dark:text-violet-300 dark:border-violet-500 dark:hover:bg-violet-900/60",
+  "5": "bg-indigo-100 text-indigo-800 border-indigo-400 hover:bg-indigo-200 dark:bg-indigo-900/40 dark:text-indigo-300 dark:border-indigo-500 dark:hover:bg-indigo-900/60",
+  "35": "bg-teal-100 text-teal-800 border-teal-400 hover:bg-teal-200 dark:bg-teal-900/40 dark:text-teal-300 dark:border-teal-500 dark:hover:bg-teal-900/60",
 };
 
 const numBadgeColors: Record<string, string> = {
-  "1": "bg-rose-100 text-rose-800 dark:bg-rose-900/40 dark:text-rose-300",
-  "2": "bg-violet-100 text-violet-800 dark:bg-violet-900/40 dark:text-violet-300",
-  "3": "bg-cyan-100 text-cyan-800 dark:bg-cyan-900/40 dark:text-cyan-300",
-  "4": "bg-orange-100 text-orange-800 dark:bg-orange-900/40 dark:text-orange-300",
-  "5": "bg-teal-100 text-teal-800 dark:bg-teal-900/40 dark:text-teal-300",
-  "35": "bg-pink-100 text-pink-800 dark:bg-pink-900/40 dark:text-pink-300",
+  "1": "bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-300",
+  "2": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-300",
+  "3": "bg-sky-100 text-sky-800 dark:bg-sky-900/40 dark:text-sky-300",
+  "4": "bg-violet-100 text-violet-800 dark:bg-violet-900/40 dark:text-violet-300",
+  "5": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900/40 dark:text-indigo-300",
+  "35": "bg-teal-100 text-teal-800 dark:bg-teal-900/40 dark:text-teal-300",
 };
 
 const dotColors: Record<string, string> = {
-  "1": "bg-rose-600 dark:bg-rose-400",
-  "2": "bg-violet-600 dark:bg-violet-400",
-  "3": "bg-cyan-600 dark:bg-cyan-400",
-  "4": "bg-orange-600 dark:bg-orange-400",
-  "5": "bg-teal-600 dark:bg-teal-400",
-  "35": "bg-pink-600 dark:bg-pink-400",
+  "1": "bg-amber-600 dark:bg-amber-400",
+  "2": "bg-emerald-600 dark:bg-emerald-400",
+  "3": "bg-sky-600 dark:bg-sky-400",
+  "4": "bg-violet-600 dark:bg-violet-400",
+  "5": "bg-indigo-600 dark:bg-indigo-400",
+  "35": "bg-teal-600 dark:bg-teal-400",
 };
 
 const NtaluSection = () => {
