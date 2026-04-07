@@ -47,11 +47,13 @@ const storyPanels = [
   {
     image: nsayiPanel4,
     lari: "Tshibuka tshia ntangu beri tala : bula tshini tshiyau bueri ba hana ntangu.",
+    mandombe: "Tshibuka KIA ntangu beri tala : bula tshini tshiyau bueri ba hana ntangu.",
     french: "Ils regardaient la position du soleil dans le ciel pour estimer l'heure en se basant sur la longueur de leur ombre.",
   },
   {
     image: nsayiPanel5,
     lari: "Tala tshini tshia tshiri tshia fioti, ntangu ya kala ku nzo mikanda yi fueni kue bale ba.",
+    mandombe: "Tala tshini KIA tshiri KIA fioti, ntangu ya kala ku nzo mikanda yi fueni kue bale ba.",
     french: "Si l'ombre était proche de toi, tu savais qu'il fallait repartir pour l'école, pour les écoliers par exemple.",
   },
   {
