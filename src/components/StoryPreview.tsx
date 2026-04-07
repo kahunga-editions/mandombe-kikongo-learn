@@ -262,7 +262,7 @@ const ComicPanel = ({
         <img
           src={image}
           alt={`Story panel ${panelNumber}`}
-          className={`w-full object-cover ${isWide ? "h-56 md:h-72" : "h-56 md:h-full"}`}
+          className={`w-full object-cover ${isWide ? "h-64 md:h-80 object-top" : "h-56 md:h-full"}`}
           loading="lazy"
         />
         {/* Panel number badge */}
