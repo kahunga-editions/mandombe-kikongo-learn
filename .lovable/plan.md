@@ -1,35 +1,44 @@
 
 
-# Reprendre les illustrations Nsayi + correction Mandombe "tshia" → "KIA"
+# Corriger les illustrations et le texte Mandombe
 
-## Deux changements demandés
+## 1. Régénérer / recadrer 12 illustrations
 
-### 1. Régénérer les 25 illustrations avec cohérence visuelle
+Les panneaux suivants doivent être régénérés avec des prompts corrigés, en insistant sur le cadrage (personnages visibles tête aux pieds ou au minimum visage entièrement visible) et la cohérence ethnique (peau #4f2903, cheveux bouclés/crépus) :
 
-Utiliser le modèle d'image AI (google/gemini-3-pro-image-preview ou gemini-3.1-flash-image-preview) pour générer 25 illustrations cohérentes avec :
-- **Nsayi** : peau foncée (#4f2903), queue de cheval avec ruban rose, robe/tenue rose
-- **Sunda** : peau foncée (#4f2903), cheveux courts bouclés avec serre-tête blanc, tenue bleu clair
-- Style : illustration animée colorée, décor tropical congolais (palmiers, végétation luxuriante), illustrations nettes et consistantes
+| Panneau | Problème | Correction |
+|---------|----------|------------|
+| 1 | On ne voit rien | Recadrer : Nsayi et Sunda visibles, plan moyen |
+| 4 | On ne voit rien | Recadrer : scène du soleil/ombre, personnages visibles |
+| 5 | Enfants blancs | Régénérer avec exclusivement des enfants noirs |
+| 7 | On ne voit pas Nsayi | Recadrer : Nsayi visible, plan rapproché |
+| 9 | Maîtresse et enfants non noirs | Régénérer avec maîtresse et enfants tous noirs |
+| 10 | On ne voit pas Nsayi | Recadrer : Nsayi lisant/écrivant, visage visible |
+| 12 | Peau claire, cheveux lisses | Régénérer : Nsayi adulte médecin, peau #4f2903, cheveux bouclés |
+| 13 | On ne voit pas les filles | Recadrer : Nsayi et Sunda dans la savane, plan moyen |
+| 16 | On ne voit pas le visage | Recadrer : Nsayi cherchant des champignons, visage visible |
+| 17 | Enfants identiques | Régénérer avec des enfants aux visages diversifiés |
+| 19 | On ne voit qu'un champignon | Recadrer : champignon nsempela orange en entier, contexte visible |
+| 22 | On ne voit pas le visage | Recadrer : Nsayi mangeant/appréciant nsempela, visage visible |
 
-Chaque panneau aura un prompt décrivant la scène fidèle au texte Lari, avec les mêmes personnages visuellement identiques d'un panneau à l'autre.
+Chaque prompt inclura systématiquement :
+- "dark-skinned Black Congolese girl, skin tone #4f2903, curly/kinky hair"
+- "full face visible, medium shot framing"
+- "colorful children's book illustration, tropical Congolese setting"
 
-Les 25 images seront générées via un script, sauvegardées dans `src/assets/` en remplacement des fichiers existants (`nsayi-panel-1.jpg` à `nsayi-panel-25.jpg`).
+Modèle utilisé : `google/gemini-3-pro-image-preview` pour la qualité.
 
-### 2. Correction "tshia" → "KIA" dans le Mandombe uniquement
+## 2. Correction Mandombe : "tsoneka" → "NSONEKA"
 
-Actuellement, le composant `ComicPanel` utilise le même champ `lari` pour le texte Mandombe et le texte latin. Il faut :
-- Ajouter un champ `mandombe` optionnel dans les données `storyPanels`
-- Pour les panneaux contenant "tshia" (panneaux 4 et 5), fournir un champ `mandombe` avec "tshia" remplacé par "KIA"
-- Dans `ComicPanel`, utiliser `mandombe || lari` pour le rendu en police Mandombe
+Ajouter un champ `mandombe` aux panneaux 8, 9 et 10 (ceux contenant "tsoneka") avec le remplacement :
 
-**Panneaux concernés** :
-- Panneau 4 : `lari` contient "Tshibuka tshia..." → `mandombe` = "Tshibuka KIA..."
-- Panneau 5 : `lari` contient "tshia tshiri tshia fioti" → `mandombe` = "KIA tshiri KIA fioti"
+- **Panneau 8** : `mandombe: "Mabuku ma ka zolo mu tanga, weri zolo mpe mu kue NSONEKA binsamu."`
+- **Panneau 9** : `mandombe: "Weri tomo wirikila mieri longesa ba milongi miandi, mboko keri NSONEKA mi mingi mu mikanda miandi."`
+- **Panneau 10** : `mandombe: "Bu keri kala kuna nzo andi ntangu ya yingi keri bonga mu tanga ma buku na mu kue NSONEKA binsamu bia ba nduku zandi."`
+
+Le champ `lari` reste inchangé (orthographe latine correcte). Le `ComicPanel` utilise déjà `mandombe || lari` pour le rendu Mandombe.
 
 ## Fichiers modifiés
-- `src/assets/nsayi-panel-*.jpg` — 25 images régénérées
-- `src/components/StoryPreview.tsx` — ajout champ `mandombe`, remplacement "tshia"→"KIA", utilisation dans ComicPanel
-
-## Remarque technique
-La génération de 25 images AI prendra du temps. Le script générera les images par lots pour respecter les limites de l'API.
+- `src/assets/nsayi-panel-{1,4,5,7,9,10,12,13,16,17,19,22}.jpg` — 12 images régénérées
+- `src/components/StoryPreview.tsx` — ajout champ `mandombe` aux panneaux 8, 9, 10
 
