@@ -1,22 +1,38 @@
 
 
-# Recadrer les panneaux 4 et 7
+# Recadrer 8 panneaux — corrections ciblées
 
-## Panneau 4
-Reframe : montrer le visage de l'enfant ET son ombre au sol. Prompt insistant sur "medium shot showing the child's full face and their shadow on the ground", en utilisant le panneau 1 comme référence stylistique.
+## Panneaux à modifier (8 appels)
 
-## Panneau 7
-Reframe : montrer le visage de Nsayi clairement. Prompt insistant sur "medium shot, Nsayi's face fully visible, smiling", en utilisant le panneau 1 comme référence stylistique.
+| Panneau | Correction |
+|---------|-----------|
+| 10 | Plan moyen, visage de Nsayi visible |
+| 12 | Nsayi adulte médecin : peau foncée #4f2903, cheveux bouclés (pas lisses) |
+| 13 | Cheveux bouclés pour Nsayi, plan moyen, visages des 2 filles visibles |
+| 16 | Plan moyen, visage de Nsayi visible |
+| 17 | Style du panneau 1, visages diversifiés pour les enfants |
+| 19 | Desserrer le plan, champignon visible en entier |
+| 22 | Desserrer le cadrage, plan moyen, visage de Nsayi visible |
+| 25 | Plan moyen, visage de Nsayi visible |
+
+## Panneaux NON touchés
+8, 9, 11, 14, 15, 18, 20, 21, 23, 24 — aucune modification.
 
 ## Approche technique
-- Modele : `google/gemini-3-pro-image-preview`
-- Reference stylistique : `nsayi-panel-1.jpg` (le panneau validé)
-- 2 appels seulement, un par panneau
-- Prompts tres explicites sur le cadrage pour eviter les erreurs
+- Modèle : `google/gemini-3-pro-image-preview`
+- Référence stylistique : `nsayi-panel-1.jpg` pour chaque appel
+- 8 appels `edit_image`, un par panneau
+- Prompts très explicites sur "medium shot", "full face visible", "NOT a close-up"
+- Pour le panneau 12 : insister sur "adult Black Congolese woman, very dark skin #4f2903, natural curly/kinky hair, NOT straight hair, NOT lighter skin"
+- Pour le panneau 17 : insister sur "each child has a different face, different hairstyle"
 
-## Fichiers modifies
-- `src/assets/nsayi-panel-4.jpg`
-- `src/assets/nsayi-panel-7.jpg`
-
-Panneaux 2, 3, 5, 6 : aucune modification.
+## Fichiers modifiés
+- `src/assets/nsayi-panel-10.jpg`
+- `src/assets/nsayi-panel-12.jpg`
+- `src/assets/nsayi-panel-13.jpg`
+- `src/assets/nsayi-panel-16.jpg`
+- `src/assets/nsayi-panel-17.jpg`
+- `src/assets/nsayi-panel-19.jpg`
+- `src/assets/nsayi-panel-22.jpg`
+- `src/assets/nsayi-panel-25.jpg`
 
