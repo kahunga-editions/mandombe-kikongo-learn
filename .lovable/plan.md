@@ -1,41 +1,103 @@
 
 
-# Ajouter ~200 nouvelles entrées au dictionnaire
+# Créer des leçons avec le contenu LONGOKA
 
-## Approche
+## Contenu à intégrer
 
-Ajouter les nouvelles entrées de vocabulaire dans `src/data/lessons.ts` en les répartissant dans les leçons existantes pertinentes et en créant de nouvelles leçons si nécessaire. Chaque entrée suit le format `VocabItem` existant avec `lari`, `mandombe`, `french`, `english`, `portuguese` (optionnel), et `note` (optionnel).
+Le matériel couvre plusieurs thèmes grammaticaux distincts, qui seront répartis en **3 leçons** pour respecter la progression pédagogique.
 
-### Vérification des doublons
+---
 
-Plusieurs termes existent déjà dans la base :
-- `Matanga` (ligne ~16018), `Malaki` (~16552 et ~17882), `Bunsana` (~2878), `Buntidi` (~3976), `Mpumbu` (~2383), `Makumasambanu` (~6087), `Luvua` (~6090), `Dukisa` (~8690), `Shimba` (multiple), `Zenga` (multiple), `Yaka` (multiple), `Mvu` (~827)
-- Ces doublons seront exclus ou mis à jour si la définition fournie est plus riche.
+## Leçon 1 : Mia mingi longokele — Le passé composé avec LONGOKA
 
-### Répartition dans les leçons
+**ID** : `mia-mingi-longokele`
+**Niveau** : intermediate
+**Contenu** :
 
-1. **Tradition Kongo & Société** (`tradition-kongo-societe`) — ajout des termes culturels/spirituels :
-   `bulombi`, `Bakadia mpemba`, `ngo`, `mbuta`, `Dikenga`, `kubenda`, `kilema`, `nsikumusu`, `kintuani`, `shiama`, `ama`, `Kuilu`, `Niari`, `Buenza`, `Bandundu`, `Kabinda`, `Bengo`, `Kuanza`, `Mpumbu` (note: nom originel de Kinshasa), `Mbanza Ngungu`, proverbe `Kifuani`, `Mulele mu moshi wa mbaki`
+- **Vocabulaire** : `longoka`, `mia`, `mabanza`, `nzololo`, `yika`, `diambu`, `tshimoko`, `bimoko`, `nzo`, `bua`, `mbazi`, `huma`
+- **Conjugaison** : Passé composé de LONGOKA (ndongokele / longokele / ka longokele / tu longokele / lu longokele / ba longokele)
+- **Syntaxe** — Bloc "Mia + conjugaison passée" :
+  - Mia mingi ndongokele / Mia mingi longokele / Mia mingi ka longokele / etc.
+- **Syntaxe** — Bloc "Démonstratifs et propositions relatives avec MA, DI, TSHI, BI, MU, KU, HO" :
+  - Mabanza ma nzololo yika ni ma we ma
+  - Diambu di nzololo yika ni dia we di
+  - Diambu di na zolo yika ni dia we di
+  - Tshimoko tshi na zolo yika ni tsha we tshi
+  - Bimoko bi na zolo ni bia we bi
+  - Tshimoko tshi na zolo yika, ka tsha wa ko
+  - Mu nzo mu mua mubote mue
+  - Bua buingi ka sadidi
+  - Ku mbazi kua kubi
+  - Huma ho ha habote he
+- **Phrases** : toutes les phrases exemples ci-dessus
+- **Exercices** :
+  1. Multiple-choice (conjugaison passée de longoka)
+  2. Fill-in-blank (compléter les particules d'accord)
+  3. Matching (phrases ↔ traductions)
+  4. Mandombe-recognition (glyph-to-latin + latin-to-glyph, 8 items)
 
-2. **Concepts abstraits Bu-** (`bu-abstract-concepts` ou leçon existante Bu-) — ajout :
-   `bubondia`, `bueso`, `buimi`, `bumolo`, `buntidi` (mise à jour), `bunzenzenze`, `bubelo`, `mabela`, `budimbu`, `bupuekipueki`, `budjua`, `bumpalangani`, `bumpidikisi`/`bumpirikisi`, `bukindi`, `buya`, `bundakada`, `bumfuekena`, `bualangana`, `bulumuka`, `bulumukina`, `bumbalakana`, `kuma`
+---
 
-3. **Verbes & Actions (Extended)** (`verbes-actions-etendus`) — ajout des ~80 verbes :
-   `batisa`, `longa`, `tengama`, `fina`, `singana`, `teba`, `bendengela`, `fusakana`, `yiza`, `yola`, `yoka`, `yauka`, `zika`, `fuofuokota`, `vuanzakana`, `nsualumuna`, `vuanganana`, `fumba`, `diengela`, `suasuana`, `fuamina`, `nsiantika`, `pepa`, `bvuka`, `nsonsa`, `fiela`, `vuanza`, `miamia`, `nsuika`, `kadinga`, `bindama`, `djakuna`, `nsonsola`, `nsundinga`, `diamisa`, `buaninga`, `suma`, `sumika`, `yaba`, `yabika`, `shimba`, `shimbika`, `tuta`, `pitakasa`, `tutakasa`, `kuta`, `kutakasa`, `pita`, `diatuka`, `zengoka`, `zingama`, `zinga`, `kuika`, `kuikama`, `bakana`, `benga`, `bengama`, `butuka`, `damuka`, `letoka`, `djomoka`, `dakasa`, `dadinga`, `tuema`, `tafunu`, `dakula`, `dakuka`, `derikisa`, `dekesa`, `puapua`, `yindula`, `nsemona`, `nsungutila`, `vulangana`, `vumbula`, `vumbuka`, `kakamasa`, `nsikulululu`, `nsika`
+## Leçon 2 : Particules d'accord — Substantif + particule + verbe/pronom
 
-4. **Nature, Animaux & Objets (Extended)** ou nouvelle leçon — ajout des noms concrets :
-   `makinu`, `matanga` (mise à jour: célébrations), `malaki` (mise à jour: célébrations liées au retrait de deuil), `maka`, `luhambu`, `lukandu`, `lumbumbuzi|tumbumbuzi`, `luila|tuila`, `lukilazi|tukilazi`, `lundala|mandala`, `luhe|mahe`, `lukoka|tukoka`, `lubumba|tubumba`, `luke|tuke`, `lubadi|tubadi`, `tuseho`, `buaku-maku`, `buala|mala`, `buatu|matu`, `buko|mako`, `koko|moko`, `kibabala|bibabala`, `kibalabala|bibalabala`, `kikola|bikola`, `kimvuinzingila|bimvuinzingila`, `kinkuelankuela|binkuelankuela`, `kindiongoloko|bindiongoloko`, `muniungutinunu|miniungutinunu`, `muntuboloko`, `boloko`, `kimfuameso`, `mubati|mibati`, `mubasa|mibasa`, `mukazu`, `ntongua`, `mbuata`, `ntientie`, `tufinia`, `kinionia|binionia`, `kimfinia|bimfinia`, `lubanji|mbanji`, `miangu`, `mbata`, `mpua`, `nkakamusu`, `mutima|mitima`, `nzindu`, `mvu` (siècle), `lungolobi`
+**ID** : `particules-accord-substantif`
+**Niveau** : intermediate
+**Contenu** :
 
-5. **Nouveaux termes isolés** (ajoutés à la leçon la plus pertinente) :
-   `lumungi`, `lukuta`, `lusambu`, `lunkazi`, `luvuezo`, `vueza`, `luniogiiiniongi`, `nsingani`, `ntebolo`, `yebo`, `nkunga`, `vua` (9), `vua` (posséder), `luvua` (90 — déjà existant), `dukisa menga`, `ba`, `zenga` (moquer), `longa` (conseiller/enseigner)
+- **Vocabulaire** : `tshinkuti`, `lukaya`, `binzu`, `mbua`, `tari`, `bititi`, `bubelo`, `malala`, `ba` (palmier), `muti`, `nti`, `mutima`, `dinu`, `kiamvu`, `nsusu`, `ludimi`, `buatu`, `kulu`
+- **Syntaxe** — Bloc "Substantif + particule d'accord + verbe" :
+  - Tshinkuti tshi nzololo / Lukaya lu buidi / Binzu bi tabukidi / Mbua yi tatikidi / Tari tshi nene / Bititi bike
+- **Syntaxe** — Bloc "Substantif + particule d'accord + pronom possessif" :
+  - Bubelo buaku / Malala mandi / Ba diaku / Muti eno (nti eno)
+- **Syntaxe** — Bloc "Classe nominale + moshi (un/une)" :
+  - mutima mu moshi / dinu dimosi / kiamvu kimoshi / nsusu moshi / ludimi lumoshi / buatu bumoshi / kulu kumoshi
+- **Phrases** : Buatu bumoshi mu nzari bue (La pirogue est sur le fleuve)
+- **Exercices** :
+  1. Multiple-choice (quelle particule d'accord ?)
+  2. Fill-in-blank (compléter la particule)
+  3. Matching (substantif ↔ particule d'accord)
+  4. Mandombe-recognition (8 items avec les substantifs)
 
-### Mandombe
+---
 
-Le champ `mandombe` reprend le texte latin (accent-free) car la police Mandombe effectue le rendu automatiquement. Les prononciations spéciales seront ajoutées dans le champ `note`.
+## Leçon 3 : Dérivation verbale — Extensions et formes passives
 
-## Fichiers modifiés
-- `src/data/lessons.ts` — ajout de ~180-200 nouvelles entrées `VocabItem` réparties dans les leçons existantes, mise à jour de quelques entrées existantes dont la définition est enrichie
+**ID** : `derivation-verbale-extensions`
+**Niveau** : advanced
+**Contenu** :
 
-## Estimation
-Un seul fichier modifié, mais avec de nombreuses insertions réparties sur plusieurs blocs du fichier (~22 000 lignes).
+- **Vocabulaire** : tous les verbes fournis (`ta/tela`, `sa/sila`, `tala/tadila`, `londa/londela`, `gana/ganina`, `nata/natina`, `diata/diatila`, `tsala/tsadila`, `yabama/yabamana`, `pokama/pokamana`, `bemba/bembesa`, `bua/buisa`, `kia/kiesa`, `dika`, `bulasa`, `bula`, `buta/butasa`, `djuta/djutasa`, `baka`, `sasuna/sasuka`, `yakuna/yakuka`, `zingumuna/zingumuka`, `kela/kelana`, `zaba/zabana`, `salaka`, `salanga`)
+- **Syntaxe** — Bloc "Extension applicative (-ela, -ila, -ina)" avec explication :
+  - ta → tela / sa → sila / tala → tadila / londa → londela / gana → ganina / nata → natina / diata → diatila / tsala → tsadila
+- **Syntaxe** — Bloc "Extension passive/réflexive (-ama, -amana)" :
+  - yabama → yabamana / pokama → pokamana
+- **Syntaxe** — Bloc "Extension causative (-esa, -isa, -asa)" :
+  - bemba → bembesa / bua → buisa / kia → kiesa / bula → bulasa / buta → butasa / djuta → djutasa
+- **Syntaxe** — Bloc "Extension réversive active/passive (-una/-uka)" :
+  - sasuna/sasuka / yakuna/yakuka / zingumuna/zingumuka
+- **Syntaxe** — Bloc "Extension réciproque (-ana) et habituelle (-aka, -anga)" :
+  - kela → kelana / zaba → zabana / salaka / salanga
+- **Phrases avec verbes conjugués** :
+  - Nzo yi yidi / Makondi ma bueki / Nuni zi tilumukini / Tolo tua bakiriki?
+- **Syntaxe** — Bloc "Nombres : bole (deux) avec classes nominales" :
+  - Bantu bole / Bala bole / Mitu miole / Maba mole / Mbu zole / Biteko biole / Tumpunguzala tuole
+  - Note sur Bantu ≠ hommes (babakala = hommes)
+- **Phrase** : Muntu we na bukindi (une personne brave)
+- **Exercices** :
+  1. Multiple-choice (identifier le type d'extension verbale)
+  2. Fill-in-blank (former la dérivation)
+  3. Matching (verbe de base ↔ forme dérivée)
+  4. Mandombe-recognition (8 items, latin-to-glyph avancé)
+
+---
+
+## Fichier modifié
+- `src/data/lessons.ts` — ajout de 3 nouvelles leçons à la fin du tableau `lessons[]`
+
+## Principes respectés
+- Aucun contenu inventé, strictement le matériel fourni
+- Champ `mandombe` = texte latin accent-free
+- Notes de prononciation dans le champ `note`
+- Trilingual (FR/EN/PT) pour tous les champs d'exercices
+- Exercices mandombe-recognition avec distracteurs tirés du vocabulaire existant
 
