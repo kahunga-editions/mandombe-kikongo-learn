@@ -16190,7 +16190,7 @@ export const lessons: Lesson[] = [
     { lari: "Nsiesie", mandombe: "Nsiesie", french: "Une sorte de gazelle", english: "A type of gazelle", portuguese: "Um tipo de gazela" },
     { lari: "Nsiete", mandombe: "Nsiete", french: "Vers intestinaux", english: "Intestinal worms", portuguese: "Vermes intestinais" },
     { lari: "Sika", mandombe: "Sika", french: "Se dessécher, sécher, diminuer / Vanter, aimer, préférer", english: "To dry out / To boast, to like, to prefer", portuguese: "Ressecar, secar / Gabar-se, gostar, preferir" },
-    { lari: "Sikulu", mandombe: "Sikulu", french: "Un escabeau", english: "A stool, a step stool", portuguese: "Um banquinho, um escabelo" },
+    { lari: "Sikulu|bisikulu", mandombe: "Sikulu", french: "Un escabeau, un rondin", english: "A stool, a step stool; a log", portuguese: "Um banquinho, um escabelo; um tronco", note: "Aussi : rondin" },
     { lari: "Silalala", mandombe: "Silalala", french: "Devenir droit", english: "To become straight", portuguese: "Tornar-se reto" },
     { lari: "Sima", mandombe: "Sima", french: "Interdire, défendre", english: "To forbid, to prohibit", portuguese: "Proibir, defender" },
     { lari: "Sindika", mandombe: "Sindika", french: "Lancer des malédictions", english: "To cast curses", portuguese: "Lançar maldições" },
