@@ -16208,7 +16208,7 @@ export const lessons: Lesson[] = [
     { lari: "Siridika", mandombe: "Siridika", french: "Redresser", english: "To straighten", portuguese: "Endireitar" },
     { lari: "Sita", mandombe: "Sita", french: "Le tison, la braise", english: "The ember, the live coal", portuguese: "A brasa, o tição" },
     { lari: "Busita", mandombe: "Busita", french: "La stérilité", english: "Sterility, barrenness", portuguese: "A esterilidade" },
-    { lari: "Nsitu", mandombe: "Nsitu", french: "Plantation", english: "Plantation", portuguese: "Plantação" },
+    { lari: "Nsitu", mandombe: "Nsitu", french: "Grande plantation", english: "Large plantation", portuguese: "Grande plantação", note: "Prononcer /nshitu/" },
     { lari: "Yimbila", mandombe: "Yimbila", french: "Chanter", english: "To sing", portuguese: "Cantar" },
   ],
   phrases: [
