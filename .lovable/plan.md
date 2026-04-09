@@ -1,43 +1,44 @@
 
 
-# Ajouter ~20 nouvelles entrées au dictionnaire
+# Ajouter des exercices de discrimination Mandombe sur les nouvelles entrées
 
-## Analyse des doublons
+## Contexte
 
-Entrées **déjà présentes** (à ne PAS re-créer) :
-- `Mpembe` (= blanc, leçon couleurs)
-- `Mpemba` (= univers invisible, leçon cosmologie)
-- `Mpamba` (= vide/inutile, plusieurs leçons)
-- `Tieri` (= guêpe comestible)
-- `Koka` (= tirer/traîner)
-- `Pela`, `Mpoteka`, `Poteka`, `Potopoto` (leçon Pa-Pe-Pi)
-- `Bufuasi`, `Fuasa`, `Fuasakani`, `Fuasakana`, `Fuanikisa`, `Fuombombo` (leçon cosmologie)
+Les deux leçons (`pa-pe-pi-po-pu-vocabulaire` et `spiritualite-cosmologie-kongo`) ont déjà chacune 1 exercice `mandombe-recognition` (8 items chacun), mais aucun ne couvre les ~19 entrées récemment ajoutées (Furi, Mfuri, Mpena, Pema, Bumpembe, Nga mpemba, etc.).
 
-## Entrées à ajouter (~20 nouvelles)
+## Plan
 
-Dans la leçon existante `spiritualite-cosmologie-kongo` (vocabulary) :
-- `Bumpembe` — blancheur
-- `Mpemba` (sens kaolin) — note sur géophagie et Nga mpemba. Ajout comme entrée séparée avec note distinctive.
-- `Nga mpemba` — médecin traditionnel (avec note sur le chant rituel Nzebele)
-- `Mpemba` (sens juridique) — la raison, le bon droit (avec note sur le rituel mpemba/kala)
+Ajouter **2 nouveaux exercices `mandombe-recognition`** (un par leçon), ciblant exclusivement les nouvelles entrées.
 
-Dans la leçon existante `pa-pe-pi-po-pu-vocabulaire` (vocabulary) :
-- `Pema` — flamber fort
-- `Peno` — retroussant, retroussé
-- `Bumpamba` — vain, caractère gratuit
-- `Hehi` — il y avait
-- `Furi` — coton (note prononciation /pfuri/)
-- `Mfuri` — habitude, comportement (note /mpfuri/)
-- `Mfuri za mbote` — les bons comportements
-- `Mfuri za mbi` — les mauvaises habitudes
-- `Minduli` — localité du Pool
-- `Mpena` — le mépris
-- `Pena` — mépriser, retrousser un vêtement
-- `Nkoko tuvi` — le bousier
-- `Nkenge samba` — insecte guêpe à piqûre douloureuse
-- `Lumbumbu | Mambumbu` — termites ailées comestibles souterraines
-- `Koka | Makoka` — termites comestibles en termitières en hauteur (note pour distinguer de koka=tirer)
+### Leçon Pa-Pe-Pi-Po-Pu — 1 exercice (8 items)
+
+| Glyphe | Réponse | Distracteurs | Mode |
+|--------|---------|-------------|------|
+| Furi | Furi | Mfuri, Pema, Peno | glyph-to-latin |
+| Mfuri | Mfuri | Furi, Mpena, Hehi | glyph-to-latin |
+| Mpena | Mpena | Pena, Pema, Bumpamba | glyph-to-latin |
+| Nkoko tuvi | Nkoko tuvi | Nkenge samba, Lumbumbu, Minduli | glyph-to-latin |
+| Pema | Pema | Pena, Peno, Furi | latin-to-glyph |
+| Lumbumbu | Lumbumbu | Nkoko tuvi, Nkenge samba, Minduli | latin-to-glyph |
+| Bumpamba | Bumpamba | Mpamba, Bumpembe, Mpena | latin-to-glyph |
+| Nkenge samba | Nkenge samba | Nkoko tuvi, Lumbumbu, Furi | latin-to-glyph |
+
+### Leçon Cosmologie Kongo — 1 exercice (6 items)
+
+| Glyphe | Réponse | Distracteurs | Mode |
+|--------|---------|-------------|------|
+| Bumpembe | Bumpembe | Mpemba, Mpembe, Bumpamba | glyph-to-latin |
+| Nga mpemba | Nga mpemba | Mpemba, Kalunga, Fuombombo | glyph-to-latin |
+| Mpemba (kaolin) | Mpemba | Bumpembe, Nga mpemba, Mbingi | glyph-to-latin |
+| Bumpembe | Bumpembe | Bumpamba, Mpembe, Mpemba | latin-to-glyph |
+| Nga mpemba | Nga mpemba | Mpemba, Fuanikisa, Kibula | latin-to-glyph |
+| Mpemba (droit) | Mpemba | Bumpembe, Kalunga, Fuila | latin-to-glyph |
+
+## Détail technique
+- Insertion avant la fermeture `]` des tableaux `exercises` de chaque leçon (lignes ~24053 et ~24205)
+- Format identique aux exercices existants, avec `as const` sur `type` et `mode`
+- Distracteurs tirés du vocabulaire de la même leçon pour maximiser la discrimination
 
 ## Fichier modifié
-- `src/data/lessons.ts` — insertions dans les blocs `vocabulary` des deux leçons existantes, aucune leçon créée
+- `src/data/lessons.ts`
 
