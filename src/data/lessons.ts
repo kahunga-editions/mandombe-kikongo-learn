@@ -16832,7 +16832,7 @@ export const lessons: Lesson[] = [
     { lari: "Saki dia lufua", mandombe: "Saki diya lufua", french: "L'agonie", english: "The agony", portuguese: "A agonia" },
     { lari: "Tata dia nasakila", mandombe: "Tata diya nasakila", french: "Père nourricier", english: "Foster father", portuguese: "Pai adotivo" },
     { lari: "Nsaku", mandombe: "Nsaku", french: "La route", english: "The road", portuguese: "A estrada" },
-    { lari: "Sakumuna", mandombe: "Sakumuna", french: "Rendre prospère, bénir", english: "To make prosper, to bless", portuguese: "Tornar próspero, abençoar" },
+    { lari: "Sakumuna", mandombe: "Sakumuna", french: "Rendre prospère, bénir ; présenter un enfant pour la première fois en public deux mois après sa naissance", english: "To make prosper, to bless; to present a child publicly for the first time two months after birth", portuguese: "Tornar próspero, abençoar; apresentar uma criança em público pela primeira vez dois meses após o nascimento" },
     { lari: "Sala", mandombe: "Sala", french: "Rester (le premier /a:/ est long)", english: "To stay, to remain (long /a:/)", portuguese: "Ficar, permanecer" },
     { lari: "Lusala", mandombe: "Lusala", french: "La plume", english: "The feather", portuguese: "A pena" },
     { lari: "Munsala", mandombe: "Munsala", french: "Crevette", english: "Shrimp", portuguese: "Camarão" },
