@@ -25770,44 +25770,36 @@ export const lessons: Lesson[] = [
     ],
     syntax: [
       {
-        title: "Phrases with ponds",
-        titleFr: "Phrases avec les étangs",
-        titlePt: "Frases com os tanques",
+        title: "Describing the ponds",
+        titleFr: "Décrire les étangs",
+        titlePt: "Descrever os tanques",
         titleMandombe: "Bijinga",
-        explanation: "Sentence structures describing the fishing ponds and activities.",
-        explanationFr: "Structures de phrases décrivant les étangs de pêche et les activités.",
-        explanationPt: "Estruturas de frases descrevendo os tanques de pesca e atividades.",
-        blocks: [
+        explanation: "Key sentences about the four ponds and their uses.",
+        explanationFr: "Phrases clés sur les quatre étangs et leurs usages.",
+        explanationPt: "Frases-chave sobre os quatro tanques e seus usos.",
+        groups: [
           {
-            title: "Describing the ponds",
-            titleFr: "Décrire les étangs",
-            titlePt: "Descrever os tanques",
-            explanation: "Key sentences about the four ponds and their uses.",
-            explanationFr: "Phrases clés sur les quatre étangs et leurs usages.",
-            explanationPt: "Frases-chave sobre os quatro tanques e seus usos.",
-            groups: [
-              {
-                examples: [
-                  { lari: "Bizinga bi ya tueri na bio.", mandombe: "Bizinga bi ya tueri na bio.", french: "On avait 4 étangs.", english: "We had 4 ponds.", portuguese: "Tínhamos 4 tanques." },
-                  { lari: "Bizinga bi ya bieri neto.", mandombe: "Bizinga bi ya bieri neto.", french: "Les 3 étangs pour nous.", english: "The 3 ponds for us.", portuguese: "Os 3 tanques para nós." },
-                  { lari: "Tshizinga tsha bi ya tsheri tsha bala.", mandombe: "Tshizinga tsha bi ya tsheri tsha bala.", french: "Le quatrième était pour les enfants.", english: "The fourth one was for the children.", portuguese: "O quarto era para as crianças." },
-                  { lari: "Beto bala mu tshijinga tshina tueri loba.", mandombe: "Beto bala mu tshijinga tshina tueri loba.", french: "Nous les enfants pêchions dans cet étang-là.", english: "We children used to fish in that pond.", portuguese: "Nós crianças pescávamos naquele tanque." },
-                  { lari: "Bijinga bia tilapia bieri.", mandombe: "Bijinga bia tilapia bieri.", french: "Les étangs étaient des étangs pour tilapias.", english: "The ponds were tilapia ponds.", portuguese: "Os tanques eram tanques de tilápias." },
-                ],
-              },
+            examples: [
+              { lari: "Bizinga bi ya tueri na bio.", mandombe: "Bizinga bi ya tueri na bio.", french: "On avait 4 étangs.", english: "We had 4 ponds.", portuguese: "Tínhamos 4 tanques." },
+              { lari: "Bizinga bi ya bieri neto.", mandombe: "Bizinga bi ya bieri neto.", french: "Les 3 étangs pour nous.", english: "The 3 ponds for us.", portuguese: "Os 3 tanques para nós." },
+              { lari: "Tshizinga tsha bi ya tsheri tsha bala.", mandombe: "Tshizinga tsha bi ya tsheri tsha bala.", french: "Le quatrième était pour les enfants.", english: "The fourth one was for the children.", portuguese: "O quarto era para as crianças." },
+              { lari: "Beto bala mu tshijinga tshina tueri loba.", mandombe: "Beto bala mu tshijinga tshina tueri loba.", french: "Nous les enfants pêchions dans cet étang-là.", english: "We children used to fish in that pond.", portuguese: "Nós crianças pescávamos naquele tanque." },
+              { lari: "Bijinga bia tilapia bieri.", mandombe: "Bijinga bia tilapia bieri.", french: "Les étangs étaient des étangs pour tilapias.", english: "The ponds were tilapia ponds.", portuguese: "Os tanques eram tanques de tilápias." },
             ],
           },
+        ],
+      },
+      {
+        title: "Key expressions",
+        titleFr: "Expressions clés",
+        titlePt: "Expressões-chave",
+        explanation: "Breaking down key compound expressions from the sentences.",
+        explanationFr: "Décomposition des expressions composées clés des phrases.",
+        explanationPt: "Decomposição das expressões compostas-chave das frases.",
+        groups: [
           {
-            title: "Key expressions",
-            titleFr: "Expressions clés",
-            titlePt: "Expressões-chave",
-            explanation: "Breaking down key compound expressions from the sentences.",
-            explanationFr: "Décomposition des expressions composées clés des phrases.",
-            explanationPt: "Decomposição das expressões compostas-chave das frases.",
-            groups: [
-              {
-                examples: [
-                  { lari: "Beto bala", mandombe: "Beto bala", french: "Nous les enfants", english: "We the children", portuguese: "Nós as crianças" },
+            examples: [
+              { lari: "Beto bala", mandombe: "Beto bala", french: "Nous les enfants", english: "We the children", portuguese: "Nós as crianças" },
                   { lari: "Tshijinga tshina", mandombe: "Tshijinga tshina", french: "Cet étang-là", english: "That pond", portuguese: "Aquele tanque" },
                   { lari: "Loba", mandombe: "Loba", french: "Pêcher", english: "To fish", portuguese: "Pescar" },
                 ],
