@@ -142,9 +142,13 @@ export interface SyntaxBlock {
   title: string;
   titleFr?: string;
   titlePt?: string;
+  titleMandombe?: string;
   description?: string;
   descriptionFr?: string;
   descriptionPt?: string;
+  explanation?: string;
+  explanationFr?: string;
+  explanationPt?: string;
   pattern?: string;
   patternFr?: string;
   patternPt?: string;
