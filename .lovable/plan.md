@@ -1,12 +1,16 @@
 
 
-# Centrer les glyphes dans chaque case de la grille Kilolaka
+# Centrage parfait des glyphes dans la grille Kilolaka
 
 ## Modification : `public/kilolaka_grille.html`
 
-Changer `vertical-align: top` → `vertical-align: middle` sur `td.cell` (ligne 117), et ajouter `display: flex; align-items: center; justify-content: center; flex-direction: column;` pour un centrage parfait du contenu. Alternativement, le plus simple : juste passer à `vertical-align: middle` et s'assurer que `.glyph` a `margin: 0 auto`.
+Transformer chaque cellule en conteneur flexbox centré pour garantir un centrage parfait horizontal et vertical du glyphe.
 
-**Changements concrets :**
-1. **Ligne 117** : `vertical-align: top;` → `vertical-align: middle;`
-2. **Ligne 139** : Ajouter `margin: 0 auto;` sur `.glyph` pour centrage horizontal explicite
+### Changements CSS
+
+1. **`td.cell`** (ligne 110-120) : ajouter `display: flex; flex-direction: column; align-items: center; justify-content: center;` et fixer une hauteur minimale (`min-height: 70px`) pour que le centrage vertical fonctionne.
+
+2. **`.glyph`** (ligne 133-141) : retirer `display: block` et `margin: 0 auto`, remplacer par `text-align: center; width: 100%;` — le flex parent gère désormais le centrage.
+
+Un seul fichier modifié, aucun impact sur le reste de l'app.
 
