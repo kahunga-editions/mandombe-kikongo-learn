@@ -391,7 +391,7 @@ function buildGrid() {
     // Group header
     const thCell = document.createElement('td');
     thCell.className = 'group-header';
-    thCell.innerHTML = `<span style="font-family:'Masono Mandombe',serif;font-size:1.2rem;display:block">${cons}</span><span style="font-size:0.6rem;opacity:0.7;display:block;margin-top:2px;font-family:sans-serif">${cons}</span>`;
+    thCell.innerHTML = `<span style="font-family:'Masono Mandombe',serif;font-size:1.2rem;display:block">${cons}</span>`;
     thCell.title = rootMeaning;
     tr.appendChild(thCell);
 
@@ -412,7 +412,6 @@ function buildGrid() {
       td.className = 'cell';
       td.innerHTML = `
         <span class="glyph">${syllable}</span>
-        <span class="latin">${syllable}</span>
         <div class="meaning">${meaning}</div>
       `;
       td.onclick = function() { this.classList.toggle('active'); };
