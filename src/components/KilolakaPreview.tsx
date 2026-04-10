@@ -1,8 +1,10 @@
+import { useState } from "react";
 import PremiumGate from "@/components/PremiumGate";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const KilolakaPreview = () => {
   const { t } = useLanguage();
+  const [showGrid, setShowGrid] = useState(false);
 
   return (
     <section id="kilolaka" className="py-24 bg-earth-deep">
@@ -114,6 +116,28 @@ const KilolakaPreview = () => {
               </div>
             </div>
           </PremiumGate>
+        </div>
+
+        {/* Interactive Kilolaka Grid */}
+        <div className="max-w-6xl mx-auto mt-12 text-center">
+          <button
+            onClick={() => setShowGrid(!showGrid)}
+            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-[#fef86c]/20 to-[#fea9af]/20 border border-gold/30 rounded-xl text-gold font-display text-lg font-bold hover:from-[#fef86c]/30 hover:to-[#fea9af]/30 transition-all duration-300"
+          >
+            <span className="font-mandombe text-2xl">Kilolaka</span>
+            <span>{showGrid ? "▲ Fermer" : "▼ Explorer la Grille complète du Kilolaka"}</span>
+          </button>
+
+          {showGrid && (
+            <div className="mt-6 rounded-xl overflow-hidden border border-gold/20" style={{ height: '70vh' }}>
+              <iframe
+                src="/kilolaka_grille.html"
+                title="Grille interactive du Kilolaka"
+                className="w-full h-full border-0"
+                loading="lazy"
+              />
+            </div>
+          )}
         </div>
       </div>
     </section>
