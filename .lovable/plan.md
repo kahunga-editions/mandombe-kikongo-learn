@@ -1,20 +1,30 @@
 
 
-# Corriger l'affichage latin des consonnes dans la première colonne
+# Corriger l'affichage des glyphes Mandombe dans la grille Kilolaka
 
 ## Problème
-Ligne 395 : le header de groupe utilise `font-family:'Masono Mandombe'` pour afficher la consonne. Résultat : « S », « NS », « SH », « TSH » (et potentiellement d'autres) s'affichent en glyphes Mandombe au lieu de l'alphabet latin.
+La concaténation directe `cons + v` (ligne 409) produit des chaînes comme `"SHe"`, `"DJi"`, `"TSHa"` en majuscules complètes. La police Masono Mandombe attend une casse spécifique (ex : `"She"`, `"Dji"`, `"Tsha"`) pour déclencher le mapping du glyphe complet. Quand la casse est incorrecte, la police rend le consonant en glyphe mais la voyelle retombe en Latin — d'où les petites lettres latines visibles en exposant.
 
 ## Solution : `public/kilolaka_grille.html`
 
-**Ligne 395** — Retirer la police Mandombe du header de groupe. Remplacer :
-```html
-<span style="font-family:'Masono Mandombe',serif;font-size:1.2rem;display:block">${cons}</span>
-```
-par :
-```html
-<span style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:700;display:block">${cons}</span>
+**1. Ajouter une fonction de conversion de casse** (avant `buildGrid()`, ~ligne 385) :
+
+Créer une fonction `toFontSyllable(cons, vowel)` qui transforme la consonne en casse compatible avec la police :
+- Première lettre en majuscule, le reste en minuscule
+- Exemples : `SH` → `Sh`, `DJ` → `Dj`, `TSH` → `Tsh`, `MB` → `Mb`, `ND` → `Nd`, `NG` → `Ng`
+- Cas spécial : `N'K` → `N'k`
+- Concaténer avec la voyelle en minuscule
+
+```javascript
+function toFontSyllable(cons, vowel) {
+  const fontCons = cons.charAt(0).toUpperCase() + cons.slice(1).toLowerCase().replace("'k","'k");
+  return fontCons + vowel;
+}
 ```
 
-Cela affichera toutes les consonnes (B, D, F, G, S, NS, SH, TSH, DJ, etc.) en alphabet latin standard, cohérent avec le rôle d'en-tête de ligne.
+**2. Modifier la ligne 409** : remplacer `cons + v` par `toFontSyllable(cons, v)` pour le glyph uniquement.
+
+**3. Ligne 414-416** : le `<span class="glyph">` utilisera `toFontSyllable(cons, v)` au lieu de `syllable` brut. Le meaning reste inchangé.
+
+Un seul fichier modifié, aucun impact sur le reste de l'app.
 
