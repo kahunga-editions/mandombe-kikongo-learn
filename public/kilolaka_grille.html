@@ -441,38 +441,6 @@ function getVowelModifier(v) {
 
 buildGrid();
 
-// Detect and hide Latin fallback vowels
-function hideLatinFallback() {
-  const canvas = document.createElement('canvas');
-  const ctx = canvas.getContext('2d');
-  
-  document.querySelectorAll('.glyph').forEach(span => {
-    const text = span.textContent.trim();
-    if (!text) return;
-    
-    // Measure with Mandombe font
-    ctx.font = '40px "Masono Mandombe"';
-    const mW = ctx.measureText(text).width;
-    
-    // Measure with generic serif (fallback)
-    ctx.font = '40px serif';
-    const sW = ctx.measureText(text).width;
-    
-    // If widths are nearly identical, font didn't map the full syllable
-    // Strip trailing Latin vowels to keep only the Mandombe consonant glyph
-    if (Math.abs(mW - sW) < 2) {
-      const cons = text.replace(/[iueoa]+$/i, '');
-      if (cons) span.textContent = cons;
-    }
-  });
-}
-
-// Run after font is loaded
-if (document.fonts && document.fonts.ready) {
-  document.fonts.ready.then(hideLatinFallback);
-} else {
-  setTimeout(hideLatinFallback, 1000);
-}
 </script>
 </body>
 </html>
