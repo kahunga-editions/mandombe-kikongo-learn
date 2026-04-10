@@ -1,30 +1,80 @@
 
 
-# Corriger l'affichage des glyphes Mandombe dans la grille Kilolaka
+# Supprimer les lettres latines parasites des glyphes Kilolaka
 
-## Problème
-La concaténation directe `cons + v` (ligne 409) produit des chaînes comme `"SHe"`, `"DJi"`, `"TSHa"` en majuscules complètes. La police Masono Mandombe attend une casse spécifique (ex : `"She"`, `"Dji"`, `"Tsha"`) pour déclencher le mapping du glyphe complet. Quand la casse est incorrecte, la police rend le consonant en glyphe mais la voyelle retombe en Latin — d'où les petites lettres latines visibles en exposant.
+## Diagnostic
+
+Le problème vient du fait que certaines combinaisons consonne+voyelle (ex : `She`, `Shu`, `Dji`, `Tshe`) n'ont pas de ligature complète dans la police Masono Mandombe. La police rend la partie consonne en glyphe Mandombe, mais la voyelle retombe en alphabet latin — d'où les petites lettres visibles en exposant.
+
+Ceci affecte potentiellement :
+- Les consonnes composées (SH, DJ, TSH, J) avec certaines voyelles
+- Les voyelles composées (ue, ui, ua, ie, io, ia, iu) pour la plupart des consonnes
 
 ## Solution : `public/kilolaka_grille.html`
 
-**1. Ajouter une fonction de conversion de casse** (avant `buildGrid()`, ~ligne 385) :
+### 1. Activer explicitement les ligatures OpenType (CSS)
 
-Créer une fonction `toFontSyllable(cons, vowel)` qui transforme la consonne en casse compatible avec la police :
-- Première lettre en majuscule, le reste en minuscule
-- Exemples : `SH` → `Sh`, `DJ` → `Dj`, `TSH` → `Tsh`, `MB` → `Mb`, `ND` → `Nd`, `NG` → `Ng`
-- Cas spécial : `N'K` → `N'k`
-- Concaténer avec la voyelle en minuscule
+Ajouter dans `.glyph` :
+```css
+font-feature-settings: "liga" 1, "clig" 1, "calt" 1;
+-webkit-font-feature-settings: "liga" 1, "clig" 1, "calt" 1;
+```
+Cela force le navigateur à activer toutes les substitutions de ligatures de la police.
+
+### 2. Détection JavaScript + masquage des caractères latins
+
+Après `buildGrid()`, parcourir chaque `.glyph` et utiliser un `<canvas>` pour tester si la police Mandombe rend le texte différemment d'une police serif standard. Si le glyphe est identique au rendu serif (= pas de mapping Mandombe), masquer la voyelle :
 
 ```javascript
-function toFontSyllable(cons, vowel) {
-  const fontCons = cons.charAt(0).toUpperCase() + cons.slice(1).toLowerCase().replace("'k","'k");
-  return fontCons + vowel;
+function hideLatinFallback() {
+  const canvas = document.createElement('canvas');
+  const ctx = canvas.getContext('2d');
+  
+  document.querySelectorAll('.glyph').forEach(span => {
+    const text = span.textContent;
+    // Mesurer avec Mandombe
+    ctx.font = '40px "Masono Mandombe"';
+    const mW = ctx.measureText(text).width;
+    // Mesurer avec serif 
+    ctx.font = '40px serif';
+    const sW = ctx.measureText(text).width;
+    
+    // Si les largeurs sont similaires = pas de ligature
+    // Garder seulement la partie consonne
+    if (Math.abs(mW - sW) < 2) {
+      // Extraire la consonne seule
+      const cons = text.replace(/[iueoa]+$/i, '');
+      span.textContent = cons;
+    }
+  });
 }
 ```
 
-**2. Modifier la ligne 409** : remplacer `cons + v` par `toFontSyllable(cons, v)` pour le glyph uniquement.
+### 3. Alternative plus simple (si la détection canvas n'est pas fiable)
 
-**3. Ligne 414-416** : le `<span class="glyph">` utilisera `toFontSyllable(cons, v)` au lieu de `syllable` brut. Le meaning reste inchangé.
+Séparer consonne et voyelle dans des `<span>` distincts. Appliquer la police Mandombe uniquement à la consonne, et masquer complètement la voyelle :
 
-Un seul fichier modifié, aucun impact sur le reste de l'app.
+```javascript
+td.innerHTML = `
+  <span class="glyph">${syllable}</span>
+  <div class="meaning">${meaning}</div>
+`;
+```
+→ devient :
+```javascript
+td.innerHTML = `
+  <span class="glyph" data-full="${syllable}">${syllable}</span>
+  <div class="meaning">${meaning}</div>
+`;
+```
+
+Puis après le rendu, vérifier chaque glyphe et retirer les voyelles parasites si elles ne sont pas rendues en Mandombe.
+
+### Approche recommandée
+
+Combiner les étapes 1 et 2 :
+1. D'abord ajouter `font-feature-settings` au CSS (peut résoudre le problème seul)
+2. Ensuite ajouter la détection canvas comme filet de sécurité pour masquer tout caractère latin restant
+
+Un seul fichier modifié : `public/kilolaka_grille.html`.
 
