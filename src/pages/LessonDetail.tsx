@@ -134,12 +134,17 @@ const LessonDetail = () => {
                       return (
                         <div
                           key={i}
-                          className="bg-card rounded-lg border border-border p-4 hover:border-primary/30 transition-colors"
+                          className="bg-card rounded-lg border border-border overflow-hidden hover:border-primary/30 transition-colors"
                         >
+                          {item.image && (
+                            <img src={item.image} alt={item.lari} loading="lazy" className="w-full h-32 object-cover" />
+                          )}
+                          <div className="p-4">
                           <p className="font-mandombe text-3xl text-gold mb-4">{item.mandombe}</p>
                           <p className="font-display text-lg font-bold text-foreground">{item.lari}</p>
                           <div className="flex flex-wrap gap-4 mt-1 text-sm text-muted-foreground">
                             <span>{flag} {translation}</span>
+                          </div>
                           </div>
                         </div>
                       );
