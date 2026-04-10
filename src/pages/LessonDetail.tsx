@@ -145,6 +145,7 @@ const LessonDetail = () => {
                           <div className="flex flex-wrap gap-4 mt-1 text-sm text-muted-foreground">
                             <span>{flag} {translation}</span>
                           </div>
+                          </div>
                         </div>
                       );
                     })}
