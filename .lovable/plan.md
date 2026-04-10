@@ -1,16 +1,23 @@
 
 
-# Centrage parfait des glyphes dans la grille Kilolaka
+# Corriger le centrage de la grille Kilolaka
 
-## Modification : `public/kilolaka_grille.html`
+## Problème
+L'ajout de `display: flex` sur `td.cell` casse le layout du tableau HTML — les cellules ne se comportent plus comme des cellules de tableau, d'où l'affichage cassé.
 
-Transformer chaque cellule en conteneur flexbox centré pour garantir un centrage parfait horizontal et vertical du glyphe.
+## Solution : `public/kilolaka_grille.html`
 
-### Changements CSS
+Revenir à un centrage simple compatible avec `<table>` :
 
-1. **`td.cell`** (ligne 110-120) : ajouter `display: flex; flex-direction: column; align-items: center; justify-content: center;` et fixer une hauteur minimale (`min-height: 70px`) pour que le centrage vertical fonctionne.
+**`td.cell` (lignes 110-125)** — Retirer `display: flex`, `flex-direction`, `align-items`, `justify-content`. Garder uniquement :
+- `vertical-align: middle;`
+- `text-align: center;`
+- `padding: 10px 6px;`
 
-2. **`.glyph`** (ligne 133-141) : retirer `display: block` et `margin: 0 auto`, remplacer par `text-align: center; width: 100%;` — le flex parent gère désormais le centrage.
+**`.glyph` (lignes 138-146)** — Remettre :
+- `display: block;`
+- `margin: 0 auto;`
+- Garder `text-align: center`, `font-size: 2.2rem`, `line-height: 2`
 
-Un seul fichier modifié, aucun impact sur le reste de l'app.
+C'est la méthode standard pour centrer du contenu dans une cellule de tableau sans casser le layout.
 
