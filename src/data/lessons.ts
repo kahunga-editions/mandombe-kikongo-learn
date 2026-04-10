@@ -25800,10 +25800,8 @@ export const lessons: Lesson[] = [
           {
             examples: [
               { lari: "Beto bala", mandombe: "Beto bala", french: "Nous les enfants", english: "We the children", portuguese: "Nós as crianças" },
-                  { lari: "Tshijinga tshina", mandombe: "Tshijinga tshina", french: "Cet étang-là", english: "That pond", portuguese: "Aquele tanque" },
-                  { lari: "Loba", mandombe: "Loba", french: "Pêcher", english: "To fish", portuguese: "Pescar" },
-                ],
-              },
+              { lari: "Tshijinga tshina", mandombe: "Tshijinga tshina", french: "Cet étang-là", english: "That pond", portuguese: "Aquele tanque" },
+              { lari: "Loba", mandombe: "Loba", french: "Pêcher", english: "To fish", portuguese: "Pescar" },
             ],
           },
         ],
