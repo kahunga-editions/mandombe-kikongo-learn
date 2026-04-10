@@ -25779,6 +25779,9 @@ export const lessons: Lesson[] = [
         explanationPt: "Frases-chave sobre os quatro tanques e seus usos.",
         groups: [
           {
+            title: "Pond sentences",
+            titleFr: "Phrases sur les étangs",
+            titlePt: "Frases sobre os tanques",
             examples: [
               { lari: "Bizinga bi ya tueri na bio.", mandombe: "Bizinga bi ya tueri na bio.", french: "On avait 4 étangs.", english: "We had 4 ponds.", portuguese: "Tínhamos 4 tanques." },
               { lari: "Bizinga bi ya bieri neto.", mandombe: "Bizinga bi ya bieri neto.", french: "Les 3 étangs pour nous.", english: "The 3 ponds for us.", portuguese: "Os 3 tanques para nós." },
@@ -25798,6 +25801,9 @@ export const lessons: Lesson[] = [
         explanationPt: "Decomposição das expressões compostas-chave das frases.",
         groups: [
           {
+            title: "Compound expressions",
+            titleFr: "Expressions composées",
+            titlePt: "Expressões compostas",
             examples: [
               { lari: "Beto bala", mandombe: "Beto bala", french: "Nous les enfants", english: "We the children", portuguese: "Nós as crianças" },
               { lari: "Tshijinga tshina", mandombe: "Tshijinga tshina", french: "Cet étang-là", english: "That pond", portuguese: "Aquele tanque" },
