@@ -7,7 +7,7 @@
 <style>
 @font-face {
   font-family: 'Masono Mandombe';
-  src: url('./masono_mandombe-webfont.ttf') format('truetype');
+  src: url('/fonts/masono_mandombe-webfont.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -132,11 +132,12 @@ td.cell.active {
 
 .glyph {
   font-family: 'Masono Mandombe', serif;
-  font-size: 1.6rem;
+  font-size: 2.2rem;
   color: #fef86c;
   display: block;
-  line-height: 1.2;
+  line-height: 2;
   margin-bottom: 2px;
+  overflow: visible;
 }
 
 .latin {
@@ -404,7 +405,7 @@ function buildGrid() {
         return;
       }
 
-      const syllable = cons.toLowerCase() + v;
+      const syllable = cons + v;
       const meaning = meanings[v] || `${rootMeaning} ${getVowelModifier(v)}`;
       
       const td = document.createElement('td');
