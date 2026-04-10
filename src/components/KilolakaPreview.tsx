@@ -120,24 +120,26 @@ const KilolakaPreview = () => {
 
         {/* Interactive Kilolaka Grid */}
         <div className="max-w-6xl mx-auto mt-12 text-center">
-          <button
-            onClick={() => setShowGrid(!showGrid)}
-            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-[#fef86c]/20 to-[#fea9af]/20 border border-gold/30 rounded-xl text-gold font-display text-lg font-bold hover:from-[#fef86c]/30 hover:to-[#fea9af]/30 transition-all duration-300"
-          >
-            <span className="font-mandombe text-2xl">Kilolaka</span>
-            <span>{showGrid ? "▲ Fermer" : "▼ Explorer la Grille complète du Kilolaka"}</span>
-          </button>
+          <PremiumGate label="Grille complète du Kilolaka">
+            <button
+              onClick={() => setShowGrid(!showGrid)}
+              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-[#fef86c]/20 to-[#fea9af]/20 border border-gold/30 rounded-xl text-gold font-display text-lg font-bold hover:from-[#fef86c]/30 hover:to-[#fea9af]/30 transition-all duration-300"
+            >
+              <span className="font-mandombe text-2xl">Kilolaka</span>
+              <span>{showGrid ? "▲ Fermer" : "▼ Explorer la Grille complète du Kilolaka"}</span>
+            </button>
 
-          {showGrid && (
-            <div className="mt-6 rounded-xl border border-gold/20" style={{ height: '80vh' }}>
-              <iframe
-                src="/kilolaka_grille.html"
-                title="Grille interactive du Kilolaka"
-                className="w-full h-full border-0"
-                loading="lazy"
-              />
-            </div>
-          )}
+            {showGrid && (
+              <div className="mt-6 rounded-xl border border-gold/20" style={{ height: '80vh' }}>
+                <iframe
+                  src="/kilolaka_grille.html"
+                  title="Grille interactive du Kilolaka"
+                  className="w-full h-full border-0"
+                  loading="lazy"
+                />
+              </div>
+            )}
+          </PremiumGate>
         </div>
       </div>
     </section>
