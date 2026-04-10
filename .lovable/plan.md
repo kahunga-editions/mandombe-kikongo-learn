@@ -1,23 +1,14 @@
 
 
-# Fix Mandombe glyphs in Kilolaka grid
+# Retirer la translitération latine de la grille Kilolaka
 
-## Problem
-The Mandombe glyphs don't render because:
-1. **Wrong font path**: The HTML references `./masono_mandombe-webfont.ttf` but the font lives at `/fonts/masono_mandombe-webfont.ttf`
-2. **Glyph text needs proper casing**: The consonant group headers and syllable text should use the same casing pattern as the rest of the app (e.g., `Ki`, `Lo`, `Bi` — capitalized first letter)
+## Modification : `public/kilolaka_grille.html`
 
-## Fix — `public/kilolaka_grille.html`
+**2 changements :**
 
-### 1. Fix `@font-face` src (line 10)
-Change `url('./masono_mandombe-webfont.ttf')` → `url('/fonts/masono_mandombe-webfont.ttf')`
+1. **Ligne 415** : Supprimer `<span class="latin">${syllable}</span>` du innerHTML des cellules — ne garder que le glyphe et la signification cachée.
 
-### 2. Fix syllable casing (line 407)
-Change `const syllable = cons.toLowerCase() + v;` to keep the consonant as-is (already uppercase) and just append the vowel: `const syllable = cons + v;`
-This produces `Bi`, `Bu`, `MBi`, `NDu`, etc. — matching the font's internal Latin-to-glyph mapping.
+2. **Ligne 394** : Dans le header de groupe, supprimer le `<span>` latin en doublon (le petit texte sous le glyphe consonantique) — ne garder que le glyphe Mandombe.
 
-### 3. Increase glyph font size for legibility
-Bump `.glyph` from `1.6rem` to `2.2rem` and add `line-height: 2` and `overflow: visible` per the project's typography conventions.
-
-No other files need changes.
+Résultat : chaque cellule affiche uniquement le glyphe Mandombe. Au clic, seule la signification apparaît. La translitération latine est visible dans l'en-tête du tableau (colonnes voyelles) et dans la signification révélée, ce qui suffit pour la lecture.
 
