@@ -1,62 +1,70 @@
 
 
-# Ajouter des exercices Shi-/Ti-/Ju- et Sa- sur les nouvelles entrées
+# Ajouter exercices singulier/pluriel, reconnaissance Mandombe et illustrations — Leçon animaux-habitats
 
-## Fichier modifié
-- `src/data/lessons.ts`
+## Résumé
 
----
+Ajouter à la leçon `animaux-habitats` :
+- 4 nouveaux exercices sur les accords singulier/pluriel des classes nominales
+- 1 exercice de reconnaissance Mandombe supplémentaire ciblant les accords
+- Des illustrations générées par IA pour les animaux du vocabulaire
 
-## Leçon `pa-pe-pi-po-pu-vocabulaire` — 1 exercice mandombe-recognition (8 items Shi-/Ti-/Ju-)
+## Fichiers modifiés
 
-Insertion avant `],` de fermeture des exercises (ligne 24220).
+### 1. `src/data/lessons.ts`
 
-| Glyphe | Réponse | Distracteurs | Mode |
-|--------|---------|-------------|------|
-| Shimbila | Shimbila | Shimbalala, Shimbilika, Timbula | glyph-to-latin |
-| Timbula | Timbula | Timba, Tita, Shimbila | glyph-to-latin |
-| Njundu | Njundu | Junda, Jundu, Jundika | glyph-to-latin |
-| Shekema | Shekema | Shingika, Shimbalali, Sekozola | glyph-to-latin |
-| Jundama | Jundama | Junda, Jundika, Njundu | latin-to-glyph |
-| Shimbalala | Shimbalala | Shimbalali, Shimbila, Simbika | latin-to-glyph |
-| Lusinga | Lusinga | Lunjungu, Lumbumbu, Lusaki | latin-to-glyph |
-| Shingama | Shingama | Shingika, Shingana, Shingu | latin-to-glyph |
+**a) Ajouter un champ optionnel `image` à `VocabItem` (ligne 7)**
+```typescript
+image?: string; // path to illustration image
+```
 
----
+**b) Ajouter des images aux entrées vocabulaire de `animaux-habitats` (lignes 24536-24564)**
+- Utiliser les images existantes pour : `nioka-snake.jpg`, `ngongolo-caterpillar.jpg`
+- Générer via Lovable AI (~12 illustrations watercolor) pour : Nsusu (poule), Nkombo (chèvre), Tshindongo (mouton), Ngo (panthère), Ngombulu (lion), Nkabi (antilope), Mbulu (chacal), Tshimbungu (hyène), Tshibibu (gorille), Nguvu (hippopotame), Ngandu (crocodile), Nzau (éléphant), Mpakasa (buffle), Mpangu (grenouille), Lembe (cigogne), Tutu (souris)
 
-## Leçon `sa-dictionary-extended` — 5 exercices (MC, FIB, Matching, Mandombe-recognition)
+**c) 4 nouveaux exercices à insérer dans `animaux-habitats` (après ligne 24806)**
 
-Insertion avant `],` de fermeture des exercises (ligne 16968).
+**Multiple-choice 1 — Accord yi/ji vs ka/bi :**
+"Quel accord utilise-t-on pour 'Tshindongo' (mouton) au singulier ?" → yi ba / **ka ba** / bi ba / wu ba (correct: 1)
 
-**1 Multiple-choice :**
-"Que signifie 'Nsakusu' ?" → Panier tressé / **Soufflet de forge** / Battement de mains / Feuille de tabac séchée (correct: 1)
+**Multiple-choice 2 — Accord di/ma :**
+"Comment dit-on 'Les souris habitent au village' ?" → Tutu ku hata di ba / **Matutu ku hata ma ba** / Tutu ku hata yi ba / Matutu ku hata ji ba (correct: 1)
 
-**1 Multiple-choice :**
-"Que provoque 'Sansamasa' ?" → Apaiser / Intercéder / **Faire peur, surprendre** / Contaminer (correct: 2)
+**Multiple-choice 3 — Accord wu/ba :**
+"Quel accord pour 'Muntu' (personne) au pluriel ?" → wu ba / ji ba / ma ba / **ba ba** (correct: 3)
 
-**1 Fill-in-blank :**
-"______ = intercéder" → `Sambilila` (indice: lié à 'sambila' = prier)
+**Matching — Accords par classe :**
+6 paires : Nsusu → yi/ji, Tshindongo → ka/bi, Lembe → di/ma, Muntu → wu/ba, Tshibibu → tshi/bi, Nkabi → ka/ji
 
-**1 Matching (6 paires) :**
-Sakusa↔Souffler avec un soufflet, Sansamana↔Avoir peur, Sambulika↔Se répandre par contagion, Nsabila↔Panier tressé, Lusambuari↔Soixante-dix, Sakalala↔Être agréable
+**d) 1 exercice mandombe-recognition supplémentaire (accords) — 8 items :**
 
-**1 Mandombe-recognition (8 items) :**
+| Mandombe | Réponse | Distracteurs | Mode |
+|----------|---------|-------------|------|
+| Nkombo ku tshikaku yi sekela | yi sekela | ji sekela, ka sekela, ba sekela | glyph-to-latin |
+| Bindongo ku tshikaku bi sekela | bi sekela | ka sekela, yi sekela, ji sekela | glyph-to-latin |
+| Matutu ku hata ma ba | ma ba | di ba, yi ba, ba ba | glyph-to-latin |
+| Bibibu ku sangi bi ba | bi ba | tshi ba, yi ba, ji ba | glyph-to-latin |
+| Muntu ku hata wu ba | wu ba | ba ba, di ba, ka ba | latin-to-glyph |
+| Lembe ku mukobo di ba | di ba | ma ba, yi ba, ka ba | latin-to-glyph |
+| Ngo ku sangi ji ba | ji ba | yi ba, ka ba, bi ba | latin-to-glyph |
+| Tshimbungu ku mukobo tshi ba | tshi ba | bi ba, ka ba, yi ba | latin-to-glyph |
 
-| Glyphe | Réponse | Distracteurs | Mode |
-|--------|---------|-------------|------|
-| Sakusa | Sakusa | Sakula, Sakuka, Nsakusu | glyph-to-latin |
-| Sansamasa | Sansamasa | Sansamana, Sansalakani, Sambilila | glyph-to-latin |
-| Sambilila | Sambilila | Sambulila, Sambulika, Sakana | glyph-to-latin |
-| Nsabila | Nsabila | Nsakusu, Nsaki, Nsamu | glyph-to-latin |
-| Sakalasa | Sakalasa | Sakalala, Sakilika, Sakana | latin-to-glyph |
-| Lusampasampa | Lusampasampa | Lusambuari, Lusaki, Lusinga | latin-to-glyph |
-| Saki-masaki | Saki-masaki | Lusaki, Masakila, Saku | latin-to-glyph |
-| Lusambuari | Lusambuari | Lusampasampa, Lusanu, Lusala | latin-to-glyph |
+### 2. `src/pages/LessonDetail.tsx`
 
----
+Modifier le rendu des cartes vocabulaire (lignes 134-145) pour afficher l'image si `item.image` est défini :
+```tsx
+{item.image && (
+  <img src={item.image} alt={item.lari} className="w-full h-32 object-cover rounded-t-lg mb-2" />
+)}
+```
 
-## Détail technique
-- Tous les exercices trilingues (FR/EN/PT) avec `as const` sur les types
-- Distracteurs tirés du vocabulaire de la même leçon
-- Insertion avant les fermetures `]` des tableaux exercises existants
+### 3. Génération d'illustrations
+
+Utiliser Lovable AI (google/gemini-3.1-flash-image-preview) pour générer ~14 illustrations watercolor d'animaux africains, style cohérent avec les illustrations existantes. Les sauvegarder dans `public/images/`.
+
+## Estimation
+- ~14 images à générer
+- ~5 exercices à ajouter
+- 2 fichiers à modifier (lessons.ts, LessonDetail.tsx)
+- 1 interface à étendre (VocabItem)
 
