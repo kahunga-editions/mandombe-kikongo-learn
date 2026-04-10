@@ -1,70 +1,82 @@
 
 
-# Ajouter exercices singulier/pluriel, reconnaissance Mandombe et illustrations — Leçon animaux-habitats
+# Créer 2 nouvelles leçons : "Keri" (retour/passé) et "Ta longoka mu zaba zonza" (pronoms & possession)
 
-## Résumé
+## Fichier modifié
+- `src/data/lessons.ts` — insertion de 2 leçons avant `];` (ligne 25047)
 
-Ajouter à la leçon `animaux-habitats` :
-- 4 nouveaux exercices sur les accords singulier/pluriel des classes nominales
-- 1 exercice de reconnaissance Mandombe supplémentaire ciblant les accords
-- Des illustrations générées par IA pour les animaux du vocabulaire
+---
 
-## Fichiers modifiés
+## Leçon 1 : `keri-kala` — "Keri — Being back / The past form"
 
-### 1. `src/data/lessons.ts`
+**Métadonnées :**
+- icon: 👍, level: intermediate
+- titleLari: "Keri na ba ngolo", titleMandombe: "Keri na ba ngolo"
 
-**a) Ajouter un champ optionnel `image` à `VocabItem` (ligne 7)**
-```typescript
-image?: string; // path to illustration image
-```
+**Vocabulaire (~10 entrées) :**
+Keri (tu es de retour), Kala (être de retour), Ngolo (force), Babakala (hommes), Bakento (femmes), Ngombe (bœuf), Hata (village/ville), Kampe (peut-être), Nzila (route), Tuila (élever)
 
-**b) Ajouter des images aux entrées vocabulaire de `animaux-habitats` (lignes 24536-24564)**
-- Utiliser les images existantes pour : `nioka-snake.jpg`, `ngongolo-caterpillar.jpg`
-- Générer via Lovable AI (~12 illustrations watercolor) pour : Nsusu (poule), Nkombo (chèvre), Tshindongo (mouton), Ngo (panthère), Ngombulu (lion), Nkabi (antilope), Mbulu (chacal), Tshimbungu (hyène), Tshibibu (gorille), Nguvu (hippopotame), Ngandu (crocodile), Nzau (éléphant), Mpakasa (buffle), Mpangu (grenouille), Lembe (cigogne), Tutu (souris)
+**Syntaxe (3 blocs) :**
+1. **Keri — forme passée de Kena (BA)** : Exemples avec Tata Nzonzi, Biebie, élevage de bœufs
+2. **Ba ngolo — Qualificatif avec "ba"** : Bantu ba ngolo, Babakala ba ngolo, Bakento ba ngolo + note sur la traduction littérale "de la force"
+3. **Hata dia di nene — Décrire une ville** : Nkayi hata dia di nene, Lubomo hata dia di nene, Nkayi mu nzila ya Lubomo kampe + note culturelle sur Biebie/Mbamu
 
-**c) 4 nouveaux exercices à insérer dans `animaux-habitats` (après ligne 24806)**
+**Phrases clés :**
+- Tata Nzonzi ngombe keri tuila.
+- Tata Nzonzi ngombe keri tuila ku Biebie.
+- Nkayi hata dia di nene.
+- Nkayi mu nzila ya Lubomo kampe.
 
-**Multiple-choice 1 — Accord yi/ji vs ka/bi :**
-"Quel accord utilise-t-on pour 'Tshindongo' (mouton) au singulier ?" → yi ba / **ka ba** / bi ba / wu ba (correct: 1)
+**Exercices (4) :**
 
-**Multiple-choice 2 — Accord di/ma :**
-"Comment dit-on 'Les souris habitent au village' ?" → Tutu ku hata di ba / **Matutu ku hata ma ba** / Tutu ku hata yi ba / Matutu ku hata ji ba (correct: 1)
+1. **Multiple-choice** : "D'où vient 'Keri' ?" → Kala / Kena / Kwiza / Kwenda (correct: 0, explication: Keri vient de Kala = être de retour, forme passée de BA)
 
-**Multiple-choice 3 — Accord wu/ba :**
-"Quel accord pour 'Muntu' (personne) au pluriel ?" → wu ba / ji ba / ma ba / **ba ba** (correct: 3)
+2. **Fill-in-blank** : "Bantu ______ ngolo = des personnes fortes" → `ba` (indice: particule de liaison pour les humains)
 
-**Matching — Accords par classe :**
-6 paires : Nsusu → yi/ji, Tshindongo → ka/bi, Lembe → di/ma, Muntu → wu/ba, Tshibibu → tshi/bi, Nkabi → ka/ji
+3. **Matching (5 paires)** : Keri↔Tu es de retour, Kala↔Être de retour, Ngombe↔Bœuf, Kampe↔Peut-être, Hata↔Village/ville
 
-**d) 1 exercice mandombe-recognition supplémentaire (accords) — 8 items :**
+4. **Mandombe-recognition (8 items)** :
+   - Keri (g2l), Kala (g2l), Babakala ba ngolo (g2l), Bakento ba ngolo (g2l)
+   - Ngombe (l2g), Nzila (l2g), Hata (l2g), Kampe (l2g)
 
-| Mandombe | Réponse | Distracteurs | Mode |
-|----------|---------|-------------|------|
-| Nkombo ku tshikaku yi sekela | yi sekela | ji sekela, ka sekela, ba sekela | glyph-to-latin |
-| Bindongo ku tshikaku bi sekela | bi sekela | ka sekela, yi sekela, ji sekela | glyph-to-latin |
-| Matutu ku hata ma ba | ma ba | di ba, yi ba, ba ba | glyph-to-latin |
-| Bibibu ku sangi bi ba | bi ba | tshi ba, yi ba, ji ba | glyph-to-latin |
-| Muntu ku hata wu ba | wu ba | ba ba, di ba, ka ba | latin-to-glyph |
-| Lembe ku mukobo di ba | di ba | ma ba, yi ba, ka ba | latin-to-glyph |
-| Ngo ku sangi ji ba | ji ba | yi ba, ka ba, bi ba | latin-to-glyph |
-| Tshimbungu ku mukobo tshi ba | tshi ba | bi ba, ka ba, yi ba | latin-to-glyph |
+---
 
-### 2. `src/pages/LessonDetail.tsx`
+## Leçon 2 : `pronoms-possession` — "Ta longoka mu zaba zonza"
 
-Modifier le rendu des cartes vocabulaire (lignes 134-145) pour afficher l'image si `item.image` est défini :
-```tsx
-{item.image && (
-  <img src={item.image} alt={item.lari} className="w-full h-32 object-cover rounded-t-lg mb-2" />
-)}
-```
+**Métadonnées :**
+- icon: 🗣️, level: beginner
+- titleLari: "Ta longoka mu zaba zonza", titleMandombe: "Ta longoka mu zaba zonza"
 
-### 3. Génération d'illustrations
+**Vocabulaire (~12 entrées) :**
+Me/Mono (je/moi), Nge (tu), Yandi (il/elle), Beto (nous), Beno (vous), Bawu (eux), Mwana (enfant), Tata (père), Yaya (aîné/e), Mama (mère), Nzo (maison), Mbele (couteau)
 
-Utiliser Lovable AI (google/gemini-3.1-flash-image-preview) pour générer ~14 illustrations watercolor d'animaux africains, style cohérent avec les illustrations existantes. Les sauvegarder dans `public/images/`.
+**Syntaxe (2 blocs) :**
+1. **Pronoms personnels** : Me(no), Nge, Yandi, Beto, Beno, Bawu + note sur l'omission fréquente
+2. **Particules possessives** : -ani (mon), -aku (ton), -andi (son), -eto (nos), -eno (vos), -awu (leurs) + exemples avec liaison : Mwana andi (mwanandi), Tata ani (tatani), Tata aku (tataku), Yaya ani (yayani) + note sur la liaison obligatoire à l'oral
 
-## Estimation
-- ~14 images à générer
-- ~5 exercices à ajouter
-- 2 fichiers à modifier (lessons.ts, LessonDetail.tsx)
-- 1 interface à étendre (VocabItem)
+**Phrases clés :**
+- Mwana andi = son enfant
+- Tata ani = mon père
+- Tata aku = ton père
+- Yaya ani = mon aîné(e)
+
+**Exercices (4) :**
+
+1. **Multiple-choice** : "Quelle particule signifie 'mon/ma/mes' ?" → -aku / **-ani** / -andi / -eto (correct: 1)
+
+2. **Fill-in-blank** : "Tata ______ = ton père" → `aku` (indice: particule possessive 2e personne)
+
+3. **Matching (6 paires)** : -ani↔Mon/ma, -aku↔Ton/ta, -andi↔Son/sa, -eto↔Nos, -eno↔Vos, -awu↔Leurs
+
+4. **Mandombe-recognition (8 items)** :
+   - Mwana andi (g2l), Tata ani (g2l), Yaya ani (g2l), Beto (g2l)
+   - Bawu (l2g), Nge (l2g), Yandi (l2g), Beno (l2g)
+
+---
+
+## Détail technique
+- Toutes les entrées trilingues (FR/EN/PT)
+- `as const` sur tous les types d'exercices
+- Notes culturelles sur Biebie, Mbamu, liaison phonétique
+- Insertion avant la fermeture `];` à la ligne 25047
 
