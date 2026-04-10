@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grille du Kilolaka — Mandombe</title>
+<style>
+@font-face {
+  font-family: 'Masono Mandombe';
+  src: url('./masono_mandombe-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: linear-gradient(135deg, #1a1207 0%, #2d1f0e 50%, #1a1207 100%);
+  color: #f5f0e8;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #fef86c;
+  margin-bottom: 8px;
+  font-family: 'Masono Mandombe', serif;
+  letter-spacing: 2px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #fea9af;
+  font-size: 0.95rem;
+  margin-bottom: 24px;
+  opacity: 0.85;
+}
+
+.legend {
+  max-width: 900px;
+  margin: 0 auto 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.legend span {
+  background: rgba(254,248,108,0.12);
+  border: 1px solid rgba(254,248,108,0.25);
+  border-radius: 6px;
+  padding: 3px 10px;
+  font-size: 0.75rem;
+  color: #fef86c;
+}
+
+.grid-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 20px;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 3px;
+  margin: 0 auto;
+  min-width: 1100px;
+}
+
+thead th {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: linear-gradient(180deg, #2d1f0e, #1a1207);
+  color: #fef86c;
+  font-size: 0.7rem;
+  padding: 8px 4px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 2px solid #fef86c33;
+  min-width: 85px;
+}
+
+thead th:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 11;
+  min-width: 60px;
+}
+
+.group-header {
+  position: sticky;
+  left: 0;
+  z-index: 5;
+  background: linear-gradient(90deg, #3a2a15, #2d1f0e);
+  color: #fea9af;
+  font-weight: bold;
+  font-size: 0.85rem;
+  padding: 6px 10px;
+  text-align: center;
+  min-width: 60px;
+  border-right: 2px solid #fea9af33;
+  font-family: 'Masono Mandombe', serif;
+}
+
+td.cell {
+  background: rgba(234,234,234,0.06);
+  border-radius: 8px;
+  padding: 8px 6px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  vertical-align: top;
+  min-width: 85px;
+  position: relative;
+}
+
+td.cell:hover {
+  background: rgba(254,248,108,0.15);
+  transform: scale(1.03);
+  box-shadow: 0 0 12px rgba(254,248,108,0.2);
+}
+
+td.cell.active {
+  background: linear-gradient(135deg, rgba(254,169,175,0.2), rgba(254,248,108,0.15));
+  box-shadow: 0 0 16px rgba(254,169,175,0.3);
+}
+
+.glyph {
+  font-family: 'Masono Mandombe', serif;
+  font-size: 1.6rem;
+  color: #fef86c;
+  display: block;
+  line-height: 1.2;
+  margin-bottom: 2px;
+}
+
+.latin {
+  font-size: 0.7rem;
+  color: #eaeaea;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.meaning {
+  display: none;
+  margin-top: 6px;
+  padding-top: 6px;
+  border-top: 1px solid rgba(254,169,175,0.3);
+  font-size: 0.65rem;
+  color: #fea9af;
+  line-height: 1.4;
+  animation: slideDown 0.3s ease;
+}
+
+td.cell.active .meaning {
+  display: block;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+td.empty-cell {
+  background: rgba(234,234,234,0.02);
+  border-radius: 8px;
+  min-width: 85px;
+}
+
+/* Color bands for groups */
+tr.band-0 td.cell { border-left: 3px solid #fef86c44; }
+tr.band-1 td.cell { border-left: 3px solid #fea9af44; }
+tr.band-2 td.cell { border-left: 3px solid #eaeaea33; }
+
+@media (max-width: 768px) {
+  body { padding: 10px; }
+  h1 { font-size: 1.4rem; }
+  .glyph { font-size: 1.3rem; }
+  td.cell { padding: 6px 4px; min-width: 75px; }
+  thead th { font-size: 0.6rem; min-width: 75px; }
+}
+</style>
+</head>
+<body>
+
+<h1>Kilolaka</h1>
+<p class="subtitle">Cliquez sur un glyphe pour révéler sa signification cachée</p>
+
+<div class="legend">
+  <span><b>i</b> = intérieur(e)</span>
+  <span><b>u</b> = qui porte vie</span>
+  <span><b>e</b> = qui reçoit</span>
+  <span><b>o</b> = ascensionnel(le)</span>
+  <span><b>a</b> = manifesté(e)</span>
+  <span><b>ie</b> = intérieur(e) qui reçoit</span>
+  <span><b>io</b> = intérieur(e) qui ascensionne</span>
+  <span><b>ia</b> = intérieur(e) manifesté(e)</span>
+  <span><b>iu</b> = intérieur(e) qui engendre</span>
+  <span><b>ue</b> = qui engendre et reçoit</span>
+  <span><b>ui</b> = qui engendre et internalise</span>
+  <span><b>ua</b> = qui engendre et manifeste</span>
+</div>
+
+<div class="grid-wrapper">
+  <table id="kilolaka-grid">
+    <thead>
+      <tr>
+        <th></th>
+        <th>i</th><th>u</th><th>e</th><th>o</th><th>a</th>
+        <th>ie</th><th>io</th><th>ia</th><th>iu</th>
+        <th>ue</th><th>ui</th><th>ua</th>
+      </tr>
+    </thead>
+    <tbody id="grid-body"></tbody>
+  </table>
+</div>
+
+<script>
+const VOWELS = ['i','u','e','o','a','ie','io','ia','iu','ue','ui','ua'];
+
+// Each group: [consonant, root meaning, available vowels (null = all 12), specific overrides]
+const GROUPS = [
+  ['B', 'être', null, {
+    'i':'être intérieur','u':'être qui porte vie','e':'être qui reçoit la vie','o':'être ascensionnel','a':'être manifesté',
+    'ie':'être intérieur qui reçoit la vie','io':'être intérieur qui ascensionne','ia':'être intérieur manifesté','iu':'être intérieur qui engendre',
+    'ue':'être qui engendre et reçoit la vie','ui':'être qui engendre et internalise','ua':'être qui engendre et manifeste'
+  }],
+  ['D', 'lumière', null, {
+    'i':'lumière intérieure','u':'lumière qui porte vie','e':'lumière qui reçoit','o':'lumière ascensionnelle','a':'lumière manifestée',
+    'ie':'lumière intérieure qui reçoit','io':'lumière intérieure qui ascensionne','ia':'lumière intérieure manifestée','iu':'lumière intérieure qui engendre',
+    'ue':'lumière qui engendre et reçoit','ui':'lumière qui engendre et internalise','ua':'lumière qui engendre et manifeste'
+  }],
+  ['F', 'vie après cette mort', null, {
+    'i':'vie après cette mort intérieure','u':'vie après cette mort qui porte vie','e':'vie après cette mort qui reçoit','o':'vie après cette mort ascensionnelle','a':'vie après cette mort manifestée',
+    'ie':'vie après cette mort intérieure qui reçoit','io':'vie après cette mort intérieure qui ascensionne','ia':'vie après cette mort intérieure manifestée','iu':'vie après cette mort intérieure qui engendre',
+    'ue':'vie après cette mort qui engendre et reçoit','ui':'vie après cette mort qui engendre et internalise','ua':'vie après cette mort qui engendre et manifeste'
+  }],
+  ['G', 'principe générateur', ['i','u','e','o','a','ie','io','ia','ue','ui','ua'], {
+    'i':'principe générateur intérieur','u':'principe générateur qui porte vie','e':'principe générateur qui reçoit','o':'principe générateur ascensionnel','a':'principe générateur manifesté',
+    'ie':'principe générateur intérieur qui reçoit','io':'principe générateur intérieur qui ascensionne','ia':'principe générateur intérieur manifesté',
+    'ue':'principe générateur qui engendre et reçoit','ui':'principe générateur qui engendre et internalise','ua':'principe générateur qui engendre et manifeste'
+  }],
+  ['MB', 'feu / multiplication de l\'être', ['i','u','e','o','a','ue','ui','ua'], {
+    'i':'feu intérieur','u':'feu qui porte vie','e':'feu qui reçoit','o':'feu ascensionnel','a':'feu manifesté',
+    'ue':'multiplication de l\'être qui engendre et reçoit','ui':'multiplication de l\'être qui engendre et internalise','ua':'multiplication de l\'être qui engendre et manifeste'
+  }],
+  ['MF', 'multiplication de la seconde mort', ['i','u','e','o','a','ue','ui','ua'], {
+    'i':'multiplication de la seconde mort intérieure','u':'multiplication de la seconde mort qui porte vie','e':'multiplication de la seconde mort qui reçoit','o':'multiplication de la seconde mort ascensionnelle','a':'multiplication de la seconde mort manifestée',
+    'ue':'multiplication de la seconde mort qui engendre et reçoit','ui':'multiplication de la seconde mort qui engendre et internalise','ua':'multiplication de la seconde mort qui engendre et manifeste'
+  }],
+  ['ND', 'vitesse de la lumière', null, {
+    'i':'vitesse de la lumière intérieure','u':'vitesse de la lumière qui porte vie','e':'vitesse de la lumière qui reçoit','o':'vitesse de la lumière ascensionnelle','a':'vitesse de la lumière manifestée',
+    'ie':'vitesse de la lumière intérieure qui reçoit','io':'vitesse de la lumière intérieure qui ascensionne','ia':'vitesse de la lumière intérieure manifestée','iu':'vitesse de la lumière intérieure qui engendre',
+    'ue':'vitesse de la lumière qui engendre et reçoit','ui':'vitesse de la lumière qui engendre et internalise','ua':'vitesse de la lumière qui engendre et manifeste'
+  }],
+  ['NG', 'soleil / conscience unique multiverselle', null, {
+    'i':'soleil intérieur','u':'soleil qui porte vie','e':'soleil qui reçoit','o':'soleil ascensionnel','a':'soleil manifesté',
+    'ie':'soleil intérieur qui reçoit','io':'soleil intérieur qui ascensionne','ia':'soleil intérieur manifesté','iu':'soleil intérieur qui engendre',
+    'ue':'conscience unique multiverselle qui engendre et reçoit','ui':'soleil qui engendre et internalise','ua':'soleil qui engendre et manifeste'
+  }],
+  ['N', 'conscience multiverselle', null, {
+    'i':'conscience multiverselle intérieure','u':'conscience multiverselle qui porte vie','e':'conscience multiverselle qui reçoit','o':'conscience multiverselle ascensionnelle','a':'conscience multiverselle manifestée',
+    'ie':'conscience multiverselle intérieure qui reçoit','io':'conscience multiverselle intérieure qui ascensionne','ia':'conscience multiverselle intérieure manifestée','iu':'conscience multiverselle intérieure qui engendre',
+    'ue':'conscience multiverselle qui engendre et reçoit','ui':'conscience multiverselle qui engendre et internalise','ua':'conscience multiverselle qui engendre et manifeste'
+  }],
+  ['S', 'travail', null, {
+    'i':'travail intérieur','u':'travail qui porte vie','e':'travail qui reçoit','o':'travail ascensionnel','a':'travail manifesté',
+    'ie':'travail intérieur qui reçoit','io':'travail intérieur qui ascensionne','ia':'travail intérieur manifesté','iu':'travail intérieur qui engendre',
+    'ue':'travail qui engendre et reçoit','ui':'travail qui engendre et internalise','ua':'travail qui engendre et manifeste'
+  }],
+  ['V', 'possession', null, {
+    'i':'possession intérieure','u':'possession qui engendre','e':'possession qui reçoit','o':'possession qui ascensionne','a':'possession qui manifeste',
+    'ie':'possession intérieure qui reçoit','io':'possession intérieure qui ascensionne','ia':'possession intérieure qui manifeste','iu':'possession intérieure qui engendre',
+    'ue':'possession qui engendre et reçoit','ui':'possession qui engendre et internalise','ua':'possession qui engendre et manifeste'
+  }],
+  ['T', 'parole', null, {
+    'i':'parole intérieure','u':'parole qui porte vie','e':'parole qui reçoit','o':'parole qui ascensionne','a':'parole qui manifeste',
+    'ie':'parole intérieure qui reçoit','io':'parole intérieure qui ascensionne','ia':'parole intérieure qui manifeste','iu':'parole intérieure qui engendre',
+    'ue':'parole qui porte vie et reçoit','ui':'parole qui porte vie et internalise','ua':'parole qui porte vie et manifeste'
+  }],
+  ['NT', 'parole de la conscience multiverselle', null, {
+    'i':'parole de la conscience multiverselle intérieure','u':'parole de la conscience multiverselle qui porte vie','e':'parole de la conscience multiverselle qui reçoit','o':'parole de la conscience multiverselle qui ascensionne','a':'parole de la conscience multiverselle manifestée',
+    'ie':'parole de la conscience multiverselle intérieure qui reçoit','io':'parole de la conscience multiverselle intérieure qui ascensionne','ia':'parole de la conscience multiverselle intérieure manifestée','iu':'parole de la conscience multiverselle intérieure qui engendre',
+    'ue':'parole de la conscience multiverselle qui engendre et reçoit','ui':'parole de la conscience multiverselle qui engendre et internalise','ua':'parole de la conscience multiverselle qui engendre et manifeste'
+  }],
+  ['NS', 'dimension', null, {
+    'i':'dimension intérieure','u':'dimension qui porte vie','e':'dimension qui reçoit','o':'dimension ascensionnelle','a':'dimension manifestée',
+    'ie':'dimension intérieure qui reçoit','io':'dimension intérieure qui ascensionne','ia':'dimension intérieure manifestée','iu':'dimension intérieure qui engendre',
+    'ue':'dimension qui engendre et reçoit','ui':'dimension qui engendre et internalise','ua':'dimension qui engendre et manifeste'
+  }],
+  ['MV', 'multiplication de la possession', ['i','u','e','o','a','io','ue','ui','ua'], {
+    'i':'multiplication de la possession intérieure','u':'multiplication de la possession qui porte vie','e':'multiplication de la possession qui reçoit','o':'multiplication de la possession ascensionnelle','a':'multiplication de la possession manifestée',
+    'io':'multiplication de la possession intérieure qui ascensionne',
+    'ue':'multiplication de la possession qui engendre et reçoit','ui':'multiplication de la possession qui engendre et internalise','ua':'multiplication de la possession qui engendre et manifeste'
+  }],
+  ['K', 'énergie, particule', null, {
+    'i':'énergie, particule intérieure','u':'énergie, particule qui engendre','e':'énergie, particule qui reçoit','o':'énergie, particule qui ascensionne','a':'énergie, particule manifestée',
+    'ie':'énergie, particule intérieure qui reçoit','io':'énergie intérieure ascensionnelle','ia':'énergie intérieure manifestée','iu':'énergie intérieure qui engendre',
+    'ue':'énergie qui engendre et reçoit','ui':'énergie qui engendre et internalise','ua':'énergie qui engendre et manifeste'
+  }],
+  ['L', 'connaissance profonde', null, {
+    'i':'connaissance profonde intérieure','u':'connaissance profonde qui engendre','e':'connaissance profonde qui reçoit','o':'connaissance profonde qui ascensionne','a':'connaissance profonde manifestée',
+    'ie':'connaissance profonde intérieure qui reçoit','io':'connaissance profonde ascensionnelle','ia':'connaissance profonde intérieure manifestée','iu':'connaissance profonde intérieure qui engendre',
+    'ue':'connaissance profonde qui engendre et reçoit','ui':'connaissance profonde qui engendre et internalise','ua':'connaissance profonde qui engendre et manifeste'
+  }],
+  ['M', 'multiplication', null, {
+    'i':'multiplication intérieure','u':'multiplication qui engendre','e':'multiplication qui reçoit','o':'multiplication qui ascensionne','a':'multiplication qui manifeste',
+    'ie':'multiplication intérieure qui reçoit','io':'multiplication intérieure qui ascensionne','ia':'multiplication intérieure manifestée','iu':'multiplication qui engendre et internalise',
+    'ue':'multiplication qui engendre et reçoit','ui':'multiplication qui engendre et internalise','ua':'multiplication qui engendre et manifeste'
+  }],
+  ['P', 'don', null, {
+    'i':'don intérieur','u':'don qui engendre','e':'don qui reçoit','o':'don ascensionnel','a':'don manifesté',
+    'ie':'don intérieur qui reçoit','io':'don intérieur qui ascensionne','ia':'don intérieur manifesté','iu':'don intérieur qui engendre',
+    'ue':'don qui engendre et reçoit','ui':'don qui engendre et internalise','ua':'don qui engendre et manifeste'
+  }],
+  ['MP', 'don (multiplicatif)', null, {
+    'i':'don intérieur','u':'don qui engendre','e':'don qui reçoit','o':'don ascensionnel','a':'don manifesté',
+    'ie':'don intérieur qui reçoit','io':'don intérieur qui ascensionne','ia':'don intérieur manifesté','iu':'don intérieur qui engendre',
+    'ue':'multiplication du don qui engendre et reçoit','ui':'don qui engendre l\'intériorité','ua':'don qui engendre la manifestation'
+  }],
+  ['NK', 'conscience multiverselle (énergie)', null, {
+    'i':'conscience multiverselle énergie intérieure','u':'conscience multiverselle énergie qui porte vie','e':'conscience multiverselle énergie qui reçoit','o':'conscience multiverselle énergie ascensionnelle','a':'conscience multiverselle énergie manifestée',
+    'ie':'conscience multiverselle énergie intérieure qui reçoit','io':'conscience multiverselle énergie intérieure qui ascensionne','ia':'conscience multiverselle énergie intérieure manifestée','iu':'conscience multiverselle énergie intérieure qui engendre',
+    'ue':'conscience multiverselle énergie qui engendre et reçoit','ui':'conscience multiverselle qui engendre l\'intériorité','ua':'conscience multiverselle qui engendre la manifestation'
+  }],
+  ['NL', 'conscience multiverselle connaissance profonde', ['i','u','e','o','a'], {
+    'i':'conscience multiverselle connaissance profonde intérieure','u':'conscience multiverselle connaissance profonde qui porte vie','e':'conscience multiverselle connaissance profonde qui reçoit','o':'conscience multiverselle connaissance profonde ascensionnelle','a':'conscience multiverselle connaissance profonde manifestée'
+  }],
+  ["N'K", 'conscience multiverselle énergie', ['i','u','e','o','a'], {
+    'i':'conscience multiverselle énergie intérieure','u':'conscience multiverselle énergie qui engendre','e':'conscience multiverselle énergie qui reçoit','o':'conscience multiverselle énergie ascensionnelle','a':'conscience multiverselle énergie manifestée'
+  }],
+  ['W', 'énergie spiralée', ['i','u','e','o','a','ue','ui','ua'], {
+    'i':'énergie spiralée intérieure','u':'énergie spiralée qui engendre','e':'énergie spiralée qui reçoit','o':'énergie spiralée ascensionnelle','a':'énergie spiralée manifestée',
+    'ue':'énergie spiralée qui engendre et reçoit','ui':'énergie spiralée qui engendre et internalise','ua':'énergie spiralée qui engendre et manifeste'
+  }],
+  ['R', 'soleil', ['i','u','e','o','a','ue','ui','ua'], {
+    'i':'soleil intérieur','u':'soleil qui engendre','e':'soleil qui reçoit','o':'soleil ascensionnel','a':'soleil manifesté',
+    'ue':'soleil qui engendre et reçoit','ui':'soleil qui engendre et internalise','ua':'soleil qui engendre et manifeste'
+  }],
+  ['Z', 'connaissance dynamique', null, {
+    'i':'connaissance dynamique intérieure','u':'connaissance dynamique qui engendre','e':'connaissance dynamique qui reçoit','o':'connaissance dynamique ascensionnelle','a':'connaissance dynamique manifestée',
+    'ie':'connaissance dynamique intérieure qui reçoit','io':'connaissance dynamique intérieure ascensionnelle','ia':'connaissance dynamique intérieure manifestée','iu':'connaissance dynamique intérieure qui engendre',
+    'ue':'connaissance dynamique qui engendre et reçoit','ui':'connaissance dynamique qui engendre et internalise','ua':'connaissance dynamique qui engendre et manifeste'
+  }],
+  ['Y', 'feu', null, {
+    'i':'feu intérieur','u':'feu qui porte vie','e':'feu qui reçoit','o':'feu ascensionnel','a':'feu manifesté',
+    'ie':'feu intérieur qui reçoit','io':'feu intérieur qui ascensionne','ia':'feu intérieur qui manifeste','iu':'feu intérieur qui engendre',
+    'ue':'feu qui engendre et reçoit','ui':'feu qui engendre et internalise','ua':'feu qui engendre et manifeste'
+  }],
+  ['NY', 'conscience multiverselle du feu', ['i','u','e','o','a'], {
+    'i':'conscience multiverselle qui habite le feu intérieur','u':'conscience multiverselle qui habite le feu qui porte vie','e':'conscience multiverselle qui habite le feu qui reçoit','o':'conscience multiverselle qui habite le feu qui ascensionne','a':'conscience multiverselle qui habite le feu qui manifeste'
+  }],
+  ['NZ', 'conscience multiverselle de la connaissance dynamique', ['i','u','e','o','a','ie','io','ia','iu'], {
+    'i':'conscience multiverselle qui habite la connaissance dynamique intérieure','u':'conscience multiverselle qui habite la connaissance dynamique qui porte vie','e':'conscience multiverselle qui habite la connaissance dynamique en état de réception','o':'conscience multiverselle qui habite la connaissance dynamique ascensionnelle','a':'conscience multiverselle qui habite la connaissance dynamique manifestée',
+    'ie':'conscience multiverselle qui habite la connaissance dynamique intérieure qui reçoit','io':'conscience multiverselle qui habite la connaissance dynamique intérieure ascensionnelle','ia':'conscience multiverselle qui habite la connaissance dynamique intérieure manifestée','iu':'conscience multiverselle qui habite la connaissance dynamique intérieure qui engendre'
+  }],
+  ['MW', 'multiplication du principe de la spirale', ['i','u','e','o','a'], {
+    'i':'multiplication du principe de la spirale intérieure','u':'multiplication du principe de la spirale qui porte vie','e':'multiplication du principe de la spirale qui reçoit','o':'multiplication du principe de la spirale ascensionnelle','a':'multiplication du principe de la spirale manifestée'
+  }],
+  ['SH', 'ante-énergie du travail', ['i','u','e','o','a','ue','ui','ua'], {
+    'i':'ante-énergie du travail intérieur','u':'ante-énergie du travail qui porte vie','e':'ante-énergie du travail qui reçoit','o':'ante-énergie du travail ascensionnel','a':'ante-énergie du travail manifesté',
+    'ue':'ante-énergie du travail qui engendre et reçoit','ui':'ante-énergie du travail qui engendre et internalise','ua':'ante-énergie du travail qui engendre et manifeste'
+  }],
+  ['DJ', 'anté-énergie de la lumière et de la connaissance', ['i','u','e','o','a','ue','ui','ua'], {
+    'i':'anté-énergie de la lumière et de la connaissance intérieure','u':'anté-énergie de la lumière et de la connaissance qui engendre','e':'anté-énergie de la lumière et de la connaissance en état de réception','o':'anté-énergie de la lumière et de la connaissance ascensionnelle','a':'anté-énergie de la lumière et de la connaissance manifestée',
+    'ue':'anté-énergie de la lumière et de la connaissance qui engendre et reçoit','ui':'anté-énergie de la lumière et de la connaissance qui engendre et internalise','ua':'anté-énergie de la lumière et de la connaissance qui engendre et manifeste'
+  }],
+  ['TSH', 'ante-énergie', ['i','u','e','o','a','ue','ui','ua'], {
+    'i':'ante-énergie intérieure','u':'ante-énergie qui engendre','e':'ante-énergie qui réceptionne','o':'ante-énergie qui ascensionne','a':'ante-énergie qui se manifeste',
+    'ue':'ante-énergie qui engendre et reçoit','ui':'ante-énergie qui engendre et internalise','ua':'ante-énergie qui engendre et manifeste'
+  }],
+  ['J', 'ante-énergie de la connaissance dynamique', ['i','u','e','o','a','ue','ui','ua'], {
+    'i':'ante-énergie de la connaissance dynamique intérieure','u':'ante-énergie de la connaissance dynamique qui porte la vie','e':'ante-énergie de la connaissance dynamique réceptionnée','o':'ante-énergie de la connaissance dynamique ascensionnelle','a':'ante-énergie de la connaissance dynamique manifestée',
+    'ue':'ante-énergie de la connaissance dynamique qui engendre et reçoit','ui':'ante-énergie de la connaissance dynamique qui engendre et internalise','ua':'ante-énergie de la connaissance dynamique qui engendre et manifeste'
+  }]
+];
+
+function buildGrid() {
+  const tbody = document.getElementById('grid-body');
+  GROUPS.forEach(([cons, rootMeaning, availableVowels, meanings], gi) => {
+    const tr = document.createElement('tr');
+    tr.className = 'band-' + (gi % 3);
+    
+    // Group header
+    const thCell = document.createElement('td');
+    thCell.className = 'group-header';
+    thCell.innerHTML = `<span style="font-family:'Masono Mandombe',serif;font-size:1.2rem;display:block">${cons}</span><span style="font-size:0.6rem;opacity:0.7;display:block;margin-top:2px;font-family:sans-serif">${cons}</span>`;
+    thCell.title = rootMeaning;
+    tr.appendChild(thCell);
+
+    const allowed = availableVowels || VOWELS;
+
+    VOWELS.forEach(v => {
+      if (!allowed.includes(v)) {
+        const empty = document.createElement('td');
+        empty.className = 'empty-cell';
+        tr.appendChild(empty);
+        return;
+      }
+
+      const syllable = cons.toLowerCase() + v;
+      const meaning = meanings[v] || `${rootMeaning} ${getVowelModifier(v)}`;
+      
+      const td = document.createElement('td');
+      td.className = 'cell';
+      td.innerHTML = `
+        <span class="glyph">${syllable}</span>
+        <span class="latin">${syllable}</span>
+        <div class="meaning">${meaning}</div>
+      `;
+      td.onclick = function() { this.classList.toggle('active'); };
+      tr.appendChild(td);
+    });
+
+    tbody.appendChild(tr);
+  });
+}
+
+function getVowelModifier(v) {
+  const mods = {
+    'i':'intérieur(e)','u':'qui porte vie','e':'qui reçoit','o':'ascensionnel(le)','a':'manifesté(e)',
+    'ie':'intérieur(e) qui reçoit','io':'intérieur(e) qui ascensionne','ia':'intérieur(e) manifesté(e)','iu':'intérieur(e) qui engendre',
+    'ue':'qui engendre et reçoit','ui':'qui engendre et internalise','ua':'qui engendre et manifeste'
+  };
+  return mods[v] || v;
+}
+
+buildGrid();
+</script>
+</body>
+</html>
