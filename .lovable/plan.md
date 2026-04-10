@@ -1,75 +1,45 @@
 
 
-# Créer 2 nouvelles leçons : "Kue? = Where?" et compléments grammaticaux
+# Grille interactive Kilolaka — Tableau des glyphes Mandombe avec significations cachées
 
-## Fichier modifié
-- `src/data/lessons.ts` — insertion de 2 leçons avant `];` (ligne 25345)
+## Résumé
 
----
+Créer un fichier HTML interactif (`public/kilolaka_grille.html`) contenant l'intégralité des glyphes Mandombe organisés par consonnes, avec leurs significations cachées révélées au clic. Intégrer ce tableau dans la section Kilolaka de la page d'accueil via une iframe ou un composant dédié.
 
-## Leçon 1 : `kue-where` — "Kue? = Where?"
+## Fichiers créés / modifiés
 
-**Métadonnées :**
-- icon: ❓, level: beginner
-- titleLari: "Kue?", titleMandombe: "Kue?"
+### 1. `public/kilolaka_grille.html` (nouveau)
 
-**Vocabulaire (~20 entrées) :**
-Kue (où), Vumbuka (aller bien / se réveiller), Nzonzolo (façon de parler), Bambuka (se souvenir), Muntu (personne), Nto (rivière), Mamba (eau), Mwana (enfant), Buyele (intelligent), Djuna (calme), Kinzu/Binzu (marmite en terre), Lukaya (feuille), Bima (nourriture), Tolo (sommeil), Baka (gagner/attraper/trouver), Tabuka (casser), Bua (tomber), Ya/Yiri (cuire/brûler), Tata (brûler/cuire)
+Fichier HTML autonome avec :
+- **~35 groupes consonantiques** (B, D, F, G, MB, MF, ND, NG, N, S, V, T, NT, NS, MV, K, L, M, P, MP, NK, NL, N'K, W, R, Z, Y, NY, NZ, MW, SH, DJ, TSH, J, NI, SI, TI, NTI) × 12 colonnes voyelles (i, u, e, o, a, ie, io, ia, iu, ue, ui, ua)
+- **Interaction** : chaque cellule montre le glyphe Mandombe (font-mandombe) + translitération latine. Au clic, la signification cachée apparaît/disparaît en slide-down
+- **Complétion des significations manquantes** : suivre le modèle systématique du document (chaque consonne a un sens racine, chaque voyelle un modificateur : i=intérieur, u=qui porte vie/engendre, e=qui reçoit, o=ascensionnel, a=manifesté, ie=intérieur qui reçoit, io=intérieur qui ascensionne, ia=intérieur manifesté, iu=intérieur qui engendre, ue=qui engendre et reçoit, ui=qui engendre et internalise, ua=qui engendre et manifeste)
+- **Palette de couleurs** : dégradés de #fef86c (jaune), #eaeaea (gris clair), #fea9af (rose) avec alternance par groupe
+- **Responsive** : scroll horizontal sur mobile, taille de police adaptative
+- **Police Mandombe** : chargée via `@font-face` depuis les assets existants du projet
 
-**Syntaxe (6 blocs) :**
+### 2. `src/components/KilolakaPreview.tsx` (modifié)
 
-1. **Kue? — Pronoms interrogatifs locatifs** :
-   - Kue nge? = Où suis-je?, Kue we? = Où es-tu?, Kue ke? = Où est-il/elle?, Kue tue? = Où sommes-nous?, Kue lue? = Où êtes-vous?, Kue be? = Où sont-ils/elles?
+Ajouter après les séries premium (F, D, G) un bouton/lien "Explorer la Grille complète du Kilolaka" qui ouvre le tableau interactif :
+- Option A : iframe intégrée dans la section Kilolaka
+- Option B : lien vers une nouvelle route `/kilolaka-grille`
 
-2. **Vumbuka — Conjugaison au passé** :
-   - Mvumbukiri = je vais bien, Vumbukiri = tu vas bien, vumbukiri = il/elle va bien, Tu vumbukiri = nous allons bien, Lu vumbukiri = vous allez bien, Ba vumbukiri = ils/elles vont bien
-   - Note: Parfois prononcé /vumbukidi/
+Je choisirai l'option **iframe** intégrée directement dans la section, accessible via un bouton toggle pour ne pas alourdir la page.
 
-3. **Bambuka — Se souvenir & forme négative** :
-   - Mbambukiri = je me souviens
-   - Ka ni ta bambuka ko = je ne me souviens pas, Ku ta bambuka ko, Ka ta bambuka ko, Ka tu ta bambuka ko, Ka lu ta bambuka ko, Ka ba ta bambuka ko
-   - Note: Structure négative Ka...ko
+### 3. Logique de complétion des significations
 
-4. **Démonstratifs et adjectifs** :
-   - Muntu wu = cette personne, Nto yi = cette rivière, Mamba ma = cette eau
-   - Mwana buyele we = Cet enfant est intelligent, We na buyele = il/elle est intelligent(e), Wa djuna = il/elle est calme
+Racines consonantiques extraites du document :
+- B = être, D = lumière, F = vie après cette mort, G = principe générateur, MB = feu/multiplication de l'être, MF = multiplication de la seconde mort, ND = vitesse de la lumière, NG = soleil, N = conscience multiverselle, S = travail, V = possession, T = parole, NT = parole de la conscience multiverselle, NS = dimension, MV = multiplication de la possession, K = énergie/particule, L = connaissance profonde, M = multiplication, P = don, MP = don (multiplicatif), NK = conscience multiverselle (énergie), NL = conscience multiverselle connaissance profonde, N'K = conscience multiverselle énergie, W = énergie spiralée, R = soleil, Z = connaissance dynamique, Y = feu, NY = conscience multiverselle du feu, NZ = conscience multiverselle de la connaissance dynamique, MW = multiplication de la spirale, SH = ante-énergie du travail, DJ = ante-énergie de la lumière et connaissance, TSH = ante-énergie, J = ante-énergie de la connaissance dynamique, NI = conscience multiverselle, SI = travail, VI = possession, TI = parole, NTI = parole de la conscience multiverselle
 
-5. **États et résultats (stative)** :
-   - Kinzu ki tabukidi = La marmite est cassée, Binzu bi tabukidi = Les marmites sont cassées
-   - Lukaya lu buidi = La feuille est tombée
-   - Bima bi yiri = La nourriture est prête, Bima bi tatiri = La nourriture a brûlé
-   - Ba muntu = Sois humain
-   - Ntomono dia / Ntomene dia / Ndiri bu bote = j'ai bien mangé
+Modificateurs voyelles (colonnes) :
+- i = intérieur(e), u = qui porte vie / qui engendre, e = qui reçoit, o = ascensionnel(le), a = manifesté(e), ie = intérieur(e) qui reçoit, io = intérieur(e) qui ascensionne, ia = intérieur(e) manifesté(e), iu = intérieur(e) qui engendre, ue = qui engendre et reçoit, ui = qui engendre et internalise, ua = qui engendre et manifeste
 
-6. **Tolo tua bakiri? — Idiome du sommeil** :
-   - Tolo tua mbakiri? = Ai-je bien dormi?, Tolo tua bakiri?, Tolo tua ka bakiri?, Tolo tua tu bakiri?, Tolo tua lu bakiri?, Tolo tua ba bakiri?
-   - Note: BAKA polysémique (gagner, attraper, trouver). Idiome littéral: "as-tu attrapé le sommeil?"
-
-**Exercices (4) :**
-
-1. **Multiple-choice** : "Quel type d'extension verbale est '-uka' dans 'Vumbuka' ?" → Applicative (-ela) / Causative (-esa) / **Reversive passive (-uka)** / Reciprocal (-ana) (correct: 2)
-   - Explication: -uka est l'extension réversive passive, indiquant le résultat d'un changement d'état
-
-2. **Fill-in-blank** : "Vumb______ = se réveiller / aller bien" → `uka` (indice: extension réversive passive)
-
-3. **Matching (6 paires)** : Kue nge?↔Où suis-je?, Mvumbukiri↔Je vais bien, Mbambukiri↔Je me souviens, Kinzu ki tabukidi↔La marmite est cassée, Tolo↔Sommeil, Baka↔Attraper/gagner
-
-4. **Mandombe-recognition (8 items)** :
-   - Mvumbukiri (g2l), Kue we? (g2l), Mbambukiri (g2l), Kinzu ki tabukidi (g2l)
-   - Tolo tua bakiri? (l2g), Bima bi yiri (l2g), Lukaya lu buidi (l2g), Ka ni ta bambuka ko (l2g)
-
----
-
-## Leçon 2 : `kue-demonstratifs` — "Muntu wu, Nto yi — Demonstratives & States"
-
-Cette leçon n'est PAS nécessaire — tout le contenu tient dans la leçon 1 ci-dessus qui est déjà riche. Le contenu sera regroupé en une seule leçon `kue-where`.
-
----
+Chaque cellule vide sera complétée par : `[racine consonantique] + [modificateur voyelle]`.
 
 ## Détail technique
-- Toutes les entrées trilingues (FR/EN/PT)
-- `as const` sur tous les types d'exercices
-- Vocabulaire strictement issu du matériel fourni (aucune invention)
-- Notes culturelles/linguistiques (polysémie de BAKA, prononciation /ndje/, /vumbukidi/, structure négative Ka...ko)
-- Insertion avant `];` à la ligne 25345
+- HTML/CSS/JS pur dans le fichier HTML (pas de dépendances React)
+- La police Mandombe sera référencée via chemin relatif `./masono_mandombe-webfont.ttf` (ou le chemin existant du projet)
+- Chaque cellule utilise `data-meaning` pour stocker la signification, un `onclick` toggle la visibilité
+- CSS Grid ou table HTML avec `position: sticky` pour les en-têtes
+- Animations CSS pour le reveal (opacity + max-height transition)
 
