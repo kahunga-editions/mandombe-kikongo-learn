@@ -129,7 +129,7 @@ const KilolakaPreview = () => {
           </button>
 
           {showGrid && (
-            <div className="mt-6 rounded-xl overflow-hidden border border-gold/20" style={{ height: '70vh' }}>
+            <div className="mt-6 rounded-xl border border-gold/20" style={{ height: '80vh' }}>
               <iframe
                 src="/kilolaka_grille.html"
                 title="Grille interactive du Kilolaka"
