@@ -116,7 +116,12 @@ td.cell {
   transition: all 0.25s ease;
   vertical-align: middle;
   min-width: 85px;
+  min-height: 70px;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 td.cell:hover {
@@ -134,9 +139,9 @@ td.cell.active {
   font-family: 'Masono Mandombe', serif;
   font-size: 2.2rem;
   color: #fef86c;
-  display: block;
-  line-height: 2;
-  margin: 0 auto 2px auto;
+  text-align: center;
+  width: 100%;
+  line-height: 1.2;
   overflow: visible;
 }
 
