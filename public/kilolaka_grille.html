@@ -383,6 +383,11 @@ const GROUPS = [
   }]
 ];
 
+function toFontSyllable(cons, vowel) {
+  const fontCons = cons.charAt(0).toUpperCase() + cons.slice(1).toLowerCase();
+  return fontCons + vowel;
+}
+
 function buildGrid() {
   const tbody = document.getElementById('grid-body');
   GROUPS.forEach(([cons, rootMeaning, availableVowels, meanings], gi) => {
@@ -406,7 +411,7 @@ function buildGrid() {
         return;
       }
 
-      const syllable = cons + v;
+      const syllable = toFontSyllable(cons, v);
       const meaning = meanings[v] || `${rootMeaning} ${getVowelModifier(v)}`;
       
       const td = document.createElement('td');
