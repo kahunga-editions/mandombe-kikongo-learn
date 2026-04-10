@@ -1,14 +1,12 @@
 
 
-# Retirer la translitération latine de la grille Kilolaka
+# Centrer les glyphes dans chaque case de la grille Kilolaka
 
 ## Modification : `public/kilolaka_grille.html`
 
-**2 changements :**
+Changer `vertical-align: top` → `vertical-align: middle` sur `td.cell` (ligne 117), et ajouter `display: flex; align-items: center; justify-content: center; flex-direction: column;` pour un centrage parfait du contenu. Alternativement, le plus simple : juste passer à `vertical-align: middle` et s'assurer que `.glyph` a `margin: 0 auto`.
 
-1. **Ligne 415** : Supprimer `<span class="latin">${syllable}</span>` du innerHTML des cellules — ne garder que le glyphe et la signification cachée.
-
-2. **Ligne 394** : Dans le header de groupe, supprimer le `<span>` latin en doublon (le petit texte sous le glyphe consonantique) — ne garder que le glyphe Mandombe.
-
-Résultat : chaque cellule affiche uniquement le glyphe Mandombe. Au clic, seule la signification apparaît. La translitération latine est visible dans l'en-tête du tableau (colonnes voyelles) et dans la signification révélée, ce qui suffit pour la lecture.
+**Changements concrets :**
+1. **Ligne 117** : `vertical-align: top;` → `vertical-align: middle;`
+2. **Ligne 139** : Ajouter `margin: 0 auto;` sur `.glyph` pour centrage horizontal explicite
 
