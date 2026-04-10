@@ -25080,6 +25080,9 @@ export const lessons: Lesson[] = [
         explanationPt: "Keri é a forma passada de Kena, que vem do verbo BA (ser/estar). Significa 'estava de volta' ou indica uma ação habitual no passado.",
         groups: [
           {
+            title: "Tata Nzonzi & Biebie",
+            titleFr: "Tata Nzonzi & Biebie",
+            titlePt: "Tata Nzonzi & Biebie",
             examples: [
               { lari: "Tata Nzonzi ngombe keri tuila.", mandombe: "Tata Nzonzi ngombe keri tuila.", french: "Tata Nzonzi élevait des bœufs.", english: "Tata Nzonzi used to raise oxen.", portuguese: "Tata Nzonzi criava bois." },
               { lari: "Tata Nzonzi ngombe keri tuila ku Biebie.", mandombe: "Tata Nzonzi ngombe keri tuila ku Biebie.", french: "Tata Nzonzi élevait des bœufs à Biebie.", english: "Tata Nzonzi used to raise oxen in Biebie.", portuguese: "Tata Nzonzi criava bois em Biebie." },
@@ -25100,6 +25103,9 @@ export const lessons: Lesson[] = [
         explanationPt: "A partícula 'ba' liga um substantivo a um qualificativo. Literalmente 'pessoas da força'. 'Ba ngolo' = forte(s).",
         groups: [
           {
+            title: "Examples",
+            titleFr: "Exemples",
+            titlePt: "Exemplos",
             examples: [
               { lari: "Bantu ba ngolo", mandombe: "Bantu ba ngolo", french: "Des personnes fortes", english: "Strong people", portuguese: "Pessoas fortes" },
               { lari: "Babakala ba ngolo", mandombe: "Babakala ba ngolo", french: "Des hommes forts", english: "Strong men", portuguese: "Homens fortes" },
@@ -25118,6 +25124,9 @@ export const lessons: Lesson[] = [
         explanationPt: "Use 'hata dia di nene' para dizer que uma cidade/aldeia é grande. 'Kampe' significa 'talvez'.",
         groups: [
           {
+            title: "Examples",
+            titleFr: "Exemples",
+            titlePt: "Exemplos",
             examples: [
               { lari: "Nkayi hata dia di nene.", mandombe: "Nkayi hata dia di nene.", french: "Nkayi est un grand village.", english: "Nkayi is a big town.", portuguese: "Nkayi é uma grande cidade." },
               { lari: "Lubomo hata dia di nene.", mandombe: "Lubomo hata dia di nene.", french: "Lubomo est une grande ville.", english: "Lubomo is a big city.", portuguese: "Lubomo é uma grande cidade." },
@@ -25220,6 +25229,9 @@ export const lessons: Lesson[] = [
         explanationPt: "Os pronomes pessoais são frequentemente omitidos em Lari, pois o contexto geralmente permite determinar de quem se fala.",
         groups: [
           {
+            title: "Pronoun list",
+            titleFr: "Liste des pronoms",
+            titlePt: "Lista de pronomes",
             examples: [
               { lari: "Me / Mono", mandombe: "Me", french: "Je, moi", english: "I, me", portuguese: "Eu, mim" },
               { lari: "Nge", mandombe: "Nge", french: "Tu, toi", english: "You", portuguese: "Tu, você" },
@@ -25241,6 +25253,9 @@ export const lessons: Lesson[] = [
         explanationPt: "As partículas possessivas são sufixadas ao substantivo. É necessário fazer a ligação fonética ao falar: 'Tata ani' pronuncia-se /tatani/, 'Mwana andi' pronuncia-se /mwanandi/.",
         groups: [
           {
+            title: "Particle list",
+            titleFr: "Liste des particules",
+            titlePt: "Lista de partículas",
             examples: [
               { lari: "-ani", mandombe: "-ani", french: "Mon, ma, mes, à moi", english: "My, mine", portuguese: "Meu, minha, meus" },
               { lari: "-aku", mandombe: "-aku", french: "Ton, ta, tes, à toi", english: "Your, yours (sg.)", portuguese: "Teu, tua, teus" },
@@ -25251,6 +25266,9 @@ export const lessons: Lesson[] = [
             ],
           },
           {
+            title: "Liaison examples",
+            titleFr: "Exemples de liaison",
+            titlePt: "Exemplos de ligação",
             description: "Examples with phonetic liaison",
             descriptionFr: "Exemples avec liaison phonétique",
             descriptionPt: "Exemplos com ligação fonética",
