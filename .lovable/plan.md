@@ -1,32 +1,26 @@
 
 
-# Corriger la prononciation du "j" Lari dans le TTS
+# Ajouter des échantillons de prosodie à la voix clonée
 
-## Problème
-"Mbaji kua" sonne mal — le modèle TTS ne prononce pas le `j` comme /ʒ/. En Lari, `j` = /ʒ/ (comme le français "jour"), et les locuteurs alternent souvent entre `j` et `z` pour ce son.
+## Contexte
+Les 4 fichiers audio uploadés sont des exemples de locuteurs natifs Lari — pas liés aux leçons, mais destinés à enrichir la voix clonée (`rfRMgjypJCXUzWdJfLMs`) avec une meilleure prosodie et intonation.
 
 ## Solution
-Dans la fonction `convertWord()` de l'edge function, remplacer `j` par `j` français explicitement — ou mieux, par `ge`/`gi` selon la voyelle suivante, car en français :
-- `j` devant `i` = /ʒi/ ✓ (déjà bon)
-- `j` devant `a` = /ʒa/ ✓ (déjà bon)
+Utiliser l'API ElevenLabs **Edit Voice** (`POST /v1/voices/{voice_id}/edit`) pour ajouter ces échantillons audio à la voix existante. Cela permettra au modèle d'apprendre la prosodie naturelle du Lari à partir de ces enregistrements supplémentaires.
 
-Cependant, si le modèle ElevenLabs avec la voix clonée ne respecte pas le `j` français, on peut forcer en utilisant `z` comme l'utilisateur le suggère — car en français `z` = /z/, pas /ʒ/... mais avec la voix clonée Lari, le `z` pourrait mieux déclencher le /ʒ/ natif.
+## Plan technique
 
-**Approche retenue** : ajouter une règle `j` → `j` (garder tel quel pour le français, c'est déjà /ʒ/) mais aussi tester avec `z` comme fallback. On va d'abord tester les deux variantes via curl pour voir laquelle sonne mieux, puis appliquer la meilleure.
+### 1. Créer une edge function `elevenlabs-add-samples`
+- Endpoint : `POST /v1/voices/{voice_id}/edit`
+- Reçoit des fichiers audio en multipart form data
+- Ajoute les fichiers comme échantillons supplémentaires à la voix clonée existante
+- Utilise le voice ID `rfRMgjypJCXUzWdJfLMs` par défaut
 
-## Plan
+### 2. Appeler la fonction avec les 4 fichiers uploadés
+- Copier les fichiers uploadés dans le sandbox
+- Envoyer les 4 MP3 via curl à l'edge function
+- Vérifier que les échantillons sont bien ajoutés
 
-### 1. Tester les deux prononciations
-- Appeler l'edge function avec "Mbaji kou-a" (actuel) vs "Mbazi kou-a" pour comparer
-- Vérifier dans les logs quelle transformation est appliquée
-
-### 2. Mettre à jour la règle dans l'edge function
-- Dans `convertWord()`, ajouter une règle : `j` → `z` (puisque les locuteurs Lari alternent et que `z` pourrait mieux fonctionner avec le modèle)
-- Alternative : essayer `j` → `ge` devant voyelle si `z` ne donne pas /ʒ/
-
-### 3. Redéployer et valider
-- Tester avec "Mbaji kua", "Nkokela kua", "Mbote" pour confirmer
-
-## Fichier modifié
-- `supabase/functions/elevenlabs-tts-lari/index.ts` — ajouter règle `j` → `z` dans `convertWord()`
+## Fichiers créés/modifiés
+- `supabase/functions/elevenlabs-add-samples/index.ts` — nouvelle edge function
 
