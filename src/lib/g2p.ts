@@ -25,7 +25,7 @@ const IPA_MAP: Record<string, string> = {
   sh: "ʃ", ch: "t͡ʃ",
   // Simple consonants
   b: "b", d: "d", f: "f", g: "g",
-  k: "k", l: "l", m: "m", n: "n",
+  j: "ʒ", k: "k", l: "l", m: "m", n: "n",
   p: "p", r: "r", s: "s", t: "t",
   v: "v", w: "w", y: "j", z: "z",
   h: "h",
@@ -50,7 +50,7 @@ const BANTU_MAP: Record<string, string> = {
   ts: "ts", dz: "dz", pf: "pf", bv: "bv",
   sh: "sh", ch: "ch",
   b: "b", d: "d", f: "f", g: "g",
-  k: "k", l: "l", m: "m", n: "n",
+  j: "j", k: "k", l: "l", m: "m", n: "n",
   p: "p", r: "r", s: "s", t: "t",
   v: "v", w: "w", y: "y", z: "z",
   h: "h",
