@@ -1,29 +1,36 @@
 
 
-# Mettre à jour la clé ElevenLabs et envoyer les échantillons
+# Ajouter l'audio TTS partout + adoucir la voix
 
-## Problème actuel
-Le flux de reconnexion du connecteur ElevenLabs ne fonctionne pas correctement. L'utilisateur a sa nouvelle clé API avec la permission "Voices Write" et souhaite la fournir directement.
+## Résumé
+Intégrer le composant `MandombeSpeaker` dans l'histoire (StoryPreview) et le Kilolaka, et adoucir les réglages de la voix clonée.
 
-## Solution alternative
-Puisque le secret `ELEVENLABS_API_KEY` est géré par un connecteur, on ne peut pas le remplacer via l'outil `add_secret`. Mais on peut contourner cela en stockant la nouvelle clé sous un **nom différent** (ex: `ELEVENLABS_VOICES_KEY`) et modifier l'edge function `elevenlabs-add-samples` pour utiliser ce nouveau secret.
+## Changements
 
-## Étapes
+### 1. Adoucir la voix clonée
+**Fichier**: `supabase/functions/elevenlabs-tts-lari/index.ts`
+- Augmenter `stability` de 0.5 → 0.65 (plus douce, moins variable)
+- Réduire `style` de 0.3 → 0.15 (moins d'exagération)
+- Réduire `speed` de 0.92 → 0.88 (légèrement plus lent = plus doux)
+- Désactiver `use_speaker_boost` (moins agressif)
 
-### 1. Demander la clé API à l'utilisateur
-- Utiliser l'outil `add_secret` pour créer un nouveau secret `ELEVENLABS_VOICES_KEY` avec la clé qui a la permission Voices Write
+### 2. Ajouter audio à l'histoire (StoryPreview)
+**Fichier**: `src/components/StoryPreview.tsx`
+- Importer `MandombeSpeaker`
+- Dans le composant `ComicPanel`, ajouter un petit icône speaker à côté du texte Lari
+- Le `lariText` sera la phrase Lari complète du panneau
 
-### 2. Modifier l'edge function `elevenlabs-add-samples`
-- Changer la variable d'environnement utilisée : `ELEVENLABS_VOICES_KEY` au lieu de `ELEVENLABS_API_KEY`
+### 3. Ajouter audio au Kilolaka
+**Fichier**: `src/components/KilolakaPreview.tsx`
+- Importer `MandombeSpeaker`
+- Pour chaque syllabe/morphème (Ki, Lo, La, Ka, Bi, Bu, etc.), ajouter un petit icône speaker au-dessus du glyphe Mandombe
+- Idem pour les séries F, D, G dans la section premium
 
-### 3. Déployer et envoyer les 4 échantillons audio
-- Copier les 4 MP3 uploadés dans `/tmp/`
-- Appeler l'edge function via curl avec les 4 fichiers
-- Voice ID cible : `rfRMgjypJCXUzWdJfLMs`
-
-### 4. Vérifier le succès
-- Consulter les logs pour confirmer que les échantillons ont été ajoutés
+### 4. Vérifier le vocabulaire des leçons
+Le `MandombeSpeaker` est **déjà** présent sur le vocabulaire de toutes les leçons (ligne 147 de LessonDetail.tsx). Aucun changement nécessaire ici.
 
 ## Fichiers modifiés
-- `supabase/functions/elevenlabs-add-samples/index.ts` — utiliser le nouveau secret
+- `supabase/functions/elevenlabs-tts-lari/index.ts` — voice settings plus doux
+- `src/components/StoryPreview.tsx` — ajouter MandombeSpeaker sur chaque panneau
+- `src/components/KilolakaPreview.tsx` — ajouter MandombeSpeaker sur chaque glyphe
 
