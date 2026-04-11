@@ -2,20 +2,28 @@
 
 # Mettre à jour la clé ElevenLabs et envoyer les échantillons
 
-## Problème
-La clé API ElevenLabs stockée dans le projet est l'ancienne, sans permission "Voices Write". La nouvelle clé créée par l'utilisateur n'est pas encore configurée.
+## Problème actuel
+Le flux de reconnexion du connecteur ElevenLabs ne fonctionne pas correctement. L'utilisateur a sa nouvelle clé API avec la permission "Voices Write" et souhaite la fournir directement.
 
-## Solution
+## Solution alternative
+Puisque le secret `ELEVENLABS_API_KEY` est géré par un connecteur, on ne peut pas le remplacer via l'outil `add_secret`. Mais on peut contourner cela en stockant la nouvelle clé sous un **nom différent** (ex: `ELEVENLABS_VOICES_KEY`) et modifier l'edge function `elevenlabs-add-samples` pour utiliser ce nouveau secret.
 
-### 1. Reconnecter le connecteur ElevenLabs
-- Utiliser l'outil de reconnexion pour que l'utilisateur puisse saisir sa nouvelle clé API avec la permission Voices
-- Cela mettra à jour le secret `ELEVENLABS_API_KEY` automatiquement
+## Étapes
 
-### 2. Envoyer les 4 échantillons audio
+### 1. Demander la clé API à l'utilisateur
+- Utiliser l'outil `add_secret` pour créer un nouveau secret `ELEVENLABS_VOICES_KEY` avec la clé qui a la permission Voices Write
+
+### 2. Modifier l'edge function `elevenlabs-add-samples`
+- Changer la variable d'environnement utilisée : `ELEVENLABS_VOICES_KEY` au lieu de `ELEVENLABS_API_KEY`
+
+### 3. Déployer et envoyer les 4 échantillons audio
 - Copier les 4 MP3 uploadés dans `/tmp/`
-- Appeler l'edge function `elevenlabs-add-samples` via curl avec les 4 fichiers
+- Appeler l'edge function via curl avec les 4 fichiers
 - Voice ID cible : `rfRMgjypJCXUzWdJfLMs`
 
-### 3. Vérifier le succès
-- Consulter les logs de l'edge function pour confirmer que les échantillons ont été ajoutés
+### 4. Vérifier le succès
+- Consulter les logs pour confirmer que les échantillons ont été ajoutés
+
+## Fichiers modifiés
+- `supabase/functions/elevenlabs-add-samples/index.ts` — utiliser le nouveau secret
 
