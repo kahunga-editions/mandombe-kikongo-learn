@@ -1,6 +1,6 @@
 import { useState, useRef, useCallback } from "react";
 import { Volume2, Loader2 } from "lucide-react";
-import { lariToIpa, lariToBantu } from "@/lib/g2p";
+import { lariToIpa } from "@/lib/g2p";
 import {
   Tooltip,
   TooltipContent,
@@ -42,8 +42,6 @@ const MandombeSpeaker = ({ lariText, className = "" }: MandombeSpeakerProps) => 
     setIsLoading(true);
 
     try {
-      const bantuText = lariToBantu(lariText);
-
       const response = await fetch(
         `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/elevenlabs-tts-lari`,
         {
@@ -53,7 +51,7 @@ const MandombeSpeaker = ({ lariText, className = "" }: MandombeSpeakerProps) => 
             apikey: import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY,
             Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
           },
-          body: JSON.stringify({ text: bantuText }),
+          body: JSON.stringify({ text: lariText }),
         }
       );
 
