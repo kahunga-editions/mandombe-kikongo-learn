@@ -1,32 +1,45 @@
 
 
-# Tester le TTS et repositionner le bouton 🔊 à côté du Mandombe
+# Passer au modèle Eleven v3 avec voix Zulu
 
 ## Contexte
 
-Le bouton speaker est actuellement entre le texte Lari et le Mandombe (ligne 288). L'utilisateur veut le déplacer **à côté du Mandombe** (après le texte Mandombe). Un nouveau fichier audio a été uploadé — même voix Kikongo Lari woman avec les mêmes paramètres.
+ElevenLabs a lancé **Eleven v3 (alpha)** -- le modèle le plus expressif, supportant 70+ langues dont le Zulu. Le Zulu est une langue bantoue avec des phonèmes proches du Lari (prénasales mb, nd, ng, structure CV). Utiliser une voix Zulu avec v3 devrait produire une prononciation beaucoup plus naturelle.
 
-## Plan
+## Changements
 
-### 1. Repositionner le speaker dans Dictionary.tsx
-Déplacer `<MandombeSpeaker>` de la ligne 288 (entre Lari et Mandombe) vers **après** le `<span>` Mandombe (après ligne 291) :
+### 1. Mettre à jour l'edge function TTS (`supabase/functions/elevenlabs-tts-lari/index.ts`)
 
-```
-<h3>entry.lari</h3>
-<span class="font-mandombe">entry.mandombe</span>
-<MandombeSpeaker lariText={entry.lari} />
-```
+- Changer `model_id` de `"eleven_multilingual_v2"` vers `"eleven_v3"`
+- Garder les voice settings humanisés (stability: 0.5, similarity: 0.75, style: 0.3)
+- Ajouter le paramètre `language: "zu"` (code ISO Zulu) pour forcer le modèle à utiliser la phonologie Zulu
+- Ralentir légèrement (`speed: 0.92`) pour articuler les prénasales
 
-### 2. Tenter le clonage avec le nouvel échantillon
-- Copier le fichier uploadé vers `/tmp/`
-- Appeler l'edge function `elevenlabs-clone-voice` avec ce fichier
-- Si réussi → stocker le `voice_id` comme secret `LARI_VOICE_ID` et mettre à jour l'edge function TTS
-- Si échec (permissions) → informer l'utilisateur
+### 2. Améliorer le BANTU_MAP dans `src/lib/g2p.ts` pour le Zulu
 
-### 3. Tester le TTS
-- Appeler `elevenlabs-tts-lari` avec quelques mots pour vérifier la qualité audio avec les paramètres actuels
+Le Zulu partage les prénasales avec le Lari mais a quelques différences orthographiques. Adapter le mapping :
+- `u` reste `u` (le Zulu prononce /u/ correctement, pas /y/)
+- `e` reste `e` (le Zulu a les mêmes voyelles ouvertes)
+- `ns` → `nts` (spirantisation Jacquot, compatible Zulu)
+- `sh` → `sh` (OK en Zulu)
+- Les prénasales `mb`, `nd`, `ng`, `nk` sont identiques en Zulu
+
+### 3. Ajouter des audio tags v3 pour plus d'expressivité
+
+Le modèle v3 supporte des tags inline comme `[speaks slowly]`, `[calmly]`. On peut les utiliser dans le texte envoyé pour guider la prosodie :
+- Préfixer les mots isolés (dictionnaire) avec un tag de clarté
+- Pour les phrases, laisser le modèle gérer naturellement
+
+### 4. Tester avec quelques mots via curl
+
+Appeler l'edge function avec "mbote", "nkokela", "lungolobi" pour comparer v2 vs v3.
+
+## Note importante
+
+Le modèle v3 est en alpha et peut nécessiter un plan ElevenLabs spécifique. Si l'API retourne une erreur de permissions, on reviendra à v2 avec les améliorations G2P Zulu.
 
 ## Fichiers modifiés
-1. **`src/pages/Dictionary.tsx`** — déplacer le speaker après le Mandombe
-2. **Potentiellement** `supabase/functions/elevenlabs-tts-lari/index.ts` si le clonage réussit
+
+1. **`supabase/functions/elevenlabs-tts-lari/index.ts`** -- model v3, language Zulu, audio tags
+2. **`src/lib/g2p.ts`** -- BANTU_MAP optimisé pour Zulu, règles contextuelles Jacquot
 
