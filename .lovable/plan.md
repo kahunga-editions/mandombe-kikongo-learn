@@ -1,25 +1,31 @@
 
 
-# Corriger la prononciation des hiatus voyelle-voyelle (Bio ≠ Bayo)
+# Ajouter le son sur les phrases clés de toutes les leçons
 
 ## Problème
-Le moteur TTS français interprète "Bio" comme /bjo/ ou /bajo/ en insérant un glide /j/ entre les voyelles i et o. En Lari, chaque voyelle est prononcée distinctement : /bi-o/, pas /bjo/.
-
-## Cause
-La fonction `lariToFrenchPhonetic` ne gère que le hiatus "kua" → "kou-a". Les séquences comme "io", "ia", "iu", "ie" (après consonne) ne sont pas traitées, ce qui laisse le TTS français fusionner les voyelles avec un glide.
+La section "Phrases clés" (Bambuka) affiche le texte Mandombe et le texte Lari mais n'a pas de bouton audio, contrairement aux sections Vocabulaire, Syntaxe et Conjugaisons qui l'ont déjà.
 
 ## Solution
-Dans `supabase/functions/elevenlabs-tts-lari/index.ts`, ajouter une règle dans `convertWord()` pour insérer un tiret entre deux voyelles consécutives quand la première est "i" ou "u" (les plus sujettes aux glides en français). Cela forcera le moteur TTS à prononcer chaque voyelle séparément.
+Ajouter un `MandombeSpeaker` à côté du texte Mandombe dans chaque phrase clé.
 
-Exemples de transformations :
-- "Bio" → "Bi-o"
-- "Bia" → "Bi-a"  
-- "Biu" → "Biou" (u→ou déjà géré, mais le hiatus aussi)
-- "Dio" → "Di-o"
-- "Dia" → "Di-a"
+## Changement
 
-La règle existante "kua" → "kou-a" sera généralisée par ce mécanisme.
+**Fichier**: `src/pages/LessonDetail.tsx` (lignes ~284-285)
 
-## Fichier modifié
-- `supabase/functions/elevenlabs-tts-lari/index.ts` — ajouter séparation des hiatus voyelle-voyelle
+Dans la section phrases clés, transformer :
+```tsx
+<p className="font-mandombe text-3xl text-gold mb-4">{phrase.mandombe}</p>
+<p className="font-display text-lg font-semibold text-foreground italic">{phrase.lari}</p>
+```
+
+En :
+```tsx
+<div className="flex items-center gap-2 mb-4">
+  <p className="font-mandombe text-3xl text-gold">{phrase.mandombe}</p>
+  <MandombeSpeaker lariText={phrase.lari} />
+</div>
+<p className="font-display text-lg font-semibold text-foreground italic">{phrase.lari}</p>
+```
+
+Le composant `MandombeSpeaker` est déjà importé dans le fichier. Il suffit de l'ajouter à côté du texte Mandombe, avec le texte Lari comme source de prononciation (comme pour les autres sections).
 
