@@ -5,6 +5,11 @@ const corsHeaders = {
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
 };
 
+// Default voice: use a voice that works well with Bantu languages
+// ElevenLabs multilingual v2 supports Lingala and Zulu natively
+// "River" voice — good for African language phonemes
+const DEFAULT_VOICE_ID = "SAz9YHcvj6GT2YYXdXww";
+
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") {
     return new Response("ok", { headers: corsHeaders });
@@ -18,17 +23,18 @@ Deno.serve(async (req) => {
 
     const { text, voiceId } = await req.json();
 
-    if (!text || !voiceId) {
+    if (!text) {
       return new Response(
-        JSON.stringify({ error: "text and voiceId are required" }),
+        JSON.stringify({ error: "text is required" }),
         { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
     }
 
-    console.log(`TTS request: "${text}" with voice ${voiceId}`);
+    const selectedVoice = voiceId || DEFAULT_VOICE_ID;
+    console.log(`TTS Lari request: "${text}" with voice ${selectedVoice}`);
 
     const response = await fetch(
-      `https://api.elevenlabs.io/v1/text-to-speech/${voiceId}?output_format=mp3_44100_128`,
+      `https://api.elevenlabs.io/v1/text-to-speech/${selectedVoice}?output_format=mp3_44100_128`,
       {
         method: "POST",
         headers: {
@@ -39,9 +45,9 @@ Deno.serve(async (req) => {
           text,
           model_id: "eleven_multilingual_v2",
           voice_settings: {
-            stability: 0.6,
-            similarity_boost: 0.85,
-            style: 0.3,
+            stability: 0.65,
+            similarity_boost: 0.8,
+            style: 0.2,
             use_speaker_boost: true,
           },
         }),

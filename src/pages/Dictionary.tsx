@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { useLanguage } from "@/contexts/LanguageContext";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import MandombeSpeaker from "@/components/MandombeSpeaker";
 import { lessons, VocabItem } from "@/data/lessons";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
@@ -282,8 +283,9 @@ const Dictionary = () => {
                 >
                   <div className="flex flex-col sm:flex-row sm:items-start gap-3">
                     <div className="flex-1 min-w-0">
-                      <div className="flex items-baseline gap-3 flex-wrap">
+                      <div className="flex items-center gap-2 flex-wrap">
                         <h3 className="text-xl font-bold text-foreground">{entry.lari}</h3>
+                        <MandombeSpeaker lariText={entry.lari} />
                         <span className="font-mandombe text-2xl text-primary/70 leading-none">
                           {entry.mandombe}
                         </span>
