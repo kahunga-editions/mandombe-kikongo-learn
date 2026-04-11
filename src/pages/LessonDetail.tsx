@@ -281,7 +281,10 @@ const LessonDetail = () => {
                           key={i}
                           className="bg-card rounded-lg border border-border p-4 border-l-4 border-l-primary"
                         >
-                          <p className="font-mandombe text-3xl text-gold mb-4">{phrase.mandombe}</p>
+                          <div className="flex items-center gap-2 mb-4">
+                            <p className="font-mandombe text-3xl text-gold">{phrase.mandombe}</p>
+                            <MandombeSpeaker lariText={phrase.lari} />
+                          </div>
                           <p className="font-display text-lg font-semibold text-foreground italic">{phrase.lari}</p>
                           <div className="flex flex-col sm:flex-row gap-1 sm:gap-4 mt-1 text-sm text-muted-foreground">
                             <span>{flag} {translation}</span>
