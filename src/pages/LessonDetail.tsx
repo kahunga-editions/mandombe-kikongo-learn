@@ -3,6 +3,7 @@ import { useState } from "react";
 import { lessons } from "@/data/lessons";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import MandombeSpeaker from "@/components/MandombeSpeaker";
 import MultipleChoice from "@/components/exercises/MultipleChoice";
 import MatchingExercise from "@/components/exercises/MatchingExercise";
 import FillInBlank from "@/components/exercises/FillInBlank";
@@ -141,7 +142,10 @@ const LessonDetail = () => {
                           )}
                           <div className="p-4">
                           <p className="font-mandombe text-3xl text-gold mb-4">{item.mandombe}</p>
-                          <p className="font-display text-lg font-bold text-foreground">{item.lari}</p>
+                          <div className="flex items-center gap-2">
+                            <p className="font-display text-lg font-bold text-foreground">{item.lari}</p>
+                            <MandombeSpeaker lariText={item.lari} />
+                          </div>
                           <div className="flex flex-wrap gap-4 mt-1 text-sm text-muted-foreground">
                             <span>{flag} {translation}</span>
                           </div>
@@ -201,7 +205,10 @@ const LessonDetail = () => {
                                           {ex.mandombe && (
                                             <p className="font-mandombe text-3xl text-gold mb-2">{ex.mandombe}</p>
                                           )}
-                                          <p className="font-display font-semibold text-foreground">{ex.lari}</p>
+                                          <div className="flex items-center gap-2">
+                                            <p className="font-display font-semibold text-foreground">{ex.lari}</p>
+                                            <MandombeSpeaker lariText={ex.lari} />
+                                          </div>
                                           <p className="text-sm text-muted-foreground mt-0.5">{flag} {translation}</p>
                                         </div>
                                       );
