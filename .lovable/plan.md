@@ -1,26 +1,22 @@
 
 
-# Ajouter des échantillons de prosodie à la voix clonée
+# Mettre à jour la clé ElevenLabs et ajouter les échantillons audio
 
-## Contexte
-Les 4 fichiers audio uploadés sont des exemples de locuteurs natifs Lari — pas liés aux leçons, mais destinés à enrichir la voix clonée (`rfRMgjypJCXUzWdJfLMs`) avec une meilleure prosodie et intonation.
+## Étapes
 
-## Solution
-Utiliser l'API ElevenLabs **Edit Voice** (`POST /v1/voices/{voice_id}/edit`) pour ajouter ces échantillons audio à la voix existante. Cela permettra au modèle d'apprendre la prosodie naturelle du Lari à partir de ces enregistrements supplémentaires.
+### 1. Mettre à jour le secret ELEVENLABS_API_KEY
+- Demander à l'utilisateur de saisir la nouvelle clé API via le connecteur ElevenLabs (puisque le secret est géré par un connector)
 
-## Plan technique
+### 2. Copier les 4 fichiers audio uploadés dans le sandbox
+- Copier les 4 MP3 depuis `user-uploads://` vers `/tmp/`
 
-### 1. Créer une edge function `elevenlabs-add-samples`
-- Endpoint : `POST /v1/voices/{voice_id}/edit`
-- Reçoit des fichiers audio en multipart form data
-- Ajoute les fichiers comme échantillons supplémentaires à la voix clonée existante
-- Utilise le voice ID `rfRMgjypJCXUzWdJfLMs` par défaut
+### 3. Envoyer les échantillons à la voix clonée
+- Appeler l'edge function `elevenlabs-add-samples` avec les 4 fichiers via curl
+- Voice ID cible : `rfRMgjypJCXUzWdJfLMs`
 
-### 2. Appeler la fonction avec les 4 fichiers uploadés
-- Copier les fichiers uploadés dans le sandbox
-- Envoyer les 4 MP3 via curl à l'edge function
-- Vérifier que les échantillons sont bien ajoutés
+### 4. Vérifier les logs
+- Consulter les logs de l'edge function pour confirmer le succès
 
-## Fichiers créés/modifiés
-- `supabase/functions/elevenlabs-add-samples/index.ts` — nouvelle edge function
+## Note importante
+Le secret `ELEVENLABS_API_KEY` est géré par un connector — il faudra le reconnecter via les Connectors pour mettre à jour la clé.
 
