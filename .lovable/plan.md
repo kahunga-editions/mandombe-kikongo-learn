@@ -1,59 +1,32 @@
 
 
-# Améliorer la prononciation Lari via le G2P de Jacquot
+# Corriger la prononciation du "j" Lari dans le TTS
 
 ## Problème
-La voix clonée (`rfRMgjypJCXUzWdJfLMs`) a le bon timbre Lari, mais ElevenLabs ne connaît pas l'orthographe Lari. Il interprète "Mbaji kua" avec ses propres règles (probablement anglaises), produisant un /dʒ/ au lieu de /ʒ/, un /kwɑ/ au lieu de /ku-a/, etc.
+"Mbaji kua" sonne mal — le modèle TTS ne prononce pas le `j` comme /ʒ/. En Lari, `j` = /ʒ/ (comme le français "jour"), et les locuteurs alternent souvent entre `j` et `z` pour ce son.
 
 ## Solution
-Créer une fonction `lariToFrenchPhonetic()` dans le G2P qui convertit le texte Lari en orthographe **française** — car le français partage les mêmes conventions que le Lari pour les sons critiques :
-- `j` = /ʒ/ (identique en français)
-- `u` → `ou` (le /u/ Lari = "ou" français)
-- `kua` → `kou-a` (hiatus explicite, pas de glide /w/)
-- `e` reste `é` (jamais muet)
-- `s` reste `s` (jamais /z/)
+Dans la fonction `convertWord()` de l'edge function, remplacer `j` par `j` français explicitement — ou mieux, par `ge`/`gi` selon la voyelle suivante, car en français :
+- `j` devant `i` = /ʒi/ ✓ (déjà bon)
+- `j` devant `a` = /ʒa/ ✓ (déjà bon)
 
-Puis envoyer ce texte respelled au TTS avec `language_code: "fr"` — le modèle français prononcera correctement les phonèmes puisqu'ils correspondent à l'orthographe française.
+Cependant, si le modèle ElevenLabs avec la voix clonée ne respecte pas le `j` français, on peut forcer en utilisant `z` comme l'utilisateur le suggère — car en français `z` = /z/, pas /ʒ/... mais avec la voix clonée Lari, le `z` pourrait mieux déclencher le /ʒ/ natif.
 
-## Plan technique
+**Approche retenue** : ajouter une règle `j` → `j` (garder tel quel pour le français, c'est déjà /ʒ/) mais aussi tester avec `z` comme fallback. On va d'abord tester les deux variantes via curl pour voir laquelle sonne mieux, puis appliquer la meilleure.
 
-### 1. Ajouter `lariToFrenchPhonetic()` dans `src/lib/g2p.ts`
-Nouvelle map `FRENCH_MAP` basée sur les règles de Jacquot :
-```
-j → j (français = /ʒ/ ✓)
-u → ou (français /u/ = Lari /u/)
-e → é (empêche le e muet français)
-s → ss (entre voyelles, empêche /z/)
-mb → mb, nd → nd, nk → nk... (les prénasales restent)
-kua → kou-a (tiret pour forcer le hiatus)
-```
+## Plan
 
-### 2. Mettre à jour l'edge function TTS
-- Appliquer `lariToFrenchPhonetic()` côté serveur (ou recevoir le texte transformé du client)
-- Ajouter `language_code: "fr"` pour que le modèle utilise les règles phonétiques françaises
-- Corriger le message de log (enlever "lang: ln")
+### 1. Tester les deux prononciations
+- Appeler l'edge function avec "Mbaji kou-a" (actuel) vs "Mbazi kou-a" pour comparer
+- Vérifier dans les logs quelle transformation est appliquée
 
-### 3. Mettre à jour `MandombeSpeaker.tsx`
-- Importer et utiliser `lariToFrenchPhonetic()` pour transformer le texte avant envoi
-- Continuer d'afficher le texte Lari original + IPA dans le tooltip
+### 2. Mettre à jour la règle dans l'edge function
+- Dans `convertWord()`, ajouter une règle : `j` → `z` (puisque les locuteurs Lari alternent et que `z` pourrait mieux fonctionner avec le modèle)
+- Alternative : essayer `j` → `ge` devant voyelle si `z` ne donne pas /ʒ/
 
-### 4. Créer la transformation côté serveur (edge function)
-Comme alternative plus propre : faire la transformation dans l'edge function elle-même pour ne pas exposer la logique au client. Le client envoie le texte Lari brut, l'edge function le transforme avant d'appeler ElevenLabs.
+### 3. Redéployer et valider
+- Tester avec "Mbaji kua", "Nkokela kua", "Mbote" pour confirmer
 
-## Exemples de transformations attendues
-
-| Lari original | French phonetic | Son visé |
-|---|---|---|
-| Mbote | Mboté | /ᵐbote/ ✓ |
-| Mbaji kua | Mbaji kou-a | /ᵐbaʒi ku.a/ ✓ |
-| Nkokela kua | Nkokéla kou-a | /ᵑkokela ku.a/ ✓ |
-| Nsiku | Ntsikou | /ⁿtsiku/ ✓ |
-
-## Fichiers modifiés
-1. **`src/lib/g2p.ts`** — ajouter `FRENCH_MAP` et `lariToFrenchPhonetic()`
-2. **`supabase/functions/elevenlabs-tts-lari/index.ts`** — appliquer la transformation + `language_code: "fr"`
-3. **`src/components/MandombeSpeaker.tsx`** — envoyer le texte transformé (ou le brut si la transformation est côté serveur)
-
-## Approche choisie : transformation côté serveur
-La transformation se fera dans l'edge function pour centraliser la logique. Le client continue d'envoyer le texte Lari brut. Cela permet de corriger la prononciation sans redéployer le frontend.
+## Fichier modifié
+- `supabase/functions/elevenlabs-tts-lari/index.ts` — ajouter règle `j` → `z` dans `convertWord()`
 
