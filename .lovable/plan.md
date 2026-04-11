@@ -1,51 +1,47 @@
 
 
-# Tester le Voice Cloning ElevenLabs avec les échantillons Lari
+# Intégrer le TTS Lari avec G2P + voix Lingala/Zulu ElevenLabs
 
-## Contexte
+## Changement par rapport au plan précédent
 
-Tu as fourni 2 fichiers MP3 natifs ("lungolobi") et 2 vidéos. L'objectif est de cloner une voix Lari via ElevenLabs pour ensuite générer de la synthèse vocale sur les mots du dictionnaire.
-
-## Prérequis
-
-1. **Connecter ElevenLabs** — Le connecteur ElevenLabs est disponible mais pas encore lié au projet. Je vais le connecter pour obtenir la clé API automatiquement.
-
-2. **Préparer les échantillons audio** — Les 2 MP3 seront utilisés comme échantillons pour le cloning. Les vidéos pourront être converties en audio si besoin de plus d'échantillons.
+Au lieu d'une voix française, on utilisera une voix **Lingala ou Zulu** d'ElevenLabs — langues bantoues proches du Lari, avec des phonèmes beaucoup plus compatibles. Le G2P adaptera le texte pour ces voix plutôt que pour le français.
 
 ## Plan d'implémentation
 
-### Étape 1 : Connecter ElevenLabs
-Utiliser le connecteur ElevenLabs pour lier une clé API au projet.
+### 1. Créer `src/lib/g2p.ts` — Moteur G2P TypeScript
+Port du fichier Python `lari_g2p.py` :
+- Tables de phonèmes (prénasalisées, affriquées, voyelles longues)
+- `tokenise(word)` → tokenisation greedy
+- `g2pWord(word)` → orthographe → phonèmes
+- `phonemesToIpa(phonemes)` → transcription IPA visuelle (`/ᵐboka/`)
+- `phonemesToBantu(phonemes)` → approximation optimisée pour une voix Lingala/Zulu (phonèmes très proches, pas besoin de forcer des clusters français)
 
-### Étape 2 : Créer une edge function `elevenlabs-clone-voice`
-- Accepte des fichiers audio en upload
-- Appelle l'API ElevenLabs `POST /v1/voices/add` pour créer une voix clonée ("Lari Native Speaker")
-- Retourne le `voice_id` de la voix clonée
+### 2. Mettre à jour `elevenlabs-tts-lari/index.ts`
+- Utiliser une voix Lingala ou Zulu au lieu de française (voix par défaut configurable)
+- Le `voiceId` sera passé depuis le client ou utiliser un ID par défaut
+- Garder le modèle `eleven_multilingual_v2` (supporte Lingala et Zulu)
 
-### Étape 3 : Créer une edge function `elevenlabs-tts-lari`
-- Accepte un mot/phrase Lari en entrée
-- Utilise la voix clonée + modèle `eleven_multilingual_v2` pour générer l'audio
-- Retourne le MP3
+### 3. Créer `src/components/MandombeSpeaker.tsx`
+Composant réutilisable :
+- Icône 🔊 au clic → convertit le mot Lari via G2P, appelle l'edge function TTS
+- Tooltip IPA au survol
+- Animation pendant la lecture
+- Cache audio en mémoire (évite les appels répétés)
 
-### Étape 4 : Tester le cloning via un script
-- Uploader les 2 MP3 vers l'API ElevenLabs pour créer la voix clonée
-- Tester la synthèse avec quelques mots Lari (ex: "mboka", "ntangu", "lungolobi")
-- Évaluer la qualité avant d'intégrer dans l'app
-
-### Étape 5 (si qualité OK) : Intégrer dans l'app
-- Ajouter un composant `MandombeSpeaker` qui appelle `elevenlabs-tts-lari` au clic
-- Intégrer dans le dictionnaire et les leçons
+### 4. Intégrer dans Dictionary et LessonDetail
+- **Dictionary.tsx** : bouton speaker à côté de chaque entrée
+- **LessonDetail.tsx** : bouton speaker dans les sections vocabulaire
 
 ## Détails techniques
 
-- L'API de cloning ElevenLabs supporte l'**Instant Voice Cloning** avec aussi peu que 1 minute d'audio
-- Le modèle `eleven_multilingual_v2` supporte 29 langues — même si le Lari n'est pas officiellement listé, les phonèmes proches du français/portugais devraient donner des résultats exploitables
-- Les 2 MP3 seront envoyés via `multipart/form-data` à l'endpoint `/v1/voices/add`
-- Le `voice_id` sera stocké comme secret pour être réutilisé par la TTS
+- Le Lingala et le Zulu sont des langues bantoues comme le Lari — mêmes types de consonnes prénasalisées (mb, nd, ng), mêmes voyelles ouvertes
+- L'approximation G2P→Bantu sera plus fidèle qu'une approximation française car les systèmes phonologiques sont proches
+- On testera d'abord avec quelques mots pour valider la qualité avant l'intégration complète
 
-## Limites connues
-
-- La qualité dépendra fortement des échantillons (clarté, bruit de fond, variété phonétique)
-- Le Lari n'étant pas un langue supportée nativement, certaines prononciations pourraient être approximatives
-- C'est un test expérimental — on évaluera la qualité avant de décider de l'intégration
+## Fichiers créés/modifiés
+1. **Nouveau** : `src/lib/g2p.ts`
+2. **Nouveau** : `src/components/MandombeSpeaker.tsx`
+3. **Modifié** : `supabase/functions/elevenlabs-tts-lari/index.ts`
+4. **Modifié** : `src/pages/Dictionary.tsx`
+5. **Modifié** : `src/pages/LessonDetail.tsx`
 
