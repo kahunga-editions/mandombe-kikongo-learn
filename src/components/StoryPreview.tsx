@@ -284,7 +284,8 @@ const ComicPanel = ({
       {/* Text side */}
       <div className={`p-4 md:p-6 flex flex-col justify-center space-y-3 ${isWide ? "" : ""}`}>
         {/* Mandombe script (Lari text rendered in Mandombe font) */}
-        <div className="bg-earth-deep/5 dark:bg-earth-deep/20 rounded-lg p-3 border border-gold/20">
+        <div className="bg-earth-deep/5 dark:bg-earth-deep/20 rounded-lg p-3 border border-gold/20 flex items-start gap-2">
+          <MandombeSpeaker lariText={lari} className="mt-0.5 shrink-0" />
           <p className="font-mandombe text-lg md:text-xl text-gold leading-relaxed">{mandombe || lari}</p>
         </div>
 
