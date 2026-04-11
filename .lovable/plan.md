@@ -1,41 +1,25 @@
 
 
-# Ajouter des boutons audio sur la grille Kilolaka + affiner la voix
+# Corriger la prononciation des hiatus voyelle-voyelle (Bio ≠ Bayo)
 
-## Résumé
-Ajouter un petit bouton speaker (🔊) dans chaque cellule de la grille Kilolaka (`public/kilolaka_grille.html`) pour prononcer chaque syllabe via l'edge function TTS. Affiner les paramètres de la voix clonée pour plus de douceur et de naturel.
+## Problème
+Le moteur TTS français interprète "Bio" comme /bjo/ ou /bajo/ en insérant un glide /j/ entre les voyelles i et o. En Lari, chaque voyelle est prononcée distinctement : /bi-o/, pas /bjo/.
 
-## Changements
+## Cause
+La fonction `lariToFrenchPhonetic` ne gère que le hiatus "kua" → "kou-a". Les séquences comme "io", "ia", "iu", "ie" (après consonne) ne sont pas traitées, ce qui laisse le TTS français fusionner les voyelles avec un glide.
 
-### 1. Affiner la voix clonée
-**Fichier**: `supabase/functions/elevenlabs-tts-lari/index.ts`
-- Augmenter `stability` de 0.65 → 0.72 (plus stable, moins de variation)
-- Réduire `style` de 0.15 → 0.10 (encore moins d'exagération)
-- Réduire `speed` de 0.88 → 0.85 (plus posé)
-- Appliquer les mêmes valeurs au fallback `eleven_multilingual_v2`
+## Solution
+Dans `supabase/functions/elevenlabs-tts-lari/index.ts`, ajouter une règle dans `convertWord()` pour insérer un tiret entre deux voyelles consécutives quand la première est "i" ou "u" (les plus sujettes aux glides en français). Cela forcera le moteur TTS à prononcer chaque voyelle séparément.
 
-### 2. Ajouter les boutons audio à la grille HTML
-**Fichier**: `public/kilolaka_grille.html`
+Exemples de transformations :
+- "Bio" → "Bi-o"
+- "Bia" → "Bi-a"  
+- "Biu" → "Biou" (u→ou déjà géré, mais le hiatus aussi)
+- "Dio" → "Di-o"
+- "Dia" → "Di-a"
 
-La grille est un fichier HTML autonome chargé dans un iframe. L'approche :
+La règle existante "kua" → "kou-a" sera généralisée par ce mécanisme.
 
-- **CSS** : Ajouter un style pour un petit bouton speaker (`.speak-btn`) positionné en haut à droite de chaque cellule — petit, discret, gold sur fond transparent
-- **JavaScript** : 
-  - Ajouter une fonction `speakSyllable(text, btn)` qui appelle directement l'edge function `elevenlabs-tts-lari` via fetch, avec le Supabase URL et anon key en dur (c'est une clé publique, sécuritaire)
-  - Cache audio en mémoire pour éviter les appels répétés
-  - Animation de chargement (spinner) et de lecture (pulse)
-- **Dans `buildGrid()`** : Insérer un bouton speaker dans chaque cellule avec `onclick="speakSyllable('${cons}${v}', this)"` — le texte envoyé est la syllabe en Lari latin (ex: "Bi", "Nda", "Shi")
-
-### Structure d'une cellule modifiée
-```text
-┌─────────────────┐
-│            🔊   │  ← bouton speaker (petit, coin haut droit)
-│     Glyphe      │  ← font Mandombe
-│    [meaning]    │  ← affiché au clic
-└─────────────────┘
-```
-
-## Fichiers modifiés
-- `supabase/functions/elevenlabs-tts-lari/index.ts` — paramètres voix plus doux
-- `public/kilolaka_grille.html` — boutons audio sur chaque glyphe + logique TTS
+## Fichier modifié
+- `supabase/functions/elevenlabs-tts-lari/index.ts` — ajouter séparation des hiatus voyelle-voyelle
 
