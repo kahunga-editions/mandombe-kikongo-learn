@@ -9,9 +9,9 @@ Deno.serve(async (req) => {
   }
 
   try {
-    const ELEVENLABS_API_KEY = Deno.env.get("ELEVENLABS_API_KEY");
+    const ELEVENLABS_API_KEY = Deno.env.get("ELEVENLABS_VOICES_KEY") || Deno.env.get("ELEVENLABS_API_KEY");
     if (!ELEVENLABS_API_KEY) {
-      throw new Error("ELEVENLABS_API_KEY is not configured");
+      throw new Error("ELEVENLABS_VOICES_KEY / ELEVENLABS_API_KEY is not configured");
     }
 
     const formData = await req.formData();
