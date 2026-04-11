@@ -1,45 +1,26 @@
 
 
-# Passer au modèle Eleven v3 avec voix Zulu
+# Tester avec le Lingala (code langue `ln`)
 
 ## Contexte
 
-ElevenLabs a lancé **Eleven v3 (alpha)** -- le modèle le plus expressif, supportant 70+ langues dont le Zulu. Le Zulu est une langue bantoue avec des phonèmes proches du Lari (prénasales mb, nd, ng, structure CV). Utiliser une voix Zulu avec v3 devrait produire une prononciation beaucoup plus naturelle.
+Le Lingala est une langue bantoue plus proche du Kikongo-Lari que le Zulu géographiquement et phonologiquement. ElevenLabs v3 supporte le Lingala (`ln`). Tester avec ce code langue pourrait produire une meilleure prononciation des phonèmes Lari.
 
 ## Changements
 
-### 1. Mettre à jour l'edge function TTS (`supabase/functions/elevenlabs-tts-lari/index.ts`)
+### 1. Edge function (`supabase/functions/elevenlabs-tts-lari/index.ts`)
+- Ajouter `language_code: "ln"` (Lingala) dans le body de la requête v3
+- Mettre à jour le log pour indiquer `lang: ln`
+- Garder le fallback v2 sans language_code (v2 ne le supporte pas de la même façon)
 
-- Changer `model_id` de `"eleven_multilingual_v2"` vers `"eleven_v3"`
-- Garder les voice settings humanisés (stability: 0.5, similarity: 0.75, style: 0.3)
-- Ajouter le paramètre `language: "zu"` (code ISO Zulu) pour forcer le modèle à utiliser la phonologie Zulu
-- Ralentir légèrement (`speed: 0.92`) pour articuler les prénasales
+### 2. Déployer et tester
+- Déployer la fonction mise à jour
+- Tester avec quelques mots Lari ("mbote", "nkokela") via curl pour vérifier la qualité
+- Comparer avec le résultat précédent en Zulu
 
-### 2. Améliorer le BANTU_MAP dans `src/lib/g2p.ts` pour le Zulu
-
-Le Zulu partage les prénasales avec le Lari mais a quelques différences orthographiques. Adapter le mapping :
-- `u` reste `u` (le Zulu prononce /u/ correctement, pas /y/)
-- `e` reste `e` (le Zulu a les mêmes voyelles ouvertes)
-- `ns` → `nts` (spirantisation Jacquot, compatible Zulu)
-- `sh` → `sh` (OK en Zulu)
-- Les prénasales `mb`, `nd`, `ng`, `nk` sont identiques en Zulu
-
-### 3. Ajouter des audio tags v3 pour plus d'expressivité
-
-Le modèle v3 supporte des tags inline comme `[speaks slowly]`, `[calmly]`. On peut les utiliser dans le texte envoyé pour guider la prosodie :
-- Préfixer les mots isolés (dictionnaire) avec un tag de clarté
-- Pour les phrases, laisser le modèle gérer naturellement
-
-### 4. Tester avec quelques mots via curl
-
-Appeler l'edge function avec "mbote", "nkokela", "lungolobi" pour comparer v2 vs v3.
-
-## Note importante
-
-Le modèle v3 est en alpha et peut nécessiter un plan ElevenLabs spécifique. Si l'API retourne une erreur de permissions, on reviendra à v2 avec les améliorations G2P Zulu.
+### 3. G2P (`src/lib/g2p.ts`)
+- Ajuster le `BANTU_MAP` si nécessaire pour le Lingala (le Lingala partage davantage de phonèmes avec le Lari que le Zulu, donc moins d'adaptations devraient être nécessaires)
 
 ## Fichiers modifiés
-
-1. **`supabase/functions/elevenlabs-tts-lari/index.ts`** -- model v3, language Zulu, audio tags
-2. **`src/lib/g2p.ts`** -- BANTU_MAP optimisé pour Zulu, règles contextuelles Jacquot
+1. **`supabase/functions/elevenlabs-tts-lari/index.ts`** — `language_code: "ln"`
 
