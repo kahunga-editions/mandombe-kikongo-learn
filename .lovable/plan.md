@@ -1,36 +1,25 @@
 
 
-# Ajouter l'audio TTS partout + adoucir la voix
+# Ajouter audio sur le texte Mandombe (histoire) et les conjugaisons
 
 ## Résumé
-Intégrer le composant `MandombeSpeaker` dans l'histoire (StoryPreview) et le Kilolaka, et adoucir les réglages de la voix clonée.
+Ajouter un bouton speaker sur le texte Mandombe dans chaque panneau de l'histoire, et un bouton speaker sur chaque ligne de conjugaison dans les leçons.
 
 ## Changements
 
-### 1. Adoucir la voix clonée
-**Fichier**: `supabase/functions/elevenlabs-tts-lari/index.ts`
-- Augmenter `stability` de 0.5 → 0.65 (plus douce, moins variable)
-- Réduire `style` de 0.3 → 0.15 (moins d'exagération)
-- Réduire `speed` de 0.92 → 0.88 (légèrement plus lent = plus doux)
-- Désactiver `use_speaker_boost` (moins agressif)
-
-### 2. Ajouter audio à l'histoire (StoryPreview)
+### 1. StoryPreview — Speaker sur le bloc Mandombe
 **Fichier**: `src/components/StoryPreview.tsx`
-- Importer `MandombeSpeaker`
-- Dans le composant `ComicPanel`, ajouter un petit icône speaker à côté du texte Lari
-- Le `lariText` sera la phrase Lari complète du panneau
+- Ajouter un `MandombeSpeaker` dans le bloc Mandombe (la zone dorée avec `font-mandombe`), à côté du texte
+- Le `lariText` sera le texte Lari correspondant (car le TTS fonctionne avec le Lari latin, pas le script Mandombe)
+- Le speaker existant sur la ligne "Lari:" reste en place — l'utilisateur aura donc deux points d'écoute : un sur le Mandombe, un sur le latin
 
-### 3. Ajouter audio au Kilolaka
-**Fichier**: `src/components/KilolakaPreview.tsx`
+### 2. LessonDetail — Speaker sur les conjugaisons
+**Fichier**: `src/pages/LessonDetail.tsx`
 - Importer `MandombeSpeaker`
-- Pour chaque syllabe/morphème (Ki, Lo, La, Ka, Bi, Bu, etc.), ajouter un petit icône speaker au-dessus du glyphe Mandombe
-- Idem pour les séries F, D, G dans la section premium
-
-### 4. Vérifier le vocabulaire des leçons
-Le `MandombeSpeaker` est **déjà** présent sur le vocabulaire de toutes les leçons (ligne 147 de LessonDetail.tsx). Aucun changement nécessaire ici.
+- Dans chaque ligne de conjugaison (`conj.rows`), ajouter un `MandombeSpeaker` avec `lariText={row.lari}` à côté du texte Lari
+- Petit icône discret aligné avec le texte
 
 ## Fichiers modifiés
-- `supabase/functions/elevenlabs-tts-lari/index.ts` — voice settings plus doux
-- `src/components/StoryPreview.tsx` — ajouter MandombeSpeaker sur chaque panneau
-- `src/components/KilolakaPreview.tsx` — ajouter MandombeSpeaker sur chaque glyphe
+- `src/components/StoryPreview.tsx` — speaker dans le bloc Mandombe
+- `src/pages/LessonDetail.tsx` — speaker sur chaque ligne de conjugaison
 
