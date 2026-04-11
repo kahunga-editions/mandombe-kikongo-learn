@@ -73,7 +73,14 @@ function convertWord(word: string): string {
       continue;
     }
 
-    // Everything else passes through (j, mb, nd, nk, etc. are fine in French)
+    // "j" → "z" — Lari /ʒ/ is better triggered by "z" with the cloned voice
+    if (lower[i] === "j") {
+      result += "z";
+      i++;
+      continue;
+    }
+
+    // Everything else passes through (mb, nd, nk, etc. are fine in French)
     result += lower[i];
     i++;
   }
