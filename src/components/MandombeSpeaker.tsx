@@ -51,7 +51,7 @@ const MandombeSpeaker = ({ lariText, className = "" }: MandombeSpeakerProps) => 
             apikey: import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY,
             Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
           },
-          body: JSON.stringify({ text: bantuText }),
+          body: JSON.stringify({ text: lariText }),
         }
       );
 
