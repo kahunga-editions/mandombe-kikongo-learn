@@ -1,22 +1,21 @@
 
 
-# Mettre à jour la clé ElevenLabs et ajouter les échantillons audio
+# Mettre à jour la clé ElevenLabs et envoyer les échantillons
 
-## Étapes
+## Problème
+La clé API ElevenLabs stockée dans le projet est l'ancienne, sans permission "Voices Write". La nouvelle clé créée par l'utilisateur n'est pas encore configurée.
 
-### 1. Mettre à jour le secret ELEVENLABS_API_KEY
-- Demander à l'utilisateur de saisir la nouvelle clé API via le connecteur ElevenLabs (puisque le secret est géré par un connector)
+## Solution
 
-### 2. Copier les 4 fichiers audio uploadés dans le sandbox
-- Copier les 4 MP3 depuis `user-uploads://` vers `/tmp/`
+### 1. Reconnecter le connecteur ElevenLabs
+- Utiliser l'outil de reconnexion pour que l'utilisateur puisse saisir sa nouvelle clé API avec la permission Voices
+- Cela mettra à jour le secret `ELEVENLABS_API_KEY` automatiquement
 
-### 3. Envoyer les échantillons à la voix clonée
-- Appeler l'edge function `elevenlabs-add-samples` avec les 4 fichiers via curl
+### 2. Envoyer les 4 échantillons audio
+- Copier les 4 MP3 uploadés dans `/tmp/`
+- Appeler l'edge function `elevenlabs-add-samples` via curl avec les 4 fichiers
 - Voice ID cible : `rfRMgjypJCXUzWdJfLMs`
 
-### 4. Vérifier les logs
-- Consulter les logs de l'edge function pour confirmer le succès
-
-## Note importante
-Le secret `ELEVENLABS_API_KEY` est géré par un connector — il faudra le reconnecter via les Connectors pour mettre à jour la clé.
+### 3. Vérifier le succès
+- Consulter les logs de l'edge function pour confirmer que les échantillons ont été ajoutés
 
