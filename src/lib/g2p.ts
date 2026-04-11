@@ -37,9 +37,15 @@ const IPA_MAP: Record<string, string> = {
 
 // Phoneme → Bantu-friendly spelling for TTS (Lingala/Zulu compatible)
 // These are kept as-is since Bantu languages share these clusters
+// Phoneme → Zulu-compatible spelling for TTS (eleven_v3 with language_code: "zu")
+// Zulu shares Bantu prenasals and CV structure with Lari.
+// Key adaptations based on Jacquot's phonological rules:
+// - 'ns' → 'nts' (Jacquot: initial ns = /nts/)
+// - 'u' stays 'u' (Zulu /u/ = correct, not French /y/)
+// - 'e' stays 'e' (Zulu open vowels match Lari)
 const BANTU_MAP: Record<string, string> = {
   mb: "mb", mp: "mp", nd: "nd", nt: "nt",
-  ng: "ng", nk: "nk", nz: "nz", ns: "ns",
+  ng: "ng", nk: "nk", nz: "nz", ns: "nts",
   mbv: "mbv", mpf: "mpf",
   ts: "ts", dz: "dz", pf: "pf", bv: "bv",
   sh: "sh", ch: "ch",
