@@ -5,7 +5,86 @@ const corsHeaders = {
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
 };
 
-const DEFAULT_VOICE_ID = Deno.env.get("LARI_VOICE_ID") || "SAz9YHcvj6GT2YYXdXww";
+const DEFAULT_VOICE_ID = Deno.env.get("LARI_VOICE_ID") || "rfRMgjypJCXUzWdJfLMs";
+
+/**
+ * Convert Lari orthography to French-compatible spelling for TTS.
+ * Based on Jacquot's phonological rules for Kikongo/Lari.
+ * The idea: French shares key phoneme-grapheme correspondences with Lari,
+ * so we respell Lari words using French conventions, then use language_code: "fr".
+ */
+function lariToFrenchPhonetic(text: string): string {
+  const words = text.split(/\s+/).filter(Boolean);
+  return words.map(w => convertWord(w)).join(" ");
+}
+
+function convertWord(word: string): string {
+  const lower = word.toLowerCase();
+  let result = "";
+  let i = 0;
+
+  while (i < lower.length) {
+    // "ns" → "nts" (Jacquot: initial ns = /nts/)
+    if (lower.startsWith("ns", i) && (i === 0 || !/[a-z]/.test(lower[i - 1]))) {
+      result += "nts";
+      i += 2;
+      continue;
+    }
+
+    // "kua" → "kou-a" (force hiatus, prevent /kwa/ glide)
+    if (lower.startsWith("kua", i)) {
+      result += "kou-a";
+      i += 3;
+      continue;
+    }
+
+    // Intervocalic "s" → "ss" (prevent French /z/ between vowels)
+    if (lower[i] === "s" && i > 0 && i < lower.length - 1) {
+      const prev = lower[i - 1];
+      const next = lower[i + 1];
+      if ("aeiou".includes(prev) && "aeiou".includes(next)) {
+        result += "ss";
+        i++;
+        continue;
+      }
+    }
+
+    // "u" → "ou" (Lari /u/ = French "ou", not French /y/)
+    if (lower[i] === "u") {
+      // Don't double-convert if already preceded by "o" (part of "ou")
+      if (i > 0 && lower[i - 1] === "o") {
+        result += "u";
+      } else {
+        result += "ou";
+      }
+      i++;
+      continue;
+    }
+
+    // Word-final "e" or "e" before consonant → "é" (prevent French mute e)
+    if (lower[i] === "e") {
+      const nextChar = i + 1 < lower.length ? lower[i + 1] : null;
+      if (!nextChar || (nextChar && !"aeiou".includes(nextChar))) {
+        result += "é";
+      } else {
+        result += "e";
+      }
+      i++;
+      continue;
+    }
+
+    // Everything else passes through (j, mb, nd, nk, etc. are fine in French)
+    result += lower[i];
+    i++;
+  }
+
+  // Preserve original casing for first letter
+  if (word[0] === word[0].toUpperCase()) {
+    result = result.charAt(0).toUpperCase() + result.slice(1);
+  }
+
+  return result;
+}
 
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") {
@@ -28,7 +107,8 @@ Deno.serve(async (req) => {
     }
 
     const selectedVoice = voiceId || DEFAULT_VOICE_ID;
-    console.log(`TTS Lari request: "${text}" with voice ${selectedVoice} (model: eleven_v3, lang: ln)`);
+    const frenchText = lariToFrenchPhonetic(text);
+    console.log(`TTS Lari: "${text}" → French phonetic: "${frenchText}" | voice: ${selectedVoice}`);
 
     const response = await fetch(
       `https://api.elevenlabs.io/v1/text-to-speech/${selectedVoice}?output_format=mp3_44100_128`,
@@ -39,8 +119,9 @@ Deno.serve(async (req) => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          text,
+          text: frenchText,
           model_id: "eleven_v3",
+          language_code: "fr",
           voice_settings: {
             stability: 0.5,
             similarity_boost: 0.75,
@@ -56,7 +137,6 @@ Deno.serve(async (req) => {
       const errorData = await response.text();
       console.error("ElevenLabs TTS error:", errorData);
       
-      // Fallback to v2 if v3 not available
       if (response.status === 422 || response.status === 403) {
         console.log("Falling back to eleven_multilingual_v2...");
         const fallbackResponse = await fetch(
@@ -68,7 +148,7 @@ Deno.serve(async (req) => {
               "Content-Type": "application/json",
             },
             body: JSON.stringify({
-              text,
+              text: frenchText,
               model_id: "eleven_multilingual_v2",
               voice_settings: {
                 stability: 0.5,
