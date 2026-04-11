@@ -1,47 +1,37 @@
 
 
-# Intégrer le TTS Lari avec G2P + voix Lingala/Zulu ElevenLabs
+# Humaniser la voix TTS avec clonage + réglages optimisés
 
-## Changement par rapport au plan précédent
+## Contexte
 
-Au lieu d'une voix française, on utilisera une voix **Lingala ou Zulu** d'ElevenLabs — langues bantoues proches du Lari, avec des phonèmes beaucoup plus compatibles. Le G2P adaptera le texte pour ces voix plutôt que pour le français.
+Le fichier uploadé est un résultat d'Instant Voice Clone ElevenLabs (voix féminine Lari) avec les paramètres : speed=100, stability=50, similarity_boost=75. Tu veux utiliser cet échantillon pour cloner une voix ET appliquer ces réglages au TTS.
 
-## Plan d'implémentation
+## Rappel : problème précédent
 
-### 1. Créer `src/lib/g2p.ts` — Moteur G2P TypeScript
-Port du fichier Python `lari_g2p.py` :
-- Tables de phonèmes (prénasalisées, affriquées, voyelles longues)
-- `tokenise(word)` → tokenisation greedy
-- `g2pWord(word)` → orthographe → phonèmes
-- `phonemesToIpa(phonemes)` → transcription IPA visuelle (`/ᵐboka/`)
-- `phonemesToBantu(phonemes)` → approximation optimisée pour une voix Lingala/Zulu (phonèmes très proches, pas besoin de forcer des clusters français)
+Le clonage avait échoué car la clé API ElevenLabs n'avait pas la permission `create_instant_voice_clone` (nécessite un plan Starter ou supérieur). Il faudra d'abord vérifier si la clé actuelle a les permissions.
 
-### 2. Mettre à jour `elevenlabs-tts-lari/index.ts`
-- Utiliser une voix Lingala ou Zulu au lieu de française (voix par défaut configurable)
-- Le `voiceId` sera passé depuis le client ou utiliser un ID par défaut
-- Garder le modèle `eleven_multilingual_v2` (supporte Lingala et Zulu)
+## Plan
 
-### 3. Créer `src/components/MandombeSpeaker.tsx`
-Composant réutilisable :
-- Icône 🔊 au clic → convertit le mot Lari via G2P, appelle l'edge function TTS
-- Tooltip IPA au survol
-- Animation pendant la lecture
-- Cache audio en mémoire (évite les appels répétés)
+### Étape 1 : Tester le clonage avec le fichier uploadé
+- Copier le MP3 uploadé vers `/tmp/`
+- Appeler l'edge function `elevenlabs-clone-voice` avec ce fichier + les 2 MP3 natifs précédents
+- Si le clonage échoue encore → informer l'utilisateur des permissions nécessaires
 
-### 4. Intégrer dans Dictionary et LessonDetail
-- **Dictionary.tsx** : bouton speaker à côté de chaque entrée
-- **LessonDetail.tsx** : bouton speaker dans les sections vocabulaire
+### Étape 2 : Ajuster les voice settings du TTS
+Mettre à jour `elevenlabs-tts-lari/index.ts` avec les paramètres du fichier :
+- `stability: 0.5` (au lieu de 0.65)
+- `similarity_boost: 0.75` (au lieu de 0.8)
+- `speed: 1.0`
+- `style: 0.3` (légèrement plus expressif)
 
-## Détails techniques
+### Étape 3 : Si clonage réussi, stocker le voice_id
+- Sauvegarder le `voice_id` cloné comme secret du projet
+- Mettre à jour `DEFAULT_VOICE_ID` dans l'edge function pour utiliser la voix clonée
 
-- Le Lingala et le Zulu sont des langues bantoues comme le Lari — mêmes types de consonnes prénasalisées (mb, nd, ng), mêmes voyelles ouvertes
-- L'approximation G2P→Bantu sera plus fidèle qu'une approximation française car les systèmes phonologiques sont proches
-- On testera d'abord avec quelques mots pour valider la qualité avant l'intégration complète
+### Étape 4 : Tester la synthèse avec quelques mots
+- Appeler le TTS avec "mboka", "ntangu", "lungolobi" pour vérifier la qualité
 
-## Fichiers créés/modifiés
-1. **Nouveau** : `src/lib/g2p.ts`
-2. **Nouveau** : `src/components/MandombeSpeaker.tsx`
-3. **Modifié** : `supabase/functions/elevenlabs-tts-lari/index.ts`
-4. **Modifié** : `src/pages/Dictionary.tsx`
-5. **Modifié** : `src/pages/LessonDetail.tsx`
+## Fichiers modifiés
+1. **Modifié** : `supabase/functions/elevenlabs-tts-lari/index.ts` — nouveaux voice settings
+2. **Potentiellement** : ajout d'un secret `LARI_VOICE_ID` si le clonage réussit
 
