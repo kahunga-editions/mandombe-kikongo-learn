@@ -251,9 +251,12 @@ const LessonDetail = () => {
                           {conj.rows.map((row, j) => (
                             <div key={j} className="flex items-start px-6 py-3 gap-6">
                               <span className="text-sm text-muted-foreground w-20 shrink-0 pt-1">{row.person}</span>
-                              <div className="flex flex-col">
+                              <div className="flex flex-col flex-1">
                                 <span className="font-mandombe text-2xl text-gold leading-tight">{row.mandombe}</span>
-                                <span className="font-display font-semibold text-foreground mt-1">{row.lari}</span>
+                                <div className="flex items-center gap-1 mt-1">
+                                  <MandombeSpeaker lariText={row.lari} className="shrink-0" />
+                                  <span className="font-display font-semibold text-foreground">{row.lari}</span>
+                                </div>
                               </div>
                             </div>
                           ))}
