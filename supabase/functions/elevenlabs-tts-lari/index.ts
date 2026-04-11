@@ -28,7 +28,7 @@ Deno.serve(async (req) => {
     }
 
     const selectedVoice = voiceId || DEFAULT_VOICE_ID;
-    console.log(`TTS Lari request: "${text}" with voice ${selectedVoice} (model: eleven_v3, lang: zu)`);
+    console.log(`TTS Lari request: "${text}" with voice ${selectedVoice} (model: eleven_v3, lang: ln)`);
 
     const response = await fetch(
       `https://api.elevenlabs.io/v1/text-to-speech/${selectedVoice}?output_format=mp3_44100_128`,
