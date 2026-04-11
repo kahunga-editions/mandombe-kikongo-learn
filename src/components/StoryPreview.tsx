@@ -1,4 +1,5 @@
 import PremiumGate from "@/components/PremiumGate";
+import MandombeSpeaker from "@/components/MandombeSpeaker";
 import { useLanguage } from "@/contexts/LanguageContext";
 import nsayiPanel1 from "@/assets/nsayi-panel-1.jpg";
 import nsayiPanel2 from "@/assets/nsayi-panel-2.jpg";
@@ -288,9 +289,12 @@ const ComicPanel = ({
         </div>
 
         {/* Lari (Latin script) */}
-        <p className="text-foreground text-sm font-medium">
-          <span className="text-gold font-bold">Lari:</span> {lari}
-        </p>
+        <div className="flex items-start gap-2">
+          <MandombeSpeaker lariText={lari} className="mt-0.5 shrink-0" />
+          <p className="text-foreground text-sm font-medium">
+            <span className="text-gold font-bold">Lari:</span> {lari}
+          </p>
+        </div>
 
         {/* French */}
         <p className="text-muted-foreground text-sm">
