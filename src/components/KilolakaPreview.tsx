@@ -1,5 +1,6 @@
 import { useState } from "react";
 import PremiumGate from "@/components/PremiumGate";
+import MandombeSpeaker from "@/components/MandombeSpeaker";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const KilolakaPreview = () => {
@@ -31,7 +32,8 @@ const KilolakaPreview = () => {
                 { syllable: "Ka", key: "ka" },
               ].map((item) => (
                 <div key={item.syllable} className="flex gap-4 items-start">
-                  <div className="min-w-[60px] text-center">
+                  <div className="min-w-[60px] text-center relative">
+                    <MandombeSpeaker lariText={item.syllable} className="absolute -top-1 -right-1 w-6 h-6" />
                     <span className="font-mandombe text-3xl text-gold block mb-2">{item.syllable}</span>
                     <span className="font-display text-3xl font-bold text-gold">{item.syllable}</span>
                   </div>
@@ -52,7 +54,8 @@ const KilolakaPreview = () => {
                 { morpheme: "Ba", key: "ba" },
               ].map((item) => (
                 <div key={item.morpheme} className="flex items-center gap-4 bg-cream/5 rounded-lg px-4 py-3">
-                  <div className="min-w-[40px] text-center">
+                  <div className="min-w-[40px] text-center relative">
+                    <MandombeSpeaker lariText={item.morpheme} className="absolute -top-1 -right-1 w-5 h-5" />
                     <span className="font-mandombe text-2xl text-terracotta-light block mb-2">{item.morpheme}</span>
                     <span className="font-display text-xl font-bold text-terracotta-light">{item.morpheme}</span>
                   </div>
@@ -73,7 +76,8 @@ const KilolakaPreview = () => {
                 <div className="space-y-3">
                   {["fi", "fu", "fe", "fo", "fa"].map((key) => (
                     <div key={key} className="flex items-center gap-3 bg-cream/5 rounded-lg px-3 py-2">
-                      <div className="min-w-[40px] text-center">
+                      <div className="min-w-[40px] text-center relative">
+                        <MandombeSpeaker lariText={key.charAt(0).toUpperCase() + key.charAt(1)} className="absolute -top-1 -right-1 w-5 h-5" />
                         <span className="font-mandombe text-2xl text-gold block mb-2">{key.charAt(0).toUpperCase() + key.charAt(1)}</span>
                         <span className="font-display text-lg font-bold text-gold">{key.charAt(0).toUpperCase() + key.charAt(1)}</span>
                       </div>
@@ -89,7 +93,8 @@ const KilolakaPreview = () => {
                 <div className="space-y-3">
                   {["di", "du", "de", "do", "da"].map((key) => (
                     <div key={key} className="flex items-center gap-3 bg-cream/5 rounded-lg px-3 py-2">
-                      <div className="min-w-[40px] text-center">
+                      <div className="min-w-[40px] text-center relative">
+                        <MandombeSpeaker lariText={key.charAt(0).toUpperCase() + key.charAt(1)} className="absolute -top-1 -right-1 w-5 h-5" />
                         <span className="font-mandombe text-2xl text-gold block mb-2">{key.charAt(0).toUpperCase() + key.charAt(1)}</span>
                         <span className="font-display text-lg font-bold text-gold">{key.charAt(0).toUpperCase() + key.charAt(1)}</span>
                       </div>
@@ -105,7 +110,8 @@ const KilolakaPreview = () => {
                 <div className="space-y-3">
                   {["gi", "gu", "ge", "go", "ga"].map((key) => (
                     <div key={key} className="flex items-center gap-3 bg-cream/5 rounded-lg px-3 py-2">
-                      <div className="min-w-[40px] text-center">
+                      <div className="min-w-[40px] text-center relative">
+                        <MandombeSpeaker lariText={key.charAt(0).toUpperCase() + key.charAt(1)} className="absolute -top-1 -right-1 w-5 h-5" />
                         <span className="font-mandombe text-2xl text-gold block mb-2">{key.charAt(0).toUpperCase() + key.charAt(1)}</span>
                         <span className="font-display text-lg font-bold text-gold">{key.charAt(0).toUpperCase() + key.charAt(1)}</span>
                       </div>
