@@ -61,6 +61,24 @@ function convertWord(word: string): string {
       continue;
     }
 
+    // Hiatus: insert hyphen between consecutive vowels when first is "i" or "u"
+    // to prevent French glide /j/ or /w/ (e.g. "Bio" → "Bi-o", not "byo")
+    if (("iu".includes(lower[i])) && i + 1 < lower.length && "aeiou".includes(lower[i + 1])) {
+      // "u" case: convert to "ou" then add hyphen before next vowel
+      if (lower[i] === "u") {
+        if (i > 0 && lower[i - 1] === "o") {
+          result += "u-";
+        } else {
+          result += "ou-";
+        }
+      } else {
+        // "i" case: keep "i" and add hyphen
+        result += "i-";
+      }
+      i++;
+      continue;
+    }
+
     // Word-final "e" or "e" before consonant → "é" (prevent French mute e)
     if (lower[i] === "e") {
       const nextChar = i + 1 < lower.length ? lower[i + 1] : null;
