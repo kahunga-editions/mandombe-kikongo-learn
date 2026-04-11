@@ -283,12 +283,14 @@ const Dictionary = () => {
                 >
                   <div className="flex flex-col sm:flex-row sm:items-start gap-3">
                     <div className="flex-1 min-w-0">
-                      <div className="flex items-center gap-2 flex-wrap">
+                      <div className="flex items-baseline gap-2 flex-wrap">
                         <h3 className="text-xl font-bold text-foreground">{entry.lari}</h3>
-                        <span className="font-mandombe text-2xl text-primary/70 leading-none">
-                          {entry.mandombe}
+                        <span className="inline-flex items-center gap-1">
+                          <span className="font-mandombe text-2xl text-primary/70 leading-none">
+                            {entry.mandombe}
+                          </span>
+                          <MandombeSpeaker lariText={entry.lari} />
                         </span>
-                        <MandombeSpeaker lariText={entry.lari} />
                       </div>
                       <p className="mt-1 text-base text-muted-foreground">
                         {getTranslation(entry)}
