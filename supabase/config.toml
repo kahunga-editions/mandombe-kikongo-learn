@@ -17,3 +17,6 @@ verify_jwt = false
 
 [functions.elevenlabs-tts-lari]
 verify_jwt = false
+
+[functions.elevenlabs-add-samples]
+verify_jwt = false
