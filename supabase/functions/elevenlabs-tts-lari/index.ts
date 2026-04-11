@@ -6,9 +6,8 @@ const corsHeaders = {
 };
 
 // Default voice: use a voice that works well with Bantu languages
-// ElevenLabs multilingual v2 supports Lingala and Zulu natively
-// "River" voice — good for African language phonemes
-const DEFAULT_VOICE_ID = "SAz9YHcvj6GT2YYXdXww";
+// If LARI_VOICE_ID env var is set (from voice cloning), use that instead
+const DEFAULT_VOICE_ID = Deno.env.get("LARI_VOICE_ID") || "SAz9YHcvj6GT2YYXdXww";
 
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") {
