@@ -1,58 +1,51 @@
 
 
-# Nouvelle leçon : Les étangs (Bijinga) — Vocabulaire et phrases
+# Tester le Voice Cloning ElevenLabs avec les échantillons Lari
 
-## Contenu à intégrer
+## Contexte
 
-Tout le matériel fourni : vocabulaire (bijinga, tshizinga, loba, tilapia, bala), phrases complètes avec structure syntaxique, et démonstratifs.
+Tu as fourni 2 fichiers MP3 natifs ("lungolobi") et 2 vidéos. L'objectif est de cloner une voix Lari via ElevenLabs pour ensuite générer de la synthèse vocale sur les mots du dictionnaire.
 
-## Structure de la leçon
+## Prérequis
 
-**ID** : `bijinga-etangs`
-**Titre** : "Fishing Ponds" / "Les étangs de pêche"
-**Niveau** : beginner
-**Icon** : 🐟
+1. **Connecter ElevenLabs** — Le connecteur ElevenLabs est disponible mais pas encore lié au projet. Je vais le connecter pour obtenir la clé API automatiquement.
 
-### Vocabulaire (7 entrées)
-| Lari | French | English |
-|------|--------|---------|
-| Tshijinga / Bijinga | Étang artificiel (sg./pl.) | Artificial pond (sg./pl.) |
-| Loba | Pêcher | To fish |
-| Bala | Enfants | Children |
-| Tilapia | Tilapia | Tilapia |
-| Tueri | Quatre | Four |
-| Bieri | Trois | Three |
-| Neto | Nous | Us, we |
+2. **Préparer les échantillons audio** — Les 2 MP3 seront utilisés comme échantillons pour le cloning. Les vidéos pourront être converties en audio si besoin de plus d'échantillons.
 
-### Syntaxe (1 bloc, 2 groupes)
+## Plan d'implémentation
 
-**Groupe 1 — Phrases avec les étangs** :
-- `Bizinga bi ya tueri na bio.` — On avait 4 étangs.
-- `Bizinga bi ya bieri neto.` — (les 3 étangs pour nous)
-- `Tshizinga tsha bi ya tsheri tsha bala.` — Le quatrième était pour les enfants.
-- `Beto bala mu tshijinga tshina tueri loba.` — Nous les enfants pêchions dans cet étang-là.
-- `Bijinga bia tilapia bieri.` — Les étangs étaient des étangs pour tilapias.
+### Étape 1 : Connecter ElevenLabs
+Utiliser le connecteur ElevenLabs pour lier une clé API au projet.
 
-**Groupe 2 — Décomposition** :
-- `Beto bala` = Nous les enfants
-- `Tshijinga tshina` = Cet étang-là
-- `Loba` = Pêcher
+### Étape 2 : Créer une edge function `elevenlabs-clone-voice`
+- Accepte des fichiers audio en upload
+- Appelle l'API ElevenLabs `POST /v1/voices/add` pour créer une voix clonée ("Lari Native Speaker")
+- Retourne le `voice_id` de la voix clonée
 
-### Exercices (4)
+### Étape 3 : Créer une edge function `elevenlabs-tts-lari`
+- Accepte un mot/phrase Lari en entrée
+- Utilise la voix clonée + modèle `eleven_multilingual_v2` pour générer l'audio
+- Retourne le MP3
 
-1. **Multiple-choice** (×3) :
-   - Que signifie "Loba" ? → Pêcher
-   - Que signifie "Beto bala" ? → Nous les enfants
-   - Que signifie "Tshijinga tshina" ? → Cet étang-là
+### Étape 4 : Tester le cloning via un script
+- Uploader les 2 MP3 vers l'API ElevenLabs pour créer la voix clonée
+- Tester la synthèse avec quelques mots Lari (ex: "mboka", "ntangu", "lungolobi")
+- Évaluer la qualité avant d'intégrer dans l'app
 
-2. **Fill-in-blank** (×2) :
-   - "Beto bala mu tshijinga tshina tueri ___" → loba
-   - "Bijinga bia ___ bieri" → tilapia
+### Étape 5 (si qualité OK) : Intégrer dans l'app
+- Ajouter un composant `MandombeSpeaker` qui appelle `elevenlabs-tts-lari` au clic
+- Intégrer dans le dictionnaire et les leçons
 
-3. **Matching** : Associer les expressions Lari à leur traduction (5 paires)
+## Détails techniques
 
-4. **Mandombe Recognition** : 6 items basés sur le vocabulaire de la leçon
+- L'API de cloning ElevenLabs supporte l'**Instant Voice Cloning** avec aussi peu que 1 minute d'audio
+- Le modèle `eleven_multilingual_v2` supporte 29 langues — même si le Lari n'est pas officiellement listé, les phonèmes proches du français/portugais devraient donner des résultats exploitables
+- Les 2 MP3 seront envoyés via `multipart/form-data` à l'endpoint `/v1/voices/add`
+- Le `voice_id` sera stocké comme secret pour être réutilisé par la TTS
 
-## Fichier modifié
-`src/data/lessons.ts` — Insérer la nouvelle leçon avant la ligne 25750 (le `];` final).
+## Limites connues
+
+- La qualité dépendra fortement des échantillons (clarté, bruit de fond, variété phonétique)
+- Le Lari n'étant pas un langue supportée nativement, certaines prononciations pourraient être approximatives
+- C'est un test expérimental — on évaluera la qualité avant de décider de l'intégration
 
