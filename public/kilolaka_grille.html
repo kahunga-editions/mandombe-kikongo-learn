@@ -182,12 +182,38 @@ tr.band-0 td.cell { border-left: 3px solid #fef86c44; }
 tr.band-1 td.cell { border-left: 3px solid #fea9af44; }
 tr.band-2 td.cell { border-left: 3px solid #eaeaea33; }
 
+.speak-btn {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 22px;
+  height: 22px;
+  border: none;
+  background: transparent;
+  color: #fef86c88;
+  cursor: pointer;
+  font-size: 0.75rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  padding: 0;
+  z-index: 2;
+}
+.speak-btn:hover { color: #fef86c; background: rgba(254,248,108,0.15); }
+.speak-btn.loading { animation: spin 0.8s linear infinite; }
+.speak-btn.playing { color: #fea9af; animation: pulse 0.6s ease infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.5; } }
+
 @media (max-width: 768px) {
   body { padding: 10px; }
   h1 { font-size: 1.4rem; }
   .glyph { font-size: 1.3rem; }
   td.cell { padding: 6px 4px; min-width: 75px; }
   thead th { font-size: 0.6rem; min-width: 75px; }
+  .speak-btn { width: 18px; height: 18px; font-size: 0.6rem; top: 2px; right: 2px; }
 }
 </style>
 </head>
@@ -226,6 +252,57 @@ tr.band-2 td.cell { border-left: 3px solid #eaeaea33; }
 </div>
 
 <script>
+const SUPABASE_URL = 'https://zckjqudeoodfxikhdfvh.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inpja2pxdWRlb29kZnhpa2hkZnZoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzE4MDY0MjAsImV4cCI6MjA4NzM4MjQyMH0.TOLUKkoTIaxcUD2-Yp-nNkl0w2RReTrmpFfs1mGX8pk';
+const audioCache = {};
+
+async function speakSyllable(text, btn, event) {
+  if (event) event.stopPropagation();
+  if (btn.classList.contains('loading') || btn.classList.contains('playing')) return;
+
+  // Check cache
+  if (audioCache[text]) {
+    btn.classList.add('playing');
+    const audio = new Audio(audioCache[text]);
+    audio.onended = () => btn.classList.remove('playing');
+    audio.onerror = () => btn.classList.remove('playing');
+    audio.play();
+    return;
+  }
+
+  btn.classList.add('loading');
+  btn.innerHTML = '⏳';
+  try {
+    const resp = await fetch(`${SUPABASE_URL}/functions/v1/elevenlabs-tts-lari`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'apikey': SUPABASE_ANON_KEY,
+        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`
+      },
+      body: JSON.stringify({ text })
+    });
+    const data = await resp.json();
+    if (data.audioContent) {
+      const audioUrl = `data:audio/mpeg;base64,${data.audioContent}`;
+      audioCache[text] = audioUrl;
+      btn.classList.remove('loading');
+      btn.classList.add('playing');
+      btn.innerHTML = '🔊';
+      const audio = new Audio(audioUrl);
+      audio.onended = () => btn.classList.remove('playing');
+      audio.onerror = () => btn.classList.remove('playing');
+      audio.play();
+    } else {
+      throw new Error(data.error || 'TTS failed');
+    }
+  } catch (e) {
+    console.error('TTS error:', e);
+    btn.classList.remove('loading');
+    btn.innerHTML = '🔊';
+  }
+}
+
 const VOWELS = ['i','u','e','o','a','ie','io','ia','iu','ue','ui','ua'];
 
 // Each group: [consonant, root meaning, available vowels (null = all 12), specific overrides]
@@ -416,9 +493,11 @@ function buildGrid() {
       const syllable = toFontSyllable(cons, v);
       const meaning = meanings[v] || `${rootMeaning} ${getVowelModifier(v)}`;
       
+      const lariText = cons + v;
       const td = document.createElement('td');
       td.className = 'cell';
       td.innerHTML = `
+        <button class="speak-btn" onclick="speakSyllable('${lariText.replace(/'/g,"\\'")}', this, event)" title="Écouter ${lariText}">🔊</button>
         <span class="glyph">${syllable}</span>
         <div class="meaning">${meaning}</div>
       `;
