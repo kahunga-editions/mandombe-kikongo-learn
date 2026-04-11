@@ -130,11 +130,11 @@ Deno.serve(async (req) => {
           model_id: "eleven_v3",
           language_code: "fr",
           voice_settings: {
-            stability: 0.65,
+            stability: 0.72,
             similarity_boost: 0.75,
-            style: 0.15,
+            style: 0.10,
             use_speaker_boost: false,
-            speed: 0.88,
+            speed: 0.85,
           },
         }),
       }
@@ -158,11 +158,11 @@ Deno.serve(async (req) => {
               text: frenchText,
               model_id: "eleven_multilingual_v2",
               voice_settings: {
-                stability: 0.65,
+                stability: 0.72,
                 similarity_boost: 0.75,
-                style: 0.15,
+                style: 0.10,
                 use_speaker_boost: false,
-                speed: 0.88,
+                speed: 0.85,
               },
             }),
           }
