@@ -1,37 +1,32 @@
 
 
-# Humaniser la voix TTS avec clonage + réglages optimisés
+# Tester le TTS et repositionner le bouton 🔊 à côté du Mandombe
 
 ## Contexte
 
-Le fichier uploadé est un résultat d'Instant Voice Clone ElevenLabs (voix féminine Lari) avec les paramètres : speed=100, stability=50, similarity_boost=75. Tu veux utiliser cet échantillon pour cloner une voix ET appliquer ces réglages au TTS.
-
-## Rappel : problème précédent
-
-Le clonage avait échoué car la clé API ElevenLabs n'avait pas la permission `create_instant_voice_clone` (nécessite un plan Starter ou supérieur). Il faudra d'abord vérifier si la clé actuelle a les permissions.
+Le bouton speaker est actuellement entre le texte Lari et le Mandombe (ligne 288). L'utilisateur veut le déplacer **à côté du Mandombe** (après le texte Mandombe). Un nouveau fichier audio a été uploadé — même voix Kikongo Lari woman avec les mêmes paramètres.
 
 ## Plan
 
-### Étape 1 : Tester le clonage avec le fichier uploadé
-- Copier le MP3 uploadé vers `/tmp/`
-- Appeler l'edge function `elevenlabs-clone-voice` avec ce fichier + les 2 MP3 natifs précédents
-- Si le clonage échoue encore → informer l'utilisateur des permissions nécessaires
+### 1. Repositionner le speaker dans Dictionary.tsx
+Déplacer `<MandombeSpeaker>` de la ligne 288 (entre Lari et Mandombe) vers **après** le `<span>` Mandombe (après ligne 291) :
 
-### Étape 2 : Ajuster les voice settings du TTS
-Mettre à jour `elevenlabs-tts-lari/index.ts` avec les paramètres du fichier :
-- `stability: 0.5` (au lieu de 0.65)
-- `similarity_boost: 0.75` (au lieu de 0.8)
-- `speed: 1.0`
-- `style: 0.3` (légèrement plus expressif)
+```
+<h3>entry.lari</h3>
+<span class="font-mandombe">entry.mandombe</span>
+<MandombeSpeaker lariText={entry.lari} />
+```
 
-### Étape 3 : Si clonage réussi, stocker le voice_id
-- Sauvegarder le `voice_id` cloné comme secret du projet
-- Mettre à jour `DEFAULT_VOICE_ID` dans l'edge function pour utiliser la voix clonée
+### 2. Tenter le clonage avec le nouvel échantillon
+- Copier le fichier uploadé vers `/tmp/`
+- Appeler l'edge function `elevenlabs-clone-voice` avec ce fichier
+- Si réussi → stocker le `voice_id` comme secret `LARI_VOICE_ID` et mettre à jour l'edge function TTS
+- Si échec (permissions) → informer l'utilisateur
 
-### Étape 4 : Tester la synthèse avec quelques mots
-- Appeler le TTS avec "mboka", "ntangu", "lungolobi" pour vérifier la qualité
+### 3. Tester le TTS
+- Appeler `elevenlabs-tts-lari` avec quelques mots pour vérifier la qualité audio avec les paramètres actuels
 
 ## Fichiers modifiés
-1. **Modifié** : `supabase/functions/elevenlabs-tts-lari/index.ts` — nouveaux voice settings
-2. **Potentiellement** : ajout d'un secret `LARI_VOICE_ID` si le clonage réussit
+1. **`src/pages/Dictionary.tsx`** — déplacer le speaker après le Mandombe
+2. **Potentiellement** `supabase/functions/elevenlabs-tts-lari/index.ts` si le clonage réussit
 
