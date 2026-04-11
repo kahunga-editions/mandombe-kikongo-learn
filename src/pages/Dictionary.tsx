@@ -285,10 +285,10 @@ const Dictionary = () => {
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-2 flex-wrap">
                         <h3 className="text-xl font-bold text-foreground">{entry.lari}</h3>
-                        <MandombeSpeaker lariText={entry.lari} />
                         <span className="font-mandombe text-2xl text-primary/70 leading-none">
                           {entry.mandombe}
                         </span>
+                        <MandombeSpeaker lariText={entry.lari} />
                       </div>
                       <p className="mt-1 text-base text-muted-foreground">
                         {getTranslation(entry)}
