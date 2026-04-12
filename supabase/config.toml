@@ -23,3 +23,6 @@ verify_jwt = false
 
 [functions.translate-lari]
 verify_jwt = false
+
+[functions.elevenlabs-tts-general]
+verify_jwt = false
