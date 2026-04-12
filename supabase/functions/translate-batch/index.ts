@@ -67,11 +67,26 @@ serve(async (req) => {
     }
 
     const data = await response.json();
-    const content = data.choices?.[0]?.message?.content || "[]";
+    const raw = data.choices?.[0]?.message?.content || "[]";
 
-    // Extract JSON array from the response
-    const jsonMatch = content.match(/\[[\s\S]*\]/);
-    const translations = jsonMatch ? JSON.parse(jsonMatch[0]) : [];
+    // Extract and repair JSON array from the response
+    const jsonMatch = raw.match(/\[[\s\S]*\]/);
+    let translations: string[] = [];
+    if (jsonMatch) {
+      let jsonStr = jsonMatch[0];
+      // Repair common LLM JSON issues
+      jsonStr = jsonStr.replace(/,\s*]/g, "]"); // trailing commas
+      jsonStr = jsonStr.replace(/'\s*([^']*?)'\s*/g, '"$1"'); // single quotes to double
+      jsonStr = jsonStr.replace(/,\s*,/g, ","); // double commas
+      try {
+        translations = JSON.parse(jsonStr);
+      } catch {
+        // Last resort: extract quoted strings manually
+        const strings = [...jsonStr.matchAll(/"([^"]*?)"/g)].map(m => m[1]);
+        translations = strings;
+        console.warn("JSON repair fallback used. Raw:", jsonStr.substring(0, 200));
+      }
+    }
 
     return new Response(JSON.stringify({ translations }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
