@@ -1,56 +1,68 @@
 
 
-# Nouvelle leçon : Lubakusu
+# Intégration du moteur phonétique Lari v2
 
-## Principe strict
-- **titleLari** : `"Lubakusu"` — rien d'autre, pas de "ye", pas de mots inventés
-- Tous les textes Lari proviennent exclusivement du contenu fourni par l'utilisateur
-- Aucun titre, phrase ou mot Lari inventé
+## Résumé
+Remplacer le système actuel (g2p.ts côté client + convertWord/PHONETIC_OVERRIDES côté edge function) par le nouveau moteur phonétique unifié qui gère syllabification, TTS ElevenLabs, et prétraitement Mandombe — le tout basé sur les règles de Jacquot et l'analyse acoustique de Denis Malanda.
+
+## Architecture actuelle vs nouvelle
+
+**Avant** : 2 systèmes séparés et incomplets
+- `src/lib/g2p.ts` — tokenisation + IPA (client) — utilisé uniquement pour le tooltip IPA dans MandombeSpeaker
+- `supabase/functions/elevenlabs-tts-lari/index.ts` — convertWord() + PHONETIC_OVERRIDES (serveur) — règles ad hoc
+
+**Après** : 1 moteur unifié, 2 copies (client + serveur)
+- `src/lib/lari-phonetic-engine.ts` — version TypeScript du moteur (client) — pour IPA, syllabification, prétraitement Mandombe
+- Edge function — même logique `preprocessForElevenLabs()` (serveur) — remplace convertWord() et PHONETIC_OVERRIDES
 
 ## Fichiers modifiés
 
-### 1. `src/data/lessons.ts` — nouvelle leçon
+### 1. `src/lib/lari-phonetic-engine.ts` (NOUVEAU)
+Conversion TypeScript du moteur fourni :
+- `syllabify(word)` — découpage syllabique
+- `preprocessForElevenLabs(text)` — règles TTS (nj→ndj, g dur, ŋ vélaire via n')
+- `preprocessForMandombe(text)` — nj→n+ZWJ+dj, espaces ponctuation
+- `processLariText(text)` — tout-en-un
 
-**Métadonnées** :
-- id: `"lubakusu"`
-- title: `"Help & Emergencies"`
-- titleFr: `"Aide et urgences"`
-- titlePt: `"Ajuda e emergências"`
-- titleLari: `"Lubakusu"`
-- titleMandombe: `"Lubakusu"`
-- level: `"intermediate"`
-- icon: `"🆘"`
+### 2. `src/lib/g2p.ts` (MODIFIÉ)
+- Conserver `tokenise()`, `IPA_MAP`, `phonemesToIpa()`, `lariToIpa()` pour les tooltips IPA
+- Supprimer `BANTU_MAP`, `phonemesToBantu()`, `lariToBantu()` (remplacés par le nouveau moteur)
+- Ajouter les nouveaux phonèmes manquants : `nj`, `ndj`, `dj`, `gn`, `mf`, `mv`, `mw`, `bf`, `nl`, `ny` dans MULTI_GRAPHS et IPA_MAP
 
-**Vocabulaire** (~18 entrées, toutes fournies par l'utilisateur) :
-bakisa, sarisa, sadisa, lubakusu/tubakusu, lusalusu/tusalusu, luala, baluka, lemvoka, muivi/mivi, benga/mabenga, musualu, nzila, jimbakane, nsatu, mayela, mawasu, nlemvu/nlemvo, Benga dia Tiya
+### 3. `supabase/functions/elevenlabs-tts-lari/index.ts` (MODIFIÉ)
+- Remplacer `PHONETIC_OVERRIDES` + `convertWord()` + `buildText()` par la logique de `preprocessForElevenLabs()` portée en Deno
+- Les règles regex du moteur v2 remplacent toutes les transformations manuelles
+- Conserver la structure de l'edge function (CORS, appel ElevenLabs, fallback model)
 
-**Syntaxe** (3 blocs, conjugaisons exactes fournies) :
-1. "Nzila yi ku jimbakane" — les 6 personnes (ku, ∅, mu, tu, lu, ba) avec notes de prononciation
-2. "Lusalusu lue nani nsatu" — les 6 personnes (nani, naku, nandi, neto, neno, nawu)
-3. "Nduele / Luele" — les 6 personnes avec note sur l'accent différentiel 2e/3e personne
+### 4. `src/components/MandombeSpeaker.tsx` (MODIFIÉ)
+- Importer `processLariText` depuis le nouveau moteur
+- Utiliser `processLariText(lariText)` pour obtenir `{ tts, syllables }` 
+- Afficher les syllabes dans le tooltip (en plus de l'IPA existant)
+- Le texte envoyé au TTS reste `lariText` (l'edge function fait le preprocessing côté serveur)
 
-**Phrases** (~12, toutes fournies) :
-Mbakisa, Mbakisa eno, Tu bakisa eno, Ba bakisa eno, Yiza ku mbakisa sa malu, Sa malu, Sa mayela, Bua ka bua, Sa musualu, Sa mawasu, Mu baka eno, Mbakisa eno nlemvu eno — avec notes de liaison
+### 5. `src/components/LingalaMandombe.tsx` (MODIFIÉ)
+- Importer `preprocessForMandombe` depuis le nouveau moteur
+- Appliquer `preprocessForMandombe()` au texte Lingala avant le rendu en police Mandombe (gestion nj→n+ZWJ+dj, espaces ponctuation)
 
-**Exercices** (5) :
-1. Multiple choice — identifier traductions des expressions d'aide
-2. Fill-in-blank — compléter les pronoms dans les conjugaisons
-3. Matching — expressions Lari ↔ traductions françaises
-4. Mandombe recognition — reconnaître les mots du vocabulaire
-5. Multiple choice — questions culturelles (Benga dia Tiya, parler de soi à la 3e personne)
+## Règles phonétiques clés intégrées
 
-### 2. `supabase/functions/elevenlabs-tts-lari/index.ts` — overrides phonétiques
+| Règle | Exemple | Résultat TTS |
+|-------|---------|-------------|
+| nj → ndj | njila | ndjila |
+| ngi → nghi | mpangi | mpan-ghi |
+| nge → nghe | nge | nghe |
+| gi initial → guî | giese | guîese |
+| n'ki → nkhi | n'kisi | nkhisi |
+| n'gi → nghi | n'giela | nghiela |
 
-Ajout au dictionnaire `PHONETIC_OVERRIDES` :
-```typescript
-"jimbakane": "djimbakané",
-"mbakisa": "mbakissa",
-"lusalusu": "loussaloussou",
-"lubakusu": "loubakoussou",
-```
+## Ce qui ne change PAS
+- L'API ElevenLabs (voix, modèle, paramètres) reste identique
+- Le composant `TranslationSpeaker` (langues non-Lari) reste inchangé
+- Les données dans `lessons.ts` restent inchangées
+- Le flow utilisateur reste identique (clic → audio)
 
-## Impact automatique
-- **Dictionnaire** : les 18 entrées vocabulaire + 12 phrases apparaîtront automatiquement
-- **Traducteur** : enrichi par les nouvelles entrées
-- **Audio** : fonctionne via les composants existants (MandombeSpeaker + TranslationSpeaker)
+## Portée
+- 5 fichiers (1 nouveau, 4 modifiés)
+- Aucune modification de base de données
+- Redéploiement de l'edge function nécessaire
 
