@@ -1,23 +1,30 @@
 
 
-# Voix coréenne dédiée pour le TTS
+# Correction prononciation "g" dur devant e/i/y dans le TTS Lari
 
-## Changement
-Ajouter un routage spécifique pour le coréen (`ko`) dans `elevenlabs-tts-general/index.ts`, utilisant la voix `KlstlYt9VVf3zgie2Oht` au lieu de Sarah.
+## Problème
+En français, "g" devant "e", "i", "y" donne un son doux /ʒ/ (comme "girafe"). En Lari, le "g" est toujours dur /g/ (comme "gare"). Le TTS français prononce donc mal "mpangi", "nge", etc.
 
-## Détail technique
+## Solution
+Ajouter une règle dans `convertWord()` de `supabase/functions/elevenlabs-tts-lari/index.ts` : quand "g" est suivi de "e", "i" ou "y", insérer un "u" entre les deux pour forcer le g dur en orthographe française.
 
-**Fichier** : `supabase/functions/elevenlabs-tts-general/index.ts`
+**Important** : cela ne change que le texte envoyé au TTS (le texte affiché à l'utilisateur reste inchangé). La fonction `lariToFrenchPhonetic()` est justement faite pour ça — réécrire la prononciation pour le moteur TTS français.
 
-- Ajouter une constante `KOREAN_VOICE_ID = "KlstlYt9VVf3zgie2Oht"`
-- Modifier la sélection de voix : Lingala → Mbilia, Coréen → voix dédiée, autres → Sarah
-- Le modèle reste `eleven_multilingual_v2` pour le coréen (comme les autres langues non-Lingala)
+Exemples de transformation interne :
+- `mpangi` → `mpangui` (prononcé /mpangi/)
+- `nge` → `ngué` (le "é" est déjà géré par la règle existante)
 
-```text
-lang === "ln"  → Mbilia + eleven_v3
-lang === "ko"  → KlstlYt9VVf3zgie2Oht + eleven_multilingual_v2
-autres         → Sarah + eleven_multilingual_v2
+## Fichier modifié
+- `supabase/functions/elevenlabs-tts-lari/index.ts` — ajout d'un bloc dans `convertWord()`, avant le bloc "j" → "z" (vers ligne 94) :
+
+```typescript
+// "g" + [eiy] → "gu" + [eiy] (force hard /g/ in French TTS)
+if (lower[i] === "g" && i + 1 < lower.length && "eiy".includes(lower[i + 1])) {
+  result += "gu";
+  i++;
+  continue;
+}
 ```
 
-Un seul fichier modifié, ~3 lignes changées.
+La voyelle suivante (e, i, y) sera traitée au prochain tour de boucle par les règles existantes (ex: "e" → "é", "i" reste "i", etc.).
 
