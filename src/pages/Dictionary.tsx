@@ -168,6 +168,7 @@ const Dictionary = () => {
   };
 
   const getCategory = (entry: DictionaryEntry) => {
+    if (isDynamic) return getTranslation(entry.categoryFr, entry.category);
     switch (language) {
       case "fr":
         return entry.categoryFr;
