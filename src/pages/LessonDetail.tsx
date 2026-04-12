@@ -4,6 +4,7 @@ import { lessons } from "@/data/lessons";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MandombeSpeaker from "@/components/MandombeSpeaker";
+import TranslationSpeaker from "@/components/TranslationSpeaker";
 import LingalaMandombe from "@/components/LingalaMandombe";
 import MultipleChoice from "@/components/exercises/MultipleChoice";
 import MatchingExercise from "@/components/exercises/MatchingExercise";
@@ -165,8 +166,9 @@ const LessonDetail = () => {
                             <p className="font-display text-lg font-bold text-foreground">{item.lari}</p>
                             <MandombeSpeaker lariText={item.lari} />
                           </div>
-                          <div className="flex flex-wrap gap-4 mt-1 text-sm text-muted-foreground">
+                          <div className="flex flex-wrap items-center gap-1 mt-1 text-sm text-muted-foreground">
                             <span>{flag} {translation}</span>
+                            <TranslationSpeaker text={translation} lang={language} />
                           </div>
                           </div>
                         </div>
@@ -229,7 +231,10 @@ const LessonDetail = () => {
                                             <p className="font-display font-semibold text-foreground">{ex.lari}</p>
                                             <MandombeSpeaker lariText={ex.lari} />
                                           </div>
-                                          <p className="text-sm text-muted-foreground mt-0.5">{flag} {translation}</p>
+                                          <div className="flex items-center gap-1 text-sm text-muted-foreground mt-0.5">
+                                            <span>{flag} {translation}</span>
+                                            <TranslationSpeaker text={translation} lang={language} />
+                                          </div>
                                         </div>
                                       );
                                     })}
@@ -309,7 +314,7 @@ const LessonDetail = () => {
                           <LingalaMandombe frenchText={phrase.french} className="text-2xl mb-1" />
                           <p className="font-display text-lg font-semibold text-foreground italic">{phrase.lari}</p>
                           <div className="flex flex-col sm:flex-row gap-1 sm:gap-4 mt-1 text-sm text-muted-foreground">
-                            <span>{flag} {translation}</span>
+                            <span className="flex items-center gap-1">{flag} {translation} <TranslationSpeaker text={translation} lang={language} /></span>
                           </div>
                           {phrase.note && (
                             <p className="mt-2 text-sm italic text-accent-foreground/70 border-t border-border pt-2">
