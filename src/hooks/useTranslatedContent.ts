@@ -39,7 +39,7 @@ const saveCache = (lang: Language, data: Record<string, string>) => {
  * For fr/en/pt, returns the native field directly.
  * For it/ln/el/ko, uses translate-batch with localStorage caching.
  */
-export const useTranslatedContent = () => {
+export const useTranslatedContent = (options?: { alwaysDynamic?: boolean }) => {
   const { language } = useLanguage();
   const [translations, setTranslations] = useState<Record<string, Record<string, string>>>({});
   const [isTranslating, setIsTranslating] = useState(false);
@@ -47,7 +47,9 @@ export const useTranslatedContent = () => {
   const batchTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const batchQueueRef = useRef<string[]>([]);
 
-  const isDynamic = DYNAMIC_LANGS.includes(language);
+  const isDynamic = options?.alwaysDynamic
+    ? language !== "fr"
+    : DYNAMIC_LANGS.includes(language);
 
   // Get a cached translation
   const getCached = useCallback((text: string, lang: Language): string | null => {

@@ -1,6 +1,10 @@
 import PremiumGate from "@/components/PremiumGate";
 import MandombeSpeaker from "@/components/MandombeSpeaker";
-import { useLanguage } from "@/contexts/LanguageContext";
+import TranslationSpeaker from "@/components/TranslationSpeaker";
+import LingalaMandombe from "@/components/LingalaMandombe";
+import { useLanguage, Language } from "@/contexts/LanguageContext";
+import { useTranslatedContent } from "@/hooks/useTranslatedContent";
+import { Loader2 } from "lucide-react";
 import nsayiPanel1 from "@/assets/nsayi-panel-1.jpg";
 import nsayiPanel2 from "@/assets/nsayi-panel-2.jpg";
 import nsayiPanel3 from "@/assets/nsayi-panel-3.jpg";
@@ -26,6 +30,19 @@ import nsayiPanel22 from "@/assets/nsayi-panel-22.jpg";
 import nsayiPanel23 from "@/assets/nsayi-panel-23.jpg";
 import nsayiPanel24 from "@/assets/nsayi-panel-24.jpg";
 import nsayiPanel25 from "@/assets/nsayi-panel-25.jpg";
+
+/* ── Language helpers ── */
+
+const LANG_META: Record<Language, { flag: string; label: string }> = {
+  fr: { flag: "🇫🇷", label: "FR" },
+  en: { flag: "🇬🇧", label: "EN" },
+  pt: { flag: "🇵🇹", label: "PT" },
+  es: { flag: "🇪🇸", label: "ES" },
+  it: { flag: "🇮🇹", label: "IT" },
+  ln: { flag: "🇨🇩", label: "LN" },
+  el: { flag: "🇬🇷", label: "EL" },
+  ko: { flag: "🇰🇷", label: "KO" },
+};
 
 /* ── Story data – texte fidèle au PDF ── */
 
@@ -163,9 +180,11 @@ const storyPanels = [
 ];
 
 const StoryPreview = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const { getTranslation, isTranslating } = useTranslatedContent({ alwaysDynamic: true });
 
   const layouts: Array<"wide" | "left" | "right"> = ["wide", "right", "left"];
+  const { flag, label } = LANG_META[language];
 
   return (
     <section id="stories" className="py-24 bg-card">
@@ -178,6 +197,12 @@ const StoryPreview = () => {
           <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">
             {t("stories.title")}
           </h2>
+          {isTranslating && (
+            <div className="flex items-center justify-center gap-2 text-muted-foreground text-sm mt-2">
+              <Loader2 className="w-4 h-4 animate-spin" />
+              <span>{t("lessons.translating") || "Traduction en cours..."}</span>
+            </div>
+          )}
         </div>
 
         <div className="max-w-5xl mx-auto">
@@ -206,6 +231,10 @@ const StoryPreview = () => {
                   lari={panel.lari}
                   mandombe={panel.mandombe}
                   french={panel.french}
+                  translatedText={language === "fr" ? panel.french : getTranslation(panel.french)}
+                  langFlag={flag}
+                  langLabel={label}
+                  language={language}
                 />
               ))}
             </div>
@@ -223,6 +252,10 @@ const StoryPreview = () => {
                       lari={panel.lari}
                       mandombe={panel.mandombe}
                       french={panel.french}
+                      translatedText={language === "fr" ? panel.french : getTranslation(panel.french)}
+                      langFlag={flag}
+                      langLabel={label}
+                      language={language}
                     />
                   ))}
 
@@ -243,6 +276,19 @@ const StoryPreview = () => {
 
 /* ── Comic Panel Component ── */
 
+interface ComicPanelProps {
+  image: string;
+  panelNumber: number;
+  layout: "wide" | "left" | "right";
+  lari: string;
+  mandombe?: string;
+  french: string;
+  translatedText: string;
+  langFlag: string;
+  langLabel: string;
+  language: Language;
+}
+
 const ComicPanel = ({
   image,
   panelNumber,
@@ -250,14 +296,11 @@ const ComicPanel = ({
   lari,
   mandombe,
   french,
-}: {
-  image: string;
-  panelNumber: number;
-  layout: "wide" | "left" | "right";
-  lari: string;
-  mandombe?: string;
-  french: string;
-}) => {
+  translatedText,
+  langFlag,
+  langLabel,
+  language,
+}: ComicPanelProps) => {
   const isWide = layout === "wide";
   const isRight = layout === "right";
 
@@ -297,10 +340,16 @@ const ComicPanel = ({
           </p>
         </div>
 
-        {/* French */}
-        <p className="text-muted-foreground text-sm">
-          <span className="font-semibold text-foreground">FR:</span> {french}
-        </p>
+        {/* Translated text in selected language */}
+        <div className="flex items-start gap-2">
+          <TranslationSpeaker text={translatedText} lang={language} className="mt-0.5 shrink-0" />
+          <p className="text-muted-foreground text-sm">
+            <span className="font-semibold text-foreground">{langFlag} {langLabel}:</span> {translatedText}
+          </p>
+        </div>
+
+        {/* Lingala Mandombe rendering */}
+        {language === "ln" && <LingalaMandombe frenchText={french} />}
       </div>
     </div>
   );
