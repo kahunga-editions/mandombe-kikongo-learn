@@ -7,145 +7,54 @@ const corsHeaders = {
 
 const DEFAULT_VOICE_ID = Deno.env.get("LARI_VOICE_ID") || "rfRMgjypJCXUzWdJfLMs";
 
-/**
- * Phonetic overrides using the ŋ (eng) character to force
- * the TTS engine to produce a hard /g/ in "ng" clusters.
- * Words here bypass convertWord() entirely.
- */
-const PHONETIC_OVERRIDES: Record<string, string> = {
-  "mpangi": "mpaŋgi",
-  "nge": "ŋgé",
-  "ngiele": "ŋgiélé",
-  "jimbakane": "djimbakané",
-  "njimbakane": "ndjimbakané",
-  "mbakisa": "mbakissa",
-  "lusalusu": "loussaloussou",
-  "lubakusu": "loubakoussou",
-  "nduele": "ndouélé",
-  "luele": "louélé",
-};
+// ============================================================
+// RÈGLES PHONÉTIQUES POUR ELEVEN LABS (moteur v2)
+// Basé sur Jacquot (1971/1982) + analyse acoustique Denis Malanda
+// ============================================================
 
-/**
- * Convert Lari orthography to French-compatible spelling for TTS.
- * Based on Jacquot's phonological rules for Kikongo/Lari.
- */
-function lariToFrenchPhonetic(text: string): string {
-  const words = text.split(/\s+/).filter(Boolean);
-  return words.map(w => convertWord(w)).join(" ");
+interface PhoneticRule {
+  from: RegExp;
+  to: string;
 }
 
-function convertWord(word: string): string {
-  const lower = word.toLowerCase();
-  let result = "";
-  let i = 0;
+const ELEVENLABS_RULES: PhoneticRule[] = [
+  // ŋ vélaire (n') + k
+  { from: /n'ki/g, to: 'nkhi' },
+  { from: /n'ke/g, to: 'nkhe' },
+  { from: /n'k([aouAOU])/g, to: 'nk$1' },
 
-  while (i < lower.length) {
-    // "ns" → "nts" (Jacquot: initial ns = /nts/)
-    if (lower.startsWith("ns", i) && (i === 0 || !/[a-z]/.test(lower[i - 1]))) {
-      result += "nts";
-      i += 2;
-      continue;
-    }
+  // ŋ vélaire (n') + g
+  { from: /n'g([iIeE])/g, to: 'ngh$1' },
+  { from: /n'g([aouAOU])/g, to: 'ng$1' },
 
-    // "kua" → "kou-a" (force hiatus, prevent /kwa/ glide)
-    if (lower.startsWith("kua", i)) {
-      result += "kou-a";
-      i += 3;
-      continue;
-    }
+  // ŋ + other consonants
+  { from: /n's([aeiouAEIOU])/g, to: 'nhs$1' },
+  { from: /n'z([aeiouAEIOU])/g, to: 'nhz$1' },
+  { from: /n't([iI])/g, to: 'nhti' },
+  { from: /n'v([aeiouAEIOU])/g, to: 'nhv$1' },
+  { from: /n'd([iI])/g, to: 'nhdi' },
 
-    // Intervocalic "s" → "ss" (prevent French /z/ between vowels)
-    if (lower[i] === "s" && i > 0 && i < lower.length - 1) {
-      const prev = lower[i - 1];
-      const next = lower[i + 1];
-      if ("aeiou".includes(prev) && "aeiou".includes(next)) {
-        result += "ss";
-        i++;
-        continue;
-      }
-    }
+  // nj → ndj (affriquée prénasalisée) — specific words first
+  { from: /mpangi/g, to: 'mpan-ghi' },
+  { from: /nj([aeiouAEIOU])/g, to: 'ndj$1' },
 
-    // "u" → "ou" (Lari /u/ = French "ou", not French /y/)
-    if (lower[i] === "u") {
-      if (i > 0 && lower[i - 1] === "o") {
-        result += "u";
-      } else {
-        result += "ou";
-      }
-      i++;
-      continue;
-    }
+  // G dur devant i/e
+  { from: /ngi/g, to: 'nghi' },
+  { from: /nge/g, to: 'nghe' },
+  { from: /\bgi/g, to: 'guî' },
+  { from: /\bge/g, to: 'guê' },
+];
 
-    // Hiatus: insert hyphen between consecutive vowels when first is "i" or "u"
-    if (("iu".includes(lower[i])) && i + 1 < lower.length && "aeiou".includes(lower[i + 1])) {
-      if (lower[i] === "u") {
-        if (i > 0 && lower[i - 1] === "o") {
-          result += "u-";
-        } else {
-          result += "ou-";
-        }
-      } else {
-        result += "i-";
-      }
-      i++;
-      continue;
-    }
-
-    // Word-final "e" or "e" before consonant → "é" (prevent French mute e)
-    if (lower[i] === "e") {
-      const nextChar = i + 1 < lower.length ? lower[i + 1] : null;
-      if (!nextChar || (nextChar && !"aeiou".includes(nextChar))) {
-        result += "é";
-      } else {
-        result += "e";
-      }
-      i++;
-      continue;
-    }
-
-    // "j" → "z" — Lari /ʒ/ is better triggered by "z" with the cloned voice
-    if (lower[i] === "j") {
-      result += "z";
-      i++;
-      continue;
-    }
-
-    // Everything else passes through
-    result += lower[i];
-    i++;
+/**
+ * Apply all phonetic rules to transform Lari text for ElevenLabs TTS.
+ * Replaces the old convertWord() + PHONETIC_OVERRIDES system.
+ */
+function preprocessForElevenLabs(text: string): string {
+  let result = text;
+  for (const rule of ELEVENLABS_RULES) {
+    result = result.replace(rule.from, rule.to);
   }
-
-  // Preserve original casing for first letter
-  if (word[0] === word[0].toUpperCase()) {
-    result = result.charAt(0).toUpperCase() + result.slice(1);
-  }
-
   return result;
-}
-
-/**
- * Build plain text: words with phonetic overrides are replaced directly,
- * other words go through convertWord().
- */
-function buildText(text: string): string {
-  const words = text.split(/\s+/).filter(Boolean);
-  const parts: string[] = [];
-
-  for (const word of words) {
-    const lower = word.toLowerCase();
-    if (PHONETIC_OVERRIDES[lower]) {
-      // Preserve original casing for first letter
-      let override = PHONETIC_OVERRIDES[lower];
-      if (word[0] === word[0].toUpperCase()) {
-        override = override.charAt(0).toUpperCase() + override.slice(1);
-      }
-      parts.push(override);
-    } else {
-      parts.push(convertWord(word));
-    }
-  }
-
-  return parts.join(" ");
 }
 
 Deno.serve(async (req) => {
@@ -169,7 +78,7 @@ Deno.serve(async (req) => {
     }
 
     const selectedVoice = voiceId || DEFAULT_VOICE_ID;
-    const processedText = buildText(text);
+    const processedText = preprocessForElevenLabs(text);
     console.log(`TTS Lari: "${text}" → processed: "${processedText}" | voice: ${selectedVoice}`);
 
     const response = await fetch(

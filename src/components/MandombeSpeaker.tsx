@@ -1,6 +1,7 @@
-import { useState, useRef, useCallback } from "react";
+import { useState, useRef, useCallback, useMemo } from "react";
 import { Volume2, Loader2 } from "lucide-react";
 import { lariToIpa } from "@/lib/g2p";
+import { processLariText } from "@/lib/lari-phonetic-engine";
 import {
   Tooltip,
   TooltipContent,
@@ -22,13 +23,14 @@ const MandombeSpeaker = ({ lariText, className = "" }: MandombeSpeakerProps) => 
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   const ipa = lariToIpa(lariText);
+  const { syllables } = useMemo(() => processLariText(lariText), [lariText]);
+  const syllableDisplay = syllables.map(w => w.join("·")).join(" ");
 
   const playAudio = useCallback(async () => {
     if (isLoading || isPlaying) return;
 
     const cacheKey = lariText.toLowerCase().trim();
 
-    // Check cache
     if (audioCache.has(cacheKey)) {
       const audio = new Audio(audioCache.get(cacheKey)!);
       audioRef.current = audio;
@@ -62,7 +64,6 @@ const MandombeSpeaker = ({ lariText, className = "" }: MandombeSpeakerProps) => 
       const data = await response.json();
       const audioUrl = `data:audio/mpeg;base64,${data.audioContent}`;
 
-      // Cache it
       audioCache.set(cacheKey, audioUrl);
 
       const audio = new Audio(audioUrl);
@@ -100,6 +101,7 @@ const MandombeSpeaker = ({ lariText, className = "" }: MandombeSpeakerProps) => 
         </TooltipTrigger>
         <TooltipContent side="top">
           <p className="text-xs font-mono">/{ipa}/</p>
+          <p className="text-xs text-muted-foreground">{syllableDisplay}</p>
         </TooltipContent>
       </Tooltip>
     </TooltipProvider>
