@@ -2,14 +2,17 @@ import { useState, useMemo } from "react";
 import type { MatchingQuestion } from "@/data/lessons";
 import { CheckCircle } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useTranslatedContent } from "@/hooks/useTranslatedContent";
 
 interface Props {
   question: MatchingQuestion;
   onComplete: (correct: boolean) => void;
+  showLingala?: boolean;
 }
 
-const MatchingExercise = ({ question, onComplete }: Props) => {
+const MatchingExercise = ({ question, onComplete, showLingala = false }: Props) => {
   const { language, t } = useLanguage();
+  const { getTranslation } = useTranslatedContent();
 
   const instruction = language === "fr"
     ? (question.instructionFr || question.instruction)
@@ -92,6 +95,9 @@ const MatchingExercise = ({ question, onComplete }: Props) => {
               >
                 <span className="font-mandombe text-2xl text-gold block mb-3">{pair.left}</span>
                 <span className="text-foreground">{pair.left}</span>
+                {showLingala && (
+                  <span className="font-mandombe text-lg text-gold/80 block mt-1">🇨🇩 {getTranslation(pair.left)}</span>
+                )}
               </button>
             );
           })}
@@ -110,6 +116,9 @@ const MatchingExercise = ({ question, onComplete }: Props) => {
                 }`}
               >
                 <span className="text-foreground">{getRightText(item)}</span>
+                {showLingala && (
+                  <span className="font-mandombe text-lg text-gold/80 block mt-1">🇨🇩 {getTranslation(item.rightFr || item.right)}</span>
+                )}
                 {submitted && isUsed && (
                   <CheckCircle className="w-4 h-4 text-green-500 inline ml-2" />
                 )}
