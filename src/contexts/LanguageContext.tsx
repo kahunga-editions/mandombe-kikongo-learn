@@ -187,6 +187,16 @@ const translations: Record<Language, Record<string, string>> = {
     "mandombe.animate": "Animer",
     "mandombe.wordPractice": "Mots à pratiquer",
 
+    // Translator
+    "nav.translator": "Traducteur",
+    "translator.eyebrow": "Nsadisi Nkanda — Traducteur",
+    "translator.title": "Traducteur Kikongo Lari",
+    "translator.subtitle": "Traduisez du français, anglais ou portugais vers le Kikongo Lari — avec rendu en écriture Mandombe et prononciation audio.",
+    "translator.placeholder": "Tapez votre texte ici…",
+    "translator.translate": "Traduire",
+    "translator.hint": "Saisissez un texte et cliquez sur Traduire",
+    "translator.disclaimer": "Traduction basée sur le corpus Nzo Mikanda et les travaux de Jacquot & Lumwamu sur le Kikongo Lari. Les mots hors corpus sont signalés par [?].",
+
     // Footer
     "footer.description": "La Maison du Savoir — préserver et enseigner le Kikongo Lari et l'écriture Mandombe pour la diaspora Kongo et le monde.",
     "footer.learnTitle": "Apprendre",
@@ -349,6 +359,16 @@ const translations: Record<Language, Record<string, string>> = {
     "mandombe.animate": "Animate",
     "mandombe.wordPractice": "Words to practice",
 
+    // Translator
+    "nav.translator": "Translator",
+    "translator.eyebrow": "Nsadisi Nkanda — Translator",
+    "translator.title": "Kikongo Lari Translator",
+    "translator.subtitle": "Translate from French, English or Portuguese into Kikongo Lari — with Mandombe script rendering and audio pronunciation.",
+    "translator.placeholder": "Type your text here…",
+    "translator.translate": "Translate",
+    "translator.hint": "Enter text and click Translate",
+    "translator.disclaimer": "Translation based on the Nzo Mikanda corpus and Jacquot & Lumwamu's research on Kikongo Lari. Words outside the corpus are marked with [?].",
+
     // Footer
     "footer.description": "The House of Knowledge — preserving and teaching Kikongo Lari and the Mandombe script for the Kongo diaspora and the world.",
     "footer.learnTitle": "Learn",
@@ -510,6 +530,16 @@ const translations: Record<Language, Record<string, string>> = {
     "mandombe.clear": "Limpar",
     "mandombe.animate": "Animar",
     "mandombe.wordPractice": "Palavras para praticar",
+
+    // Translator
+    "nav.translator": "Tradutor",
+    "translator.eyebrow": "Nsadisi Nkanda — Tradutor",
+    "translator.title": "Tradutor Kikongo Lari",
+    "translator.subtitle": "Traduza do francês, inglês ou português para o Kikongo Lari — com renderização em escrita Mandombe e pronúncia áudio.",
+    "translator.placeholder": "Escreva o seu texto aqui…",
+    "translator.translate": "Traduzir",
+    "translator.hint": "Insira um texto e clique em Traduzir",
+    "translator.disclaimer": "Tradução baseada no corpus Nzo Mikanda e nos trabalhos de Jacquot & Lumwamu sobre o Kikongo Lari. Palavras fora do corpus são assinaladas com [?].",
 
     // Footer
     "footer.description": "A Casa do Saber — preservar e ensinar o Kikongo Lari e a escrita Mandombe para a diáspora Kongo e o mundo.",

@@ -12,6 +12,7 @@ import Auth from "./pages/Auth";
 import Dictionary from "./pages/Dictionary";
 import Flashcards from "./pages/Flashcards";
 import MandombeScript from "./pages/MandombeScript";
+import Translator from "./pages/Translator";
 
 import NotFound from "./pages/NotFound";
 
@@ -33,6 +34,7 @@ const App = () => (
               <Route path="/dictionary" element={<Dictionary />} />
               <Route path="/flashcards" element={<Flashcards />} />
               <Route path="/mandombe" element={<MandombeScript />} />
+              <Route path="/translator" element={<Translator />} />
               
               <Route path="*" element={<NotFound />} />
             </Routes>
