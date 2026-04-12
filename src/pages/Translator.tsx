@@ -14,7 +14,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
-type SourceLang = "fr" | "en" | "pt" | "it" | "ln" | "el" | "ko" | "lari";
+type SourceLang = "fr" | "en" | "pt" | "es" | "it" | "ln" | "el" | "ko" | "lari";
 
 interface TranslationResult {
   translation: string;
@@ -27,6 +27,7 @@ const langLabels: Record<SourceLang, string> = {
   fr: "Français",
   en: "English",
   pt: "Português",
+  es: "Español",
   it: "Italiano",
   ln: "Lingála",
   el: "Ελληνικά",

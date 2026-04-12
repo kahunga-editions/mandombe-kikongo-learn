@@ -22,7 +22,7 @@ serve(async (req) => {
     if (!LOVABLE_API_KEY) throw new Error("LOVABLE_API_KEY is not configured");
 
     const langMap: Record<string, string> = {
-      pt: "Portuguese", en: "English", fr: "French",
+      pt: "Portuguese", en: "English", fr: "French", es: "Spanish",
       it: "Italian", ln: "Lingala", el: "Greek", ko: "Korean",
     };
     const langName = langMap[targetLang] || "French";
