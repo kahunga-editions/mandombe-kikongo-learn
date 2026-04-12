@@ -2,7 +2,7 @@ import { useState, useCallback, useRef } from "react";
 import { useLanguage, Language } from "@/contexts/LanguageContext";
 import { supabase } from "@/integrations/supabase/client";
 
-const DYNAMIC_LANGS: Language[] = ["it", "ln", "el", "ko"];
+const DYNAMIC_LANGS: Language[] = ["es", "it", "ln", "el", "ko"];
 const CACHE_PREFIX = "content_translations_";
 const CACHE_TTL = 30 * 24 * 60 * 60 * 1000; // 30 days
 const BATCH_SIZE = 40;
@@ -42,6 +42,7 @@ const saveCache = (lang: Language, data: Record<string, string>) => {
 export const useTranslatedContent = () => {
   const { language } = useLanguage();
   const [translations, setTranslations] = useState<Record<string, Record<string, string>>>({});
+  const [isTranslating, setIsTranslating] = useState(false);
   const pendingRef = useRef<Set<string>>(new Set());
   const batchTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const batchQueueRef = useRef<string[]>([]);
@@ -69,6 +70,7 @@ export const useTranslatedContent = () => {
     if (toTranslate.length === 0) return;
 
     toTranslate.forEach(t => pendingRef.current.add(t));
+    setIsTranslating(true);
 
     try {
       for (let i = 0; i < toTranslate.length; i += BATCH_SIZE) {
@@ -97,6 +99,7 @@ export const useTranslatedContent = () => {
       saveCache(lang, cache);
     } finally {
       toTranslate.forEach(t => pendingRef.current.delete(t));
+      setIsTranslating(false);
     }
   }, []);
 
@@ -130,6 +133,7 @@ export const useTranslatedContent = () => {
   return {
     getTranslation,
     isDynamic,
+    isTranslating,
     language,
   };
 };

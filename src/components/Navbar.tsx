@@ -9,6 +9,7 @@ const languages: { code: Language; label: string }[] = [
   { code: "fr", label: "Français" },
   { code: "en", label: "English" },
   { code: "pt", label: "Português" },
+  { code: "es", label: "Español" },
   { code: "it", label: "Italiano" },
   { code: "ln", label: "Lingála" },
   { code: "el", label: "Ελληνικά" },

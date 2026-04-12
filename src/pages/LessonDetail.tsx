@@ -10,7 +10,7 @@ import FillInBlank from "@/components/exercises/FillInBlank";
 import CrosswordPuzzle from "@/components/exercises/CrosswordPuzzle";
 import WordSearchPuzzle from "@/components/exercises/WordSearchPuzzle";
 import MandombeRecognition from "@/components/exercises/MandombeRecognition";
-import { ArrowLeft, BookOpen, Trophy } from "lucide-react";
+import { ArrowLeft, BookOpen, Trophy, Loader2 } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useTranslatedContent } from "@/hooks/useTranslatedContent";
 
@@ -20,7 +20,7 @@ const LessonDetail = () => {
   const [results, setResults] = useState<Record<number, boolean>>({});
   const [activeTab, setActiveTab] = useState<"learn" | "exercises">("learn");
   const { language, t } = useLanguage();
-  const { getTranslation, isDynamic } = useTranslatedContent();
+  const { getTranslation, isDynamic, isTranslating } = useTranslatedContent();
 
   const tr = (fr: string, en: string, pt?: string) => {
     if (isDynamic) return getTranslation(fr);
@@ -83,6 +83,13 @@ const LessonDetail = () => {
           >
             <ArrowLeft className="w-4 h-4" /> {t("lessons.backToLessons")}
           </Link>
+
+          {isDynamic && isTranslating && (
+            <div className="flex items-center gap-2 text-sm text-muted-foreground bg-muted/50 rounded-lg px-4 py-2 mb-4">
+              <Loader2 className="w-4 h-4 animate-spin" />
+              <span>{t("lessons.translating") || "Traduction en cours…"}</span>
+            </div>
+          )}
 
           <div className="mb-8">
             <p className="font-mandombe text-3xl md:text-4xl text-gold mb-4">{lesson.titleMandombe}</p>
