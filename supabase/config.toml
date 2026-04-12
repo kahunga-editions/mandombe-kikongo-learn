@@ -20,3 +20,6 @@ verify_jwt = false
 
 [functions.elevenlabs-add-samples]
 verify_jwt = false
+
+[functions.translate-lari]
+verify_jwt = false
