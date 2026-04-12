@@ -1,53 +1,38 @@
 
 
-# Audio pour chaque langue de traduction
+# Audio Lingala avec voix Mbilia et ElevenLabs v3
 
-## Résumé
-Ajouter un bouton audio à côté de chaque texte traduit (FR, EN, PT, ES, IT, LN, EL, KO) dans les leçons et le dictionnaire, en utilisant ElevenLabs avec une voix standard multilingue.
+## Problème
+L'edge function `elevenlabs-tts-general` utilise le modèle `eleven_multilingual_v2` qui ne supporte pas le Lingala nativement (fallback `fr`). ElevenLabs v3 supporte le Lingala (`lin`) parmi 70+ langues.
 
-## Approche technique
+## Approche
 
-### 1. Nouvelle edge function `elevenlabs-tts-general` 
-- Accepte `{ text, lang }` (code langue : fr, en, pt, es, it, ln, el, ko)
-- Mappe chaque code vers le `language_code` ElevenLabs correspondant (fr, en, pt, es, it, fr, el, ko — Lingala n'est pas supporté nativement, on utilisera `fr` comme fallback)
-- Utilise une voix standard multilingue (ex: Sarah `EXAVITQu4vr4xnSDxMaL`) avec le modèle `eleven_multilingual_v2`
-- Retourne le base64 audio comme l'edge function Lari existante
+### Étape 1 : Trouver le voice_id de "Mbilia"
+- Créer une edge function temporaire `list-voices` qui appelle `GET https://api.elevenlabs.io/v2/voices?search=Mbilia` avec l'API key du projet
+- Appeler cette fonction pour récupérer le `voice_id` exact
+- Supprimer la fonction après
 
-### 2. Nouveau composant `TranslationSpeaker.tsx`
-- Props : `text: string`, `lang: string`, `className?: string`
-- Même logique que `MandombeSpeaker` (cache en mémoire, loading state, bouton Volume2)
-- Appelle `elevenlabs-tts-general` au lieu de `elevenlabs-tts-lari`
-- Pas de tooltip IPA (réservé au Lari)
+### Étape 2 : Mettre à jour `elevenlabs-tts-general`
+- Quand `lang === "ln"` : utiliser la voix **Mbilia** (voice_id trouvé à l'étape 1) + modèle `eleven_v3` + `language_code: "lin"`
+- Pour les autres langues : garder la voix Sarah + modèle `eleven_multilingual_v2` (inchangé)
 
-### 3. Intégration dans `LessonDetail.tsx`
-- **Vocabulaire** : ajouter `<TranslationSpeaker>` à côté du texte traduit (flag + traduction)
-- **Syntaxe** : idem pour chaque exemple traduit
-- **Conjugaisons** : idem pour les significations
-- **Phrases clés** : idem
+### Étape 3 : Stocker le voice_id Mbilia
+- Ajouter le voice_id comme secret `MBILIA_VOICE_ID` pour le rendre configurable, ou le coder en dur si stable
 
-### 4. Intégration dans `Dictionary.tsx`
-- Ajouter `<TranslationSpeaker>` à côté de la traduction affichée
+### Fichiers modifiés
+- `supabase/functions/elevenlabs-tts-general/index.ts` — logique conditionnelle voix/modèle pour Lingala
+- Edge function temporaire pour lookup (créée puis supprimée)
 
-### 5. Intégration dans les exercices
-- `MultipleChoice`, `FillInBlank` : ajouter l'audio à côté du texte Lingala quand le mode comparatif est activé
+### Détail technique
+```text
+lang === "ln"
+  → voice: Mbilia (voice_id from account)
+  → model: eleven_v3
+  → language_code: "lin"
 
-## Mapping des langues ElevenLabs
-| App | ElevenLabs `language_code` |
-|-----|---------------------------|
-| fr  | fr |
-| en  | en |
-| pt  | pt |
-| es  | es |
-| it  | it |
-| ln  | fr (fallback) |
-| el  | el |
-| ko  | ko |
-
-## Fichiers modifiés
-- `supabase/functions/elevenlabs-tts-general/index.ts` (nouveau)
-- `src/components/TranslationSpeaker.tsx` (nouveau)
-- `src/pages/LessonDetail.tsx`
-- `src/pages/Dictionary.tsx`
-- `src/components/exercises/MultipleChoice.tsx`
-- `src/components/exercises/FillInBlank.tsx`
+lang !== "ln"
+  → voice: Sarah (EXAVITQu4vr4xnSDxMaL)
+  → model: eleven_multilingual_v2
+  → language_code: mapping existant
+```
 
