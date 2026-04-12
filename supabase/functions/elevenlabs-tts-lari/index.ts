@@ -8,14 +8,14 @@ const corsHeaders = {
 const DEFAULT_VOICE_ID = Deno.env.get("LARI_VOICE_ID") || "rfRMgjypJCXUzWdJfLMs";
 
 /**
- * IPA overrides for words whose pronunciation the French TTS engine
- * cannot produce correctly via spelling alone.
- * Add new entries as needed — key must be lowercase.
+ * Phonetic overrides using the ŋ (eng) character to force
+ * the TTS engine to produce a hard /g/ in "ng" clusters.
+ * Words here bypass convertWord() entirely.
  */
-const IPA_OVERRIDES: Record<string, string> = {
-  "mpangi": "m.pan.ɡi",
-  "nge": "n.ɡe",
-  "ngiele": "n.ɡje.le",
+const PHONETIC_OVERRIDES: Record<string, string> = {
+  "mpangi": "mpaŋgi",
+  "nge": "ŋgé",
+  "ngiele": "ŋgiélé",
 };
 
 /**
@@ -117,24 +117,28 @@ function convertWord(word: string): string {
 }
 
 /**
- * Build SSML string: words with IPA overrides get <phoneme> tags,
- * other words go through lariToFrenchPhonetic().
+ * Build plain text: words with phonetic overrides are replaced directly,
+ * other words go through convertWord().
  */
-function buildSsml(text: string): string {
+function buildText(text: string): string {
   const words = text.split(/\s+/).filter(Boolean);
   const parts: string[] = [];
 
   for (const word of words) {
     const lower = word.toLowerCase();
-    if (IPA_OVERRIDES[lower]) {
-      // Preserve display form inside the tag, IPA in ph attribute
-      parts.push(`<phoneme alphabet="ipa" ph="${IPA_OVERRIDES[lower]}">${word}</phoneme>`);
+    if (PHONETIC_OVERRIDES[lower]) {
+      // Preserve original casing for first letter
+      let override = PHONETIC_OVERRIDES[lower];
+      if (word[0] === word[0].toUpperCase()) {
+        override = override.charAt(0).toUpperCase() + override.slice(1);
+      }
+      parts.push(override);
     } else {
       parts.push(convertWord(word));
     }
   }
 
-  return `<speak>${parts.join(" ")}</speak>`;
+  return parts.join(" ");
 }
 
 Deno.serve(async (req) => {
@@ -158,8 +162,8 @@ Deno.serve(async (req) => {
     }
 
     const selectedVoice = voiceId || DEFAULT_VOICE_ID;
-    const ssmlText = buildSsml(text);
-    console.log(`TTS Lari: "${text}" → SSML: "${ssmlText}" | voice: ${selectedVoice}`);
+    const processedText = buildText(text);
+    console.log(`TTS Lari: "${text}" → processed: "${processedText}" | voice: ${selectedVoice}`);
 
     const response = await fetch(
       `https://api.elevenlabs.io/v1/text-to-speech/${selectedVoice}?output_format=mp3_44100_128`,
@@ -170,8 +174,7 @@ Deno.serve(async (req) => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          text: ssmlText,
-          text_type: "ssml",
+          text: processedText,
           model_id: "eleven_v3",
           language_code: "fr",
           voice_settings: {
@@ -200,8 +203,7 @@ Deno.serve(async (req) => {
               "Content-Type": "application/json",
             },
             body: JSON.stringify({
-              text: ssmlText,
-              text_type: "ssml",
+              text: processedText,
               model_id: "eleven_multilingual_v2",
               voice_settings: {
                 stability: 0.72,
