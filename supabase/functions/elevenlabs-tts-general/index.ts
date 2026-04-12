@@ -29,7 +29,9 @@ Deno.serve(async (req) => {
     }
 
     const isLingala = lang === "ln";
-    const voiceId = isLingala ? MBILIA_VOICE_ID : SARAH_VOICE_ID;
+    const isKorean = lang === "ko";
+    const voiceId = isLingala ? MBILIA_VOICE_ID : isKorean ? KOREAN_VOICE_ID : SARAH_VOICE_ID;
+    const modelId = isLingala ? "eleven_v3" : "eleven_multilingual_v2";
     const modelId = isLingala ? "eleven_v3" : "eleven_multilingual_v2";
 
     console.log(`TTS: "${text.substring(0, 60)}" | lang: ${lang} | model: ${modelId} | voice: ${isLingala ? "Mbilia" : "Sarah"}`);
