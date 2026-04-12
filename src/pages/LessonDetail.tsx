@@ -281,8 +281,8 @@ const LessonDetail = () => {
                   </h2>
                   <div className="space-y-3">
                     {lesson.phrases.map((phrase, i) => {
-                      const translation = language === "en" ? phrase.english : language === "pt" ? (phrase.portuguese || phrase.english) : phrase.french;
-                      const flag = language === "en" ? "🇬🇧" : language === "pt" ? "🇵🇹" : "🇫🇷";
+                      const translation = isDynamic ? getTranslation(phrase.french, phrase.english) : language === "en" ? phrase.english : language === "pt" ? (phrase.portuguese || phrase.english) : phrase.french;
+                      const flag = language === "en" ? "🇬🇧" : language === "pt" ? "🇵🇹" : language === "it" ? "🇮🇹" : language === "ln" ? "🇨🇩" : language === "el" ? "🇬🇷" : language === "ko" ? "🇰🇷" : "🇫🇷";
                       return (
                         <div
                           key={i}
