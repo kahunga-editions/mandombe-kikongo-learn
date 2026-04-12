@@ -47,19 +47,10 @@ Deno.serve(async (req) => {
 
     console.log(`TTS General: "${text.substring(0, 60)}" | lang: ${lang} → ${languageCode} | model: ${modelId} | voice: ${isLingala ? "Mbilia" : "Sarah"}`);
 
-    const response = await fetch(
-      `https://api.elevenlabs.io/v1/text-to-speech/${voiceId}?output_format=mp3_22050_32`,
-      {
-        method: "POST",
-        headers: {
-          "xi-api-key": ELEVENLABS_API_KEY,
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          text,
-          model_id: modelId,
-          language_code: languageCode,
-          voice_settings: {
+    const bodyPayload: Record<string, unknown> = {
+      text,
+      model_id: modelId,
+      voice_settings: {
             stability: 0.5,
             similarity_boost: 0.75,
             style: 0.3,
