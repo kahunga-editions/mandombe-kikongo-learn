@@ -1,30 +1,23 @@
 
 
-# Corrections Mandombe Lingala + Audio conjugaisons
+# Voix coréenne dédiée pour le TTS
 
-## 3 changements demandés
+## Changement
+Ajouter un routage spécifique pour le coréen (`ko`) dans `elevenlabs-tts-general/index.ts`, utilisant la voix `KlstlYt9VVf3zgie2Oht` au lieu de Sarah.
 
-### 1. Supprimer les accents du texte Lingala pour le rendu Mandombe
-La police Mandombe ne gère pas les caractères accentués (é, è, ê, ô, etc.). Le composant `LingalaMandombe` doit supprimer les diacritiques du texte Lingala avant de le rendre en `font-mandombe`.
+## Détail technique
 
-**Fichier** : `src/components/LingalaMandombe.tsx`
-- Ajouter une fonction `stripAccents` utilisant `normalize("NFD").replace(/[\u0300-\u036f]/g, "")`
-- L'appliquer au `lingalaText` avant le rendu Mandombe
-- Appliquer la même logique partout où du texte Lingala est rendu en `font-mandombe` (exercices MultipleChoice, FillInBlank, MatchingExercise)
+**Fichier** : `supabase/functions/elevenlabs-tts-general/index.ts`
 
-### 2. Ajouter l'audio (`TranslationSpeaker`) dans les conjugaisons
-Actuellement les conjugaisons n'ont que le `MandombeSpeaker` pour le Lari. Il faut ajouter un `TranslationSpeaker` pour la signification traduite du verbe.
+- Ajouter une constante `KOREAN_VOICE_ID = "KlstlYt9VVf3zgie2Oht"`
+- Modifier la sélection de voix : Lingala → Mbilia, Coréen → voix dédiée, autres → Sarah
+- Le modèle reste `eleven_multilingual_v2` pour le coréen (comme les autres langues non-Lingala)
 
-**Fichier** : `src/pages/LessonDetail.tsx` (section conjugaisons, lignes 258-294)
-- Ajouter `<TranslationSpeaker text={getConjMeaning(conj.meaning)} lang={language} />` à côté du titre du verbe (ligne 270)
+```text
+lang === "ln"  → Mbilia + eleven_v3
+lang === "ko"  → KlstlYt9VVf3zgie2Oht + eleven_multilingual_v2
+autres         → Sarah + eleven_multilingual_v2
+```
 
-### 3. Tester l'audio Lingala
-L'edge function a répondu 200 au test — le TTS Lingala fonctionne. Mais vérification visuelle dans l'app après déploiement.
-
-## Fichiers modifiés
-- `src/components/LingalaMandombe.tsx` — ajout `stripAccents`
-- `src/components/exercises/MultipleChoice.tsx` — strip accents sur texte Lingala Mandombe
-- `src/components/exercises/FillInBlank.tsx` — idem
-- `src/components/exercises/MatchingExercise.tsx` — idem
-- `src/pages/LessonDetail.tsx` — audio dans conjugaisons
+Un seul fichier modifié, ~3 lignes changées.
 
