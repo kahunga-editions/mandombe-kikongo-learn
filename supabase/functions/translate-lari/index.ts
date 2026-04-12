@@ -4760,7 +4760,7 @@ serve(async (req) => {
     // Extract JSON from response (handle markdown code blocks)
     let parsed;
     try {
-      const jsonMatch = content.match(/\`\`\`(?:json)?\s*([\s\S]*?)\`\`\`/) || [null, content];
+      const jsonMatch = content.match(/```(?:json)?\s*([\s\S]*?)```/) || [null, content];
       parsed = JSON.parse(jsonMatch[1]!.trim());
     } catch {
       parsed = { translation: content, mandombe: "", ipa: "", notes: "Réponse non structurée" };
