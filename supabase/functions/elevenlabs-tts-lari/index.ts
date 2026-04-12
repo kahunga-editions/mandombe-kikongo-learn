@@ -8,8 +8,40 @@ const corsHeaders = {
 const DEFAULT_VOICE_ID = Deno.env.get("LARI_VOICE_ID") || "rfRMgjypJCXUzWdJfLMs";
 
 // ============================================================
+// OVERRIDES PHONÉTIQUES MOT PAR MOT
+// Pour les mots avec indications phonétiques spécifiques
+// (voyelles longues, accents, prononciations particulières)
+// ============================================================
+
+const PHONETIC_OVERRIDES: Record<string, string> = {
+  "ntinu": "ntînou",
+  "djoka": "djôka",
+  "zeba": "zéba",
+  "bandumuna": "bandoumouna",
+  "balumuna": "baloumouna",
+  "vikuna": "vikouna",
+  "nsaki": "nsakhi",
+  "ntshangu": "ntchangou",
+  "ngueyi": "ngéyi",
+  "weyi": "wéyi",
+  "buishi": "bouishi",
+  "fioti": "fioti",
+  "kani": "kâni",
+  "matanga": "matanga",
+  "malaki": "malakhi",
+  "jimbakane": "djimbakané",
+  "mbakisa": "mbakissa",
+  "lusalusu": "loussaloussou",
+  "lubakusu": "loubakoussou",
+  "sukula": "soukoula",
+  "nsadisi": "nsadissi",
+  "mankondi": "mankôndi",
+  "ndambu": "ndambou",
+};
+
+// ============================================================
 // RÈGLES PHONÉTIQUES POUR ELEVEN LABS (moteur v2)
-// Basé sur Jacquot (1971/1982) + analyse acoustique Denis Malanda
+// Basé sur : Jacquot (1971/1982) + analyse acoustique Denis Malanda
 // ============================================================
 
 interface PhoneticRule {
@@ -43,14 +75,21 @@ const ELEVENLABS_RULES: PhoneticRule[] = [
   { from: /nge/g, to: 'nghe' },
   { from: /\bgi/g, to: 'guî' },
   { from: /\bge/g, to: 'guê' },
+
+  // nguri ya → bloc unique
+  { from: /nguri ya/g, to: 'nguria' },
 ];
 
 /**
- * Apply all phonetic rules to transform Lari text for ElevenLabs TTS.
- * Replaces the old convertWord() + PHONETIC_OVERRIDES system.
+ * Apply phonetic overrides first, then regex rules.
  */
 function preprocessForElevenLabs(text: string): string {
-  let result = text;
+  // Step 1: word-level overrides
+  let result = text.replace(/\b[\w']+\b/g, (word) => {
+    const lower = word.toLowerCase();
+    return PHONETIC_OVERRIDES[lower] || word;
+  });
+  // Step 2: regex rules
   for (const rule of ELEVENLABS_RULES) {
     result = result.replace(rule.from, rule.to);
   }
