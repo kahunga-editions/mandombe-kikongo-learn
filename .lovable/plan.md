@@ -1,46 +1,51 @@
 
 
-# SSML phoneme-based pronunciation for Lari TTS
+# Essai du caractère ŋ (eng) dans le texte TTS Lari
 
-## Approach
-Replace the current French-phonetic respelling strategy with SSML `<phoneme>` tags to give ElevenLabs exact IPA targets for problematic words (starting with "mpangi"). This is more robust than spelling hacks.
+## Idée
+Remplacer "ng" par le caractère Unicode **ŋ** (U+014B) dans le texte envoyé au moteur TTS, pour voir si ElevenLabs le reconnaît comme le son nasal vélaire /ŋ/ et prononce correctement le "g" dur qui suit.
 
-## Changes — single file: `supabase/functions/elevenlabs-tts-lari/index.ts`
+Exemple : `mpangi` → `mpaŋgi` envoyé au moteur.
 
-### 1. New function: `wrapWithSsmlPhonemes(text)`
-Before calling `lariToFrenchPhonetic()`, pre-process the input text to identify words that need IPA overrides. For each match, produce a `<phoneme>` tag.
+## Changements — `supabase/functions/elevenlabs-tts-lari/index.ts`
 
-Phoneme dictionary (extensible):
+1. **Remplacer `IPA_OVERRIDES` par `PHONETIC_OVERRIDES`** — un dictionnaire mot → réécriture avec ŋ :
 ```typescript
-const IPA_OVERRIDES: Record<string, string> = {
-  "mpangi": "m.pan.ɡi",
-  // add more words here as needed
+const PHONETIC_OVERRIDES: Record<string, string> = {
+  "mpangi": "mpaŋgi",
+  "nge": "ŋgé",
+  "ngiele": "ŋgiélé",
 };
 ```
 
-The function scans the text word-by-word (case-insensitive). For matched words, it emits `<phoneme alphabet="ipa" ph="...">word</phoneme>`. For unmatched words, it still runs `lariToFrenchPhonetic()` on them individually.
+2. **Supprimer tout le SSML** — plus de `<speak>`, `<phoneme>`, ni `text_type: "ssml"` :
+   - La fonction `buildSsml()` devient `buildText()` et retourne du texte brut
+   - Le payload ElevenLabs envoie `text` au lieu de SSML
+   - Supprimer `text_type: "ssml"` du body
 
-The final output is wrapped in `<speak>...</speak>`.
+3. **Logique de `buildText()`** :
+   - Pour chaque mot, chercher dans `PHONETIC_OVERRIDES` (case-insensitive)
+   - Si trouvé → utiliser l'override directement (court-circuite `convertWord()`)
+   - Sinon → passer par `convertWord()` comme avant
+   - Retourner le tout en texte brut
 
-### 2. Modify ElevenLabs API call
-In the request body, add `text_type: "ssml"` so ElevenLabs interprets the SSML tags. This applies to both the primary `eleven_v3` call and the `eleven_multilingual_v2` fallback.
+4. **Garder `convertWord()` tel quel** — les règles existantes (u→ou, e→é, ns→nts, etc.) restent pour les mots non overridés.
 
-### 3. Keep existing `lariToFrenchPhonetic()` for non-override words
-Words not in the IPA dictionary still go through the French-phonetic conversion (u→ou, e→é, ns→nts, etc.). Only words with known pronunciation issues get the SSML phoneme override.
+## Pourquoi ça pourrait marcher
+- ElevenLabs v3 est multilingue et reconnaît potentiellement les caractères IPA/Unicode courants
+- Le ŋ est un caractère standard (pas une balise XML) donc le moteur ne peut pas le "lire littéralement" comme il faisait avec `<phoneme>`
+- Si le moteur ne reconnaît pas ŋ, il le sautera simplement — on verra dans les logs et l'audio
 
-### 4. Remove the `n-gu` rule (line 100-104)
-Since "mpangi" (and similar ng+vowel words) will now use IPA phonemes directly, the hyphen-insertion hack is no longer needed for those. Remove it to avoid conflicts with SSML output.
+## Test après déploiement
+Appeler l'edge function avec "Mpangi" et vérifier :
+- Dans les logs : le texte envoyé contient `mpaŋgi`
+- Dans l'audio : le G dur est audible, pas de "mpa-ni" ni "mpa-ngou-i"
 
-## Example transformation
+## Fichier modifié
+- `supabase/functions/elevenlabs-tts-lari/index.ts`
 
-Input text: `"Mbote mpangi na ngai"`
-
-Output SSML sent to ElevenLabs:
-```xml
-<speak>Mboté <phoneme alphabet="ipa" ph="m.pan.ɡi">mpangi</phoneme> na ngaï</speak>
-```
-
-## Risk
-- ElevenLabs SSML support with `eleven_v3` — if it rejects SSML, the fallback to `eleven_multilingual_v2` will also use SSML. If both fail, we'll see it in logs immediately.
-- The `<phoneme>` tag is well-documented in ElevenLabs' API, so this should work.
+## Portée
+- 1 seul fichier
+- aucun changement UI
+- approche expérimentale — si ŋ ne marche pas, on reviendra à une autre stratégie
 
