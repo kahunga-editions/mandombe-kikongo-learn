@@ -2,16 +2,19 @@ import { useState } from "react";
 import type { FillInBlankQuestion } from "@/data/lessons";
 import { CheckCircle, XCircle } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useTranslatedContent } from "@/hooks/useTranslatedContent";
 
 interface Props {
   question: FillInBlankQuestion;
   onComplete: (correct: boolean) => void;
+  showLingala?: boolean;
 }
 
-const FillInBlank = ({ question, onComplete }: Props) => {
+const FillInBlank = ({ question, onComplete, showLingala = false }: Props) => {
   const [answer, setAnswer] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const { language, t } = useLanguage();
+  const { getTranslation } = useTranslatedContent();
   const isCorrect = answer.trim().toLowerCase() === question.blank.toLowerCase();
 
   const sentence = language === "fr"
@@ -43,6 +46,11 @@ const FillInBlank = ({ question, onComplete }: Props) => {
         <p className="font-display text-lg font-semibold text-foreground">
           {sentence}
         </p>
+        {showLingala && (
+          <p className="mt-2 font-mandombe text-2xl text-gold/80 border-t border-gold/10 pt-2">
+            🇨🇩 {getTranslation(question.sentenceFr || question.sentence)}
+          </p>
+        )}
       </div>
 
       {hint && (

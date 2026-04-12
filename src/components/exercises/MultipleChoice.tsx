@@ -2,16 +2,19 @@ import { useState } from "react";
 import type { MultipleChoiceQuestion } from "@/data/lessons";
 import { CheckCircle, XCircle } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useTranslatedContent } from "@/hooks/useTranslatedContent";
 
 interface Props {
   question: MultipleChoiceQuestion;
   onComplete: (correct: boolean) => void;
+  showLingala?: boolean;
 }
 
-const MultipleChoice = ({ question, onComplete }: Props) => {
+const MultipleChoice = ({ question, onComplete, showLingala = false }: Props) => {
   const [selected, setSelected] = useState<number | null>(null);
   const [submitted, setSubmitted] = useState(false);
   const { language, t } = useLanguage();
+  const { getTranslation } = useTranslatedContent();
 
   const handleSelect = (index: number) => {
     if (submitted) return;
@@ -54,6 +57,11 @@ const MultipleChoice = ({ question, onComplete }: Props) => {
         <p className="font-display text-lg font-semibold text-foreground">
           {questionText}
         </p>
+        {showLingala && (
+          <p className="mt-2 font-mandombe text-2xl text-gold/80 border-t border-gold/10 pt-2">
+            🇨🇩 {getTranslation(question.questionFr || question.question)}
+          </p>
+        )}
       </div>
 
       <div className="space-y-2">
@@ -97,6 +105,11 @@ const MultipleChoice = ({ question, onComplete }: Props) => {
       {submitted && explanation && (
         <div className="bg-muted/50 rounded-lg p-4 text-sm text-muted-foreground">
           <p>💡 {explanation}</p>
+          {showLingala && (
+            <p className="mt-2 font-mandombe text-xl text-gold/80">
+              🇨🇩 {getTranslation(question.explanationFr || question.explanation || "")}
+            </p>
+          )}
         </div>
       )}
     </div>

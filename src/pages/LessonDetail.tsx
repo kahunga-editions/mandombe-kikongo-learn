@@ -11,6 +11,7 @@ import FillInBlank from "@/components/exercises/FillInBlank";
 import CrosswordPuzzle from "@/components/exercises/CrosswordPuzzle";
 import WordSearchPuzzle from "@/components/exercises/WordSearchPuzzle";
 import MandombeRecognition from "@/components/exercises/MandombeRecognition";
+import LariLingalaToggle from "@/components/exercises/LariLingalaToggle";
 import { ArrowLeft, BookOpen, Trophy, Loader2 } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useTranslatedContent } from "@/hooks/useTranslatedContent";
@@ -20,6 +21,7 @@ const LessonDetail = () => {
   const lesson = (lessons || []).filter(Boolean).find((l) => l.id === lessonId);
   const [results, setResults] = useState<Record<number, boolean>>({});
   const [activeTab, setActiveTab] = useState<"learn" | "exercises">("learn");
+  const [showLingala, setShowLingala] = useState(false);
   const { language, t } = useLanguage();
   const { getTranslation, isDynamic, isTranslating } = useTranslatedContent();
 
@@ -335,6 +337,7 @@ const LessonDetail = () => {
           {/* Exercises Tab */}
           {activeTab === "exercises" && (
             <div className="space-y-8">
+              <LariLingalaToggle enabled={showLingala} onToggle={setShowLingala} />
               {completedCount === lesson.exercises.length && (
                 <div className="bg-green-500/10 border border-green-500/30 rounded-xl p-6 text-center">
                   <Trophy className="w-12 h-12 text-green-500 mx-auto mb-2" />
@@ -365,18 +368,21 @@ const LessonDetail = () => {
                     <MultipleChoice
                       question={exercise}
                       onComplete={(correct) => handleExerciseComplete(i, correct)}
+                      showLingala={showLingala}
                     />
                   )}
                   {exercise.type === "matching" && (
                     <MatchingExercise
                       question={exercise}
                       onComplete={(correct) => handleExerciseComplete(i, correct)}
+                      showLingala={showLingala}
                     />
                   )}
                   {exercise.type === "fill-in-blank" && (
                     <FillInBlank
                       question={exercise}
                       onComplete={(correct) => handleExerciseComplete(i, correct)}
+                      showLingala={showLingala}
                     />
                   )}
                   {exercise.type === "crossword" && (
