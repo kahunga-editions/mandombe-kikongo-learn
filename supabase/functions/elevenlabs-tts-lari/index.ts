@@ -91,9 +91,20 @@ function convertWord(word: string): string {
       continue;
     }
 
-    // NOTE: In Kikongo Lari, "g" is always hard /g/ (never soft /ʒ/).
-    // Do NOT insert "u" after "g" before e/i/y — it distorts syllabification
-    // (e.g. "mpangi" → "mpangui" → pronounced "mpa-ngou-i"). Let "g" pass through as-is.
+    // In Kikongo Lari, "g" is always hard /g/ (never soft /ʒ/).
+    // Problem: French TTS reads "ngi/nge" as /ɲi/ (like "agneau"), swallowing the /g/.
+    // Fix: insert a hyphen between "n" and "g" before e/i/y to break the cluster,
+    // forcing the TTS to pronounce n-g separately (e.g. "mpangi" → "mpan-gui").
+    // We also add "u" after the "g" ONLY in the n-g context with hyphen separation,
+    // because the hyphen prevents the "ou" distortion seen without it.
+    if (lower[i] === "n" && i + 2 < lower.length && lower[i + 1] === "g" && "eiy".includes(lower[i + 2])) {
+      result += "n-gu";
+      i += 2; // skip "n" and "g", the vowel will be processed next iteration
+      continue;
+    }
+
+    // Do NOT insert "u" after standalone "g" before e/i/y — it distorts syllabification
+    // (e.g. "mpangi" → "mpangui" → pronounced "mpa-ngou-i").
 
     // "j" → "z" — Lari /ʒ/ is better triggered by "z" with the cloned voice
     if (lower[i] === "j") {
