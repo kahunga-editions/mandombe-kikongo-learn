@@ -91,6 +91,13 @@ function convertWord(word: string): string {
       continue;
     }
 
+    // "g" + [eiy] → "gu" + [eiy] (force hard /g/ in French TTS)
+    if (lower[i] === "g" && i + 1 < lower.length && "eiy".includes(lower[i + 1])) {
+      result += "gu";
+      i++;
+      continue;
+    }
+
     // "j" → "z" — Lari /ʒ/ is better triggered by "z" with the cloned voice
     if (lower[i] === "j") {
       result += "z";
