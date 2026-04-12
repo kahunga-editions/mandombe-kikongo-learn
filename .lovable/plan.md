@@ -1,33 +1,29 @@
 
 
-# Indicateur de chargement + Espagnol
+# Rendu Mandombe automatique pour le Lingala
+
+## Résumé
+Quand la langue est réglée sur Lingála (`ln`), le texte traduit en lingala sera affiché en écriture Mandombe (via la police `font-mandombe`), en plus du rendu Mandombe existant pour le Lari.
 
 ## Changements
 
-### 1. `src/hooks/useTranslatedContent.ts`
-- Ajouter `"es"` au tableau `DYNAMIC_LANGS`
-- Ajouter un state `isTranslating` (boolean) : mis à `true` quand `flushBatch` démarre, `false` quand il finit
-- Retourner `isTranslating` depuis le hook
+### 1. `src/pages/LessonDetail.tsx`
+- **Vocabulaire** : quand `language === "ln"`, afficher la traduction lingala avec `font-mandombe` au lieu du texte brut. Ajouter un bloc dédié sous le texte Lari mandombe, avec le drapeau 🇨🇩 et la classe `font-mandombe text-2xl`.
+- **Syntaxe** : même traitement pour les exemples — la traduction lingala apparaît en Mandombe.
+- **Conjugaisons** : idem pour les significations traduites.
 
-### 2. `src/contexts/LanguageContext.tsx`
-- Étendre le type `Language` : ajouter `"es"`
-- Ajouter un bloc de ~145 clés i18n en espagnol
+### 2. `src/pages/Dictionary.tsx`
+- Quand `language === "ln"`, afficher la traduction dynamique du mot français en lingala avec le rendu Mandombe sous l'entrée existante.
 
-### 3. `src/components/Navbar.tsx`
-- Ajouter `{ code: "es", label: "Español" }` au tableau `languages`
+### 3. `src/pages/Lessons.tsx`
+- Quand `language === "ln"`, remplacer le `titleMandombe` Lari par le titre traduit en lingala rendu en `font-mandombe` sur les cartes de leçons.
 
-### 4. `src/pages/Translator.tsx`
-- Ajouter `"es"` au type `SourceLang` et `es: "Español"` à `langLabels`
+### 4. Logique commune
+- Créer un helper `MandombeText` ou une logique inline : si `language === "ln"` et qu'un texte traduit est disponible, le rendre avec `className="font-mandombe text-2xl text-gold"`.
+- Le texte Lari mandombe existant reste visible en tant que référence Lari, et le texte Lingala mandombe s'affiche en dessous avec un label distinctif (ex: drapeau 🇨🇩).
 
-### 5. `supabase/functions/translate-batch/index.ts`
-- Ajouter `es: "Spanish"` au `langMap`
-
-### 6. `src/pages/LessonDetail.tsx`
-- Utiliser `isTranslating` du hook pour afficher un petit indicateur de chargement (spinner + texte) en haut de la page quand des traductions sont en cours
-
-### 7. `src/pages/Dictionary.tsx`
-- Même indicateur de chargement que LessonDetail
-
-### 8. `src/pages/Lessons.tsx`
-- Intégrer `useTranslatedContent` + indicateur de chargement pour la liste des leçons
+### Fichiers modifiés
+- `src/pages/LessonDetail.tsx`
+- `src/pages/Dictionary.tsx`  
+- `src/pages/Lessons.tsx`
 
