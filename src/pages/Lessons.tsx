@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
-import { Lock } from "lucide-react";
+import { Lock, Loader2 } from "lucide-react";
 import { lessons } from "@/data/lessons";
 import { useAuth } from "@/contexts/AuthContext";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useTranslatedContent } from "@/hooks/useTranslatedContent";
 
 const levelColors = {
   beginner: "bg-green-500/10 text-green-700 border-green-500/30",
@@ -21,14 +22,17 @@ const levelLabels = {
 const Lessons = () => {
   const { isPremium } = useAuth();
   const { language, t } = useLanguage();
+  const { getTranslation, isDynamic, isTranslating } = useTranslatedContent();
 
   const getLessonTitle = (lesson: typeof lessons[0]) => {
+    if (isDynamic) return getTranslation(lesson.titleFr || lesson.title, lesson.title);
     if (language === "fr") return lesson.titleFr || lesson.title;
     if (language === "pt") return lesson.titlePt || lesson.title;
     return lesson.title;
   };
 
   const getLessonDescription = (lesson: typeof lessons[0]) => {
+    if (isDynamic) return getTranslation(lesson.descriptionFr || lesson.description, lesson.description);
     if (language === "fr") return lesson.descriptionFr || lesson.description;
     if (language === "pt") return lesson.descriptionPt || lesson.description;
     return lesson.description;
@@ -56,7 +60,13 @@ const Lessons = () => {
             </h1>
             <p className="text-muted-foreground max-w-2xl mx-auto text-base">
               {t("lessons.subtitle")}
-            </p>
+           </p>
+           {isDynamic && isTranslating && (
+             <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground mt-4">
+               <Loader2 className="w-4 h-4 animate-spin" />
+               <span>{t("lessons.translating") || "Traduction en cours…"}</span>
+             </div>
+           )}
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
