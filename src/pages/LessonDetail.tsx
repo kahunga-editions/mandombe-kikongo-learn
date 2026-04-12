@@ -171,9 +171,9 @@ const LessonDetail = () => {
                   </h2>
                   <div className="space-y-8">
                     {lesson.syntax.map((block, bi) => {
-                      const blockTitle = language === "fr" ? (block.titleFr || block.title) : language === "pt" ? (block.titlePt || block.title) : block.title;
-                      const blockDesc = language === "fr" ? (block.descriptionFr || block.description) : language === "pt" ? (block.descriptionPt || block.description) : block.description;
-                      const blockPattern = language === "fr" ? (block.patternFr || block.pattern) : language === "pt" ? (block.patternPt || block.pattern) : block.pattern;
+                      const blockTitle = isDynamic ? getTranslation(block.titleFr || block.title, block.title) : language === "fr" ? (block.titleFr || block.title) : language === "pt" ? (block.titlePt || block.title) : block.title;
+                      const blockDesc = isDynamic ? getTranslation(block.descriptionFr || block.description || "", block.description) : language === "fr" ? (block.descriptionFr || block.description) : language === "pt" ? (block.descriptionPt || block.description) : block.description;
+                      const blockPattern = isDynamic ? (block.patternFr ? getTranslation(block.patternFr) : block.pattern) : language === "fr" ? (block.patternFr || block.pattern) : language === "pt" ? (block.patternPt || block.pattern) : block.pattern;
 
                       return (
                         <div key={bi} className="bg-card rounded-xl border border-border overflow-hidden">
