@@ -6,7 +6,9 @@ const corsHeaders = {
 };
 
 // Sarah – standard multilingual voice
-const VOICE_ID = "EXAVITQu4vr4xnSDxMaL";
+const SARAH_VOICE_ID = "EXAVITQu4vr4xnSDxMaL";
+// Mbilia – Lingala voice (user's account)
+const MBILIA_VOICE_ID = "9d5gN66gJ67fuz9yl7IQ";
 
 const langMapping: Record<string, string> = {
   fr: "fr",
@@ -14,7 +16,6 @@ const langMapping: Record<string, string> = {
   pt: "pt",
   es: "es",
   it: "it",
-  ln: "fr", // Lingala fallback
   el: "el",
   ko: "ko",
 };
@@ -39,11 +40,15 @@ Deno.serve(async (req) => {
       );
     }
 
-    const languageCode = langMapping[lang] || "en";
-    console.log(`TTS General: "${text.substring(0, 60)}" | lang: ${lang} → ${languageCode}`);
+    const isLingala = lang === "ln";
+    const voiceId = isLingala ? MBILIA_VOICE_ID : SARAH_VOICE_ID;
+    const modelId = isLingala ? "eleven_v3" : "eleven_multilingual_v2";
+    const languageCode = isLingala ? "lin" : (langMapping[lang] || "en");
+
+    console.log(`TTS General: "${text.substring(0, 60)}" | lang: ${lang} → ${languageCode} | model: ${modelId} | voice: ${isLingala ? "Mbilia" : "Sarah"}`);
 
     const response = await fetch(
-      `https://api.elevenlabs.io/v1/text-to-speech/${VOICE_ID}?output_format=mp3_22050_32`,
+      `https://api.elevenlabs.io/v1/text-to-speech/${voiceId}?output_format=mp3_22050_32`,
       {
         method: "POST",
         headers: {
@@ -52,7 +57,7 @@ Deno.serve(async (req) => {
         },
         body: JSON.stringify({
           text,
-          model_id: "eleven_multilingual_v2",
+          model_id: modelId,
           language_code: languageCode,
           voice_settings: {
             stability: 0.5,
