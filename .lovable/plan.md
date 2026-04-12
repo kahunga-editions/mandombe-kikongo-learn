@@ -1,24 +1,23 @@
 
+# Correction TTS Lari: ne plus insérer de "u" après le g
 
-# Correction prononciation "g" dur devant e/i/y dans le TTS Lari
+## Problème confirmé
+Le bug vient bien de la règle actuelle dans `supabase/functions/elevenlabs-tts-lari/index.ts` qui transforme `g + e/i/y` en `gu + e/i/y`.
 
-## Problème
-En français, "g" devant "e", "i", "y" donne un son doux /ʒ/ (comme "girafe"). En Lari, le "g" est toujours dur /g/ (comme "gare"). Le TTS français prononce donc mal "mpangi", "nge", etc.
+Conséquence :
+- `mpangi` devient `mpangui`
+- le moteur finit par prononcer quelque chose comme `mpa-ngou-i`
 
-## Solution
-Ajouter une règle dans `convertWord()` de `supabase/functions/elevenlabs-tts-lari/index.ts` : quand "g" est suivi de "e", "i" ou "y", insérer un "u" entre les deux pour forcer le g dur en orthographe française.
+Les logs récents le confirment :
+```text
+TTS Lari: "Mpangi" → French phonetic: "Mpangui"
+```
 
-**Important** : cela ne change que le texte envoyé au TTS (le texte affiché à l'utilisateur reste inchangé). La fonction `lariToFrenchPhonetic()` est justement faite pour ça — réécrire la prononciation pour le moteur TTS français.
+## Changement à faire
+Modifier uniquement `supabase/functions/elevenlabs-tts-lari/index.ts` pour :
 
-Exemples de transformation interne :
-- `mpangi` → `mpangui` (prononcé /mpangi/)
-- `nge` → `ngué` (le "é" est déjà géré par la règle existante)
-
-## Fichier modifié
-- `supabase/functions/elevenlabs-tts-lari/index.ts` — ajout d'un bloc dans `convertWord()`, avant le bloc "j" → "z" (vers ligne 94) :
-
-```typescript
-// "g" + [eiy] → "gu" + [eiy] (force hard /g/ in French TTS)
+1. Supprimer la règle :
+```ts
 if (lower[i] === "g" && i + 1 < lower.length && "eiy".includes(lower[i + 1])) {
   result += "gu";
   i++;
@@ -26,5 +25,31 @@ if (lower[i] === "g" && i + 1 < lower.length && "eiy".includes(lower[i + 1])) {
 }
 ```
 
-La voyelle suivante (e, i, y) sera traitée au prochain tour de boucle par les règles existantes (ex: "e" → "é", "i" reste "i", etc.).
+2. Laisser `g`, `ge`, `gi`, `gy` passer tels quels dans `lariToFrenchPhonetic()`  
+   - on ne change plus la graphie interne
+   - on ne force plus de `u`
+   - on évite donc la mauvaise prononciation `ngou-i`
 
+3. Mettre à jour le commentaire de la fonction pour documenter clairement la règle métier :
+```text
+En Kikongo Lari, le g est toujours dur.
+On ne doit pas insérer de "u" artificiel dans la chaîne envoyée au TTS,
+car cela déforme la syllabation et la prononciation.
+```
+
+## Vérification après correction
+Après déploiement, tester au minimum :
+- `Mpangi`
+- `Nge`
+- `Ngiele` si utilisé dans le contenu
+
+Ce que je vérifierai :
+- dans les logs, le texte transformé ne contient plus `gu`
+- `Mpangi` reste `Mpangi` côté payload TTS
+- dans l’app, le bouton audio ne prononce plus `mpa ngou i`
+
+## Portée
+- 1 seul fichier à modifier
+- aucun changement UI
+- correction ciblée du pipeline audio Lari
+- on annule la réécriture fautive au lieu d’altérer davantage l’orthographe
