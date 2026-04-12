@@ -12,6 +12,7 @@ import WordSearchPuzzle from "@/components/exercises/WordSearchPuzzle";
 import MandombeRecognition from "@/components/exercises/MandombeRecognition";
 import { ArrowLeft, BookOpen, Trophy } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useTranslatedContent } from "@/hooks/useTranslatedContent";
 
 const LessonDetail = () => {
   const { lessonId } = useParams<{ lessonId: string }>();
@@ -19,8 +20,10 @@ const LessonDetail = () => {
   const [results, setResults] = useState<Record<number, boolean>>({});
   const [activeTab, setActiveTab] = useState<"learn" | "exercises">("learn");
   const { language, t } = useLanguage();
+  const { getTranslation, isDynamic } = useTranslatedContent();
 
   const tr = (fr: string, en: string, pt?: string) => {
+    if (isDynamic) return getTranslation(fr);
     if (language === "en") return en;
     if (language === "pt") return pt || en;
     return fr;
@@ -29,6 +32,7 @@ const LessonDetail = () => {
   // Get lesson text in the right language
   const getLessonTitle = () => {
     if (!lesson) return "";
+    if (isDynamic) return getTranslation(lesson.titleFr || lesson.title, lesson.title);
     if (language === "fr") return lesson.titleFr || lesson.title;
     if (language === "pt") return lesson.titlePt || lesson.title;
     return lesson.title;
@@ -36,13 +40,14 @@ const LessonDetail = () => {
 
   const getLessonDescription = () => {
     if (!lesson) return "";
+    if (isDynamic) return getTranslation(lesson.descriptionFr || lesson.description, lesson.description);
     if (language === "fr") return lesson.descriptionFr || lesson.description;
     if (language === "pt") return lesson.descriptionPt || lesson.description;
     return lesson.description;
   };
 
-  // Get conjugation meaning in the right language
   const getConjMeaning = (meaning: { fr: string; en: string; pt?: string }) => {
+    if (isDynamic) return getTranslation(meaning.fr);
     if (language === "fr") return meaning.fr;
     if (language === "pt") return meaning.pt || meaning.fr;
     return meaning.en;
@@ -130,8 +135,10 @@ const LessonDetail = () => {
                   </h2>
                   <div className="grid sm:grid-cols-2 gap-3">
                     {lesson.vocabulary.map((item, i) => {
-                      const translation = language === "en" ? item.english : language === "pt" ? (item.portuguese || item.english) : item.french;
-                      const flag = language === "en" ? "🇬🇧" : language === "pt" ? "🇵🇹" : "🇫🇷";
+                      const translation = isDynamic 
+                        ? getTranslation(item.french, item.english)
+                        : language === "en" ? item.english : language === "pt" ? (item.portuguese || item.english) : item.french;
+                      const flag = language === "en" ? "🇬🇧" : language === "pt" ? "🇵🇹" : language === "it" ? "🇮🇹" : language === "ln" ? "🇨🇩" : language === "el" ? "🇬🇷" : language === "ko" ? "🇰🇷" : "🇫🇷";
                       return (
                         <div
                           key={i}
@@ -164,9 +171,9 @@ const LessonDetail = () => {
                   </h2>
                   <div className="space-y-8">
                     {lesson.syntax.map((block, bi) => {
-                      const blockTitle = language === "fr" ? (block.titleFr || block.title) : language === "pt" ? (block.titlePt || block.title) : block.title;
-                      const blockDesc = language === "fr" ? (block.descriptionFr || block.description) : language === "pt" ? (block.descriptionPt || block.description) : block.description;
-                      const blockPattern = language === "fr" ? (block.patternFr || block.pattern) : language === "pt" ? (block.patternPt || block.pattern) : block.pattern;
+                      const blockTitle = isDynamic ? getTranslation(block.titleFr || block.title, block.title) : language === "fr" ? (block.titleFr || block.title) : language === "pt" ? (block.titlePt || block.title) : block.title;
+                      const blockDesc = isDynamic ? getTranslation(block.descriptionFr || block.description || "", block.description) : language === "fr" ? (block.descriptionFr || block.description) : language === "pt" ? (block.descriptionPt || block.description) : block.description;
+                      const blockPattern = isDynamic ? (block.patternFr ? getTranslation(block.patternFr) : block.pattern) : language === "fr" ? (block.patternFr || block.pattern) : language === "pt" ? (block.patternPt || block.pattern) : block.pattern;
 
                       return (
                         <div key={bi} className="bg-card rounded-xl border border-border overflow-hidden">
@@ -183,10 +190,10 @@ const LessonDetail = () => {
 
                           <div className="divide-y divide-border">
                             {block.groups.map((group, gi) => {
-                              const groupTitle = language === "fr" ? (group.titleFr || group.title) : language === "pt" ? (group.titlePt || group.title) : group.title;
-                              const groupDesc = language === "fr" ? (group.descriptionFr || group.description) : language === "pt" ? (group.descriptionPt || group.description) : group.description;
-                              const groupNote = language === "fr" ? (group.noteFr || group.note) : language === "pt" ? (group.notePt || group.note) : group.note;
-                              const flag = language === "en" ? "🇬🇧" : language === "pt" ? "🇵🇹" : "🇫🇷";
+                              const groupTitle = isDynamic ? getTranslation(group.titleFr || group.title, group.title) : language === "fr" ? (group.titleFr || group.title) : language === "pt" ? (group.titlePt || group.title) : group.title;
+                              const groupDesc = isDynamic ? getTranslation(group.descriptionFr || group.description || "", group.description) : language === "fr" ? (group.descriptionFr || group.description) : language === "pt" ? (group.descriptionPt || group.description) : group.description;
+                              const groupNote = isDynamic ? (group.noteFr ? getTranslation(group.noteFr) : group.note) : language === "fr" ? (group.noteFr || group.note) : language === "pt" ? (group.notePt || group.note) : group.note;
+                              const flag = language === "en" ? "🇬🇧" : language === "pt" ? "🇵🇹" : language === "it" ? "🇮🇹" : language === "ln" ? "🇨🇩" : language === "el" ? "🇬🇷" : language === "ko" ? "🇰🇷" : "🇫🇷";
 
                               return (
                                 <div key={gi} className="px-6 py-5">
@@ -199,7 +206,7 @@ const LessonDetail = () => {
                                   )}
                                   <div className="space-y-2">
                                     {group.examples.map((ex, ei) => {
-                                      const translation = language === "en" ? ex.english : language === "pt" ? (ex.portuguese || ex.english) : ex.french;
+                                      const translation = isDynamic ? getTranslation(ex.french, ex.english) : language === "en" ? ex.english : language === "pt" ? (ex.portuguese || ex.english) : ex.french;
                                       return (
                                         <div key={ei} className="bg-muted/30 rounded-lg px-4 py-3 border border-border/50">
                                           {ex.mandombe && (
@@ -244,7 +251,7 @@ const LessonDetail = () => {
                             {conj.verb} — {getConjMeaning(conj.meaning)}
                           </h3>
                           <p className="text-cream/60 text-sm">
-                            {language === "fr" ? (conj.tenseFr || conj.tense) : language === "pt" ? (conj.tensePt || conj.tense) : conj.tense}
+                            {isDynamic ? getTranslation(conj.tenseFr || conj.tense, conj.tense) : language === "fr" ? (conj.tenseFr || conj.tense) : language === "pt" ? (conj.tensePt || conj.tense) : conj.tense}
                           </p>
                         </div>
                         <div className="divide-y divide-border">
@@ -274,8 +281,8 @@ const LessonDetail = () => {
                   </h2>
                   <div className="space-y-3">
                     {lesson.phrases.map((phrase, i) => {
-                      const translation = language === "en" ? phrase.english : language === "pt" ? (phrase.portuguese || phrase.english) : phrase.french;
-                      const flag = language === "en" ? "🇬🇧" : language === "pt" ? "🇵🇹" : "🇫🇷";
+                      const translation = isDynamic ? getTranslation(phrase.french, phrase.english) : language === "en" ? phrase.english : language === "pt" ? (phrase.portuguese || phrase.english) : phrase.french;
+                      const flag = language === "en" ? "🇬🇧" : language === "pt" ? "🇵🇹" : language === "it" ? "🇮🇹" : language === "ln" ? "🇨🇩" : language === "el" ? "🇬🇷" : language === "ko" ? "🇰🇷" : "🇫🇷";
                       return (
                         <div
                           key={i}

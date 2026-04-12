@@ -2,6 +2,7 @@ import { useState, useMemo, useEffect, useCallback } from "react";
 import { Search, BookOpen, Loader2 } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useTranslatedContent } from "@/hooks/useTranslatedContent";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MandombeSpeaker from "@/components/MandombeSpeaker";
@@ -98,6 +99,7 @@ const saveCachedTranslations = (cache: Record<string, string>) => {
 
 const Dictionary = () => {
   const { language, t } = useLanguage();
+  const { getTranslation, isDynamic } = useTranslatedContent();
   const [search, setSearch] = useState("");
   const [activeLetter, setActiveLetter] = useState<string | null>(null);
   const [ptTranslations, setPtTranslations] = useState<Record<string, string>>(loadCachedTranslations);
@@ -153,7 +155,8 @@ const Dictionary = () => {
     }
   }, [language]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  const getTranslation = (entry: DictionaryEntry) => {
+  const getTranslationForEntry = (entry: DictionaryEntry) => {
+    if (isDynamic) return getTranslation(entry.french, entry.english);
     switch (language) {
       case "fr":
         return entry.french;
@@ -165,6 +168,7 @@ const Dictionary = () => {
   };
 
   const getCategory = (entry: DictionaryEntry) => {
+    if (isDynamic) return getTranslation(entry.categoryFr, entry.category);
     switch (language) {
       case "fr":
         return entry.categoryFr;
@@ -293,7 +297,7 @@ const Dictionary = () => {
                         </span>
                       </div>
                       <p className="mt-1 text-base text-muted-foreground">
-                        {getTranslation(entry)}
+                        {getTranslationForEntry(entry)}
                       </p>
                       {entry.note && (
                         <p className="mt-1 text-sm text-muted-foreground italic">{entry.note}</p>
