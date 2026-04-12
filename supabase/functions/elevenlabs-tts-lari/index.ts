@@ -16,6 +16,13 @@ const PHONETIC_OVERRIDES: Record<string, string> = {
   "mpangi": "mpaŋgi",
   "nge": "ŋgé",
   "ngiele": "ŋgiélé",
+  "jimbakane": "djimbakané",
+  "njimbakane": "ndjimbakané",
+  "mbakisa": "mbakissa",
+  "lusalusu": "loussaloussou",
+  "lubakusu": "loubakoussou",
+  "nduele": "ndouélé",
+  "luele": "louélé",
 };
 
 /**
