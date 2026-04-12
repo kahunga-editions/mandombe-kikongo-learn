@@ -296,7 +296,7 @@ const Dictionary = () => {
                         </span>
                       </div>
                       <p className="mt-1 text-base text-muted-foreground">
-                        {getTranslation(entry)}
+                        {getTranslationForEntry(entry)}
                       </p>
                       {entry.note && (
                         <p className="mt-1 text-sm text-muted-foreground italic">{entry.note}</p>
