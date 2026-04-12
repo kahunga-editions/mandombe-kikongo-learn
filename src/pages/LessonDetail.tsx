@@ -251,7 +251,7 @@ const LessonDetail = () => {
                             {conj.verb} — {getConjMeaning(conj.meaning)}
                           </h3>
                           <p className="text-cream/60 text-sm">
-                            {language === "fr" ? (conj.tenseFr || conj.tense) : language === "pt" ? (conj.tensePt || conj.tense) : conj.tense}
+                            {isDynamic ? getTranslation(conj.tenseFr || conj.tense, conj.tense) : language === "fr" ? (conj.tenseFr || conj.tense) : language === "pt" ? (conj.tensePt || conj.tense) : conj.tense}
                           </p>
                         </div>
                         <div className="divide-y divide-border">
