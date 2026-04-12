@@ -8,10 +8,19 @@ const corsHeaders = {
 const DEFAULT_VOICE_ID = Deno.env.get("LARI_VOICE_ID") || "rfRMgjypJCXUzWdJfLMs";
 
 /**
+ * IPA overrides for words whose pronunciation the French TTS engine
+ * cannot produce correctly via spelling alone.
+ * Add new entries as needed — key must be lowercase.
+ */
+const IPA_OVERRIDES: Record<string, string> = {
+  "mpangi": "m.pan.ɡi",
+  "nge": "n.ɡe",
+  "ngiele": "n.ɡje.le",
+};
+
+/**
  * Convert Lari orthography to French-compatible spelling for TTS.
  * Based on Jacquot's phonological rules for Kikongo/Lari.
- * The idea: French shares key phoneme-grapheme correspondences with Lari,
- * so we respell Lari words using French conventions, then use language_code: "fr".
  */
 function lariToFrenchPhonetic(text: string): string {
   const words = text.split(/\s+/).filter(Boolean);
@@ -51,7 +60,6 @@ function convertWord(word: string): string {
 
     // "u" → "ou" (Lari /u/ = French "ou", not French /y/)
     if (lower[i] === "u") {
-      // Don't double-convert if already preceded by "o" (part of "ou")
       if (i > 0 && lower[i - 1] === "o") {
         result += "u";
       } else {
@@ -62,9 +70,7 @@ function convertWord(word: string): string {
     }
 
     // Hiatus: insert hyphen between consecutive vowels when first is "i" or "u"
-    // to prevent French glide /j/ or /w/ (e.g. "Bio" → "Bi-o", not "byo")
     if (("iu".includes(lower[i])) && i + 1 < lower.length && "aeiou".includes(lower[i + 1])) {
-      // "u" case: convert to "ou" then add hyphen before next vowel
       if (lower[i] === "u") {
         if (i > 0 && lower[i - 1] === "o") {
           result += "u-";
@@ -72,7 +78,6 @@ function convertWord(word: string): string {
           result += "ou-";
         }
       } else {
-        // "i" case: keep "i" and add hyphen
         result += "i-";
       }
       i++;
@@ -91,21 +96,6 @@ function convertWord(word: string): string {
       continue;
     }
 
-    // In Kikongo Lari, "g" is always hard /g/ (never soft /ʒ/).
-    // Problem: French TTS reads "ngi/nge" as /ɲi/ (like "agneau"), swallowing the /g/.
-    // Fix: insert a hyphen between "n" and "g" before e/i/y to break the cluster,
-    // forcing the TTS to pronounce n-g separately (e.g. "mpangi" → "mpan-gui").
-    // We also add "u" after the "g" ONLY in the n-g context with hyphen separation,
-    // because the hyphen prevents the "ou" distortion seen without it.
-    if (lower[i] === "n" && i + 2 < lower.length && lower[i + 1] === "g" && "eiy".includes(lower[i + 2])) {
-      result += "n-gu";
-      i += 2; // skip "n" and "g", the vowel will be processed next iteration
-      continue;
-    }
-
-    // Do NOT insert "u" after standalone "g" before e/i/y — it distorts syllabification
-    // (e.g. "mpangi" → "mpangui" → pronounced "mpa-ngou-i").
-
     // "j" → "z" — Lari /ʒ/ is better triggered by "z" with the cloned voice
     if (lower[i] === "j") {
       result += "z";
@@ -113,7 +103,7 @@ function convertWord(word: string): string {
       continue;
     }
 
-    // Everything else passes through (mb, nd, nk, etc. are fine in French)
+    // Everything else passes through
     result += lower[i];
     i++;
   }
@@ -124,6 +114,27 @@ function convertWord(word: string): string {
   }
 
   return result;
+}
+
+/**
+ * Build SSML string: words with IPA overrides get <phoneme> tags,
+ * other words go through lariToFrenchPhonetic().
+ */
+function buildSsml(text: string): string {
+  const words = text.split(/\s+/).filter(Boolean);
+  const parts: string[] = [];
+
+  for (const word of words) {
+    const lower = word.toLowerCase();
+    if (IPA_OVERRIDES[lower]) {
+      // Preserve display form inside the tag, IPA in ph attribute
+      parts.push(`<phoneme alphabet="ipa" ph="${IPA_OVERRIDES[lower]}">${word}</phoneme>`);
+    } else {
+      parts.push(convertWord(word));
+    }
+  }
+
+  return `<speak>${parts.join(" ")}</speak>`;
 }
 
 Deno.serve(async (req) => {
@@ -147,8 +158,8 @@ Deno.serve(async (req) => {
     }
 
     const selectedVoice = voiceId || DEFAULT_VOICE_ID;
-    const frenchText = lariToFrenchPhonetic(text);
-    console.log(`TTS Lari: "${text}" → French phonetic: "${frenchText}" | voice: ${selectedVoice}`);
+    const ssmlText = buildSsml(text);
+    console.log(`TTS Lari: "${text}" → SSML: "${ssmlText}" | voice: ${selectedVoice}`);
 
     const response = await fetch(
       `https://api.elevenlabs.io/v1/text-to-speech/${selectedVoice}?output_format=mp3_44100_128`,
@@ -159,7 +170,8 @@ Deno.serve(async (req) => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          text: frenchText,
+          text: ssmlText,
+          text_type: "ssml",
           model_id: "eleven_v3",
           language_code: "fr",
           voice_settings: {
@@ -176,7 +188,7 @@ Deno.serve(async (req) => {
     if (!response.ok) {
       const errorData = await response.text();
       console.error("ElevenLabs TTS error:", errorData);
-      
+
       if (response.status === 422 || response.status === 403) {
         console.log("Falling back to eleven_multilingual_v2...");
         const fallbackResponse = await fetch(
@@ -188,7 +200,8 @@ Deno.serve(async (req) => {
               "Content-Type": "application/json",
             },
             body: JSON.stringify({
-              text: frenchText,
+              text: ssmlText,
+              text_type: "ssml",
               model_id: "eleven_multilingual_v2",
               voice_settings: {
                 stability: 0.72,
