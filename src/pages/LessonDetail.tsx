@@ -32,6 +32,7 @@ const LessonDetail = () => {
   // Get lesson text in the right language
   const getLessonTitle = () => {
     if (!lesson) return "";
+    if (isDynamic) return getTranslation(lesson.titleFr || lesson.title, lesson.title);
     if (language === "fr") return lesson.titleFr || lesson.title;
     if (language === "pt") return lesson.titlePt || lesson.title;
     return lesson.title;
@@ -39,13 +40,14 @@ const LessonDetail = () => {
 
   const getLessonDescription = () => {
     if (!lesson) return "";
+    if (isDynamic) return getTranslation(lesson.descriptionFr || lesson.description, lesson.description);
     if (language === "fr") return lesson.descriptionFr || lesson.description;
     if (language === "pt") return lesson.descriptionPt || lesson.description;
     return lesson.description;
   };
 
-  // Get conjugation meaning in the right language
   const getConjMeaning = (meaning: { fr: string; en: string; pt?: string }) => {
+    if (isDynamic) return getTranslation(meaning.fr);
     if (language === "fr") return meaning.fr;
     if (language === "pt") return meaning.pt || meaning.fr;
     return meaning.en;
