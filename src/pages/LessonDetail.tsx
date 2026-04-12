@@ -135,8 +135,10 @@ const LessonDetail = () => {
                   </h2>
                   <div className="grid sm:grid-cols-2 gap-3">
                     {lesson.vocabulary.map((item, i) => {
-                      const translation = language === "en" ? item.english : language === "pt" ? (item.portuguese || item.english) : item.french;
-                      const flag = language === "en" ? "🇬🇧" : language === "pt" ? "🇵🇹" : "🇫🇷";
+                      const translation = isDynamic 
+                        ? getTranslation(item.french, item.english)
+                        : language === "en" ? item.english : language === "pt" ? (item.portuguese || item.english) : item.french;
+                      const flag = language === "en" ? "🇬🇧" : language === "pt" ? "🇵🇹" : language === "it" ? "🇮🇹" : language === "ln" ? "🇨🇩" : language === "el" ? "🇬🇷" : language === "ko" ? "🇰🇷" : "🇫🇷";
                       return (
                         <div
                           key={i}
