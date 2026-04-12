@@ -1,42 +1,25 @@
 
 
-# Refonte du traducteur — Corpus exclusivement Lari, interdiction du Kituba
+# Enrichir le corpus du traducteur — Toutes les entrées restantes
 
-## Problème
-Le system prompt actuel du traducteur (`translate-lari/index.ts`) ne contient que ~150 mots génériques. Le modèle AI comble les lacunes avec du **Kituba/Munukutuba**, ce qui est inacceptable. Le site contient **4 584 paires Lari-Français vérifiées** et **1 529 phrases d'exemple** qui ne sont pas exploitées.
+## Situation actuelle
+- Le prompt contient **994 mots** et **87 phrases**
+- `lessons.ts` contient **4 603 paires** uniques Lari-Français et **1 137 phrases** manquantes
+- **3 479 termes** et **~1 137 phrases** ne sont pas encore dans le prompt
 
 ## Solution
 
-### Fichier modifié : `supabase/functions/translate-lari/index.ts`
+### Extraction et injection complète
 
-Refonte complète du `SYSTEM_PROMPT` :
+1. **Script d'extraction** — Écrire un script Node.js qui lit `src/data/lessons.ts`, extrait toutes les paires `lari → french` uniques, filtre celles déjà présentes dans le prompt, et génère le texte à injecter.
 
-1. **Extraction du corpus** — Script Node.js pour extraire les ~1 000 termes les plus utiles (mots simples + expressions courantes) depuis `src/data/lessons.ts` et les formater en texte compact pour le prompt. Limité à ~1 000 entrées pour rester dans les limites de contexte du modèle.
+2. **Réécriture du SYSTEM_PROMPT** — Remplacer le corpus actuel par l'intégralité des ~4 600 termes et ~1 200 phrases, regroupés dans le même format compact (`Lari = Français`). Le prompt passera de ~32K à ~155K caractères (~40K tokens), bien dans les limites du contexte de Gemini 2.5 Flash (1M tokens).
 
-2. **Interdiction explicite du Kituba** — Nouvelle section dans le prompt :
-```
-## INTERDICTION ABSOLUE DU KITUBA
-- Tu traduis UNIQUEMENT en Kikongo LARI (Laadi), JAMAIS en Kituba/Munukutuba.
-- Si un mot n'existe pas dans le corpus ci-dessous, écris [?mot?]. Ne JAMAIS deviner en Kituba.
-- Formes INTERDITES (Kituba) : "mai" (eau), "mpe" (aussi), "ndenge nini" (comment), "malamu" (bien), "mingi" (beaucoup), "soki" (si), "kasi" (mais), "nini" (quoi), "wapi" (où), "na" comme préposition universelle
-- Formes CORRECTES (Lari) : "mamba" (eau), "bwe" (comment), "nkolele" (je vais bien), "biangi" (beaucoup)
-```
+3. **Redéploiement** de la fonction `translate-lari`.
 
-3. **Corpus massif injecté** — Les termes vérifiés du site regroupés par thème (salutations, nature, corps, nourriture, verbes, nombres, temps, famille, etc.) remplaçant les ~150 mots actuels.
+### Fichier modifié
+- `supabase/functions/translate-lari/index.ts` — SYSTEM_PROMPT élargi avec corpus complet
 
-4. **Phrases d'exemple** — ~200 phrases clés extraites des leçons pour guider les constructions grammaticales correctes en Lari.
-
-5. **Grammaire conservée** — Les sections sur les préfixes nominaux, concordances, temps verbaux restent identiques.
-
-## Étapes d'implémentation
-
-1. Écrire un script d'extraction qui lit `lessons.ts` et produit le corpus compact
-2. Réécrire le `SYSTEM_PROMPT` avec le corpus extrait + règles anti-Kituba
-3. Déployer la fonction
-4. Tester avec des phrases comme "mbote", "bonjour", "comment allez-vous"
-
-## Impact
-- Prompt passant de ~150 à ~1 000+ termes vérifiés
-- Zéro Kituba possible — le modèle ne peut utiliser que le corpus fourni
-- Traductions ancrées dans le matériel pédagogique réel du site
+### Risques
+- Le prompt sera volumineux (~155K chars) mais Gemini 2.5 Flash gère des contextes bien plus grands. La latence pourrait augmenter légèrement (~1-2s de plus par requête).
 
