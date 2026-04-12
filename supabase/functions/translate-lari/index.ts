@@ -73,15 +73,14 @@ Ordre : Sujet - Verbe - Objet (SVO)
 Adjectifs après le nom. Possessifs avec connectif -a.
 
 ## Écriture Mandombe
-Pour le champ "mandombe", utilise l'orthographe Title Case des syllabes latines pour déclencher les ligatures de la police Mandombe.
-Exemple : "Mbote" → "MBo Te", "kiese" → "Ki E Se"
+Pour le champ "mandombe", écris le texte Lari normalement tel quel (ex: "Mbote", "kiese", "moyo").
 Ne JAMAIS utiliser de caractères Unicode Adlam. Utiliser uniquement des caractères latins.
 
 ## Format de réponse
 Réponds UNIQUEMENT en JSON valide :
 {
   "translation": "la traduction en texte",
-  "mandombe": "texte en Title Case pour la police Mandombe",
+  "mandombe": "le texte Lari écrit normalement",
   "ipa": "transcription phonétique IPA",
   "notes": "notes optionnelles sur la traduction, mots incertains, etc."
 }`;
