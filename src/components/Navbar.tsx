@@ -9,6 +9,10 @@ const languages: { code: Language; label: string }[] = [
   { code: "fr", label: "Français" },
   { code: "en", label: "English" },
   { code: "pt", label: "Português" },
+  { code: "it", label: "Italiano" },
+  { code: "ln", label: "Lingála" },
+  { code: "el", label: "Ελληνικά" },
+  { code: "ko", label: "한국어" },
 ];
 
 const Navbar = () => {

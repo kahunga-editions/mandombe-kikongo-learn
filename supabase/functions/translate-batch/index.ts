@@ -21,7 +21,11 @@ serve(async (req) => {
     const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY");
     if (!LOVABLE_API_KEY) throw new Error("LOVABLE_API_KEY is not configured");
 
-    const langName = targetLang === "pt" ? "Portuguese" : targetLang === "en" ? "English" : "French";
+    const langMap: Record<string, string> = {
+      pt: "Portuguese", en: "English", fr: "French",
+      it: "Italian", ln: "Lingala", el: "Greek", ko: "Korean",
+    };
+    const langName = langMap[targetLang] || "French";
 
     // Build a numbered list for the AI
     const numberedList = texts.map((t: string, i: number) => `${i + 1}. ${t}`).join("\n");
