@@ -7,6 +7,7 @@ const corsHeaders = {
 
 const SARAH_VOICE_ID = "EXAVITQu4vr4xnSDxMaL";
 const MBILIA_VOICE_ID = "9d5gN66gJ67fuz9yl7IQ";
+const KOREAN_VOICE_ID = "KlstlYt9VVf3zgie2Oht";
 
 const langMapping: Record<string, string> = {
   fr: "fr", en: "en", pt: "pt", es: "es", it: "it", el: "el", ko: "ko",
