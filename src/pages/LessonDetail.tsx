@@ -190,10 +190,10 @@ const LessonDetail = () => {
 
                           <div className="divide-y divide-border">
                             {block.groups.map((group, gi) => {
-                              const groupTitle = language === "fr" ? (group.titleFr || group.title) : language === "pt" ? (group.titlePt || group.title) : group.title;
-                              const groupDesc = language === "fr" ? (group.descriptionFr || group.description) : language === "pt" ? (group.descriptionPt || group.description) : group.description;
-                              const groupNote = language === "fr" ? (group.noteFr || group.note) : language === "pt" ? (group.notePt || group.note) : group.note;
-                              const flag = language === "en" ? "🇬🇧" : language === "pt" ? "🇵🇹" : "🇫🇷";
+                              const groupTitle = isDynamic ? getTranslation(group.titleFr || group.title, group.title) : language === "fr" ? (group.titleFr || group.title) : language === "pt" ? (group.titlePt || group.title) : group.title;
+                              const groupDesc = isDynamic ? getTranslation(group.descriptionFr || group.description || "", group.description) : language === "fr" ? (group.descriptionFr || group.description) : language === "pt" ? (group.descriptionPt || group.description) : group.description;
+                              const groupNote = isDynamic ? (group.noteFr ? getTranslation(group.noteFr) : group.note) : language === "fr" ? (group.noteFr || group.note) : language === "pt" ? (group.notePt || group.note) : group.note;
+                              const flag = language === "en" ? "🇬🇧" : language === "pt" ? "🇵🇹" : language === "it" ? "🇮🇹" : language === "ln" ? "🇨🇩" : language === "el" ? "🇬🇷" : language === "ko" ? "🇰🇷" : "🇫🇷";
 
                               return (
                                 <div key={gi} className="px-6 py-5">
@@ -206,7 +206,7 @@ const LessonDetail = () => {
                                   )}
                                   <div className="space-y-2">
                                     {group.examples.map((ex, ei) => {
-                                      const translation = language === "en" ? ex.english : language === "pt" ? (ex.portuguese || ex.english) : ex.french;
+                                      const translation = isDynamic ? getTranslation(ex.french, ex.english) : language === "en" ? ex.english : language === "pt" ? (ex.portuguese || ex.english) : ex.french;
                                       return (
                                         <div key={ei} className="bg-muted/30 rounded-lg px-4 py-3 border border-border/50">
                                           {ex.mandombe && (
