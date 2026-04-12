@@ -6,9 +6,9 @@ const corsHeaders = {
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response("ok", { headers: corsHeaders });
 
-  const ELEVENLABS_API_KEY = Deno.env.get("ELEVENLABS_API_KEY");
+  const KEY = Deno.env.get("ELEVENLABS_VOICES_KEY");
   const res = await fetch("https://api.elevenlabs.io/v2/voices?search=Mbilia", {
-    headers: { "xi-api-key": ELEVENLABS_API_KEY! },
+    headers: { "xi-api-key": KEY! },
   });
   const data = await res.json();
   return new Response(JSON.stringify(data), {
