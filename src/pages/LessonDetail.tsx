@@ -4,6 +4,7 @@ import { lessons } from "@/data/lessons";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MandombeSpeaker from "@/components/MandombeSpeaker";
+import LingalaMandombe from "@/components/LingalaMandombe";
 import MultipleChoice from "@/components/exercises/MultipleChoice";
 import MatchingExercise from "@/components/exercises/MatchingExercise";
 import FillInBlank from "@/components/exercises/FillInBlank";
@@ -93,6 +94,7 @@ const LessonDetail = () => {
 
           <div className="mb-8">
             <p className="font-mandombe text-3xl md:text-4xl text-gold mb-4">{lesson.titleMandombe}</p>
+            <LingalaMandombe frenchText={lesson.titleFr || lesson.title} className="text-3xl md:text-4xl mb-2" />
             <div className="flex items-center gap-3 mb-2">
               <span className="text-4xl">{lesson.icon}</span>
               <h1 className="font-display text-3xl md:text-4xl font-bold text-foreground">
@@ -156,6 +158,7 @@ const LessonDetail = () => {
                           )}
                           <div className="p-4">
                           <p className="font-mandombe text-3xl text-gold mb-4">{item.mandombe}</p>
+                          <LingalaMandombe frenchText={item.french} className="text-2xl mb-2" />
                           <div className="flex items-center gap-2">
                             <p className="font-display text-lg font-bold text-foreground">{item.lari}</p>
                             <MandombeSpeaker lariText={item.lari} />
@@ -219,6 +222,7 @@ const LessonDetail = () => {
                                           {ex.mandombe && (
                                             <p className="font-mandombe text-3xl text-gold mb-2">{ex.mandombe}</p>
                                           )}
+                                          <LingalaMandombe frenchText={ex.french} className="text-2xl mb-1" />
                                           <div className="flex items-center gap-2">
                                             <p className="font-display font-semibold text-foreground">{ex.lari}</p>
                                             <MandombeSpeaker lariText={ex.lari} />
@@ -254,6 +258,7 @@ const LessonDetail = () => {
                       <div key={i} className="bg-card rounded-xl border border-border overflow-hidden">
                         <div className="bg-earth-deep px-6 py-4">
                           <p className="font-mandombe text-4xl text-gold mb-4">{conj.verbMandombe}</p>
+                          <LingalaMandombe frenchText={conj.meaning.fr} className="text-2xl mb-1" />
                           <h3 className="font-display text-xl font-bold text-gold">
                             {conj.verb} — {getConjMeaning(conj.meaning)}
                           </h3>
@@ -299,6 +304,7 @@ const LessonDetail = () => {
                             <p className="font-mandombe text-3xl text-gold">{phrase.mandombe}</p>
                             <MandombeSpeaker lariText={phrase.lari} />
                           </div>
+                          <LingalaMandombe frenchText={phrase.french} className="text-2xl mb-1" />
                           <p className="font-display text-lg font-semibold text-foreground italic">{phrase.lari}</p>
                           <div className="flex flex-col sm:flex-row gap-1 sm:gap-4 mt-1 text-sm text-muted-foreground">
                             <span>{flag} {translation}</span>

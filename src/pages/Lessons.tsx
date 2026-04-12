@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useTranslatedContent } from "@/hooks/useTranslatedContent";
+import LingalaMandombe from "@/components/LingalaMandombe";
 
 const levelColors = {
   beginner: "bg-green-500/10 text-green-700 border-green-500/30",
@@ -88,6 +89,7 @@ const Lessons = () => {
                       </div>
                       <div className="mb-4">
                         <p className="font-mandombe text-2xl text-gold/60 block">{lesson.titleMandombe}</p>
+                        <LingalaMandombe frenchText={lesson.titleFr || lesson.title} className="text-xl text-gold/50" />
                       </div>
                       <h2 className="font-display text-lg font-bold text-foreground mb-1">{getLessonTitle(lesson)}</h2>
                       <p className="text-primary/70 font-body text-xs italic mb-3">{lesson.titleLari}</p>
@@ -119,6 +121,7 @@ const Lessons = () => {
                     </div>
                     <div className="mb-4">
                       <p className="font-mandombe text-2xl text-gold block">{lesson.titleMandombe}</p>
+                      <LingalaMandombe frenchText={lesson.titleFr || lesson.title} className="text-xl" />
                     </div>
                     <h2 className="font-display text-lg font-bold text-foreground mb-1 group-hover:text-primary transition-colors">
                       {getLessonTitle(lesson)}
