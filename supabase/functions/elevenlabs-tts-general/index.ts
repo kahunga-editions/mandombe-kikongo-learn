@@ -7,6 +7,7 @@ const corsHeaders = {
 
 const SARAH_VOICE_ID = "EXAVITQu4vr4xnSDxMaL";
 const MBILIA_VOICE_ID = "9d5gN66gJ67fuz9yl7IQ";
+const KOREAN_VOICE_ID = "KlstlYt9VVf3zgie2Oht";
 
 const langMapping: Record<string, string> = {
   fr: "fr", en: "en", pt: "pt", es: "es", it: "it", el: "el", ko: "ko",
@@ -28,7 +29,8 @@ Deno.serve(async (req) => {
     }
 
     const isLingala = lang === "ln";
-    const voiceId = isLingala ? MBILIA_VOICE_ID : SARAH_VOICE_ID;
+    const isKorean = lang === "ko";
+    const voiceId = isLingala ? MBILIA_VOICE_ID : isKorean ? KOREAN_VOICE_ID : SARAH_VOICE_ID;
     const modelId = isLingala ? "eleven_v3" : "eleven_multilingual_v2";
 
     console.log(`TTS: "${text.substring(0, 60)}" | lang: ${lang} | model: ${modelId} | voice: ${isLingala ? "Mbilia" : "Sarah"}`);
