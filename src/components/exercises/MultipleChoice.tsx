@@ -2,6 +2,7 @@ import { useState } from "react";
 import type { MultipleChoiceQuestion } from "@/data/lessons";
 import { CheckCircle, XCircle } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import TranslationSpeaker from "@/components/TranslationSpeaker";
 import { useTranslatedContent } from "@/hooks/useTranslatedContent";
 
 interface Props {
@@ -58,9 +59,10 @@ const MultipleChoice = ({ question, onComplete, showLingala = false }: Props) =>
           {questionText}
         </p>
         {showLingala && (
-          <p className="mt-2 font-mandombe text-2xl text-gold/80 border-t border-gold/10 pt-2">
+          <div className="mt-2 font-mandombe text-2xl text-gold/80 border-t border-gold/10 pt-2 flex items-center gap-1">
             🇨🇩 {getTranslation(question.questionFr || question.question)}
-          </p>
+            <TranslationSpeaker text={getTranslation(question.questionFr || question.question)} lang="ln" />
+          </div>
         )}
       </div>
 

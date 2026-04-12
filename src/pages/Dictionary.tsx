@@ -6,6 +6,7 @@ import { useTranslatedContent } from "@/hooks/useTranslatedContent";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import LingalaMandombe from "@/components/LingalaMandombe";
+import TranslationSpeaker from "@/components/TranslationSpeaker";
 import MandombeSpeaker from "@/components/MandombeSpeaker";
 import { lessons, VocabItem } from "@/data/lessons";
 import { supabase } from "@/integrations/supabase/client";
@@ -298,8 +299,9 @@ const Dictionary = () => {
                         </span>
                       </div>
                       <LingalaMandombe frenchText={entry.french} className="mt-1" />
-                      <p className="mt-1 text-base text-muted-foreground">
+                      <p className="mt-1 text-base text-muted-foreground flex items-center gap-1">
                         {getTranslationForEntry(entry)}
+                        <TranslationSpeaker text={getTranslationForEntry(entry)} lang={language} />
                       </p>
                       {entry.note && (
                         <p className="mt-1 text-sm text-muted-foreground italic">{entry.note}</p>
