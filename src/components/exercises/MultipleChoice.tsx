@@ -60,7 +60,7 @@ const MultipleChoice = ({ question, onComplete, showLingala = false }: Props) =>
         </p>
         {showLingala && (
           <div className="mt-2 font-mandombe text-2xl text-gold/80 border-t border-gold/10 pt-2 flex items-center gap-1">
-            🇨🇩 {getTranslation(question.questionFr || question.question)}
+            🇨🇩 {getTranslation(question.questionFr || question.question).normalize("NFD").replace(/[\u0300-\u036f]/g, "")}
             <TranslationSpeaker text={getTranslation(question.questionFr || question.question)} lang="ln" />
           </div>
         )}
@@ -109,7 +109,7 @@ const MultipleChoice = ({ question, onComplete, showLingala = false }: Props) =>
           <p>💡 {explanation}</p>
           {showLingala && (
             <p className="mt-2 font-mandombe text-xl text-gold/80">
-              🇨🇩 {getTranslation(question.explanationFr || question.explanation || "")}
+              🇨🇩 {getTranslation(question.explanationFr || question.explanation || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "")}
             </p>
           )}
         </div>
