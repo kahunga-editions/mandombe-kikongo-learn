@@ -2,6 +2,7 @@ import { useState, useMemo, useEffect, useCallback } from "react";
 import { Search, BookOpen, Loader2 } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useTranslatedContent } from "@/hooks/useTranslatedContent";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MandombeSpeaker from "@/components/MandombeSpeaker";
