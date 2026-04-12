@@ -266,8 +266,9 @@ const LessonDetail = () => {
                         <div className="bg-earth-deep px-6 py-4">
                           <p className="font-mandombe text-4xl text-gold mb-4">{conj.verbMandombe}</p>
                           <LingalaMandombe frenchText={conj.meaning.fr} className="text-2xl mb-1" />
-                          <h3 className="font-display text-xl font-bold text-gold">
+                          <h3 className="font-display text-xl font-bold text-gold flex items-center gap-1">
                             {conj.verb} — {getConjMeaning(conj.meaning)}
+                            <TranslationSpeaker text={getConjMeaning(conj.meaning)} lang={language} />
                           </h3>
                           <p className="text-cream/60 text-sm">
                             {isDynamic ? getTranslation(conj.tenseFr || conj.tense, conj.tense) : language === "fr" ? (conj.tenseFr || conj.tense) : language === "pt" ? (conj.tensePt || conj.tense) : conj.tense}

@@ -49,7 +49,7 @@ const FillInBlank = ({ question, onComplete, showLingala = false }: Props) => {
         </p>
         {showLingala && (
           <div className="mt-2 font-mandombe text-2xl text-gold/80 border-t border-gold/10 pt-2 flex items-center gap-1">
-            🇨🇩 {getTranslation(question.sentenceFr || question.sentence)}
+            🇨🇩 {getTranslation(question.sentenceFr || question.sentence).normalize("NFD").replace(/[\u0300-\u036f]/g, "")}
             <TranslationSpeaker text={getTranslation(question.sentenceFr || question.sentence)} lang="ln" />
           </div>
         )}

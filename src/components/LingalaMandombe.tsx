@@ -10,6 +10,9 @@ interface LingalaMandombeProps {
  * Renders the Lingala translation of a French text in Mandombe script.
  * Only visible when language is set to "ln" (Lingála).
  */
+const stripAccents = (text: string) =>
+  text.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+
 const LingalaMandombe = ({ frenchText, className = "" }: LingalaMandombeProps) => {
   const { language } = useLanguage();
   const { getTranslation, isDynamic } = useTranslatedContent();
@@ -21,7 +24,7 @@ const LingalaMandombe = ({ frenchText, className = "" }: LingalaMandombeProps) =
 
   return (
     <p className={`font-mandombe text-2xl text-gold/80 ${className}`}>
-      🇨🇩 {lingalaText}
+      🇨🇩 {stripAccents(lingalaText)}
     </p>
   );
 };

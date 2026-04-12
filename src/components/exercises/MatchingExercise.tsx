@@ -96,7 +96,7 @@ const MatchingExercise = ({ question, onComplete, showLingala = false }: Props) 
                 <span className="font-mandombe text-2xl text-gold block mb-3">{pair.left}</span>
                 <span className="text-foreground">{pair.left}</span>
                 {showLingala && (
-                  <span className="font-mandombe text-lg text-gold/80 block mt-1">🇨🇩 {getTranslation(pair.left)}</span>
+                  <span className="font-mandombe text-lg text-gold/80 block mt-1">🇨🇩 {getTranslation(pair.left).normalize("NFD").replace(/[\u0300-\u036f]/g, "")}</span>
                 )}
               </button>
             );
@@ -117,7 +117,7 @@ const MatchingExercise = ({ question, onComplete, showLingala = false }: Props) 
               >
                 <span className="text-foreground">{getRightText(item)}</span>
                 {showLingala && (
-                  <span className="font-mandombe text-lg text-gold/80 block mt-1">🇨🇩 {getTranslation(item.rightFr || item.right)}</span>
+                  <span className="font-mandombe text-lg text-gold/80 block mt-1">🇨🇩 {getTranslation(item.rightFr || item.right).normalize("NFD").replace(/[\u0300-\u036f]/g, "")}</span>
                 )}
                 {submitted && isUsed && (
                   <CheckCircle className="w-4 h-4 text-green-500 inline ml-2" />
