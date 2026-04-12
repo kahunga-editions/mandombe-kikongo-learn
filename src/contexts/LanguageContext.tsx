@@ -44,7 +44,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Hero
     "hero.subtitle": "Nzo Mikanda — La Maison du Savoir",
-    "hero.description": "Découvrez la langue sacrée du peuple Kongo à travers le vocabulaire, les histoires et l'art ancestral du Kilolaka — avec des traductions en français, anglais et portugais.",
+    "hero.description": "Découvrez la langue sacrée du peuple Kongo à travers le vocabulaire, les histoires et l'art ancestral du Kilolaka — avec des traductions en français, anglais, portugais, italien, espagnol, lingala, grec et coréen.",
     "hero.startLearning": "Commencer à apprendre",
     "hero.exploreVocabulary": "Explorer le vocabulaire",
 
@@ -216,7 +216,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Hero
     "hero.subtitle": "Nzo Mikanda — The House of Knowledge",
-    "hero.description": "Discover the sacred language of the Kongo people through vocabulary, stories, and the ancestral art of Kilolaka — with translations in English, French, and Portuguese.",
+    "hero.description": "Discover the sacred language of the Kongo people through vocabulary, stories, and the ancestral art of Kilolaka — with translations in French, English, Portuguese, Italian, Spanish, Lingala, Greek, and Korean.",
     "hero.startLearning": "Start Learning",
     "hero.exploreVocabulary": "Explore Vocabulary",
 
@@ -388,7 +388,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Hero
     "hero.subtitle": "Nzo Mikanda — A Casa do Saber",
-    "hero.description": "Descubra a língua sagrada do povo Kongo através do vocabulário, das histórias e da arte ancestral do Kilolaka — com traduções em português, francês e inglês.",
+    "hero.description": "Descubra a língua sagrada do povo Kongo através do vocabulário, das histórias e da arte ancestral do Kilolaka — com traduções em francês, inglês, português, italiano, espanhol, lingala, grego e coreano.",
     "hero.startLearning": "Começar a aprender",
     "hero.exploreVocabulary": "Explorar Vocabulário",
 
@@ -558,7 +558,7 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.goPremium": "Passa a Premium",
     "nav.managePlan": "Gestisci abbonamento",
     "hero.subtitle": "Nzo Mikanda — La Casa del Sapere",
-    "hero.description": "Scopri la lingua sacra del popolo Kongo attraverso il vocabolario, le storie e l'arte ancestrale del Kilolaka — con traduzioni in francese, inglese e portoghese.",
+    "hero.description": "Scopri la lingua sacra del popolo Kongo attraverso il vocabolario, le storie e l'arte ancestrale del Kilolaka — con traduzioni in francese, inglese, portoghese, italiano, spagnolo, lingala, greco e coreano.",
     "hero.startLearning": "Inizia ad imparare",
     "hero.exploreVocabulary": "Esplora il vocabolario",
     "paths.eyebrow": "Il tuo percorso di apprendimento",
@@ -706,7 +706,7 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.goPremium": "Zwa Premium",
     "nav.managePlan": "Kobongisa abonema",
     "hero.subtitle": "Nzo Mikanda — Ndako ya Mayele",
-    "hero.description": "Kumona lokota ya nlongo ya bato ya Kongo na balindaka, binsamu mpe lulendo ya Kilolaka — na bafungola na Kifalansa, Lingelesi mpe Portugais.",
+    "hero.description": "Kumona lokota ya nlongo ya bato ya Kongo na balindaka, binsamu mpe lulendo ya Kilolaka — na bafungola na Kifalansa, Lingelesi, Kipotologe, Kitaliano, Kiesipanyo, Lingála, Kigreki mpe Kikoree.",
     "hero.startLearning": "Kobanda kukumona",
     "hero.exploreVocabulary": "Kukumona balindaka",
     "paths.eyebrow": "Nzelambuka na yo ya kukumona",
@@ -854,7 +854,7 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.goPremium": "Αναβάθμιση σε Premium",
     "nav.managePlan": "Διαχείριση συνδρομής",
     "hero.subtitle": "Nzo Mikanda — Ο Οίκος της Γνώσης",
-    "hero.description": "Ανακαλύψτε την ιερή γλώσσα του λαού Κόνγκο μέσω του λεξιλογίου, των ιστοριών και της αρχαίας τέχνης του Kilolaka — με μεταφράσεις στα γαλλικά, αγγλικά και πορτογαλικά.",
+    "hero.description": "Ανακαλύψτε την ιερή γλώσσα του λαού Κόνγκο μέσω του λεξιλογίου, των ιστοριών και της αρχαίας τέχνης του Kilolaka — με μεταφράσεις στα γαλλικά, αγγλικά, πορτογαλικά, ιταλικά, ισπανικά, λινγκάλα, ελληνικά και κορεατικά.",
     "hero.startLearning": "Έναρξη μάθησης",
     "hero.exploreVocabulary": "Εξερευνήστε το λεξιλόγιο",
     "paths.eyebrow": "Η μαθησιακή σας διαδρομή",
@@ -1002,7 +1002,7 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.goPremium": "프리미엄 전환",
     "nav.managePlan": "구독 관리",
     "hero.subtitle": "Nzo Mikanda — 지식의 집",
-    "hero.description": "어휘, 이야기, 그리고 고대 Kilolaka 예술을 통해 콩고 민족의 신성한 언어를 발견하세요 — 프랑스어, 영어, 포르투갈어 번역과 함께.",
+    "hero.description": "어휘, 이야기, 그리고 고대 Kilolaka 예술을 통해 콩고 민족의 신성한 언어를 발견하세요 — 프랑스어, 영어, 포르투갈어, 이탈리아어, 스페인어, 링갈라어, 그리스어, 한국어 번역과 함께.",
     "hero.startLearning": "학습 시작",
     "hero.exploreVocabulary": "어휘 탐색",
     "paths.eyebrow": "당신의 학습 여정",
@@ -1150,7 +1150,7 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.goPremium": "Hazte Premium",
     "nav.managePlan": "Gestionar suscripción",
     "hero.subtitle": "Nzo Mikanda — La Casa del Saber",
-    "hero.description": "Descubre la lengua sagrada del pueblo Kongo a través del vocabulario, las historias y el arte ancestral del Kilolaka — con traducciones al francés, inglés y portugués.",
+    "hero.description": "Descubre la lengua sagrada del pueblo Kongo a través del vocabulario, las historias y el arte ancestral del Kilolaka — con traducciones en francés, inglés, portugués, italiano, español, lingala, griego y coreano.",
     "hero.startLearning": "Empezar a aprender",
     "hero.exploreVocabulary": "Explorar vocabulario",
     "paths.eyebrow": "Tu camino de aprendizaje",
