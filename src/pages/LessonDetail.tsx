@@ -12,6 +12,7 @@ import WordSearchPuzzle from "@/components/exercises/WordSearchPuzzle";
 import MandombeRecognition from "@/components/exercises/MandombeRecognition";
 import { ArrowLeft, BookOpen, Trophy } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useTranslatedContent } from "@/hooks/useTranslatedContent";
 
 const LessonDetail = () => {
   const { lessonId } = useParams<{ lessonId: string }>();
@@ -19,8 +20,10 @@ const LessonDetail = () => {
   const [results, setResults] = useState<Record<number, boolean>>({});
   const [activeTab, setActiveTab] = useState<"learn" | "exercises">("learn");
   const { language, t } = useLanguage();
+  const { getTranslation, isDynamic } = useTranslatedContent();
 
   const tr = (fr: string, en: string, pt?: string) => {
+    if (isDynamic) return getTranslation(fr);
     if (language === "en") return en;
     if (language === "pt") return pt || en;
     return fr;
