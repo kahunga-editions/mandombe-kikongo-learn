@@ -99,6 +99,7 @@ const saveCachedTranslations = (cache: Record<string, string>) => {
 
 const Dictionary = () => {
   const { language, t } = useLanguage();
+  const { getTranslation, isDynamic } = useTranslatedContent();
   const [search, setSearch] = useState("");
   const [activeLetter, setActiveLetter] = useState<string | null>(null);
   const [ptTranslations, setPtTranslations] = useState<Record<string, string>>(loadCachedTranslations);
@@ -154,7 +155,8 @@ const Dictionary = () => {
     }
   }, [language]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  const getTranslation = (entry: DictionaryEntry) => {
+  const getTranslationForEntry = (entry: DictionaryEntry) => {
+    if (isDynamic) return getTranslation(entry.french, entry.english);
     switch (language) {
       case "fr":
         return entry.french;
