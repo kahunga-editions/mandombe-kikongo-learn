@@ -91,12 +91,9 @@ function convertWord(word: string): string {
       continue;
     }
 
-    // "g" + [eiy] → "gu" + [eiy] (force hard /g/ in French TTS)
-    if (lower[i] === "g" && i + 1 < lower.length && "eiy".includes(lower[i + 1])) {
-      result += "gu";
-      i++;
-      continue;
-    }
+    // NOTE: In Kikongo Lari, "g" is always hard /g/ (never soft /ʒ/).
+    // Do NOT insert "u" after "g" before e/i/y — it distorts syllabification
+    // (e.g. "mpangi" → "mpangui" → pronounced "mpa-ngou-i"). Let "g" pass through as-is.
 
     // "j" → "z" — Lari /ʒ/ is better triggered by "z" with the cloned voice
     if (lower[i] === "j") {
