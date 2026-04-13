@@ -95,6 +95,39 @@ const Translator = () => {
     }
   }, [sourceLang, targetLang, result]);
 
+  const saveCorrection = useCallback(async () => {
+    if (!result || !isAdmin || !session?.access_token) return;
+    try {
+      const response = await fetch(
+        `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/translate-lari`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            apikey: import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY,
+            Authorization: `Bearer ${session.access_token}`,
+          },
+          body: JSON.stringify({
+            text: inputText.trim(),
+            direction: `${sourceLang}-to-${targetLang}`,
+            correction: true,
+            translation: result.translation,
+            mandombe: result.mandombe,
+            ipa: result.ipa,
+            notes: result.notes,
+          }),
+        }
+      );
+      if (response.ok) {
+        toast.success(t("translator.correctionSaved") || "Correction sauvegardée !");
+      } else {
+        toast.error("Erreur lors de la sauvegarde");
+      }
+    } catch {
+      toast.error("Erreur lors de la sauvegarde");
+    }
+  }, [result, isAdmin, session, inputText, sourceLang, targetLang, t]);
+
   const translate = useCallback(async () => {
     if (!inputText.trim()) return;
     setIsLoading(true);
