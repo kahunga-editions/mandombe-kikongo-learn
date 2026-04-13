@@ -230,7 +230,18 @@ const Translator = () => {
               {result && !isLoading && (
                 <div className="flex-1 min-h-[180px]">
                   {/* Translation text */}
-                  <p className="text-lg text-foreground mb-4">{result.translation}</p>
+                  <div className="flex items-start justify-between gap-2 mb-4">
+                    <p className="text-lg text-foreground">{result.translation}</p>
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      onClick={() => copyToClipboard(result.translation, "target")}
+                      className="h-8 w-8 shrink-0"
+                      aria-label="Copy translation"
+                    >
+                      {copied === "target" ? <Check className="w-4 h-4 text-green-500" /> : <Copy className="w-4 h-4" />}
+                    </Button>
+                  </div>
 
                   {/* Mandombe rendering */}
                   {result.mandombe && (
