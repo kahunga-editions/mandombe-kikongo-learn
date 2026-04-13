@@ -1,23 +1,19 @@
 
 
-# Révision des titres des 4 leçons
+# Restaurer "Wa (ton H)" dans l'exercice de correspondance
 
-## Corrections demandées
+## Problème
+La modification précédente a changé `"Wa (ton H)"` en `"wa"` dans l'exercice matching (ligne 26831). Il faut restaurer les annotations tonales dans le champ `left` des paires de l'exercice matching, car ce champ sert à l'affichage Latin.
 
-| Leçon | Ancien titre | Nouveau titleLari | Nouveau titleFr |
-|-------|-------------|-------------------|-----------------|
-| 1 | Sala na bisalu (Travailler et conjuguer) | Sala na Longoka | Travailler et apprendre |
-| 2 | Nitu na kimbevo (Le corps et la santé) | Nitu na kimbevo | Le corps et la maladie |
-| 3 | Bikila na nzonzela (Saluer, se présenter, voyager) | Bika, zonza na zeba | Saluer, parler et voyager |
-| 4 | Meso na nene (Descriptions, possession et actions) | Bisalu bia lumbu tsha mukaka | Le travail d'une journée entière |
+Les exemples de syntaxe (lignes 26720-26723) sont déjà corrects : `lari: "Wa (ton H)"` avec `mandombe: "Wa"` séparé.
 
-## Contenu inchangé
+## Modification
 
-Le contenu pédagogique, vocabulaire, conjugaisons, exercices, overrides phonétiques TTS et entrées dictionnaire restent identiques au plan précédent — seuls les 4 titres sont corrigés.
+**`src/data/lessons.ts`** ligne 26831 :
+- Changer `"wa"` → `"Wa (ton H)"`
 
-## Fichiers modifiés
+Note : les exercices matching n'ont pas de champ `mandombe` séparé — le champ `left` est affiché tel quel. Si on veut aussi que le Mandombe n'affiche pas les parenthèses dans les exercices matching, il faudrait modifier le composant `MatchingExercise` pour supporter un champ `leftMandombe` optionnel. Mais actuellement la structure de données ne le permet pas.
 
-1. **`src/data/lessons.ts`** — 4 nouvelles leçons avec les titres corrigés (~2000 lignes)
-2. **`supabase/functions/elevenlabs-tts-lari/index.ts`** — ~25 overrides phonétiques
-3. **`src/lib/lari-phonetic-engine.ts`** — mêmes overrides côté client
+## Portée
+- 1 ligne modifiée dans `src/data/lessons.ts`
 
