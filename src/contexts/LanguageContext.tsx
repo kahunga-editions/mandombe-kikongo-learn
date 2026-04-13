@@ -44,7 +44,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Hero
     "hero.subtitle": "Nzo Mikanda — La Maison du Savoir",
-    "hero.description": "Découvrez la langue sacrée du peuple Kongo à travers le vocabulaire, les histoires et l'art ancestral du Kilolaka — avec des traductions en français, anglais, portugais, italien, espagnol, lingala, grec et coréen.",
+    "hero.description": "Découvrez la langue sacrée du peuple Kongo à travers le vocabulaire, les histoires et l'art ancestral du Kilolaka — avec des traductions en français, anglais, portugais, italien, espagnol, lingala, grec, coréen et allemand.",
     "hero.startLearning": "Commencer à apprendre",
     "hero.exploreVocabulary": "Explorer le vocabulaire",
 
@@ -216,7 +216,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Hero
     "hero.subtitle": "Nzo Mikanda — The House of Knowledge",
-    "hero.description": "Discover the sacred language of the Kongo people through vocabulary, stories, and the ancestral art of Kilolaka — with translations in French, English, Portuguese, Italian, Spanish, Lingala, Greek, and Korean.",
+    "hero.description": "Discover the sacred language of the Kongo people through vocabulary, stories, and the ancestral art of Kilolaka — with translations in French, English, Portuguese, Italian, Spanish, Lingala, Greek, Korean, and German.",
     "hero.startLearning": "Start Learning",
     "hero.exploreVocabulary": "Explore Vocabulary",
 
@@ -388,7 +388,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Hero
     "hero.subtitle": "Nzo Mikanda — A Casa do Saber",
-    "hero.description": "Descubra a língua sagrada do povo Kongo através do vocabulário, das histórias e da arte ancestral do Kilolaka — com traduções em francês, inglês, português, italiano, espanhol, lingala, grego e coreano.",
+    "hero.description": "Descubra a língua sagrada do povo Kongo através do vocabulário, das histórias e da arte ancestral do Kilolaka — com traduções em francês, inglês, português, italiano, espanhol, lingala, grego, coreano e alemão.",
     "hero.startLearning": "Começar a aprender",
     "hero.exploreVocabulary": "Explorar Vocabulário",
 
