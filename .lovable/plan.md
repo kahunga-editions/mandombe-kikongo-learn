@@ -1,38 +1,36 @@
 
 
-# Copier dans le presse-papier + Notes dans la langue de l'utilisateur
+# Copier le Mandombe en tant qu'image
 
-## 1. Boutons "Copier" dans le traducteur
+## Problème
+Le Mandombe est rendu via une police custom (webfont). Quand on copie le texte, on obtient du Latin — le destinataire sans la police ne voit que des lettres latines, pas les glyphes Mandombe.
 
-Ajouter un bouton copie (icone `Copy`/`Check` de Lucide) dans chaque panneau :
+## Solution
+Ajouter un bouton "Copier en image" à côté du texte Mandombe dans le traducteur. Ce bouton :
+1. Utilise `html2canvas` (ou l'API native `Canvas`) pour capturer le rendu Mandombe en image PNG
+2. Copie l'image dans le presse-papier via `navigator.clipboard.write()` avec un `ClipboardItem` de type `image/png`
+3. Affiche une coche + toast de confirmation
 
-- **Panneau source** : copie `inputText`
-- **Panneau résultat** : copie `result.translation`
+Ainsi, le destinataire reçoit une image des glyphes Mandombe, indépendamment de la police installée.
 
-Chaque bouton affiche une coche pendant 2 secondes après le clic, puis revient à l'icone copie. Utilisation de `navigator.clipboard.writeText()` + un toast de confirmation.
+## Modifications
 
-**Fichier** : `src/pages/Translator.tsx` (~15 lignes ajoutées)
+### 1. Installer `html2canvas`
+```bash
+npm install html2canvas
+```
 
-## 2. Notes/explications dans la langue de l'utilisateur
+### 2. `src/pages/Translator.tsx`
+- Ajouter une `ref` sur le `<p className="font-mandombe">` contenant le Mandombe
+- Ajouter un bouton `Image` (icône Lucide) à côté du bouton speaker
+- Au clic : capturer le nœud via `html2canvas`, convertir en blob PNG, copier dans le presse-papier avec `navigator.clipboard.write([new ClipboardItem({ 'image/png': blob })])`
+- Gérer un state `copiedMandombe` pour l'animation de confirmation
+- Fallback : si `navigator.clipboard.write` n'est pas supporté, télécharger l'image en PNG
 
-Actuellement, le prompt de l'edge function demande les notes en français. Il faut :
+### 3. Ajout d'un état `copiedMandombe` 
+Étendre le type `copied` existant pour inclure `"mandombe"` comme valeur possible.
 
-- **Passer la langue source** dans le body de la requête (`sourceLang` ou `targetLang` non-lari) depuis le frontend
-- **Modifier le prompt** dans l'edge function pour demander que le champ `notes` soit rédigé dans la langue de l'utilisateur (la langue non-lari de la paire)
-- Ajouter les labels manquants dans `directionLabels` pour couvrir les 9 langues (es, it, ln, el, ko, de)
-
-### Modification du prompt (edge function)
-
-Ajouter au prompt user : `"Rédige le champ 'notes' en {langue utilisateur}."`
-
-### Modification du body de la requête (frontend)
-
-Ajouter `notesLang` au body JSON envoyé, correspondant à la langue non-lari sélectionnée.
-
-**Fichiers** :
-- `src/pages/Translator.tsx` — ajouter `notesLang` dans le body + boutons copie (~20 lignes)
-- `supabase/functions/translate-lari/index.ts` — lire `notesLang`, compléter `directionLabels`, ajuster le prompt user (~15 lignes)
-
-## Portée totale
-- 2 fichiers modifiés, ~35 lignes changées
+## Portée
+- 1 dépendance ajoutée (`html2canvas`)
+- 1 fichier modifié (`src/pages/Translator.tsx`, ~30 lignes)
 
