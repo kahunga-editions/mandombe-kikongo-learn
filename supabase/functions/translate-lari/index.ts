@@ -4745,7 +4745,7 @@ serve(async (req) => {
           { role: "system", content: SYSTEM_PROMPT },
           {
             role: "user",
-            content: `Traduis ${dirLabel} le texte suivant :\n\n"${text}"\n\nRéponds en JSON uniquement.`,
+            content: `Traduis ${dirLabel} le texte suivant :\n\n"${text}"\n\nRédige le champ "notes" en ${notesInLang}.\n\nRéponds en JSON uniquement.`,
           },
         ],
       }),
