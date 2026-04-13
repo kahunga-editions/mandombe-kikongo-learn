@@ -2,7 +2,7 @@ import { useState, useCallback, useRef } from "react";
 import { useLanguage, Language } from "@/contexts/LanguageContext";
 import { supabase } from "@/integrations/supabase/client";
 
-const DYNAMIC_LANGS: Language[] = ["es", "it", "ln", "el", "ko"];
+const DYNAMIC_LANGS: Language[] = ["es", "it", "ln", "el", "ko", "de"];
 const CACHE_PREFIX = "content_translations_";
 const CACHE_TTL = 30 * 24 * 60 * 60 * 1000; // 30 days
 const BATCH_SIZE = 40;
