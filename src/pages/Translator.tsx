@@ -1,5 +1,6 @@
 import { useState, useCallback } from "react";
-import { ArrowRightLeft, Languages, Loader2, AlertCircle } from "lucide-react";
+import { ArrowRightLeft, Languages, Loader2, AlertCircle, Copy, Check } from "lucide-react";
+import { toast } from "sonner";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MandombeSpeaker from "@/components/MandombeSpeaker";

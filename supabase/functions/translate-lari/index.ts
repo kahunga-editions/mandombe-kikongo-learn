@@ -4690,7 +4690,7 @@ serve(async (req) => {
   }
 
   try {
-    const { text, direction } = await req.json();
+    const { text, direction, notesLang } = await req.json();
 
     if (!text || !direction) {
       return new Response(
@@ -4706,9 +4706,27 @@ serve(async (req) => {
       "lari-to-en": "du Kikongo Lari vers l'anglais",
       "pt-to-lari": "du portugais vers le Kikongo Lari",
       "lari-to-pt": "du Kikongo Lari vers le portugais",
+      "es-to-lari": "del español al Kikongo Lari",
+      "lari-to-es": "del Kikongo Lari al español",
+      "it-to-lari": "dall'italiano al Kikongo Lari",
+      "lari-to-it": "dal Kikongo Lari all'italiano",
+      "ln-to-lari": "du Lingála vers le Kikongo Lari",
+      "lari-to-ln": "du Kikongo Lari vers le Lingála",
+      "el-to-lari": "από τα Ελληνικά στα Kikongo Lari",
+      "lari-to-el": "από τα Kikongo Lari στα Ελληνικά",
+      "ko-to-lari": "한국어에서 Kikongo Lari로",
+      "lari-to-ko": "Kikongo Lari에서 한국어로",
+      "de-to-lari": "vom Deutschen ins Kikongo Lari",
+      "lari-to-de": "vom Kikongo Lari ins Deutsche",
+    };
+
+    const notesLangLabels: Record<string, string> = {
+      fr: "français", en: "English", pt: "português", es: "español",
+      it: "italiano", ln: "lingála", el: "ελληνικά", ko: "한국어", de: "Deutsch",
     };
 
     const dirLabel = directionLabels[direction] || direction;
+    const notesInLang = notesLangLabels[notesLang] || "français";
 
     const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY");
     if (!LOVABLE_API_KEY) {
