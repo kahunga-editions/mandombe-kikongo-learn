@@ -23,7 +23,7 @@ serve(async (req) => {
 
     const langMap: Record<string, string> = {
       pt: "Portuguese", en: "English", fr: "French", es: "Spanish",
-      it: "Italian", ln: "Lingala", el: "Greek", ko: "Korean",
+      it: "Italian", ln: "Lingala", el: "Greek", ko: "Korean", de: "German",
     };
     const langName = langMap[targetLang] || "French";
 

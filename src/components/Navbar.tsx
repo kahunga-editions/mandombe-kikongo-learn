@@ -14,6 +14,7 @@ const languages: { code: Language; label: string }[] = [
   { code: "ln", label: "Lingála" },
   { code: "el", label: "Ελληνικά" },
   { code: "ko", label: "한국어" },
+  { code: "de", label: "Deutsch" },
 ];
 
 const Navbar = () => {

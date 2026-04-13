@@ -42,6 +42,7 @@ const LANG_META: Record<Language, { flag: string; label: string }> = {
   ln: { flag: "🇨🇩", label: "LN" },
   el: { flag: "🇬🇷", label: "EL" },
   ko: { flag: "🇰🇷", label: "KO" },
+  de: { flag: "🇩🇪", label: "DE" },
 };
 
 /* ── Story data – texte fidèle au PDF ── */
