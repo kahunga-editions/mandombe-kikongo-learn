@@ -1,5 +1,6 @@
-import { useState, useCallback } from "react";
-import { ArrowRightLeft, Languages, Loader2, AlertCircle, Copy, Check } from "lucide-react";
+import { useState, useCallback, useRef } from "react";
+import { ArrowRightLeft, Languages, Loader2, AlertCircle, Copy, Check, ImageIcon } from "lucide-react";
+import html2canvas from "html2canvas";
 import { toast } from "sonner";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -45,7 +46,35 @@ const Translator = () => {
   const [result, setResult] = useState<TranslationResult | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [copied, setCopied] = useState<"source" | "target" | null>(null);
+  const [copied, setCopied] = useState<"source" | "target" | "mandombe" | null>(null);
+  const mandombeRef = useRef<HTMLParagraphElement>(null);
+
+  const copyMandombeAsImage = useCallback(async () => {
+    if (!mandombeRef.current) return;
+    try {
+      const canvas = await html2canvas(mandombeRef.current, { backgroundColor: null });
+      canvas.toBlob(async (blob) => {
+        if (!blob) return;
+        try {
+          await navigator.clipboard.write([new ClipboardItem({ "image/png": blob })]);
+          setCopied("mandombe");
+          toast.success(t("translator.copiedImage") || "Image Mandombe copiée !");
+          setTimeout(() => setCopied(null), 2000);
+        } catch {
+          // Fallback: download
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement("a");
+          a.href = url;
+          a.download = "mandombe.png";
+          a.click();
+          URL.revokeObjectURL(url);
+          toast.success("Image téléchargée !");
+        }
+      }, "image/png");
+    } catch {
+      toast.error("Erreur lors de la capture");
+    }
+  }, [t]);
 
   const copyToClipboard = useCallback(async (text: string, side: "source" | "target") => {
     await navigator.clipboard.writeText(text);
@@ -246,10 +275,19 @@ const Translator = () => {
                   {/* Mandombe rendering */}
                   {result.mandombe && (
                     <div className="flex items-center gap-2 mb-3">
-                      <p className="font-mandombe text-3xl text-primary leading-relaxed">
+                      <p ref={mandombeRef} className="font-mandombe text-3xl text-primary leading-relaxed">
                         {result.mandombe}
                       </p>
                       {lariText && <MandombeSpeaker lariText={lariText} />}
+                      <Button
+                        variant="ghost"
+                        size="icon"
+                        onClick={copyMandombeAsImage}
+                        className="h-8 w-8 shrink-0"
+                        aria-label="Copier le Mandombe en image"
+                      >
+                        {copied === "mandombe" ? <Check className="w-4 h-4 text-green-500" /> : <ImageIcon className="w-4 h-4" />}
+                      </Button>
                     </div>
                   )}
 
