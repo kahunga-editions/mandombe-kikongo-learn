@@ -314,7 +314,12 @@ const Translator = () => {
                       <Button
                         variant="ghost"
                         size="icon"
-                        onClick={() => setIsEditing(!isEditing)}
+                        onClick={() => {
+                          if (isEditing && isAdmin) {
+                            saveCorrection();
+                          }
+                          setIsEditing(!isEditing);
+                        }}
                         className="h-8 w-8"
                         aria-label={isEditing ? "Valider" : "Éditer"}
                       >
