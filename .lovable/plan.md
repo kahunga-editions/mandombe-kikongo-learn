@@ -1,31 +1,38 @@
 
 
-# Ajouter `leftMandombe` + règle "pas d'accent en Mandombe"
+# Copier dans le presse-papier + Notes dans la langue de l'utilisateur
 
-## Contexte
-Le champ `left` des paires matching sert à la fois pour le Latin (avec annotations tonales comme "(ton H)") et pour le Mandombe. Il faut un champ séparé. De plus, une règle générale doit être appliquée : **jamais d'accent sur le texte Mandombe** (strip diacritiques).
+## 1. Boutons "Copier" dans le traducteur
 
-## Modifications
+Ajouter un bouton copie (icone `Copy`/`Check` de Lucide) dans chaque panneau :
 
-### 1. Type `MatchingQuestion` — `src/data/lessons.ts` (ligne 41)
-Ajouter `leftMandombe?: string` au type des paires :
-```ts
-pairs: { left: string; leftMandombe?: string; right: string; rightFr?: string; rightPt?: string }[];
-```
+- **Panneau source** : copie `inputText`
+- **Panneau résultat** : copie `result.translation`
 
-### 2. Données de la leçon phonologie — `src/data/lessons.ts`
-Ajouter `leftMandombe` sans parenthèses aux paires de l'exercice de tons (ex: `left: "Wa (ton H)"`, `leftMandombe: "Wa"`).
+Chaque bouton affiche une coche pendant 2 secondes après le clic, puis revient à l'icone copie. Utilisation de `navigator.clipboard.writeText()` + un toast de confirmation.
 
-### 3. Composant `MatchingExercise.tsx`
-- Ligne 96 : utiliser `pair.leftMandombe || pair.left` pour le span Mandombe
-- Ajouter un `stripAccents()` sur tout texte affiché en `font-mandombe` pour garantir la règle "pas d'accent en Mandombe"
+**Fichier** : `src/pages/Translator.tsx` (~15 lignes ajoutées)
 
-### 4. Règle globale — utilitaire `stripAccents`
-Créer/réutiliser un helper `stripAccents` (NFD + strip combining marks) et l'appliquer systématiquement dans tous les composants qui rendent du texte en `font-mandombe`. Les fichiers concernés :
-- `MatchingExercise.tsx` (ligne 96 — span Mandombe du `left`)
-- Les autres composants utilisent déjà des champs `mandombe` dédiés depuis les données, donc la protection se fait au niveau des données elles-mêmes (les champs `mandombe` dans lessons.ts sont déjà sans accent)
+## 2. Notes/explications dans la langue de l'utilisateur
 
-### Portée
-- 2 fichiers modifiés : `src/data/lessons.ts` (type + données), `src/components/exercises/MatchingExercise.tsx`
-- ~15 lignes changées au total
+Actuellement, le prompt de l'edge function demande les notes en français. Il faut :
+
+- **Passer la langue source** dans le body de la requête (`sourceLang` ou `targetLang` non-lari) depuis le frontend
+- **Modifier le prompt** dans l'edge function pour demander que le champ `notes` soit rédigé dans la langue de l'utilisateur (la langue non-lari de la paire)
+- Ajouter les labels manquants dans `directionLabels` pour couvrir les 9 langues (es, it, ln, el, ko, de)
+
+### Modification du prompt (edge function)
+
+Ajouter au prompt user : `"Rédige le champ 'notes' en {langue utilisateur}."`
+
+### Modification du body de la requête (frontend)
+
+Ajouter `notesLang` au body JSON envoyé, correspondant à la langue non-lari sélectionnée.
+
+**Fichiers** :
+- `src/pages/Translator.tsx` — ajouter `notesLang` dans le body + boutons copie (~20 lignes)
+- `supabase/functions/translate-lari/index.ts` — lire `notesLang`, compléter `directionLabels`, ajuster le prompt user (~15 lignes)
+
+## Portée totale
+- 2 fichiers modifiés, ~35 lignes changées
 
