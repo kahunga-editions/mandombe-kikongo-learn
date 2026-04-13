@@ -117,11 +117,49 @@ const ELEVENLABS_RULES: PhoneticRule[] = [
   { from: /\bge/g, to: 'guê', note: 'ge initial → guê' },
 ];
 
+// ============================================================
+// OVERRIDES PHONÉTIQUES MOT PAR MOT (côté client)
+// ============================================================
+const PHONETIC_OVERRIDES: Record<string, string> = {
+  "nkenke": "ntshntshe",
+  "ngiena": "ndjena",
+  "ngiele": "ndjele",
+  "nkila": "ntshila",
+  "tola": "tôla",
+  "mama": "mâma",
+  "sala": "sâla",
+  "njijiri": "ndjîdjiri",
+  "nzijiri": "ndjîdjiri",
+  "nkumbu": "nkoumbou",
+  "tshibuka": "tshibouka",
+  "bilongo": "bilôngo",
+  "mululu": "moulooulou",
+  "mupepe": "moupépé",
+  "nanguka": "nangouka",
+  "ndendi": "ndéndi",
+  "buzitu": "bouzitou",
+  "tshivumu": "tshivoumou",
+  "tshibuki": "tshibouki",
+  "kinsangu": "kinsangou",
+  "tshinkoso": "tshinkôsso",
+  "saleno": "saléno",
+  "jima": "djima",
+  "tatika": "tatika",
+  "yarika": "yarika",
+  "lumfikini": "loumfikini",
+  "mazono": "mazôno",
+};
+
 /**
  * Applique les règles de prononciation pour ElevenLabs.
  */
 export function preprocessForElevenLabs(text: string): string {
-  let result = text;
+  // Step 1: word-level overrides
+  let result = text.replace(/\b[\w']+\b/g, (word) => {
+    const lower = word.toLowerCase();
+    return PHONETIC_OVERRIDES[lower] || word;
+  });
+  // Step 2: regex rules
   for (const rule of ELEVENLABS_RULES) {
     result = result.replace(rule.from, rule.to);
   }
