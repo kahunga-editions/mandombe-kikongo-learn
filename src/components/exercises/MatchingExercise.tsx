@@ -120,7 +120,7 @@ const MatchingExercise = ({ question, onComplete, showLingala = false }: Props) 
               >
                 <span className="text-foreground">{getRightText(item)}</span>
                 {showLingala && (
-                  <span className="font-mandombe text-lg text-gold/80 block mt-1">🇨🇩 {getTranslation(item.rightFr || item.right).normalize("NFD").replace(/[\u0300-\u036f]/g, "")}</span>
+                  <span className="font-mandombe text-lg text-gold/80 block mt-1">🇨🇩 {stripAccents(getTranslation(item.rightFr || item.right))}</span>
                 )}
                 {submitted && isUsed && (
                   <CheckCircle className="w-4 h-4 text-green-500 inline ml-2" />
