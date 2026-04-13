@@ -1,5 +1,6 @@
 import { useState, useCallback } from "react";
-import { ArrowRightLeft, Languages, Loader2, AlertCircle } from "lucide-react";
+import { ArrowRightLeft, Languages, Loader2, AlertCircle, Copy, Check } from "lucide-react";
+import { toast } from "sonner";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MandombeSpeaker from "@/components/MandombeSpeaker";
@@ -44,6 +45,14 @@ const Translator = () => {
   const [result, setResult] = useState<TranslationResult | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [copied, setCopied] = useState<"source" | "target" | null>(null);
+
+  const copyToClipboard = useCallback(async (text: string, side: "source" | "target") => {
+    await navigator.clipboard.writeText(text);
+    setCopied(side);
+    toast.success(t("translator.copied") || "Copié !");
+    setTimeout(() => setCopied(null), 2000);
+  }, [t]);
 
   const swap = useCallback(() => {
     setSourceLang(targetLang);
@@ -61,6 +70,7 @@ const Translator = () => {
     setResult(null);
 
     const direction = `${sourceLang}-to-${targetLang}`;
+    const notesLang = sourceLang === "lari" ? targetLang : sourceLang;
 
     try {
       const response = await fetch(
@@ -72,7 +82,7 @@ const Translator = () => {
             apikey: import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY,
             Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
           },
-          body: JSON.stringify({ text: inputText.trim(), direction }),
+          body: JSON.stringify({ text: inputText.trim(), direction, notesLang }),
         }
       );
 
@@ -169,19 +179,32 @@ const Translator = () => {
                   }
                 }}
               />
-              <div className="flex justify-end mt-3">
-                <Button
-                  onClick={translate}
-                  disabled={isLoading || !inputText.trim()}
-                  className="gap-2"
-                >
-                  {isLoading ? (
-                    <Loader2 className="w-4 h-4 animate-spin" />
-                  ) : (
-                    <Languages className="w-4 h-4" />
-                  )}
-                  {t("translator.translate")}
-                </Button>
+              <div className="flex justify-between items-center mt-3">
+                {inputText.trim() && (
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    onClick={() => copyToClipboard(inputText, "source")}
+                    className="h-8 w-8"
+                    aria-label="Copy source text"
+                  >
+                    {copied === "source" ? <Check className="w-4 h-4 text-green-500" /> : <Copy className="w-4 h-4" />}
+                  </Button>
+                )}
+                <div className="ml-auto">
+                  <Button
+                    onClick={translate}
+                    disabled={isLoading || !inputText.trim()}
+                    className="gap-2"
+                  >
+                    {isLoading ? (
+                      <Loader2 className="w-4 h-4 animate-spin" />
+                    ) : (
+                      <Languages className="w-4 h-4" />
+                    )}
+                    {t("translator.translate")}
+                  </Button>
+                </div>
               </div>
             </div>
 
@@ -207,7 +230,18 @@ const Translator = () => {
               {result && !isLoading && (
                 <div className="flex-1 min-h-[180px]">
                   {/* Translation text */}
-                  <p className="text-lg text-foreground mb-4">{result.translation}</p>
+                  <div className="flex items-start justify-between gap-2 mb-4">
+                    <p className="text-lg text-foreground">{result.translation}</p>
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      onClick={() => copyToClipboard(result.translation, "target")}
+                      className="h-8 w-8 shrink-0"
+                      aria-label="Copy translation"
+                    >
+                      {copied === "target" ? <Check className="w-4 h-4 text-green-500" /> : <Copy className="w-4 h-4" />}
+                    </Button>
+                  </div>
 
                   {/* Mandombe rendering */}
                   {result.mandombe && (
