@@ -4,6 +4,9 @@ import { CheckCircle } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useTranslatedContent } from "@/hooks/useTranslatedContent";
 
+const stripAccents = (text: string) =>
+  text.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+
 interface Props {
   question: MatchingQuestion;
   onComplete: (correct: boolean) => void;
@@ -93,10 +96,10 @@ const MatchingExercise = ({ question, onComplete, showLingala = false }: Props) 
                 onClick={() => handleLeftClick(i)}
                 className={`w-full text-left px-4 py-3 rounded-lg border transition-all text-sm ${cls}`}
               >
-                <span className="font-mandombe text-2xl text-gold block mb-3">{pair.left}</span>
+                <span className="font-mandombe text-2xl text-gold block mb-3">{stripAccents(pair.leftMandombe || pair.left)}</span>
                 <span className="text-foreground">{pair.left}</span>
                 {showLingala && (
-                  <span className="font-mandombe text-lg text-gold/80 block mt-1">🇨🇩 {getTranslation(pair.left).normalize("NFD").replace(/[\u0300-\u036f]/g, "")}</span>
+                  <span className="font-mandombe text-lg text-gold/80 block mt-1">🇨🇩 {stripAccents(getTranslation(pair.left))}</span>
                 )}
               </button>
             );
