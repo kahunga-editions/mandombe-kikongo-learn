@@ -41,6 +41,7 @@ const langLabels: Record<SourceLang, string> = {
 
 const Translator = () => {
   const { t } = useLanguage();
+  const { isAdmin, session } = useAuth();
   const [sourceLang, setSourceLang] = useState<SourceLang>("fr");
   const [targetLang, setTargetLang] = useState<SourceLang>("lari");
   const [inputText, setInputText] = useState("");
