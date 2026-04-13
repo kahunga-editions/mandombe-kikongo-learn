@@ -154,7 +154,12 @@ const PHONETIC_OVERRIDES: Record<string, string> = {
  * Applique les règles de prononciation pour ElevenLabs.
  */
 export function preprocessForElevenLabs(text: string): string {
-  let result = text;
+  // Step 1: word-level overrides
+  let result = text.replace(/\b[\w']+\b/g, (word) => {
+    const lower = word.toLowerCase();
+    return PHONETIC_OVERRIDES[lower] || word;
+  });
+  // Step 2: regex rules
   for (const rule of ELEVENLABS_RULES) {
     result = result.replace(rule.from, rule.to);
   }
