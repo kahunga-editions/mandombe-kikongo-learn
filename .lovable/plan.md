@@ -1,36 +1,34 @@
 
 
-# Copier le Mandombe en tant qu'image
+# Édition directe de la traduction dans le traducteur
 
 ## Problème
-Le Mandombe est rendu via une police custom (webfont). Quand on copie le texte, on obtient du Latin — le destinataire sans la police ne voit que des lettres latines, pas les glyphes Mandombe.
+Le traducteur produit parfois des traductions Lari dont la syntaxe ne respecte pas l'ordre canonique (S+O+P+V). L'utilisateur doit pouvoir corriger directement le texte traduit sans quitter le traducteur.
 
 ## Solution
-Ajouter un bouton "Copier en image" à côté du texte Mandombe dans le traducteur. Ce bouton :
-1. Utilise `html2canvas` (ou l'API native `Canvas`) pour capturer le rendu Mandombe en image PNG
-2. Copie l'image dans le presse-papier via `navigator.clipboard.write()` avec un `ClipboardItem` de type `image/png`
-3. Affiche une coche + toast de confirmation
+Rendre le texte de traduction éditable dans le panneau résultat. Un bouton "Éditer" (icône crayon) bascule le texte statique en `Textarea` modifiable. Quand l'utilisateur modifie le texte, le Mandombe et l'IPA se mettent à jour en temps réel.
 
-Ainsi, le destinataire reçoit une image des glyphes Mandombe, indépendamment de la police installée.
+## Modifications — `src/pages/Translator.tsx`
 
-## Modifications
+### 1. Nouvel état `isEditing`
+- `const [isEditing, setIsEditing] = useState(false)` — contrôle le mode édition
+- Reset à `false` à chaque nouvelle traduction
 
-### 1. Installer `html2canvas`
-```bash
-npm install html2canvas
-```
+### 2. Rendre la traduction éditable
+- Ligne ~263 : remplacer le `<p>` statique par un composant conditionnel :
+  - Si `isEditing` → `<Textarea>` pré-rempli avec `result.translation`, qui met à jour `result.translation` via `setResult({...result, translation: newValue})`
+  - Sinon → le `<p>` actuel
+- Ajouter un bouton crayon (`Pencil` de Lucide) à côté du bouton copier pour basculer `isEditing`
 
-### 2. `src/pages/Translator.tsx`
-- Ajouter une `ref` sur le `<p className="font-mandombe">` contenant le Mandombe
-- Ajouter un bouton `Image` (icône Lucide) à côté du bouton speaker
-- Au clic : capturer le nœud via `html2canvas`, convertir en blob PNG, copier dans le presse-papier avec `navigator.clipboard.write([new ClipboardItem({ 'image/png': blob })])`
-- Gérer un state `copiedMandombe` pour l'animation de confirmation
-- Fallback : si `navigator.clipboard.write` n'est pas supporté, télécharger l'image en PNG
+### 3. Mise à jour du Mandombe en temps réel
+- Quand l'utilisateur édite la traduction et que la cible est Lari, le champ `mandombe` du résultat est mis à jour avec le texte édité (le Mandombe utilise les mêmes caractères latins rendus via la police custom)
+- Le `lariText` utilisé pour le speaker sera aussi mis à jour automatiquement
 
-### 3. Ajout d'un état `copiedMandombe` 
-Étendre le type `copied` existant pour inclure `"mandombe"` comme valeur possible.
+### 4. Icône et UX
+- Icône `Pencil` (mode lecture) → `Check` (mode édition, pour valider)
+- Le `Textarea` d'édition reprend le même style que le panneau source (border-0, bg-transparent, text-lg)
 
 ## Portée
-- 1 dépendance ajoutée (`html2canvas`)
-- 1 fichier modifié (`src/pages/Translator.tsx`, ~30 lignes)
+- 1 fichier modifié : `src/pages/Translator.tsx` (~25 lignes)
+- 0 dépendance ajoutée
 
