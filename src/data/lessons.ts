@@ -26674,7 +26674,6 @@ export const lessons: Lesson[] = [
       },
     ],
   },
-  },
   {
     id: "phonologie-a1",
     title: "How to Speak — Tones & Prenasalized Consonants",
