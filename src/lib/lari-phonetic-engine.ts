@@ -117,6 +117,39 @@ const ELEVENLABS_RULES: PhoneticRule[] = [
   { from: /\bge/g, to: 'guê', note: 'ge initial → guê' },
 ];
 
+// ============================================================
+// OVERRIDES PHONÉTIQUES MOT PAR MOT (côté client)
+// ============================================================
+const PHONETIC_OVERRIDES: Record<string, string> = {
+  "nkenke": "ntshntshe",
+  "ngiena": "ndjena",
+  "ngiele": "ndjele",
+  "nkila": "ntshila",
+  "tola": "tôla",
+  "mama": "mâma",
+  "sala": "sâla",
+  "njijiri": "ndjîdjiri",
+  "nzijiri": "ndjîdjiri",
+  "nkumbu": "nkoumbou",
+  "tshibuka": "tshibouka",
+  "bilongo": "bilôngo",
+  "mululu": "moulooulou",
+  "mupepe": "moupépé",
+  "nanguka": "nangouka",
+  "ndendi": "ndéndi",
+  "buzitu": "bouzitou",
+  "tshivumu": "tshivoumou",
+  "tshibuki": "tshibouki",
+  "kinsangu": "kinsangou",
+  "tshinkoso": "tshinkôsso",
+  "saleno": "saléno",
+  "jima": "djima",
+  "tatika": "tatika",
+  "yarika": "yarika",
+  "lumfikini": "loumfikini",
+  "mazono": "mazôno",
+};
+
 /**
  * Applique les règles de prononciation pour ElevenLabs.
  */
