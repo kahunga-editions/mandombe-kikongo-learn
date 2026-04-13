@@ -179,19 +179,32 @@ const Translator = () => {
                   }
                 }}
               />
-              <div className="flex justify-end mt-3">
-                <Button
-                  onClick={translate}
-                  disabled={isLoading || !inputText.trim()}
-                  className="gap-2"
-                >
-                  {isLoading ? (
-                    <Loader2 className="w-4 h-4 animate-spin" />
-                  ) : (
-                    <Languages className="w-4 h-4" />
-                  )}
-                  {t("translator.translate")}
-                </Button>
+              <div className="flex justify-between items-center mt-3">
+                {inputText.trim() && (
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    onClick={() => copyToClipboard(inputText, "source")}
+                    className="h-8 w-8"
+                    aria-label="Copy source text"
+                  >
+                    {copied === "source" ? <Check className="w-4 h-4 text-green-500" /> : <Copy className="w-4 h-4" />}
+                  </Button>
+                )}
+                <div className="ml-auto">
+                  <Button
+                    onClick={translate}
+                    disabled={isLoading || !inputText.trim()}
+                    className="gap-2"
+                  >
+                    {isLoading ? (
+                      <Loader2 className="w-4 h-4 animate-spin" />
+                    ) : (
+                      <Languages className="w-4 h-4" />
+                    )}
+                    {t("translator.translate")}
+                  </Button>
+                </div>
               </div>
             </div>
 
