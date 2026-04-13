@@ -2056,7 +2056,7 @@ export const lessons: Lesson[] = [
         tense: "Negative (ka...ko)",
         rows: [
           { person: "Je", lari: "ka ngiena ko", mandombe: "ka ngiyena ko" },
-          { person: "Tu", lari: "ka wena ko", mandombe: "ka wena ko" },
+          { person: "Tu", lari: "kuena…ko", mandombe: "kuena…ko" },
           { person: "Il/Elle", lari: "kena…ko", mandombe: "kena…ko" },
           { person: "Nous", lari: "ka tuena ko", mandombe: "ka tuwena ko" },
           { person: "Vous", lari: "ka luena ko", mandombe: "ka luwena ko" },
