@@ -166,6 +166,45 @@ export type Database = {
         }
         Relationships: []
       }
+      translation_corrections: {
+        Row: {
+          corrected_ipa: string | null
+          corrected_mandombe: string | null
+          corrected_translation: string
+          created_at: string | null
+          created_by: string | null
+          id: string
+          notes: string | null
+          source_lang: string
+          source_text: string
+          target_lang: string
+        }
+        Insert: {
+          corrected_ipa?: string | null
+          corrected_mandombe?: string | null
+          corrected_translation: string
+          created_at?: string | null
+          created_by?: string | null
+          id?: string
+          notes?: string | null
+          source_lang: string
+          source_text: string
+          target_lang: string
+        }
+        Update: {
+          corrected_ipa?: string | null
+          corrected_mandombe?: string | null
+          corrected_translation?: string
+          created_at?: string | null
+          created_by?: string | null
+          id?: string
+          notes?: string | null
+          source_lang?: string
+          source_text?: string
+          target_lang?: string
+        }
+        Relationships: []
+      }
       user_roles: {
         Row: {
           id: string

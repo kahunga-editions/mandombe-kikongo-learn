@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MandombeSpeaker from "@/components/MandombeSpeaker";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useAuth } from "@/contexts/AuthContext";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import {
@@ -40,6 +41,7 @@ const langLabels: Record<SourceLang, string> = {
 
 const Translator = () => {
   const { t } = useLanguage();
+  const { isAdmin, session } = useAuth();
   const [sourceLang, setSourceLang] = useState<SourceLang>("fr");
   const [targetLang, setTargetLang] = useState<SourceLang>("lari");
   const [inputText, setInputText] = useState("");
@@ -92,6 +94,39 @@ const Translator = () => {
       setResult(null);
     }
   }, [sourceLang, targetLang, result]);
+
+  const saveCorrection = useCallback(async () => {
+    if (!result || !isAdmin || !session?.access_token) return;
+    try {
+      const response = await fetch(
+        `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/translate-lari`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            apikey: import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY,
+            Authorization: `Bearer ${session.access_token}`,
+          },
+          body: JSON.stringify({
+            text: inputText.trim(),
+            direction: `${sourceLang}-to-${targetLang}`,
+            correction: true,
+            translation: result.translation,
+            mandombe: result.mandombe,
+            ipa: result.ipa,
+            notes: result.notes,
+          }),
+        }
+      );
+      if (response.ok) {
+        toast.success(t("translator.correctionSaved") || "Correction sauvegardée !");
+      } else {
+        toast.error("Erreur lors de la sauvegarde");
+      }
+    } catch {
+      toast.error("Erreur lors de la sauvegarde");
+    }
+  }, [result, isAdmin, session, inputText, sourceLang, targetLang, t]);
 
   const translate = useCallback(async () => {
     if (!inputText.trim()) return;
@@ -279,7 +314,12 @@ const Translator = () => {
                       <Button
                         variant="ghost"
                         size="icon"
-                        onClick={() => setIsEditing(!isEditing)}
+                        onClick={() => {
+                          if (isEditing && isAdmin) {
+                            saveCorrection();
+                          }
+                          setIsEditing(!isEditing);
+                        }}
                         className="h-8 w-8"
                         aria-label={isEditing ? "Valider" : "Éditer"}
                       >

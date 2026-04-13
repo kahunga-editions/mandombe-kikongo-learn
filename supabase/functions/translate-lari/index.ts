@@ -4684,19 +4684,125 @@ Réponds UNIQUEMENT en JSON valide :
   "notes": "notes optionnelles sur la traduction, mots incertains, etc."
 }`;
 
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
+
 serve(async (req) => {
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
   }
 
   try {
-    const { text, direction, notesLang } = await req.json();
+    const body = await req.json();
+    const { text, direction, notesLang, correction, translation, mandombe, ipa, notes: corrNotes } = body;
 
     if (!text || !direction) {
       return new Response(
         JSON.stringify({ error: "Missing 'text' or 'direction'" }),
         { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
+    }
+
+    const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
+    const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
+    const supabase = createClient(supabaseUrl, supabaseServiceKey);
+
+    // Parse direction to get source_lang and target_lang
+    const [sourceLang, , targetLang] = direction.split("-"); // e.g. "fr-to-lari"
+
+    // --- Admin correction save ---
+    if (correction && translation) {
+      // Verify admin from JWT
+      const authHeader = req.headers.get("Authorization") || "";
+      const token = authHeader.replace("Bearer ", "");
+      const { data: { user } } = await supabase.auth.getUser(token);
+      
+      if (!user) {
+        return new Response(JSON.stringify({ error: "Non authentifié" }), {
+          status: 401, headers: { ...corsHeaders, "Content-Type": "application/json" },
+        });
+      }
+
+      const { data: isAdmin } = await supabase.rpc("has_role", { _user_id: user.id, _role: "admin" });
+      if (!isAdmin) {
+        return new Response(JSON.stringify({ error: "Accès admin requis" }), {
+          status: 403, headers: { ...corsHeaders, "Content-Type": "application/json" },
+        });
+      }
+
+      const { error: upsertErr } = await supabase
+        .from("translation_corrections")
+        .upsert({
+          source_text: text.trim().toLowerCase(),
+          source_lang: sourceLang,
+          target_lang: targetLang,
+          corrected_translation: translation,
+          corrected_mandombe: mandombe || "",
+          corrected_ipa: ipa || "",
+          notes: corrNotes || "",
+          created_by: user.id,
+        }, { onConflict: "lower(source_text),source_lang,target_lang" });
+
+      // Fallback: if upsert on expression fails, try delete + insert
+      if (upsertErr) {
+        await supabase
+          .from("translation_corrections")
+          .delete()
+          .eq("source_lang", sourceLang)
+          .eq("target_lang", targetLang)
+          .ilike("source_text", text.trim());
+        
+        await supabase
+          .from("translation_corrections")
+          .insert({
+            source_text: text.trim().toLowerCase(),
+            source_lang: sourceLang,
+            target_lang: targetLang,
+            corrected_translation: translation,
+            corrected_mandombe: mandombe || "",
+            corrected_ipa: ipa || "",
+            notes: corrNotes || "",
+            created_by: user.id,
+          });
+      }
+
+      return new Response(JSON.stringify({ saved: true }), {
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+      });
+    }
+
+    // --- Check for exact correction match ---
+    const { data: exactMatch } = await supabase
+      .from("translation_corrections")
+      .select("corrected_translation, corrected_mandombe, corrected_ipa, notes")
+      .eq("source_lang", sourceLang)
+      .eq("target_lang", targetLang)
+      .ilike("source_text", text.trim())
+      .maybeSingle();
+
+    if (exactMatch) {
+      return new Response(JSON.stringify({
+        translation: exactMatch.corrected_translation,
+        mandombe: exactMatch.corrected_mandombe,
+        ipa: exactMatch.corrected_ipa,
+        notes: exactMatch.notes,
+      }), {
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+      });
+    }
+
+    // --- Load recent corrections as few-shot examples ---
+    const { data: examples } = await supabase
+      .from("translation_corrections")
+      .select("source_text, corrected_translation")
+      .eq("source_lang", sourceLang)
+      .eq("target_lang", targetLang)
+      .order("created_at", { ascending: false })
+      .limit(20);
+
+    let fewShotBlock = "";
+    if (examples && examples.length > 0) {
+      const lines = examples.map(e => `"${e.source_text}" → "${e.corrected_translation}"`).join("\n");
+      fewShotBlock = `\n\n## Corrections vérifiées par un expert (utilise ces exemples comme référence) :\n${lines}\n`;
     }
 
     const directionLabels: Record<string, string> = {
@@ -4742,7 +4848,7 @@ serve(async (req) => {
       body: JSON.stringify({
         model: "google/gemini-2.5-flash",
         messages: [
-          { role: "system", content: SYSTEM_PROMPT },
+          { role: "system", content: SYSTEM_PROMPT + fewShotBlock },
           {
             role: "user",
             content: `Traduis ${dirLabel} le texte suivant :\n\n"${text}"\n\nRédige le champ "notes" en ${notesInLang}.\n\nRéponds en JSON uniquement.`,
