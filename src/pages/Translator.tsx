@@ -45,6 +45,14 @@ const Translator = () => {
   const [result, setResult] = useState<TranslationResult | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [copied, setCopied] = useState<"source" | "target" | null>(null);
+
+  const copyToClipboard = useCallback(async (text: string, side: "source" | "target") => {
+    await navigator.clipboard.writeText(text);
+    setCopied(side);
+    toast.success(t("translator.copied") || "Copié !");
+    setTimeout(() => setCopied(null), 2000);
+  }, [t]);
 
   const swap = useCallback(() => {
     setSourceLang(targetLang);
@@ -62,6 +70,7 @@ const Translator = () => {
     setResult(null);
 
     const direction = `${sourceLang}-to-${targetLang}`;
+    const notesLang = sourceLang === "lari" ? targetLang : sourceLang;
 
     try {
       const response = await fetch(
@@ -73,7 +82,7 @@ const Translator = () => {
             apikey: import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY,
             Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
           },
-          body: JSON.stringify({ text: inputText.trim(), direction }),
+          body: JSON.stringify({ text: inputText.trim(), direction, notesLang }),
         }
       );
 
