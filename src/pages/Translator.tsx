@@ -47,6 +47,7 @@ const Translator = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [copied, setCopied] = useState<"source" | "target" | "mandombe" | null>(null);
+  const [isEditing, setIsEditing] = useState(false);
   const mandombeRef = useRef<HTMLParagraphElement>(null);
 
   const copyMandombeAsImage = useCallback(async () => {
@@ -97,6 +98,7 @@ const Translator = () => {
     setIsLoading(true);
     setError(null);
     setResult(null);
+    setIsEditing(false);
 
     const direction = `${sourceLang}-to-${targetLang}`;
     const notesLang = sourceLang === "lari" ? targetLang : sourceLang;
@@ -260,16 +262,39 @@ const Translator = () => {
                 <div className="flex-1 min-h-[180px]">
                   {/* Translation text */}
                   <div className="flex items-start justify-between gap-2 mb-4">
-                    <p className="text-lg text-foreground">{result.translation}</p>
-                    <Button
-                      variant="ghost"
-                      size="icon"
-                      onClick={() => copyToClipboard(result.translation, "target")}
-                      className="h-8 w-8 shrink-0"
-                      aria-label="Copy translation"
-                    >
-                      {copied === "target" ? <Check className="w-4 h-4 text-green-500" /> : <Copy className="w-4 h-4" />}
-                    </Button>
+                    {isEditing ? (
+                      <Textarea
+                        value={result.translation}
+                        onChange={(e) => {
+                          const newVal = e.target.value;
+                          setResult({ ...result, translation: newVal, mandombe: targetIsLari ? newVal : result.mandombe });
+                        }}
+                        className="flex-1 min-h-[60px] resize-none border-0 bg-transparent p-0 focus-visible:ring-0 text-foreground text-lg"
+                        autoFocus
+                      />
+                    ) : (
+                      <p className="text-lg text-foreground">{result.translation}</p>
+                    )}
+                    <div className="flex items-center gap-1 shrink-0">
+                      <Button
+                        variant="ghost"
+                        size="icon"
+                        onClick={() => setIsEditing(!isEditing)}
+                        className="h-8 w-8"
+                        aria-label={isEditing ? "Valider" : "Éditer"}
+                      >
+                        {isEditing ? <Check className="w-4 h-4 text-green-500" /> : <Pencil className="w-4 h-4" />}
+                      </Button>
+                      <Button
+                        variant="ghost"
+                        size="icon"
+                        onClick={() => copyToClipboard(result.translation, "target")}
+                        className="h-8 w-8"
+                        aria-label="Copy translation"
+                      >
+                        {copied === "target" ? <Check className="w-4 h-4 text-green-500" /> : <Copy className="w-4 h-4" />}
+                      </Button>
+                    </div>
                   </div>
 
                   {/* Mandombe rendering */}
