@@ -26828,7 +26828,7 @@ export const lessons: Lesson[] = [
         instructionFr: "Associez chaque forme tonale à son sens",
         instructionPt: "Associe cada forma tonal ao seu significado",
         pairs: [
-          { left: "Wa (ton H)", right: "you", rightFr: "tu", rightPt: "tu" },
+          { left: "wa", right: "you", rightFr: "tu", rightPt: "tu" },
           { left: "Wà (ton B)", right: "she", rightFr: "elle", rightPt: "ela" },
           { left: "Tondele (H-H-H)", right: "you thank", rightFr: "tu remercies", rightPt: "tu agradeces" },
           { left: "Tôndele (B-H-H)", right: "he/she thanks", rightFr: "il/elle remercie", rightPt: "ele/ela agradece" },
