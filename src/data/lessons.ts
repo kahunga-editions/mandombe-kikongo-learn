@@ -2057,7 +2057,7 @@ export const lessons: Lesson[] = [
         rows: [
           { person: "Je", lari: "ka ngiena ko", mandombe: "ka ngiyena ko" },
           { person: "Tu", lari: "ka wena ko", mandombe: "ka wena ko" },
-          { person: "Il/Elle", lari: "ka kena ko", mandombe: "ka kena ko" },
+          { person: "Il/Elle", lari: "kena…ko", mandombe: "kena…ko" },
           { person: "Nous", lari: "ka tuena ko", mandombe: "ka tuwena ko" },
           { person: "Vous", lari: "ka luena ko", mandombe: "ka luwena ko" },
           { person: "Ils/Elles", lari: "ka bena ko", mandombe: "ka bena ko" },
