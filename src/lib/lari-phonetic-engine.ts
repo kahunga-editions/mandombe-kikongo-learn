@@ -149,6 +149,12 @@ const PHONETIC_OVERRIDES: Record<string, string> = {
   "yarika": "yarika",
   "lumfikini": "loumfikini",
   "mazono": "mazôno",
+  "pi": "pii",
+  "fyu": "fyuu",
+  "nye": "nyee",
+  "ti": "tii",
+  "wa": "waa",
+  "nsi": "tsii",
 };
 
 /**
