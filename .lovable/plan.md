@@ -1,37 +1,46 @@
 
 
-# Corriger le "te" idéophone : portée TTS + traduction
+# Extraire les pages 51-100 du corpus Jacquot (thèse Laadi)
 
-## Problème
-L'override `"te": "teeee"` s'applique à TOUS les "te" du corpus, alors que "te" n'est un idéophone (voyelle longue) que dans ce contexte précis. En lari courant, "te" est un mot normal (conjonction, etc.) qui ne doit pas être allongé.
+## Contenu couvert par les 50 premières pages
+Pages 1-50 du PDF = pages de thèse 1 à 46. Couvre : avant-propos, introduction, et toute la **Première Partie — Phonologie** (Chapitre I : Les unités distinctives), jusqu'au tableau du système consonantique (section 1.44.3).
 
-De plus, la traduction française est inexacte : "te" ici signifie "jusqu'àààà" (il est resté là indéfiniment), pas "immobile".
+Les pages 51-100 contiendront vraisemblablement :
+- Fin de la phonologie (prosodie, tons, structure syllabique)
+- Début de la **Deuxième Partie — Morphologie** (classes nominales)
 
-## Changements
+## Etapes
 
-### 1. Retirer l'override global `"te": "teeee"`
-Dans les deux fichiers :
-- `src/lib/lari-phonetic-engine.ts` (ligne 158) — supprimer `"te": "teeee"`
-- `supabase/functions/elevenlabs-tts-lari/index.ts` (ligne 75) — supprimer `"te": "teeee"`
+### 1. Découper le PDF (pages 51-100)
+- Copier `user-uploads://12138-3.pdf` vers `/tmp/jacquot.pdf`
+- Script Python avec `pypdf` pour extraire les pages 51 à 100 dans `/tmp/jacquot_p51_100.pdf`
 
-### 2. Écrire la forme longue directement dans la phrase du corpus
-Dans `src/data/lessons.ts` (ligne 29786), mettre la voyelle longue dans le champ `lari:` uniquement pour cette phrase :
+### 2. Parser le PDF découpé
+- Utiliser `document--parse_document` sur `/tmp/jacquot_p51_100.pdf`
 
-```
-lari: "Ho ka zakale, teeee"
-mandombe: "Ho Ka Zakale, Te"
-```
+### 3. Sauvegarder le contenu extrait
+- Écrire le texte brut dans `/mnt/documents/jacquot_pages_51_100.md` pour référence
 
-Ainsi le TTS reçoit "teeee" uniquement pour cette phrase. Le Mandombe reste avec la graphie courte.
+### 4. Créer 2-3 leçons dans `src/data/lessons.ts`
+En respectant les consignes :
+- Titres dérivés strictement du corpus (pas d'invention)
+- Graphie sans voyelles doubles dans `mandombe:`
+- Voyelles doubles conservées dans `lari:` et `ipa:`
+- Overrides TTS si nécessaire
+- Explications simplifiées pour débutants
+- Crédit "Jacquot & Lumwamu" partout
+- Exercices : `multiple-choice`, `fill-in-blank`, `matching`, `mandombe-recognition`
 
-### 3. Corriger la traduction
-```
-french: "Il est resté là, jusqu'àààà (indéfiniment)"
-english: "He stayed there, on and on and on"
-```
+Sujets probables (à confirmer après extraction) :
+- **Prosodie et tons** (suite phonologie)
+- **Structure syllabique**
+- **Classes nominales** (début morphologie)
 
 ## Fichiers modifiés
-- `src/data/lessons.ts` — 1 ligne (phrase + traduction)
-- `src/lib/lari-phonetic-engine.ts` — retirer 1 ligne
-- `supabase/functions/elevenlabs-tts-lari/index.ts` — retirer 1 ligne
+- `src/data/lessons.ts` — ajout de 2-3 leçons
+- `src/lib/lari-phonetic-engine.ts` — overrides TTS si nécessaire
+- `supabase/functions/elevenlabs-tts-lari/index.ts` — overrides TTS si nécessaire
+
+## Artefact produit
+- `/mnt/documents/jacquot_pages_51_100.md` — texte brut extrait pour référence
 
