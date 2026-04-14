@@ -1,40 +1,40 @@
 
 
-# Extraire les pages 51-100 du corpus Jacquot (thèse Laadi)
+# Extraire les pages 101-150 du corpus Jacquot & créer des leçons
 
-## Contenu couvert par les 50 premières pages
-Pages 1-50 du PDF = pages de thèse 1 à 46. Couvre : avant-propos, introduction, et toute la **Première Partie — Phonologie** (Chapitre I : Les unités distinctives), jusqu'au tableau du système consonantique (section 1.44.3).
+## Contenu attendu (pages 101-150)
+Les 100 premières pages couvrent phonologie complète + début grammaire (inventaire des monèmes, morphologie §4.1-4.5). Les pages 101-150 devraient couvrir :
+- Suite de la morphologie (classes nominales détaillées, conjugaison)
+- Début de la syntaxe (syntagmes nominaux/verbaux)
 
-Les pages 51-100 contiendront vraisemblablement :
-- Fin de la phonologie (prosodie, tons, structure syllabique)
-- Début de la **Deuxième Partie — Morphologie** (classes nominales)
+## Étapes
 
-## Etapes
-
-### 1. Découper le PDF (pages 51-100)
-- Copier `user-uploads://12138-3.pdf` vers `/tmp/jacquot.pdf`
-- Script Python avec `pypdf` pour extraire les pages 51 à 100 dans `/tmp/jacquot_p51_100.pdf`
+### 1. Découper le PDF (pages 101-150)
+- Copier `user-uploads://12138-3.pdf` → `/tmp/jacquot.pdf`
+- Script Python avec `pypdf` pour extraire pages 101-150 → `/tmp/jacquot_p101_150.pdf`
 
 ### 2. Parser le PDF découpé
-- Utiliser `document--parse_document` sur `/tmp/jacquot_p51_100.pdf`
+- Utiliser `document--parse_document` sur `/tmp/jacquot_p101_150.pdf`
 
 ### 3. Sauvegarder le contenu extrait
-- Écrire le texte brut dans `/mnt/documents/jacquot_pages_51_100.md` pour référence
+- Écrire le texte brut dans `/mnt/documents/jacquot_pages_101_150.md`
 
 ### 4. Créer 2-3 leçons dans `src/data/lessons.ts`
-En respectant les consignes :
-- Titres dérivés strictement du corpus (pas d'invention)
+Consignes strictes :
+- Titres dérivés du corpus (pas d'invention)
 - Graphie sans voyelles doubles dans `mandombe:`
 - Voyelles doubles conservées dans `lari:` et `ipa:`
-- Overrides TTS si nécessaire
-- Explications simplifiées pour débutants
 - Crédit "Jacquot & Lumwamu" partout
+- Explications simplifiées pour débutants
 - Exercices : `multiple-choice`, `fill-in-blank`, `matching`, `mandombe-recognition`
 
 Sujets probables (à confirmer après extraction) :
-- **Prosodie et tons** (suite phonologie)
-- **Structure syllabique**
-- **Classes nominales** (début morphologie)
+- **Classes nominales** (préfixes singulier/pluriel, accords)
+- **Conjugaison verbale** (aspect, mode, temps)
+- **Syntagmes** (nominal ou verbal)
+
+### 5. TTS overrides si nécessaire
+Ajouter dans `src/lib/lari-phonetic-engine.ts` et `supabase/functions/elevenlabs-tts-lari/index.ts`
 
 ## Fichiers modifiés
 - `src/data/lessons.ts` — ajout de 2-3 leçons
@@ -42,5 +42,5 @@ Sujets probables (à confirmer après extraction) :
 - `supabase/functions/elevenlabs-tts-lari/index.ts` — overrides TTS si nécessaire
 
 ## Artefact produit
-- `/mnt/documents/jacquot_pages_51_100.md` — texte brut extrait pour référence
+- `/mnt/documents/jacquot_pages_101_150.md` — texte brut extrait
 
