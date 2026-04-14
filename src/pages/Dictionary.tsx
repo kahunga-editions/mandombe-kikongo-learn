@@ -24,7 +24,7 @@ interface DictionaryEntry {
   note?: string;
 }
 
-const buildDictionary = (): DictionaryEntry[] => {
+const buildStaticDictionary = (): DictionaryEntry[] => {
   const seen = new Set<string>();
   const entries: DictionaryEntry[] = [];
 
@@ -75,11 +75,10 @@ const buildDictionary = (): DictionaryEntry[] => {
     }
   }
 
-  return entries.sort((a, b) => a.lari.localeCompare(b.lari));
+  return entries;
 };
 
-const dictionary = buildDictionary();
-const alphabet = Array.from(new Set(dictionary.map((e) => e.lari[0].toUpperCase()))).sort();
+const staticEntries = buildStaticDictionary();
 
 // Cache key for localStorage
 const PT_CACHE_KEY = "dict_pt_translations";
