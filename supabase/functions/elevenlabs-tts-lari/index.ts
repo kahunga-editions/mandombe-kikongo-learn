@@ -14,6 +14,7 @@ const DEFAULT_VOICE_ID = Deno.env.get("LARI_VOICE_ID") || "rfRMgjypJCXUzWdJfLMs"
 // ============================================================
 
 const PHONETIC_OVERRIDES: Record<string, string> = {
+  "mosi": "moshi",
   "ntinu": "ntînou",
   "djoka": "djôka",
   "zeba": "zéba",
