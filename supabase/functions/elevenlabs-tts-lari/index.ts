@@ -146,7 +146,15 @@ Deno.serve(async (req) => {
 
     const selectedVoice = voiceId || DEFAULT_VOICE_ID;
     const processedText = preprocessForElevenLabs(text);
-    console.log(`TTS Lari: "${text}" → processed: "${processedText}" | voice: ${selectedVoice}`);
+    // Strip non-speech characters and check for empty result
+    const cleanedText = processedText.replace(/[\[\]?{}()<>]/g, '').trim();
+    if (!cleanedText) {
+      return new Response(
+        JSON.stringify({ error: "Text contains no speakable content" }),
+        { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+    console.log(`TTS Lari: "${text}" → processed: "${cleanedText}" | voice: ${selectedVoice}`);
 
     const response = await fetch(
       `https://api.elevenlabs.io/v1/text-to-speech/${selectedVoice}?output_format=mp3_44100_128`,
@@ -157,7 +165,7 @@ Deno.serve(async (req) => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          text: processedText,
+          text: cleanedText,
           model_id: "eleven_v3",
           language_code: "fr",
           voice_settings: {
@@ -186,7 +194,7 @@ Deno.serve(async (req) => {
               "Content-Type": "application/json",
             },
             body: JSON.stringify({
-              text: processedText,
+              text: cleanedText,
               model_id: "eleven_multilingual_v2",
               voice_settings: {
                 stability: 0.72,
