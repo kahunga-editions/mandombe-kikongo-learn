@@ -8879,9 +8879,9 @@ export const lessons: Lesson[] = [
         optionsFr: ["Lendi", "Ndendi", "Ba lendi", "Tu lendi"],
         optionsPt: ["Lendi", "Ndendi", "Ba lendi", "Tu lendi"],
         correctIndex: 1,
-        explanation: "Ndendi is the first person singular (mono) conjugation of lenda (to be able to).",
-        explanationFr: "Ndendi est la conjugaison de la première personne du singulier (mono) de lenda (pouvoir).",
-        explanationPt: "Ndendi é a conjugação da primeira pessoa do singular (mono) de lenda (poder).",
+        explanation: "Ndendi is the first person singular (me) conjugation of lenda (to be able to).",
+        explanationFr: "Ndendi est la conjugaison de la première personne du singulier (me) de lenda (pouvoir).",
+        explanationPt: "Ndendi é a conjugação da primeira pessoa do singular (me) de lenda (poder).",
       },
       {
         type: "matching",
