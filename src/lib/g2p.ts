@@ -18,10 +18,12 @@ const MULTI_GRAPHS: string[] = [
 
 // Phoneme → IPA mapping
 const IPA_MAP: Record<string, string> = {
+  // Special clusters (must be before nk/ng)
+  nkia: "ntʃa", nki: "ntʃi",
   // Prenasalized
   mb: "ᵐb", mp: "ᵐp", mf: "ɱf", mv: "ɱv", mw: "ᵐw",
   nd: "ⁿd", nt: "ⁿt",
-  ng: "ᵑg", nk: "ᵑk", nz: "ⁿz", ns: "ⁿs",
+  ng: "ᵑɡ", nk: "ᵑk", nz: "ⁿz", ns: "ⁿs",
   ny: "ɲ", nl: "ⁿl", nj: "ⁿdʒ",
   ndj: "ⁿdʒ", tch: "tʃ",
   mbv: "ᵐbv", mpf: "ᵐpf",

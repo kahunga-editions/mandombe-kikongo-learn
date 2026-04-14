@@ -121,6 +121,7 @@ const ELEVENLABS_RULES: PhoneticRule[] = [
 // OVERRIDES PHONÉTIQUES MOT PAR MOT (côté client)
 // ============================================================
 const PHONETIC_OVERRIDES: Record<string, string> = {
+  "mosi": "moshi",
   "nkenke": "ntshntshe",
   "ngiena": "ndjena",
   "ngiele": "ndjele",
