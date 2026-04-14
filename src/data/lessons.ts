@@ -28380,7 +28380,7 @@ export const lessons: Lesson[] = [
         title: "Tonal System",
         titleFr: "Système tonal",
         titlePt: "Sistema tonal",
-        explanation: "Laadi has two "music notes" for words: high and low. The same letters can mean different things if you say them high or low — like singing!",
+        explanation: "Laadi has two 'music notes' for words: high and low. The same letters can mean different things if you say them high or low — like singing!",
         explanationFr: "Le lari a deux « notes de musique » pour les mots : aigu et grave. Les mêmes lettres peuvent vouloir dire des choses différentes si on les dit en montant ou en descendant — comme en chantant !",
         explanationPt: "O laadi possui dois registros tonais: alto (H) e baixo (B). O tom é distintivo: a mesma sequência de fonemas pode significar coisas diferentes dependendo dos tons.",
         groups: [
@@ -28588,7 +28588,7 @@ export const lessons: Lesson[] = [
     titlePt: "Estrutura da frase",
     titleLari: "Mpila ya ndinga",
     titleMandombe: "Mpila Ya Ndinga",
-    description: "Learn how to build sentences in Laadi: who does what, how to say "not", and different ways to express ideas!",
+    description: "Learn how to build sentences in Laadi: who does what, how to say 'not', and different ways to express ideas!",
     descriptionFr: "Apprenez à construire des phrases en lari : qui fait quoi, comment dire « ne...pas », et différentes façons de s'exprimer !",
     descriptionPt: "Aprenda a construir frases em laadi: quem faz o quê, como dizer "não", e diferentes maneiras de se expressar!",
     level: "beginner",
@@ -28633,7 +28633,7 @@ export const lessons: Lesson[] = [
         title: "Negation: ka...ko",
         titleFr: "Négation : ka...ko",
         titlePt: "Negação: ka...ko",
-        explanation: "To say "not" in Laadi, you put ka before the verb and ko after it. The verb is like a sandwich between ka and ko!",
+        explanation: "To say 'not' in Laadi, you put ka before the verb and ko after it. The verb is like a sandwich between ka and ko!",
         explanationFr: "Pour dire « ne...pas » en lari, on met ka devant le verbe et ko après. Le verbe est pris en sandwich entre ka et ko !",
         explanationPt: "A negação em laadi é formada com o morfema descontínuo ka...ko envolvendo o verbo (Jacquot & Lumwamu §4.45).",
         groups: [
@@ -28679,7 +28679,7 @@ export const lessons: Lesson[] = [
         options: ["prefix na-", "suffix -ko", "discontinuous ka...ko", "prefix si-"],
         optionsFr: ["préfixe na-", "suffixe -ko", "discontinu ka...ko", "préfixe si-"],
         correctIndex: 2,
-        explanation: "To say "not", put ka before the verb and ko after: ka...ko (Jacquot & Lumwamu §4.45).",
+        explanation: "To say 'not', put ka before the verb and ko after: ka...ko (Jacquot & Lumwamu §4.45).",
         explanationFr: "Pour dire « ne...pas », on met ka devant le verbe et ko après : ka...ko (Jacquot & Lumwamu §4.45).",
       },
       {
