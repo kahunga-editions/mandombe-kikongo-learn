@@ -1,49 +1,40 @@
 
 
-# Intégration de la grammaire Jacquot dans les leçons — avec audio Lari
+# Corrections linguistiques : Brazza → Mfua + mono → NA/NI (marqueurs de personne)
 
-## Constat
-Le composant `LessonDetail.tsx` intègre **déjà** `MandombeSpeaker` à chaque occurrence de texte Lari :
-- **Vocabulaire** (ligne 167) : bouton audio à côté de chaque mot
-- **Syntaxe** (ligne 232) : bouton audio pour chaque exemple
-- **Conjugaisons** (ligne 284) : bouton audio par ligne du tableau
-- **Phrases clés** (ligne 313) : bouton audio pour chaque phrase Bambuka
+## Correction fondamentale sur `mono`
 
-Donc : **aucune modification de composant n'est nécessaire**. Dès qu'une leçon contient un champ `lari`, le son est automatiquement disponible via la voix clonée ElevenLabs (edge function `elevenlabs-tts-lari`).
+L'utilisateur corrige une erreur linguistique importante : en Kikongo Lari parlé moderne, on n'utilise **pas** `me`/`meno` systématiquement à la place de `mono`. Le pronom indépendant de 1re personne est rarement employé. À la place, on utilise des **marqueurs préverbaux** :
+- **NA** → passé (1re sg) : "Mazuji ku Mfua **NA** yele"
+- **NI** → futur (1re sg) : "Mbaji ku zandu **NI** kwenda"
 
-## Plan révisé
+Cela signifie qu'il ne faut PAS faire un remplacement aveugle `mono → me`. Chaque occurrence de `mono` dans une phrase doit être analysée selon le contexte temporel.
 
-### Étape 1 — Extraction du corpus (script Python temporaire)
-- Découper le PDF de 277 pages en 6 parties de ~50 pages
-- Parser chaque partie, consolider dans un fichier texte de travail
-- Cataloguer tous les exemples attestés : phonèmes, classes nominales, paradigmes verbaux, syntaxe
+## Changements prévus
 
-### Étape 2 — Création des leçons dans `src/data/lessons.ts`
-Ajouter 8-10 nouvelles leçons (3 niveaux), chacune avec :
-- `vocabulary` : chaque entrée a un champ `lari` → **audio automatique** via MandombeSpeaker
-- `syntax` : exemples avec `lari` → **audio automatique**
-- `conjugations` : tableaux avec `lari` par ligne → **audio automatique**
-- `phrases` : phrases complètes avec `lari` → **audio automatique**
-- `exercises` : QCM, appariement, trous, reconnaissance Mandombe
-- Champ `mandombe` rempli pour chaque entrée (Title Case)
+### 1. `src/data/lessons.ts` — Brazza/Brazzaville → Mfua (~64 occurrences)
+- Remplacer toutes les occurrences de `Brazza`, `Brazzaville` par `Mfua` dans les champs `lari`, `mandombe`, `french`, `english`, `portuguese`, et les textes d'exercices
 
-**Niveaux :**
-- Débutant : phonologie, classes nominales 1/2, 3/4, 9/10, phrases S+O+V
-- Intermédiaire : système verbal, extensions, toutes les classes, négation
-- Avancé : syntaxe complexe, idéophones, morphophonologie
+### 2. `src/data/lessons.ts` — mono → NA ou NI selon le contexte (~125 occurrences)
+Analyse contextuelle pour chaque phrase :
+- **Contexte passé** (mazuji, mazono, verbes au passé) : `mono` → `NA`
+  - Ex : "Mazuji ku Mfua **NA** yele" (j'étais)
+- **Contexte futur** (mbaji, intention) : `mono` → `NI`
+  - Ex : "Mbaji ku zandu **NI** kwenda" (j'irai)
+- **Contexte présent/progressif** : `mono` → `NI` (marqueur présent 1sg)
+- **Entrées de vocabulaire** (pronoms isolés) : garder `Me / Meno` comme forme emphatique/indépendante, mais ajouter une note pédagogique expliquant que NA/NI sont les formes courantes à l'oral
+- **Distracteurs d'exercices** : remplacer `"Mono"` par `"Meno"` (forme emphatique)
 
-### Étape 3 — Vérification audio
-- Chaque mot/phrase Lari des leçons sera prononçable via le moteur phonétique existant (`lari-phonetic-engine.ts` → `preprocessForElevenLabs`)
-- Les mots nécessitant des overrides phonétiques spécifiques seront ajoutés au dictionnaire `PHONETIC_OVERRIDES` dans `lari-phonetic-engine.ts`
+### 3. `src/data/lessons.ts` — Leçon pronoms (ligne ~25336)
+- Modifier l'entrée `"Me / Mono"` → `"Me / Meno"` 
+- Ajouter une explication pédagogique dans la section syntax : "En Lari moderne parlé, on utilise rarement le pronom indépendant. Les marqueurs NA (passé) et NI (futur/présent) remplacent le pronom sujet à la 1re personne du singulier."
 
-## Fichiers modifiés
-- `src/data/lessons.ts` — ajout des nouvelles leçons
-- `src/lib/lari-phonetic-engine.ts` — ajout éventuel d'overrides phonétiques pour les nouveaux mots du corpus
-- Scripts temporaires Python pour l'extraction (non versionnés)
+### 4. Exercices — Mise à jour des questions et réponses
+- Toutes les phrases citées dans les questions/réponses (`"Mazuji ku Brazza mono yele"`) → `"Mazuji ku Mfua NA yele"`
+- Explication des exercices mise à jour pour refléter NA/NI
 
-## Ce qui ne change PAS
-- `LessonDetail.tsx` — gère déjà l'audio pour chaque occurrence Lari
-- `MandombeSpeaker.tsx` — fonctionne tel quel
-- Edge functions TTS — aucune modification
-- Aucune migration de base de données
+## Scope
+- 1 fichier modifié : `src/data/lessons.ts`
+- Pas de migration, pas de nouveau composant
+- Travail principalement de recherche-remplacement contextuel
 
