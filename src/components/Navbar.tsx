@@ -20,7 +20,7 @@ const languages: { code: Language; label: string }[] = [
 const Navbar = () => {
   const [langOpen, setLangOpen] = useState(false);
   const { language, setLanguage, t } = useLanguage();
-  const { user, isPremium, isAdmin, signOut } = useAuth();
+  const { user, isPremium, isAdmin, subscriptionEnd, signOut } = useAuth();
   const navigate = useNavigate();
 
   const handlePremiumClick = async () => {
@@ -102,17 +102,19 @@ const Navbar = () => {
                   <a href="/admin/corrections" className="text-xs text-gold/70 hover:text-gold transition-colors font-medium">Corrections</a>
                 </>
               )}
-              <button
-                onClick={handlePremiumClick}
-                className={`flex items-center gap-1.5 px-4 py-2 rounded-md text-sm font-semibold transition-colors ${
-                  isPremium
-                    ? "bg-gold/20 text-gold hover:bg-gold/30"
-                    : "bg-primary hover:bg-primary/90 text-primary-foreground"
-                }`}
-              >
-                <Crown className="w-4 h-4" />
-                {isPremium ? t("nav.managePlan") : t("nav.goPremium")}
-              </button>
+              {!(isAdmin && !isPremium) && !(isAdmin && isPremium && !subscriptionEnd) ? (
+                <button
+                  onClick={handlePremiumClick}
+                  className={`flex items-center gap-1.5 px-4 py-2 rounded-md text-sm font-semibold transition-colors ${
+                    isPremium
+                      ? "bg-gold/20 text-gold hover:bg-gold/30"
+                      : "bg-primary hover:bg-primary/90 text-primary-foreground"
+                  }`}
+                >
+                  <Crown className="w-4 h-4" />
+                  {isPremium ? t("nav.managePlan") : t("nav.goPremium")}
+                </button>
+              ) : null}
               <button
                 onClick={signOut}
                 className="text-cream/60 hover:text-cream transition-colors p-2"
