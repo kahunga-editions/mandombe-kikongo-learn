@@ -28486,7 +28486,7 @@ export const lessons: Lesson[] = [
         title: "The 19-Genre System",
         titleFr: "Le système à 19 genres",
         titlePt: "O sistema de 19 gêneros",
-        explanation: "In Laadi, every noun belongs to a "family" (called a class). There are 19 families! Each one has a special beginning (prefix) that tells you which family the word belongs to. Families come in pairs: one for "one thing" and one for "many things".",
+        explanation: "In Laadi, every noun belongs to a 'family' (called a class). There are 19 families! Each one has a special beginning (prefix) that tells you which family the word belongs to. Families come in pairs: one for 'one thing' and one for 'many things'.",
         explanationFr: "En lari, chaque nom fait partie d'une « famille » (une classe). Il y en a 19 ! Chaque famille a un début spécial (un préfixe) qui dit à quelle famille le mot appartient. Les familles vont par deux : une pour « un seul » et une pour « plusieurs ».",
         explanationPt: "Os nomes laadi são organizados em 19 gêneros (classes nominais) com marcadores descontínuos. Cada gênero tem um prefixo central e marcadores de concordância periféricos.",
         groups: [
@@ -28590,7 +28590,7 @@ export const lessons: Lesson[] = [
     titleMandombe: "Mpila Ya Ndinga",
     description: "Learn how to build sentences in Laadi: who does what, how to say 'not', and different ways to express ideas!",
     descriptionFr: "Apprenez à construire des phrases en lari : qui fait quoi, comment dire « ne...pas », et différentes façons de s'exprimer !",
-    descriptionPt: "Aprenda a construir frases em laadi: quem faz o quê, como dizer "não", e diferentes maneiras de se expressar!",
+    descriptionPt: "Aprenda a construir frases em laadi: quem faz o quê, como dizer 'não', e diferentes maneiras de se expressar!",
     level: "beginner",
     icon: "✏️",
     vocabulary: [
@@ -28611,7 +28611,7 @@ export const lessons: Lesson[] = [
         title: "Subject Markers",
         titleFr: "Marques personnelles sujet",
         titlePt: "Marcadores pessoais de sujeito",
-        explanation: "In Laadi, you stick a little piece at the beginning of the verb to say WHO is doing the action. For "I", you add m-. For "we", you add tu-.",
+        explanation: "In Laadi, you stick a little piece at the beginning of the verb to say WHO is doing the action. For 'I', you add m-. For 'we', you add tu-.",
         explanationFr: "En lari, on colle un petit morceau au début du verbe pour dire QUI fait l'action. Pour « je », on ajoute m-. Pour « nous », on ajoute tu-.",
         explanationPt: "Em laadi, o sujeito é marcado por um prefixo no verbo. 1ª pessoa: m- (sg), tu- (pl). O marcador de sujeito concorda com a classe nominal.",
         groups: [
