@@ -1,54 +1,38 @@
 
 
-# Idéophones : retirer les voyelles doubles + ajuster TTS
+# Remplacer "Yandi kuvanda ti" par "Ho ka zakale, te"
 
-## Changements dans `src/data/lessons.ts`
+## Changement dans `src/data/lessons.ts` (ligne 29786)
 
-### Graphie (champs `lari` et `mandombe`)
-Retirer les voyelles doubles partout dans la leçon idéophones :
+Remplacer :
+```typescript
+{ lari: "Yandi kuvanda ti", mandombe: "Yandi Kuvanda Ti", french: "Il s'est assis — immobile", english: "He sat down — completely still" }
+```
 
-| Avant | Après (lari) | Après (mandombe) |
-|-------|-------------|-------------------|
-| piii | pi | Pi |
-| fyuu | fyu | Fyu |
-| nyee | nye | Nye |
-| tii | ti | Ti |
-| waa | wa | Wa |
-| tsiii | nsi | Nsi |
+Par :
+```typescript
+{ lari: "Ho ka zakale, te", mandombe: "Ho Ka Zakale, Te", french: "Il s'est assis — immobile", english: "He sat down — completely still" }
+```
 
-Note : `tsiii` → `nsi` en graphie, mais prononcé /tsii/ (voir TTS ci-dessous).
+- Graphie Mandombe : `Te` (voyelle simple, pas de doublement)
+- Traduction inchangée
 
-Ces remplacements s'appliquent dans :
-- `vocabulary` (6 entrées, lignes 29741-29748)
-- `syntax` explanations et examples (lignes 29762-29789)
-- `exercises` : questions, options, pairs, distractors, blanks (lignes 29794-29843)
+## Override TTS pour "te" → voyelle longue
 
-### TTS (prononciations longues)
-
-Ajouter des overrides dans **deux fichiers** pour que le moteur TTS prononce les voyelles longues :
+Ajouter dans **deux fichiers** l'override pour que le TTS prononce /teee/ (voyelle longue) :
 
 **`src/lib/lari-phonetic-engine.ts`** — `PHONETIC_OVERRIDES` :
 ```
-"pi": "pii",
-"fyu": "fyuu",
-"nye": "nyee",
-"ti": "tii",
-"wa": "waa",
-"nsi": "tsii"   // graphie nsi, prononciation /tsii/
+"te": "teeee"
 ```
 
 **`supabase/functions/elevenlabs-tts-lari/index.ts`** — `PHONETIC_OVERRIDES` :
 ```
-"pi": "pii",
-"fyu": "fyuu",
-"nye": "nyee",
-"ti": "tii",
-"wa": "waa",
-"nsi": "tsii"
+"te": "teeee"
 ```
 
 ## Fichiers modifiés
-- `src/data/lessons.ts` — ~40 occurrences à mettre à jour
-- `src/lib/lari-phonetic-engine.ts` — 6 overrides ajoutés
-- `supabase/functions/elevenlabs-tts-lari/index.ts` — 6 overrides ajoutés
+- `src/data/lessons.ts` — 1 ligne
+- `src/lib/lari-phonetic-engine.ts` — 1 override ajouté
+- `supabase/functions/elevenlabs-tts-lari/index.ts` — 1 override ajouté
 
