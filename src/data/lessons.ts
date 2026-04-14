@@ -30328,8 +30328,8 @@ export const lessons: Lesson[] = [
         title: "The Negative Sandwich: kà...ko",
         titleFr: "Le sandwich négatif : kà...ko",
         titleMandombe: "Ka...Ko",
-        hint: "In Lari, negation wraps around the verb like bread around a filling. 'kà' goes before the verb and 'ko' goes after. Think of it like a sandwich: kà = top bread, verb = filling, ko = bottom bread.",
-        hintFr: "En lari, la négation enveloppe le verbe comme du pain autour d'une garniture. « kà » se place avant le verbe et « ko » après. Pensez à un sandwich : kà = pain du haut, verbe = garniture, ko = pain du bas.",
+        explanation: "In Lari, negation wraps around the verb like bread around a filling. 'kà' goes before the verb and 'ko' goes after. Think of it like a sandwich: kà = top bread, verb = filling, ko = bottom bread.",
+        explanationFr: "En lari, la négation enveloppe le verbe comme du pain autour d'une garniture. « kà » se place avant le verbe et « ko » après. Pensez à un sandwich : kà = pain du haut, verbe = garniture, ko = pain du bas.",
         explanationPt: "Em lari, a negação envolve o verbo como pão ao redor de um recheio. 'kà' vem antes do verbo e 'ko' depois.",
         groups: [
           {
@@ -30347,8 +30347,8 @@ export const lessons: Lesson[] = [
         title: "Negative Imperative (without ko)",
         titleFr: "Impératif négatif (sans ko)",
         titleMandombe: "Ka...Andi",
-        hint: "For negative commands with á·ndi (imperative marker), the 'ko' part disappears — only 'kà' remains before the verb.",
-        hintFr: "Pour les ordres négatifs avec á·ndi (marqueur impératif), la partie « ko » disparaît — seul « kà » reste avant le verbe.",
+        explanation: "For negative commands with á·ndi (imperative marker), the 'ko' part disappears — only 'kà' remains before the verb.",
+        explanationFr: "Pour les ordres négatifs avec á·ndi (marqueur impératif), la partie « ko » disparaît — seul « kà » reste avant le verbe.",
         explanationPt: "Para comandos negativos com á·ndi (marcador imperativo), a parte 'ko' desaparece — apenas 'kà' permanece.",
         groups: [
           {
@@ -30371,8 +30371,8 @@ export const lessons: Lesson[] = [
         options: ["kábá ko", "kà kábá ko", "ko kábá kà", "kà kábá"],
         optionsFr: ["kábá ko", "kà kábá ko", "ko kábá kà", "kà kábá"],
         correctIndex: 1,
-        hint: "The negation 'kà...ko' wraps around the verb: kà kábá ko (Jacquot §4.45).",
-        hintFr: "La négation « kà...ko » encadre le verbe : kà kábá ko (Jacquot §4.45).",
+        explanation: "The negation 'kà...ko' wraps around the verb: kà kábá ko (Jacquot §4.45).",
+        explanationFr: "La négation « kà...ko » encadre le verbe : kà kábá ko (Jacquot §4.45).",
       },
       {
         type: "fill-in-blank" as const,
@@ -30399,8 +30399,8 @@ export const lessons: Lesson[] = [
           "ko est toujours optionnel",
         ],
         correctIndex: 2,
-        hint: "With the imperative marker á·ndi and no direct object, only 'kà' is used (Jacquot §4.45).",
-        hintFr: "Avec le marqueur impératif á·ndi et sans complément d'objet, seul « kà » est employé (Jacquot §4.45).",
+        explanation: "With the imperative marker á·ndi and no direct object, only 'kà' is used (Jacquot §4.45).",
+        explanationFr: "Avec le marqueur impératif á·ndi et sans complément d'objet, seul « kà » est employé (Jacquot §4.45).",
       },
       {
         type: "matching" as const,
@@ -30456,8 +30456,8 @@ export const lessons: Lesson[] = [
         title: "kù — Direction and Destination",
         titleFr: "kù — Direction et destination",
         titleMandombe: "Ku",
-        hint: "Use 'kù' when talking about going TO a place or being AT a distinct location. It's like the English 'to' or 'at'.",
-        hintFr: "Utilisez « kù » pour parler d'aller VERS un lieu ou d'être À un endroit distinct. C'est comme le « à » ou « vers » français.",
+        explanation: "Use 'kù' when talking about going TO a place or being AT a distinct location. It's like the English 'to' or 'at'.",
+        explanationFr: "Utilisez « kù » pour parler d'aller VERS un lieu ou d'être À un endroit distinct. C'est comme le « à » ou « vers » français.",
         explanationPt: "Use 'kù' para falar de ir A um lugar ou estar EM um local distinto.",
         groups: [
           {
@@ -30474,8 +30474,8 @@ export const lessons: Lesson[] = [
         title: "gà — Surface and Contact",
         titleFr: "gà — Surface et contact",
         titleMandombe: "Ga",
-        hint: "Use 'gà' when something is ON a surface or AT a precise point. Think of it as touching or being on top.",
-        hintFr: "Utilisez « gà » quand quelque chose est SUR une surface ou À un point précis. Pensez au contact physique.",
+        explanation: "Use 'gà' when something is ON a surface or AT a precise point. Think of it as touching or being on top.",
+        explanationFr: "Utilisez « gà » quand quelque chose est SUR une surface ou À un point précis. Pensez au contact physique.",
         explanationPt: "Use 'gà' quando algo está SOBRE uma superfície ou EM um ponto preciso.",
         groups: [
           {
@@ -30492,8 +30492,8 @@ export const lessons: Lesson[] = [
         title: "mù — Inside and Instrument",
         titleFr: "mù — Intérieur et instrument",
         titleMandombe: "Mu",
-        hint: "'mù' has two uses: (1) 'inside' for location, and (2) 'with' for instruments/means. Context tells you which one!",
-        hintFr: "« mù » a deux usages : (1) « dans » pour le lieu, et (2) « avec » pour l'instrument/moyen. Le contexte vous guide !",
+        explanation: "'mù' has two uses: (1) 'inside' for location, and (2) 'with' for instruments/means. Context tells you which one!",
+        explanationFr: "« mù » a deux usages : (1) « dans » pour le lieu, et (2) « avec » pour l'instrument/moyen. Le contexte vous guide !",
         explanationPt: "'mù' tem dois usos: (1) 'dentro' para localização, e (2) 'com' para instrumentos/meios.",
         groups: [
           {
@@ -30522,8 +30522,8 @@ export const lessons: Lesson[] = [
         options: ["kù", "gà", "mù", "nà"],
         optionsFr: ["kù", "gà", "mù", "nà"],
         correctIndex: 1,
-        hint: "'gà' means 'on' or 'at a punctual place' — it implies surface contact (Jacquot §4.36).",
-        hintFr: "« gà » signifie « sur » ou « à un lieu ponctuel » — il implique un contact de surface (Jacquot §4.36).",
+        explanation: "'gà' means 'on' or 'at a punctual place' — it implies surface contact (Jacquot §4.36).",
+        explanationFr: "« gà » signifie « sur » ou « à un lieu ponctuel » — il implique un contact de surface (Jacquot §4.36).",
       },
       {
         type: "fill-in-blank" as const,
@@ -30551,8 +30551,8 @@ export const lessons: Lesson[] = [
         options: ["in", "on", "with (instrument)", "to"],
         optionsFr: ["dans", "sur", "avec (instrument)", "vers"],
         correctIndex: 2,
-        hint: "Here 'mù' means 'with' (instrument/means) — 'with a knife one scrapes' (Jacquot §4.38).",
-        hintFr: "Ici « mù » signifie « avec » (instrument/moyen) — « avec un couteau on gratte » (Jacquot §4.38).",
+        explanation: "Here 'mù' means 'with' (instrument/means) — 'with a knife one scrapes' (Jacquot §4.38).",
+        explanationFr: "Ici « mù » signifie « avec » (instrument/moyen) — « avec un couteau on gratte » (Jacquot §4.38).",
       },
       {
         type: "mandombe-recognition" as const,
@@ -30598,8 +30598,8 @@ export const lessons: Lesson[] = [
         title: "Full Forms vs. Short Forms",
         titleFr: "Formes pleines et formes courtes",
         titleMandombe: "Bifwani Bya Nkufi Na Bya Ntalu",
-        hint: "Family words have two forms: the FULL form (tàtà, màmà, giàgià) used alone, and a SHORT form (tá, má, giá) used before someone's name — like saying 'Mr. Smith' instead of 'Mister'.",
-        hintFr: "Les mots de parenté ont deux formes : la forme PLEINE (tàtà, màmà, giàgià) utilisée seule, et une forme COURTE (tá, má, giá) utilisée devant un nom — comme dire « M. Dupont » au lieu de « Monsieur ».",
+        explanation: "Family words have two forms: the FULL form (tàtà, màmà, giàgià) used alone, and a SHORT form (tá, má, giá) used before someone's name — like saying 'Mr. Smith' instead of 'Mister'.",
+        explanationFr: "Les mots de parenté ont deux formes : la forme PLEINE (tàtà, màmà, giàgià) utilisée seule, et une forme COURTE (tá, má, giá) utilisée devant un nom — comme dire « M. Dupont » au lieu de « Monsieur ».",
         explanationPt: "Palavras de parentesco têm duas formas: a forma COMPLETA (tàtà, màmà, giàgià) usada sozinha, e uma forma CURTA (tá, má, giá) usada antes de um nome.",
         groups: [
           {
@@ -30620,8 +30620,8 @@ export const lessons: Lesson[] = [
         title: "Plurals of Family Terms",
         titleFr: "Pluriels des termes de parenté",
         titleMandombe: "Bya Ntalu",
-        hint: "To make family terms plural, add 'ba-' (for people, genre 2) or 'ma-' (for elders, genre 6).",
-        hintFr: "Pour mettre les termes de parenté au pluriel, ajoutez « ba- » (pour les personnes, genre 2) ou « ma- » (pour les aînés, genre 6).",
+        explanation: "To make family terms plural, add 'ba-' (for people, genre 2) or 'ma-' (for elders, genre 6).",
+        explanationFr: "Pour mettre les termes de parenté au pluriel, ajoutez « ba- » (pour les personnes, genre 2) ou « ma- » (pour les aînés, genre 6).",
         explanationPt: "Para pluralizar termos de parentesco, adicione 'ba-' (para pessoas, gênero 2) ou 'ma-' (para mais velhos, gênero 6).",
         groups: [
           {
@@ -30644,8 +30644,8 @@ export const lessons: Lesson[] = [
         options: ["taata Malonga", "tá Malonga", "ta Malonga", "bataata Malonga"],
         optionsFr: ["taata Malonga", "tá Malonga", "ta Malonga", "bataata Malonga"],
         correctIndex: 1,
-        hint: "Before a name, the short form 'tá' is used instead of the full 'taata' (Jacquot §4.5.2.2).",
-        hintFr: "Devant un nom, la forme courte « tá » est utilisée au lieu de « taata » (Jacquot §4.5.2.2).",
+        explanation: "Before a name, the short form 'tá' is used instead of the full 'taata' (Jacquot §4.5.2.2).",
+        explanationFr: "Devant un nom, la forme courte « tá » est utilisée au lieu de « taata » (Jacquot §4.5.2.2).",
       },
       {
         type: "fill-in-blank" as const,
@@ -30673,8 +30673,8 @@ export const lessons: Lesson[] = [
         options: ["bagiagia", "magiagia", "bigiagia", "zigiagia"],
         optionsFr: ["bagiagia", "magiagia", "bigiagia", "zigiagia"],
         correctIndex: 1,
-        hint: "'giagia' takes the plural prefix 'ma-' (genre 6): magiagia (Jacquot §4.5.2.2).",
-        hintFr: "« giagia » prend le préfixe pluriel « ma- » (genre 6) : magiagia (Jacquot §4.5.2.2).",
+        explanation: "'giagia' takes the plural prefix 'ma-' (genre 6): magiagia (Jacquot §4.5.2.2).",
+        explanationFr: "« giagia » prend le préfixe pluriel « ma- » (genre 6) : magiagia (Jacquot §4.5.2.2).",
       },
       {
         type: "mandombe-recognition" as const,
