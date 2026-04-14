@@ -29738,14 +29738,12 @@ export const lessons: Lesson[] = [
     level: "advanced",
     icon: "💥",
     vocabulary: [
-      { lari: "piii", mandombe: "Piii", french: "silence total, vide complet", english: "total silence, complete emptiness", note: "Idéophone de silence (§5.7)" },
-      
-      { lari: "fyuu", mandombe: "Fyuwu", french: "passage rapide, envol", english: "swift passage, flying off", note: "Idéophone de vitesse (§5.7)" },
-      
-      { lari: "nyee", mandombe: "Nyee", french: "douleur aiguë, cri perçant", english: "sharp pain, piercing cry", note: "Idéophone de douleur (§5.7)" },
-      { lari: "tii", mandombe: "Tii", french: "immobilité absolue", english: "absolute stillness", note: "Idéophone de fixité (§5.7)" },
-      { lari: "waa", mandombe: "Waa", french: "étonnement, bouche bée", english: "amazement, mouth agape", note: "Idéophone de surprise (§5.7)" },
-      { lari: "tsiii", mandombe: "Tsiii", french: "bruit aigu continu", english: "continuous high-pitched sound", note: "Idéophone de son continu (§5.7)" },
+      { lari: "pi", mandombe: "Pi", french: "silence total, vide complet", english: "total silence, complete emptiness", note: "Idéophone de silence (§5.7)" },
+      { lari: "fyu", mandombe: "Fyu", french: "passage rapide, envol", english: "swift passage, flying off", note: "Idéophone de vitesse (§5.7)" },
+      { lari: "nye", mandombe: "Nye", french: "douleur aiguë, cri perçant", english: "sharp pain, piercing cry", note: "Idéophone de douleur (§5.7)" },
+      { lari: "ti", mandombe: "Ti", french: "immobilité absolue", english: "absolute stillness", note: "Idéophone de fixité (§5.7)" },
+      { lari: "wa", mandombe: "Wa", french: "étonnement, bouche bée", english: "amazement, mouth agape", note: "Idéophone de surprise (§5.7)" },
+      { lari: "nsi", mandombe: "Nsi", french: "bruit aigu continu", english: "continuous high-pitched sound", note: "Idéophone de son continu (§5.7)" },
     ],
     syntax: [
       {
@@ -29759,14 +29757,14 @@ export const lessons: Lesson[] = [
           {
             title: "Categories of ideophones",
             titleFr: "Catégories d'idéophones",
-            explanation: "Ideophones can express speed (fyuu), silence (piii), pain (nyee), surprise (waa), stillness (tii), and more.",
-            explanationFr: "Les idéophones peuvent exprimer la vitesse (fyuu), le silence (piii), la douleur (nyee), la surprise (waa), la fixité (tii), etc.",
-            explanationPt: "Ideofones podem expressar velocidade (fyuu), silêncio (piii), dor (nyee), surpresa (waa), fixidez (tii), etc.",
+            explanation: "Ideophones can express speed (fyu), silence (pi), pain (nye), surprise (wa), stillness (ti), and more.",
+            explanationFr: "Les idéophones peuvent exprimer la vitesse (fyu), le silence (pi), la douleur (nye), la surprise (wa), la fixité (ti), etc.",
+            explanationPt: "Ideofones podem expressar velocidade (fyu), silêncio (pi), dor (nye), surpresa (wa), fixidez (ti), etc.",
             examples: [
               
-              { lari: "Ndeke katuka fyuu!", mandombe: "Ndeke Katuka Fyuwu!", french: "L'oiseau est parti — FIOU !", english: "The bird flew off — WHOOSH!" },
-              { lari: "Bantu bayika piii", mandombe: "Bantu Bayika Piii", french: "Les gens se sont tus — silence total", english: "The people went quiet — total silence" },
-              { lari: "Yandi tala waa!", mandombe: "Yandi Tala Waa!", french: "Il a regardé — bouche bée !", english: "He looked — mouth agape!" },
+              { lari: "Ndeke katuka fyu!", mandombe: "Ndeke Katuka Fyu!", french: "L'oiseau est parti — FIOU !", english: "The bird flew off — WHOOSH!" },
+              { lari: "Bantu bayika pi", mandombe: "Bantu Bayika Pi", french: "Les gens se sont tus — silence total", english: "The people went quiet — total silence" },
+              { lari: "Yandi tala wa!", mandombe: "Yandi Tala Wa!", french: "Il a regardé — bouche bée !", english: "He looked — mouth agape!" },
             ],
           },
         ],
@@ -29775,17 +29773,17 @@ export const lessons: Lesson[] = [
         title: "Ideophones in Sentences",
         titleFr: "Les idéophones dans la phrase",
         titlePt: "Ideofones na frase",
-        explanation: "Ideophones usually come at the end of a sentence, after the verb. They add vivid imagery that a normal adverb can't capture. Some can be lengthened (piiiiii) for extra emphasis (Jacquot & Lumwamu §5.7).",
-        explanationFr: "Les idéophones se placent généralement à la fin de la phrase, après le verbe. Ils ajoutent une image vivante qu'un adverbe normal ne peut pas rendre. Certains peuvent être allongés (piiiiii) pour plus d'emphase (Jacquot & Lumwamu §5.7).",
-        explanationPt: "Ideofones geralmente vêm no final da frase, depois do verbo. Adicionam imagens vívidas que um advérbio normal não consegue capturar. Alguns podem ser alongados (piiiiii) para mais ênfase (Jacquot & Lumwamu §5.7).",
+        explanation: "Ideophones usually come at the end of a sentence, after the verb. They add vivid imagery that a normal adverb can't capture. Some can be lengthened for extra emphasis (Jacquot & Lumwamu §5.7).",
+        explanationFr: "Les idéophones se placent généralement à la fin de la phrase, après le verbe. Ils ajoutent une image vivante qu'un adverbe normal ne peut pas rendre. Certains peuvent être allongés pour plus d'emphase (Jacquot & Lumwamu §5.7).",
+        explanationPt: "Ideofones geralmente vêm no final da frase, depois do verbo. Adicionam imagens vívidas que um advérbio normal não consegue capturar. Alguns podem ser alongados para mais ênfase (Jacquot & Lumwamu §5.7).",
         groups: [
           {
             title: "Position and emphasis",
             titleFr: "Position et emphase",
             examples: [
               
-              { lari: "Muana kuzila nyee!", mandombe: "Muwana Kuzila Nyee!", french: "L'enfant a crié — AIIII !", english: "The child screamed — OUCH!" },
-              { lari: "Yandi kuvanda tii", mandombe: "Yandi Kuvanda Tii", french: "Il s'est assis — immobile", english: "He sat down — completely still" },
+              { lari: "Muana kuzila nye!", mandombe: "Muwana Kuzila Nye!", french: "L'enfant a crié — AIIII !", english: "The child screamed — OUCH!" },
+              { lari: "Yandi kuvanda ti", mandombe: "Yandi Kuvanda Ti", french: "Il s'est assis — immobile", english: "He sat down — completely still" },
             ],
           },
         ],
@@ -29794,31 +29792,31 @@ export const lessons: Lesson[] = [
     exercises: [
       {
         type: "multiple-choice" as const,
-        question: "What does the ideophone 'piii' express?",
-        questionFr: "Qu'exprime l'idéophone « piii » ?",
+        question: "What does the ideophone 'pi' express?",
+        questionFr: "Qu'exprime l'idéophone « pi » ?",
         options: ["a loud noise", "total silence", "fast movement", "sharp pain"],
         optionsFr: ["un bruit fort", "un silence total", "un mouvement rapide", "une douleur aiguë"],
         correctIndex: 1,
-        explanation: "'piii' expresses total silence or emptiness (Jacquot & Lumwamu §5.7).",
-        explanationFr: "« piii » exprime le silence total ou le vide (Jacquot & Lumwamu §5.7).",
+        explanation: "'pi' expresses total silence or emptiness (Jacquot & Lumwamu §5.7).",
+        explanationFr: "« pi » exprime le silence total ou le vide (Jacquot & Lumwamu §5.7).",
       },
       {
         type: "matching" as const,
         instruction: "Match each ideophone with what it expresses",
         instructionFr: "Associez chaque idéophone à ce qu'il exprime",
         pairs: [
-          { left: "tsiii", leftMandombe: "Tsiii", right: "high-pitched sound", rightFr: "bruit aigu" },
-          { left: "fyuu", leftMandombe: "Fyuwu", right: "swift passage", rightFr: "passage rapide" },
-          { left: "piii", leftMandombe: "Piii", right: "total silence", rightFr: "silence total" },
-          { left: "nyee", leftMandombe: "Nyee", right: "sharp pain", rightFr: "douleur aiguë" },
-          { left: "waa", leftMandombe: "Waa", right: "amazement", rightFr: "étonnement" },
+          { left: "nsi", leftMandombe: "Nsi", right: "high-pitched sound", rightFr: "bruit aigu" },
+          { left: "fyu", leftMandombe: "Fyu", right: "swift passage", rightFr: "passage rapide" },
+          { left: "pi", leftMandombe: "Pi", right: "total silence", rightFr: "silence total" },
+          { left: "nye", leftMandombe: "Nye", right: "sharp pain", rightFr: "douleur aiguë" },
+          { left: "wa", leftMandombe: "Wa", right: "amazement", rightFr: "étonnement" },
         ],
       },
       {
         type: "fill-in-blank" as const,
         sentence: "Ndeke katuka ___! (l'oiseau est parti — FIOU !)",
         sentenceFr: "Ndeke katuka ___! (l'oiseau est parti — FIOU !)",
-        blank: "fyuu",
+        blank: "fyu",
         hint: "The ideophone for swift movement",
         hintFr: "L'idéophone du mouvement rapide",
       },
@@ -29837,8 +29835,8 @@ export const lessons: Lesson[] = [
         title: "Recognize ideophones in Mandombe",
         titleFr: "Reconnaître les idéophones en Mandombe",
         items: [
-          { mandombe: "Waa", lari: "waa", distractors: ["piii", "fyuu", "tii"], french: "Étonnement", english: "Amazement", mode: "glyph-to-latin" as const },
-          { mandombe: "Piii", lari: "piii", distractors: ["tii", "nyee", "waa"], french: "Silence total", english: "Total silence", mode: "glyph-to-latin" as const },
+          { mandombe: "Wa", lari: "wa", distractors: ["pi", "fyu", "ti"], french: "Étonnement", english: "Amazement", mode: "glyph-to-latin" as const },
+          { mandombe: "Pi", lari: "pi", distractors: ["ti", "nye", "wa"], french: "Silence total", english: "Total silence", mode: "glyph-to-latin" as const },
         ],
       },
     ],
