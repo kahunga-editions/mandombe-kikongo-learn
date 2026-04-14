@@ -25352,9 +25352,9 @@ export const lessons: Lesson[] = [
         titleFr: "Les pronoms personnels",
         titlePt: "Os pronomes pessoais",
         titleMandombe: "Me, Nge, Yandi, Beto, Beno, Bawu",
-        explanation: "Personal pronouns are often omitted in Lari because the context usually makes it clear who is being talked about.",
-        explanationFr: "Les pronoms personnels sont très souvent omis en Lari, car le contexte permet généralement de déterminer de quoi le locuteur parle.",
-        explanationPt: "Os pronomes pessoais são frequentemente omitidos em Lari, pois o contexto geralmente permite determinar de quem se fala.",
+        explanation: "Personal pronouns are often omitted in spoken Lari. For the 1st person singular, the pre-verbal markers NA (past) and NI (future/present) replace the independent pronoun. Me/Meno is only used for emphasis.",
+        explanationFr: "Les pronoms personnels sont très souvent omis en Lari parlé. Pour la 1re personne du singulier, les marqueurs préverbaux NA (passé) et NI (futur/présent) remplacent le pronom indépendant. Me/Meno n'est utilisé que pour l'emphase.",
+        explanationPt: "Os pronomes pessoais são frequentemente omitidos no Lari falado. Para a 1ª pessoa do singular, os marcadores pré-verbais NA (passado) e NI (futuro/presente) substituem o pronome independente. Me/Meno só é usado para ênfase.",
         groups: [
           {
             title: "Pronoun list",
