@@ -24,7 +24,7 @@ interface DictionaryEntry {
   note?: string;
 }
 
-const buildDictionary = (): DictionaryEntry[] => {
+const buildStaticDictionary = (): DictionaryEntry[] => {
   const seen = new Set<string>();
   const entries: DictionaryEntry[] = [];
 
@@ -75,11 +75,10 @@ const buildDictionary = (): DictionaryEntry[] => {
     }
   }
 
-  return entries.sort((a, b) => a.lari.localeCompare(b.lari));
+  return entries;
 };
 
-const dictionary = buildDictionary();
-const alphabet = Array.from(new Set(dictionary.map((e) => e.lari[0].toUpperCase()))).sort();
+const staticEntries = buildStaticDictionary();
 
 // Cache key for localStorage
 const PT_CACHE_KEY = "dict_pt_translations";
@@ -106,6 +105,89 @@ const Dictionary = () => {
   const [activeLetter, setActiveLetter] = useState<string | null>(null);
   const [ptTranslations, setPtTranslations] = useState<Record<string, string>>(loadCachedTranslations);
   const [isTranslating, setIsTranslating] = useState(false);
+  const [dynamicEntries, setDynamicEntries] = useState<DictionaryEntry[]>([]);
+
+  // Fetch corrections from DB and map to DictionaryEntry
+  useEffect(() => {
+    const fetchCorrections = async () => {
+      const { data, error } = await supabase
+        .from("translation_corrections")
+        .select("*");
+
+      if (error) {
+        console.error("Failed to load corrections:", error);
+        return;
+      }
+      if (!data) return;
+
+      const staticKeys = new Set(staticEntries.map((e) => e.lari.toLowerCase().trim()));
+      const entries: DictionaryEntry[] = [];
+
+      for (const c of data) {
+        let lari: string;
+        let french: string;
+        let english: string;
+
+        if (c.target_lang === "lari") {
+          lari = c.corrected_translation;
+          // source_text is the original text in source_lang
+          if (c.source_lang === "fr") {
+            french = c.source_text;
+            english = "";
+          } else if (c.source_lang === "en") {
+            french = "";
+            english = c.source_text;
+          } else {
+            french = c.source_text;
+            english = "";
+          }
+        } else if (c.source_lang === "lari") {
+          lari = c.source_text;
+          if (c.target_lang === "fr") {
+            french = c.corrected_translation;
+            english = "";
+          } else if (c.target_lang === "en") {
+            french = "";
+            english = c.corrected_translation;
+          } else {
+            french = c.corrected_translation;
+            english = "";
+          }
+        } else {
+          continue; // no lari involved
+        }
+
+        const key = lari.toLowerCase().trim();
+        if (!key || staticKeys.has(key)) continue;
+        staticKeys.add(key); // avoid duplicates within corrections
+
+        entries.push({
+          lari,
+          mandombe: c.corrected_mandombe || "",
+          french,
+          english,
+          portuguese: "",
+          category: "Translator",
+          categoryFr: "Traducteur",
+          categoryPt: "Tradutor",
+          note: c.notes || undefined,
+        });
+      }
+
+      setDynamicEntries(entries);
+    };
+
+    fetchCorrections();
+  }, []);
+
+  // Merged dictionary
+  const dictionary = useMemo(() => {
+    return [...staticEntries, ...dynamicEntries].sort((a, b) => a.lari.localeCompare(b.lari));
+  }, [dynamicEntries]);
+
+  const alphabet = useMemo(() => {
+    return Array.from(new Set(dictionary.map((e) => e.lari[0]?.toUpperCase()).filter(Boolean))).sort();
+  }, [dictionary]);
 
   // Auto-translate missing PT entries when language switches to PT
   const translateMissing = useCallback(async () => {
