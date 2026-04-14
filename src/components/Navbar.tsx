@@ -20,7 +20,7 @@ const languages: { code: Language; label: string }[] = [
 const Navbar = () => {
   const [langOpen, setLangOpen] = useState(false);
   const { language, setLanguage, t } = useLanguage();
-  const { user, isPremium, isAdmin, signOut } = useAuth();
+  const { user, isPremium, isAdmin, subscriptionEnd, signOut } = useAuth();
   const navigate = useNavigate();
 
   const handlePremiumClick = async () => {
