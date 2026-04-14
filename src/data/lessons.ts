@@ -30298,4 +30298,394 @@ export const lessons: Lesson[] = [
       },
     ],
   },
+
+  // ============================================================
+  // LEÇON : LA NÉGATION « KÀ...KO » (Jacquot §4.45)
+  // Source : Jacquot & Lumwamu, pages 122-123
+  // ============================================================
+  {
+    id: "negation-ka-ko",
+    title: "La négation « kà...ko » — Le sandwich négatif",
+    titleLari: "Mpika ya « kà...ko »",
+    titleMandombe: "Mpika Ya Ka...Ko",
+    description: "Learn how to say 'no' in Lari using the discontinuous negation kà...ko that wraps around the verb like a sandwich.",
+    descriptionFr: "Apprenez à dire « non » en lari grâce à la négation discontinue kà...ko qui enveloppe le verbe comme un sandwich.",
+    level: "beginner" as const,
+    icon: "🚫",
+    credit: "Jacquot & Lumwamu",
+
+    vocabulary: [
+      { lari: "kà...ko", mandombe: "Ka...Ko", french: "ne...pas (négation discontinue)", english: "not (discontinuous negation)", ipa: "kà...kò", note: "Les deux parties encadrent le verbe (Jacquot §4.45)" },
+      { lari: "kà kábá ko", mandombe: "Ka Kaba Ko", french: "il ne partage pas", english: "he does not share", ipa: "kà kábá kò", note: "Le verbe kábá est pris en sandwich (§4.45)" },
+      { lari: "kà tùkábá ko", mandombe: "Ka Tukaba Ko", french: "nous ne partageons pas", english: "we do not share", ipa: "kà tùkábá kò" },
+      { lari: "kà lùbúlá ándi", mandombe: "Ka Lubula Andi", french: "ne cassez pas !", english: "do not break!", ipa: "kà lùbúlá á·ndì", note: "Impératif négatif sans ko (§4.45)" },
+      { lari: "ká nkàbìlí ko", mandombe: "Ka Nkabili Ko", french: "je ne partageais pas (éloigné)", english: "I was not sharing (remote)", ipa: "ká nkàbìlí kò", note: "ká avec ton haut devant verbe sans more préradicale (§4.45)" },
+      { lari: "ká nkàbílì kó", mandombe: "Ka Nkabili Ko", french: "je ne partageais pas (défini)", english: "I was not sharing (definite)", ipa: "ká nkàbílì kó", note: "kó avec ton haut final opposé au registre du verbe (§4.45)" },
+    ],
+
+    syntax: [
+      {
+        title: "The Negative Sandwich: kà...ko",
+        titleFr: "Le sandwich négatif : kà...ko",
+        titleMandombe: "Ka...Ko",
+        explanation: "In Lari, negation wraps around the verb like bread around a filling. 'kà' goes before the verb and 'ko' goes after. Think of it like a sandwich: kà = top bread, verb = filling, ko = bottom bread.",
+        explanationFr: "En lari, la négation enveloppe le verbe comme du pain autour d'une garniture. « kà » se place avant le verbe et « ko » après. Pensez à un sandwich : kà = pain du haut, verbe = garniture, ko = pain du bas.",
+        explanationPt: "Em lari, a negação envolve o verbo como pão ao redor de um recheio. 'kà' vem antes do verbo e 'ko' depois.",
+        groups: [
+          {
+            label: "Negation pattern",
+            labelFr: "Schéma de la négation",
+            examples: [
+              { lari: "tùkábá", mandombe: "Tukaba", french: "nous partageons", english: "we share", portuguese: "nós partilhamos" },
+              { lari: "kà tùkábá ko", mandombe: "Ka Tukaba Ko", french: "nous ne partageons pas", english: "we do not share", portuguese: "nós não partilhamos" },
+              { lari: "kà kábá ko", mandombe: "Ka Kaba Ko", french: "il ne partage pas", english: "he does not share", portuguese: "ele não partilha" },
+            ],
+          },
+        ],
+      },
+      {
+        title: "Negative Imperative (without ko)",
+        titleFr: "Impératif négatif (sans ko)",
+        titleMandombe: "Ka...Andi",
+        explanation: "For negative commands with á·ndi (imperative marker), the 'ko' part disappears — only 'kà' remains before the verb.",
+        explanationFr: "Pour les ordres négatifs avec á·ndi (marqueur impératif), la partie « ko » disparaît — seul « kà » reste avant le verbe.",
+        explanationPt: "Para comandos negativos com á·ndi (marcador imperativo), a parte 'ko' desaparece — apenas 'kà' permanece.",
+        groups: [
+          {
+            label: "Negative commands",
+            labelFr: "Ordres négatifs",
+            examples: [
+              { lari: "kà lùbúlá ándi", mandombe: "Ka Lubula Andi", french: "ne cassez pas !", english: "do not break!", portuguese: "não quebrem!" },
+              { lari: "kà lùbúlá ándi tshínzú ko", mandombe: "Ka Lubula Andi Tshinzu Ko", french: "ne cassez pas le pot !", english: "do not break the pot!", portuguese: "não quebrem o pote!", description: "With a direct object, ko can optionally reappear" },
+            ],
+          },
+        ],
+      },
+    ],
+
+    exercises: [
+      {
+        type: "multiple-choice" as const,
+        question: "How do you say 'he does not share' in Lari?",
+        questionFr: "Comment dit-on « il ne partage pas » en lari ?",
+        options: ["kábá ko", "kà kábá ko", "ko kábá kà", "kà kábá"],
+        optionsFr: ["kábá ko", "kà kábá ko", "ko kábá kà", "kà kábá"],
+        correctIndex: 1,
+        explanation: "The negation 'kà...ko' wraps around the verb: kà kábá ko (Jacquot §4.45).",
+        explanationFr: "La négation « kà...ko » encadre le verbe : kà kábá ko (Jacquot §4.45).",
+      },
+      {
+        type: "fill-in-blank" as const,
+        sentence: "___ tùkábá ___ (we do not share)",
+        sentenceFr: "___ tùkábá ___ (nous ne partageons pas)",
+        blank: "kà...ko",
+        explanation: "The discontinuous negation kà...ko wraps the verb (Jacquot §4.45).",
+        explanationFr: "La négation discontinue kà...ko encadre le verbe (Jacquot §4.45).",
+      },
+      {
+        type: "multiple-choice" as const,
+        question: "In the negative imperative 'kà lùbúlá ándi', why is there no 'ko' at the end?",
+        questionFr: "Dans l'impératif négatif « kà lùbúlá ándi », pourquoi n'y a-t-il pas de « ko » à la fin ?",
+        options: [
+          "It's a mistake",
+          "The imperative marker ándi replaces ko",
+          "ko disappears in negative commands without a direct object",
+          "ko is optional everywhere",
+        ],
+        optionsFr: [
+          "C'est une erreur",
+          "Le marqueur impératif ándi remplace ko",
+          "ko disparaît dans les ordres négatifs sans complément d'objet",
+          "ko est toujours optionnel",
+        ],
+        correctIndex: 2,
+        explanation: "With the imperative marker á·ndi and no direct object, only 'kà' is used (Jacquot §4.45).",
+        explanationFr: "Avec le marqueur impératif á·ndi et sans complément d'objet, seul « kà » est employé (Jacquot §4.45).",
+      },
+      {
+        type: "matching" as const,
+        instruction: "Match each Lari sentence with its French meaning",
+        instructionFr: "Associez chaque phrase lari à son sens en français",
+        pairs: [
+          { left: "kà kábá ko", right: "he does not share", rightFr: "il ne partage pas" },
+          { left: "kà tùkábá ko", right: "we do not share", rightFr: "nous ne partageons pas" },
+          { left: "kà lùbúlá ándi", right: "do not break!", rightFr: "ne cassez pas !" },
+        ],
+      },
+      {
+        type: "mandombe-recognition" as const,
+        title: "Recognize negation patterns in Mandombe",
+        titleFr: "Reconnaître les schémas de négation en Mandombe",
+        items: [
+          { mandombe: "Ka Kaba Ko", lari: "kà kábá ko", distractors: ["kà tùkábá ko", "kà lùbúlá ándi", "tùkábá"], french: "Il ne partage pas", english: "He does not share", mode: "glyph-to-latin" as const },
+          { mandombe: "Ka Tukaba Ko", lari: "kà tùkábá ko", distractors: ["kà kábá ko", "tùkábá", "kà lùbúlá ándi"], french: "Nous ne partageons pas", english: "We do not share", mode: "glyph-to-latin" as const },
+        ],
+      },
+    ],
+  },
+
+  // ============================================================
+  // LEÇON : LES FONCTIONNELS LOCATIFS (Jacquot §4.35-4.38)
+  // Source : Jacquot & Lumwamu, pages 118-120
+  // ============================================================
+  {
+    id: "fonctionnels-locatifs",
+    title: "Les fonctionnels locatifs — kù, gà, mù",
+    titleLari: "Bifunkisyonele bya bisika",
+    titleMandombe: "Bifunkisyonele Bya Bisika",
+    description: "Learn the three key location words in Lari: kù (to/at), gà (on/at), and mù (in/with).",
+    descriptionFr: "Apprenez les trois mots de lieu essentiels en lari : kù (à/vers), gà (sur/à), et mù (dans/avec).",
+    level: "beginner" as const,
+    icon: "📍",
+    credit: "Jacquot & Lumwamu",
+
+    vocabulary: [
+      { lari: "kù", mandombe: "Ku", french: "à, vers (lieu distinct)", english: "to, at (distinct place)", ipa: "kù", note: "Fonctionnel locatif de lieu distinct (Jacquot §4.35)" },
+      { lari: "gà", mandombe: "Ga", french: "sur, à (lieu ponctuel)", english: "on, at (punctual place)", ipa: "gà", note: "Fonctionnel locatif de contact (§4.36)" },
+      { lari: "mù", mandombe: "Mu", french: "dans, pendant", english: "in, during", ipa: "mù", note: "Fonctionnel locatif d'intériorité (§4.37)" },
+      { lari: "nà", mandombe: "Na", french: "avec (accompagnement)", english: "with (accompaniment)", ipa: "nà", note: "Fonctionnel d'accompagnement (§4.40)" },
+      { lari: "gata", mandombe: "Gata", french: "village", english: "village", ipa: "gàtà" },
+      { lari: "toto", mandombe: "Toto", french: "sol, terre", english: "ground, earth", ipa: "tòtò" },
+      { lari: "bulu", mandombe: "Bulu", french: "trou", english: "hole", ipa: "bùlù" },
+      { lari: "mbele", mandombe: "Mbele", french: "couteau", english: "knife", ipa: "mbèlé" },
+      { lari: "mbazi", mandombe: "Mbazi", french: "cour", english: "courtyard", ipa: "mbàzì" },
+    ],
+
+    syntax: [
+      {
+        title: "kù — Direction and Destination",
+        titleFr: "kù — Direction et destination",
+        titleMandombe: "Ku",
+        explanation: "Use 'kù' when talking about going TO a place or being AT a distinct location. It's like the English 'to' or 'at'.",
+        explanationFr: "Utilisez « kù » pour parler d'aller VERS un lieu ou d'être À un endroit distinct. C'est comme le « à » ou « vers » français.",
+        explanationPt: "Use 'kù' para falar de ir A um lugar ou estar EM um local distinto.",
+        groups: [
+          {
+            label: "kù examples",
+            labelFr: "Exemples avec kù",
+            examples: [
+              { lari: "kú gata nàgiéndá", mandombe: "Ku Gata Nagienda", french: "je suis allé au village", english: "I went to the village", portuguese: "eu fui à aldeia" },
+              { lari: "nàgiéndá kù gata", mandombe: "Nagienda Ku Gata", french: "je suis allé au village", english: "I went to the village", portuguese: "eu fui à aldeia", description: "Same meaning, different word order" },
+            ],
+          },
+        ],
+      },
+      {
+        title: "gà — Surface and Contact",
+        titleFr: "gà — Surface et contact",
+        titleMandombe: "Ga",
+        explanation: "Use 'gà' when something is ON a surface or AT a precise point. Think of it as touching or being on top.",
+        explanationFr: "Utilisez « gà » quand quelque chose est SUR une surface ou À un point précis. Pensez au contact physique.",
+        explanationPt: "Use 'gà' quando algo está SOBRE uma superfície ou EM um ponto preciso.",
+        groups: [
+          {
+            label: "gà examples",
+            labelFr: "Exemples avec gà",
+            examples: [
+              { lari: "gà toto nàzákàlàlá", mandombe: "Ga Toto Nazakalala", french: "je me suis assis sur le sol", english: "I sat on the ground", portuguese: "eu sentei no chão" },
+              { lari: "gà mbazi", mandombe: "Ga Mbazi", french: "dans la cour", english: "in the courtyard", portuguese: "no pátio" },
+            ],
+          },
+        ],
+      },
+      {
+        title: "mù — Inside and Instrument",
+        titleFr: "mù — Intérieur et instrument",
+        titleMandombe: "Mu",
+        explanation: "'mù' has two uses: (1) 'inside' for location, and (2) 'with' for instruments/means. Context tells you which one!",
+        explanationFr: "« mù » a deux usages : (1) « dans » pour le lieu, et (2) « avec » pour l'instrument/moyen. Le contexte vous guide !",
+        explanationPt: "'mù' tem dois usos: (1) 'dentro' para localização, e (2) 'com' para instrumentos/meios.",
+        groups: [
+          {
+            label: "mù = inside",
+            labelFr: "mù = dans",
+            examples: [
+              { lari: "mù bulu nàbuá", mandombe: "Mu Bulu Nabua", french: "je suis tombé dans le trou", english: "I fell into the hole", portuguese: "eu caí no buraco" },
+            ],
+          },
+          {
+            label: "mù = with (instrument)",
+            labelFr: "mù = avec (instrument)",
+            examples: [
+              { lari: "mù mbele bàkúlùlìlá", mandombe: "Mu Mbele Bakulilila", french: "avec un couteau on gratte", english: "with a knife one scrapes", portuguese: "com uma faca raspa-se" },
+            ],
+          },
+        ],
+      },
+    ],
+
+    exercises: [
+      {
+        type: "multiple-choice" as const,
+        question: "Which word means 'on' or 'on the surface of' in Lari?",
+        questionFr: "Quel mot signifie « sur » ou « à la surface de » en lari ?",
+        options: ["kù", "gà", "mù", "nà"],
+        optionsFr: ["kù", "gà", "mù", "nà"],
+        correctIndex: 1,
+        explanation: "'gà' means 'on' or 'at a punctual place' — it implies surface contact (Jacquot §4.36).",
+        explanationFr: "« gà » signifie « sur » ou « à un lieu ponctuel » — il implique un contact de surface (Jacquot §4.36).",
+      },
+      {
+        type: "fill-in-blank" as const,
+        sentence: "___ bulu nàbuá (I fell into the hole)",
+        sentenceFr: "___ bulu nàbuá (je suis tombé dans le trou)",
+        blank: "mù",
+        explanation: "'mù' means 'in/inside' when used with locations (Jacquot §4.37).",
+        explanationFr: "« mù » signifie « dans » quand il est utilisé avec des lieux (Jacquot §4.37).",
+      },
+      {
+        type: "matching" as const,
+        instruction: "Match each locative with its meaning",
+        instructionFr: "Associez chaque locatif à sa signification",
+        pairs: [
+          { left: "kù", right: "to, at (direction)", rightFr: "à, vers (direction)" },
+          { left: "gà", right: "on (surface)", rightFr: "sur (surface)" },
+          { left: "mù", right: "in, inside", rightFr: "dans, à l'intérieur" },
+          { left: "nà", right: "with (accompaniment)", rightFr: "avec (accompagnement)" },
+        ],
+      },
+      {
+        type: "multiple-choice" as const,
+        question: "In 'mù mbele bàkúlùlìlá', what does 'mù' mean?",
+        questionFr: "Dans « mù mbele bàkúlùlìlá », que signifie « mù » ?",
+        options: ["in", "on", "with (instrument)", "to"],
+        optionsFr: ["dans", "sur", "avec (instrument)", "vers"],
+        correctIndex: 2,
+        explanation: "Here 'mù' means 'with' (instrument/means) — 'with a knife one scrapes' (Jacquot §4.38).",
+        explanationFr: "Ici « mù » signifie « avec » (instrument/moyen) — « avec un couteau on gratte » (Jacquot §4.38).",
+      },
+      {
+        type: "mandombe-recognition" as const,
+        title: "Recognize locatives in Mandombe",
+        titleFr: "Reconnaître les locatifs en Mandombe",
+        items: [
+          { mandombe: "Ku Gata", lari: "kù gata", distractors: ["gà gata", "mù gata", "nà gata"], french: "Au village", english: "To the village", mode: "glyph-to-latin" as const },
+          { mandombe: "Mu Bulu", lari: "mù bulu", distractors: ["kù bulu", "gà bulu", "nà bulu"], french: "Dans le trou", english: "In the hole", mode: "glyph-to-latin" as const },
+        ],
+      },
+    ],
+  },
+
+  // ============================================================
+  // LEÇON : LES TERMES DE PARENTÉ (Jacquot §4.5.2.2)
+  // Source : Jacquot & Lumwamu, pages 101-102
+  // ============================================================
+  {
+    id: "termes-de-parente",
+    title: "Les termes de parenté — Ta·ta, Ma·ma, Gia·gia",
+    titleLari: "Mankùmbu ma kisadi",
+    titleMandombe: "Mankumbu Ma Kisadi",
+    description: "Learn family terms in Lari: how 'tata' (father), 'mama' (mother), and 'giagia' (elder) change form in compound names.",
+    descriptionFr: "Apprenez les termes de parenté en lari : comment « tata » (père), « mama » (mère) et « giagia » (aîné) changent de forme dans les noms composés.",
+    level: "beginner" as const,
+    icon: "👨‍👩‍👧‍👦",
+    credit: "Jacquot & Lumwamu",
+
+    vocabulary: [
+      { lari: "taata", mandombe: "Tata", french: "père, parent paternel, monsieur", english: "father, paternal parent, sir", ipa: "tà·tà", note: "Forme pleine (Jacquot §4.5.2.2)" },
+      { lari: "bataata", mandombe: "Batata", french: "pères, parents paternels", english: "fathers, paternal parents", ipa: "bàtà·tà", note: "Pluriel avec préfixe ba- (genre 2)" },
+      { lari: "maama", mandombe: "Mama", french: "mère, parent maternel, madame", english: "mother, maternal parent, madam", ipa: "mà·mà", note: "Forme pleine (§4.5.2.2)" },
+      { lari: "giagia", mandombe: "Giagia", french: "aîné, grand-parent", english: "elder, grandparent", ipa: "gìà·gìà", note: "Forme pleine (§4.5.2.2)" },
+      { lari: "magiagia", mandombe: "Magiagia", french: "aînés, grands-parents", english: "elders, grandparents", ipa: "màgìà·gìà", note: "Pluriel avec préfixe ma- (genre 6)" },
+      { lari: "tá Malonga", mandombe: "Ta Malonga", french: "Père Malonga, Monsieur Malonga", english: "Father Malonga, Mr. Malonga", ipa: "tá málòngà", note: "Forme courte dans les appellatifs composés (§4.5.2.2)" },
+      { lari: "má Malonga", mandombe: "Ma Malonga", french: "Mère Malonga, Madame Malonga", english: "Mother Malonga, Mrs. Malonga", ipa: "má málòngà", note: "Forme courte dans les appellatifs composés (§4.5.2.2)" },
+      { lari: "giá Malonga", mandombe: "Gia Malonga", french: "Grand-Parent Malonga", english: "Elder Malonga, Grandparent Malonga", ipa: "gíà málòngà", note: "Forme courte dans les appellatifs composés (§4.5.2.2)" },
+      { lari: "ngulu", mandombe: "Ngulu", french: "mère (forme spéciale)", english: "mother (special form)", ipa: "ngùlù", note: "Avec possessifs : ngù à·nì « ma mère » (§4.5.2.1)" },
+    ],
+
+    syntax: [
+      {
+        title: "Full Forms vs. Short Forms",
+        titleFr: "Formes pleines et formes courtes",
+        titleMandombe: "Bifwani Bya Nkufi Na Bya Ntalu",
+        explanation: "Family words have two forms: the FULL form (tàtà, màmà, giàgià) used alone, and a SHORT form (tá, má, giá) used before someone's name — like saying 'Mr. Smith' instead of 'Mister'.",
+        explanationFr: "Les mots de parenté ont deux formes : la forme PLEINE (tàtà, màmà, giàgià) utilisée seule, et une forme COURTE (tá, má, giá) utilisée devant un nom — comme dire « M. Dupont » au lieu de « Monsieur ».",
+        explanationPt: "Palavras de parentesco têm duas formas: a forma COMPLETA (tàtà, màmà, giàgià) usada sozinha, e uma forma CURTA (tá, má, giá) usada antes de um nome.",
+        groups: [
+          {
+            label: "Full vs. short forms",
+            labelFr: "Formes pleines vs. courtes",
+            examples: [
+              { lari: "taata", mandombe: "Tata", french: "père (seul)", english: "father (standalone)", portuguese: "pai (isolado)" },
+              { lari: "tá Malonga", mandombe: "Ta Malonga", french: "Père Malonga", english: "Father Malonga", portuguese: "Pai Malonga" },
+              { lari: "maama", mandombe: "Mama", french: "mère (seule)", english: "mother (standalone)", portuguese: "mãe (isolada)" },
+              { lari: "má Malonga", mandombe: "Ma Malonga", french: "Mère Malonga", english: "Mother Malonga", portuguese: "Mãe Malonga" },
+              { lari: "giagia", mandombe: "Giagia", french: "aîné (seul)", english: "elder (standalone)", portuguese: "mais velho (isolado)" },
+              { lari: "giá Malonga", mandombe: "Gia Malonga", french: "Grand-Parent Malonga", english: "Elder Malonga", portuguese: "Avô Malonga" },
+            ],
+          },
+        ],
+      },
+      {
+        title: "Plurals of Family Terms",
+        titleFr: "Pluriels des termes de parenté",
+        titleMandombe: "Bya Ntalu",
+        explanation: "To make family terms plural, add 'ba-' (for people, genre 2) or 'ma-' (for elders, genre 6).",
+        explanationFr: "Pour mettre les termes de parenté au pluriel, ajoutez « ba- » (pour les personnes, genre 2) ou « ma- » (pour les aînés, genre 6).",
+        explanationPt: "Para pluralizar termos de parentesco, adicione 'ba-' (para pessoas, gênero 2) ou 'ma-' (para mais velhos, gênero 6).",
+        groups: [
+          {
+            label: "Singular → Plural",
+            labelFr: "Singulier → Pluriel",
+            examples: [
+              { lari: "taata → bataata", mandombe: "Tata → Batata", french: "père → pères", english: "father → fathers", portuguese: "pai → pais" },
+              { lari: "giagia → magiagia", mandombe: "Giagia → Magiagia", french: "aîné → aînés", english: "elder → elders", portuguese: "mais velho → mais velhos" },
+            ],
+          },
+        ],
+      },
+    ],
+
+    exercises: [
+      {
+        type: "multiple-choice" as const,
+        question: "How do you say 'Mr. Malonga' in Lari?",
+        questionFr: "Comment dit-on « Monsieur Malonga » en lari ?",
+        options: ["taata Malonga", "tá Malonga", "ta Malonga", "bataata Malonga"],
+        optionsFr: ["taata Malonga", "tá Malonga", "ta Malonga", "bataata Malonga"],
+        correctIndex: 1,
+        explanation: "Before a name, the short form 'tá' is used instead of the full 'taata' (Jacquot §4.5.2.2).",
+        explanationFr: "Devant un nom, la forme courte « tá » est utilisée au lieu de « taata » (Jacquot §4.5.2.2).",
+      },
+      {
+        type: "fill-in-blank" as const,
+        sentence: "___ Malonga (Mrs./Mother Malonga)",
+        sentenceFr: "___ Malonga (Madame/Mère Malonga)",
+        blank: "má",
+        explanation: "The short form 'má' is used before a name for 'mother/Mrs.' (Jacquot §4.5.2.2).",
+        explanationFr: "La forme courte « má » est utilisée devant un nom pour « mère/Madame » (Jacquot §4.5.2.2).",
+      },
+      {
+        type: "matching" as const,
+        instruction: "Match each Lari term with its meaning",
+        instructionFr: "Associez chaque terme lari à sa signification",
+        pairs: [
+          { left: "taata", leftMandombe: "Tata", right: "father", rightFr: "père" },
+          { left: "maama", leftMandombe: "Mama", right: "mother", rightFr: "mère" },
+          { left: "giagia", leftMandombe: "Giagia", right: "elder / grandparent", rightFr: "aîné / grand-parent" },
+          { left: "bataata", leftMandombe: "Batata", right: "fathers (plural)", rightFr: "pères (pluriel)" },
+        ],
+      },
+      {
+        type: "multiple-choice" as const,
+        question: "What is the plural of 'giagia' (elder)?",
+        questionFr: "Quel est le pluriel de « giagia » (aîné) ?",
+        options: ["bagiagia", "magiagia", "bigiagia", "zigiagia"],
+        optionsFr: ["bagiagia", "magiagia", "bigiagia", "zigiagia"],
+        correctIndex: 1,
+        explanation: "'giagia' takes the plural prefix 'ma-' (genre 6): magiagia (Jacquot §4.5.2.2).",
+        explanationFr: "« giagia » prend le préfixe pluriel « ma- » (genre 6) : magiagia (Jacquot §4.5.2.2).",
+      },
+      {
+        type: "mandombe-recognition" as const,
+        title: "Recognize family terms in Mandombe",
+        titleFr: "Reconnaître les termes de parenté en Mandombe",
+        items: [
+          { mandombe: "Tata", lari: "taata", distractors: ["maama", "giagia", "ngulu"], french: "Père", english: "Father", mode: "glyph-to-latin" as const },
+          { mandombe: "Mama", lari: "maama", distractors: ["taata", "giagia", "bataata"], french: "Mère", english: "Mother", mode: "glyph-to-latin" as const },
+          { mandombe: "Giagia", lari: "giagia", distractors: ["taata", "maama", "magiagia"], french: "Aîné / Grand-parent", english: "Elder / Grandparent", mode: "glyph-to-latin" as const },
+        ],
+      },
+    ],
+  },
 ];
