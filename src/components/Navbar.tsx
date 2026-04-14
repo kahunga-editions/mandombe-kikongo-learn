@@ -97,7 +97,10 @@ const Navbar = () => {
           {user ? (
             <div className="flex items-center gap-2">
               {isAdmin && (
-                <span className="text-xs bg-gold/20 text-gold px-2 py-1 rounded-full font-semibold">Admin</span>
+                <>
+                  <span className="text-xs bg-gold/20 text-gold px-2 py-1 rounded-full font-semibold">Admin</span>
+                  <a href="/admin/corrections" className="text-xs text-gold/70 hover:text-gold transition-colors font-medium">Corrections</a>
+                </>
               )}
               <button
                 onClick={handlePremiumClick}
