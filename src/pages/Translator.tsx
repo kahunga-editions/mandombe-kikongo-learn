@@ -364,12 +364,21 @@ const Translator = () => {
                   )}
 
                   {/* Notes */}
-                  {result.notes && (
+                  {(result.notes || (isEditing && isAdmin)) && (
                     <div className="mt-4 p-3 bg-muted/50 rounded-lg border border-border">
-                      <p className="text-xs text-muted-foreground">
-                        <span className="font-semibold">ℹ </span>
-                        {result.notes}
-                      </p>
+                      {isEditing && isAdmin ? (
+                        <Textarea
+                          value={result.notes || ""}
+                          onChange={(e) => setResult({ ...result, notes: e.target.value })}
+                          className="min-h-[80px] resize-none text-xs bg-transparent border-0 p-0 focus-visible:ring-0 text-muted-foreground"
+                          placeholder="Notes linguistiques..."
+                        />
+                      ) : (
+                        <p className="text-xs text-muted-foreground">
+                          <span className="font-semibold">ℹ </span>
+                          {result.notes}
+                        </p>
+                      )}
                     </div>
                   )}
                 </div>
