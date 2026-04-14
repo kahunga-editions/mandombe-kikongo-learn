@@ -1,29 +1,21 @@
 
 
-# Synchronisation automatique : corrections du traducteur → dictionnaire
+# Rendre les notes éditables par l'admin dans le traducteur
 
 ## Objectif
-Quand un admin corrige ou ajoute une traduction via le traducteur (table `translation_corrections`), ces entrées apparaissent automatiquement dans le dictionnaire "Buku dia Binsono", sans intervention manuelle.
-
-## Approche
-Le dictionnaire est actuellement construit uniquement à partir des données statiques (`src/data/lessons.ts`). On va le compléter en chargeant aussi les entrées de `translation_corrections` au montage du composant, puis les fusionner avec les entrées statiques (dédupliquées par clé Lari).
+Permettre à l'admin d'éditer aussi le champ "notes" (l'analyse linguistique) en mode édition, en plus de la traduction déjà éditable. Les notes corrigées seront sauvegardées avec le reste de la correction.
 
 ## Modifications
 
-### 1. `src/pages/Dictionary.tsx` (~30 lignes)
-- Au montage, requête Supabase : `SELECT * FROM translation_corrections WHERE target_lang = 'lari'`
-- Aussi charger les corrections inverses : `SELECT * FROM translation_corrections WHERE source_lang = 'lari'`
-- Mapper chaque correction vers le format `DictionaryEntry` :
-  - Pour `target_lang = 'lari'` : `lari = corrected_translation`, `mandombe = corrected_mandombe`, traduction = `source_text`
-  - Pour `source_lang = 'lari'` : `lari = source_text`, `mandombe = corrected_mandombe`, traduction = `corrected_translation`
-  - `category` = "Traducteur" (catégorie dédiée pour les distinguer)
-- Fusionner avec `buildDictionary()`, en évitant les doublons (même clé Lari)
-- Mettre à jour l'alphabet et les filtres dynamiquement
+### 1. `src/pages/Translator.tsx` (~10 lignes modifiées)
+- Dans le bloc "Notes" (lignes 367-374), basculer entre un `<p>` en lecture et un `<Textarea>` en mode édition (quand `isEditing && isAdmin`)
+- Le `Textarea` met à jour `result.notes` via `setResult`
+- La fonction `saveCorrection` envoie déjà `result.notes` dans le body — aucun changement nécessaire côté sauvegarde
 
-### 2. RLS
-Aucun changement nécessaire — la policy "Authenticated can read corrections" permet déjà la lecture. Pour les utilisateurs non connectés, on ajoutera une policy `anon` en lecture seule si nécessaire, ou on gérera gracieusement un résultat vide.
+### 2. Aucun autre fichier modifié
+- L'edge function `translate-lari` accepte déjà le champ `notes` dans la correction
+- La table `translation_corrections` a déjà la colonne `notes`
 
 ## Portée
-- 1 fichier modifié : `src/pages/Dictionary.tsx`
-- 0 migration, 0 nouvelle dépendance
+- 1 fichier modifié : `src/pages/Translator.tsx` (~10 lignes)
 
