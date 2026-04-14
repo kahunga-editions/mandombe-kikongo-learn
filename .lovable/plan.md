@@ -1,30 +1,29 @@
 
 
-# Page Admin — Gestion des corrections de traduction
+# Synchronisation automatique : corrections du traducteur → dictionnaire
 
 ## Objectif
-Créer une page `/admin/corrections` accessible uniquement aux admins, listant toutes les corrections sauvegardées avec possibilité de les modifier ou supprimer.
+Quand un admin corrige ou ajoute une traduction via le traducteur (table `translation_corrections`), ces entrées apparaissent automatiquement dans le dictionnaire "Buku dia Binsono", sans intervention manuelle.
+
+## Approche
+Le dictionnaire est actuellement construit uniquement à partir des données statiques (`src/data/lessons.ts`). On va le compléter en chargeant aussi les entrées de `translation_corrections` au montage du composant, puis les fusionner avec les entrées statiques (dédupliquées par clé Lari).
 
 ## Modifications
 
-### 1. Nouvelle page `src/pages/AdminCorrections.tsx`
-- Tableau affichant : source_text, source_lang → target_lang, corrected_translation, corrected_mandombe, notes, date
-- Bouton supprimer par ligne (avec confirmation via AlertDialog)
-- Bouton éditer inline (bascule les cellules en inputs éditables, sauvegarde via upsert)
-- Barre de recherche pour filtrer par texte source
-- Protection : si `!isAdmin`, redirection vers `/`
-- Utilise les composants UI existants (Table, Button, Input, AlertDialog)
+### 1. `src/pages/Dictionary.tsx` (~30 lignes)
+- Au montage, requête Supabase : `SELECT * FROM translation_corrections WHERE target_lang = 'lari'`
+- Aussi charger les corrections inverses : `SELECT * FROM translation_corrections WHERE source_lang = 'lari'`
+- Mapper chaque correction vers le format `DictionaryEntry` :
+  - Pour `target_lang = 'lari'` : `lari = corrected_translation`, `mandombe = corrected_mandombe`, traduction = `source_text`
+  - Pour `source_lang = 'lari'` : `lari = source_text`, `mandombe = corrected_mandombe`, traduction = `corrected_translation`
+  - `category` = "Traducteur" (catégorie dédiée pour les distinguer)
+- Fusionner avec `buildDictionary()`, en évitant les doublons (même clé Lari)
+- Mettre à jour l'alphabet et les filtres dynamiquement
 
-### 2. Route dans `src/App.tsx`
-- Ajouter `<Route path="/admin/corrections" element={<AdminCorrections />} />`
-
-### 3. Lien dans `src/components/Navbar.tsx`
-- Ajouter un lien "Corrections" visible uniquement pour les admins, à côté du badge Admin
-
-### 4. RLS
-- La table `translation_corrections` a déjà les bonnes policies : admins full CRUD, authenticated read-only. Aucune migration nécessaire.
+### 2. RLS
+Aucun changement nécessaire — la policy "Authenticated can read corrections" permet déjà la lecture. Pour les utilisateurs non connectés, on ajoutera une policy `anon` en lecture seule si nécessaire, ou on gérera gracieusement un résultat vide.
 
 ## Portée
-- 1 fichier créé : `src/pages/AdminCorrections.tsx`
-- 2 fichiers modifiés : `src/App.tsx` (1 ligne), `src/components/Navbar.tsx` (~3 lignes)
+- 1 fichier modifié : `src/pages/Dictionary.tsx`
+- 0 migration, 0 nouvelle dépendance
 
