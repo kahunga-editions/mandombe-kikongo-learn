@@ -5,6 +5,7 @@
 
 // Prenasalized consonants — greedy match (longest first)
 const MULTI_GRAPHS: string[] = [
+  "nkia", "nki",
   "mbv", "mpf",
   "ndj", "tch",
   "mb", "mp", "mf", "mv", "mw",
