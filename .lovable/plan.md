@@ -1,26 +1,54 @@
 
 
-# Fix build errors + Remove non-Lari ideophones (gbaa, kpoo)
+# Idéophones : retirer les voyelles doubles + ajuster TTS
 
-## 1. Fix TS1005 build errors — smart quotes
+## Changements dans `src/data/lessons.ts`
 
-All errors are caused by Unicode curly quotes (`'` U+2018, `'` U+2019) inside string literals. TypeScript treats these as identifiers, not string delimiters. Lines affected: 28383, 28489, 28591, 28593, 28614, 28619-28620, 28636, 28682.
+### Graphie (champs `lari` et `mandombe`)
+Retirer les voyelles doubles partout dans la leçon idéophones :
 
-**Fix**: Global find-and-replace of all `'` and `'` with straight `'` across `src/data/lessons.ts`.
+| Avant | Après (lari) | Après (mandombe) |
+|-------|-------------|-------------------|
+| piii | pi | Pi |
+| fyuu | fyu | Fyu |
+| nyee | nye | Nye |
+| tii | ti | Ti |
+| waa | wa | Wa |
+| tsiii | nsi | Nsi |
 
-## 2. Remove gbaa and kpoo from ideophones lesson
+Note : `tsiii` → `nsi` en graphie, mais prononcé /tsii/ (voir TTS ci-dessous).
 
-These are not authentic Kikongo Lari sounds. All references must be removed from:
+Ces remplacements s'appliquent dans :
+- `vocabulary` (6 entrées, lignes 29741-29748)
+- `syntax` explanations et examples (lignes 29762-29789)
+- `exercises` : questions, options, pairs, distractors, blanks (lignes 29794-29843)
 
-- **Vocabulary** (lines 29742, 29744): Remove the two vocab entries for `gbaa` and `kpoo`
-- **Syntax explanations** (lines 29762-29764): Remove `gbaa` from category descriptions, replace with remaining valid ideophones
-- **Example sentences** (line 29766): Remove `"Yandi bwila gbaa!"` 
-- **Example sentences** (line 29786): Remove `"Nti kubuka kpoo!"`
-- **Matching exercise** (line 29810): Remove the `gbaa` pair
-- **Mandombe recognition** (line 29840): Remove the `gbaa` item, update distractors that reference `kpoo`
+### TTS (prononciations longues)
 
-The remaining valid ideophones (piii, fyuu, nyee, tii, waa, tsiii) stay.
+Ajouter des overrides dans **deux fichiers** pour que le moteur TTS prononce les voyelles longues :
 
-## Files modified
-- `src/data/lessons.ts` — smart quote fix (global) + remove gbaa/kpoo (~15 line edits)
+**`src/lib/lari-phonetic-engine.ts`** — `PHONETIC_OVERRIDES` :
+```
+"pi": "pii",
+"fyu": "fyuu",
+"nye": "nyee",
+"ti": "tii",
+"wa": "waa",
+"nsi": "tsii"   // graphie nsi, prononciation /tsii/
+```
+
+**`supabase/functions/elevenlabs-tts-lari/index.ts`** — `PHONETIC_OVERRIDES` :
+```
+"pi": "pii",
+"fyu": "fyuu",
+"nye": "nyee",
+"ti": "tii",
+"wa": "waa",
+"nsi": "tsii"
+```
+
+## Fichiers modifiés
+- `src/data/lessons.ts` — ~40 occurrences à mettre à jour
+- `src/lib/lari-phonetic-engine.ts` — 6 overrides ajoutés
+- `supabase/functions/elevenlabs-tts-lari/index.ts` — 6 overrides ajoutés
 
