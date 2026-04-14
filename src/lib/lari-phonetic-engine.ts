@@ -155,6 +155,7 @@ const PHONETIC_OVERRIDES: Record<string, string> = {
   "ti": "tii",
   "wa": "waa",
   "nsi": "tsii",
+  "te": "teeee",
 };
 
 /**

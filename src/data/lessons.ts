@@ -29783,7 +29783,7 @@ export const lessons: Lesson[] = [
             examples: [
               
               { lari: "Muana kuzila nye!", mandombe: "Muwana Kuzila Nye!", french: "L'enfant a crié — AIIII !", english: "The child screamed — OUCH!" },
-              { lari: "Yandi kuvanda ti", mandombe: "Yandi Kuvanda Ti", french: "Il s'est assis — immobile", english: "He sat down — completely still" },
+              { lari: "Ho ka zakale, te", mandombe: "Ho Ka Zakale, Te", french: "Il s'est assis — immobile", english: "He sat down — completely still" },
             ],
           },
         ],
