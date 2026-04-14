@@ -29739,9 +29739,9 @@ export const lessons: Lesson[] = [
     icon: "💥",
     vocabulary: [
       { lari: "piii", mandombe: "Piii", french: "silence total, vide complet", english: "total silence, complete emptiness", note: "Idéophone de silence (§5.7)" },
-      { lari: "gbaa", mandombe: "Gbaa", french: "coup violent, choc", english: "violent blow, crash", note: "Idéophone d'impact (§5.7)" },
+      
       { lari: "fyuu", mandombe: "Fyuwu", french: "passage rapide, envol", english: "swift passage, flying off", note: "Idéophone de vitesse (§5.7)" },
-      { lari: "kpoo", mandombe: "Kpoo", french: "rupture soudaine", english: "sudden break", note: "Idéophone de cassure (§5.7)" },
+      
       { lari: "nyee", mandombe: "Nyee", french: "douleur aiguë, cri perçant", english: "sharp pain, piercing cry", note: "Idéophone de douleur (§5.7)" },
       { lari: "tii", mandombe: "Tii", french: "immobilité absolue", english: "absolute stillness", note: "Idéophone de fixité (§5.7)" },
       { lari: "waa", mandombe: "Waa", french: "étonnement, bouche bée", english: "amazement, mouth agape", note: "Idéophone de surprise (§5.7)" },
@@ -29759,11 +29759,11 @@ export const lessons: Lesson[] = [
           {
             title: "Categories of ideophones",
             titleFr: "Catégories d'idéophones",
-            explanation: "Ideophones can express impact (gbaa), speed (fyuu), silence (piii), pain (nyee), surprise (waa), and more.",
-            explanationFr: "Les idéophones peuvent exprimer l'impact (gbaa), la vitesse (fyuu), le silence (piii), la douleur (nyee), la surprise (waa), etc.",
-            explanationPt: "Ideofones podem expressar impacto (gbaa), velocidade (fyuu), silêncio (piii), dor (nyee), surpresa (waa), etc.",
+            explanation: "Ideophones can express speed (fyuu), silence (piii), pain (nyee), surprise (waa), stillness (tii), and more.",
+            explanationFr: "Les idéophones peuvent exprimer la vitesse (fyuu), le silence (piii), la douleur (nyee), la surprise (waa), la fixité (tii), etc.",
+            explanationPt: "Ideofones podem expressar velocidade (fyuu), silêncio (piii), dor (nyee), surpresa (waa), fixidez (tii), etc.",
             examples: [
-              { lari: "Yandi bwila gbaa!", mandombe: "Yandi Bwila Gbaa!", french: "Il est tombé — BOUM !", english: "He fell — CRASH!" },
+              
               { lari: "Ndeke katuka fyuu!", mandombe: "Ndeke Katuka Fyuwu!", french: "L'oiseau est parti — FIOU !", english: "The bird flew off — WHOOSH!" },
               { lari: "Bantu bayika piii", mandombe: "Bantu Bayika Piii", french: "Les gens se sont tus — silence total", english: "The people went quiet — total silence" },
               { lari: "Yandi tala waa!", mandombe: "Yandi Tala Waa!", french: "Il a regardé — bouche bée !", english: "He looked — mouth agape!" },
@@ -29783,7 +29783,7 @@ export const lessons: Lesson[] = [
             title: "Position and emphasis",
             titleFr: "Position et emphase",
             examples: [
-              { lari: "Nti kubuka kpoo!", mandombe: "Nti Kubuka Kpoo!", french: "L'arbre s'est cassé — CRAC !", english: "The tree broke — CRACK!" },
+              
               { lari: "Muana kuzila nyee!", mandombe: "Muwana Kuzila Nyee!", french: "L'enfant a crié — AIIII !", english: "The child screamed — OUCH!" },
               { lari: "Yandi kuvanda tii", mandombe: "Yandi Kuvanda Tii", french: "Il s'est assis — immobile", english: "He sat down — completely still" },
             ],
@@ -29807,7 +29807,7 @@ export const lessons: Lesson[] = [
         instruction: "Match each ideophone with what it expresses",
         instructionFr: "Associez chaque idéophone à ce qu'il exprime",
         pairs: [
-          { left: "gbaa", leftMandombe: "Gbaa", right: "violent blow", rightFr: "coup violent" },
+          { left: "tsiii", leftMandombe: "Tsiii", right: "high-pitched sound", rightFr: "bruit aigu" },
           { left: "fyuu", leftMandombe: "Fyuwu", right: "swift passage", rightFr: "passage rapide" },
           { left: "piii", leftMandombe: "Piii", right: "total silence", rightFr: "silence total" },
           { left: "nyee", leftMandombe: "Nyee", right: "sharp pain", rightFr: "douleur aiguë" },
@@ -29837,7 +29837,7 @@ export const lessons: Lesson[] = [
         title: "Recognize ideophones in Mandombe",
         titleFr: "Reconnaître les idéophones en Mandombe",
         items: [
-          { mandombe: "Gbaa", lari: "gbaa", distractors: ["piii", "fyuu", "kpoo"], french: "Coup violent", english: "Violent blow", mode: "glyph-to-latin" as const },
+          { mandombe: "Waa", lari: "waa", distractors: ["piii", "fyuu", "tii"], french: "Étonnement", english: "Amazement", mode: "glyph-to-latin" as const },
           { mandombe: "Piii", lari: "piii", distractors: ["tii", "nyee", "waa"], french: "Silence total", english: "Total silence", mode: "glyph-to-latin" as const },
         ],
       },
