@@ -378,7 +378,7 @@ const MbutaMatondoChat = () => {
               >
                 {msg.role === "assistant" ? (
                   <div className="prose prose-sm prose-invert max-w-none [&_p]:my-1 [&_ul]:my-1 [&_ol]:my-1">
-                    <ReactMarkdown>{msg.content}</ReactMarkdown>
+                    {renderMandombeContent(msg.content)}
                   </div>
                 ) : (
                   <p className="text-sm whitespace-pre-wrap">{msg.content}</p>
