@@ -167,9 +167,15 @@ const MbutaMatondoChat = () => {
       <div className="flex-1 overflow-y-auto space-y-4 p-4">
         {messages.length === 0 && (
           <div className="flex flex-col items-center justify-center h-full text-center gap-4 opacity-70">
-            <div className="w-20 h-20 rounded-full bg-gold/20 flex items-center justify-center">
-              <GraduationCap className="w-10 h-10 text-gold" />
-            </div>
+            <video
+              src="/videos/mbuta-matondo-intro.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              controls
+              className="w-[280px] max-w-full rounded-2xl border-2 border-gold/30 shadow-lg"
+            />
             <p className="text-cream/60 text-lg font-display">{t("mbuta.welcome")}</p>
             <p className="text-cream/40 text-sm max-w-md">{t("mbuta.welcomeHint")}</p>
           </div>
