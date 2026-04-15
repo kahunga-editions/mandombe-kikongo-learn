@@ -16,7 +16,7 @@ Deno.serve(async (req) => {
 
     const formData = await req.formData();
     
-    const voiceId = formData.get("voice_id")?.toString() || "rfRMgjypJCXUzWdJfLMs";
+    const voiceId = formData.get("voice_id")?.toString() || "Gz9w9RNGNUZjVYbvzXY7";
     const name = formData.get("name")?.toString() || "Lari Native Speaker";
 
     // First, get existing voice info to preserve settings
