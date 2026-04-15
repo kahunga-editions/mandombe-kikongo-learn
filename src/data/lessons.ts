@@ -167,6 +167,7 @@ export interface Lesson {
   descriptionPt?: string;
   level: "beginner" | "intermediate" | "advanced";
   icon: string;
+  credit?: string;
   vocabulary?: VocabItem[];
   syntax?: SyntaxBlock[];
   conjugations?: ConjugationTable[];
