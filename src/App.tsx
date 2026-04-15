@@ -14,6 +14,7 @@ import Flashcards from "./pages/Flashcards";
 import MandombeScript from "./pages/MandombeScript";
 import Translator from "./pages/Translator";
 import AdminCorrections from "./pages/AdminCorrections";
+import MbutaMatondo from "./pages/MbutaMatondo";
 
 import NotFound from "./pages/NotFound";
 
@@ -37,6 +38,7 @@ const App = () => (
               <Route path="/mandombe" element={<MandombeScript />} />
               <Route path="/translator" element={<Translator />} />
               <Route path="/admin/corrections" element={<AdminCorrections />} />
+              <Route path="/mbuta-matondo" element={<MbutaMatondo />} />
               
               <Route path="*" element={<NotFound />} />
             </Routes>

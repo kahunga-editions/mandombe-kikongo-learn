@@ -197,6 +197,18 @@ const translations: Record<Language, Record<string, string>> = {
     "translator.hint": "Saisissez un texte et cliquez sur Traduire",
     "translator.disclaimer": "Traduction basée sur le corpus Nzo Mikanda et les travaux de Jacquot & Lumwamu sur le Kikongo Lari. Les mots hors corpus sont signalés par [?].",
 
+    // Mbuta Matondo
+    "nav.mbuta": "Professeur",
+    "mbuta.eyebrow": "Nlongi Mbuta Matondo — Professeur AI",
+    "mbuta.title": "Mbuta Matondo",
+    "mbuta.subtitle": "Votre professeur de Kikongo Lari, patient et bienveillant",
+    "mbuta.welcome": "Mbote ! Je suis Mbuta Matondo 👨‍🏫",
+    "mbuta.welcomeHint": "Posez-moi une question sur le Kikongo Lari — vocabulaire, grammaire, conjugaison, écriture Mandombe…",
+    "mbuta.placeholder": "Écrivez votre message à Mbuta Matondo…",
+    "mbuta.rateLimited": "Trop de messages",
+    "mbuta.creditsExhausted": "Crédits épuisés",
+    "mbuta.error": "Erreur",
+
     // Footer
     "footer.description": "La Maison du Savoir — préserver et enseigner le Kikongo Lari et l'écriture Mandombe pour la diaspora Kongo et le monde.",
     "footer.learnTitle": "Apprendre",
