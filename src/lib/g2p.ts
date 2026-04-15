@@ -1,6 +1,6 @@
 /**
  * G2P (Grapheme-to-Phoneme) engine for Kikongo / Lari
- * Based on André Jacquot's "Études linguistiques laadi" phonological rules
+ * Based on the Nzo Mikanda corpus phonological rules
  */
 
 // Prenasalized consonants — greedy match (longest first)

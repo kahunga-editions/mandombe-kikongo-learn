@@ -1,0 +1,106 @@
+# Project Memory
+
+## Core
+- Strictly use Nzo Mikanda corpus for Kikongo Lari. Never invent words or use Kituba/Lingala.
+- NEVER write double letters in Lari (no aa, ee, ii, oo, uu). Use tata, mama, yaya.
+- Visuals must exclusively feature Black Congolese people. Maintain consistent character designs (Nsayi, Sunda).
+- Mandombe script uses `font-mandombe`, large sizes, high line-height, and MUST NOT contain accents/diacritics.
+- TS files must exclusively use straight apostrophes (no smart quotes). Supabase functions require Deno ESM imports.
+- App supports 9 languages (FR, EN, PT, IT, ES, LN, EL, KO, DE). Use dynamic translation for non-native fields.
+- Admin users automatically bypass PremiumGate restrictions via Supabase `user_roles`.
+- Lesson titles must be derived strictly from provided user content to prevent syntax errors.
+- Never use terms like 'dialecte' or 'bantou'; use 'langue'. Avoid invented ideophones like 'gbaa'/'kpoo'.
+
+## Memories
+- [Platform Vision](mem://project/vision) — Autonomous learning platform for Kikongo Lari and Mandombe
+- [Visual Aesthetic](mem://style/aesthetic) — Minimalist for lessons, vibrant for story panels
+- [Monetization](mem://business/monetization) — $9.99/mo Stripe sub, admin bypass logic
+- [Vocabulary Collection](mem://features/vocabulary) — Thematic modules based on Nzo Mikanda corpus
+- [Typography](mem://style/typography) — Mandombe webfont constraints, styling rules, no accents
+- [Learning System](mem://features/learning-system) — Progressive difficulty curve and exercise selection
+- [Cultural Accuracy](mem://style/cultural-accuracy) — Exclusive representation of Black Congolese people
+- [Character Consistency](mem://style/character-consistency) — Specific design requirements for Nsayi and Sunda
+- [Hero Layout](mem://style/hero-layout) — Mandombe script text sizing and extreme vertical spacing
+- [Cultural Context](mem://features/cultural-context) — Cultural nuances, italicized notes, philosophical meanings
+- [Source Material Constraint](mem://constraints/source-material) — Nzo Mikanda corpus rules, no linguistic jargon
+- [Language Philosophy](mem://language/philosophy) — Deep meanings of Mandombe modifiers and roots
+- [Negation System](mem://grammar/negation) — Nominal (Ka...ko) and Verbal (Ka...a...ko) patterns
+- [Particles](mem://grammar/particles) — 'bu' usage meaning 'like'
+- [Exercise Design Principles](mem://technical/exercise-design-principles) — Rules for question text and answer shuffling
+- [Syntax Module](mem://features/syntax-module) — Word order lessons with Mandombe script
+- [Interactive Exercises](mem://features/interactive-exercises) — Crossword and Word Search design standards
+- [Dictionary System](mem://features/dictionary-system) — Buku dia Binsono bilingual dictionary requirements
+- [Distant Demonstratives](mem://grammar/noun-classes-demonstratives) — Demonstratives with -ne suffix
+- [Verb Lenda](mem://grammar/verb-lenda) — Conjugation and meaning of 'to be able'
+- [Verb Sa](mem://grammar/verb-sa) — Conjugation and meaning of 'to do/last'
+- [Verb Conjugation Past Tense](mem://grammar/verb-conjugation-past-tense) — Suffixes and initial variations
+- [Verbal Prefixes & Structures](mem://grammar/verbal-prefixes-and-structures) — Stative and resultative suffixes (-iri, -idi)
+- [Dictionary Database](mem://features/dictionary-database) — Auto-syncing manual corrections vs static data
+- [Conditional Kani](mem://grammar/conditional-kani) — Kani usage for 'if/if I had'
+- [Locative Agreement](mem://grammar/locative-agreement) — Agreement pairs for ku, ga, mu
+- [Verbs Action](mem://vocabulary/verbs-action) — Lexicon of action verbs
+- [Script Rendering](mem://technical/script-rendering) — Mandombe font rendering logic and overrides
+- [Verb To Be (ba)](mem://grammar/verb-ba) — Copulas and past tense forms
+- [Exhaustive Content Utilization](mem://constraints/exhaustive-content-utilization) — Integrate all provided linguistic material
+- [Lesson Exercise Schema](mem://technical/lesson-exercise-schema) — Strict schema for lessons and interactive exercises
+- [Backend Imports Deno](mem://technical/backend-imports-deno) — Supabase Edge Functions ESM import rules
+- [Mandombe Learning System](mem://features/mandombe-learning-system) — Syllabary and static ghost guide tracing
+- [Place Names](mem://vocabulary/place-names) — Mfua, Mutshila Mamba, and other locations
+- [Lesson Schema Syntax](mem://technical/lesson-schema-syntax) — Schema for syntax groups and trilingual context
+- [Interactive Exercises Recognition](mem://features/interactive-exercises-recognition) — Mandombe recognition modes
+- [Locative Interrogative Agreement](mem://grammar/locative-interrogative-agreement) — 'kue' with noun class particles
+- [Imperative Plural Suffix](mem://grammar/imperative-plural-suffix) — Rules for the '-eno' suffix
+- [Lesson Naming Constraint](mem://constraints/lesson-naming) — Titles must be derived from user content
+- [Mandombe Syllabary Logic](mem://features/mandombe-syllabary-logic) — Full range vowel gradations for consonants
+- [Mandombe Recognition Independence](mem://features/mandombe-recognition-independence) — Hide latin hints until selection
+- [Syntax Age](mem://grammar/syntax-age) — Mvula ze nani structure
+- [Possession & Ownership](mem://grammar/possession-ownership) — Independent pronouns and possessive suffixes
+- [Adjective Agreement](mem://grammar/adjective-agreement) — Adjectives agreeing with noun class
+- [Superlatives](mem://grammar/superlatives) — 'yokele' verb usage
+- [Orthography Mandombe Rules](mem://grammar/orthography-mandombe-rules) — No transition semi-vowels, Title Case
+- [Terminology Constraint](mem://constraints/terminology) — Avoid 'dialecte' or 'bantou'
+- [Interactive Grammatical Tables](mem://features/interactive-grammatical-tables) — Design and color palettes
+- [Ntalu Counting System](mem://grammar/ntalu-counting-system) — Numbers and class agreement
+- [Audio Strategy](mem://technical/audio-strategy) — TTS limits and integrated player focus
+- [Story Format](mem://features/story/format) — 25 trilingual panels with dynamic translation
+- [Story Content](mem://features/story/content) — Nsayi's story authenticity
+- [Noun Classes](mem://grammar/noun-classes) — Class prefixes and grammatical agreement
+- [Verb Extensions](mem://grammar/verb-extensions) — Applicative, causative, passive suffixes
+- [Temporal Structures](mem://grammar/temporal-structures) — Pre-verbal particles NA and NI
+- [Sentence Structure](mem://grammar/sentence-structure) — Canonical order, interrogatives, emphasis
+- [Noun Class Agreement](mem://grammar/noun-class-agreement) — Particles for humans, animals, objects
+- [Demonstrative Structures](mem://grammar/demonstrative-structures) — Discontinuous proximity demonstratives
+- [Quantifiers](mem://grammar/quantifiers) — 'ka(ka)' agreement
+- [Intensifiers](mem://grammar/intensifiers) — 'nguri ya' construction for superlatives
+- [Qualifiers Ngolo](mem://grammar/qualifiers-ngolo) — Describing strength via 'ba ngolo'
+- [Verb Baka](mem://grammar/verb-baka) — Polysemous meaning and idioms
+- [Habitats & Nature](mem://vocabulary/habitats-and-nature) — Environment terminology
+- [Admin Access Logic](mem://auth/admin-access-logic) — Admin role bypassing PremiumGate
+- [Proverbs & Wisdom](mem://culture/proverbs-and-wisdom) — Lari proverbs
+- [Kilolaka Interactive Grid](mem://features/kilolaka-interactive-grid) — Mandombe syllables encyclopedia with audio
+- [Time Vocabulary](mem://vocabulary/time) — Time markers and seasons
+- [Spirituality & Sacred](mem://vocabulary/spirituality-and-sacred) — Cosmology, entities, and concepts
+- [General Culture Concepts](mem://culture/general-concepts) — Mbuta, Malaki, Matanga definitions
+- [Audio Button Placements](mem://audio/emplacements-boutons) — MandombeSpeaker and TranslationSpeaker
+- [Lari Pronunciation & Orthography](mem://langue/orthographe-prononciation) — G hard, u=ou, nasal distinctions
+- [Audio Technical Infrastructure](mem://audio/infrastructure-technique) — ElevenLabs keys and ffmpeg compression
+- [Translator Authenticity Constraints](mem://constraints/traducteur-authenticite) — Strict Lari corpus limits
+- [Translator Mandombe Rendering](mem://technical/traducteur-rendu-mandombe) — Normal orthography for translator output
+- [I18n System](mem://technical/i18n-system) — 9-language static mapping system
+- [Dynamic Translation System](mem://technical/dynamic-translation-system) — Hybrid translation architecture
+- [Lingala Mandombe Rendering](mem://features/lingala-mandombe-rendering) — Phonetic engine v2 for Lingala
+- [Translator Lari](mem://features/traducteur-lari) — Bidirectional 9-language translator
+- [Translation TTS](mem://audio/translation-tts) — ElevenLabs multi-language voices
+- [Comparative Exercise Mode](mem://features/comparative-exercise-mode) — Lari vs Lingala toggle
+- [Conjunctions](mem://grammar/conjunctions) — Use NA for 'et', avoid YE
+- [Lari Phonetic Engine](mem://audio/moteur-phonetique-lari) — G2P rules for clusters and ideophones
+- [Script Rendering Ligatures](mem://technical/script-rendering-ligatures) — ZWJ logic for Mandombe ligatures
+- [Phonetic Liaisons](mem://grammar/phonetic-liaisons) — Mandatory merges in speech (e.g., tatani)
+- [Security Hardening](mem://security/hardening) — RLS policies, trigger to prevent self role escalation
+- [Translator Persistence](mem://features/translator-persistence) — Few-shot prompting from manual corrections
+- [TTS Phonetics G Logic](mem://audio/tts-phonetics-g-logic) — Forcing hard 'g' via overrides
+- [TTS Sanitization](mem://technical/tts/sanitization) — Stripping non-speech characters
+- [Mandombe Orthography Double Letters](mem://grammar/orthography-mandombe-double-letters) — Removal of double letters
+- [Smart Quotes Constraint](mem://constraints/smart-quotes) — Straight apostrophes only in TS files
+- [Kinship Terms](mem://grammar/kinship-terms) — Full vs short forms (tata vs ta), yaya for grandparent
+- [AI Teacher](mem://features/ai-teacher) — Mbuta Matondo Gemini SSE implementation
