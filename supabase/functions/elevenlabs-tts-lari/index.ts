@@ -5,7 +5,7 @@ const corsHeaders = {
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
 };
 
-const DEFAULT_VOICE_ID = Deno.env.get("LARI_VOICE_ID") || "rfRMgjypJCXUzWdJfLMs";
+const DEFAULT_VOICE_ID = Deno.env.get("LARI_VOICE_ID") || "Gz9w9RNGNUZjVYbvzXY7";
 
 // ============================================================
 // OVERRIDES PHONÉTIQUES MOT PAR MOT
