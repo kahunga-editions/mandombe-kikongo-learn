@@ -197,6 +197,18 @@ const translations: Record<Language, Record<string, string>> = {
     "translator.hint": "Saisissez un texte et cliquez sur Traduire",
     "translator.disclaimer": "Traduction basée sur le corpus Nzo Mikanda et les travaux de Jacquot & Lumwamu sur le Kikongo Lari. Les mots hors corpus sont signalés par [?].",
 
+    // Mbuta Matondo
+    "nav.mbuta": "Professeur",
+    "mbuta.eyebrow": "Nlongi Mbuta Matondo — Professeur AI",
+    "mbuta.title": "Mbuta Matondo",
+    "mbuta.subtitle": "Votre professeur de Kikongo Lari, patient et bienveillant",
+    "mbuta.welcome": "Mbote ! Je suis Mbuta Matondo 👨‍🏫",
+    "mbuta.welcomeHint": "Posez-moi une question sur le Kikongo Lari — vocabulaire, grammaire, conjugaison, écriture Mandombe…",
+    "mbuta.placeholder": "Écrivez votre message à Mbuta Matondo…",
+    "mbuta.rateLimited": "Trop de messages",
+    "mbuta.creditsExhausted": "Crédits épuisés",
+    "mbuta.error": "Erreur",
+
     // Footer
     "footer.description": "La Maison du Savoir — préserver et enseigner le Kikongo Lari et l'écriture Mandombe pour la diaspora Kongo et le monde.",
     "footer.learnTitle": "Apprendre",
@@ -369,6 +381,18 @@ const translations: Record<Language, Record<string, string>> = {
     "translator.hint": "Enter text and click Translate",
     "translator.disclaimer": "Translation based on the Nzo Mikanda corpus and Jacquot & Lumwamu's research on Kikongo Lari. Words outside the corpus are marked with [?].",
 
+    // Mbuta Matondo
+    "nav.mbuta": "Teacher",
+    "mbuta.eyebrow": "Nlongi Mbuta Matondo — AI Teacher",
+    "mbuta.title": "Mbuta Matondo",
+    "mbuta.subtitle": "Your patient and caring Kikongo Lari teacher",
+    "mbuta.welcome": "Mbote! I am Mbuta Matondo 👨‍🏫",
+    "mbuta.welcomeHint": "Ask me anything about Kikongo Lari — vocabulary, grammar, conjugation, Mandombe script…",
+    "mbuta.placeholder": "Write your message to Mbuta Matondo…",
+    "mbuta.rateLimited": "Too many messages",
+    "mbuta.creditsExhausted": "Credits exhausted",
+    "mbuta.error": "Error",
+
     // Footer
     "footer.description": "The House of Knowledge — preserving and teaching Kikongo Lari and the Mandombe script for the Kongo diaspora and the world.",
     "footer.learnTitle": "Learn",
@@ -540,6 +564,18 @@ const translations: Record<Language, Record<string, string>> = {
     "translator.translate": "Traduzir",
     "translator.hint": "Insira um texto e clique em Traduzir",
     "translator.disclaimer": "Tradução baseada no corpus Nzo Mikanda e nos trabalhos de Jacquot & Lumwamu sobre o Kikongo Lari. Palavras fora do corpus são assinaladas com [?].",
+
+    // Mbuta Matondo
+    "nav.mbuta": "Professor",
+    "mbuta.eyebrow": "Nlongi Mbuta Matondo — Professor AI",
+    "mbuta.title": "Mbuta Matondo",
+    "mbuta.subtitle": "O seu professor de Kikongo Lari, paciente e atencioso",
+    "mbuta.welcome": "Mbote! Eu sou Mbuta Matondo 👨‍🏫",
+    "mbuta.welcomeHint": "Pergunte-me sobre o Kikongo Lari — vocabulário, gramática, conjugação, escrita Mandombe…",
+    "mbuta.placeholder": "Escreva a sua mensagem para Mbuta Matondo…",
+    "mbuta.rateLimited": "Demasiadas mensagens",
+    "mbuta.creditsExhausted": "Créditos esgotados",
+    "mbuta.error": "Erro",
 
     // Footer
     "footer.description": "A Casa do Saber — preservar e ensinar o Kikongo Lari e a escrita Mandombe para a diáspora Kongo e o mundo.",
