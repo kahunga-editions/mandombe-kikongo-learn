@@ -1,71 +1,40 @@
 
 
-# Ajouter la voix et l'écoute en temps réel à Mbuta Matondo
+# Corriger l'ordre SOV et ajouter le Mandombe dans les réponses de Mbuta Matondo
 
 ## Résumé
-Donner à Mbuta Matondo la capacité de **parler** (TTS avec la voix clonée Lari) et **écouter** (Speech-to-Text en temps réel) l'utilisateur, créant une expérience de conversation vocale immersive.
 
-## Architecture
-
-```text
-┌─────────────────────────────────────┐
-│       MbutaMatondoChat.tsx          │
-│                                     │
-│  [🎤 Micro]  [textarea]  [Send]    │
-│                                     │
-│  Assistant bubble + 🔊 bouton TTS  │
-└──────┬──────────────┬───────────────┘
-       │              │
-  STT (micro)    TTS (réponse)
-       │              │
-       ▼              ▼
-  Edge Function   Edge Function
-  elevenlabs-     elevenlabs-
-  stt             tts-lari
-  (batch)         (voix clonée)
-```
+Deux corrections au système prompt et au rendu du chat :
+1. Corriger l'ordre canonique de SVO → **SOV** (S+O+P+V) dans le prompt
+2. Permettre à Mbuta Matondo d'écrire en Mandombe et afficher ces passages avec `font-mandombe` dans le chat
 
 ## Étapes
 
-### 1. Créer l'edge function `elevenlabs-stt` (Speech-to-Text)
-- Fichier : `supabase/functions/elevenlabs-stt/index.ts`
-- Reçoit un fichier audio (FormData) depuis le navigateur
-- Appelle l'API ElevenLabs batch STT (`scribe_v2`) avec `language_code: "fra"`
-- Retourne le texte transcrit en JSON
-- Le secret `ELEVENLABS_API_KEY` est déjà configuré
+### 1. Corriger le SYSTEM_PROMPT (`supabase/functions/mbuta-matondo/index.ts`)
 
-### 2. Ajouter un bouton TTS sur chaque réponse de Mbuta Matondo
-- Dans `MbutaMatondoChat.tsx`, ajouter un bouton `Volume2` sur chaque bulle assistant
-- Au clic, appeler `elevenlabs-tts-lari` avec le contenu texte (en strippant le Markdown)
-- Utiliser la voix clonée existante (`LARI_VOICE_ID = rfRMgjypJCXUzWdJfLMs`)
-- Cache audio en mémoire pour éviter les appels répétés
+- Remplacer toute mention de SVO par SOV (S+O+P+V) conformément au corpus Jacquot & Lumwamu
+- Ajouter une section **Écriture Mandombe** dans le prompt, instruisant le professeur à :
+  - Entourer tout texte Mandombe avec des balises `[mandombe]...[/mandombe]`
+  - Utiliser le Mandombe pour écrire les mots/phrases Lari qu'il enseigne
+  - Rappeler les règles d'orthographe Mandombe : pas d'accents/diacritiques, pas de doubles lettres, Title Case
 
-### 3. Ajouter un bouton microphone pour dicter les messages
-- Dans la zone de saisie, ajouter un bouton `Mic` à côté du bouton Send
-- Au clic : enregistrer l'audio du micro via `MediaRecorder` API
-- Au relâchement / stop : envoyer le blob audio à `elevenlabs-stt`
-- Injecter le texte transcrit dans le champ de saisie
-- Feedback visuel : animation pulsante rouge pendant l'enregistrement
+### 2. Rendre le Mandombe dans le chat (`src/components/MbutaMatondoChat.tsx`)
 
-### 4. Option "lecture automatique" des réponses
-- Ajouter un toggle `autoSpeak` dans le header du chat
-- Quand activé, chaque nouvelle réponse complète est automatiquement lue via TTS
-- Désactivé par défaut
+- Ajouter un composant de rendu qui détecte les balises `[mandombe]...[/mandombe]` dans les réponses
+- Remplacer ces segments par des `<span className="font-mandombe text-2xl text-gold">` avant le rendu ReactMarkdown
+- Utiliser un pre-processing du contenu avant ReactMarkdown, ou un composant custom dans les `components` de ReactMarkdown
 
-### 5. Traductions UI
-- Ajouter dans `LanguageContext.tsx` les clés : `mbuta.speak`, `mbuta.listening`, `mbuta.autoSpeak`, `mbuta.recordHint` (FR/EN/PT)
-
-## Fichiers créés/modifiés
+## Fichiers modifiés
 
 | Fichier | Action |
 |---------|--------|
-| `supabase/functions/elevenlabs-stt/index.ts` | Créer — transcription audio |
-| `src/components/MbutaMatondoChat.tsx` | Modifier — boutons TTS + micro + auto-speak |
-| `src/contexts/LanguageContext.tsx` | Modifier — nouvelles traductions |
+| `supabase/functions/mbuta-matondo/index.ts` | Corriger SOV + ajouter instructions Mandombe |
+| `src/components/MbutaMatondoChat.tsx` | Rendre les balises `[mandombe]` avec la police Mandombe |
 
 ## Détails techniques
-- STT utilise le modèle `scribe_v2` d'ElevenLabs (batch, pas realtime) — plus simple et suffisant pour des messages courts
-- TTS réutilise l'infrastructure `elevenlabs-tts-lari` existante avec la voix clonée
-- L'enregistrement micro utilise `MediaRecorder` natif du navigateur (pas de dépendance supplémentaire)
-- Le format d'enregistrement sera `audio/webm` (supporté par tous les navigateurs modernes et par ElevenLabs)
+
+- Le prompt instruira l'AI d'utiliser `[mandombe]Mbote[/mandombe]` au lieu de simples parenthèses
+- Le parsing côté client utilisera un regex `/\[mandombe\](.*?)\[\/mandombe\]/g` pour extraire et styliser les segments
+- Les règles Mandombe existantes s'appliquent : suppression des doubles lettres, pas de diacritiques, Title Case
+- Le rendu réutilise la même classe CSS `font-mandombe` utilisée partout dans l'app
 
