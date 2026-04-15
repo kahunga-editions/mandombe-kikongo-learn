@@ -28277,7 +28277,7 @@ export const lessons: Lesson[] = [
   },
 
   // ============================================================
-  // GRAMMAIRE JACQUOT — Niveau Débutant
+  // GRAMMAIRE NZO MIKANDA — Niveau Débutant
   // ============================================================
   {
     id: "phonologie-laadi",
@@ -28716,7 +28716,7 @@ export const lessons: Lesson[] = [
   },
 
   // ============================================================
-  // GRAMMAIRE JACQUOT — Niveau Intermédiaire
+  // GRAMMAIRE NZO MIKANDA — Niveau Intermédiaire
   // ============================================================
   {
     id: "derivation-verbale",
@@ -29006,7 +29006,7 @@ export const lessons: Lesson[] = [
   },
 
   // ============================================================
-  // GRAMMAIRE JACQUOT — Niveau Avancé
+  // GRAMMAIRE NZO MIKANDA — Niveau Avancé
   // ============================================================
   {
     id: "syntaxe-avancee",
@@ -29266,7 +29266,7 @@ export const lessons: Lesson[] = [
   },
 
   // ============================================================
-  // GRAMMAIRE JACQUOT & LUMWAMU — Pronoms (Débutant)
+  // GRAMMAIRE NZO MIKANDA — Pronoms (Débutant)
   // ============================================================
   {
     id: "pronoms-personnels-demonstratifs",
@@ -29414,7 +29414,7 @@ export const lessons: Lesson[] = [
   },
 
   // ============================================================
-  // GRAMMAIRE JACQUOT & LUMWAMU — Système verbal (Intermédiaire)
+  // GRAMMAIRE NZO MIKANDA — Système verbal (Intermédiaire)
   // ============================================================
   {
     id: "systeme-verbal-temps-aspects",
@@ -29574,7 +29574,7 @@ export const lessons: Lesson[] = [
   },
 
   // ============================================================
-  // GRAMMAIRE JACQUOT & LUMWAMU — Numération (Intermédiaire)
+  // GRAMMAIRE NZO MIKANDA — Numération (Intermédiaire)
   // ============================================================
   {
     id: "numeration-quantificateurs",
@@ -29724,7 +29724,7 @@ export const lessons: Lesson[] = [
   },
 
   // ============================================================
-  // GRAMMAIRE JACQUOT & LUMWAMU — Idéophones (Avancé)
+  // GRAMMAIRE NZO MIKANDA — Idéophones (Avancé)
   // ============================================================
   {
     id: "ideophones-expressivite",
