@@ -11,9 +11,10 @@ const CHAT_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/mbuta-matond
 const TTS_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/elevenlabs-tts-lari`;
 const STT_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/elevenlabs-stt`;
 
-// Strip markdown for TTS
+// Strip markdown and mandombe tags for TTS
 function stripMarkdown(md: string): string {
   return md
+    .replace(/\[mandombe\](.*?)\[\/mandombe\]/g, "$1")
     .replace(/#{1,6}\s/g, "")
     .replace(/\*\*(.+?)\*\*/g, "$1")
     .replace(/\*(.+?)\*/g, "$1")
@@ -23,6 +24,22 @@ function stripMarkdown(md: string): string {
     .replace(/\n{2,}/g, ". ")
     .replace(/\n/g, " ")
     .trim();
+}
+
+// Process mandombe tags in content
+function renderMandombeContent(content: string): React.ReactNode[] {
+  const parts = content.split(/(\[mandombe\].*?\[\/mandombe\])/g);
+  return parts.map((part, i) => {
+    const match = part.match(/\[mandombe\](.*?)\[\/mandombe\]/);
+    if (match) {
+      return (
+        <span key={i} className="font-mandombe text-2xl text-gold leading-relaxed inline-block mx-1">
+          {match[1]}
+        </span>
+      );
+    }
+    return <ReactMarkdown key={i}>{part}</ReactMarkdown>;
+  });
 }
 
 // ---- Stream Chat ----
