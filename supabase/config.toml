@@ -26,3 +26,6 @@ verify_jwt = false
 
 [functions.elevenlabs-tts-general]
 verify_jwt = false
+
+[functions.elevenlabs-stt]
+verify_jwt = false
