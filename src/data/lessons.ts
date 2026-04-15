@@ -29844,7 +29844,7 @@ export const lessons: Lesson[] = [
   },
 
   // ============================================================
-  // LEÇON : Système vocalique du Laari (Jacquot §1.47-1.50)
+  // LEÇON : Système vocalique du Laari (Nzo Mikanda §1.47-1.50)
   // ============================================================
   {
     id: "systeme-vocalique",
@@ -29859,14 +29859,14 @@ export const lessons: Lesson[] = [
     level: "intermediate",
     icon: "🔤",
     vocabulary: [
-      { lari: "kaba", mandombe: "Kaba", french: "partager", english: "to share", portuguese: "partilhar", note: "Voyelle a brève (Jacquot §1.47)" },
-      { lari: "kabu", mandombe: "Kabu", french: "partagé", english: "shared", portuguese: "partilhado", note: "Voyelle u brève (Jacquot §1.47)" },
-      { lari: "bika", mandombe: "Bika", french: "saluer", english: "to greet", portuguese: "saudar", note: "Voyelle i brève (Jacquot §1.47)" },
+      { lari: "kaba", mandombe: "Kaba", french: "partager", english: "to share", portuguese: "partilhar", note: "Voyelle a brève (Nzo Mikanda §1.47)" },
+      { lari: "kabu", mandombe: "Kabu", french: "partagé", english: "shared", portuguese: "partilhado", note: "Voyelle u brève (Nzo Mikanda §1.47)" },
+      { lari: "bika", mandombe: "Bika", french: "saluer", english: "to greet", portuguese: "saudar", note: "Voyelle i brève (Nzo Mikanda §1.47)" },
       { lari: "tuela", mandombe: "Tuwela", french: "produire", english: "to produce", portuguese: "produzir", note: "Voyelle e dans le contexte verbal" },
-      { lari: "kota", mandombe: "Kota", french: "entrer", english: "to enter", portuguese: "entrar", note: "Voyelle o brève (Jacquot §1.47)" },
-      { lari: "nuaa", mandombe: "Nuwa", french: "bouche(s)", english: "mouth(s)", portuguese: "boca(s)", note: "Voyelle a longue (Jacquot §1.49.1)" },
-      { lari: "sumba", mandombe: "Sumba", french: "acheter", english: "to buy", portuguese: "comprar", note: "Voyelle u brève (Jacquot §1.47)" },
-      { lari: "lenga", mandombe: "Lenga", french: "se faner", english: "to wilt", portuguese: "murchar", note: "Voyelle e brève (Jacquot §1.47)" },
+      { lari: "kota", mandombe: "Kota", french: "entrer", english: "to enter", portuguese: "entrar", note: "Voyelle o brève (Nzo Mikanda §1.47)" },
+      { lari: "nuaa", mandombe: "Nuwa", french: "bouche(s)", english: "mouth(s)", portuguese: "boca(s)", note: "Voyelle a longue (Nzo Mikanda §1.49.1)" },
+      { lari: "sumba", mandombe: "Sumba", french: "acheter", english: "to buy", portuguese: "comprar", note: "Voyelle u brève (Nzo Mikanda §1.47)" },
+      { lari: "lenga", mandombe: "Lenga", french: "se faner", english: "to wilt", portuguese: "murchar", note: "Voyelle e brève (Nzo Mikanda §1.47)" },
     ],
     syntax: [
       {
@@ -29885,7 +29885,7 @@ export const lessons: Lesson[] = [
             explanationFr: "Chaque voyelle brève porte exactement un ton (haut ou bas). Ce sont les voyelles les plus courantes au quotidien.",
             explanationPt: "Cada vogal breve carrega exatamente um tom (alto ou baixo).",
             examples: [
-              { lari: "kaba", mandombe: "Kaba", french: "partager", english: "to share", note: "a bref — aperture maximale (Jacquot §1.47)" },
+              { lari: "kaba", mandombe: "Kaba", french: "partager", english: "to share", note: "a bref — aperture maximale (Nzo Mikanda §1.47)" },
               { lari: "bika", mandombe: "Bika", french: "saluer", english: "to greet", note: "i bref — aperture minimale, antérieure" },
               { lari: "kabu", mandombe: "Kabu", french: "partagé", english: "shared", note: "u bref — aperture minimale, postérieure" },
               { lari: "kota", mandombe: "Kota", french: "entrer", english: "to enter", note: "o bref — aperture moyenne, postérieure" },
@@ -29899,9 +29899,9 @@ export const lessons: Lesson[] = [
             explanationFr: "Une voyelle longue dure deux fois plus et peut porter deux tons. À l'écrit, on double la lettre. En Mandombe, seule la forme courte est écrite.",
             explanationPt: "Uma vogal longa dura o dobro e pode carregar dois tons. Na escrita, dobramos a letra.",
             examples: [
-              { lari: "nuaa", mandombe: "Nuwa", french: "bouche(s)", english: "mouth(s)", note: "a· long (Jacquot §1.49.1)" },
+              { lari: "nuaa", mandombe: "Nuwa", french: "bouche(s)", english: "mouth(s)", note: "a· long (Nzo Mikanda §1.49.1)" },
               { lari: "sumba", mandombe: "Sumba", french: "acheter", english: "to buy", note: "Comparer : u bref ici" },
-              { lari: "kamenga", mandombe: "Kamenga", french: "attacher", english: "to tie", note: "Racine ka·ng avec voyelle longue (Jacquot §4.4.2)" },
+              { lari: "kamenga", mandombe: "Kamenga", french: "attacher", english: "to tie", note: "Racine ka·ng avec voyelle longue (Nzo Mikanda §4.4.2)" },
             ],
           },
         ],
@@ -29959,8 +29959,8 @@ export const lessons: Lesson[] = [
         options: ["5", "7", "10", "12"],
         optionsFr: ["5", "7", "10", "12"],
         correctIndex: 2,
-        explanation: "Lari has 10 vowels: 5 short (a, e, i, o, u) and 5 long (aa, ee, ii, oo, uu) — Jacquot §1.47.",
-        explanationFr: "Le lari a 10 voyelles : 5 brèves (a, e, i, o, u) et 5 longues (aa, ee, ii, oo, uu) — Jacquot §1.47.",
+        explanation: "Lari has 10 vowels: 5 short (a, e, i, o, u) and 5 long (aa, ee, ii, oo, uu) — Nzo Mikanda §1.47.",
+        explanationFr: "Le lari a 10 voyelles : 5 brèves (a, e, i, o, u) et 5 longues (aa, ee, ii, oo, uu) — Nzo Mikanda §1.47.",
       },
       {
         type: "multiple-choice" as const,
@@ -29969,8 +29969,8 @@ export const lessons: Lesson[] = [
         options: ["i", "e", "a", "u"],
         optionsFr: ["i", "e", "a", "u"],
         correctIndex: 2,
-        explanation: "The vowel 'a' represents 31.7% of all vowels in the lexicon (Jacquot §1.50).",
-        explanationFr: "La voyelle « a » représente 31,7 % de toutes les voyelles du lexique (Jacquot §1.50).",
+        explanation: "The vowel 'a' represents 31.7% of all vowels in the lexicon (Nzo Mikanda §1.50).",
+        explanationFr: "La voyelle « a » représente 31,7 % de toutes les voyelles du lexique (Nzo Mikanda §1.50).",
       },
       {
         type: "matching" as const,
@@ -30003,7 +30003,7 @@ export const lessons: Lesson[] = [
   },
 
   // ============================================================
-  // LEÇON : Les tons du Laari (Jacquot §1.51-1.54)
+  // LEÇON : Les tons du Laari (Nzo Mikanda §1.51-1.54)
   // ============================================================
   {
     id: "tons-du-laari",
@@ -30018,11 +30018,11 @@ export const lessons: Lesson[] = [
     level: "intermediate",
     icon: "🎵",
     vocabulary: [
-      { lari: "mbazi", mandombe: "Mbazi", french: "cour(s)", english: "courtyard(s)", portuguese: "pátio(s)", note: "Ton montant sur la 1ère syllabe (Jacquot §1.52.1)" },
+      { lari: "mbazi", mandombe: "Mbazi", french: "cour(s)", english: "courtyard(s)", portuguese: "pátio(s)", note: "Ton montant sur la 1ère syllabe (Nzo Mikanda §1.52.1)" },
       { lari: "mbazi", mandombe: "Mbazi", french: "lendemain", english: "tomorrow / the next day", portuguese: "amanhã / dia seguinte", note: "Ton bas sur la 1ère syllabe — sens différent !" },
-      { lari: "mbangala", mandombe: "Mbangala", french: "bâton(s)", english: "stick(s)", portuguese: "bastão(ões)", note: "Ton haut initial → bâton (Jacquot §1.52.1)" },
+      { lari: "mbangala", mandombe: "Mbangala", french: "bâton(s)", english: "stick(s)", portuguese: "bastão(ões)", note: "Ton haut initial → bâton (Nzo Mikanda §1.52.1)" },
       { lari: "mbangala", mandombe: "Mbangala", french: "saison(s) chaude(s)", english: "hot season(s)", portuguese: "estação(ões) quente(s)", note: "Ton bas initial → saison chaude" },
-      { lari: "muana", mandombe: "Muwana", french: "enfant", english: "child", portuguese: "criança", note: "Voyelle longue → 2 mores, 2 tons (Jacquot §1.53.1)" },
+      { lari: "muana", mandombe: "Muwana", french: "enfant", english: "child", portuguese: "criança", note: "Voyelle longue → 2 mores, 2 tons (Nzo Mikanda §1.53.1)" },
     ],
     syntax: [
       {
@@ -30041,9 +30041,9 @@ export const lessons: Lesson[] = [
             explanationFr: "Ces paires de mots ont les mêmes consonnes et voyelles, mais diffèrent uniquement par le ton — et leurs sens sont totalement différents.",
             explanationPt: "Estes pares têm os mesmos fonemas mas tons diferentes — significados completamente distintos.",
             examples: [
-              { lari: "mbazi (ton montant)", mandombe: "Mbazi", french: "cour(s)", english: "courtyard(s)", note: "Jacquot §1.52.1" },
+              { lari: "mbazi (ton montant)", mandombe: "Mbazi", french: "cour(s)", english: "courtyard(s)", note: "Nzo Mikanda §1.52.1" },
               { lari: "mbazi (ton bas)", mandombe: "Mbazi", french: "lendemain", english: "tomorrow", note: "Même phonèmes, ton différent !" },
-              { lari: "mbangala (ton haut)", mandombe: "Mbangala", french: "bâton(s)", english: "stick(s)", note: "Jacquot §1.52.1" },
+              { lari: "mbangala (ton haut)", mandombe: "Mbangala", french: "bâton(s)", english: "stick(s)", note: "Nzo Mikanda §1.52.1" },
               { lari: "mbangala (ton bas)", mandombe: "Mbangala", french: "saison(s) chaude(s)", english: "hot season(s)", note: "Ton bas → sens différent" },
             ],
           },
@@ -30054,7 +30054,7 @@ export const lessons: Lesson[] = [
             explanationFr: "Une voyelle brève porte 1 ton (= 1 more). Une voyelle longue porte 2 tons (= 2 mores). Les consonnes m et n peuvent aussi porter un ton. Pensez à la more comme un « temps » en musique : chaque temps a sa propre hauteur.",
             explanationPt: "Vogal breve = 1 tom (1 mora). Vogal longa = 2 tons (2 moras). As consoantes m e n também podem carregar um tom.",
             examples: [
-              { lari: "muana", mandombe: "Muwana", french: "enfant", english: "child", note: "Voyelle longue ua → 2 mores (Jacquot §1.53.1)" },
+              { lari: "muana", mandombe: "Muwana", french: "enfant", english: "child", note: "Voyelle longue ua → 2 mores (Nzo Mikanda §1.53.1)" },
             ],
           },
         ],
@@ -30069,8 +30069,8 @@ export const lessons: Lesson[] = [
         explanationPt: "Tons baixos são mais frequentes. 69,2% das primeiras moras pré-radicais são baixas.",
         groups: [
           {
-            title: "Statistics from Jacquot §1.54",
-            titleFr: "Statistiques de Jacquot §1.54",
+            title: "Statistics from Nzo Mikanda §1.54",
+            titleFr: "Statistiques de Nzo Mikanda §1.54",
             examples: [
               { lari: "tukaba", mandombe: "Tukaba", french: "nous partageons", english: "we share", note: "Ton bas pré-radical (69,2 % des cas)" },
               { lari: "tukabila", mandombe: "Tukabila", french: "nous partagions", english: "we were sharing", note: "Contraste tonal distingue les temps verbaux" },
@@ -30087,8 +30087,8 @@ export const lessons: Lesson[] = [
         options: ["1", "2", "3", "4"],
         optionsFr: ["1", "2", "3", "4"],
         correctIndex: 1,
-        explanation: "Lari has two tonal registers: high and low (Jacquot §1.52.2).",
-        explanationFr: "Le lari possède deux registres tonals : haut et bas (Jacquot §1.52.2).",
+        explanation: "Lari has two tonal registers: high and low (Nzo Mikanda §1.52.2).",
+        explanationFr: "Le lari possède deux registres tonals : haut et bas (Nzo Mikanda §1.52.2).",
       },
       {
         type: "multiple-choice" as const,
@@ -30097,8 +30097,8 @@ export const lessons: Lesson[] = [
         options: ["tomorrow", "courtyard(s)", "stick(s)", "hot season"],
         optionsFr: ["lendemain", "cour(s)", "bâton(s)", "saison chaude"],
         correctIndex: 1,
-        explanation: "'mbazi' with a rising tone means 'courtyard(s)'; with a low tone it means 'tomorrow' (Jacquot §1.52.1).",
-        explanationFr: "« mbazi » avec ton montant = « cour(s) » ; avec ton bas = « lendemain » (Jacquot §1.52.1).",
+        explanation: "'mbazi' with a rising tone means 'courtyard(s)'; with a low tone it means 'tomorrow' (Nzo Mikanda §1.52.1).",
+        explanationFr: "« mbazi » avec ton montant = « cour(s) » ; avec ton bas = « lendemain » (Nzo Mikanda §1.52.1).",
       },
       {
         type: "fill-in-blank" as const,
@@ -30124,14 +30124,14 @@ export const lessons: Lesson[] = [
         options: ["high", "low", "equal frequency", "it varies"],
         optionsFr: ["haut", "bas", "fréquence égale", "ça varie"],
         correctIndex: 1,
-        explanation: "Low tones dominate: 69.2% of first pre-root moras are low (Jacquot §1.54).",
-        explanationFr: "Les tons bas dominent : 69,2 % des 1ères mores préradicales sont basses (Jacquot §1.54).",
+        explanation: "Low tones dominate: 69.2% of first pre-root moras are low (Nzo Mikanda §1.54).",
+        explanationFr: "Les tons bas dominent : 69,2 % des 1ères mores préradicales sont basses (Nzo Mikanda §1.54).",
       },
     ],
   },
 
   // ============================================================
-  // LEÇON : Dérivation verbale du Laari (Jacquot §3.5)
+  // LEÇON : Dérivation verbale du Laari (Nzo Mikanda §3.5)
   // ============================================================
   {
     id: "derivation-verbale",
@@ -30147,17 +30147,17 @@ export const lessons: Lesson[] = [
     icon: "🔧",
     vocabulary: [
       { lari: "bika", mandombe: "Bika", french: "saluer", english: "to greet", portuguese: "cumprimentar" },
-      { lari: "bikisa", mandombe: "Bikisa", french: "faire saluer (causatif)", english: "to make greet (causative)", portuguese: "fazer cumprimentar", note: "Suffixe -is « causatif » (Jacquot §3.5.1)" },
-      { lari: "bikila", mandombe: "Bikila", french: "saluer pour/à (applicatif)", english: "to greet for (applicative)", portuguese: "cumprimentar para", note: "Suffixe -il « applicatif » (Jacquot §3.5.2)" },
+      { lari: "bikisa", mandombe: "Bikisa", french: "faire saluer (causatif)", english: "to make greet (causative)", portuguese: "fazer cumprimentar", note: "Suffixe -is « causatif » (Nzo Mikanda §3.5.1)" },
+      { lari: "bikila", mandombe: "Bikila", french: "saluer pour/à (applicatif)", english: "to greet for (applicative)", portuguese: "cumprimentar para", note: "Suffixe -il « applicatif » (Nzo Mikanda §3.5.2)" },
       { lari: "ziba", mandombe: "Ziba", french: "fermer", english: "to close", portuguese: "fechar" },
-      { lari: "zibuka", mandombe: "Zibuka", french: "s'ouvrir (réversif)", english: "to open up (reversive)", portuguese: "abrir-se", note: "Suffixe -uk « réversif actif » (Jacquot §3.5.3)" },
-      { lari: "zibula", mandombe: "Zibula", french: "ouvrir (réversif moyen)", english: "to open (reversive middle)", portuguese: "abrir", note: "Suffixe -ul « réversif moyen » (Jacquot §3.5.4)" },
+      { lari: "zibuka", mandombe: "Zibuka", french: "s'ouvrir (réversif)", english: "to open up (reversive)", portuguese: "abrir-se", note: "Suffixe -uk « réversif actif » (Nzo Mikanda §3.5.3)" },
+      { lari: "zibula", mandombe: "Zibula", french: "ouvrir (réversif moyen)", english: "to open (reversive middle)", portuguese: "abrir", note: "Suffixe -ul « réversif moyen » (Nzo Mikanda §3.5.4)" },
       { lari: "fumba", mandombe: "Fumba", french: "courber", english: "to bend", portuguese: "curvar" },
-      { lari: "fumbama", mandombe: "Fumbama", french: "être courbé (statif)", english: "to be bent (stative)", portuguese: "estar curvado", note: "Suffixe -am « statif moyen » (Jacquot §3.5.27)" },
+      { lari: "fumbama", mandombe: "Fumbama", french: "être courbé (statif)", english: "to be bent (stative)", portuguese: "estar curvado", note: "Suffixe -am « statif moyen » (Nzo Mikanda §3.5.27)" },
       { lari: "buta", mandombe: "Buta", french: "produire", english: "to produce", portuguese: "produzir" },
-      { lari: "butisa", mandombe: "Butisa", french: "faire produire", english: "to make produce", portuguese: "fazer produzir", note: "Causatif -is (Jacquot §3.5.1)" },
-      { lari: "bikabika", mandombe: "Bikabika", french: "saluer d'habitude", english: "to greet habitually", portuguese: "cumprimentar habitualmente", note: "Suffixe -a·k « habituel » (Jacquot §3.5.23)" },
-      { lari: "bvukana", mandombe: "Bvukana", french: "se rencontrer (réciproque)", english: "to meet each other (reciprocal)", portuguese: "encontrar-se", note: "Suffixe -an « réciproque » (Jacquot §3.5.29)" },
+      { lari: "butisa", mandombe: "Butisa", french: "faire produire", english: "to make produce", portuguese: "fazer produzir", note: "Causatif -is (Nzo Mikanda §3.5.1)" },
+      { lari: "bikabika", mandombe: "Bikabika", french: "saluer d'habitude", english: "to greet habitually", portuguese: "cumprimentar habitualmente", note: "Suffixe -a·k « habituel » (Nzo Mikanda §3.5.23)" },
+      { lari: "bvukana", mandombe: "Bvukana", french: "se rencontrer (réciproque)", english: "to meet each other (reciprocal)", portuguese: "encontrar-se", note: "Suffixe -an « réciproque » (Nzo Mikanda §3.5.29)" },
     ],
     syntax: [
       {
@@ -30176,7 +30176,7 @@ export const lessons: Lesson[] = [
             explanationFr: "Ajoutez -is à la racine pour dire « faire faire l'action ». Comme « faire + verbe » en français.",
             explanationPt: "Adicione -is à raiz para significar 'fazer alguém fazer a ação'.",
             examples: [
-              { lari: "bika → bikisa", mandombe: "Bika → Bikisa", french: "saluer → faire saluer", english: "to greet → to make greet", note: "Jacquot §3.5.1" },
+              { lari: "bika → bikisa", mandombe: "Bika → Bikisa", french: "saluer → faire saluer", english: "to greet → to make greet", note: "Nzo Mikanda §3.5.1" },
               { lari: "buta → butisa", mandombe: "Buta → Butisa", french: "produire → faire produire", english: "to produce → to make produce" },
               { lari: "kota → kotisa", mandombe: "Kota → Kotisa", french: "entrer → faire entrer", english: "to enter → to make enter" },
             ],
@@ -30188,7 +30188,7 @@ export const lessons: Lesson[] = [
             explanationFr: "Ajoutez -il à la racine pour dire « faire l'action pour/à quelqu'un ou quelque chose ».",
             explanationPt: "Adicione -il à raiz para significar 'fazer a ação para alguém'.",
             examples: [
-              { lari: "bika → bikila", mandombe: "Bika → Bikila", french: "saluer → saluer pour", english: "to greet → to greet for", note: "Jacquot §3.5.2" },
+              { lari: "bika → bikila", mandombe: "Bika → Bikila", french: "saluer → saluer pour", english: "to greet → to greet for", note: "Nzo Mikanda §3.5.2" },
               { lari: "sumba → sumbila", mandombe: "Sumba → Sumbila", french: "acheter → acheter pour", english: "to buy → to buy for" },
             ],
           },
@@ -30199,8 +30199,8 @@ export const lessons: Lesson[] = [
             explanationFr: "Ajoutez -uk (actif) ou -ul (moyen) pour exprimer l'inversion d'une action. Comme « dé- » en français : « faire → défaire ».",
             explanationPt: "Adicione -uk (ativo) ou -ul (médio) para expressar reversão.",
             examples: [
-              { lari: "ziba → zibuka", mandombe: "Ziba → Zibuka", french: "fermer → s'ouvrir", english: "to close → to open up", note: "Jacquot §3.5.3" },
-              { lari: "ziba → zibula", mandombe: "Ziba → Zibula", french: "fermer → ouvrir", english: "to close → to open", note: "Jacquot §3.5.4" },
+              { lari: "ziba → zibuka", mandombe: "Ziba → Zibuka", french: "fermer → s'ouvrir", english: "to close → to open up", note: "Nzo Mikanda §3.5.3" },
+              { lari: "ziba → zibula", mandombe: "Ziba → Zibula", french: "fermer → ouvrir", english: "to close → to open", note: "Nzo Mikanda §3.5.4" },
             ],
           },
           {
@@ -30210,7 +30210,7 @@ export const lessons: Lesson[] = [
             explanationFr: "Ajoutez -am pour décrire un état résultant d'une action. Comme « la porte est fermée ».",
             explanationPt: "Adicione -am para descrever um estado resultante de uma ação.",
             examples: [
-              { lari: "fumba → fumbama", mandombe: "Fumba → Fumbama", french: "courber → être courbé", english: "to bend → to be bent", note: "Jacquot §3.5.27" },
+              { lari: "fumba → fumbama", mandombe: "Fumba → Fumbama", french: "courber → être courbé", english: "to bend → to be bent", note: "Nzo Mikanda §3.5.27" },
               { lari: "ziba → zibama", mandombe: "Ziba → Zibama", french: "fermer → être fermé", english: "to close → to be closed" },
               { lari: "zita → zitama", mandombe: "Zita → Zitama", french: "respecter → être respectueux", english: "to respect → to be respectful" },
             ],
@@ -30222,7 +30222,7 @@ export const lessons: Lesson[] = [
             explanationFr: "Ajoutez -an pour exprimer une action mutuelle/réciproque. Comme « se + verbe » en français.",
             explanationPt: "Adicione -an para expressar ação recíproca.",
             examples: [
-              { lari: "bvuka → bvukana", mandombe: "Bvuka → Bvukana", french: "rencontrer → se rencontrer", english: "to meet → to meet each other", note: "Jacquot §3.5.29" },
+              { lari: "bvuka → bvukana", mandombe: "Bvuka → Bvukana", french: "rencontrer → se rencontrer", english: "to meet → to meet each other", note: "Nzo Mikanda §3.5.29" },
             ],
           },
           {
@@ -30232,7 +30232,7 @@ export const lessons: Lesson[] = [
             explanationFr: "Ajoutez le suffixe habituel pour exprimer quelque chose qu'on fait régulièrement.",
             explanationPt: "Adicione o sufixo habitual para algo feito regularmente.",
             examples: [
-              { lari: "bika → bikabika", mandombe: "Bika → Bikabika", french: "saluer → saluer d'habitude", english: "to greet → to greet habitually", note: "Jacquot §3.5.23" },
+              { lari: "bika → bikabika", mandombe: "Bika → Bikabika", french: "saluer → saluer d'habitude", english: "to greet → to greet habitually", note: "Nzo Mikanda §3.5.23" },
               { lari: "kota → kotabika", mandombe: "Kota → Kotabika", french: "entrer → entrer d'habitude", english: "to enter → to enter habitually" },
             ],
           },
@@ -30247,8 +30247,8 @@ export const lessons: Lesson[] = [
         options: ["reciprocal action", "causative (make do)", "state", "reversal"],
         optionsFr: ["action réciproque", "causatif (faire faire)", "état", "inversion"],
         correctIndex: 1,
-        explanation: "The suffix '-is' is the causative: it means 'to make someone do' the action (Jacquot §3.5.1).",
-        explanationFr: "Le suffixe « -is » est le causatif : il signifie « faire faire » l'action (Jacquot §3.5.1).",
+        explanation: "The suffix '-is' is the causative: it means 'to make someone do' the action (Nzo Mikanda §3.5.1).",
+        explanationFr: "Le suffixe « -is » est le causatif : il signifie « faire faire » l'action (Nzo Mikanda §3.5.1).",
       },
       {
         type: "matching" as const,
@@ -30285,8 +30285,8 @@ export const lessons: Lesson[] = [
         options: ["to bend", "to be bent", "to unbend", "to bend for someone"],
         optionsFr: ["courber", "être courbé", "redresser", "courber pour quelqu'un"],
         correctIndex: 1,
-        explanation: "'fumbama' = fumba (to bend) + -am (stative) = 'to be bent' (Jacquot §3.5.27).",
-        explanationFr: "« fumbama » = fumba (courber) + -am (statif) = « être courbé » (Jacquot §3.5.27).",
+        explanation: "'fumbama' = fumba (to bend) + -am (stative) = 'to be bent' (Nzo Mikanda §3.5.27).",
+        explanationFr: "« fumbama » = fumba (courber) + -am (statif) = « être courbé » (Nzo Mikanda §3.5.27).",
       },
       {
         type: "mandombe-recognition" as const,
@@ -30301,7 +30301,7 @@ export const lessons: Lesson[] = [
   },
 
   // ============================================================
-  // LEÇON : LA NÉGATION « KÀ...KO » (Jacquot §4.45)
+  // LEÇON : LA NÉGATION « KÀ...KO » (Nzo Mikanda §4.45)
   // Source : Nzo Mikanda, pages 122-123
   // ============================================================
   {
@@ -30316,7 +30316,7 @@ export const lessons: Lesson[] = [
     credit: "Nzo Mikanda",
 
     vocabulary: [
-      { lari: "kà...ko", mandombe: "Ka...Ko", french: "ne...pas (négation discontinue)", english: "not (discontinuous negation)", note: "Les deux parties encadrent le verbe (Jacquot §4.45)" },
+      { lari: "kà...ko", mandombe: "Ka...Ko", french: "ne...pas (négation discontinue)", english: "not (discontinuous negation)", note: "Les deux parties encadrent le verbe (Nzo Mikanda §4.45)" },
       { lari: "kà kábá ko", mandombe: "Ka Kaba Ko", french: "il ne partage pas", english: "he does not share", note: "Le verbe kábá est pris en sandwich (§4.45)" },
       { lari: "kà tùkábá ko", mandombe: "Ka Tukaba Ko", french: "nous ne partageons pas", english: "we do not share" },
       { lari: "kà lùbúlá ándi", mandombe: "Ka Lubula Andi", french: "ne cassez pas !", english: "do not break!", note: "Impératif négatif sans ko (§4.45)" },
@@ -30372,16 +30372,16 @@ export const lessons: Lesson[] = [
         options: ["kábá ko", "kà kábá ko", "ko kábá kà", "kà kábá"],
         optionsFr: ["kábá ko", "kà kábá ko", "ko kábá kà", "kà kábá"],
         correctIndex: 1,
-        explanation: "The negation 'kà...ko' wraps around the verb: kà kábá ko (Jacquot §4.45).",
-        explanationFr: "La négation « kà...ko » encadre le verbe : kà kábá ko (Jacquot §4.45).",
+        explanation: "The negation 'kà...ko' wraps around the verb: kà kábá ko (Nzo Mikanda §4.45).",
+        explanationFr: "La négation « kà...ko » encadre le verbe : kà kábá ko (Nzo Mikanda §4.45).",
       },
       {
         type: "fill-in-blank" as const,
         sentence: "___ tùkábá ___ (we do not share)",
         sentenceFr: "___ tùkábá ___ (nous ne partageons pas)",
         blank: "kà...ko",
-        hint: "The discontinuous negation kà...ko wraps the verb (Jacquot §4.45).",
-        hintFr: "La négation discontinue kà...ko encadre le verbe (Jacquot §4.45).",
+        hint: "The discontinuous negation kà...ko wraps the verb (Nzo Mikanda §4.45).",
+        hintFr: "La négation discontinue kà...ko encadre le verbe (Nzo Mikanda §4.45).",
       },
       {
         type: "multiple-choice" as const,
@@ -30400,8 +30400,8 @@ export const lessons: Lesson[] = [
           "ko est toujours optionnel",
         ],
         correctIndex: 2,
-        explanation: "With the imperative marker á·ndi and no direct object, only 'kà' is used (Jacquot §4.45).",
-        explanationFr: "Avec le marqueur impératif á·ndi et sans complément d'objet, seul « kà » est employé (Jacquot §4.45).",
+        explanation: "With the imperative marker á·ndi and no direct object, only 'kà' is used (Nzo Mikanda §4.45).",
+        explanationFr: "Avec le marqueur impératif á·ndi et sans complément d'objet, seul « kà » est employé (Nzo Mikanda §4.45).",
       },
       {
         type: "matching" as const,
@@ -30426,7 +30426,7 @@ export const lessons: Lesson[] = [
   },
 
   // ============================================================
-  // LEÇON : LES FONCTIONNELS LOCATIFS (Jacquot §4.35-4.38)
+  // LEÇON : LES FONCTIONNELS LOCATIFS (Nzo Mikanda §4.35-4.38)
   // Source : Nzo Mikanda, pages 118-120
   // ============================================================
   {
@@ -30441,7 +30441,7 @@ export const lessons: Lesson[] = [
     credit: "Nzo Mikanda",
 
     vocabulary: [
-      { lari: "kù", mandombe: "Ku", french: "à, vers (lieu distinct)", english: "to, at (distinct place)", note: "Fonctionnel locatif de lieu distinct (Jacquot §4.35)" },
+      { lari: "kù", mandombe: "Ku", french: "à, vers (lieu distinct)", english: "to, at (distinct place)", note: "Fonctionnel locatif de lieu distinct (Nzo Mikanda §4.35)" },
       { lari: "gà", mandombe: "Ga", french: "sur, à (lieu ponctuel)", english: "on, at (punctual place)", note: "Fonctionnel locatif de contact (§4.36)" },
       { lari: "mù", mandombe: "Mu", french: "dans, pendant", english: "in, during", note: "Fonctionnel locatif d'intériorité (§4.37)" },
       { lari: "nà", mandombe: "Na", french: "avec (accompagnement)", english: "with (accompaniment)", note: "Fonctionnel d'accompagnement (§4.40)" },
@@ -30523,16 +30523,16 @@ export const lessons: Lesson[] = [
         options: ["kù", "gà", "mù", "nà"],
         optionsFr: ["kù", "gà", "mù", "nà"],
         correctIndex: 1,
-        explanation: "'gà' means 'on' or 'at a punctual place' — it implies surface contact (Jacquot §4.36).",
-        explanationFr: "« gà » signifie « sur » ou « à un lieu ponctuel » — il implique un contact de surface (Jacquot §4.36).",
+        explanation: "'gà' means 'on' or 'at a punctual place' — it implies surface contact (Nzo Mikanda §4.36).",
+        explanationFr: "« gà » signifie « sur » ou « à un lieu ponctuel » — il implique un contact de surface (Nzo Mikanda §4.36).",
       },
       {
         type: "fill-in-blank" as const,
         sentence: "___ bulu nàbuá (I fell into the hole)",
         sentenceFr: "___ bulu nàbuá (je suis tombé dans le trou)",
         blank: "mù",
-        hint: "'mù' means 'in/inside' when used with locations (Jacquot §4.37).",
-        hintFr: "« mù » signifie « dans » quand il est utilisé avec des lieux (Jacquot §4.37).",
+        hint: "'mù' means 'in/inside' when used with locations (Nzo Mikanda §4.37).",
+        hintFr: "« mù » signifie « dans » quand il est utilisé avec des lieux (Nzo Mikanda §4.37).",
       },
       {
         type: "matching" as const,
@@ -30552,8 +30552,8 @@ export const lessons: Lesson[] = [
         options: ["in", "on", "with (instrument)", "to"],
         optionsFr: ["dans", "sur", "avec (instrument)", "vers"],
         correctIndex: 2,
-        explanation: "Here 'mù' means 'with' (instrument/means) — 'with a knife one scrapes' (Jacquot §4.38).",
-        explanationFr: "Ici « mù » signifie « avec » (instrument/moyen) — « avec un couteau on gratte » (Jacquot §4.38).",
+        explanation: "Here 'mù' means 'with' (instrument/means) — 'with a knife one scrapes' (Nzo Mikanda §4.38).",
+        explanationFr: "Ici « mù » signifie « avec » (instrument/moyen) — « avec un couteau on gratte » (Nzo Mikanda §4.38).",
       },
       {
         type: "mandombe-recognition" as const,
@@ -30568,7 +30568,7 @@ export const lessons: Lesson[] = [
   },
 
   // ============================================================
-  // LEÇON : LES TERMES DE PARENTÉ (Jacquot §4.5.2.2)
+  // LEÇON : LES TERMES DE PARENTÉ (Nzo Mikanda §4.5.2.2)
   // Source : Nzo Mikanda, pages 101-102
   // ============================================================
   {
@@ -30583,7 +30583,7 @@ export const lessons: Lesson[] = [
     credit: "Nzo Mikanda",
 
     vocabulary: [
-      { lari: "taata", mandombe: "Tata", french: "père, parent paternel, monsieur", english: "father, paternal parent, sir", note: "Forme pleine (Jacquot §4.5.2.2)" },
+      { lari: "taata", mandombe: "Tata", french: "père, parent paternel, monsieur", english: "father, paternal parent, sir", note: "Forme pleine (Nzo Mikanda §4.5.2.2)" },
       { lari: "bataata", mandombe: "Batata", french: "pères, parents paternels", english: "fathers, paternal parents", note: "Pluriel avec préfixe ba- (genre 2)" },
       { lari: "maama", mandombe: "Mama", french: "mère, parent maternel, madame", english: "mother, maternal parent, madam", note: "Forme pleine (§4.5.2.2)" },
       { lari: "giagia", mandombe: "Giagia", french: "aîné, grand-parent", english: "elder, grandparent", note: "Forme pleine (§4.5.2.2)" },
@@ -30645,16 +30645,16 @@ export const lessons: Lesson[] = [
         options: ["taata Malonga", "tá Malonga", "ta Malonga", "bataata Malonga"],
         optionsFr: ["taata Malonga", "tá Malonga", "ta Malonga", "bataata Malonga"],
         correctIndex: 1,
-        explanation: "Before a name, the short form 'tá' is used instead of the full 'taata' (Jacquot §4.5.2.2).",
-        explanationFr: "Devant un nom, la forme courte « tá » est utilisée au lieu de « taata » (Jacquot §4.5.2.2).",
+        explanation: "Before a name, the short form 'tá' is used instead of the full 'taata' (Nzo Mikanda §4.5.2.2).",
+        explanationFr: "Devant un nom, la forme courte « tá » est utilisée au lieu de « taata » (Nzo Mikanda §4.5.2.2).",
       },
       {
         type: "fill-in-blank" as const,
         sentence: "___ Malonga (Mrs./Mother Malonga)",
         sentenceFr: "___ Malonga (Madame/Mère Malonga)",
         blank: "má",
-        hint: "The short form 'má' is used before a name for 'mother/Mrs.' (Jacquot §4.5.2.2).",
-        hintFr: "La forme courte « má » est utilisée devant un nom pour « mère/Madame » (Jacquot §4.5.2.2).",
+        hint: "The short form 'má' is used before a name for 'mother/Mrs.' (Nzo Mikanda §4.5.2.2).",
+        hintFr: "La forme courte « má » est utilisée devant un nom pour « mère/Madame » (Nzo Mikanda §4.5.2.2).",
       },
       {
         type: "matching" as const,
@@ -30674,8 +30674,8 @@ export const lessons: Lesson[] = [
         options: ["bagiagia", "magiagia", "bigiagia", "zigiagia"],
         optionsFr: ["bagiagia", "magiagia", "bigiagia", "zigiagia"],
         correctIndex: 1,
-        explanation: "'giagia' takes the plural prefix 'ma-' (genre 6): magiagia (Jacquot §4.5.2.2).",
-        explanationFr: "« giagia » prend le préfixe pluriel « ma- » (genre 6) : magiagia (Jacquot §4.5.2.2).",
+        explanation: "'giagia' takes the plural prefix 'ma-' (genre 6): magiagia (Nzo Mikanda §4.5.2.2).",
+        explanationFr: "« giagia » prend le préfixe pluriel « ma- » (genre 6) : magiagia (Nzo Mikanda §4.5.2.2).",
       },
       {
         type: "mandombe-recognition" as const,
