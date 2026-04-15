@@ -1,41 +1,62 @@
 
 
-# Changer la voix de Mbuta Matondo et renforcer les interdictions
+# Ancrer Mbuta Matondo sur le corpus Nzo Mikanda — injection du vocabulaire réel
 
-## Résumé
+## Problème
 
-Trois modifications :
-1. Remplacer la voice ID par `Gz9w9RNGNUZjVYbvzXY7` sur tout le site (TTS Lari + fallback)
-2. Renforcer l'interdiction du Kituba dans le prompt de Mbuta Matondo
-3. Supprimer l'utilisation de "mwana" comme terme d'adresse — le remplacer par "nlongoki" (élève)
+Le prompt actuel donne des règles grammaticales abstraites mais **aucun vocabulaire concret** des leçons. L'IA invente donc des formes fausses :
+- "sangu" (= maïs) au lieu de **"nsangu"** (= nouvelles)
+- "Saangu mbote" — n'existe pas
+- Salutations incorrectes non attestées dans le corpus
+
+## Solution
+
+Injecter directement dans le SYSTEM_PROMPT les **salutations et phrases réelles** tirées de `src/data/lessons.ts`, et ajouter une règle stricte : ne JAMAIS inventer de vocabulaire — utiliser UNIQUEMENT les formes attestées dans les leçons Nzo Mikanda.
 
 ## Étapes
 
-### 1. Mettre à jour la voice ID par défaut (`supabase/functions/elevenlabs-tts-lari/index.ts`)
-- Changer le fallback de `rfRMgjypJCXUzWdJfLMs` → `Gz9w9RNGNUZjVYbvzXY7` (ligne 8)
+### 1. Réécrire le SYSTEM_PROMPT (`supabase/functions/mbuta-matondo/index.ts`)
 
-### 2. Mettre à jour la voice ID dans `elevenlabs-add-samples` (`supabase/functions/elevenlabs-add-samples/index.ts`)
-- Changer le fallback de `rfRMgjypJCXUzWdJfLMs` → `Gz9w9RNGNUZjVYbvzXY7`
+Modifications :
+- Remplacer toutes les mentions "Jacquot & Lumwamu" → "corpus Nzo Mikanda"
+- Supprimer les voyelles longues (aa, ee, ii, oo, uu) de la phonologie
+- Corriger les termes de parenté : taata→tata, maama→mama, mwaana→mwana, **giaagia→yaya**, mbuutu→mbutu, nkaazi→nkaji
+- Ajouter une **section "Salutations attestées"** avec le vocabulaire exact des leçons :
+  - Mbote = Bonjour
+  - Kolele? = Ça va ?
+  - Nkolele = Je vais bien
+  - Mbote mpangi, nkumbu aku nani? = Bonjour, quel est ton nom ?
+  - Lumbu kia kibote = Bonne journée
+  - Mpimpa ya mbote = Bonne nuit
+  - Mbaji kua = À demain
+  - Ntangu ka kua = À bientôt
+  - Nsangu za mbote = Les bonnes nouvelles
+- Ajouter une **interdiction explicite** : "Le mot 'sangu' signifie MAÏS. Pour 'nouvelles', utiliser 'nsangu' (singulier) ou 'binsangu' (pluriel). 'Saangu mbote' N'EXISTE PAS."
+- Renforcer la règle : "Ne JAMAIS inventer de salutations. Utiliser UNIQUEMENT les formes attestées ci-dessus."
+- Renforcer encore l'interdiction Kituba avec mention en début ET fin de prompt
+- Ajouter la règle anti-doubles lettres pour TOUT le Lari écrit
 
-### 3. Mettre à jour le secret `LARI_VOICE_ID`
-- Mettre à jour le secret pour pointer vers `Gz9w9RNGNUZjVYbvzXY7`
+### 2. Mettre à jour les leçons (`src/data/lessons.ts`)
+- Remplacer ~20 occurrences de "Jacquot & Lumwamu" → "Nzo Mikanda"
 
-### 4. Réécrire le SYSTEM_PROMPT de Mbuta Matondo (`supabase/functions/mbuta-matondo/index.ts`)
+### 3. Mettre à jour les commentaires sources
+- `src/lib/g2p.ts` : commentaire → Nzo Mikanda
+- `supabase/functions/elevenlabs-tts-lari/index.ts` : commentaire → Nzo Mikanda
 
-Modifications dans le prompt :
-- **Remplacer "mwana"** comme terme d'adresse par **"nlongoki"** (élève). "Mwana" reste autorisé comme vocabulaire dans les leçons, mais Mbuta Matondo ne doit JAMAIS s'adresser aux élèves par "mwana" ou "muana"
-- **Renforcer l'interdiction du Kituba** : ajouter une section explicite avec les formes interdites (copiée du traducteur) — "mai" pour eau, "ndenge nini" pour comment, etc.
-- Changer les exemples de style : "Mbote nlongoki!" au lieu de "Mbote mwana!"
-- Ajouter la règle : "Ne JAMAIS appeler l'élève 'mwana' ou 'muana'. Utiliser 'nlongoki' (élève) ou le prénom si connu."
+### 4. Mettre à jour les mémoires projet
+- Core memory : Jacquot & Lumwamu → Nzo Mikanda
+- `mem://constraints/source-material` : mise à jour
+- `mem://grammar/kinship-terms` : giaagia → yaya
 
-### 5. Déployer les edge functions modifiées
-- Redéployer `elevenlabs-tts-lari`, `elevenlabs-add-samples`, `mbuta-matondo`
+### 5. Redéployer `mbuta-matondo`
 
 ## Fichiers modifiés
 
 | Fichier | Action |
 |---------|--------|
-| `supabase/functions/elevenlabs-tts-lari/index.ts` | Voice ID → Gz9w9RNGNUZjVYbvzXY7 |
-| `supabase/functions/elevenlabs-add-samples/index.ts` | Voice ID → Gz9w9RNGNUZjVYbvzXY7 |
-| `supabase/functions/mbuta-matondo/index.ts` | Interdiction mwana + Kituba renforcée |
+| `supabase/functions/mbuta-matondo/index.ts` | Prompt refondu : Nzo Mikanda, vocabulaire injecté, anti-invention, anti-Kituba |
+| `src/data/lessons.ts` | ~20 substitutions Jacquot → Nzo Mikanda |
+| `src/lib/g2p.ts` | Commentaire source |
+| `supabase/functions/elevenlabs-tts-lari/index.ts` | Commentaire source |
+| `mem://` | Core + source-material + kinship-terms |
 
