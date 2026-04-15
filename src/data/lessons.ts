@@ -28408,8 +28408,8 @@ export const lessons: Lesson[] = [
         options: ["15", "22", "27", "32"],
         optionsFr: ["15", "22", "27", "32"],
         correctIndex: 2,
-        explanation: "Laadi has 27 different consonant sounds (Jacquot & Lumwamu §1.46.1).",
-        explanationFr: "Le lari a 27 sons de consonnes différents (Jacquot & Lumwamu §1.46.1).",
+        explanation: "Laadi has 27 different consonant sounds (Nzo Mikanda §1.46.1).",
+        explanationFr: "Le lari a 27 sons de consonnes différents (Nzo Mikanda §1.46.1).",
       },
       {
         type: "multiple-choice" as const,
@@ -28418,8 +28418,8 @@ export const lessons: Lesson[] = [
         options: ["to work", "to look carefully", "to refuse", "to rain"],
         optionsFr: ["travailler", "regarder attentivement", "refuser", "pleuvoir"],
         correctIndex: 1,
-        explanation: "tala means 'to look carefully' (Jacquot & Lumwamu §1.14.1).",
-        explanationFr: "tala signifie 'regarder attentivement' (Jacquot & Lumwamu §1.14.1).",
+        explanation: "tala means 'to look carefully' (Nzo Mikanda §1.14.1).",
+        explanationFr: "tala signifie 'regarder attentivement' (Nzo Mikanda §1.14.1).",
       },
       {
         type: "matching" as const,
@@ -28439,8 +28439,8 @@ export const lessons: Lesson[] = [
         questionFr: "Combien de voyelles le laadi possède-t-il ?",
         options: ["3", "5", "7", "10"],
         correctIndex: 1,
-        explanation: "Laadi has 5 vowel sounds: i, u, e, o, a (Jacquot & Lumwamu §1.31-1.35).",
-        explanationFr: "Le lari a 5 voyelles : i, u, e, o, a (Jacquot & Lumwamu §1.31-1.35).",
+        explanation: "Laadi has 5 vowel sounds: i, u, e, o, a (Nzo Mikanda §1.31-1.35).",
+        explanationFr: "Le lari a 5 voyelles : i, u, e, o, a (Nzo Mikanda §1.31-1.35).",
       },
       {
         type: "mandombe-recognition" as const,
@@ -28509,9 +28509,9 @@ export const lessons: Lesson[] = [
           {
             title: "Derivation: bu- (abstract nouns)",
             titleFr: "Dérivation : bu- (noms abstraits)",
-            explanation: "The prefix bu- derives abstract nouns from other stems (Jacquot & Lumwamu §3.7.1 'abstrait').",
-            explanationFr: "Le préfixe bu- dérive des noms abstraits à partir d'autres radicaux (Jacquot & Lumwamu §3.7.1 'abstrait').",
-            explanationPt: "O prefixo bu- deriva nomes abstratos de outros radicais (Jacquot & Lumwamu §3.7.1 'abstrato').",
+            explanation: "The prefix bu- derives abstract nouns from other stems (Nzo Mikanda §3.7.1 'abstrait').",
+            explanationFr: "Le préfixe bu- dérive des noms abstraits à partir d'autres radicaux (Nzo Mikanda §3.7.1 'abstrait').",
+            explanationPt: "O prefixo bu- deriva nomes abstratos de outros radicais (Nzo Mikanda §3.7.1 'abstrato').",
             examples: [
               { lari: "bumuntu", mandombe: "Bumuntu", french: "humanité (de muntu)", english: "humanity (from muntu)" },
               { lari: "bukento", mandombe: "Bukento", french: "féminité (de nkento)", english: "femininity (from nkento)" },
@@ -28520,9 +28520,9 @@ export const lessons: Lesson[] = [
           {
             title: "Genre 17/18: fi-/bi- (diminutive)",
             titleFr: "Genre 17/18 : fi-/bi- (diminutif)",
-            explanation: "The diminutive is formed with genres 17 (sg fi-) and 18 (pl bi-), combinable with all countable nouns (Jacquot & Lumwamu §3.7.3).",
-            explanationFr: "Le diminutif est formé avec les genres 17 (sg fi-) et 18 (pl bi-), combinables avec tous les noms comptables (Jacquot & Lumwamu §3.7.3).",
-            explanationPt: "O diminutivo é formado com os gêneros 17 (sg fi-) e 18 (pl bi-), combináveis com todos os nomes contáveis (Jacquot & Lumwamu §3.7.3).",
+            explanation: "The diminutive is formed with genres 17 (sg fi-) and 18 (pl bi-), combinable with all countable nouns (Nzo Mikanda §3.7.3).",
+            explanationFr: "Le diminutif est formé avec les genres 17 (sg fi-) et 18 (pl bi-), combinables avec tous les noms comptables (Nzo Mikanda §3.7.3).",
+            explanationPt: "O diminutivo é formado com os gêneros 17 (sg fi-) e 18 (pl bi-), combináveis com todos os nomes contáveis (Nzo Mikanda §3.7.3).",
             examples: [
               { lari: "muntu fi", mandombe: "Muntu Fi", french: "cette petite personne-ci", english: "this small person" },
               { lari: "bantu bi", mandombe: "Bantu Bi", french: "ces petites personnes-ci", english: "these small people" },
@@ -28538,8 +28538,8 @@ export const lessons: Lesson[] = [
         questionFr: "Quel est le préfixe pluriel du genre 1 (mu-) ?",
         options: ["mi-", "ba-", "bi-", "ma-"],
         correctIndex: 1,
-        explanation: "Genre 1 mu- pairs with genre 2 ba- for the plural (Jacquot & Lumwamu §4.56).",
-        explanationFr: "Le genre 1 mu- s'apparie au genre 2 ba- pour le pluriel (Jacquot & Lumwamu §4.56).",
+        explanation: "Genre 1 mu- pairs with genre 2 ba- for the plural (Nzo Mikanda §4.56).",
+        explanationFr: "Le genre 1 mu- s'apparie au genre 2 ba- pour le pluriel (Nzo Mikanda §4.56).",
       },
       {
         type: "fill-in-blank" as const,
@@ -28566,8 +28566,8 @@ export const lessons: Lesson[] = [
         questionFr: "Combien de genres nominaux le laadi possède-t-il ?",
         options: ["6", "12", "19", "24"],
         correctIndex: 2,
-        explanation: "Laadi has 19 noun families (Jacquot & Lumwamu §4.53).",
-        explanationFr: "Le lari a 19 familles de noms (Jacquot & Lumwamu §4.53).",
+        explanation: "Laadi has 19 noun families (Nzo Mikanda §4.53).",
+        explanationFr: "Le lari a 19 familles de noms (Nzo Mikanda §4.53).",
       },
       {
         type: "multiple-choice" as const,
@@ -28576,8 +28576,8 @@ export const lessons: Lesson[] = [
         options: ["diminutives", "abstract nouns", "plural forms", "verb forms"],
         optionsFr: ["des diminutifs", "des noms abstraits", "des pluriels", "des formes verbales"],
         correctIndex: 1,
-        explanation: "bu- creates abstract nouns: bumuntu 'humanity', bukento 'femininity' (Jacquot & Lumwamu §3.7.1).",
-        explanationFr: "bu- crée des noms abstraits : bumuntu 'humanité', bukento 'féminité' (Jacquot & Lumwamu §3.7.1).",
+        explanation: "bu- creates abstract nouns: bumuntu 'humanity', bukento 'femininity' (Nzo Mikanda §3.7.1).",
+        explanationFr: "bu- crée des noms abstraits : bumuntu 'humanité', bukento 'féminité' (Nzo Mikanda §3.7.1).",
       },
     ],
   },
@@ -28595,7 +28595,7 @@ export const lessons: Lesson[] = [
     level: "beginner",
     icon: "✏️",
     vocabulary: [
-      { lari: "buta", mandombe: "Buta", french: "produire", english: "to produce", note: "Racine but- (Jacquot & Lumwamu §3.3.1)" },
+      { lari: "buta", mandombe: "Buta", french: "produire", english: "to produce", note: "Racine but- (Nzo Mikanda §3.3.1)" },
       { lari: "butuka", mandombe: "Butuka", french: "naître", english: "to be born", note: "but-uk-a : passif de buta" },
       { lari: "kaba", mandombe: "Kaba", french: "partager", english: "to share" },
       { lari: "kota", mandombe: "Kota", french: "entrer", english: "to enter" },
@@ -28619,9 +28619,9 @@ export const lessons: Lesson[] = [
           {
             title: "Subject markers with 'nua' (to drink)",
             titleFr: "Marques de sujet avec 'nua' (boire)",
-            explanation: "The verb 'nua' (to drink) conjugated with different subject markers (Jacquot & Lumwamu §4.52.1).",
-            explanationFr: "Le verbe 'nua' (boire) conjugué avec différentes marques de sujet (Jacquot & Lumwamu §4.52.1).",
-            explanationPt: "O verbo 'nua' (beber) conjugado com diferentes marcadores de sujeito (Jacquot & Lumwamu §4.52.1).",
+            explanation: "The verb 'nua' (to drink) conjugated with different subject markers (Nzo Mikanda §4.52.1).",
+            explanationFr: "Le verbe 'nua' (boire) conjugué avec différentes marques de sujet (Nzo Mikanda §4.52.1).",
+            explanationPt: "O verbo 'nua' (beber) conjugado com diferentes marcadores de sujeito (Nzo Mikanda §4.52.1).",
             examples: [
               { lari: "tunua", mandombe: "Tunuwa", french: "nous buvons", english: "we drink" },
               { lari: "tukaba", mandombe: "Tukaba", french: "nous partageons", english: "we share" },
@@ -28636,7 +28636,7 @@ export const lessons: Lesson[] = [
         titlePt: "Negação: ka...ko",
         explanation: "To say 'not' in Laadi, you put ka before the verb and ko after it. The verb is like a sandwich between ka and ko!",
         explanationFr: "Pour dire « ne...pas » en lari, on met ka devant le verbe et ko après. Le verbe est pris en sandwich entre ka et ko !",
-        explanationPt: "A negação em laadi é formada com o morfema descontínuo ka...ko envolvendo o verbo (Jacquot & Lumwamu §4.45).",
+        explanationPt: "A negação em laadi é formada com o morfema descontínuo ka...ko envolvendo o verbo (Nzo Mikanda §4.45).",
         groups: [
           {
             title: "Negative sentences",
@@ -28656,14 +28656,14 @@ export const lessons: Lesson[] = [
         titlePt: "Modos: indicativo, subjuntivo, permansivo",
         explanation: "In Laadi, you can say things in 5 different ways depending on whether you're telling a story, making a wish, describing a state, and so on.",
         explanationFr: "En lari, on peut dire les choses de 5 façons différentes selon qu'on raconte, qu'on souhaite, qu'on décrit un état, etc.",
-        explanationPt: "O laadi tem 5 modos: indicativo, subjuntivo, permansivo, real e relativo (Jacquot & Lumwamu §3.20). Os padrões tonais mudam com o modo.",
+        explanationPt: "O laadi tem 5 modos: indicativo, subjuntivo, permansivo, real e relativo (Nzo Mikanda §3.20). Os padrões tonais mudam com o modo.",
         groups: [
           {
             title: "Indicative vs Subjunctive",
             titleFr: "Indicatif vs Subjonctif",
-            explanation: "Compare 'we drink' (indicative) with 'that we drink' (subjunctive) — same segments, different tones (Jacquot & Lumwamu §4.52.1-2).",
-            explanationFr: "Comparez 'nous buvons' (indicatif) avec 'que nous buvions' (subjonctif) — mêmes segments, tons différents (Jacquot & Lumwamu §4.52.1-2).",
-            explanationPt: "Compare 'nós bebemos' (indicativo) com 'que nós bebamos' (subjuntivo) — mesmos segmentos, tons diferentes (Jacquot & Lumwamu §4.52.1-2).",
+            explanation: "Compare 'we drink' (indicative) with 'that we drink' (subjunctive) — same segments, different tones (Nzo Mikanda §4.52.1-2).",
+            explanationFr: "Comparez 'nous buvons' (indicatif) avec 'que nous buvions' (subjonctif) — mêmes segments, tons différents (Nzo Mikanda §4.52.1-2).",
+            explanationPt: "Compare 'nós bebemos' (indicativo) com 'que nós bebamos' (subjuntivo) — mesmos segmentos, tons diferentes (Nzo Mikanda §4.52.1-2).",
             examples: [
               { lari: "tunua", mandombe: "Tunuwa", french: "nous buvons (indicatif)", english: "we drink (indicative)" },
               { lari: "tunua", mandombe: "Tunuwa", french: "que nous buvions (subjonctif, ton différent)", english: "that we drink (subjunctive, different tone)" },
@@ -28680,8 +28680,8 @@ export const lessons: Lesson[] = [
         options: ["prefix na-", "suffix -ko", "discontinuous ka...ko", "prefix si-"],
         optionsFr: ["préfixe na-", "suffixe -ko", "discontinu ka...ko", "préfixe si-"],
         correctIndex: 2,
-        explanation: "To say 'not', put ka before the verb and ko after: ka...ko (Jacquot & Lumwamu §4.45).",
-        explanationFr: "Pour dire « ne...pas », on met ka devant le verbe et ko après : ka...ko (Jacquot & Lumwamu §4.45).",
+        explanation: "To say 'not', put ka before the verb and ko after: ka...ko (Nzo Mikanda §4.45).",
+        explanationFr: "Pour dire « ne...pas », on met ka devant le verbe et ko après : ka...ko (Nzo Mikanda §4.45).",
       },
       {
         type: "matching" as const,
@@ -28709,8 +28709,8 @@ export const lessons: Lesson[] = [
         questionFr: "Combien de modes le verbe laadi possède-t-il ?",
         options: ["2", "3", "5", "7"],
         correctIndex: 2,
-        explanation: "5 ways to express things: telling, wishing, describing, real, relating (Jacquot & Lumwamu §3.20).",
-        explanationFr: "5 façons de s'exprimer : raconter, souhaiter, décrire un état, etc. (Jacquot & Lumwamu §3.20).",
+        explanation: "5 ways to express things: telling, wishing, describing, real, relating (Nzo Mikanda §3.20).",
+        explanationFr: "5 façons de s'exprimer : raconter, souhaiter, décrire un état, etc. (Nzo Mikanda §3.20).",
       },
     ],
   },
@@ -28725,9 +28725,9 @@ export const lessons: Lesson[] = [
     titlePt: "Derivação verbal",
     titleLari: "Mpila ya bivuka bia mambu",
     titleMandombe: "Mpila Ya Bivuka Biya Mambu",
-    description: "Master the 30 root derivation affixes of Laadi: causative, applicative, passive, reversive, reciprocal, and more from Jacquot & Lumwamu's analysis.",
-    descriptionFr: "Maîtrisez les 30 affixes de dérivation de la racine en laadi : causatif, applicatif, passif, inversif, réciproque, etc., d'après l'analyse de Jacquot & Lumwamu.",
-    descriptionPt: "Domine os 30 afixos de derivação da raiz em laadi: causativo, aplicativo, passivo, reversivo, recíproco, etc., segundo a análise de Jacquot & Lumwamu.",
+    description: "Master the 30 root derivation affixes of Laadi: causative, applicative, passive, reversive, reciprocal, and more from Nzo Mikanda's analysis.",
+    descriptionFr: "Maîtrisez les 30 affixes de dérivation de la racine en laadi : causatif, applicatif, passif, inversif, réciproque, etc., d'après l'analyse de Nzo Mikanda.",
+    descriptionPt: "Domine os 30 afixos de derivação da raiz em laadi: causativo, aplicativo, passivo, reversivo, recíproco, etc., segundo a análise de Nzo Mikanda.",
     level: "intermediate",
     icon: "🔧",
     vocabulary: [
@@ -28750,9 +28750,9 @@ export const lessons: Lesson[] = [
         title: "Causative: -is- / -us-",
         titleFr: "Causatif : -is- / -us-",
         titlePt: "Causativo: -is- / -us-",
-        explanation: "The causative active -is- means 'to cause someone to do X'. The causative passive -us- means 'to cause a state' (Jacquot & Lumwamu §3.5.4, §3.5.11).",
-        explanationFr: "Le causatif actif -is- signifie 'faire faire X à quelqu'un'. Le causatif passif -us- signifie 'provoquer un état' (Jacquot & Lumwamu §3.5.4, §3.5.11).",
-        explanationPt: "O causativo ativo -is- significa 'fazer alguém fazer X'. O causativo passivo -us- significa 'causar um estado' (Jacquot & Lumwamu §3.5.4, §3.5.11).",
+        explanation: "The causative active -is- means 'to cause someone to do X'. The causative passive -us- means 'to cause a state' (Nzo Mikanda §3.5.4, §3.5.11).",
+        explanationFr: "Le causatif actif -is- signifie 'faire faire X à quelqu'un'. Le causatif passif -us- signifie 'provoquer un état' (Nzo Mikanda §3.5.4, §3.5.11).",
+        explanationPt: "O causativo ativo -is- significa 'fazer alguém fazer X'. O causativo passivo -us- significa 'causar um estado' (Nzo Mikanda §3.5.4, §3.5.11).",
         groups: [
           {
             title: "Causative active -is-",
@@ -28782,9 +28782,9 @@ export const lessons: Lesson[] = [
         title: "Applicative: -il-",
         titleFr: "Applicatif : -il-",
         titlePt: "Aplicativo: -il-",
-        explanation: "The applicative -il- adds a benefactive or directional meaning: 'to do X for/to someone' (Jacquot & Lumwamu §3.5.9).",
-        explanationFr: "L'applicatif -il- ajoute un sens bénéfactif ou directionnel : 'faire X pour/vers quelqu'un' (Jacquot & Lumwamu §3.5.9).",
-        explanationPt: "O aplicativo -il- adiciona um sentido benefactivo ou direcional: 'fazer X para/em direção a alguém' (Jacquot & Lumwamu §3.5.9).",
+        explanation: "The applicative -il- adds a benefactive or directional meaning: 'to do X for/to someone' (Nzo Mikanda §3.5.9).",
+        explanationFr: "L'applicatif -il- ajoute un sens bénéfactif ou directionnel : 'faire X pour/vers quelqu'un' (Nzo Mikanda §3.5.9).",
+        explanationPt: "O aplicativo -il- adiciona um sentido benefactivo ou direcional: 'fazer X para/em direção a alguém' (Nzo Mikanda §3.5.9).",
         groups: [
           {
             title: "Applicative examples",
@@ -28801,9 +28801,9 @@ export const lessons: Lesson[] = [
         title: "Passive & Reversive: -uk- / -ul-",
         titleFr: "Passif et inversif : -uk- / -ul-",
         titlePt: "Passivo e reversivo: -uk- / -ul-",
-        explanation: "The passive -uk- indicates the result of an action. The reversive active -ul- undoes an action. The reversive passive -uk- (§3.5.13) indicates the resulting state of undoing (Jacquot & Lumwamu §3.5.12-17).",
-        explanationFr: "Le passif -uk- indique le résultat d'une action. L'inversif actif -ul- défait une action. L'inversif passif -uk- (§3.5.13) indique l'état résultant de la défaite (Jacquot & Lumwamu §3.5.12-17).",
-        explanationPt: "O passivo -uk- indica o resultado de uma ação. O reversivo ativo -ul- desfaz uma ação. O reversivo passivo -uk- (§3.5.13) indica o estado resultante de desfazer (Jacquot & Lumwamu §3.5.12-17).",
+        explanation: "The passive -uk- indicates the result of an action. The reversive active -ul- undoes an action. The reversive passive -uk- (§3.5.13) indicates the resulting state of undoing (Nzo Mikanda §3.5.12-17).",
+        explanationFr: "Le passif -uk- indique le résultat d'une action. L'inversif actif -ul- défait une action. L'inversif passif -uk- (§3.5.13) indique l'état résultant de la défaite (Nzo Mikanda §3.5.12-17).",
+        explanationPt: "O passivo -uk- indica o resultado de uma ação. O reversivo ativo -ul- desfaz uma ação. O reversivo passivo -uk- (§3.5.13) indica o estado resultante de desfazer (Nzo Mikanda §3.5.12-17).",
         groups: [
           {
             title: "The zibika/zibama/zibuka/zibula paradigm",
@@ -28824,9 +28824,9 @@ export const lessons: Lesson[] = [
         title: "Reciprocal & Stative: -an- / -am-",
         titleFr: "Réciproque et statif : -an- / -am-",
         titlePt: "Recíproco e estativo: -an- / -am-",
-        explanation: "The reciprocal -an- means 'each other'. The stative -am- indicates a resulting state (Jacquot & Lumwamu §3.5.27-29).",
-        explanationFr: "Le réciproque -an- signifie 'l'un l'autre'. Le statif -am- indique un état résultant (Jacquot & Lumwamu §3.5.27-29).",
-        explanationPt: "O recíproco -an- significa 'um ao outro'. O estativo -am- indica um estado resultante (Jacquot & Lumwamu §3.5.27-29).",
+        explanation: "The reciprocal -an- means 'each other'. The stative -am- indicates a resulting state (Nzo Mikanda §3.5.27-29).",
+        explanationFr: "Le réciproque -an- signifie 'l'un l'autre'. Le statif -am- indique un état résultant (Nzo Mikanda §3.5.27-29).",
+        explanationPt: "O recíproco -an- significa 'um ao outro'. O estativo -am- indica um estado resultante (Nzo Mikanda §3.5.27-29).",
         groups: [
           {
             title: "Reciprocal and stative examples",
@@ -28848,8 +28848,8 @@ export const lessons: Lesson[] = [
         options: ["makes a verb passive", "adds a reciprocal meaning", "means 'to cause someone to do X'", "indicates a state"],
         optionsFr: ["rend le verbe passif", "ajoute un sens réciproque", "signifie 'faire faire X à quelqu'un'", "indique un état"],
         correctIndex: 2,
-        explanation: "The causative -is- means 'to make/cause to do': bika → bikisa (Jacquot & Lumwamu §3.5.4).",
-        explanationFr: "Le causatif -is- signifie 'faire faire' : bika → bikisa (Jacquot & Lumwamu §3.5.4).",
+        explanation: "The causative -is- means 'to make/cause to do': bika → bikisa (Nzo Mikanda §3.5.4).",
+        explanationFr: "Le causatif -is- signifie 'faire faire' : bika → bikisa (Nzo Mikanda §3.5.4).",
       },
       {
         type: "matching" as const,
@@ -28885,8 +28885,8 @@ export const lessons: Lesson[] = [
         questionFr: "Combien d'affixes de dérivation de la racine le laadi possède-t-il ?",
         options: ["10", "20", "30", "40"],
         correctIndex: 2,
-        explanation: "Laadi has 30 root derivation affixes (Jacquot & Lumwamu §3.5).",
-        explanationFr: "Le laadi possède 30 affixes de dérivation de la racine (Jacquot & Lumwamu §3.5).",
+        explanation: "Laadi has 30 root derivation affixes (Nzo Mikanda §3.5).",
+        explanationFr: "Le laadi possède 30 affixes de dérivation de la racine (Nzo Mikanda §3.5).",
       },
     ],
   },
@@ -28921,9 +28921,9 @@ export const lessons: Lesson[] = [
         title: "Abstract Nouns: bu-",
         titleFr: "Noms abstraits : bu-",
         titlePt: "Nomes abstratos: bu-",
-        explanation: "The prefix bu- creates abstract nouns expressing qualities or states (Jacquot & Lumwamu §3.7.1).",
-        explanationFr: "Le préfixe bu- crée des noms abstraits exprimant des qualités ou des états (Jacquot & Lumwamu §3.7.1).",
-        explanationPt: "O prefixo bu- cria nomes abstratos que expressam qualidades ou estados (Jacquot & Lumwamu §3.7.1).",
+        explanation: "The prefix bu- creates abstract nouns expressing qualities or states (Nzo Mikanda §3.7.1).",
+        explanationFr: "Le préfixe bu- crée des noms abstraits exprimant des qualités ou des états (Nzo Mikanda §3.7.1).",
+        explanationPt: "O prefixo bu- cria nomes abstratos que expressam qualidades ou estados (Nzo Mikanda §3.7.1).",
         groups: [
           {
             title: "Abstract derivation examples",
@@ -28939,9 +28939,9 @@ export const lessons: Lesson[] = [
         title: "Nomino-verbal Derivation",
         titleFr: "Dérivation nomino-verbale",
         titlePt: "Derivação nomino-verbal",
-        explanation: "Nouns can be derived from verbs to express the abstract concept of the action (Jacquot & Lumwamu §3.7.8).",
-        explanationFr: "Des noms peuvent être dérivés de verbes pour exprimer le concept abstrait de l'action (Jacquot & Lumwamu §3.7.8).",
-        explanationPt: "Nomes podem ser derivados de verbos para expressar o conceito abstrato da ação (Jacquot & Lumwamu §3.7.8).",
+        explanation: "Nouns can be derived from verbs to express the abstract concept of the action (Nzo Mikanda §3.7.8).",
+        explanationFr: "Des noms peuvent être dérivés de verbes pour exprimer le concept abstrait de l'action (Nzo Mikanda §3.7.8).",
+        explanationPt: "Nomes podem ser derivados de verbos para expressar o conceito abstrato da ação (Nzo Mikanda §3.7.8).",
         groups: [
           {
             title: "Verb-to-noun examples",
@@ -28958,9 +28958,9 @@ export const lessons: Lesson[] = [
         title: "Ordinal Numbers: n-",
         titleFr: "Nombres ordinaux : n-",
         titlePt: "Números ordinais: n-",
-        explanation: "Ordinal numbers are formed with the 'circumstantial' prefix n- applied to cardinal numerals (Jacquot & Lumwamu §5.5.2.1).",
-        explanationFr: "Les nombres ordinaux sont formés avec le préfixe 'circonstanciel' n- appliqué aux numéraux cardinaux (Jacquot & Lumwamu §5.5.2.1).",
-        explanationPt: "Os números ordinais são formados com o prefixo 'circunstancial' n- aplicado aos numerais cardinais (Jacquot & Lumwamu §5.5.2.1).",
+        explanation: "Ordinal numbers are formed with the 'circumstantial' prefix n- applied to cardinal numerals (Nzo Mikanda §5.5.2.1).",
+        explanationFr: "Les nombres ordinaux sont formés avec le préfixe 'circonstanciel' n- appliqué aux numéraux cardinaux (Nzo Mikanda §5.5.2.1).",
+        explanationPt: "Os números ordinais são formados com o prefixo 'circunstancial' n- aplicado aos numerais cardinais (Nzo Mikanda §5.5.2.1).",
         groups: [
           {
             title: "Ordinal number examples",
@@ -28991,8 +28991,8 @@ export const lessons: Lesson[] = [
         questionFr: "Quel préfixe crée des noms abstraits en laadi ?",
         options: ["mu-", "ba-", "bu-", "lu-"],
         correctIndex: 2,
-        explanation: "bu- creates abstract nouns: bumuntu, bukento (Jacquot & Lumwamu §3.7.1).",
-        explanationFr: "bu- crée des noms abstraits : bumuntu, bukento (Jacquot & Lumwamu §3.7.1).",
+        explanation: "bu- creates abstract nouns: bumuntu, bukento (Nzo Mikanda §3.7.1).",
+        explanationFr: "bu- crée des noms abstraits : bumuntu, bukento (Nzo Mikanda §3.7.1).",
       },
       {
         type: "fill-in-blank" as const,
@@ -29015,9 +29015,9 @@ export const lessons: Lesson[] = [
     titlePt: "Sintaxe avançada",
     titleLari: "Mpila ya ndinga ya kati",
     titleMandombe: "Mpila Ya Ndinga Ya Kati",
-    description: "Advanced sentence patterns in Laadi: relative clauses, verbal composition, prepositions, and determiners from Jacquot & Lumwamu's syntactic analysis.",
-    descriptionFr: "Structures de phrases avancées en laadi : relatives, composition verbale, prépositions et déterminants, d'après l'analyse syntaxique de Jacquot & Lumwamu.",
-    descriptionPt: "Padrões avançados de frases em laadi: cláusulas relativas, composição verbal, preposições e determinantes, segundo a análise sintática de Jacquot & Lumwamu.",
+    description: "Advanced sentence patterns in Laadi: relative clauses, verbal composition, prepositions, and determiners from Nzo Mikanda's syntactic analysis.",
+    descriptionFr: "Structures de phrases avancées en laadi : relatives, composition verbale, prépositions et déterminants, d'après l'analyse syntaxique de Nzo Mikanda.",
+    descriptionPt: "Padrões avançados de frases em laadi: cláusulas relativas, composição verbal, preposições e determinantes, segundo a análise sintática de Nzo Mikanda.",
     level: "advanced",
     icon: "🧠",
     vocabulary: [
@@ -29034,9 +29034,9 @@ export const lessons: Lesson[] = [
         title: "Relative Mode",
         titleFr: "Mode relatif",
         titlePt: "Modo relativo",
-        explanation: "The relative mode is used in relative clauses. The personal pronoun precedes the verbal form. Tone patterns differ from the indicative (Jacquot & Lumwamu §4.52.5).",
-        explanationFr: "Le mode relatif est utilisé dans les propositions relatives. Le pronom personnel précède la forme verbale. Les schèmes tonals diffèrent de l'indicatif (Jacquot & Lumwamu §4.52.5).",
-        explanationPt: "O modo relativo é usado em cláusulas relativas. O pronome pessoal precede a forma verbal. Os padrões tonais diferem do indicativo (Jacquot & Lumwamu §4.52.5).",
+        explanation: "The relative mode is used in relative clauses. The personal pronoun precedes the verbal form. Tone patterns differ from the indicative (Nzo Mikanda §4.52.5).",
+        explanationFr: "Le mode relatif est utilisé dans les propositions relatives. Le pronom personnel précède la forme verbale. Les schèmes tonals diffèrent de l'indicatif (Nzo Mikanda §4.52.5).",
+        explanationPt: "O modo relativo é usado em cláusulas relativas. O pronome pessoal precede a forma verbal. Os padrões tonais diferem do indicativo (Nzo Mikanda §4.52.5).",
         groups: [
           {
             title: "Relative clause examples",
@@ -29056,9 +29056,9 @@ export const lessons: Lesson[] = [
         title: "Locative Prepositions",
         titleFr: "Prépositions locatives",
         titlePt: "Preposições locativas",
-        explanation: "Three locative prepositions distinguish spatial relationships: mu (interior/duration), ku (distinct place/moment), ga (surface/instant) (Jacquot & Lumwamu §5.22.1).",
-        explanationFr: "Trois prépositions locatives distinguent les relations spatiales : mu (intérieur/durée), ku (lieu/moment distinct), ga (surface/instant) (Jacquot & Lumwamu §5.22.1).",
-        explanationPt: "Três preposições locativas distinguem relações espaciais: mu (interior/duração), ku (lugar/momento distinto), ga (superfície/instante) (Jacquot & Lumwamu §5.22.1).",
+        explanation: "Three locative prepositions distinguish spatial relationships: mu (interior/duration), ku (distinct place/moment), ga (surface/instant) (Nzo Mikanda §5.22.1).",
+        explanationFr: "Trois prépositions locatives distinguent les relations spatiales : mu (intérieur/durée), ku (lieu/moment distinct), ga (surface/instant) (Nzo Mikanda §5.22.1).",
+        explanationPt: "Três preposições locativas distinguem relações espaciais: mu (interior/duração), ku (lugar/momento distinto), ga (superfície/instante) (Nzo Mikanda §5.22.1).",
         groups: [
           {
             title: "Spatial distinctions",
@@ -29074,9 +29074,9 @@ export const lessons: Lesson[] = [
         title: "The Copula giena",
         titleFr: "La copule giena",
         titlePt: "A cópula giena",
-        explanation: "The copula 'giena' (to be) has multiple variant forms depending on context: giena/ena/gie- (Jacquot & Lumwamu §4.5.1.4). It functions as a predicative attributive.",
-        explanationFr: "La copule 'giena' (être) a plusieurs variantes selon le contexte : giena/ena/gie- (Jacquot & Lumwamu §4.5.1.4). Elle fonctionne comme prédicat attributif.",
-        explanationPt: "A cópula 'giena' (ser) tem várias formas variantes dependendo do contexto: giena/ena/gie- (Jacquot & Lumwamu §4.5.1.4). Funciona como predicado atributivo.",
+        explanation: "The copula 'giena' (to be) has multiple variant forms depending on context: giena/ena/gie- (Nzo Mikanda §4.5.1.4). It functions as a predicative attributive.",
+        explanationFr: "La copule 'giena' (être) a plusieurs variantes selon le contexte : giena/ena/gie- (Nzo Mikanda §4.5.1.4). Elle fonctionne comme prédicat attributif.",
+        explanationPt: "A cópula 'giena' (ser) tem várias formas variantes dependendo do contexto: giena/ena/gie- (Nzo Mikanda §4.5.1.4). Funciona como predicado atributivo.",
         groups: [
           {
             title: "Copula variants",
@@ -29094,9 +29094,9 @@ export const lessons: Lesson[] = [
         title: "Verbal Composition",
         titleFr: "Composition verbale",
         titlePt: "Composição verbal",
-        explanation: "Laadi allows verbal composition by juxtaposing verb stems. The auxiliary verb precedes the main verb (Jacquot & Lumwamu §5.9.2.2).",
-        explanationFr: "Le laadi permet la composition verbale par juxtaposition de radicaux verbaux. Le verbe auxiliaire précède le verbe principal (Jacquot & Lumwamu §5.9.2.2).",
-        explanationPt: "O laadi permite composição verbal por justaposição de radicais verbais. O verbo auxiliar precede o verbo principal (Jacquot & Lumwamu §5.9.2.2).",
+        explanation: "Laadi allows verbal composition by juxtaposing verb stems. The auxiliary verb precedes the main verb (Nzo Mikanda §5.9.2.2).",
+        explanationFr: "Le laadi permet la composition verbale par juxtaposition de radicaux verbaux. Le verbe auxiliaire précède le verbe principal (Nzo Mikanda §5.9.2.2).",
+        explanationPt: "O laadi permite composição verbal por justaposição de radicais verbais. O verbo auxiliar precede o verbo principal (Nzo Mikanda §5.9.2.2).",
         groups: [
           {
             title: "Auxiliary + main verb",
@@ -29120,8 +29120,8 @@ export const lessons: Lesson[] = [
         options: ["tunua", "beto tunua", "ka tunua ko", "tunua beto"],
         optionsFr: ["tunua", "beto tunua", "ka tunua ko", "tunua beto"],
         correctIndex: 1,
-        explanation: "In the relative mode, the pronoun (beto) precedes the verb form (Jacquot & Lumwamu §4.52.5).",
-        explanationFr: "En mode relatif, le pronom (beto) précède la forme verbale (Jacquot & Lumwamu §4.52.5).",
+        explanation: "In the relative mode, the pronoun (beto) precedes the verb form (Nzo Mikanda §4.52.5).",
+        explanationFr: "En mode relatif, le pronom (beto) précède la forme verbale (Nzo Mikanda §4.52.5).",
       },
       {
         type: "matching" as const,
@@ -29148,8 +29148,8 @@ export const lessons: Lesson[] = [
         questionFr: "Quelle préposition locative indique l''intérieur' ou la 'durée' ?",
         options: ["ku", "ga", "mu", "na"],
         correctIndex: 2,
-        explanation: "mu indicates interior or duration (Jacquot & Lumwamu §5.22.1).",
-        explanationFr: "mu indique l'intérieur ou la durée (Jacquot & Lumwamu §5.22.1).",
+        explanation: "mu indicates interior or duration (Nzo Mikanda §5.22.1).",
+        explanationFr: "mu indique l'intérieur ou la durée (Nzo Mikanda §5.22.1).",
       },
     ],
   },
@@ -29161,9 +29161,9 @@ export const lessons: Lesson[] = [
     titlePt: "Neutralizações e morfofonologia",
     titleLari: "Mpila ya mbongolo ya mambu",
     titleMandombe: "Mpila Ya Mbongolo Ya Mambu",
-    description: "Advanced phonological processes in Laadi: consonant and vowel neutralizations, archiphonemes, and contextual alternations from Jacquot & Lumwamu's analysis.",
-    descriptionFr: "Processus phonologiques avancés en laadi : neutralisations consonantiques et vocaliques, archiphonèmes et alternances contextuelles, d'après l'analyse de Jacquot & Lumwamu.",
-    descriptionPt: "Processos fonológicos avançados em laadi: neutralizações consonânticas e vocálicas, arquifonemas e alternâncias contextuais, segundo a análise de Jacquot & Lumwamu.",
+    description: "Advanced phonological processes in Laadi: consonant and vowel neutralizations, archiphonemes, and contextual alternations from Nzo Mikanda's analysis.",
+    descriptionFr: "Processus phonologiques avancés en laadi : neutralisations consonantiques et vocaliques, archiphonèmes et alternances contextuelles, d'après l'analyse de Nzo Mikanda.",
+    descriptionPt: "Processos fonológicos avançados em laadi: neutralizações consonânticas e vocálicas, arquifonemas e alternâncias contextuais, segundo a análise de Nzo Mikanda.",
     level: "advanced",
     icon: "🔬",
     vocabulary: [
@@ -29178,16 +29178,16 @@ export const lessons: Lesson[] = [
         title: "Consonant Neutralizations",
         titleFr: "Neutralisations consonantiques",
         titlePt: "Neutralizações consonânticas",
-        explanation: "In specific phonological contexts, certain consonant oppositions are suspended (neutralized). After a nasal not bearing a tone, fricative/affricate oppositions merge under the affricate term (Jacquot & Lumwamu §1.45).",
-        explanationFr: "Dans des contextes phonologiques spécifiques, certaines oppositions consonantiques sont suspendues (neutralisées). Après une nasale ne portant pas de ton, les oppositions fricative/affriquée fusionnent sous le terme affriqué (Jacquot & Lumwamu §1.45).",
-        explanationPt: "Em contextos fonológicos específicos, certas oposições consonânticas são suspensas (neutralizadas). Após uma nasal sem tom, as oposições fricativa/africada fundem-se sob o termo africado (Jacquot & Lumwamu §1.45).",
+        explanation: "In specific phonological contexts, certain consonant oppositions are suspended (neutralized). After a nasal not bearing a tone, fricative/affricate oppositions merge under the affricate term (Nzo Mikanda §1.45).",
+        explanationFr: "Dans des contextes phonologiques spécifiques, certaines oppositions consonantiques sont suspendues (neutralisées). Après une nasale ne portant pas de ton, les oppositions fricative/affriquée fusionnent sous le terme affriqué (Nzo Mikanda §1.45).",
+        explanationPt: "Em contextos fonológicos específicos, certas oposições consonânticas são suspensas (neutralizadas). Após uma nasal sem tom, as oposições fricativa/africada fundem-se sob o termo africado (Nzo Mikanda §1.45).",
         groups: [
           {
             title: "f/pf neutralization after nasal",
             titleFr: "Neutralisation f/pf après nasale",
-            explanation: "After a nasal consonant, the distinction between f and pf is neutralized under the archiphoneme PF (Jacquot & Lumwamu §1.45.1).",
-            explanationFr: "Après une consonne nasale, la distinction entre f et pf est neutralisée sous l'archiphonème PF (Jacquot & Lumwamu §1.45.1).",
-            explanationPt: "Após uma consoante nasal, a distinção entre f e pf é neutralizada sob o arquifonema PF (Jacquot & Lumwamu §1.45.1).",
+            explanation: "After a nasal consonant, the distinction between f and pf is neutralized under the archiphoneme PF (Nzo Mikanda §1.45.1).",
+            explanationFr: "Après une consonne nasale, la distinction entre f et pf est neutralisée sous l'archiphonème PF (Nzo Mikanda §1.45.1).",
+            explanationPt: "Após uma consoante nasal, a distinção entre f e pf é neutralizada sob o arquifonema PF (Nzo Mikanda §1.45.1).",
             examples: [
               { lari: "mpfudidi", mandombe: "Mpfudidi", french: "je soufflais / j'exorcisais", english: "I was blowing / I was exorcising", note: "Neutralisation : même forme pour deux verbes différents" },
             ],
@@ -29195,9 +29195,9 @@ export const lessons: Lesson[] = [
           {
             title: "d/l neutralization after nasal",
             titleFr: "Neutralisation d/l après nasale",
-            explanation: "After a pre-nasal, d and l merge under the archiphoneme D (Jacquot & Lumwamu §1.45.5).",
-            explanationFr: "Après une prénasale, d et l fusionnent sous l'archiphonème D (Jacquot & Lumwamu §1.45.5).",
-            explanationPt: "Após uma pré-nasal, d e l fundem-se sob o arquifonema D (Jacquot & Lumwamu §1.45.5).",
+            explanation: "After a pre-nasal, d and l merge under the archiphoneme D (Nzo Mikanda §1.45.5).",
+            explanationFr: "Après une prénasale, d et l fusionnent sous l'archiphonème D (Nzo Mikanda §1.45.5).",
+            explanationPt: "Após uma pré-nasal, d e l fundem-se sob o arquifonema D (Nzo Mikanda §1.45.5).",
             examples: [
               { lari: "ndukidi", mandombe: "Ndukidi", french: "je vomissais / je bouchais", english: "I was vomiting / I was blocking", note: "Neutralisation d/l : même forme pour deux verbes" },
             ],
@@ -29208,9 +29208,9 @@ export const lessons: Lesson[] = [
         title: "Habitual & Repetitive",
         titleFr: "Habituel et répétitif",
         titlePt: "Habitual e repetitivo",
-        explanation: "The habitual -ak- and repetitive -a·ng- affixes add aspectual nuances of regularity to verb roots (Jacquot & Lumwamu §3.5.23, §3.5.26).",
-        explanationFr: "Les affixes habituel -ak- et répétitif -a·ng- ajoutent des nuances aspectuelles de régularité aux racines verbales (Jacquot & Lumwamu §3.5.23, §3.5.26).",
-        explanationPt: "Os afixos habitual -ak- e repetitivo -a·ng- adicionam nuances aspectuais de regularidade às raízes verbais (Jacquot & Lumwamu §3.5.23, §3.5.26).",
+        explanation: "The habitual -ak- and repetitive -a·ng- affixes add aspectual nuances of regularity to verb roots (Nzo Mikanda §3.5.23, §3.5.26).",
+        explanationFr: "Les affixes habituel -ak- et répétitif -a·ng- ajoutent des nuances aspectuelles de régularité aux racines verbales (Nzo Mikanda §3.5.23, §3.5.26).",
+        explanationPt: "Os afixos habitual -ak- e repetitivo -a·ng- adicionam nuances aspectuais de regularidade às raízes verbais (Nzo Mikanda §3.5.23, §3.5.26).",
         groups: [
           {
             title: "Habitual -ak- examples",
@@ -29240,8 +29240,8 @@ export const lessons: Lesson[] = [
         options: ["f disappears", "they are neutralized under PF", "pf becomes f", "nothing changes"],
         optionsFr: ["f disparaît", "elles sont neutralisées sous PF", "pf devient f", "rien ne change"],
         correctIndex: 1,
-        explanation: "After a nasal, f/pf neutralize under the archiphoneme PF (Jacquot & Lumwamu §1.45.1).",
-        explanationFr: "Après une nasale, f/pf se neutralisent sous l'archiphonème PF (Jacquot & Lumwamu §1.45.1).",
+        explanation: "After a nasal, f/pf neutralize under the archiphoneme PF (Nzo Mikanda §1.45.1).",
+        explanationFr: "Après une nasale, f/pf se neutralisent sous l'archiphonème PF (Nzo Mikanda §1.45.1).",
       },
       {
         type: "matching" as const,
@@ -29275,9 +29275,9 @@ export const lessons: Lesson[] = [
     titlePt: "Pronomes pessoais e demonstrativos",
     titleLari: "Binkumbu bia bantu",
     titleMandombe: "Binkumbu Biya Bantu",
-    description: "Learn the Laadi pronouns: I, you, he/she, we, you (pl), they — and how spoken Lari uses NA and NI instead of saying 'I' (Jacquot & Lumwamu).",
-    descriptionFr: "Apprenez les pronoms du lari : je, tu, il/elle, nous, vous, ils — et comment le lari parlé utilise NA et NI au lieu de dire « je » (Jacquot & Lumwamu).",
-    descriptionPt: "Aprenda os pronomes do laadi: eu, tu, ele/ela, nós, vós, eles — e como o lari falado usa NA e NI em vez de dizer 'eu' (Jacquot & Lumwamu).",
+    description: "Learn the Laadi pronouns: I, you, he/she, we, you (pl), they — and how spoken Lari uses NA and NI instead of saying 'I' (Nzo Mikanda).",
+    descriptionFr: "Apprenez les pronoms du lari : je, tu, il/elle, nous, vous, ils — et comment le lari parlé utilise NA et NI au lieu de dire « je » (Nzo Mikanda).",
+    descriptionPt: "Aprenda os pronomes do laadi: eu, tu, ele/ela, nós, vós, eles — e como o lari falado usa NA e NI em vez de dizer 'eu' (Nzo Mikanda).",
     level: "beginner",
     icon: "👤",
     vocabulary: [
@@ -29359,8 +29359,8 @@ export const lessons: Lesson[] = [
         questionPt: "No lari falado, qual marcador substitui 'eu' em uma frase no passado?",
         options: ["NI", "NA", "Meno", "KA"],
         correctIndex: 1,
-        explanation: "NA is used for the 1st person singular in the past: 'Mazuji ku Mfua NA yele' (Jacquot & Lumwamu).",
-        explanationFr: "NA s'utilise pour la 1re personne du singulier au passé : « Mazuji ku Mfua NA yele » (Jacquot & Lumwamu).",
+        explanation: "NA is used for the 1st person singular in the past: 'Mazuji ku Mfua NA yele' (Nzo Mikanda).",
+        explanationFr: "NA s'utilise pour la 1re personne du singulier au passé : « Mazuji ku Mfua NA yele » (Nzo Mikanda).",
       },
       {
         type: "multiple-choice" as const,
@@ -29369,8 +29369,8 @@ export const lessons: Lesson[] = [
         options: ["Yesterday I went to the market", "Tomorrow I will go to the market", "We go to the market", "You went to the market"],
         optionsFr: ["Hier je suis allé au marché", "Demain j'irai au marché", "Nous allons au marché", "Tu es allé au marché"],
         correctIndex: 1,
-        explanation: "NI marks the 1st person singular in the future: 'Tomorrow I will go to the market' (Jacquot & Lumwamu).",
-        explanationFr: "NI marque la 1re personne du singulier au futur : « Demain j'irai au marché » (Jacquot & Lumwamu).",
+        explanation: "NI marks the 1st person singular in the future: 'Tomorrow I will go to the market' (Nzo Mikanda).",
+        explanationFr: "NI marque la 1re personne du singulier au futur : « Demain j'irai au marché » (Nzo Mikanda).",
       },
       {
         type: "matching" as const,
@@ -29423,9 +29423,9 @@ export const lessons: Lesson[] = [
     titlePt: "Sistema verbal: tempos e aspectos",
     titleLari: "Mpila ya bisalu bia ntangu",
     titleMandombe: "Mpila Ya Bisalu Biya Ntangu",
-    description: "Master the Laadi tense system: past (near/remote), present, future, progressive, and negation at each tense (Jacquot & Lumwamu).",
-    descriptionFr: "Maîtrisez le système des temps en lari : passé (proche/lointain), présent, futur, progressif, et la négation à chaque temps (Jacquot & Lumwamu).",
-    descriptionPt: "Domine o sistema de tempos do laadi: passado (próximo/remoto), presente, futuro, progressivo e negação em cada tempo (Jacquot & Lumwamu).",
+    description: "Master the Laadi tense system: past (near/remote), present, future, progressive, and negation at each tense (Nzo Mikanda).",
+    descriptionFr: "Maîtrisez le système des temps en lari : passé (proche/lointain), présent, futur, progressif, et la négation à chaque temps (Nzo Mikanda).",
+    descriptionPt: "Domine o sistema de tempos do laadi: passado (próximo/remoto), presente, futuro, progressivo e negação em cada tempo (Nzo Mikanda).",
     level: "intermediate",
     icon: "⏳",
     vocabulary: [
@@ -29445,9 +29445,9 @@ export const lessons: Lesson[] = [
         title: "Past Tenses",
         titleFr: "Les temps du passé",
         titlePt: "Os tempos do passado",
-        explanation: "Laadi distinguishes recent past (mazuji = yesterday) and remote past (mazono = long ago). The 1st person singular uses the marker NA (Jacquot & Lumwamu §4.52).",
-        explanationFr: "Le lari distingue le passé proche (mazuji = hier) et le passé lointain (mazono = il y a longtemps). La 1re personne du singulier utilise le marqueur NA (Jacquot & Lumwamu §4.52).",
-        explanationPt: "O laadi distingue passado recente (mazuji = ontem) e passado remoto (mazono = há muito tempo). A 1ª pessoa singular usa o marcador NA (Jacquot & Lumwamu §4.52).",
+        explanation: "Laadi distinguishes recent past (mazuji = yesterday) and remote past (mazono = long ago). The 1st person singular uses the marker NA (Nzo Mikanda §4.52).",
+        explanationFr: "Le lari distingue le passé proche (mazuji = hier) et le passé lointain (mazono = il y a longtemps). La 1re personne du singulier utilise le marqueur NA (Nzo Mikanda §4.52).",
+        explanationPt: "O laadi distingue passado recente (mazuji = ontem) e passado remoto (mazono = há muito tempo). A 1ª pessoa singular usa o marcador NA (Nzo Mikanda §4.52).",
         groups: [
           {
             title: "Recent past with 'sala' (to work)",
@@ -29476,9 +29476,9 @@ export const lessons: Lesson[] = [
         title: "Present & Future",
         titleFr: "Présent et futur",
         titlePt: "Presente e futuro",
-        explanation: "The present and future use the marker NI for 1st person singular. The future is indicated by the word 'mbaji' (tomorrow) (Jacquot & Lumwamu §4.52).",
-        explanationFr: "Le présent et le futur utilisent le marqueur NI pour la 1re personne du singulier. Le futur est indiqué par le mot « mbaji » (demain) (Jacquot & Lumwamu §4.52).",
-        explanationPt: "O presente e o futuro usam o marcador NI para a 1ª pessoa do singular. O futuro é indicado pela palavra 'mbaji' (amanhã) (Jacquot & Lumwamu §4.52).",
+        explanation: "The present and future use the marker NI for 1st person singular. The future is indicated by the word 'mbaji' (tomorrow) (Nzo Mikanda §4.52).",
+        explanationFr: "Le présent et le futur utilisent le marqueur NI pour la 1re personne du singulier. Le futur est indiqué par le mot « mbaji » (demain) (Nzo Mikanda §4.52).",
+        explanationPt: "O presente e o futuro usam o marcador NI para a 1ª pessoa do singular. O futuro é indicado pela palavra 'mbaji' (amanhã) (Nzo Mikanda §4.52).",
         groups: [
           {
             title: "Present tense",
@@ -29506,9 +29506,9 @@ export const lessons: Lesson[] = [
         title: "Progressive & Negation",
         titleFr: "Progressif et négation",
         titlePt: "Progressivo e negação",
-        explanation: "The progressive uses 'tama' (to be doing) before the main verb. Negation wraps the verb with ka...ko at all tenses (Jacquot & Lumwamu §4.45).",
-        explanationFr: "Le progressif utilise « tama » (être en train de) devant le verbe principal. La négation encadre le verbe avec ka...ko à tous les temps (Jacquot & Lumwamu §4.45).",
-        explanationPt: "O progressivo usa 'tama' (estar fazendo) antes do verbo principal. A negação envolve o verbo com ka...ko em todos os tempos (Jacquot & Lumwamu §4.45).",
+        explanation: "The progressive uses 'tama' (to be doing) before the main verb. Negation wraps the verb with ka...ko at all tenses (Nzo Mikanda §4.45).",
+        explanationFr: "Le progressif utilise « tama » (être en train de) devant le verbe principal. La négation encadre le verbe avec ka...ko à tous les temps (Nzo Mikanda §4.45).",
+        explanationPt: "O progressivo usa 'tama' (estar fazendo) antes do verbo principal. A negação envolve o verbo com ka...ko em todos os tempos (Nzo Mikanda §4.45).",
         groups: [
           {
             title: "Progressive and negation examples",
@@ -29530,8 +29530,8 @@ export const lessons: Lesson[] = [
         questionFr: "Comment dit-on « Hier j'ai travaillé » en lari ?",
         options: ["NI sala mazuji", "Mazuji NA sala", "Mazuji Meno sala", "Mbaji NA sala"],
         correctIndex: 1,
-        explanation: "Past tense uses NA with the time marker mazuji: 'Mazuji NA sala' (Jacquot & Lumwamu §4.52).",
-        explanationFr: "Le passé utilise NA avec le marqueur temporel mazuji : « Mazuji NA sala » (Jacquot & Lumwamu §4.52).",
+        explanation: "Past tense uses NA with the time marker mazuji: 'Mazuji NA sala' (Nzo Mikanda §4.52).",
+        explanationFr: "Le passé utilise NA avec le marqueur temporel mazuji : « Mazuji NA sala » (Nzo Mikanda §4.52).",
       },
       {
         type: "multiple-choice" as const,
@@ -29540,8 +29540,8 @@ export const lessons: Lesson[] = [
         options: ["NA...ko", "ka...NI", "ka NI verb ko", "NI ka verb"],
         optionsFr: ["NA...ko", "ka...NI", "ka NI verbe ko", "NI ka verbe"],
         correctIndex: 2,
-        explanation: "Negation always uses ka...ko around the verb: 'Ka NI kwenda ko' (Jacquot & Lumwamu §4.45).",
-        explanationFr: "La négation utilise toujours ka...ko autour du verbe : « Ka NI kwenda ko » (Jacquot & Lumwamu §4.45).",
+        explanation: "Negation always uses ka...ko around the verb: 'Ka NI kwenda ko' (Nzo Mikanda §4.45).",
+        explanationFr: "La négation utilise toujours ka...ko autour du verbe : « Ka NI kwenda ko » (Nzo Mikanda §4.45).",
       },
       {
         type: "matching" as const,
@@ -29583,9 +29583,9 @@ export const lessons: Lesson[] = [
     titlePt: "Numeração e quantificadores",
     titleLari: "Mpila ya kutanga",
     titleMandombe: "Mpila Ya Kutanga",
-    description: "Learn to count in Laadi from 1 to 100: cardinal numbers, ordinal numbers, and how numbers agree with noun classes (Jacquot & Lumwamu).",
-    descriptionFr: "Apprenez à compter en lari de 1 à 100 : nombres cardinaux, ordinaux, et comment les nombres s'accordent avec les classes nominales (Jacquot & Lumwamu).",
-    descriptionPt: "Aprenda a contar em laadi de 1 a 100: números cardinais, ordinais e como os números concordam com as classes nominais (Jacquot & Lumwamu).",
+    description: "Learn to count in Laadi from 1 to 100: cardinal numbers, ordinal numbers, and how numbers agree with noun classes (Nzo Mikanda).",
+    descriptionFr: "Apprenez à compter en lari de 1 à 100 : nombres cardinaux, ordinaux, et comment les nombres s'accordent avec les classes nominales (Nzo Mikanda).",
+    descriptionPt: "Aprenda a contar em laadi de 1 a 100: números cardinais, ordinais e como os números concordam com as classes nominais (Nzo Mikanda).",
     level: "intermediate",
     icon: "🔢",
     vocabulary: [
@@ -29609,9 +29609,9 @@ export const lessons: Lesson[] = [
         title: "Cardinal Numbers 1-10",
         titleFr: "Nombres cardinaux 1-10",
         titlePt: "Números cardinais 1-10",
-        explanation: "Laadi has a decimal (base-10) counting system. Numbers 1-5 are basic roots, 6 = 5+1, 7 = 5+2, etc. (Jacquot & Lumwamu §5.5).",
-        explanationFr: "Le lari a un système de comptage décimal (base 10). Les nombres 1-5 sont des racines de base, 6 = 5+1, 7 = 5+2, etc. (Jacquot & Lumwamu §5.5).",
-        explanationPt: "O laadi tem um sistema de contagem decimal (base 10). Os números 1-5 são raízes básicas, 6 = 5+1, 7 = 5+2, etc. (Jacquot & Lumwamu §5.5).",
+        explanation: "Laadi has a decimal (base-10) counting system. Numbers 1-5 are basic roots, 6 = 5+1, 7 = 5+2, etc. (Nzo Mikanda §5.5).",
+        explanationFr: "Le lari a un système de comptage décimal (base 10). Les nombres 1-5 sont des racines de base, 6 = 5+1, 7 = 5+2, etc. (Nzo Mikanda §5.5).",
+        explanationPt: "O laadi tem um sistema de contagem decimal (base 10). Os números 1-5 são raízes básicas, 6 = 5+1, 7 = 5+2, etc. (Nzo Mikanda §5.5).",
         groups: [
           {
             title: "Counting 1 to 10",
@@ -29635,9 +29635,9 @@ export const lessons: Lesson[] = [
         title: "Tens and Hundreds",
         titleFr: "Dizaines et centaines",
         titlePt: "Dezenas e centenas",
-        explanation: "Tens are formed by multiplying: kumi na mosi = 11 (ten and one), makumi mazole = 20 (tens two). Hundred = nkama (Jacquot & Lumwamu §5.5).",
-        explanationFr: "Les dizaines se forment par multiplication : kumi na mosi = 11 (dix et un), makumi mazole = 20 (dizaines deux). Cent = nkama (Jacquot & Lumwamu §5.5).",
-        explanationPt: "As dezenas se formam por multiplicação: kumi na mosi = 11 (dez e um), makumi mazole = 20 (dezenas dois). Cem = nkama (Jacquot & Lumwamu §5.5).",
+        explanation: "Tens are formed by multiplying: kumi na mosi = 11 (ten and one), makumi mazole = 20 (tens two). Hundred = nkama (Nzo Mikanda §5.5).",
+        explanationFr: "Les dizaines se forment par multiplication : kumi na mosi = 11 (dix et un), makumi mazole = 20 (dizaines deux). Cent = nkama (Nzo Mikanda §5.5).",
+        explanationPt: "As dezenas se formam por multiplicação: kumi na mosi = 11 (dez e um), makumi mazole = 20 (dezenas dois). Cem = nkama (Nzo Mikanda §5.5).",
         groups: [
           {
             title: "Composing larger numbers",
@@ -29655,9 +29655,9 @@ export const lessons: Lesson[] = [
         title: "Ordinal Numbers",
         titleFr: "Nombres ordinaux",
         titlePt: "Números ordinais",
-        explanation: "Ordinals are formed with the prefix n- applied to the cardinal number: ntete (first), nzole (second), ntatu (third) (Jacquot & Lumwamu §5.5.2.1).",
-        explanationFr: "Les ordinaux se forment avec le préfixe n- appliqué au nombre cardinal : ntete (premier), nzole (deuxième), ntatu (troisième) (Jacquot & Lumwamu §5.5.2.1).",
-        explanationPt: "Os ordinais são formados com o prefixo n- aplicado ao número cardinal: ntete (primeiro), nzole (segundo), ntatu (terceiro) (Jacquot & Lumwamu §5.5.2.1).",
+        explanation: "Ordinals are formed with the prefix n- applied to the cardinal number: ntete (first), nzole (second), ntatu (third) (Nzo Mikanda §5.5.2.1).",
+        explanationFr: "Les ordinaux se forment avec le préfixe n- appliqué au nombre cardinal : ntete (premier), nzole (deuxième), ntatu (troisième) (Nzo Mikanda §5.5.2.1).",
+        explanationPt: "Os ordinais são formados com o prefixo n- aplicado ao número cardinal: ntete (primeiro), nzole (segundo), ntatu (terceiro) (Nzo Mikanda §5.5.2.1).",
         groups: [
           {
             title: "Ordinal examples",
@@ -29678,8 +29678,8 @@ export const lessons: Lesson[] = [
         questionFr: "Comment dit-on « sept » en lari ?",
         options: ["sambanu", "nsambwadi", "nana", "vwa"],
         correctIndex: 1,
-        explanation: "Seven is 'nsambwadi' in Laadi (Jacquot & Lumwamu §5.5).",
-        explanationFr: "Sept se dit « nsambwadi » en lari (Jacquot & Lumwamu §5.5).",
+        explanation: "Seven is 'nsambwadi' in Laadi (Nzo Mikanda §5.5).",
+        explanationFr: "Sept se dit « nsambwadi » en lari (Nzo Mikanda §5.5).",
       },
       {
         type: "matching" as const,
@@ -29707,8 +29707,8 @@ export const lessons: Lesson[] = [
         questionFr: "Comment dit-on « premier » en lari ?",
         options: ["mosi", "ntete", "nzole", "tete"],
         correctIndex: 1,
-        explanation: "The ordinal 'first' is 'ntete' — the prefix n- + tete (Jacquot & Lumwamu §5.5.2.1).",
-        explanationFr: "L'ordinal « premier » est « ntete » — le préfixe n- + tete (Jacquot & Lumwamu §5.5.2.1).",
+        explanation: "The ordinal 'first' is 'ntete' — the prefix n- + tete (Nzo Mikanda §5.5.2.1).",
+        explanationFr: "L'ordinal « premier » est « ntete » — le préfixe n- + tete (Nzo Mikanda §5.5.2.1).",
       },
       {
         type: "mandombe-recognition" as const,
@@ -29733,9 +29733,9 @@ export const lessons: Lesson[] = [
     titlePt: "Ideofones e expressividade",
     titleLari: "Mambu ma mpimpa",
     titleMandombe: "Mambu Ma Mpimpa",
-    description: "Discover Laadi ideophones: vivid, expressive words that paint sounds, movements, and feelings in a single burst (Jacquot & Lumwamu §5.7).",
-    descriptionFr: "Découvrez les idéophones du lari : des mots vifs et expressifs qui peignent des sons, des mouvements et des émotions en un seul éclat (Jacquot & Lumwamu §5.7).",
-    descriptionPt: "Descubra os ideofones do laadi: palavras vívidas e expressivas que pintam sons, movimentos e emoções em uma única explosão (Jacquot & Lumwamu §5.7).",
+    description: "Discover Laadi ideophones: vivid, expressive words that paint sounds, movements, and feelings in a single burst (Nzo Mikanda §5.7).",
+    descriptionFr: "Découvrez les idéophones du lari : des mots vifs et expressifs qui peignent des sons, des mouvements et des émotions en un seul éclat (Nzo Mikanda §5.7).",
+    descriptionPt: "Descubra os ideofones do laadi: palavras vívidas e expressivas que pintam sons, movimentos e emoções em uma única explosão (Nzo Mikanda §5.7).",
     level: "advanced",
     icon: "💥",
     vocabulary: [
@@ -29751,9 +29751,9 @@ export const lessons: Lesson[] = [
         title: "What Are Ideophones?",
         titleFr: "Que sont les idéophones ?",
         titlePt: "O que são ideofones?",
-        explanation: "Ideophones are special words that 'paint' a sensation: a sound, a movement, a feeling. They don't follow normal grammar rules. They stand out in a sentence like an exclamation mark! (Jacquot & Lumwamu §5.7).",
-        explanationFr: "Les idéophones sont des mots spéciaux qui « peignent » une sensation : un son, un mouvement, un sentiment. Ils ne suivent pas les règles grammaticales normales. Ils ressortent dans une phrase comme un point d'exclamation ! (Jacquot & Lumwamu §5.7).",
-        explanationPt: "Ideofones são palavras especiais que 'pintam' uma sensação: um som, um movimento, um sentimento. Não seguem regras gramaticais normais. Destacam-se na frase como um ponto de exclamação! (Jacquot & Lumwamu §5.7).",
+        explanation: "Ideophones are special words that 'paint' a sensation: a sound, a movement, a feeling. They don't follow normal grammar rules. They stand out in a sentence like an exclamation mark! (Nzo Mikanda §5.7).",
+        explanationFr: "Les idéophones sont des mots spéciaux qui « peignent » une sensation : un son, un mouvement, un sentiment. Ils ne suivent pas les règles grammaticales normales. Ils ressortent dans une phrase comme un point d'exclamation ! (Nzo Mikanda §5.7).",
+        explanationPt: "Ideofones são palavras especiais que 'pintam' uma sensação: um som, um movimento, um sentimento. Não seguem regras gramaticais normais. Destacam-se na frase como um ponto de exclamação! (Nzo Mikanda §5.7).",
         groups: [
           {
             title: "Categories of ideophones",
@@ -29774,9 +29774,9 @@ export const lessons: Lesson[] = [
         title: "Ideophones in Sentences",
         titleFr: "Les idéophones dans la phrase",
         titlePt: "Ideofones na frase",
-        explanation: "Ideophones usually come at the end of a sentence, after the verb. They add vivid imagery that a normal adverb can't capture. Some can be lengthened for extra emphasis (Jacquot & Lumwamu §5.7).",
-        explanationFr: "Les idéophones se placent généralement à la fin de la phrase, après le verbe. Ils ajoutent une image vivante qu'un adverbe normal ne peut pas rendre. Certains peuvent être allongés pour plus d'emphase (Jacquot & Lumwamu §5.7).",
-        explanationPt: "Ideofones geralmente vêm no final da frase, depois do verbo. Adicionam imagens vívidas que um advérbio normal não consegue capturar. Alguns podem ser alongados para mais ênfase (Jacquot & Lumwamu §5.7).",
+        explanation: "Ideophones usually come at the end of a sentence, after the verb. They add vivid imagery that a normal adverb can't capture. Some can be lengthened for extra emphasis (Nzo Mikanda §5.7).",
+        explanationFr: "Les idéophones se placent généralement à la fin de la phrase, après le verbe. Ils ajoutent une image vivante qu'un adverbe normal ne peut pas rendre. Certains peuvent être allongés pour plus d'emphase (Nzo Mikanda §5.7).",
+        explanationPt: "Ideofones geralmente vêm no final da frase, depois do verbo. Adicionam imagens vívidas que um advérbio normal não consegue capturar. Alguns podem ser alongados para mais ênfase (Nzo Mikanda §5.7).",
         groups: [
           {
             title: "Position and emphasis",
@@ -29798,8 +29798,8 @@ export const lessons: Lesson[] = [
         options: ["a loud noise", "total silence", "fast movement", "sharp pain"],
         optionsFr: ["un bruit fort", "un silence total", "un mouvement rapide", "une douleur aiguë"],
         correctIndex: 1,
-        explanation: "'pi' expresses total silence or emptiness (Jacquot & Lumwamu §5.7).",
-        explanationFr: "« pi » exprime le silence total ou le vide (Jacquot & Lumwamu §5.7).",
+        explanation: "'pi' expresses total silence or emptiness (Nzo Mikanda §5.7).",
+        explanationFr: "« pi » exprime le silence total ou le vide (Nzo Mikanda §5.7).",
       },
       {
         type: "matching" as const,
@@ -29828,8 +29828,8 @@ export const lessons: Lesson[] = [
         options: ["at the beginning", "before the subject", "after the verb, at the end", "between subject and verb"],
         optionsFr: ["au début", "avant le sujet", "après le verbe, à la fin", "entre le sujet et le verbe"],
         correctIndex: 2,
-        explanation: "Ideophones typically come at the end of the sentence, after the verb (Jacquot & Lumwamu §5.7).",
-        explanationFr: "Les idéophones se placent typiquement à la fin de la phrase, après le verbe (Jacquot & Lumwamu §5.7).",
+        explanation: "Ideophones typically come at the end of the sentence, after the verb (Nzo Mikanda §5.7).",
+        explanationFr: "Les idéophones se placent typiquement à la fin de la phrase, après le verbe (Nzo Mikanda §5.7).",
       },
       {
         type: "mandombe-recognition" as const,
@@ -29853,9 +29853,9 @@ export const lessons: Lesson[] = [
     titlePt: "O sistema vocálico",
     titleLari: "Mavowele ma kilaadi",
     titleMandombe: "Mavowele Ma Kilaadi",
-    description: "Discover the 10 vowels of Lari: 5 short and 5 long, organized by aperture and tongue position. Based on Jacquot & Lumwamu §1.47-1.50.",
-    descriptionFr: "Découvrez les 10 voyelles du lari : 5 brèves et 5 longues, organisées par degré d'aperture et position de la langue. D'après Jacquot & Lumwamu §1.47-1.50.",
-    descriptionPt: "Descubra as 10 vogais do lari: 5 breves e 5 longas, organizadas por grau de abertura e posição da língua. Baseado em Jacquot & Lumwamu §1.47-1.50.",
+    description: "Discover the 10 vowels of Lari: 5 short and 5 long, organized by aperture and tongue position. Based on Nzo Mikanda §1.47-1.50.",
+    descriptionFr: "Découvrez les 10 voyelles du lari : 5 brèves et 5 longues, organisées par degré d'aperture et position de la langue. D'après Nzo Mikanda §1.47-1.50.",
+    descriptionPt: "Descubra as 10 vogais do lari: 5 breves e 5 longas, organizadas por grau de abertura e posição da língua. Baseado em Nzo Mikanda §1.47-1.50.",
     level: "intermediate",
     icon: "🔤",
     vocabulary: [
@@ -30012,9 +30012,9 @@ export const lessons: Lesson[] = [
     titlePt: "Os tons do Laari",
     titleLari: "Miton mia kilaadi",
     titleMandombe: "Miton Miya Kilaadi",
-    description: "Learn the two tonal registers (high and low) that distinguish meaning in Lari. Based on Jacquot & Lumwamu §1.51-1.54.",
-    descriptionFr: "Découvrez les deux registres tonals (haut et bas) qui distinguent les sens en lari. D'après Jacquot & Lumwamu §1.51-1.54.",
-    descriptionPt: "Descubra os dois registros tonais (alto e baixo) que distinguem significados em lari. Baseado em Jacquot & Lumwamu §1.51-1.54.",
+    description: "Learn the two tonal registers (high and low) that distinguish meaning in Lari. Based on Nzo Mikanda §1.51-1.54.",
+    descriptionFr: "Découvrez les deux registres tonals (haut et bas) qui distinguent les sens en lari. D'après Nzo Mikanda §1.51-1.54.",
+    descriptionPt: "Descubra os dois registros tonais (alto e baixo) que distinguem significados em lari. Baseado em Nzo Mikanda §1.51-1.54.",
     level: "intermediate",
     icon: "🎵",
     vocabulary: [
@@ -30140,9 +30140,9 @@ export const lessons: Lesson[] = [
     titlePt: "A derivação verbal",
     titleLari: "Mpila ya bakisa mambu mu biverbe",
     titleMandombe: "Mpila Ya Bakisa Mambu Mu Biverbe",
-    description: "Learn how Lari builds new verbs from roots using derivational suffixes: causative, applicative, reversive, and more. Based on Jacquot & Lumwamu §3.5.",
-    descriptionFr: "Découvrez comment le lari construit de nouveaux verbes à partir de racines à l'aide de suffixes dérivationnels : causatif, applicatif, réversif, et plus. D'après Jacquot & Lumwamu §3.5.",
-    descriptionPt: "Descubra como o lari constrói novos verbos a partir de raízes usando sufixos derivacionais. Baseado em Jacquot & Lumwamu §3.5.",
+    description: "Learn how Lari builds new verbs from roots using derivational suffixes: causative, applicative, reversive, and more. Based on Nzo Mikanda §3.5.",
+    descriptionFr: "Découvrez comment le lari construit de nouveaux verbes à partir de racines à l'aide de suffixes dérivationnels : causatif, applicatif, réversif, et plus. D'après Nzo Mikanda §3.5.",
+    descriptionPt: "Descubra como o lari constrói novos verbos a partir de raízes usando sufixos derivacionais. Baseado em Nzo Mikanda §3.5.",
     level: "intermediate",
     icon: "🔧",
     vocabulary: [
@@ -30302,7 +30302,7 @@ export const lessons: Lesson[] = [
 
   // ============================================================
   // LEÇON : LA NÉGATION « KÀ...KO » (Jacquot §4.45)
-  // Source : Jacquot & Lumwamu, pages 122-123
+  // Source : Nzo Mikanda, pages 122-123
   // ============================================================
   {
     id: "negation-ka-ko",
@@ -30313,7 +30313,7 @@ export const lessons: Lesson[] = [
     descriptionFr: "Apprenez à dire « non » en lari grâce à la négation discontinue kà...ko qui enveloppe le verbe comme un sandwich.",
     level: "beginner" as const,
     icon: "🚫",
-    credit: "Jacquot & Lumwamu",
+    credit: "Nzo Mikanda",
 
     vocabulary: [
       { lari: "kà...ko", mandombe: "Ka...Ko", french: "ne...pas (négation discontinue)", english: "not (discontinuous negation)", note: "Les deux parties encadrent le verbe (Jacquot §4.45)" },
@@ -30427,7 +30427,7 @@ export const lessons: Lesson[] = [
 
   // ============================================================
   // LEÇON : LES FONCTIONNELS LOCATIFS (Jacquot §4.35-4.38)
-  // Source : Jacquot & Lumwamu, pages 118-120
+  // Source : Nzo Mikanda, pages 118-120
   // ============================================================
   {
     id: "fonctionnels-locatifs",
@@ -30438,7 +30438,7 @@ export const lessons: Lesson[] = [
     descriptionFr: "Apprenez les trois mots de lieu essentiels en lari : kù (à/vers), gà (sur/à), et mù (dans/avec).",
     level: "beginner" as const,
     icon: "📍",
-    credit: "Jacquot & Lumwamu",
+    credit: "Nzo Mikanda",
 
     vocabulary: [
       { lari: "kù", mandombe: "Ku", french: "à, vers (lieu distinct)", english: "to, at (distinct place)", note: "Fonctionnel locatif de lieu distinct (Jacquot §4.35)" },
@@ -30569,7 +30569,7 @@ export const lessons: Lesson[] = [
 
   // ============================================================
   // LEÇON : LES TERMES DE PARENTÉ (Jacquot §4.5.2.2)
-  // Source : Jacquot & Lumwamu, pages 101-102
+  // Source : Nzo Mikanda, pages 101-102
   // ============================================================
   {
     id: "termes-de-parente",
@@ -30580,7 +30580,7 @@ export const lessons: Lesson[] = [
     descriptionFr: "Apprenez les termes de parenté en lari : comment « tata » (père), « mama » (mère) et « giagia » (aîné) changent de forme dans les noms composés.",
     level: "beginner" as const,
     icon: "👨‍👩‍👧‍👦",
-    credit: "Jacquot & Lumwamu",
+    credit: "Nzo Mikanda",
 
     vocabulary: [
       { lari: "taata", mandombe: "Tata", french: "père, parent paternel, monsieur", english: "father, paternal parent, sir", note: "Forme pleine (Jacquot §4.5.2.2)" },
@@ -30704,7 +30704,7 @@ lessons.push({
   descriptionPt: "Aprenda o sistema de 19 géneros nominais do Kikongo Lari — os prefixos que marcam singular/plural e determinam a concordância na frase.",
   level: "intermediate",
   icon: "📚",
-  credit: "Jacquot & Lumwamu, §4.53-4.70",
+  credit: "Nzo Mikanda, §4.53-4.70",
   vocabulary: [
     { lari: "mùntù", mandombe: "Muntu", french: "personne", english: "person", portuguese: "pessoa", note: "Genre 1 (mu-) singulier" },
     { lari: "bàntù", mandombe: "Bantu", french: "personnes", english: "people", portuguese: "pessoas", note: "Genre 2 (ba-) pluriel" },
@@ -30810,8 +30810,8 @@ lessons.push({
       questionFr: "Combien de genres nominaux le Kikongo Lari possède-t-il ?",
       options: ["10", "15", "19", "24"],
       correctIndex: 2,
-      explanation: "Jacquot & Lumwamu identify 19 genres with discontinuous signifiers.",
-      explanationFr: "Jacquot & Lumwamu identifient 19 genres à signifiant discontinu.",
+      explanation: "Nzo Mikanda identify 19 genres with discontinuous signifiers.",
+      explanationFr: "Nzo Mikanda identifient 19 genres à signifiant discontinu.",
     },
     {
       type: "mandombe-recognition" as const,
@@ -30839,7 +30839,7 @@ lessons.push({
   descriptionPt: "Domine os sufixos de extensão verbal que transformam os verbos — causativo, aplicativo, habitual, passivo e reversivo.",
   level: "advanced",
   icon: "🔧",
-  credit: "Jacquot & Lumwamu, §5.3-5.4",
+  credit: "Nzo Mikanda, §5.3-5.4",
   vocabulary: [
     { lari: "kàbá", mandombe: "Kaba", french: "partager", english: "to share", portuguese: "partilhar" },
     { lari: "kàbísá", mandombe: "Kabisa", french: "faire partager", english: "to make share (causative)", portuguese: "fazer partilhar", note: "Causatif -is-" },
