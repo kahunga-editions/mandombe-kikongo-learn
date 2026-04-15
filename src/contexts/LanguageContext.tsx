@@ -208,6 +208,10 @@ const translations: Record<Language, Record<string, string>> = {
     "mbuta.rateLimited": "Trop de messages",
     "mbuta.creditsExhausted": "Crédits épuisés",
     "mbuta.error": "Erreur",
+    "mbuta.speak": "Écouter",
+    "mbuta.listening": "Écoute en cours…",
+    "mbuta.autoSpeak": "Lecture auto",
+    "mbuta.recordHint": "Maintenez pour dicter",
 
     // Footer
     "footer.description": "La Maison du Savoir — préserver et enseigner le Kikongo Lari et l'écriture Mandombe pour la diaspora Kongo et le monde.",
@@ -392,6 +396,10 @@ const translations: Record<Language, Record<string, string>> = {
     "mbuta.rateLimited": "Too many messages",
     "mbuta.creditsExhausted": "Credits exhausted",
     "mbuta.error": "Error",
+    "mbuta.speak": "Listen",
+    "mbuta.listening": "Listening…",
+    "mbuta.autoSpeak": "Auto-speak",
+    "mbuta.recordHint": "Hold to dictate",
 
     // Footer
     "footer.description": "The House of Knowledge — preserving and teaching Kikongo Lari and the Mandombe script for the Kongo diaspora and the world.",
@@ -576,6 +584,10 @@ const translations: Record<Language, Record<string, string>> = {
     "mbuta.rateLimited": "Demasiadas mensagens",
     "mbuta.creditsExhausted": "Créditos esgotados",
     "mbuta.error": "Erro",
+    "mbuta.speak": "Ouvir",
+    "mbuta.listening": "A ouvir…",
+    "mbuta.autoSpeak": "Leitura auto",
+    "mbuta.recordHint": "Segure para ditar",
 
     // Footer
     "footer.description": "A Casa do Saber — preservar e ensinar o Kikongo Lari e a escrita Mandombe para a diáspora Kongo e o mundo.",
