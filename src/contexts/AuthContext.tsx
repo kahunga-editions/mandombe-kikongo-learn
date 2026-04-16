@@ -38,10 +38,16 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 
   const checkSubscription = async () => {
     try {
-      const { data: { session } } = await supabase.auth.getSession();
-      if (!session) return;
+      // Force a fresh session to avoid expired token race conditions
+      const { data: { session }, error: sessionError } = await supabase.auth.refreshSession();
+      if (sessionError || !session) {
+        console.warn("No valid session for subscription check");
+        return;
+      }
 
-      const { data, error } = await supabase.functions.invoke("check-subscription");
+      const { data, error } = await supabase.functions.invoke("check-subscription", {
+        headers: { Authorization: `Bearer ${session.access_token}` },
+      });
       if (error) {
         console.error("Subscription check error:", error);
         return;
