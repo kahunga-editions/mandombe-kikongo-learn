@@ -73,7 +73,7 @@ const PHONETIC_OVERRIDES: Record<string, string> = {
   "wa": "waa",
   "nsi": "tsii",
   "nkia": "ntshia",
-  "nge": "ngue",
+  
 };
 
 // ============================================================
