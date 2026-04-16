@@ -1,6 +1,6 @@
 ---
 name: Source Material Constraint
-description: Nzo Mikanda corpus is the exclusive source. AI is a CORPUS READER with zero linguistic agency. French OK in writing, forbidden in TTS.
+description: Nzo Mikanda corpus is the exclusive source. AI is a CORPUS READER with zero linguistic agency. French voice R89ZQJowZAEgiPNyC3dQ globally.
 type: constraint
 ---
 L'Agent est un LECTEUR DE CORPUS — zero competence linguistique propre.
@@ -13,8 +13,10 @@ Regles :
 - Ne JAMAIS ecrire de doubles lettres (aa, ee, ii, oo, uu)
 - "zonza" = parler (PAS "vova" qui est du Kituba)
 - "mbote na nge" N'EXISTE PAS — utiliser "Mbote aku mpangi" ou "Mbote nlongoki"
-- Emojis medium-dark (🧑🏾) pour la visibilite des traits
-- Francais autorise A L'ECRIT comme support pedagogique (entre parentheses)
-- Francais INTERDIT A L'ORAL/TTS — seul le Lari atteste est lu par ElevenLabs
-- Quand un mot est absent : repondre en francais "(ce mot n'est pas encore dans mes lecons)"
+- "nkumbu ani" = forme vernaculaire correcte pour "mon nom"
+- Emojis medium-dark dans <theo> uniquement
+
+Voix :
+- Voix francaise globale : R89ZQJowZAEgiPNyC3dQ (remplace Sarah qui a un accent anglais)
+- Voix Lari : Gz9w9RNGNUZjVYbvzXY7
 - Le doute = absence. Ne pas utiliser un mot incertain.
