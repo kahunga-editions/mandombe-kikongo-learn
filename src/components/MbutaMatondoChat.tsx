@@ -1,21 +1,34 @@
 import { useState, useRef, useEffect, useCallback } from "react";
-import { Send, Loader2, GraduationCap, Volume2, Mic, MicOff, VolumeX } from "lucide-react";
+import { Send, Loader2, GraduationCap, Volume2, Mic, MicOff, VolumeX, User } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useToast } from "@/hooks/use-toast";
 import { Switch } from "@/components/ui/switch";
 import ReactMarkdown from "react-markdown";
 
 type Msg = { role: "user" | "assistant"; content: string };
+type Segment = { text: string; type: "lari" | "theo" };
 
 const CHAT_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/mbuta-matondo`;
-const TTS_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/elevenlabs-tts-lari`;
+const TTS_LARI_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/elevenlabs-tts-lari`;
+const TTS_GENERAL_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/elevenlabs-tts-general`;
 const STT_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/elevenlabs-stt`;
 
-// Strip markdown and mandombe tags for TTS
-function stripMarkdown(md: string): string {
-  return md
+// Parse <lari>...</lari> and <theo>...</theo> segments
+function parseDualSegments(content: string): Segment[] {
+  const segments: Segment[] = [];
+  const regex = /<(lari|theo)>([\s\S]*?)<\/\1>/g;
+  let match;
+  while ((match = regex.exec(content)) !== null) {
+    const text = match[2].trim();
+    if (text) segments.push({ text, type: match[1] as "lari" | "theo" });
+  }
+  return segments;
+}
+
+// Strip mandombe tags and markdown for TTS
+function stripForTTS(text: string): string {
+  return text
     .replace(/\[mandombe\](.*?)\[\/mandombe\]/g, "$1")
-    .replace(/\([^)]*\)/g, "")
     .replace(/#{1,6}\s/g, "")
     .replace(/\*\*(.+?)\*\*/g, "$1")
     .replace(/\*(.+?)\*/g, "$1")
@@ -28,7 +41,7 @@ function stripMarkdown(md: string): string {
     .trim();
 }
 
-// Process mandombe tags in content
+// Process mandombe tags in content for rendering
 function renderMandombeContent(content: string): React.ReactNode[] {
   const parts = content.split(/(\[mandombe\].*?\[\/mandombe\])/g);
   return parts.map((part, i) => {
@@ -42,6 +55,49 @@ function renderMandombeContent(content: string): React.ReactNode[] {
     }
     return <ReactMarkdown key={i}>{part}</ReactMarkdown>;
   });
+}
+
+// Render assistant message with <lari> and <theo> blocks
+function renderDualMessage(content: string): React.ReactNode {
+  const segments = parseDualSegments(content);
+
+  // Fallback: no tags found, render as before
+  if (segments.length === 0) {
+    return (
+      <div className="prose prose-sm prose-invert max-w-none [&_p]:my-1">
+        {renderMandombeContent(content)}
+      </div>
+    );
+  }
+
+  return (
+    <div className="space-y-2">
+      {segments.map((seg, i) => {
+        if (seg.type === "lari") {
+          return (
+            <div key={i} className="bg-gold/10 border border-gold/30 rounded-xl px-3 py-2">
+              <div className="flex items-center gap-1.5 mb-1">
+                <GraduationCap className="w-3.5 h-3.5 text-gold" />
+                <span className="text-[10px] font-semibold text-gold uppercase tracking-wider">Mbuta Matondo</span>
+              </div>
+              <div className="prose prose-sm prose-invert max-w-none [&_p]:my-0.5">
+                {renderMandombeContent(seg.text)}
+              </div>
+            </div>
+          );
+        }
+        return (
+          <div key={i} className="bg-blue-500/10 border border-blue-400/30 rounded-xl px-3 py-2">
+            <div className="flex items-center gap-1.5 mb-1">
+              <User className="w-3.5 h-3.5 text-blue-400" />
+              <span className="text-[10px] font-semibold text-blue-400 uppercase tracking-wider">Theo</span>
+            </div>
+            <p className="text-sm text-cream/90">{seg.text}</p>
+          </div>
+        );
+      })}
+    </div>
+  );
 }
 
 // ---- Stream Chat ----
@@ -122,31 +178,39 @@ async function streamChat({
 // ---- TTS helpers ----
 const audioCache = new Map<string, string>();
 
-async function speakText(text: string): Promise<HTMLAudioElement | null> {
-  const plain = stripMarkdown(text);
-  if (!plain) return null;
+async function fetchTTSAudio(text: string, type: "lari" | "theo"): Promise<string> {
+  const plain = stripForTTS(text);
+  if (!plain) return "";
 
-  const cacheKey = plain.slice(0, 200);
-  let audioUrl = audioCache.get(cacheKey);
+  const cacheKey = `${type}:${plain.slice(0, 200)}`;
+  const cached = audioCache.get(cacheKey);
+  if (cached) return cached;
 
-  if (!audioUrl) {
-    const resp = await fetch(TTS_URL, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
-      },
-      body: JSON.stringify({ text: plain }),
-    });
-    if (!resp.ok) throw new Error("TTS failed");
-    const data = await resp.json();
-    audioUrl = `data:audio/mpeg;base64,${data.audioContent}`;
-    audioCache.set(cacheKey, audioUrl);
-  }
+  const url = type === "lari" ? TTS_LARI_URL : TTS_GENERAL_URL;
+  const body = type === "lari" ? { text: plain } : { text: plain, lang: "fr" };
 
-  const audio = new Audio(audioUrl);
-  await audio.play();
-  return audio;
+  const resp = await fetch(url, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
+    },
+    body: JSON.stringify(body),
+  });
+  if (!resp.ok) throw new Error("TTS failed");
+  const data = await resp.json();
+  const audioUrl = `data:audio/mpeg;base64,${data.audioContent}`;
+  audioCache.set(cacheKey, audioUrl);
+  return audioUrl;
+}
+
+function playAudioUrl(url: string): Promise<void> {
+  return new Promise((resolve, reject) => {
+    const audio = new Audio(url);
+    audio.onended = () => resolve();
+    audio.onerror = () => reject(new Error("Audio playback failed"));
+    audio.play().catch(reject);
+  });
 }
 
 // ---- STT helper ----
@@ -180,7 +244,7 @@ const MbutaMatondoChat = () => {
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const mediaRecorderRef = useRef<MediaRecorder | null>(null);
   const chunksRef = useRef<Blob[]>([]);
-  const currentAudioRef = useRef<HTMLAudioElement | null>(null);
+  const isPlayingRef = useRef(false);
   const autoSpeakRef = useRef(autoSpeak);
 
   useEffect(() => { autoSpeakRef.current = autoSpeak; }, [autoSpeak]);
@@ -189,33 +253,42 @@ const MbutaMatondoChat = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 
-  // ---- TTS for a message ----
+  // ---- Dual-voice sequential TTS ----
   const handleSpeak = useCallback(async (content: string, idx: number) => {
-    // Stop current audio if playing same index
-    if (speakingIdx === idx && currentAudioRef.current) {
-      currentAudioRef.current.pause();
-      currentAudioRef.current = null;
+    // If already playing this index, stop
+    if (speakingIdx === idx) {
+      isPlayingRef.current = false;
       setSpeakingIdx(null);
       return;
     }
-    // Stop any playing audio
-    if (currentAudioRef.current) {
-      currentAudioRef.current.pause();
-      currentAudioRef.current = null;
-    }
 
+    // Block if another sequence is playing
+    if (isPlayingRef.current) return;
+
+    isPlayingRef.current = true;
     setSpeakingIdx(idx);
+
     try {
-      const audio = await speakText(content);
-      if (audio) {
-        currentAudioRef.current = audio;
-        audio.onended = () => {
-          setSpeakingIdx(null);
-          currentAudioRef.current = null;
-        };
+      const segments = parseDualSegments(content);
+
+      // Fallback: no tags, play entire content as Lari
+      if (segments.length === 0) {
+        const plain = stripForTTS(content);
+        if (plain) {
+          const url = await fetchTTSAudio(content, "lari");
+          if (url && isPlayingRef.current) await playAudioUrl(url);
+        }
+      } else {
+        for (const seg of segments) {
+          if (!isPlayingRef.current) break;
+          const url = await fetchTTSAudio(seg.text, seg.type);
+          if (url && isPlayingRef.current) await playAudioUrl(url);
+        }
       }
     } catch {
       toast({ title: t("mbuta.error"), description: "TTS failed", variant: "destructive" });
+    } finally {
+      isPlayingRef.current = false;
       setSpeakingIdx(null);
     }
   }, [speakingIdx, t, toast]);
@@ -234,7 +307,7 @@ const MbutaMatondoChat = () => {
       recorder.onstop = async () => {
         stream.getTracks().forEach(t => t.stop());
         const blob = new Blob(chunksRef.current, { type: "audio/webm" });
-        if (blob.size < 1000) return; // too short
+        if (blob.size < 1000) return;
 
         setIsTranscribing(true);
         try {
@@ -292,7 +365,6 @@ const MbutaMatondoChat = () => {
         onDelta: (chunk) => upsertAssistant(chunk),
         onDone: () => {
           setIsLoading(false);
-          // Auto-speak if enabled
           if (autoSpeakRef.current && assistantSoFar) {
             setMessages(prev => {
               const lastIdx = prev.length - 1;
@@ -379,9 +451,7 @@ const MbutaMatondoChat = () => {
                 }`}
               >
                 {msg.role === "assistant" ? (
-                  <div className="prose prose-sm prose-invert max-w-none [&_p]:my-1 [&_ul]:my-1 [&_ol]:my-1">
-                    {renderMandombeContent(msg.content)}
-                  </div>
+                  renderDualMessage(msg.content)
                 ) : (
                   <p className="text-sm whitespace-pre-wrap">{msg.content}</p>
                 )}
@@ -422,7 +492,6 @@ const MbutaMatondoChat = () => {
       {/* Input */}
       <div className="border-t border-gold/20 p-4">
         <div className="flex gap-2 items-end">
-          {/* Mic button */}
           <button
             onClick={isRecording ? stopRecording : startRecording}
             disabled={isTranscribing}
