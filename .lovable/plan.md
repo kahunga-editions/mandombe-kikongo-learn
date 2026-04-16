@@ -1,26 +1,41 @@
 
 
-# Fix STT: supprimer le forçage `language_code: "fra"`
+# Fix: "j" standalone = fricative /ʒ/, mais "nj" = affriquée /ndʒ/
 
-## Problème
+## Règle clarifiée
 
-Le STT ElevenLabs est codé en dur sur `language_code: "fra"` (ligne 30). Quand l'apprenant parle en Kikongo Lari, le moteur force une interprétation française — d'ou "But", "Bon, t'es bon" au lieu de "Mbote", "Mbote nlongoki".
+| Contexte | Phonème | Exemple | Override correct |
+|----------|---------|---------|-----------------|
+| **j** seul (pas de n avant) | /ʒ/ fricative (comme "je" en français) | jibula, mbaji | Pas de "d" ajouté |
+| **nj** (n + j) | /ndʒ/ affriquée prénasalisée | njijiri | ndjîdjiri ✓ |
 
-Kikongo Lari n'est pas dans les langues ISO 639 supportées par ElevenLabs. La meilleure stratégie est de **supprimer le `language_code`** pour laisser l'auto-détection. Scribe v2 en mode auto-detect captera les phonèmes réels sans les forcer dans le moule français.
+## Ce qui est CORRECT (ne pas toucher)
 
-## Modification
+- Règle regex `nj → ndj` (ligne 111 dans `lari-phonetic-engine.ts`, ligne 108 dans `elevenlabs-tts-lari`) — **garder**
+- `"njijiri": "ndjîdjiri"` — **garder**
+- `"ngiena": "ndjena"` — **garder**
+- `"ngiele": "ndjele"` — **garder**
+- `'ndj'` et `'dj'` dans PRENASALIZED — **garder**
 
-### `supabase/functions/elevenlabs-stt/index.ts`
+## Ce qui doit être corrigé
 
-- **Supprimer** la ligne `apiFormData.append("language_code", "fra");`
-- Laisser ElevenLabs en auto-detect (pas de `language_code` = détection automatique)
-- Le résultat sera une transcription phonétique approximative que Mbuta Matondo pourra interpréter via le prompt Gemini
+Seuls les overrides avec un "j" standalone (sans "n" devant) qui ajoutent un "d" parasite :
 
-Redéployer `elevenlabs-stt`.
+| Fichier | Override actuel | Correction |
+|---------|----------------|------------|
+| `elevenlabs-tts-lari/index.ts` ligne 33 | `"jimbakane": "djimbakané"` | `"jimbakane": "jimbakané"` |
+| `elevenlabs-tts-lari/index.ts` ligne 64 | `"jima": "djima"` | Supprimer (le j français est déjà /ʒ/) |
+| `src/lib/lari-phonetic-engine.ts` ligne 148 | `"jima": "djima"` | Supprimer |
 
-## Fichier modifié
+## Mise à jour mémoire
+
+`mem://audio/moteur-phonetique-lari` : documenter la règle "j seul = /ʒ/, nj = /ndʒ/".
+
+## Fichiers modifiés
 
 | Fichier | Action |
 |---|---|
-| `supabase/functions/elevenlabs-stt/index.ts` | Supprimer `language_code: "fra"` |
+| `supabase/functions/elevenlabs-tts-lari/index.ts` | Corriger `jimbakane`, supprimer override `jima` |
+| `src/lib/lari-phonetic-engine.ts` | Supprimer override `jima` |
+| `mem://audio/moteur-phonetique-lari` | Ajouter règle j/nj |
 
