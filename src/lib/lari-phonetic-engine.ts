@@ -144,7 +144,7 @@ const PHONETIC_OVERRIDES: Record<string, string> = {
   "kinsangu": "kinsangou",
   "tshinkoso": "tshinkôsso",
   "saleno": "saléno",
-  "jima": "djima",
+  
   "tatika": "tatika",
   "yarika": "yarika",
   "lumfikini": "loumfikini",

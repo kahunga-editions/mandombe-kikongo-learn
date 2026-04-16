@@ -30,7 +30,7 @@ const PHONETIC_OVERRIDES: Record<string, string> = {
   "kani": "kâni",
   "matanga": "matanga",
   "malaki": "malakhi",
-  "jimbakane": "djimbakané",
+  "jimbakane": "jimbakané",
   "mbakisa": "mbakissa",
   "lusalusu": "loussaloussou",
   "lubakusu": "loubakoussou",
@@ -61,7 +61,7 @@ const PHONETIC_OVERRIDES: Record<string, string> = {
   "kinsangu": "kinsangou",
   "tshinkoso": "tshinkôsso",
   "saleno": "saléno",
-  "jima": "djima",
+  
   "tatika": "tatika",
   "yarika": "yarika",
   "lumfikini": "loumfikini",
