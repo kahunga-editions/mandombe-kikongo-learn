@@ -27,7 +27,7 @@ Deno.serve(async (req) => {
     const apiFormData = new FormData();
     apiFormData.append("file", audioFile, "recording.webm");
     apiFormData.append("model_id", "scribe_v2");
-    apiFormData.append("language_code", "fra");
+    
     apiFormData.append("tag_audio_events", "false");
     apiFormData.append("diarize", "false");
 
