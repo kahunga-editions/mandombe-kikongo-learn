@@ -5,7 +5,7 @@ const corsHeaders = {
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
 };
 
-const SARAH_VOICE_ID = "EXAVITQu4vr4xnSDxMaL";
+const FRENCH_VOICE_ID = "R89ZQJowZAEgiPNyC3dQ";
 const MBILIA_VOICE_ID = "9d5gN66gJ67fuz9yl7IQ";
 const KOREAN_VOICE_ID = "KlstlYt9VVf3zgie2Oht";
 
@@ -30,10 +30,10 @@ Deno.serve(async (req) => {
 
     const isLingala = lang === "ln";
     const isKorean = lang === "ko";
-    const voiceId = isLingala ? MBILIA_VOICE_ID : isKorean ? KOREAN_VOICE_ID : SARAH_VOICE_ID;
+    const voiceId = isLingala ? MBILIA_VOICE_ID : isKorean ? KOREAN_VOICE_ID : FRENCH_VOICE_ID;
     const modelId = isLingala ? "eleven_v3" : "eleven_multilingual_v2";
 
-    console.log(`TTS: "${text.substring(0, 60)}" | lang: ${lang} | model: ${modelId} | voice: ${isLingala ? "Mbilia" : "Sarah"}`);
+    console.log(`TTS: "${text.substring(0, 60)}" | lang: ${lang} | model: ${modelId} | voice: ${isLingala ? "Mbilia" : isKorean ? "Korean" : "French"}`);
 
     const body: Record<string, unknown> = {
       text,
