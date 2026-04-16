@@ -15,6 +15,7 @@ const STT_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/elevenlabs-st
 function stripMarkdown(md: string): string {
   return md
     .replace(/\[mandombe\](.*?)\[\/mandombe\]/g, "$1")
+    .replace(/\([^)]*\)/g, "")
     .replace(/#{1,6}\s/g, "")
     .replace(/\*\*(.+?)\*\*/g, "$1")
     .replace(/\*(.+?)\*/g, "$1")
@@ -23,6 +24,7 @@ function stripMarkdown(md: string): string {
     .replace(/[-*]\s/g, "")
     .replace(/\n{2,}/g, ". ")
     .replace(/\n/g, " ")
+    .replace(/\s{2,}/g, " ")
     .trim();
 }
 
