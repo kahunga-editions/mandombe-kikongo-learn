@@ -1,4 +1,6 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.0";
+import { LESSONS_CORPUS, filterLessons, getExercisesByLesson } from "../_shared/lessons-corpus.ts";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -6,228 +8,179 @@ const corsHeaders = {
     "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
 };
 
-const SYSTEM_PROMPT = `Tu es Mbuta Matondo, professeur de Kikongo Lari sur le site NZO MIKANDA.
-Tu travailles avec ton assistant Theo, qui parle francais.
+const SUPABASE_URL = Deno.env.get("SUPABASE_URL")!;
+const SUPABASE_SERVICE_ROLE_KEY = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
+const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY")!;
+
+const SYSTEM_PROMPT = `Tu es Mbuta Matondo, professeur de Kikongo Lari sur NZO MIKANDA, avec ton assistant Theo (francophone).
 
 ## FORMAT OBLIGATOIRE
+Chaque réponse contient au moins un <lari>...</lari> et un <theo>...</theo>. Aucun texte hors balises.
+- <lari> = Mbuta Matondo, Kikongo Lari attesté UNIQUEMENT, Mandombe via [mandombe]Texte[/mandombe]
+- <theo> = Theo, français uniquement, max 2 phrases, chaleureux
 
-CHAQUE reponse doit contenir au moins un bloc <lari> et un bloc <theo>.
-Une reponse sans balises = reponse invalide. Ne jamais ecrire en dehors des balises.
+## OUTILS DISPONIBLES (OBLIGATOIRES)
+Tu DOIS utiliser ces outils du site avant de répondre :
 
-- <lari>...</lari> = Mbuta Matondo parle en Kikongo Lari atteste UNIQUEMENT
-- <theo>...</theo> = Theo parle en francais UNIQUEMENT
+1. **search_dictionary(query, lang?)** — AVANT d'utiliser tout mot Lari, vérifie qu'il existe dans le dictionnaire du site (admin corrections + corpus). Si vide → tu ne connais pas ce mot.
+2. **translate(text, source_lang, target_lang)** — pour TOUTE traduction demandée par l'élève. Utilise le résultat tel quel.
+3. **get_lessons(level?, topic?)** — pour proposer une leçon, choisis dans les leçons existantes.
+4. **get_exercises(lesson_id?, type?)** — pour proposer un exercice, prends d'abord ceux qui existent.
 
-Exemple :
-<lari>[mandombe]Mbote[/mandombe] nlongoki! Kolele?</lari>
-<theo>Mbuta Matondo te salue et te demande comment tu vas. Essaie de repondre !</theo>
+## RÈGLE D'OR
+Si search_dictionary retourne vide pour un mot demandé :
+- <lari>Ka nzebi a ko</lari>
+- <theo>Ce mot n'est pas encore dans nos ressources. Mbuta dit "Ka nzebi a ko" (Je ne sais pas).</theo>
 
-## REGLE ABSOLUE — MBUTA MATONDO (balises <lari>)
+Tu es LECTEUR de corpus, pas un locuteur natif. Ne JAMAIS inventer un mot, ne JAMAIS conjuguer par analogie, ne JAMAIS utiliser Kituba/Munukutuba/Lingala.
 
-Tu es un LECTEUR DE CORPUS. Tu lis ce qui est dedans. Tu ne construis rien.
-Tu n'es PAS un locuteur natif. Tu n'as PAS de competence linguistique en Kikongo Lari.
+Interdits absolus : "vova" (Kit) → "zonza" ; "mai" → "mamba" ; "mwana" pour l'élève → "nlongoki" ; "mbote na nge" (n'existe pas).
 
-### CE QUI EST INTERDIT dans <lari>
-- Conjuguer un verbe par analogie
-- Former une phrase nouvelle a partir de regles grammaticales
-- Completer un mot dont tu ne vois que la racine
-- Traduire un mot francais en Lari si ce mot n'est pas dans le corpus
-- Utiliser un mot qui "ressemble" a du Kikongo ou du Kituba
-- Inventer meme UNE SEULE syllabe
-- Utiliser "vova" (Kituba) — le mot Lari atteste est "zonza"
-- Utiliser "mbote na nge" — cette forme N'EXISTE PAS
-- Utiliser "ve ko" (Kituba)
-- Appeler l'eleve "mwana" ou "muana" — utiliser EXCLUSIVEMENT "nlongoki"
-- Ecrire des doubles lettres (aa, ee, ii, oo, uu, tt)
-- Utiliser du Kituba, Munukutuba ou Lingala
-- Ecrire du francais dans les balises <lari>
+Mandombe : Title Case, pas d'accents, pas de doubles lettres.
+Theo : emojis medium-dark (🧑🏾👋🏾👏🏾) autorisés, max 2 phrases.`;
 
-### CE QUE TU FAIS QUAND TU NE SAIS PAS
-Si l'apprenant demande quelque chose qui n'est pas dans le corpus :
-1. Tu ne devines pas
-2. Dans <theo>, Theo indique : "Ce mot n'est pas encore dans nos lecons."
-3. Tu proposes la phrase attestee la plus proche dans <lari>
+const TOOLS = [
+  {
+    type: "function",
+    function: {
+      name: "search_dictionary",
+      description:
+        "Cherche un mot ou une expression dans le dictionnaire du site (corrections admin + corpus Lari). Retourne les entrées correspondantes ou vide.",
+      parameters: {
+        type: "object",
+        properties: {
+          query: { type: "string", description: "Mot ou expression à chercher" },
+          lang: {
+            type: "string",
+            enum: ["lari", "fr", "en"],
+            description: "Langue source de la requête (défaut: auto)",
+          },
+        },
+        required: ["query"],
+      },
+    },
+  },
+  {
+    type: "function",
+    function: {
+      name: "translate",
+      description:
+        "Traduit un texte via le traducteur officiel du site (intègre les corrections admin). À utiliser pour toute traduction.",
+      parameters: {
+        type: "object",
+        properties: {
+          text: { type: "string" },
+          source_lang: { type: "string", description: "fr, en, lari, etc." },
+          target_lang: { type: "string", description: "fr, en, lari, etc." },
+        },
+        required: ["text", "source_lang", "target_lang"],
+      },
+    },
+  },
+  {
+    type: "function",
+    function: {
+      name: "get_lessons",
+      description: "Liste les leçons disponibles, filtrables par niveau ou thème.",
+      parameters: {
+        type: "object",
+        properties: {
+          level: { type: "string", enum: ["beginner", "intermediate", "advanced"] },
+          topic: { type: "string" },
+        },
+      },
+    },
+  },
+  {
+    type: "function",
+    function: {
+      name: "get_exercises",
+      description: "Liste les exercices existants pour une leçon ou par type.",
+      parameters: {
+        type: "object",
+        properties: {
+          lesson_id: { type: "string" },
+          type: {
+            type: "string",
+            enum: ["multiple-choice", "fill-in-blank", "matching", "crossword", "word-search"],
+          },
+        },
+      },
+    },
+  },
+];
 
----
+const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY);
 
-## THEO (balises <theo>)
+async function handleToolCall(name: string, args: Record<string, unknown>): Promise<unknown> {
+  try {
+    if (name === "search_dictionary") {
+      const query = String(args.query ?? "").trim();
+      if (!query) return { results: [], note: "empty query" };
 
-Tu es Theo, assistant francophone de Mbuta Matondo.
+      const { data: corrections } = await supabase
+        .from("translation_corrections")
+        .select("source_text, source_lang, target_lang, corrected_translation, corrected_mandombe, corrected_ipa, notes")
+        .or(`source_text.ilike.%${query}%,corrected_translation.ilike.%${query}%`)
+        .limit(10);
 
-### CE QUE TU FAIS
-- Tu traduis en francais ce que vient de dire Mbuta Matondo
-- Tu encourages l'apprenant simplement et chaleureusement
-- Tu expliques le contexte culturel quand c'est utile
-- Tu indiques a l'apprenant ce qu'il doit faire ensuite
+      const lower = query.toLowerCase();
+      const corpusHits = LESSONS_CORPUS.flatMap((l) =>
+        l.vocab.filter(
+          (v) =>
+            v.lari.toLowerCase().includes(lower) ||
+            v.french.toLowerCase().includes(lower)
+        ).map((v) => ({ ...v, lesson: l.id }))
+      );
 
-### CE QUE TU NE FAIS PAS
-- Tu ne parles JAMAIS en Kikongo Lari — c'est le role de Mbuta Matondo
-- Tu n'inventes AUCUN mot en Lari, meme pour aider
-- Tu ne corriges pas Mbuta Matondo
-- Tu ne donnes pas de cours de grammaire
-- Tu ne parles pas trop — une ou deux phrases maximum par intervention
+      return {
+        admin_corrections: corrections ?? [],
+        corpus_entries: corpusHits,
+        found: (corrections?.length ?? 0) + corpusHits.length > 0,
+      };
+    }
 
-### TON TON
-Chaleureux, simple, encourageant. Pas de jargon pedagogique.
+    if (name === "translate") {
+      const { data, error } = await supabase.functions.invoke("translate-lari", {
+        body: {
+          text: args.text,
+          sourceLang: args.source_lang,
+          targetLang: args.target_lang,
+        },
+      });
+      if (error) return { error: error.message };
+      return data;
+    }
 
-### CE QUE TU NE DIS JAMAIS
-- "Je suis une IA" ou "Je suis un assistant virtuel"
-- "Mbuta Matondo dit que..." suivi d'une invention en Lari
-- Des explications grammaticales abstraites
-- Plus de deux phrases d'affilee
+    if (name === "get_lessons") {
+      return filterLessons(args.level as string | undefined, args.topic as string | undefined);
+    }
 
----
+    if (name === "get_exercises") {
+      return getExercisesByLesson(args.lesson_id as string | undefined, args.type as string | undefined);
+    }
 
-## ECRITURE MANDOMBE (dans <lari> uniquement)
+    return { error: `Unknown tool: ${name}` };
+  } catch (e) {
+    return { error: e instanceof Error ? e.message : "tool failed" };
+  }
+}
 
-Utilise [mandombe]Texte Ici[/mandombe] pour afficher du texte en ecriture Mandombe.
-Regles : Title Case, pas d'accents, pas de doubles lettres, pas de semi-voyelles de transition.
-
----
-
-## CORPUS AUTORISE
-
-Toute entree absente de ce bloc = mot interdit.
-
-### SALUTATIONS ATTESTEES
-- Mbote = Bonjour
-- Kolele? = Ca va ?
-- Nkolele = Je vais bien
-- Meno, mpe nkolele = Moi aussi, je vais bien
-- Mbote mpangi, nkumbu aku nani? = Bonjour, quel est ton nom?
-- Mbote aku mpangi = Bonjour a toi
-- Ta kuambileno = Bonjour a vous
-- Nkumbu ani ... = Mon nom est ...
-- Lumbu kia kibote = Bonne journee
-- Mpimpa ya mbote = Bonne nuit
-- Lala bubote = Dors bien
-- Seka bubote = Dors bien
-- Tolo tua tu bote = Bonne nuit (sommeil)
-- Nkokela kua = A ce soir
-- Mbaji kua = A demain
-- Ntangu ka kua = A bientot
-- ATTENTION : "sangu" signifie MAIS (cereale). Pour "nouvelles", utiliser "nsangu" (singulier) ou "binsangu" (pluriel).
-
-### GRATITUDE ATTESTEE
-- Matondo = Merci
-- Ntondele = Je te remercie
-- Ntondele bua buingi = Je te remercie beaucoup
-- Matondo ma sakila = Merci infiniment
-- Ni ku tondele = Je te remercie
-- Hana matondo = Remercie (imperatif)
-- Ta hana matondo = Remercions
-- Vutula matondo = Remercier (rendre les remerciements)
-
-### VERBES ESSENTIELS ATTESTES
-- ba = etre (nje(na), we(na), ke(na), tue(na), lue(na), be(na))
-- sa = faire (ni ta sa, ta sa, ka ta sa, tu ta sa, lu ta sa, ba ta sa)
-- dia = manger (ni ta dia, ta dia, ka ta dia...)
-- nua = boire (ni ta nua, ta nua, ka ta nua...)
-- lenda = pouvoir (ndendi, lendi, tu lendi, lu lendi, ba lendi)
-- bonga = prendre (mbongele, bongele, tu bongele...)
-- zaba = savoir (nzebi, zebi, tu zebi...)
-- tonda = remercier
-- zonza = parler (NE JAMAIS utiliser "vova")
-- tala = regarder
-- kwenda = aller
-- kuiza = venir
-- sala = travailler
-- longa = apprendre/enseigner
-- vula = coiffer/defaire
-- djoka = fuir
-- diata = marcher
-- lamba = cuisiner
-- zenga = couper
-- banza = penser
-- futa = payer
-- wa = mourir
-- mona = voir
-- zola = aimer
-- hana = donner
-- yala = gouverner/diriger
-- sukula = laver
-- bika = laisser
-- zeba = visiter
-
-### VOCABULAIRE THEMATIQUE ATTESTE
-Famille : tata/ta (pere), mama/ma (mere), mwana (enfant — MAIS ne jamais appeler l'eleve mwana), yaya (aine), mpangi (cadet), kibushi (soeur), nkaji (frere), ndiku (ami), nkaji (epouse), mbutu (oncle maternel)
-Temps : lumbu (jour), mpimpa (nuit), nkokela (soir), mbaji (demain), mazuji (avant-hier), ntangu (temps/moment), lolo (aujourd'hui), mvula (pluie/annee), mwini (soleil)
-Maison : nzo (maison), kinzu (cuisine), lukungu (marmite), mbala (patate), loso (riz), mungua (sel), mampa (pain), malafu (vin de palme), masa/mamba (eau)
-Corps : nitu (corps), nsuki (cheveux), ntu (tete), meso (yeux), mutu (tete), malu (pieds)
-Nature : nsi (pays/terre), miti (arbres), bulu (animaux), ngulu (cochon), nsusu (poule), mbwa (chien), nkoko (singe), nzau (elephant)
-Nombres : mosi (1), zole (2), tatu (3), ya (4), tanu (5), sambanu (6), nsambwadi (7), nana (8), vwa (9), kumi (10)
-Lieux : zandu (marche), tshola (ecole), Mfua (Brazzaville)
-
-### POSSESSIFS ATTESTES
-- ani = mon/ma (forme vernaculaire courante)
-- ame = mon/ma (forme alternative attestee)
-- aku = ton/ta
-- andi = son/sa
-- awu = leur
-
-### PHRASES ATTESTEES
-- Mbote mpangi, nkumbu aku nani? = Bonjour, quel est ton nom ?
-- Mbote aku mpangi = Bonjour a toi
-- Ta kuambileno = Bonjour a vous
-- Kolele? = Ca va ?
-- Nkolele = Je vais bien
-- Wa wasa ngiena = Je suis bien portant(e)
-- Nkolele kwani = Je vais bien
-- Mu kiese wena = Tu es content
-- Mayela me nandi = Il/Elle est intelligent(e)
-- Ka tuena ba wasa ko = Nous ne sommes pas en bonne sante
-- Ka bena mu kiese ko = Ils ne sont pas contents
-- Lamba ni ta lamba = Je suis en train de cuisiner
-- Mbala ni ta zenga = Je coupe les patates
-- Nsuki ni ta vula = Je defais les cheveux
-- Nge fueti zaba ti = Tu dois savoir que
-- Bote kena = C'est beau/bon
-- Lumbu tshi ku zandu mbele = Aujourd'hui je suis allee au marche
-- Mbaji ku zandu NI kwenda = Demain j'irai au marche
-- Kangeno vungula = Fermez a clef
-- Bambuka moyo = Se rappeler quelque chose
-- Baku nsatu = Avoir faim
-- Baku nkesi = Se facher
-- Bumuntu bua muntu = L'humanite de l'etre humain
-- Bukulu ba kanda = Les anciens du clan
-- Duka wa dukidi mazono mu nkokela? = Ou es-tu sorti hier soir ?
-- Mazuji ku Mfua NA yele = Avant-hier j'etais a Mfua
-
-### STRUCTURES GRAMMATICALES ATTESTEES
-- Negation : ka + verbe + ko (ex: ka tuena ba wasa ko)
-- Futur : mbo + sujet + verbe (ex: mbo ni tonda = je remercierai)
-- Passe : na/wa/tua/lua/ba + verbe (ex: na tondele = j'ai remercie)
-- Imperatif pluriel : verbe + -eno (ex: kangeno = fermez)
-- Locatifs : ku (direction), ha (surface), mu (interieur)
-
-### FORMES INTERDITES ET EQUIVALENTS LARI CORRECTS
-- "vova" (Kituba) -> "zonza" (parler en Lari)
-- "ve ko" (Kituba) -> SUPPRIMER
-- "mai" (Kituba) -> "masa" ou "mamba" (eau en Lari)
-- "ndenge nini" (Lingala) -> NE PAS UTILISER
-- "nini" (Kituba) -> "nki" (quoi en Lari)
-- "mingi" (Kituba/Lingala) -> "fioti ko" ou "nguri" (beaucoup en Lari)
-- "mpe" (Lingala) -> "na" (et/aussi en Lari)
-- "ye" (Kituba) -> "na" (et en Lari)
-- "boni" (Kituba) -> "bwe bweni" (comment en Lari)
-- "soki" (Lingala) -> "kani" (si en Lari)
-- "kiese" (Kituba) -> NE PAS UTILISER comme salutation
-- "mbote na nge" -> N'EXISTE PAS. Utiliser "Mbote aku mpangi" ou "Mbote nlongoki"
-
----
-
-## STYLE
-
-- Mbuta Matondo commence par : <lari>[mandombe]Mbote[/mandombe] nlongoki!</lari>
-- Encourage : <lari>Mbote! Toma!</lari> <theo>Bien ! Continue comme ca !</theo>
-- Quand l'eleve se trompe : <lari>Tala, nlongoki...</lari> puis le bon exemple
-- Emojis medium-dark (🧑🏾👨🏾👩🏾🧒🏾👋🏾👏🏾) dans <theo> uniquement
-
-## REGLES FINALES
-- CHAQUE reponse = au moins 1 <lari> + 1 <theo>. JAMAIS de texte hors balises.
-- Mbuta Matondo = LECTEUR DE CORPUS, zero competence linguistique
-- Theo = francais uniquement, max 2 phrases, chaleureux
-- "Nkumbu ani" = forme vernaculaire correcte pour "mon nom"
-- Ne JAMAIS inventer, ne JAMAIS utiliser Kituba/Munukutuba/Lingala`;
+async function callGateway(messages: unknown[], stream: boolean) {
+  return await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${LOVABLE_API_KEY}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      model: "google/gemini-2.5-flash",
+      messages,
+      tools: TOOLS,
+      stream,
+    }),
+  });
+}
 
 serve(async (req) => {
   if (req.method === "OPTIONS") {
@@ -236,62 +189,98 @@ serve(async (req) => {
 
   try {
     const { messages } = await req.json();
-
     if (!messages || !Array.isArray(messages)) {
-      return new Response(
-        JSON.stringify({ error: "Messages array is required" }),
-        { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
-      );
+      return new Response(JSON.stringify({ error: "Messages array is required" }), {
+        status: 400,
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+      });
     }
 
-    const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY");
-    if (!LOVABLE_API_KEY) {
-      throw new Error("LOVABLE_API_KEY is not configured");
-    }
+    const conversation: any[] = [
+      { role: "system", content: SYSTEM_PROMPT },
+      ...messages,
+    ];
 
-    const response = await fetch(
-      "https://ai.gateway.lovable.dev/v1/chat/completions",
-      {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${LOVABLE_API_KEY}`,
-          "Content-Type": "application/json",
+    // Tool-calling loop (non-streamé), max 5 itérations
+    for (let i = 0; i < 5; i++) {
+      const resp = await callGateway(conversation, false);
+
+      if (!resp.ok) {
+        if (resp.status === 429)
+          return new Response(JSON.stringify({ error: "Trop de requêtes." }), {
+            status: 429,
+            headers: { ...corsHeaders, "Content-Type": "application/json" },
+          });
+        if (resp.status === 402)
+          return new Response(JSON.stringify({ error: "Crédits AI épuisés." }), {
+            status: 402,
+            headers: { ...corsHeaders, "Content-Type": "application/json" },
+          });
+        const t = await resp.text();
+        console.error("Gateway error:", resp.status, t);
+        return new Response(JSON.stringify({ error: "Erreur AI" }), {
+          status: 500,
+          headers: { ...corsHeaders, "Content-Type": "application/json" },
+        });
+      }
+
+      const data = await resp.json();
+      const choice = data.choices?.[0];
+      const msg = choice?.message;
+      if (!msg) {
+        return new Response(JSON.stringify({ error: "Réponse vide" }), {
+          status: 500,
+          headers: { ...corsHeaders, "Content-Type": "application/json" },
+        });
+      }
+
+      const toolCalls = msg.tool_calls;
+      if (toolCalls && toolCalls.length > 0) {
+        conversation.push({
+          role: "assistant",
+          content: msg.content ?? "",
+          tool_calls: toolCalls,
+        });
+        for (const tc of toolCalls) {
+          let parsedArgs: Record<string, unknown> = {};
+          try {
+            parsedArgs = JSON.parse(tc.function?.arguments ?? "{}");
+          } catch (_) {
+            parsedArgs = {};
+          }
+          const result = await handleToolCall(tc.function?.name, parsedArgs);
+          conversation.push({
+            role: "tool",
+            tool_call_id: tc.id,
+            content: JSON.stringify(result).slice(0, 8000),
+          });
+        }
+        continue; // re-call gateway with tool results
+      }
+
+      // Pas de tool call → on stream la réponse finale.
+      // Comme on a déjà la réponse complète, on l'émet en un seul chunk SSE compatible.
+      const finalText: string = msg.content ?? "";
+      const stream = new ReadableStream({
+        start(controller) {
+          const enc = new TextEncoder();
+          const chunkObj = {
+            choices: [{ delta: { content: finalText } }],
+          };
+          controller.enqueue(enc.encode(`data: ${JSON.stringify(chunkObj)}\n\n`));
+          controller.enqueue(enc.encode(`data: [DONE]\n\n`));
+          controller.close();
         },
-        body: JSON.stringify({
-          model: "google/gemini-3-flash-preview",
-          messages: [
-            { role: "system", content: SYSTEM_PROMPT },
-            ...messages,
-          ],
-          stream: true,
-        }),
-      }
-    );
-
-    if (!response.ok) {
-      if (response.status === 429) {
-        return new Response(
-          JSON.stringify({ error: "Trop de requetes, reessayez dans un moment." }),
-          { status: 429, headers: { ...corsHeaders, "Content-Type": "application/json" } }
-        );
-      }
-      if (response.status === 402) {
-        return new Response(
-          JSON.stringify({ error: "Credits epuises. Veuillez recharger votre compte." }),
-          { status: 402, headers: { ...corsHeaders, "Content-Type": "application/json" } }
-        );
-      }
-      const t = await response.text();
-      console.error("AI gateway error:", response.status, t);
-      return new Response(
-        JSON.stringify({ error: "Erreur du service AI" }),
-        { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
-      );
+      });
+      return new Response(stream, {
+        headers: { ...corsHeaders, "Content-Type": "text/event-stream" },
+      });
     }
 
-    return new Response(response.body, {
-      headers: { ...corsHeaders, "Content-Type": "text/event-stream" },
-    });
+    return new Response(
+      JSON.stringify({ error: "Limite d'itérations tool-calling atteinte" }),
+      { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+    );
   } catch (e) {
     console.error("mbuta-matondo error:", e);
     return new Response(
