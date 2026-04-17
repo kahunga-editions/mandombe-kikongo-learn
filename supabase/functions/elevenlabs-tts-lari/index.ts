@@ -115,7 +115,27 @@ const ELEVENLABS_RULES: PhoneticRule[] = [
 
   // nguri ya → bloc unique
   { from: /nguri ya/g, to: 'nguria' },
+
+  // H aspiré (comme "hâche" en français) — hi/hu/he/ho/ha
+  // ElevenLabs prononce déjà 'h' aspiré en mode FR ; on garantit qu'il n'est pas muet
+  // en doublant le contexte vocalique.
+  { from: /\bh([aeiouAEIOU])/g, to: "h'$1" },
 ];
+
+// ============================================================
+// TABLE IPA (référence — appliquée via overrides Latin->FR plutôt
+// que SSML, car eleven_v3 ne supporte pas <phoneme>).
+// Conservée ici pour documentation.
+// ngi/nge/nga/ngo/ngu → ŋɡi ŋɡe ŋɡa ŋɡo ŋɡu
+// gi/ge → ɡi ɡe (G dur)
+// shi/she/sha/sho/shu → ʃi ʃe ʃa ʃo ʃu
+// ji/je/ja/jo/ju → ʒi ʒe ʒa ʒo ʒu (fricative seule)
+// nji/nje/nja/njo/nju → ndʒi ndʒe ndʒa ndʒo ndʒu (affriquée prénasalisée)
+// ri/re/ra/ro/ru → ɾi ɾe ɾa ɾo ɾu (battement)
+// nyi/nye/nya/nyo/nyu → ɲi ɲe ɲa ɲo ɲu
+// hi/he/ha/ho/hu → h aspiré (français hâche)
+// n'k... → coup de glotte vélaire
+// ============================================================
 
 /**
  * Apply phonetic overrides first, then regex rules.
