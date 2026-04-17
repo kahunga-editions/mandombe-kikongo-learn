@@ -1,4 +1,5 @@
-// AUTO-GÉNÉRÉ depuis src/data/lessons.ts — ne pas éditer à la main.
+// AUTO-GÉNÉRÉ par scripts/sync-corpus.ts depuis src/data/lessons.ts.
+// NE PAS ÉDITER À LA MAIN — relancer `bun run scripts/sync-corpus.ts`.
 // Source de vérité côté serveur pour les tools de Mbuta Matondo.
 
 export interface LessonSummary {
