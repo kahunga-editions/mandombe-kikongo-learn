@@ -115,6 +115,9 @@ const ELEVENLABS_RULES: PhoneticRule[] = [
   { from: /nge/g, to: 'nghe', note: 'nge → nghe' },
   { from: /\bgi/g, to: 'guî', note: 'gi initial → guî' },
   { from: /\bge/g, to: 'guê', note: 'ge initial → guê' },
+
+  // H aspiré (comme "hâche" en français)
+  { from: /\bh([aeiouAEIOU])/g, to: "h'$1", note: 'h aspiré' },
 ];
 
 // ============================================================

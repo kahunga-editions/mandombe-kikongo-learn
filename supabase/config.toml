@@ -29,3 +29,9 @@ verify_jwt = false
 
 [functions.elevenlabs-stt]
 verify_jwt = false
+
+[functions.lessons-data]
+verify_jwt = false
+
+[functions.mbuta-matondo]
+verify_jwt = false
