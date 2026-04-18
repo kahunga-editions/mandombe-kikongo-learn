@@ -35,3 +35,6 @@ verify_jwt = false
 
 [functions.mbuta-matondo]
 verify_jwt = false
+
+[functions.whisper-stt]
+verify_jwt = false
