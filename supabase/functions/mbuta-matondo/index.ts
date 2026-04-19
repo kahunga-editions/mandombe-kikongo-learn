@@ -137,7 +137,123 @@ Wumuna. = Respire.
 Djuna. = Calme-toi.
 
 SI UN MOT MANQUE
-Ka nzebi a ko. = Je ne sais pas.`;
+Ka nzebi a ko. = Je ne sais pas.
+
+META-LANGAGE PEDAGOGIQUE (questions de Mbuta sur la langue)
+Mpila moshi ti ? = Qu'est-ce que ça veut dire ?
+Ambo [mot] ni nki ? = Et ce mot, c'est quoi ? (ni se prononce ntshi)
+Bue ba ta [mot] ? = Comment on dit ce mot ?
+Bue ta mu Kikongo Lari ? = Comment dis-tu en Kikongo Lari ?
+Bue ta ka mu Kikongo Lari ? = Comment dis-tu en Kikongo Lari ? (variante)
+Bue ta mu Kikongo ? = Comment dis-tu en Kikongo ?
+Wa tshifua tshi. = Écoute cette forme.
+Yi tsha ntangu ? = C'est quel temps ?
+Wa tshifua tshi ... yi tsha ntangu ? = Écoute cette forme ... c'est quel temps ?
+Na lendi tanga mambu ma ? = Qui peut lire ces phrases ? (na = forme abrégée de nani)
+Na lendi bangula ? = Qui peut traduire ?
+Lendi ta, nkia ntangu diambu di dia yoka mu luta, buabu, keti pele mu ma kuiza ? = Peux-tu dire si l'action s'est passée au passé, au présent ou au futur ?
+Mambu ma ta landa = la phrase suivante
+tshifua | bifua = la forme | les formes
+mpanga = verbe
+luta = passé (temps grammatical)
+buabu = présent (temps grammatical) [prononcé bu̯abu]
+ma kuiza = futur (temps grammatical)
+
+CORRECTION (formes attestées)
+Ka bua wa ko. = C'est faux.
+Vutu yela. = Essaie encore.
+Ka diambu a ko. = Ce n'est pas grave. / Ça ne fait rien.
+
+CONSIGNES D'EXERCICES
+Sola mvutu ya mbote. = Sélectionne la bonne réponse.
+Sola mvutu yi fuanakane. = Sélectionne la réponse qui convient.
+Mvutu ya mbote solele ? = As-tu sélectionné la bonne réponse ?
+Na solele mvutu ya mbote ? = Qui a sélectionné la bonne réponse ?
+Ku solele a mvutu ya mbote ko. = Tu n'as pas sélectionné la bonne réponse.
+Mvutu yi solele ka ya mbote a ko. = La réponse que tu as sélectionnée n'est pas la bonne.
+Katula wo lembolo ha kibuka kiandi. = Chasse l'intrus de la liste.
+Tula diambu di fuanakane : dia ntete, dia zole, keti dia tatu. = Complète avec 1, 2 ou 3 (un seul mot).
+Tula mambu ma fuanakane : ma ntete, ma zole, ma matatu. = Complète avec 1, 2 ou 3 (plusieurs mots).
+Mi ta mona mo bizidi bio. = Décris ce que tu vois à travers ces images.
+fulusa = compléter
+kintangulu | bintangulu = tableau | tableaux
+kifuani, tshifuani | bifuani = exemple | exemples
+dia ntete = le premier / la première
+dia zole = le deuxième / la deuxième
+dia tatu = le troisième / la troisième
+
+VERBE SALA (travailler) — passé / présent progressif / futur
+Sala ! = Travaille !
+Ni ta sala. = Je suis en train de travailler. (présent progressif)
+Salu = le travail (nom, différent du verbe sala)
+Nsaridi. = J'ai travaillé.
+Saridi. = Tu as travaillé.
+Ka saridi. = Il / elle a travaillé.
+Tu saridi. = Nous avons travaillé.
+Lu saridi. = Vous avez travaillé.
+Ba saridi. = Ils / elles ont travaillé.
+Ka nsaridi a ko. = Je n'ai pas travaillé.
+Ku saridi a ko. = Tu n'as pas travaillé.
+Ka saridi a ko. = Il / elle n'a pas travaillé.
+Ka tu saridi a ko. = Nous n'avons pas travaillé.
+Ka lu saridi a ko. = Vous n'avez pas travaillé.
+Ka ba saridi a ko. = Ils / elles n'ont pas travaillé.
+Mbo ni sala. = Je travaillerai. (futur, mbo = marqueur du futur)
+Mbo ba sala. = Ils travailleront.
+Mbo ka sala. = Il / elle travaillera.
+Ka mbo ni sala ko. = Je ne travaillerai pas.
+
+SALU KIA KIBOTE (bon travail) — bilan d'exercice
+Salu kia kibote nsaridi. = J'ai fait du bon travail.
+Salu kia kibote saridi. = Tu as fait du bon travail.
+Salu kia kibote ka saridi. = Il / elle a fait du bon travail.
+Salu kia kibote tu saridi. = Nous avons fait du bon travail.
+Salu kia kibote lu saridi. = Vous avez fait du bon travail.
+Salu kia kibote ba saridi. = Ils / elles ont fait du bon travail.
+Salu kia kibote saridi ? = As-tu fait du bon travail ?
+Ka nsaridi a salu kia kibote ko. = Je n'ai pas fait du bon travail.
+Ku saridi a salu kia kibote ko. = Tu n'as pas fait du bon travail.
+Ka saridi a salu kia kibote ko. = Il / elle n'a pas fait du bon travail.
+Ka tu saridi a salu kia kibote ko. = Nous n'avons pas fait du bon travail.
+Ka lu saridi a salu kia kibote ko. = Vous n'avez pas fait du bon travail.
+Ka ba saridi a salu kia kibote ko. = Ils / elles n'ont pas fait du bon travail.
+
+LOCALISATION ET ACCORDS DE CLASSES
+Kumbi kue diena ? = Où est la voiture ?
+Buku kue die(na) ? = Où est le livre ?
+Vunga kue die(na) ? = Où est la couverture ?
+Yaka kue die(na) ? = Où est le manioc ?
+Meza kue die(na) ? = Où est la table ?
+Mavunga kue mena ? = Où sont les couvertures ?
+Mayaka kue mena ? = Où sont les maniocs ?
+Mapapa kue mena ? = Où sont les chaussures ?
+Mulunga kue we(na) ? = Où est le bracelet ?
+Milunga kue mena ? = Où sont les bracelets ?
+Mfulu kue yena ? = Où est le lit ?
+Mfulu kue zena ? = Où sont les lits ?
+Bitunga kue bie(na) ? = Où sont les paniers ?
+Tshikuku mala tshe(na). = La cuisine est loin.
+mala = loin
+
+ECOLE ET AMIS (phrases attestées)
+Wa nduku zole ji ta zonzela nzo mikanda awu. = Tu vas entendre deux amis parler de leur école.
+Wa nduku zole ji ta zonzela nzo mikanda awu ya mona. = Tu vas entendre deux amis parler de leur nouvelle école.
+Wa muana bakala wu ta ta kue nduku andi mpashi za sala salu kia nzo mikanda. = Tu vas écouter un garçon qui parle à son ami de ses problèmes pour faire ses devoirs.
+Wa muana bakala wu ta ta kue nduku andi mpashi ji ka ta mona mu longoka. = Tu vas écouter un garçon qui parle à son ami des difficultés qu'il rencontre pour apprendre.
+muana bakala = un garçon
+salu kia nzo mikanda = les devoirs
+longoka = apprendre
+mona mpashi = avoir des difficultés
+zonzela = parler de
+nduku | nduku zole = ami | deux amis
+(ji se prononce comme dans "jeu" en français — fricative post-alvéolaire sonore /ʒ/)
+(nzo mikanda awu se prononce nzo mikandawu — liaison obligatoire)
+
+VIE QUOTIDIENNE (santé)
+moyo mvundani = la constipation, le ventre ballonné
+bombe dia jiku = la cendre du foyer
+bombe | mabombe = la cendre | les cendres
+jiku | majiku = le foyer | les foyers`;
 
 const TOOLS = [
   {
