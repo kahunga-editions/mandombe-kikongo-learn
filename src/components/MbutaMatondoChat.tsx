@@ -11,7 +11,7 @@ type Segment = { text: string; type: "lari" | "theo" };
 const CHAT_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/mbuta-matondo`;
 const TTS_LARI_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/elevenlabs-tts-lari`;
 const TTS_GENERAL_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/elevenlabs-tts-general`;
-const STT_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/whisper-stt`;
+const STT_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/elevenlabs-stt`;
 
 // Parse <lari>...</lari> and <theo>...</theo> segments
 function parseDualSegments(content: string): Segment[] {
@@ -229,20 +229,15 @@ function blobToBase64(blob: Blob): Promise<string> {
 }
 
 async function transcribeAudio(blob: Blob): Promise<string> {
-  const audio = await blobToBase64(blob);
+  const formData = new FormData();
+  formData.append("audio", blob, "recording.webm");
 
   const resp = await fetch(STT_URL, {
     method: "POST",
     headers: {
-      "Content-Type": "application/json",
       Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
     },
-    body: JSON.stringify({
-      audio,
-      mimeType: blob.type || "audio/webm",
-      filename: "recording.webm",
-      language: "fr",
-    }),
+    body: formData,
   });
   if (!resp.ok) throw new Error("STT failed");
   const data = await resp.json();
