@@ -480,6 +480,30 @@ async function handleToolCall(name: string, args: Record<string, unknown>): Prom
   }
 }
 
+/**
+ * Sanitise le contenu des blocs <theo>...</theo> :
+ * supprime tout texte entre guillemets / italiques markdown
+ * et toute phrase contenant un déclencheur ("dit :", "réponds :", "en Kikongo Lari").
+ * Les blocs <lari>...</lari> ne sont jamais touchés.
+ */
+function sanitizeTheoBlocks(text: string): string {
+  return text.replace(/<theo>([\s\S]*?)<\/theo>/g, (_match, inner: string) => {
+    const cleaned = inner
+      .replace(/"[^"]*"/g, "")
+      .replace(/«[^»]*»/g, "")
+      .replace(/[\u201C\u201D][^\u201C\u201D]*[\u201C\u201D]/g, "")
+      .replace(/[\u2018\u2019][^\u2018\u2019]*[\u2018\u2019]/g, "")
+      .replace(/\*[^*\n]+\*/g, "")
+      .replace(/_[^_\n]+_/g, "")
+      .split(/(?<=[.!?])\s+/)
+      .filter((s) => !/\b(en Kikongo Lari|dit\s*:|r[ée]pond[s]?\s*:)/i.test(s))
+      .join(" ")
+      .replace(/\s{2,}/g, " ")
+      .trim();
+    return `<theo>${cleaned}</theo>`;
+  });
+}
+
 async function callGateway(messages: unknown[], stream: boolean) {
   return await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
     method: "POST",
