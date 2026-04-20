@@ -255,7 +255,103 @@ VIE QUOTIDIENNE (santé)
 moyo mvundani = la constipation, le ventre ballonné
 bombe dia jiku = la cendre du foyer
 bombe | mabombe = la cendre | les cendres
-jiku | majiku = le foyer | les foyers`;
+jiku | majiku = le foyer | les foyers
+
+MOT INCONNU / GESTION
+Diambu dio ka nzebi a dio ko buabu. = Je ne connais pas encore ce mot. (diambu = mot ; dio = ce ; buabu = maintenant en contexte négatif)
+Mu tela ka ku bangurila mu lumputu. = Demande-lui de t'expliquer en français. (lumputu = la langue française ; bangula = expliquer)
+ntela = dis-moi
+tu tela = dis-nous
+ba tela = dis-leur (prononcer /e:/ long ; /t/ palatal réalisé avec le palais, pas avec les dents)
+Diambu dio tshika wa longoka dio. = Tu vas apprendre ce mot bientôt. (tshika = bientôt, futur très proche ; wa longoka = tu vas apprendre, futur immédiat)
+
+CHANGER DE SUJET / FUTUR IMMÉDIAT
+Ta zonzela bima biaka. = Parlons d'autre chose.
+Ta zonzela misamu miaka. = Parlons d'autre chose.
+Zonzeleno musamu ka. = Parlez d'autre chose.
+Zonzeleno mambu maka. = Parlez d'autre chose.
+Zonzeleno misamu miaka. = Parlez d'autre chose.
+Ba zonzela musamu ka. = Qu'ils parlent d'autre chose !
+Ba zonzela mambu maka. = Qu'ils parlent d'autre chose !
+Ta kala ku malongi meto. = Revenons à notre leçon. (premier /a:/ long ; kala = retourner à ; malongi = leçons, pluriel ; meto = notre s'accordant à malongi)
+Ta vutukila malongi meto. = Revenons à notre leçon. (vutukila = impératif de vutuka = revenir, retourner, reprendre, recommencer)
+Vutukeno ku malongi meno. = Revenez à votre leçon.
+Kaleno ku malongi meno. = Revenez à votre leçon.
+Mbo ta tala wo ntangu ka. = On verra ça plus tard. (mbo = marqueur du futur ; ta tala = nous verrons ; ntangu ka = plus tard, à un autre moment)
+Mbo ta zonzela wo ntangu ka. = On parlera de ça plus tard.
+
+FUTUR DU VERBE ZONZA (parler) — affirmatif
+Mbo ni zonza. = Je parlerai.
+Mbo zonza. = Tu parleras.
+Mbo ka zonza. = Il / elle parlera.
+Mbo tu zonza. = Nous parlerons.
+Mbo lu zonza. = Vous parlerez.
+Mbo ba zonza. = Ils / elles parleront.
+(zonzela = parler ensemble, parler avec quelqu'un, parler de)
+
+FUTUR DU VERBE ZONZA — négatif
+Ka ni zonza ko. = Je ne parlerai pas.
+Ku zonza ko. = Tu ne parleras pas.
+Ka zonza ko. = Il / elle ne parlera pas.
+Ka tu zonza ko. = Nous ne parlerons pas.
+Ka lu zonza ko. = Vous ne parlerez pas.
+Ka ba zonza ko. = Ils / elles ne parleront pas.
+
+VOCABULAIRE COMPLÉMENTAIRE
+mutima | mitima = cœur | cœurs
+ntima | mitima = cœur | cœurs (variante)
+lolo = aujourd'hui
+nlungu = ennui
+yula = demander, questionner
+muntu muntu = chacun, chaque personne
+yirika = faire, accomplir, exécuter
+sa = faire
+mbaji = demain
+delakasa = faire correspondre
+
+MÉTA-LANGAGE DU PROFESSEUR (consignes étendues)
+Lumbu tshi nki tu longoka ? = C'est quoi la leçon du jour ?
+Tanga diambu di moshi di moshi. = Lis chaque phrase. (di moshi di moshi = un par un)
+Tanga nsangu zazi. = Lis cette information.
+Tanga nsangu zi. = Lis cette information.
+Tanga nsangu ji. = Lis cette information.
+Tanga mambu ma. = Lis cette information.
+Tanga diambu di. = Lis cette information.
+Bue ta tangila mazita ma ? = Comment dis-tu ces syllabes ?
+Fulusa mambu ma nzuridi. = Complète les questions suivantes. (prononcer /ndju:ridi/ avec /i:/ long ; nzuridi = participe passé de yula = ce qui a été demandé)
+Delakasa mambu ma nzuridi na mvutu zawu. = Fais correspondre les questions et les réponses. (zawu = leur, accord avec mvutu)
+Wa mambu ma ni ta yula, hana mvutu. = Écoute les questions et réponds.
+Wirikila mambu ma ni ta yula, hana mvutu. = Écoute les questions et réponds.
+Vutula mvutu zole keti tatu. = Réponds en deux ou trois phrases.
+Hana mvutu zole keti tatu. = Réponds en deux ou trois phrases.
+Vutula mambu ma nzuridi. = Réponds aux questions.
+Tala bizidi bio, ta mi yirika muna muntu muntu mbaji. = Regarde les images et dis ce que chaque personne fera demain.
+Tala bizidi bio, ta mi sa muna muntu muntu mbaji. = Regarde les images et dis ce que chaque personne fera demain.
+Sa ntangu yi fuanakane, sarila mpe nkumbu ji ba heni. = Utilise le bon temps et utilise les noms donnés. (sarila = impératif de sala = travailler, faire ; ji = marque du pluriel ; heni vient de hana = donner)
+
+LEÇON 3 — KANDA NA BANDIKU (Famille et relations)
+Mbote mpangi. Nkumbu aku ani ? = Bonjour petit frère / petite sœur, quel est ton nom ?
+Mbote kua nge mpangi. = Bonjour à toi petit frère / petite sœur.
+nkazi = frère (prononcer /nkaji/)
+bushi = sœur (le /bu/ est accentué)
+kibushi = sœur (variante)
+tshibushi = sœur (variante)
+yaya = aîné, grand frère ou grande sœur (les deux /a:/ sont longs)
+mpangi = cadet, petit frère ou petite sœur (la syllabe /mpa/ est accentuée)
+nduku = ami
+nkumbu = nom (le premier /u:/ est long)
+nkumbu ani = mon nom
+nkumbu aku = ton nom
+nkumbu andi = son nom
+nkumbu awu = leur nom
+Nkumbu ani Mbuta Matondo. = Mon nom c'est Mbuta Matondo.
+Meno, Mbuta Matondo. = Moi c'est Mbuta Matondo.
+nduku ani = mon ami
+nduku aku = ton ami
+nduku andi = son ami
+Yaya ni nki ? = Aîné, ça veut dire quoi ? (ni se prononce /ntshi/)
+Mpangi ni nki ? = Cadet, ça veut dire quoi ?
+(Note culturelle pour Theo : la distinction aîné/cadet est fondamentale dans la culture Kongo. L'aîné s'adresse au plus jeune avec mpangi en marque d'affection et de respect hiérarchique.)`;
 
 const TOOLS = [
   {
