@@ -104,3 +104,5 @@
 - [Smart Quotes Constraint](mem://constraints/smart-quotes) — Straight apostrophes only in TS files
 - [Kinship Terms](mem://grammar/kinship-terms) — Full vs short forms (tata vs ta), yaya for grandparent
 - [AI Teacher](mem://features/ai-teacher) — Mbuta Matondo Gemini SSE implementation
+- [Verb Zonza Future](mem://grammar/verb-zonza-future) — Futur affirmatif (mbo+préfixe) et négatif (ka...ko) de zonza
+- [Teacher Meta-Language](mem://grammar/meta-language-teacher) — Consignes de classe : lire, compléter, écouter, répondre, changer de sujet
