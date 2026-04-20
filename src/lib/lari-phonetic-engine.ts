@@ -158,7 +158,16 @@ const PHONETIC_OVERRIDES: Record<string, string> = {
   "ti": "tii",
   "wa": "waa",
   "nsi": "tsii",
-  
+
+  // Overrides phonétiques additionnels
+  "ntu": "ntou",            // bloc unique /ntu/, ne pas séparer n+t
+  "nse": "nsè",             // é ouvert sonore /nsɛ/
+  "lulabu": "loulabou",     // /a/ très court, accent sur la
+  "tshibanga": "tshiibanga",// /i:/ long
+  "biyelo": "bi-yé-lo",     // syllabation forcée bi.ye.lo, jamais /bielo/
+  "hembo": "h'embo",        // /h/ doux à la française
+  "mahembo": "mah'embo",    // idem
+  "ntu-": "ntou",           // garde-fou pour formes composées
 };
 
 /**
