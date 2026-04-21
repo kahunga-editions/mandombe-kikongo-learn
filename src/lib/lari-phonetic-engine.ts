@@ -178,7 +178,7 @@ const PHONETIC_OVERRIDES: Record<string, string> = {
   "washiri": "wâshirî",     // guéri — accent
   "nkia": "ntshia",         // Pourquoi — nki se prononce /ntshi/
   "buingi": "bouingui",     // beaucoup — /bu/ ouvert, /i/ final distinct
-  "tshibuka": "tshibouka",  // position — déjà présent, confirmé
+  "zololo": "zololo",       // apprécié — o ouvert
   "zololo": "zololo",       // apprécié — o ouvert
   "buabana": "bouaban'a",   // rencontrés (passé indéfini) — a final distinct
   "buabane": "bouabané",    // rencontrés (récent) — é final
