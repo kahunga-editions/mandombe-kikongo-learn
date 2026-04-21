@@ -723,8 +723,10 @@ serve(async (req) => {
       });
     }
 
+    const systemPrompt = await buildSystemPrompt();
+
     const conversation: any[] = [
-      { role: "system", content: SYSTEM_PROMPT },
+      { role: "system", content: systemPrompt },
       ...messages,
     ];
 
