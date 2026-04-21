@@ -12,7 +12,7 @@ const SUPABASE_URL = Deno.env.get("SUPABASE_URL")!;
 const SUPABASE_SERVICE_ROLE_KEY = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
 const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY")!;
 
-const SYSTEM_PROMPT = `Tu es Mbuta Matondo, professeur de Kikongo Lari sur le site Nzo Mikanda. Tu as un assistant qui s'appelle Theo. Theo parle français. Toi, tu parles uniquement Kikongo Lari.
+const BASE_SYSTEM_PROMPT = `Tu es Mbuta Matondo, professeur de Kikongo Lari sur le site Nzo Mikanda. Tu as un assistant qui s'appelle Theo. Theo parle français. Toi, tu parles uniquement Kikongo Lari.
 
 RÈGLE ABSOLUE : Tu ne sors jamais du Kikongo Lari. Pas un mot de français. Jamais. Même si l'apprenant t'écrit en français, tu réponds en Kikongo Lari.
 
@@ -34,7 +34,7 @@ Il ne dit jamais ce que l'apprenant doit faire.
 Il ne parle jamais de Mbuta à la troisième personne.
 Il ne dit jamais "il te demande", "il te dit", "réponds", "écoute".
 Il traduit uniquement.
-La traduction de Theo vient EXCLUSIVEMENT des traductions validées dans les scripts des leçons et du CORPUS DE BASE ci-dessous.
+La traduction de Theo vient EXCLUSIVEMENT des traductions validées dans les scripts des leçons, du CORPUS DE BASE ci-dessous et des entrées validées du traducteur injectées dynamiquement.
 Theo ne traduit jamais de sa propre initiative un mot qu'il ne connaît pas.
 Si la traduction d'une réplique de Mbuta n'est pas dans le script, Theo ne dit rien (le bloc <theo> est alors omis).
 
@@ -72,7 +72,7 @@ UTILISATION DES OUTILS : Avant d'utiliser un mot, vérifie dans search_dictionar
 
 CORPUS DE BASE — PHRASES ATTESTÉES EN KIKONGO LARI
 
-Tu utilises UNIQUEMENT ces phrases. Jamais autre chose.
+Tu utilises UNIQUEMENT ces phrases et les entrées validées du traducteur injectées dynamiquement. Jamais autre chose.
 
 OUVERTURE DE LEÇON
 Mbote ! = Bonjour
@@ -549,6 +549,71 @@ const TOOLS = [
 ];
 
 const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY);
+
+type TranslatorCorrection = {
+  source_text: string;
+  source_lang: string;
+  target_lang: string;
+  corrected_translation: string;
+};
+
+function collapseWhitespace(value: string): string {
+  return value.replace(/\s+/g, " ").trim();
+}
+
+function correctionToCorpusLine(correction: TranslatorCorrection): string | null {
+  const source = collapseWhitespace(correction.source_text || "");
+  const translation = collapseWhitespace(correction.corrected_translation || "");
+
+  if (!source || !translation) return null;
+
+  if (correction.target_lang === "lari") {
+    return `${translation} = ${source}`;
+  }
+
+  if (correction.source_lang === "lari") {
+    return `${source} = ${translation}`;
+  }
+
+  return null;
+}
+
+async function buildSystemPrompt(): Promise<string> {
+  const { data, error } = await supabase
+    .from("translation_corrections")
+    .select("source_text, source_lang, target_lang, corrected_translation")
+    .or("source_lang.eq.lari,target_lang.eq.lari")
+    .order("created_at", { ascending: false })
+    .limit(120);
+
+  if (error) {
+    console.error("Failed to load dynamic translator corpus:", error);
+    return BASE_SYSTEM_PROMPT;
+  }
+
+  const lines: string[] = [];
+  const seen = new Set<string>();
+
+  for (const correction of (data ?? []) as TranslatorCorrection[]) {
+    const line = correctionToCorpusLine(correction);
+    if (!line) continue;
+
+    const key = line.toLowerCase();
+    if (seen.has(key)) continue;
+    seen.add(key);
+    lines.push(line);
+  }
+
+  if (lines.length === 0) {
+    return BASE_SYSTEM_PROMPT;
+  }
+
+  return `${BASE_SYSTEM_PROMPT}
+
+CORPUS DYNAMIQUE — ENTRÉES VALIDÉES DU TRADUCTEUR
+Toute entrée enregistrée dans le traducteur et impliquant le Kikongo Lari fait automatiquement partie du corpus de référence de Mbuta Matondo.
+${lines.join("\n")}`;
+}
 
 async function handleToolCall(name: string, args: Record<string, unknown>): Promise<unknown> {
   try {
