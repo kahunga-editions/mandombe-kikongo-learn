@@ -168,7 +168,27 @@ const PHONETIC_OVERRIDES: Record<string, string> = {
   "hembo": "h'embo",        // /h/ doux à la française
   "mahembo": "mah'embo",    // idem
   "ntu-": "ntou",           // garde-fou pour formes composées
-};
+  
+  // Nouvelles formes corpus Mbuta Matondo — Overrides phonétiques
+  "nzebia": "nzebia",        // liaison: ka nzebi a ko → prononcer /nzebia/ en un seul bloc
+  "tuka": "touka",          // Kue wa tuka — /u/ prononcé ouvert
+  "vukidi": "voukidî",      // survécu — accent final
+  "vukiri": "voukiri",      // variante
+  "saridi": "sâridî",       // opéré — accent sur le a et i final
+  "washiri": "wâshirî",     // guéri — accent
+  "nkia": "ntshia",         // Pourquoi — nki se prononce /ntshi/
+  "buingi": "bouingui",     // beaucoup — /bu/ ouvert, /i/ final distinct
+  "tshibuka": "tshibouka",  // position — déjà présent, confirmé
+  "zololo": "zololo",       // apprécié — o ouvert
+  "buabana": "bouaban'a",   // rencontrés (passé indéfini) — a final distinct
+  "buabane": "bouabané",    // rencontrés (récent) — é final
+  "kiari": "kiâri",         // triste — i et a longs
+  "kieri": "kiéri",         // étais triste — é fermé
+  "nzeri": "ndjéri",        // n'étais pas — nz → ndj, é ouvert /ɛ/
+  "kweri": "kwéri",         // tu n'étais pas — é fermé
+  "keri": "kéri",           // il/elle n'était pas — é fermé
+  "tshari": "tshâri",       // triste (négation) — a ouvert
+}
 
 /**
  * Applique les règles de prononciation pour ElevenLabs.
