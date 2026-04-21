@@ -179,7 +179,6 @@ const PHONETIC_OVERRIDES: Record<string, string> = {
   "nkia": "ntshia",         // Pourquoi — nki se prononce /ntshi/
   "buingi": "bouingui",     // beaucoup — /bu/ ouvert, /i/ final distinct
   "zololo": "zololo",       // apprécié — o ouvert
-  "zololo": "zololo",       // apprécié — o ouvert
   "buabana": "bouaban'a",   // rencontrés (passé indéfini) — a final distinct
   "buabane": "bouabané",    // rencontrés (récent) — é final
   "kiari": "kiâri",         // triste — i et a longs
