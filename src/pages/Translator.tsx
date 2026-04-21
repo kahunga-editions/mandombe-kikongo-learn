@@ -167,6 +167,11 @@ const Translator = () => {
     }
   }, [inputText, sourceLang, targetLang]);
 
+  // Admin-only access: redirect non-admins (after all hooks)
+  if (!loading && !isAdmin) {
+    return <Navigate to="/" replace />;
+  }
+
   const targetIsLari = targetLang === "lari";
   const lariText = targetIsLari ? result?.translation : inputText;
 
