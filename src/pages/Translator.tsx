@@ -42,7 +42,7 @@ const langLabels: Record<SourceLang, string> = {
 
 const Translator = () => {
   const { t } = useLanguage();
-  const { isAdmin, session } = useAuth();
+  const { isAdmin, user, loading, session } = useAuth();
   const [sourceLang, setSourceLang] = useState<SourceLang>("fr");
   const [targetLang, setTargetLang] = useState<SourceLang>("lari");
   const [inputText, setInputText] = useState("");
@@ -52,6 +52,11 @@ const Translator = () => {
   const [copied, setCopied] = useState<"source" | "target" | "mandombe" | null>(null);
   const [isEditing, setIsEditing] = useState(false);
   const mandombeRef = useRef<HTMLParagraphElement>(null);
+
+  // Admin-only access: redirect non-admins
+  if (!loading && !isAdmin) {
+    return <Navigate to="/" replace />;
+  }
 
   const copyMandombeAsImage = useCallback(async () => {
     if (!mandombeRef.current) return;
