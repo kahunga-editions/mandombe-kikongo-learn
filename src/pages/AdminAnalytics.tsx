@@ -216,6 +216,41 @@ const AdminAnalytics = () => {
           <StatCard icon={<Globe2 className="h-4 w-4" />} label="Pays" value={stats.countries} />
         </div>
 
+        {/* Microsoft Clarity quick access */}
+        <Card className="mb-6 bg-gradient-to-r from-primary/5 to-accent/5 border-primary/20">
+          <CardContent className="py-4 flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <p className="font-medium text-sm">🎬 Voir ce que voient les visiteurs</p>
+              <p className="text-xs text-muted-foreground">
+                Replays de session, heatmaps de clics et de scroll via Microsoft Clarity
+              </p>
+            </div>
+            <div className="flex gap-2 flex-wrap">
+              <a
+                href="https://clarity.microsoft.com/projects/view/wgdu8yeaw5/recordings"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button size="sm" variant="default">▶ Replays</Button>
+              </a>
+              <a
+                href="https://clarity.microsoft.com/projects/view/wgdu8yeaw5/heatmaps"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button size="sm" variant="outline">🔥 Heatmaps</Button>
+              </a>
+              <a
+                href="https://clarity.microsoft.com/projects/view/wgdu8yeaw5/dashboard"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button size="sm" variant="outline">📊 Dashboard</Button>
+              </a>
+            </div>
+          </CardContent>
+        </Card>
+
         {/* Chart */}
         <Card className="mb-6">
           <CardHeader>
