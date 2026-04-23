@@ -14,7 +14,9 @@ import Flashcards from "./pages/Flashcards";
 import MandombeScript from "./pages/MandombeScript";
 import Translator from "./pages/Translator";
 import AdminCorrections from "./pages/AdminCorrections";
+import AdminAnalytics from "./pages/AdminAnalytics";
 import MbutaMatondo from "./pages/MbutaMatondo";
+import { PageTracker } from "./components/PageTracker";
 
 import NotFound from "./pages/NotFound";
 
@@ -28,6 +30,7 @@ const App = () => (
       <BrowserRouter>
         <LanguageProvider>
           <AuthProvider>
+            <PageTracker />
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/auth" element={<Auth />} />
@@ -38,6 +41,7 @@ const App = () => (
               <Route path="/mandombe" element={<MandombeScript />} />
               <Route path="/translator" element={<Translator />} />
               <Route path="/admin/corrections" element={<AdminCorrections />} />
+              <Route path="/admin/analytics" element={<AdminAnalytics />} />
               <Route path="/mbuta-matondo" element={<MbutaMatondo />} />
               
               <Route path="*" element={<NotFound />} />

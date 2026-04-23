@@ -100,6 +100,51 @@ export type Database = {
         }
         Relationships: []
       }
+      page_views: {
+        Row: {
+          city: string | null
+          country: string | null
+          country_code: string | null
+          device: string | null
+          id: string
+          page_path: string
+          referrer: string | null
+          session_id: string
+          user_agent: string | null
+          user_email: string | null
+          user_id: string | null
+          visited_at: string
+        }
+        Insert: {
+          city?: string | null
+          country?: string | null
+          country_code?: string | null
+          device?: string | null
+          id?: string
+          page_path: string
+          referrer?: string | null
+          session_id: string
+          user_agent?: string | null
+          user_email?: string | null
+          user_id?: string | null
+          visited_at?: string
+        }
+        Update: {
+          city?: string | null
+          country?: string | null
+          country_code?: string | null
+          device?: string | null
+          id?: string
+          page_path?: string
+          referrer?: string | null
+          session_id?: string
+          user_agent?: string | null
+          user_email?: string | null
+          user_id?: string | null
+          visited_at?: string
+        }
+        Relationships: []
+      }
       profiles: {
         Row: {
           avatar_url: string | null
