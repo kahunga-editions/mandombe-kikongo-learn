@@ -17,6 +17,7 @@ import AdminCorrections from "./pages/AdminCorrections";
 import AdminAnalytics from "./pages/AdminAnalytics";
 import MbutaMatondo from "./pages/MbutaMatondo";
 import Privacy from "./pages/Privacy";
+import Mvita from "./pages/Mvita";
 import { PageTracker } from "./components/PageTracker";
 import { CookieConsent } from "./components/CookieConsent";
 
@@ -45,6 +46,7 @@ const App = () => (
               <Route path="/admin/corrections" element={<AdminCorrections />} />
               <Route path="/admin/analytics" element={<AdminAnalytics />} />
               <Route path="/mbuta-matondo" element={<MbutaMatondo />} />
+              <Route path="/mvita" element={<Mvita />} />
               <Route path="/privacy" element={<Privacy />} />
               
               <Route path="*" element={<NotFound />} />
