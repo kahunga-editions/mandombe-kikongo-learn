@@ -2,7 +2,7 @@ import { useState, useCallback, useRef } from "react";
 import { ArrowRightLeft, Languages, Loader2, AlertCircle, Copy, Check, ImageIcon, Pencil } from "lucide-react";
 import html2canvas from "html2canvas";
 import { toast } from "sonner";
-import { Navigate } from "react-router-dom";
+
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MandombeSpeaker from "@/components/MandombeSpeaker";
@@ -42,7 +42,7 @@ const langLabels: Record<SourceLang, string> = {
 
 const Translator = () => {
   const { t } = useLanguage();
-  const { isAdmin, loading, session } = useAuth();
+  const { isAdmin, session } = useAuth();
   const [sourceLang, setSourceLang] = useState<SourceLang>("fr");
   const [targetLang, setTargetLang] = useState<SourceLang>("lari");
   const [inputText, setInputText] = useState("");
