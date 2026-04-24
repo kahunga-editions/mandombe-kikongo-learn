@@ -14,6 +14,48 @@ export type Database = {
   }
   public: {
     Tables: {
+      battle_profiles: {
+        Row: {
+          battle_name: string | null
+          created_at: string
+          draws: number
+          elo: number
+          games_played: number
+          id: string
+          league: string
+          losses: number
+          updated_at: string
+          user_id: string
+          wins: number
+        }
+        Insert: {
+          battle_name?: string | null
+          created_at?: string
+          draws?: number
+          elo?: number
+          games_played?: number
+          id?: string
+          league?: string
+          losses?: number
+          updated_at?: string
+          user_id: string
+          wins?: number
+        }
+        Update: {
+          battle_name?: string | null
+          created_at?: string
+          draws?: number
+          elo?: number
+          games_played?: number
+          id?: string
+          league?: string
+          losses?: number
+          updated_at?: string
+          user_id?: string
+          wins?: number
+        }
+        Relationships: []
+      }
       flashcard_reviews: {
         Row: {
           created_at: string
@@ -273,6 +315,7 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
+      compute_league: { Args: { _elo: number }; Returns: string }
       has_role: {
         Args: {
           _role: Database["public"]["Enums"]["app_role"]
