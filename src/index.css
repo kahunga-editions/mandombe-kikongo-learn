@@ -7,7 +7,8 @@
 
 @font-face {
   font-family: 'Masono Mandombe';
-  src: url('/fonts/masono_mandombe-webfont.ttf') format('truetype');
+  src: url('https://zckjqudeoodfxikhdfvh.supabase.co/storage/v1/object/public/public-assets/fonts/masono_mandombe.ttf') format('truetype'),
+       url('/fonts/masono_mandombe-webfont.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
