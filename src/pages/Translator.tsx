@@ -167,10 +167,7 @@ const Translator = () => {
     }
   }, [inputText, sourceLang, targetLang]);
 
-  // Admin-only access: redirect non-admins (after all hooks)
-  if (!loading && !isAdmin) {
-    return <Navigate to="/" replace />;
-  }
+  // Translator is now public — admin still has correction privileges below.
 
   const targetIsLari = targetLang === "lari";
   const lariText = targetIsLari ? result?.translation : inputText;
