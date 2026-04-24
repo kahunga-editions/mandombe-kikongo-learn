@@ -106,3 +106,4 @@
 - [AI Teacher](mem://features/ai-teacher) — Mbuta Matondo Gemini SSE implementation
 - [Verb Zonza Future](mem://grammar/verb-zonza-future) — Futur affirmatif (mbo+préfixe) et négatif (ka...ko) de zonza
 - [Teacher Meta-Language](mem://grammar/meta-language-teacher) — Consignes de classe : lire, compléter, écouter, répondre, changer de sujet
+- [Mvita za Ndinga](mem://features/mvita-za-ndinga) — Duels vocabulaire, ligues Nlongoki→Nlongi→Kinuani→Mbuta→Nganga
