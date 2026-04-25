@@ -80,17 +80,26 @@ export const MvitaAIBattle = ({ difficulty, playerElo, userId, battleName, onClo
   const persist = async () => {
     if (!userId || saved) return;
     setSaved(true);
+    const { data: current, error: fetchErr } = await supabase
+      .from("battle_profiles")
+      .select("wins, losses, draws, games_played")
+      .eq("user_id", userId)
+      .maybeSingle();
+    if (fetchErr || !current) {
+      console.error(fetchErr);
+      toast.error("Sauvegarde du score échouée");
+      return;
+    }
     const { error } = await supabase
       .from("battle_profiles")
       .update({
         elo: newElo,
-        wins: result === 1 ? playerScore : 0,
-        losses: result === 0 ? 1 : 0,
-        draws: result === 0.5 ? 1 : 0,
-        games_played: 1,
-      } as never)
+        wins: current.wins + (result === 1 ? 1 : 0),
+        losses: current.losses + (result === 0 ? 1 : 0),
+        draws: current.draws + (result === 0.5 ? 1 : 0),
+        games_played: current.games_played + 1,
+      })
       .eq("user_id", userId);
-    // Use RPC-style increment via fetch since direct + isn't typed; fallback: refetch then update
     if (error) {
       console.error(error);
       toast.error("Sauvegarde du score échouée");
