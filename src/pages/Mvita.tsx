@@ -208,6 +208,38 @@ const Mvita = () => {
           ) : null}
         </Card>
 
+        {/* AI difficulty selector */}
+        {aiSelect && (
+          <Card className="p-6 mb-10 border-2 border-primary">
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-xl font-bold">Choisis ton adversaire IA</h3>
+              <Button variant="ghost" size="sm" onClick={() => setAiSelect(false)}>
+                Annuler
+              </Button>
+            </div>
+            <div className="grid md:grid-cols-3 gap-3">
+              {(Object.keys(AI_DIFFICULTY) as AIDifficulty[]).map((key) => {
+                const cfg = AI_DIFFICULTY[key];
+                return (
+                  <button
+                    key={key}
+                    onClick={() => startAIBattle(key)}
+                    className="p-5 rounded-lg border-2 border-border hover:border-primary hover:bg-primary/5 transition-all text-left"
+                  >
+                    <div className="flex items-center gap-2 mb-2">
+                      <Bot className="w-5 h-5 text-primary" />
+                      <span className="font-bold">{cfg.label}</span>
+                    </div>
+                    <p className="text-xs text-muted-foreground">
+                      Précision ~{Math.round(cfg.accuracy * 100)}% · Elo {cfg.elo}
+                    </p>
+                  </button>
+                );
+              })}
+            </div>
+          </Card>
+        )}
+
         {/* Mode selection */}
         <h2 className="text-2xl font-bold mb-6">Choisis ton mode</h2>
         <div className="grid md:grid-cols-3 gap-5">
