@@ -4732,41 +4732,38 @@ serve(async (req) => {
         });
       }
 
-      const { error: upsertErr } = await supabase
-        .from("translation_corrections")
-        .upsert({
-          source_text: text.trim().toLowerCase(),
-          source_lang: sourceLang,
-          target_lang: targetLang,
-          corrected_translation: translation,
-          corrected_mandombe: mandombe || "",
-          corrected_ipa: ipa || "",
-          notes: corrNotes || "",
-          created_by: user.id,
-        }, { onConflict: "lower(source_text),source_lang,target_lang" });
+      const normalizedText = text.trim().toLowerCase();
+      const correctionPayload = {
+        source_text: normalizedText,
+        source_lang: sourceLang,
+        target_lang: targetLang,
+        corrected_translation: translation,
+        corrected_mandombe: mandombe || "",
+        corrected_ipa: ipa || "",
+        notes: corrNotes || "",
+        created_by: user.id,
+      };
 
-      // Fallback: if upsert on expression fails, try delete + insert
-      if (upsertErr) {
-        await supabase
+      const { data: existingCorrection, error: lookupErr } = await supabase
+        .from("translation_corrections")
+        .select("id")
+        .eq("source_lang", sourceLang)
+        .eq("target_lang", targetLang)
+        .ilike("source_text", text.trim())
+        .maybeSingle();
+
+      if (lookupErr) throw lookupErr;
+
+      const { error: saveErr } = existingCorrection
+        ? await supabase
           .from("translation_corrections")
-          .delete()
-          .eq("source_lang", sourceLang)
-          .eq("target_lang", targetLang)
-          .ilike("source_text", text.trim());
-        
-        await supabase
+          .update(correctionPayload)
+          .eq("id", existingCorrection.id)
+        : await supabase
           .from("translation_corrections")
-          .insert({
-            source_text: text.trim().toLowerCase(),
-            source_lang: sourceLang,
-            target_lang: targetLang,
-            corrected_translation: translation,
-            corrected_mandombe: mandombe || "",
-            corrected_ipa: ipa || "",
-            notes: corrNotes || "",
-            created_by: user.id,
-          });
-      }
+          .insert(correctionPayload);
+
+      if (saveErr) throw saveErr;
 
       return new Response(JSON.stringify({ saved: true }), {
         headers: { ...corsHeaders, "Content-Type": "application/json" },
