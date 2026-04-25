@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Swords, Clock, Zap, Bot, Trophy, Users, Lock } from "lucide-react";
+import { Swords, Clock, Zap, Bot, Trophy, Users, Lock, ArrowLeft } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
@@ -10,6 +10,8 @@ import { Progress } from "@/components/ui/progress";
 import { useAuth } from "@/contexts/AuthContext";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
+import MvitaAIBattle from "@/components/mvita/MvitaAIBattle";
+import { AI_DIFFICULTY, type AIDifficulty } from "@/lib/mvita-questions";
 
 type BattleProfile = {
   battle_name: string | null;
@@ -39,6 +41,8 @@ const Mvita = () => {
   const navigate = useNavigate();
   const [profile, setProfile] = useState<BattleProfile | null>(null);
   const [loadingProfile, setLoadingProfile] = useState(true);
+  const [aiSelect, setAiSelect] = useState(false);
+  const [activeBattle, setActiveBattle] = useState<AIDifficulty | null>(null);
 
   useEffect(() => {
     document.title = "Mvita za Ndinga — Batailles de mots Lari | Nzo Mikanda";
@@ -81,7 +85,7 @@ const Mvita = () => {
 
   const handleMode = (mode: "async" | "live" | "ai") => {
     if (mode === "ai") {
-      toast.info("Mode IA bientôt disponible — choisis un niveau de difficulté.");
+      setAiSelect(true);
       return;
     }
     if (!user) {
@@ -91,6 +95,38 @@ const Mvita = () => {
     }
     toast.info(`Mode ${mode === "async" ? "asynchrone" : "live"} bientôt disponible.`);
   };
+
+  const startAIBattle = (difficulty: AIDifficulty) => {
+    setAiSelect(false);
+    setActiveBattle(difficulty);
+  };
+
+  const closeBattle = (newElo?: number) => {
+    setActiveBattle(null);
+    if (newElo && profile) setProfile({ ...profile, elo: newElo });
+  };
+
+  // Active battle view
+  if (activeBattle) {
+    return (
+      <div className="min-h-screen bg-background flex flex-col">
+        <Navbar />
+        <main className="flex-1 container mx-auto px-4 py-8 max-w-3xl">
+          <Button variant="ghost" size="sm" onClick={() => closeBattle()} className="mb-4">
+            <ArrowLeft className="w-4 h-4 mr-1.5" /> Abandonner
+          </Button>
+          <MvitaAIBattle
+            difficulty={activeBattle}
+            playerElo={profile?.elo ?? 1000}
+            userId={user?.id ?? null}
+            battleName={profile?.battle_name ?? "Mwana"}
+            onClose={closeBattle}
+          />
+        </main>
+        <Footer />
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
