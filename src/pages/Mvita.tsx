@@ -132,15 +132,22 @@ const Mvita = () => {
     <div className="min-h-screen bg-background flex flex-col">
       <Navbar />
 
-      <main className="flex-1 container mx-auto px-4 py-12 max-w-5xl">
+      <main className="flex-1 container mx-auto px-4 py-8 md:py-10 max-w-5xl">
         {/* Hero */}
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
+        <div className="text-center mb-10">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-5">
             <Swords className="w-4 h-4" />
             Mvita za Ndinga
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Batailles de mots</h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p
+            className="font-mandombe text-5xl md:text-6xl leading-[1.6] mb-3"
+            lang="kg"
+            aria-label="Mvita za Ndinga en Mandombe"
+          >
+            Mvita za Ndinga
+          </p>
+          <h1 className="text-3xl md:text-4xl font-bold mb-3">Batailles de mots</h1>
+          <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
             Affronte d'autres apprenants sur le vocabulaire Kikongo Lari et l'écriture Mandombe.
             Gravis les ligues : Nlongoki → Nlongi → Kinuani → Mbuta → Nganga.
           </p>
