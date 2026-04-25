@@ -58,8 +58,8 @@ export const generateQuestions = (count: number): MvitaQuestion[] => {
 
 // AI plays: probability of picking the correct answer
 export const AI_DIFFICULTY = {
-  easy: { label: "Mwana (facile)", accuracy: 0.6, elo: 1000 },
-  medium: { label: "Mbuta (moyen)", accuracy: 0.8, elo: 1400 },
+  easy: { label: "Nlongoki (facile)", accuracy: 0.6, elo: 1000 },
+  medium: { label: "Kinuani (moyen)", accuracy: 0.8, elo: 1400 },
   hard: { label: "Nganga (difficile)", accuracy: 0.95, elo: 1750 },
 } as const;
 
