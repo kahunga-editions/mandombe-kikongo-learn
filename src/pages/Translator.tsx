@@ -6,6 +6,7 @@ import { toast } from "sonner";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MandombeSpeaker from "@/components/MandombeSpeaker";
+import { supabase } from "@/integrations/supabase/client";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useAuth } from "@/contexts/AuthContext";
 import { Textarea } from "@/components/ui/textarea";
@@ -42,7 +43,7 @@ const langLabels: Record<SourceLang, string> = {
 
 const Translator = () => {
   const { t } = useLanguage();
-  const { isAdmin, session } = useAuth();
+  const { isAdmin, session, checkSubscription } = useAuth();
   const [sourceLang, setSourceLang] = useState<SourceLang>("fr");
   const [targetLang, setTargetLang] = useState<SourceLang>("lari");
   const [inputText, setInputText] = useState("");
@@ -97,7 +98,23 @@ const Translator = () => {
   }, [sourceLang, targetLang, result]);
 
   const saveCorrection = useCallback(async () => {
-    if (!result || !isAdmin || !session?.access_token) return;
+    if (!result) return;
+    if (!isAdmin) {
+      toast.error("Session admin requise pour sauvegarder une correction.");
+      return;
+    }
+
+    let accessToken = session?.access_token;
+    if (!accessToken) {
+      const { data } = await supabase.auth.getSession();
+      accessToken = data.session?.access_token;
+    }
+
+    if (!accessToken) {
+      toast.error("Reconnectez-vous pour sauvegarder la correction.");
+      return;
+    }
+
     try {
       const response = await fetch(
         `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/translate-lari`,
@@ -106,7 +123,7 @@ const Translator = () => {
           headers: {
             "Content-Type": "application/json",
             apikey: import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY,
-            Authorization: `Bearer ${session.access_token}`,
+            Authorization: `Bearer ${accessToken}`,
           },
           body: JSON.stringify({
             text: inputText.trim(),
@@ -120,14 +137,16 @@ const Translator = () => {
         }
       );
       if (response.ok) {
+        await checkSubscription();
         toast.success(t("translator.correctionSaved") || "Correction sauvegardée !");
       } else {
-        toast.error("Erreur lors de la sauvegarde");
+        const err = await response.json().catch(() => ({}));
+        toast.error(err.error || "Erreur lors de la sauvegarde");
       }
     } catch {
       toast.error("Erreur lors de la sauvegarde");
     }
-  }, [result, isAdmin, session, inputText, sourceLang, targetLang, t]);
+  }, [result, isAdmin, session, checkSubscription, inputText, sourceLang, targetLang, t]);
 
   const translate = useCallback(async () => {
     if (!inputText.trim()) return;

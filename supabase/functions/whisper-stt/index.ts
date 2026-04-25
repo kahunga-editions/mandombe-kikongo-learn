@@ -44,8 +44,9 @@ serve(async (req) => {
     const type = mimeType || "audio/webm";
     const name = filename || "recording.webm";
 
+    const fileBytes = bytes.buffer.slice(bytes.byteOffset, bytes.byteOffset + bytes.byteLength) as ArrayBuffer;
     const formData = new FormData();
-    formData.append("file", new Blob([bytes], { type }), name);
+    formData.append("file", new Blob([fileBytes], { type }), name);
     formData.append("model", "whisper-1");
     formData.append("language", language || "fr");
     formData.append("response_format", "json");

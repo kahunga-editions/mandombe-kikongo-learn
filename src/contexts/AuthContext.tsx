@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState, ReactNode } from "react";
+import { createContext, useCallback, useContext, useEffect, useState, ReactNode } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import type { User, Session } from "@supabase/supabase-js";
 
@@ -36,79 +36,106 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     loading: true,
   });
 
-  const checkSubscription = async () => {
+  const checkSubscription = useCallback(async () => {
     try {
-      // Force a fresh session to avoid expired token race conditions
-      const { data: { session }, error: sessionError } = await supabase.auth.refreshSession();
+      const { data: { session }, error: sessionError } = await supabase.auth.getSession();
       if (sessionError || !session) {
         console.warn("No valid session for subscription check");
+        setState((prev) => ({
+          ...prev,
+          user: null,
+          session: null,
+          isAdmin: false,
+          isPremium: false,
+          subscriptionEnd: null,
+          loading: false,
+        }));
         return;
       }
+
+      const { data: hasAdminRole, error: roleError } = await supabase.rpc("has_role", {
+        _user_id: session.user.id,
+        _role: "admin",
+      });
+      if (roleError) console.error("Admin role check error:", roleError);
+      const adminRole = Boolean(hasAdminRole);
 
       const { data, error } = await supabase.functions.invoke("check-subscription", {
         headers: { Authorization: `Bearer ${session.access_token}` },
       });
       if (error) {
         console.error("Subscription check error:", error);
+        setState((prev) => ({
+          ...prev,
+          user: session.user,
+          session,
+          isAdmin: adminRole,
+          isPremium: adminRole,
+          subscriptionEnd: null,
+          loading: false,
+        }));
         return;
       }
 
       setState((prev) => ({
         ...prev,
-        isPremium: data?.subscribed || data?.isAdmin || false,
-        isAdmin: data?.isAdmin || false,
+        user: session.user,
+        session,
+        isPremium: data?.subscribed || data?.isAdmin || adminRole || false,
+        isAdmin: data?.isAdmin || adminRole || false,
         subscriptionEnd: data?.subscription_end || null,
+        loading: false,
       }));
     } catch (err) {
       console.error("Failed to check subscription:", err);
+      setState((prev) => ({ ...prev, loading: false }));
     }
-  };
+  }, []);
 
   useEffect(() => {
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
       async (_event, session) => {
-        setState((prev) => ({
-          ...prev,
-          user: session?.user ?? null,
-          session,
-          loading: false,
-        }));
-
         if (session?.user) {
-          setTimeout(checkSubscription, 500);
+          setState((prev) => ({
+            ...prev,
+            user: session.user,
+            session,
+            loading: true,
+          }));
+          setTimeout(() => void checkSubscription(), 0);
         } else {
           setState((prev) => ({
             ...prev,
+            user: null,
+            session: null,
             isAdmin: false,
             isPremium: false,
             subscriptionEnd: null,
+            loading: false,
           }));
         }
       }
     );
 
     supabase.auth.getSession().then(({ data: { session } }) => {
-      setState((prev) => ({
-        ...prev,
-        user: session?.user ?? null,
-        session,
-        loading: false,
-      }));
       if (session?.user) {
-        checkSubscription();
+        setState((prev) => ({ ...prev, user: session.user, session, loading: true }));
+        void checkSubscription();
+      } else {
+        setState((prev) => ({ ...prev, loading: false }));
       }
     });
 
     // Refresh subscription every 60s
     const interval = setInterval(() => {
-      if (state.user) checkSubscription();
+      void checkSubscription();
     }, 60000);
 
     return () => {
       subscription.unsubscribe();
       clearInterval(interval);
     };
-  }, []);
+  }, [checkSubscription]);
 
   const signUp = async (email: string, password: string, displayName?: string) => {
     const { error } = await supabase.auth.signUp({
