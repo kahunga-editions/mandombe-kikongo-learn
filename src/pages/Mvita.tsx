@@ -66,7 +66,7 @@ const Mvita = () => {
         // safety net : create profile if trigger missed (existing users)
         const { data: created } = await supabase
           .from("battle_profiles")
-          .insert({ user_id: user.id, battle_name: user.email?.split("@")[0] ?? "Mwana" })
+          .insert({ user_id: user.id, battle_name: user.email?.split("@")[0] ?? "Nlongoki" })
           .select("battle_name, elo, league, wins, losses, draws, games_played")
           .single();
         setProfile(created ?? null);
@@ -119,7 +119,7 @@ const Mvita = () => {
             difficulty={activeBattle}
             playerElo={profile?.elo ?? 1000}
             userId={user?.id ?? null}
-            battleName={profile?.battle_name ?? "Mwana"}
+            battleName={profile?.battle_name ?? "Nlongoki"}
             onClose={closeBattle}
           />
         </main>
@@ -170,7 +170,7 @@ const Mvita = () => {
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-3">
                 <div>
                   <p className="text-sm text-muted-foreground">Ton profil de combat</p>
-                  <h2 className="text-2xl font-bold">{profile.battle_name ?? "Mwana"}</h2>
+                  <h2 className="text-2xl font-bold">{profile.battle_name ?? "Nlongoki"}</h2>
                 </div>
                 <div className="flex items-center gap-3">
                   <Badge className={`${tier.color} text-base px-3 py-1`}>
@@ -266,7 +266,7 @@ const Mvita = () => {
             icon={Bot}
             title="vs IA"
             subtitle="3 niveaux de difficulté"
-            description="Joue sans compte contre Mwana, Mbuta ou Nganga. Parfait pour s'entraîner."
+            description="Joue sans compte contre Nlongoki, Kinuani ou Nganga. Parfait pour s'entraîner."
             badge="Solo"
             onClick={() => handleMode("ai")}
           />
