@@ -135,7 +135,7 @@ export const MvitaAIBattle = ({ difficulty, playerElo, userId, battleName, oppon
             {result === 1 ? "Victoire !" : result === 0 ? "Défaite" : "Égalité"}
           </h2>
           <p className="text-muted-foreground">
-            {battleName} {playerScore} — {aiScore} {aiCfg.label}
+            {battleName} {playerScore} — {aiScore} {opponentLabel}
           </p>
         </div>
         {userId && (
@@ -173,7 +173,7 @@ export const MvitaAIBattle = ({ difficulty, playerElo, userId, battleName, oppon
           <span className="text-muted-foreground">vs</span>
           <div className="flex items-center gap-1.5 text-sm">
             <Bot className="w-4 h-4 text-accent" />
-            <span className="font-semibold">{aiCfg.label}</span>
+            <span className="font-semibold">{opponentLabel}</span>
             <span className="font-bold tabular-nums ml-1">{aiScore}</span>
           </div>
         </div>
