@@ -24,10 +24,11 @@ type Props = {
   playerElo: number;
   userId: string | null;
   battleName: string;
+  opponentName?: string;
   onClose: (newElo?: number) => void;
 };
 
-export const MvitaAIBattle = ({ difficulty, playerElo, userId, battleName, onClose }: Props) => {
+export const MvitaAIBattle = ({ difficulty, playerElo, userId, battleName, opponentName, onClose }: Props) => {
   const questions = useMemo<MvitaQuestion[]>(() => generateQuestions(QUESTION_COUNT), []);
   const [idx, setIdx] = useState(0);
   const [picked, setPicked] = useState<number | null>(null);
@@ -40,6 +41,7 @@ export const MvitaAIBattle = ({ difficulty, playerElo, userId, battleName, onClo
 
   const q = questions[idx];
   const aiCfg = AI_DIFFICULTY[difficulty];
+  const opponentLabel = opponentName ?? aiCfg.label;
 
   // Timer
   useEffect(() => {
@@ -133,7 +135,7 @@ export const MvitaAIBattle = ({ difficulty, playerElo, userId, battleName, onClo
             {result === 1 ? "Victoire !" : result === 0 ? "Défaite" : "Égalité"}
           </h2>
           <p className="text-muted-foreground">
-            {battleName} {playerScore} — {aiScore} {aiCfg.label}
+            {battleName} {playerScore} — {aiScore} {opponentLabel}
           </p>
         </div>
         {userId && (
@@ -171,7 +173,7 @@ export const MvitaAIBattle = ({ difficulty, playerElo, userId, battleName, onClo
           <span className="text-muted-foreground">vs</span>
           <div className="flex items-center gap-1.5 text-sm">
             <Bot className="w-4 h-4 text-accent" />
-            <span className="font-semibold">{aiCfg.label}</span>
+            <span className="font-semibold">{opponentLabel}</span>
             <span className="font-bold tabular-nums ml-1">{aiScore}</span>
           </div>
         </div>
