@@ -36,13 +36,36 @@ const getLeagueTier = (elo: number) =>
 
 const getNextTier = (elo: number) => LEAGUE_TIERS.find((t) => t.min > elo) ?? null;
 
+const FAKE_OPPONENTS = [
+  "Nsayi", "Sunda", "Mboté", "Tshibanga", "Loemba", "Nkenge",
+  "Mavungu", "Kimbembé", "Bouanga", "Malonga", "Mpassi", "Nzila",
+];
+
+const pickFakeOpponent = () => FAKE_OPPONENTS[Math.floor(Math.random() * FAKE_OPPONENTS.length)];
+
+// Convert player Elo to a difficulty bucket so the bot feels like a human peer.
+const eloToDifficulty = (elo: number): AIDifficulty => {
+  // Add a little randomness so consecutive matches vary.
+  const jitter = (Math.random() - 0.5) * 200;
+  const target = elo + jitter;
+  if (target < 1250) return "easy";
+  if (target < 1600) return "medium";
+  return "hard";
+};
+
+type ActiveBattle = {
+  difficulty: AIDifficulty;
+  opponentName: string;
+  mode: "ai" | "async" | "live";
+};
+
 const Mvita = () => {
   const { user, loading } = useAuth();
   const navigate = useNavigate();
   const [profile, setProfile] = useState<BattleProfile | null>(null);
   const [loadingProfile, setLoadingProfile] = useState(true);
   const [aiSelect, setAiSelect] = useState(false);
-  const [activeBattle, setActiveBattle] = useState<AIDifficulty | null>(null);
+  const [activeBattle, setActiveBattle] = useState<ActiveBattle | null>(null);
 
   useEffect(() => {
     document.title = "Mvita za Ndinga — Batailles de mots Lari | Nzo Mikanda";
@@ -93,12 +116,21 @@ const Mvita = () => {
       navigate("/auth");
       return;
     }
-    toast.info(`Mode ${mode === "async" ? "asynchrone" : "live"} bientôt disponible.`);
+    // Async / Live : duel contre un bot calibré sur l'Elo du joueur, déguisé en humain.
+    const elo = profile?.elo ?? 1000;
+    const difficulty = eloToDifficulty(elo);
+    const opponentName = pickFakeOpponent();
+    toast.info(
+      mode === "async"
+        ? `${opponentName} a accepté ton défi !`
+        : `${opponentName} entre dans l'arène…`,
+    );
+    setActiveBattle({ difficulty, opponentName, mode });
   };
 
   const startAIBattle = (difficulty: AIDifficulty) => {
     setAiSelect(false);
-    setActiveBattle(difficulty);
+    setActiveBattle({ difficulty, opponentName: AI_DIFFICULTY[difficulty].label, mode: "ai" });
   };
 
   const closeBattle = (newElo?: number) => {
@@ -116,10 +148,11 @@ const Mvita = () => {
             <ArrowLeft className="w-4 h-4 mr-1.5" /> Abandonner
           </Button>
           <MvitaAIBattle
-            difficulty={activeBattle}
+            difficulty={activeBattle.difficulty}
             playerElo={profile?.elo ?? 1000}
             userId={user?.id ?? null}
             battleName={profile?.battle_name ?? "Nlongoki"}
+            opponentName={activeBattle.opponentName}
             onClose={closeBattle}
           />
         </main>

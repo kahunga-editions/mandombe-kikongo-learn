@@ -24,10 +24,11 @@ type Props = {
   playerElo: number;
   userId: string | null;
   battleName: string;
+  opponentName?: string;
   onClose: (newElo?: number) => void;
 };
 
-export const MvitaAIBattle = ({ difficulty, playerElo, userId, battleName, onClose }: Props) => {
+export const MvitaAIBattle = ({ difficulty, playerElo, userId, battleName, opponentName, onClose }: Props) => {
   const questions = useMemo<MvitaQuestion[]>(() => generateQuestions(QUESTION_COUNT), []);
   const [idx, setIdx] = useState(0);
   const [picked, setPicked] = useState<number | null>(null);
@@ -40,6 +41,7 @@ export const MvitaAIBattle = ({ difficulty, playerElo, userId, battleName, onClo
 
   const q = questions[idx];
   const aiCfg = AI_DIFFICULTY[difficulty];
+  const opponentLabel = opponentName ?? aiCfg.label;
 
   // Timer
   useEffect(() => {
