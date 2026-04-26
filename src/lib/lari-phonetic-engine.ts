@@ -116,6 +116,21 @@ const ELEVENLABS_RULES: PhoneticRule[] = [
   { from: /\bgi/g, to: 'guî', note: 'gi initial → guî' },
   { from: /\bge/g, to: 'guê', note: 'ge initial → guê' },
 
+  // /w/ TOUJOURS comme dans "win" (anglais), JAMAIS /v/ — on force la voyelle "ou"
+  { from: /\bwa/gi, to: 'oua', note: 'w + a → oua (jamais /va/)' },
+  { from: /\bwe/gi, to: 'ouè', note: 'w + e → ouè (jamais /ve/)' },
+  { from: /\bwi/gi, to: 'oui', note: 'w + i → oui (jamais /vi/)' },
+  { from: /\bwo/gi, to: 'ouo', note: 'w + o → ouo (jamais /vo/)' },
+  { from: /\bwu/gi, to: 'ouou', note: 'w + u → ouou' },
+  // /w/ intervocalique
+  { from: /([aeiou])wa/gi, to: '$1oua', note: '_wa → _oua' },
+  { from: /([aeiou])we/gi, to: '$1ouè', note: '_we → _ouè' },
+  { from: /([aeiou])wi/gi, to: '$1oui', note: '_wi → _oui' },
+  { from: /([aeiou])wo/gi, to: '$1ouo', note: '_wo → _ouo' },
+
+  // /s/ TOUJOURS sourd, JAMAIS voisé /z/ — double le s entre voyelles
+  { from: /([aeiouéèêà])s([aeiouéèêà])/gi, to: '$1ss$2', note: 's intervocalique → ss (sourd)' },
+
   // H aspiré (comme "hâche" en français)
   { from: /\bh([aeiouAEIOU])/g, to: "h'$1", note: 'h aspiré' },
 ];
