@@ -202,6 +202,34 @@ const PHONETIC_OVERRIDES: Record<string, string> = {
   "kweri": "kwéri",         // tu n'étais pas — é fermé
   "keri": "kéri",           // il/elle n'était pas — é fermé
   "tshari": "tshâri",       // triste (négation) — a ouvert
+
+  // Nge / Munienge — G dur /ŋɡ/ comme dans NGO
+  "nge": "nghé",            // /ŋɡe/ — G dur, jamais /nʒe/
+  "munienge": "mounienghé", // /muniɛŋɡe/ — G dur sur la finale
+  "munienghe": "mounienghé",// variante orthographique
+  "fuka": "pfouka",         // infinitif /pfuka/
+  "meso": "messo",          // /s/ sourd intervocalique
+  "honda": "honnda",        // /h/ aspiré + /nd/ net
+  "mfuka": "mfouka",        // dette
+  "mfuba": "mfouba",        // verte, pas mûre
+  "buaka": "bouaka",        // mûre
+  "nkatika": "nkatika",     // vraiment
+  "manga": "manga",         // mangue — g dur déjà géré par cluster
+  "mangulu": "mangoulou",
+  "matatshebo": "matatshébo",
+  "bimfimfiya": "bimfimfiya",
+  "mawa": "mawa",
+  "mamonso": "mamônsso",
+  "tuila": "touila",
+  "butisa": "boutissa",
+  "dingi": "dîngui",        // g dur final
+  "nkombo": "nkômbo",
+  "longoka": "longôka",
+  // (zololo déjà défini plus haut)
+  "nlongi": "nlôngui",      // g dur
+  "batika": "batika",
+  "batikiri": "batikiri",
+  "he": "héééé",            // interjection /heee/ très long
 }
 
 /**
