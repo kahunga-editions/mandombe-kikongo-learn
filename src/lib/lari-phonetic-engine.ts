@@ -225,7 +225,7 @@ const PHONETIC_OVERRIDES: Record<string, string> = {
   "dingi": "dîngui",        // g dur final
   "nkombo": "nkômbo",
   "longoka": "longôka",
-  "zololo": "zolôlo",
+  // (zololo déjà défini plus haut)
   "nlongi": "nlôngui",      // g dur
   "batika": "batika",
   "batikiri": "batikiri",
