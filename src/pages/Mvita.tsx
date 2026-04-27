@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Swords, Clock, Zap, Bot, Trophy, Users, Lock, ArrowLeft } from "lucide-react";
 import Navbar from "@/components/Navbar";
@@ -11,7 +11,7 @@ import { useAuth } from "@/contexts/AuthContext";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import MvitaAIBattle from "@/components/mvita/MvitaAIBattle";
-import { AI_DIFFICULTY, type AIDifficulty } from "@/lib/mvita-questions";
+import { AI_DIFFICULTY, updateElo, type AIDifficulty } from "@/lib/mvita-questions";
 
 type BattleProfile = {
   battle_name: string | null;
@@ -106,6 +106,17 @@ const Mvita = () => {
     ? Math.min(100, ((profile.elo - tier.min) / (nextTier.min - tier.min)) * 100)
     : 100;
 
+  // Elo prédictif pour les modes multijoueur (bot calibré ≈ Elo joueur).
+  const eloPreview = useMemo(() => {
+    const playerElo = profile?.elo ?? 1000;
+    // Adversaire moyen : on suppose un peer du même niveau (Elo identique).
+    const opponentElo = playerElo;
+    const win = updateElo(playerElo, opponentElo, 1) - playerElo;
+    const loss = updateElo(playerElo, opponentElo, 0) - playerElo;
+    const draw = updateElo(playerElo, opponentElo, 0.5) - playerElo;
+    return { win, loss, draw };
+  }, [profile?.elo]);
+
   const handleMode = (mode: "async" | "live" | "ai") => {
     if (mode === "ai") {
       setAiSelect(true);
@@ -168,18 +179,18 @@ const Mvita = () => {
       <main className="flex-1 container mx-auto px-4 pt-4 md:pt-6 pb-10 max-w-5xl">
         {/* Hero */}
         <div className="text-center mb-8">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-3">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
             <Swords className="w-4 h-4" />
             Mvita za Ndinga
           </div>
-          <h1 className="text-2xl md:text-3xl font-bold mb-2">Batailles de mots</h1>
           <p
-            className="font-mandombe text-3xl md:text-4xl leading-[1.7] mb-3"
+            className="font-mandombe text-xl md:text-2xl leading-[1.6] mb-2 text-foreground/80"
             lang="kg"
             aria-label="Mvita za Ndinga en Mandombe"
           >
             Mvita za Ndinga
           </p>
+          <h1 className="text-2xl md:text-3xl font-bold mb-3">Batailles de mots</h1>
           <p className="text-sm md:text-base text-muted-foreground max-w-2xl mx-auto">
             Affronte d'autres apprenants sur le vocabulaire Kikongo Lari et l'écriture Mandombe.
           </p>
@@ -280,7 +291,23 @@ const Mvita = () => {
         )}
 
         {/* Mode selection */}
-        <h2 className="text-2xl font-bold mb-6">Choisis ton mode</h2>
+        <div className="flex items-end justify-between mb-6 gap-4 flex-wrap">
+          <h2 className="text-2xl font-bold">Choisis ton mode</h2>
+          {user && profile && (
+            <div className="flex items-center gap-2 text-xs">
+              <span className="text-muted-foreground">Enjeu Elo (multijoueur) :</span>
+              <Badge variant="outline" className="text-primary border-primary/40">
+                Victoire +{eloPreview.win}
+              </Badge>
+              <Badge variant="outline" className="text-muted-foreground">
+                Nul {eloPreview.draw >= 0 ? "+" : ""}{eloPreview.draw}
+              </Badge>
+              <Badge variant="outline" className="text-destructive border-destructive/40">
+                Défaite {eloPreview.loss}
+              </Badge>
+            </div>
+          )}
+        </div>
         <div className="grid md:grid-cols-3 gap-5">
           <ModeCard
             icon={Clock}
