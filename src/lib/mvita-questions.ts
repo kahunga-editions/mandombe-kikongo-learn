@@ -1,4 +1,5 @@
 import { lessons, type VocabItem } from "@/data/lessons";
+import { supabase } from "@/integrations/supabase/client";
 
 export type MvitaQuestion = {
   prompt: string;
@@ -6,6 +7,9 @@ export type MvitaQuestion = {
   options: string[];
   correctIndex: number;
   mandombe?: string;
+  // Pour le signalement admin :
+  sourceLari: string;
+  sourceFrench: string;
 };
 
 const shuffle = <T,>(arr: T[]) => {
@@ -17,41 +21,104 @@ const shuffle = <T,>(arr: T[]) => {
   return a;
 };
 
-const allVocab = (): VocabItem[] => {
+// Nettoie les valeurs du corpus (Lari peut contenir "x | y" pour sg/pl).
+const normalize = (s: string) => s.split("|")[0].trim();
+
+const baseVocab = (): VocabItem[] => {
   const items: VocabItem[] = [];
   for (const lesson of lessons) {
     if (lesson.vocabulary) items.push(...lesson.vocabulary);
   }
-  // dedupe by lari + french
+  // Dédup par paire normalisée (lari, fr).
   const seen = new Set<string>();
   return items.filter((v) => {
-    const key = `${v.lari}|${v.french}`;
-    if (seen.has(key) || !v.lari || !v.french) return false;
+    if (!v.lari || !v.french) return false;
+    const key = `${normalize(v.lari).toLowerCase()}|${normalize(v.french).toLowerCase()}`;
+    if (seen.has(key)) return false;
     seen.add(key);
     return true;
   });
 };
 
+// Cache (corpus statique + corrections Supabase fusionnées).
 let cache: VocabItem[] | null = null;
-const getVocab = () => (cache ??= allVocab());
 
-export const generateQuestions = (count: number): MvitaQuestion[] => {
-  const vocab = getVocab();
+/**
+ * Charge les corrections admin (translation_corrections) qui surchargent
+ * le corpus statique. Les paires fr↔lari validées par les admins remplacent
+ * toute entrée erronée du corpus statique.
+ */
+export const loadCorpus = async (): Promise<VocabItem[]> => {
+  if (cache) return cache;
+  const base = baseVocab();
+  try {
+    const { data } = await supabase
+      .from("translation_corrections")
+      .select("source_text, source_lang, target_lang, corrected_translation, corrected_mandombe")
+      .or("source_lang.eq.lari,target_lang.eq.lari")
+      .limit(500);
+
+    if (data) {
+      const overrides = new Map<string, VocabItem>();
+      for (const c of data) {
+        let lari = "";
+        let french = "";
+        if (c.target_lang === "lari" && c.source_lang === "fr") {
+          french = c.source_text;
+          lari = c.corrected_translation;
+        } else if (c.source_lang === "lari" && c.target_lang === "fr") {
+          lari = c.source_text;
+          french = c.corrected_translation;
+        } else continue;
+        if (!lari || !french) continue;
+        const key = normalize(lari).toLowerCase();
+        overrides.set(key, {
+          lari: normalize(lari),
+          french: normalize(french),
+          mandombe: c.corrected_mandombe || normalize(lari),
+        });
+      }
+      // Surcharge : si une entrée du corpus statique partage un mot Lari avec une correction,
+      // on remplace par la correction (qui fait foi).
+      const filtered = base.filter((v) => !overrides.has(normalize(v.lari).toLowerCase()));
+      cache = [...filtered, ...overrides.values()];
+      return cache;
+    }
+  } catch (e) {
+    console.warn("Mvita: fallback to static corpus", e);
+  }
+  cache = base;
+  return cache;
+};
+
+export const invalidateCorpus = () => {
+  cache = null;
+};
+
+export const generateQuestions = async (count: number): Promise<MvitaQuestion[]> => {
+  const vocab = await loadCorpus();
   if (vocab.length < 4) return [];
   const picked = shuffle(vocab).slice(0, count);
   return picked.map((item) => {
-    // direction: 50/50 fr→lari or lari→fr
     const frToLari = Math.random() > 0.5;
-    const distractors = shuffle(vocab.filter((v) => v.lari !== item.lari)).slice(0, 3);
-    const correct = frToLari ? item.lari : item.french;
-    const wrongs = distractors.map((d) => (frToLari ? d.lari : d.french));
+    // Distracteurs : exclusivement issus du corpus, jamais inventés.
+    // On exclut les entrées dont la valeur d'option serait un doublon de la bonne réponse.
+    const correct = frToLari ? normalize(item.lari) : normalize(item.french);
+    const pool = vocab.filter((v) => {
+      const candidate = frToLari ? normalize(v.lari) : normalize(v.french);
+      return candidate.toLowerCase() !== correct.toLowerCase();
+    });
+    const distractors = shuffle(pool).slice(0, 3);
+    const wrongs = distractors.map((d) => (frToLari ? normalize(d.lari) : normalize(d.french)));
     const options = shuffle([correct, ...wrongs]);
     return {
-      prompt: frToLari ? item.french : item.lari,
+      prompt: frToLari ? normalize(item.french) : normalize(item.lari),
       promptLang: frToLari ? "fr" : "lari",
       options,
       correctIndex: options.indexOf(correct),
       mandombe: frToLari ? undefined : item.mandombe,
+      sourceLari: normalize(item.lari),
+      sourceFrench: normalize(item.french),
     };
   });
 };
