@@ -7,6 +7,7 @@ import ReactMarkdown from "react-markdown";
 
 type Msg = { role: "user" | "assistant"; content: string };
 type Segment = { text: string; type: "lari" | "theo" };
+type Choices = { options: string[]; correctIndex: number };
 
 const CHAT_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/mbuta-matondo`;
 const TTS_LARI_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/elevenlabs-tts-lari`;
@@ -25,9 +26,10 @@ function parseDualSegments(content: string): Segment[] {
   return segments;
 }
 
-// Strip mandombe tags and markdown for TTS
+// Strip <choices>, mandombe tags and markdown for TTS
 function stripForTTS(text: string): string {
   return text
+    .replace(/<choices[^>]*>[\s\S]*?<\/choices>/g, "")
     .replace(/\[mandombe\](.*?)\[\/mandombe\]/g, "$1")
     .replace(/#{1,6}\s/g, "")
     .replace(/\*\*(.+?)\*\*/g, "$1")
@@ -39,6 +41,16 @@ function stripForTTS(text: string): string {
     .replace(/\n/g, " ")
     .replace(/\s{2,}/g, " ")
     .trim();
+}
+
+// Extract MCQ choices block emitted by Mbuta Matondo : <choices correct="N">opt1|opt2|opt3</choices>
+function parseChoices(content: string): Choices | null {
+  const m = content.match(/<choices\s+correct=["'](\d+)["']\s*>([\s\S]*?)<\/choices>/);
+  if (!m) return null;
+  const correctIndex = parseInt(m[1], 10);
+  const options = m[2].split("|").map((s) => s.trim()).filter(Boolean);
+  if (options.length < 2 || isNaN(correctIndex) || correctIndex < 0 || correctIndex >= options.length) return null;
+  return { options, correctIndex };
 }
 
 // Process mandombe tags in content for rendering
@@ -237,6 +249,8 @@ const MbutaMatondoChat = () => {
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [autoSpeak, setAutoSpeak] = useState(false);
+  const [mcqMode, setMcqMode] = useState(true);
+  const [answeredIdx, setAnsweredIdx] = useState<Set<number>>(new Set());
   const [speakingIdx, setSpeakingIdx] = useState<number | null>(null);
   const [isRecording, setIsRecording] = useState(false);
   const [isTranscribing, setIsTranscribing] = useState(false);
@@ -336,12 +350,12 @@ const MbutaMatondoChat = () => {
   }, []);
 
   // ---- Send message ----
-  const send = async () => {
-    const text = input.trim();
+  const send = async (overrideText?: string) => {
+    const text = (overrideText ?? input).trim();
     if (!text || isLoading) return;
 
     const userMsg: Msg = { role: "user", content: text };
-    setInput("");
+    if (!overrideText) setInput("");
     setMessages((prev) => [...prev, userMsg]);
     setIsLoading(true);
 
@@ -393,6 +407,13 @@ const MbutaMatondoChat = () => {
     }
   };
 
+  // Pick an MCQ option : injects it as a user message and continues the flow.
+  const pickChoice = (msgIdx: number, option: string) => {
+    if (isLoading || answeredIdx.has(msgIdx)) return;
+    setAnsweredIdx((prev) => new Set(prev).add(msgIdx));
+    send(option);
+  };
+
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === "Enter" && !e.shiftKey) {
       e.preventDefault();
@@ -402,16 +423,18 @@ const MbutaMatondoChat = () => {
 
   return (
     <div className="flex flex-col h-[calc(100vh-8rem)] max-w-3xl mx-auto">
-      {/* Auto-speak toggle */}
-      <div className="flex items-center justify-end gap-2 px-4 py-2 border-b border-gold/10">
-        <label htmlFor="auto-speak" className="text-xs text-cream/50">
-          {t("mbuta.autoSpeak")}
-        </label>
-        <Switch
-          id="auto-speak"
-          checked={autoSpeak}
-          onCheckedChange={setAutoSpeak}
-        />
+      {/* Toggles */}
+      <div className="flex items-center justify-end gap-4 px-4 py-2 border-b border-gold/10">
+        <div className="flex items-center gap-2">
+          <label htmlFor="mcq-mode" className="text-xs text-cream/50">QCM</label>
+          <Switch id="mcq-mode" checked={mcqMode} onCheckedChange={setMcqMode} />
+        </div>
+        <div className="flex items-center gap-2">
+          <label htmlFor="auto-speak" className="text-xs text-cream/50">
+            {t("mbuta.autoSpeak")}
+          </label>
+          <Switch id="auto-speak" checked={autoSpeak} onCheckedChange={setAutoSpeak} />
+        </div>
       </div>
 
       {/* Messages */}
@@ -456,6 +479,26 @@ const MbutaMatondoChat = () => {
                   <p className="text-sm whitespace-pre-wrap">{msg.content}</p>
                 )}
               </div>
+              {/* MCQ buttons */}
+              {msg.role === "assistant" && mcqMode && !isLoading && (() => {
+                const ch = parseChoices(msg.content);
+                if (!ch) return null;
+                const answered = answeredIdx.has(i);
+                return (
+                  <div className="flex flex-wrap gap-2 mt-1">
+                    {ch.options.map((opt, oi) => (
+                      <button
+                        key={oi}
+                        onClick={() => pickChoice(i, opt)}
+                        disabled={answered}
+                        className="px-3 py-1.5 rounded-full bg-gold/15 hover:bg-gold/30 border border-gold/30 text-cream text-xs transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+                      >
+                        {opt}
+                      </button>
+                    ))}
+                  </div>
+                );
+              })()}
               {/* TTS button for assistant messages */}
               {msg.role === "assistant" && !isLoading && (
                 <button
@@ -522,7 +565,7 @@ const MbutaMatondoChat = () => {
             style={{ minHeight: "44px", maxHeight: "120px" }}
           />
           <button
-            onClick={send}
+            onClick={() => send()}
             disabled={!input.trim() || isLoading}
             className="bg-gold hover:bg-gold/90 text-earth-deep p-3 rounded-xl transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
           >

@@ -1,9 +1,9 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
-import { Bot, User, Check, X, Trophy } from "lucide-react";
+import { Bot, User, Check, X, Trophy, Flag, Loader2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import {
   generateQuestions,
@@ -14,6 +14,7 @@ import {
   type MvitaQuestion,
 } from "@/lib/mvita-questions";
 import { supabase } from "@/integrations/supabase/client";
+import { useAuth } from "@/contexts/AuthContext";
 import { toast } from "sonner";
 
 const QUESTION_COUNT = 10;
@@ -29,7 +30,8 @@ type Props = {
 };
 
 export const MvitaAIBattle = ({ difficulty, playerElo, userId, battleName, opponentName, onClose }: Props) => {
-  const questions = useMemo<MvitaQuestion[]>(() => generateQuestions(QUESTION_COUNT), []);
+  const { isAdmin } = useAuth();
+  const [questions, setQuestions] = useState<MvitaQuestion[] | null>(null);
   const [idx, setIdx] = useState(0);
   const [picked, setPicked] = useState<number | null>(null);
   const [aiPick, setAiPick] = useState<number | null>(null);
@@ -38,8 +40,20 @@ export const MvitaAIBattle = ({ difficulty, playerElo, userId, battleName, oppon
   const [timeLeft, setTimeLeft] = useState(TIME_PER_QUESTION);
   const [finished, setFinished] = useState(false);
   const [saved, setSaved] = useState(false);
+  const [reporting, setReporting] = useState(false);
 
-  const q = questions[idx];
+  // Charge les questions du corpus Nzo Mikanda (lessons + corrections admin).
+  useEffect(() => {
+    let cancelled = false;
+    generateQuestions(QUESTION_COUNT).then((qs) => {
+      if (!cancelled) setQuestions(qs);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  const q = questions?.[idx];
   const aiCfg = AI_DIFFICULTY[difficulty];
   const opponentLabel = opponentName ?? aiCfg.label;
 
@@ -64,6 +78,7 @@ export const MvitaAIBattle = ({ difficulty, playerElo, userId, battleName, oppon
   };
 
   const next = () => {
+    if (!questions) return;
     if (idx + 1 >= questions.length) {
       setFinished(true);
       return;
@@ -72,6 +87,25 @@ export const MvitaAIBattle = ({ difficulty, playerElo, userId, battleName, oppon
     setPicked(null);
     setAiPick(null);
     setTimeLeft(TIME_PER_QUESTION);
+  };
+
+  const reportQuestion = async () => {
+    if (!q || !userId || reporting) return;
+    setReporting(true);
+    const { error } = await supabase.from("translation_corrections").insert({
+      source_text: q.sourceLari,
+      source_lang: "lari",
+      target_lang: "fr",
+      corrected_translation: q.sourceFrench,
+      notes: `[MVITA SIGNAL] Question signalée comme erronée par admin. À corriger ou supprimer.`,
+      created_by: userId,
+    });
+    setReporting(false);
+    if (error) {
+      toast.error("Échec du signalement : " + error.message);
+    } else {
+      toast.success("Question signalée. Voir /admin/corrections pour corriger.");
+    }
   };
 
   const result: 0 | 0.5 | 1 =
@@ -114,6 +148,15 @@ export const MvitaAIBattle = ({ difficulty, playerElo, userId, battleName, oppon
     if (finished) persist();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [finished]);
+
+  if (questions === null) {
+    return (
+      <Card className="p-10 text-center">
+        <Loader2 className="w-8 h-8 animate-spin text-primary mx-auto" />
+        <p className="text-muted-foreground mt-3">Chargement du corpus Nzo Mikanda…</p>
+      </Card>
+    );
+  }
 
   if (!q) {
     return (
@@ -177,9 +220,24 @@ export const MvitaAIBattle = ({ difficulty, playerElo, userId, battleName, oppon
             <span className="font-bold tabular-nums ml-1">{aiScore}</span>
           </div>
         </div>
-        <Badge variant="outline">
-          Question {idx + 1}/{questions.length}
-        </Badge>
+        <div className="flex items-center gap-2">
+          <Badge variant="outline">
+            Question {idx + 1}/{questions.length}
+          </Badge>
+          {isAdmin && (
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={reportQuestion}
+              disabled={reporting}
+              className="h-7 px-2 text-xs text-muted-foreground hover:text-destructive"
+              title="Signaler cette question (admin)"
+            >
+              <Flag className="w-3.5 h-3.5 mr-1" />
+              Signaler
+            </Button>
+          )}
+        </div>
       </div>
 
       {/* Timer */}

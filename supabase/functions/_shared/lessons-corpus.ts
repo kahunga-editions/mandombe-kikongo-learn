@@ -16110,7 +16110,7 @@ export const LESSONS_CORPUS: LessonSummary[] = [
       },
       {
         "lari": "Mbuma",
-        "french": "fruit"
+        "french": "chat"
       },
       {
         "lari": "Mbua",
