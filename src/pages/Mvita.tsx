@@ -291,7 +291,23 @@ const Mvita = () => {
         )}
 
         {/* Mode selection */}
-        <h2 className="text-2xl font-bold mb-6">Choisis ton mode</h2>
+        <div className="flex items-end justify-between mb-6 gap-4 flex-wrap">
+          <h2 className="text-2xl font-bold">Choisis ton mode</h2>
+          {user && profile && (
+            <div className="flex items-center gap-2 text-xs">
+              <span className="text-muted-foreground">Enjeu Elo (multijoueur) :</span>
+              <Badge variant="outline" className="text-primary border-primary/40">
+                Victoire +{eloPreview.win}
+              </Badge>
+              <Badge variant="outline" className="text-muted-foreground">
+                Nul {eloPreview.draw >= 0 ? "+" : ""}{eloPreview.draw}
+              </Badge>
+              <Badge variant="outline" className="text-destructive border-destructive/40">
+                Défaite {eloPreview.loss}
+              </Badge>
+            </div>
+          )}
+        </div>
         <div className="grid md:grid-cols-3 gap-5">
           <ModeCard
             icon={Clock}
