@@ -1,9 +1,9 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
-import { Bot, User, Check, X, Trophy } from "lucide-react";
+import { Bot, User, Check, X, Trophy, Flag, Loader2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import {
   generateQuestions,
@@ -14,6 +14,7 @@ import {
   type MvitaQuestion,
 } from "@/lib/mvita-questions";
 import { supabase } from "@/integrations/supabase/client";
+import { useAuth } from "@/contexts/AuthContext";
 import { toast } from "sonner";
 
 const QUESTION_COUNT = 10;
@@ -29,7 +30,8 @@ type Props = {
 };
 
 export const MvitaAIBattle = ({ difficulty, playerElo, userId, battleName, opponentName, onClose }: Props) => {
-  const questions = useMemo<MvitaQuestion[]>(() => generateQuestions(QUESTION_COUNT), []);
+  const { isAdmin } = useAuth();
+  const [questions, setQuestions] = useState<MvitaQuestion[] | null>(null);
   const [idx, setIdx] = useState(0);
   const [picked, setPicked] = useState<number | null>(null);
   const [aiPick, setAiPick] = useState<number | null>(null);
@@ -38,8 +40,20 @@ export const MvitaAIBattle = ({ difficulty, playerElo, userId, battleName, oppon
   const [timeLeft, setTimeLeft] = useState(TIME_PER_QUESTION);
   const [finished, setFinished] = useState(false);
   const [saved, setSaved] = useState(false);
+  const [reporting, setReporting] = useState(false);
 
-  const q = questions[idx];
+  // Charge les questions du corpus Nzo Mikanda (lessons + corrections admin).
+  useEffect(() => {
+    let cancelled = false;
+    generateQuestions(QUESTION_COUNT).then((qs) => {
+      if (!cancelled) setQuestions(qs);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  const q = questions?.[idx];
   const aiCfg = AI_DIFFICULTY[difficulty];
   const opponentLabel = opponentName ?? aiCfg.label;
 
