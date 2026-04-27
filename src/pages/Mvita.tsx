@@ -168,18 +168,18 @@ const Mvita = () => {
       <main className="flex-1 container mx-auto px-4 pt-4 md:pt-6 pb-10 max-w-5xl">
         {/* Hero */}
         <div className="text-center mb-8">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-3">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
             <Swords className="w-4 h-4" />
             Mvita za Ndinga
           </div>
-          <h1 className="text-2xl md:text-3xl font-bold mb-2">Batailles de mots</h1>
           <p
-            className="font-mandombe text-3xl md:text-4xl leading-[1.7] mb-3"
+            className="font-mandombe text-xl md:text-2xl leading-[1.6] mb-2 text-foreground/80"
             lang="kg"
             aria-label="Mvita za Ndinga en Mandombe"
           >
             Mvita za Ndinga
           </p>
+          <h1 className="text-2xl md:text-3xl font-bold mb-3">Batailles de mots</h1>
           <p className="text-sm md:text-base text-muted-foreground max-w-2xl mx-auto">
             Affronte d'autres apprenants sur le vocabulaire Kikongo Lari et l'écriture Mandombe.
           </p>
