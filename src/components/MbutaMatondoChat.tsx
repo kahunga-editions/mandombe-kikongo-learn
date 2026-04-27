@@ -26,9 +26,10 @@ function parseDualSegments(content: string): Segment[] {
   return segments;
 }
 
-// Strip mandombe tags and markdown for TTS
+// Strip <choices>, mandombe tags and markdown for TTS
 function stripForTTS(text: string): string {
   return text
+    .replace(/<choices[^>]*>[\s\S]*?<\/choices>/g, "")
     .replace(/\[mandombe\](.*?)\[\/mandombe\]/g, "$1")
     .replace(/#{1,6}\s/g, "")
     .replace(/\*\*(.+?)\*\*/g, "$1")
@@ -40,6 +41,16 @@ function stripForTTS(text: string): string {
     .replace(/\n/g, " ")
     .replace(/\s{2,}/g, " ")
     .trim();
+}
+
+// Extract MCQ choices block emitted by Mbuta Matondo : <choices correct="N">opt1|opt2|opt3</choices>
+function parseChoices(content: string): Choices | null {
+  const m = content.match(/<choices\s+correct=["'](\d+)["']\s*>([\s\S]*?)<\/choices>/);
+  if (!m) return null;
+  const correctIndex = parseInt(m[1], 10);
+  const options = m[2].split("|").map((s) => s.trim()).filter(Boolean);
+  if (options.length < 2 || isNaN(correctIndex) || correctIndex < 0 || correctIndex >= options.length) return null;
+  return { options, correctIndex };
 }
 
 // Process mandombe tags in content for rendering
