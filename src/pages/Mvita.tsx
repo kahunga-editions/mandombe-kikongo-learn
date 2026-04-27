@@ -13,8 +13,6 @@ import { toast } from "sonner";
 import MvitaAIBattle from "@/components/mvita/MvitaAIBattle";
 import { AI_DIFFICULTY, updateElo, type AIDifficulty } from "@/lib/mvita-questions";
 
-import { useMemo } from "react";
-
 type BattleProfile = {
   battle_name: string | null;
   elo: number;
