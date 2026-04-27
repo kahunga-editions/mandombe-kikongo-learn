@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Swords, Clock, Zap, Bot, Trophy, Users, Lock, ArrowLeft } from "lucide-react";
 import Navbar from "@/components/Navbar";
