@@ -75,6 +75,7 @@ export const loadCorpus = async (): Promise<VocabItem[]> => {
         overrides.set(key, {
           lari: normalize(lari),
           french: normalize(french),
+          english: "",
           mandombe: c.corrected_mandombe || normalize(lari),
         });
       }
