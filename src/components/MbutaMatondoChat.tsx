@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect, useCallback } from "react";
-import { Send, Loader2, GraduationCap, Volume2, Mic, MicOff, VolumeX, User } from "lucide-react";
+import { Send, Loader2, GraduationCap, Volume2, Mic, MicOff, VolumeX, User, ListChecks, Keyboard } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useToast } from "@/hooks/use-toast";
 import { Switch } from "@/components/ui/switch";
@@ -7,6 +7,7 @@ import ReactMarkdown from "react-markdown";
 
 type Msg = { role: "user" | "assistant"; content: string };
 type Segment = { text: string; type: "lari" | "theo" };
+type Choices = { options: string[]; correctIndex: number };
 
 const CHAT_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/mbuta-matondo`;
 const TTS_LARI_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/elevenlabs-tts-lari`;
