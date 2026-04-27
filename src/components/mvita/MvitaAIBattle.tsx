@@ -78,6 +78,7 @@ export const MvitaAIBattle = ({ difficulty, playerElo, userId, battleName, oppon
   };
 
   const next = () => {
+    if (!questions) return;
     if (idx + 1 >= questions.length) {
       setFinished(true);
       return;
@@ -86,6 +87,25 @@ export const MvitaAIBattle = ({ difficulty, playerElo, userId, battleName, oppon
     setPicked(null);
     setAiPick(null);
     setTimeLeft(TIME_PER_QUESTION);
+  };
+
+  const reportQuestion = async () => {
+    if (!q || !userId || reporting) return;
+    setReporting(true);
+    const { error } = await supabase.from("translation_corrections").insert({
+      source_text: q.sourceLari,
+      source_lang: "lari",
+      target_lang: "fr",
+      corrected_translation: q.sourceFrench,
+      notes: `[MVITA SIGNAL] Question signalée comme erronée par admin. À corriger ou supprimer.`,
+      created_by: userId,
+    });
+    setReporting(false);
+    if (error) {
+      toast.error("Échec du signalement : " + error.message);
+    } else {
+      toast.success("Question signalée. Voir /admin/corrections pour corriger.");
+    }
   };
 
   const result: 0 | 0.5 | 1 =
