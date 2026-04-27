@@ -249,6 +249,8 @@ const MbutaMatondoChat = () => {
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [autoSpeak, setAutoSpeak] = useState(false);
+  const [mcqMode, setMcqMode] = useState(true);
+  const [answeredIdx, setAnsweredIdx] = useState<Set<number>>(new Set());
   const [speakingIdx, setSpeakingIdx] = useState<number | null>(null);
   const [isRecording, setIsRecording] = useState(false);
   const [isTranscribing, setIsTranscribing] = useState(false);
