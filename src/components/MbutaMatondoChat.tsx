@@ -423,16 +423,18 @@ const MbutaMatondoChat = () => {
 
   return (
     <div className="flex flex-col h-[calc(100vh-8rem)] max-w-3xl mx-auto">
-      {/* Auto-speak toggle */}
-      <div className="flex items-center justify-end gap-2 px-4 py-2 border-b border-gold/10">
-        <label htmlFor="auto-speak" className="text-xs text-cream/50">
-          {t("mbuta.autoSpeak")}
-        </label>
-        <Switch
-          id="auto-speak"
-          checked={autoSpeak}
-          onCheckedChange={setAutoSpeak}
-        />
+      {/* Toggles */}
+      <div className="flex items-center justify-end gap-4 px-4 py-2 border-b border-gold/10">
+        <div className="flex items-center gap-2">
+          <label htmlFor="mcq-mode" className="text-xs text-cream/50">QCM</label>
+          <Switch id="mcq-mode" checked={mcqMode} onCheckedChange={setMcqMode} />
+        </div>
+        <div className="flex items-center gap-2">
+          <label htmlFor="auto-speak" className="text-xs text-cream/50">
+            {t("mbuta.autoSpeak")}
+          </label>
+          <Switch id="auto-speak" checked={autoSpeak} onCheckedChange={setAutoSpeak} />
+        </div>
       </div>
 
       {/* Messages */}
@@ -543,7 +545,7 @@ const MbutaMatondoChat = () => {
             style={{ minHeight: "44px", maxHeight: "120px" }}
           />
           <button
-            onClick={send}
+            onClick={() => send()}
             disabled={!input.trim() || isLoading}
             className="bg-gold hover:bg-gold/90 text-earth-deep p-3 rounded-xl transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
           >
