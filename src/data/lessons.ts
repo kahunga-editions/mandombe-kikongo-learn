@@ -22863,7 +22863,7 @@ export const lessons: Lesson[] = [
       { lari: "Mutshila | Mitshila", mandombe: "Mutshila | Mitshila", french: "queue d'animal | queues", english: "animal tail | tails", portuguese: "cauda | caudas", note: "Classe mu/mi" },
       { lari: "Nsonso", mandombe: "Nsonso", french: "larve du palmier", english: "palm larva", portuguese: "larva da palmeira", note: "Classe N- invariable" },
       { lari: "Mbulu", mandombe: "Mbulu", french: "chacal", english: "jackal", portuguese: "chacal", note: "Classe N- invariable" },
-      { lari: "Mbuma", mandombe: "Mbuma", french: "fruit", english: "fruit", portuguese: "fruta", note: "Classe N- invariable" },
+      { lari: "Mbuma", mandombe: "Mbuma", french: "chat", english: "cat", portuguese: "gato", note: "Classe N- invariable" },
       { lari: "Mbua", mandombe: "Mbua", french: "chien", english: "dog", portuguese: "cão", note: "Classe N- invariable" },
     ],
     syntax: [
@@ -22908,7 +22908,7 @@ export const lessons: Lesson[] = [
             explanationPt: "Alguns nomes começando por N- (mb-, nk-, ns-) não mudam entre singular e plural. O contexto determina o número.",
             examples: [
               { lari: "Mbua", mandombe: "Mbua", french: "chien (sg. et pl.)", english: "dog (sg. & pl.)", portuguese: "cão (sg. e pl.)" },
-              { lari: "Mbuma", mandombe: "Mbuma", french: "fruit (sg. et pl.)", english: "fruit (sg. & pl.)", portuguese: "fruta (sg. e pl.)" },
+              { lari: "Mbuma", mandombe: "Mbuma", french: "chat (sg. et pl.)", english: "cat (sg. & pl.)", portuguese: "gato (sg. e pl.)" },
               { lari: "Nsonso", mandombe: "Nsonso", french: "larve du palmier", english: "palm larva", portuguese: "larva da palmeira" },
               { lari: "Mbulu", mandombe: "Mbulu", french: "chacal", english: "jackal", portuguese: "chacal" },
             ],
