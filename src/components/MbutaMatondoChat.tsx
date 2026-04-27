@@ -350,12 +350,12 @@ const MbutaMatondoChat = () => {
   }, []);
 
   // ---- Send message ----
-  const send = async () => {
-    const text = input.trim();
+  const send = async (overrideText?: string) => {
+    const text = (overrideText ?? input).trim();
     if (!text || isLoading) return;
 
     const userMsg: Msg = { role: "user", content: text };
-    setInput("");
+    if (!overrideText) setInput("");
     setMessages((prev) => [...prev, userMsg]);
     setIsLoading(true);
 
@@ -405,6 +405,13 @@ const MbutaMatondoChat = () => {
       setIsLoading(false);
       toast({ title: t("mbuta.error"), description: String(e), variant: "destructive" });
     }
+  };
+
+  // Pick an MCQ option : injects it as a user message and continues the flow.
+  const pickChoice = (msgIdx: number, option: string) => {
+    if (isLoading || answeredIdx.has(msgIdx)) return;
+    setAnsweredIdx((prev) => new Set(prev).add(msgIdx));
+    send(option);
   };
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
