@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect, useCallback } from "react";
-import { Send, Loader2, GraduationCap, Volume2, Mic, MicOff, VolumeX, User, ListChecks, Keyboard } from "lucide-react";
+import { Send, Loader2, GraduationCap, Volume2, Mic, MicOff, VolumeX, User } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useToast } from "@/hooks/use-toast";
 import { Switch } from "@/components/ui/switch";
@@ -479,6 +479,26 @@ const MbutaMatondoChat = () => {
                   <p className="text-sm whitespace-pre-wrap">{msg.content}</p>
                 )}
               </div>
+              {/* MCQ buttons */}
+              {msg.role === "assistant" && mcqMode && !isLoading && (() => {
+                const ch = parseChoices(msg.content);
+                if (!ch) return null;
+                const answered = answeredIdx.has(i);
+                return (
+                  <div className="flex flex-wrap gap-2 mt-1">
+                    {ch.options.map((opt, oi) => (
+                      <button
+                        key={oi}
+                        onClick={() => pickChoice(i, opt)}
+                        disabled={answered}
+                        className="px-3 py-1.5 rounded-full bg-gold/15 hover:bg-gold/30 border border-gold/30 text-cream text-xs transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+                      >
+                        {opt}
+                      </button>
+                    ))}
+                  </div>
+                );
+              })()}
               {/* TTS button for assistant messages */}
               {msg.role === "assistant" && !isLoading && (
                 <button
