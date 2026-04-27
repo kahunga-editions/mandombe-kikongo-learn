@@ -106,6 +106,17 @@ const Mvita = () => {
     ? Math.min(100, ((profile.elo - tier.min) / (nextTier.min - tier.min)) * 100)
     : 100;
 
+  // Elo prédictif pour les modes multijoueur (bot calibré ≈ Elo joueur).
+  const eloPreview = useMemo(() => {
+    const playerElo = profile?.elo ?? 1000;
+    // Adversaire moyen : on suppose un peer du même niveau (Elo identique).
+    const opponentElo = playerElo;
+    const win = updateElo(playerElo, opponentElo, 1) - playerElo;
+    const loss = updateElo(playerElo, opponentElo, 0) - playerElo;
+    const draw = updateElo(playerElo, opponentElo, 0.5) - playerElo;
+    return { win, loss, draw };
+  }, [profile?.elo]);
+
   const handleMode = (mode: "async" | "live" | "ai") => {
     if (mode === "ai") {
       setAiSelect(true);
