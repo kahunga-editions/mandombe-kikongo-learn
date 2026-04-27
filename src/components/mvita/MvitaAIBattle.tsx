@@ -149,6 +149,15 @@ export const MvitaAIBattle = ({ difficulty, playerElo, userId, battleName, oppon
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [finished]);
 
+  if (questions === null) {
+    return (
+      <Card className="p-10 text-center">
+        <Loader2 className="w-8 h-8 animate-spin text-primary mx-auto" />
+        <p className="text-muted-foreground mt-3">Chargement du corpus Nzo Mikanda…</p>
+      </Card>
+    );
+  }
+
   if (!q) {
     return (
       <Card className="p-6 text-center">
@@ -211,9 +220,24 @@ export const MvitaAIBattle = ({ difficulty, playerElo, userId, battleName, oppon
             <span className="font-bold tabular-nums ml-1">{aiScore}</span>
           </div>
         </div>
-        <Badge variant="outline">
-          Question {idx + 1}/{questions.length}
-        </Badge>
+        <div className="flex items-center gap-2">
+          <Badge variant="outline">
+            Question {idx + 1}/{questions.length}
+          </Badge>
+          {isAdmin && (
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={reportQuestion}
+              disabled={reporting}
+              className="h-7 px-2 text-xs text-muted-foreground hover:text-destructive"
+              title="Signaler cette question (admin)"
+            >
+              <Flag className="w-3.5 h-3.5 mr-1" />
+              Signaler
+            </Button>
+          )}
+        </div>
       </div>
 
       {/* Timer */}
