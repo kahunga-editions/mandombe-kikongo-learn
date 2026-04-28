@@ -44,7 +44,10 @@ function parseBlocks(content: string): Block[] {
 function stripForTTS(text: string): string {
   return text
     .replace(/<choices[^>]*>[\s\S]*?<\/choices>/g, "")
+    .replace(/<fr>[\s\S]*?<\/fr>/g, "") // never speak FR even if leaked into lari
     .replace(/\[mandombe\](.*?)\[\/mandombe\]/g, "$1")
+    .replace(/\([^)]*\)/g, "") // strip parentheticals (often FR notes)
+    .replace(/\s*=\s*[^.!?]*/g, "") // strip "X = explication"
     .replace(/[`*_#>]/g, "")
     .replace(/\s{2,}/g, " ")
     .trim();
