@@ -61,14 +61,22 @@ EXEMPLES (uniquement Kikongo Lari, JAMAIS de français hors corpus) :
 
 Apprenant écrit : bonjour
 <lari>Mbote ! Nkumbu aku nani ?</lari>
+<fr>Bonjour ! Quel est ton nom ?</fr>
 <choices correct="0">Nkumbu ani Marie|Matondo|Ka nzebi a ko</choices>
 
 Apprenant écrit : je m'appelle Marie
 <lari>Mbote Marie ! Kue wa tuka ?</lari>
+<fr>Bonjour Marie ! D'où viens-tu ?</fr>
 
 Apprenant écrit : mwana (mot non attesté)
-<lari>Ka nzebi a ko. Tu vutukila malongi meto. Kolele ?</lari>
+<lari>Ka nzebi a ko. Ta vutukila malongi meto. Kolele ?</lari>
+<fr>Je ne sais pas. Revenons à notre leçon. Comment vas-tu ?</fr>
 <choices correct="0">Nkolele kuani|Mbaji kua|Ka nzebi a ko</choices>
+
+Apprenant a cliqué la mauvaise réponse précédemment :
+<lari>Vutu yela. Sola : Mbote.</lari>
+<fr>Essaie encore. Choisis : Bonjour.</fr>
+<choices correct="0">Mbote</choices>
 
 MOTS INTERDITS (Kituba/Lingala, pas Kikongo Lari) : vova, mai, mwana pour l'élève, mbote na nge, sala malamu.
 
