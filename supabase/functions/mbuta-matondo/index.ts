@@ -744,26 +744,20 @@ async function handleToolCall(name: string, args: Record<string, unknown>): Prom
 }
 
 /**
- * Théo n'existe plus. On supprime tous les blocs <theo>...</theo> que le modèle aurait
- * pu produire malgré la consigne, ainsi que tout texte hors balises <lari>/<choices>.
- * On garantit que la sortie ne contient QUE du Kikongo Lari (dans <lari>) + un éventuel <choices>.
+ * Théo n'existe plus. On garde uniquement <lari>, <fr> (sous-titre) et <choices>.
+ * Tout <theo>...</theo> ou texte hors balises est supprimé.
+ * On préserve l'ordre d'apparition pour que l'UI puisse appairer chaque <lari> avec son <fr>.
  */
 function sanitizeOutput(text: string): string {
-  // 1. Retirer tout bloc <theo>...</theo>
   let out = text.replace(/<theo>[\s\S]*?<\/theo>/g, "");
-  // 2. Extraire <lari> et <choices>, ignorer le reste
-  const laris = [...out.matchAll(/<lari>[\s\S]*?<\/lari>/g)].map((m) => m[0]);
-  const choices = out.match(/<choices[^>]*>[\s\S]*?<\/choices>/);
-  const parts: string[] = [...laris];
-  if (choices) parts.push(choices[0]);
-  // 3. Si le modèle n'a rien produit dans les balises, on enveloppe tout dans <lari>
-  if (laris.length === 0) {
-    const stripped = out
-      .replace(/<choices[^>]*>[\s\S]*?<\/choices>/g, "")
-      .trim();
-    if (stripped) parts.unshift(`<lari>${stripped}</lari>`);
+  // Récupère <lari>, <fr>, <choices> dans l'ordre d'apparition
+  const matches = [...out.matchAll(/<(lari|fr|choices)\b[^>]*>[\s\S]*?<\/\1>/g)].map((m) => m[0]);
+  if (matches.length === 0) {
+    const stripped = out.trim();
+    if (!stripped) return "";
+    return `<lari>${stripped}</lari>`;
   }
-  return parts.join("\n").trim();
+  return matches.join("\n").trim();
 }
 
 async function callGateway(messages: unknown[], stream: boolean) {
