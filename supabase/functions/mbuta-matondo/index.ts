@@ -741,27 +741,26 @@ async function handleToolCall(name: string, args: Record<string, unknown>): Prom
 }
 
 /**
- * Sanitise le contenu des blocs <theo>...</theo> :
- * supprime tout texte entre guillemets / italiques markdown
- * et toute phrase contenant un déclencheur ("dit :", "réponds :", "en Kikongo Lari").
- * Les blocs <lari>...</lari> ne sont jamais touchés.
+ * Théo n'existe plus. On supprime tous les blocs <theo>...</theo> que le modèle aurait
+ * pu produire malgré la consigne, ainsi que tout texte hors balises <lari>/<choices>.
+ * On garantit que la sortie ne contient QUE du Kikongo Lari (dans <lari>) + un éventuel <choices>.
  */
-function sanitizeTheoBlocks(text: string): string {
-  return text.replace(/<theo>([\s\S]*?)<\/theo>/g, (_match, inner: string) => {
-    const cleaned = inner
-      .replace(/"[^"]*"/g, "")
-      .replace(/«[^»]*»/g, "")
-      .replace(/[\u201C\u201D][^\u201C\u201D]*[\u201C\u201D]/g, "")
-      .replace(/[\u2018\u2019][^\u2018\u2019]*[\u2018\u2019]/g, "")
-      .replace(/\*[^*\n]+\*/g, "")
-      .replace(/_[^_\n]+_/g, "")
-      .split(/(?<=[.!?])\s+/)
-      .filter((s) => !/\b(en Kikongo Lari|dit\s*:|r[ée]pond[s]?\s*:)/i.test(s))
-      .join(" ")
-      .replace(/\s{2,}/g, " ")
+function sanitizeOutput(text: string): string {
+  // 1. Retirer tout bloc <theo>...</theo>
+  let out = text.replace(/<theo>[\s\S]*?<\/theo>/g, "");
+  // 2. Extraire <lari> et <choices>, ignorer le reste
+  const laris = [...out.matchAll(/<lari>[\s\S]*?<\/lari>/g)].map((m) => m[0]);
+  const choices = out.match(/<choices[^>]*>[\s\S]*?<\/choices>/);
+  const parts: string[] = [...laris];
+  if (choices) parts.push(choices[0]);
+  // 3. Si le modèle n'a rien produit dans les balises, on enveloppe tout dans <lari>
+  if (laris.length === 0) {
+    const stripped = out
+      .replace(/<choices[^>]*>[\s\S]*?<\/choices>/g, "")
       .trim();
-    return `<theo>${cleaned}</theo>`;
-  });
+    if (stripped) parts.unshift(`<lari>${stripped}</lari>`);
+  }
+  return parts.join("\n").trim();
 }
 
 async function callGateway(messages: unknown[], stream: boolean) {
