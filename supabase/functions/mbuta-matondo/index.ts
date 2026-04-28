@@ -859,7 +859,7 @@ serve(async (req) => {
 
       // Pas de tool call → on stream la réponse finale.
       // Comme on a déjà la réponse complète, on l'émet en un seul chunk SSE compatible.
-      const finalText: string = sanitizeTheoBlocks(msg.content ?? "");
+      const finalText: string = sanitizeOutput(msg.content ?? "");
       const stream = new ReadableStream({
         start(controller) {
           const enc = new TextEncoder();
