@@ -1,38 +1,34 @@
 ---
 name: AI Teacher
-description: Dual-character system — Mbuta Matondo (Lari via <lari> tags) + Theo (French via <theo> tags). Sequential dual-voice TTS with isPlaying lock.
+description: Mbuta Matondo solo (Théo retiré). Bulle 3 couches Mandombe typewriter → Lari → FR sous-titre. Corpus v2 strict + corrections persistantes via translation_corrections.
 type: feature
 ---
-Mbuta Matondo + Theo dual-character system powered by Gemini via Lovable AI Gateway (SSE streaming).
+Mbuta Matondo est seul (Théo a été retiré). Il parle UNIQUEMENT Kikongo Lari, le français n'est qu'un sous-titre d'affichage.
 
-Architecture:
-- Every response MUST contain at least one <lari> and one <theo> block. No text outside tags.
-- <lari> = Mbuta Matondo speaks ONLY attested Kikongo Lari from corpus
-- <theo> = Theo speaks ONLY French (max 2 sentences, warm, encouraging)
+Format de sortie (edge mbuta-matondo) :
+- <lari>...</lari> : texte parlé (Kikongo Lari uniquement, jamais de FR)
+- <fr>...</fr> : sous-titre français STRICT du <lari> précédent — jamais lu par TTS
+- <choices correct="N">opt1|opt2|...</choices> : QCM (toutes options en Lari)
+- <theo> est strippé par sanitizeOutput (legacy)
 
-Mbuta Matondo rules:
-- CORPUS READER: zero linguistic competence, reads only what is in the corpus
-- Uses ONLY words and phrases found literally in the Nzo Mikanda corpus
-- Zero invention: no conjugation by analogy, no phrase construction by rules
-- Uses Mandombe script via [mandombe]...[/mandombe] tags (inside <lari> only)
-- Calls students "nlongoki" (never "mwana")
-- Uses "zonza" (never "vova" which is Kituba)
-- "Nkumbu ani" = correct vernacular form for "my name"
-- Never uses "mbote na nge" (non-existent form)
-- Forbidden languages in output: Kituba, Munukutuba, Lingala
+Corpus :
+- Statique : supabase/functions/_shared/mbuta-corpus-v2.ts (importe mbuta-corpus-v2.json)
+- Dynamique : table translation_corrections (lari↔fr) injectée à chaque appel via buildSystemPrompt
+- Le bouton crayon dans chaque bulle (admin) ouvre un dialog qui INSERT dans translation_corrections → Mbuta s'en souvient à la session suivante
 
-Theo rules:
-- French only, never speaks Lari
-- Max 2 sentences per intervention
-- Translates what Mbuta Matondo said, encourages, provides cultural context
-- Never says "I am an AI" or invents Lari words
+UI (MbutaMatondoChat.tsx) :
+- MandombeBubble : 3 couches synchronisées
+  1. Mandombe en typewriter (font-mandombe), durée = audio TTS si connue, sinon ~45ms/char
+  2. Kikongo Lari latin en fade-in après le typewriter
+  3. Français en italique petit (text-cream/50) en fade-in après le Lari
+- QCM : sur mauvaise réponse, le bouton se RÉDUIT à un seul (la bonne réponse) jusqu'à validation. Jamais de demande de répétition sans bouton.
+- Voix unique : elevenlabs-tts-lari (Gz9w9RNGNUZjVYbvzXY7). TTS Théo supprimé.
 
-TTS:
-- <lari> segments → elevenlabs-tts-lari (voice Gz9w9RNGNUZjVYbvzXY7)
-- <theo> segments → elevenlabs-tts-general with lang: "fr" (voice R89ZQJowZAEgiPNyC3dQ)
-- Sequential playback with isPlayingRef lock to prevent overlap
-- Emojis medium-dark (🧑🏾) in <theo> only
+TTS Lari (G dur Ng) :
+- nge→nghe, ngi→nghi, nga→ngha, ngo→ngho, ngu→nghu (tous mappés explicitement)
 
-Visual rendering:
-- <lari> blocks: gold/warm styling (bg-gold/10, border-gold/30), Mandombe rendering
-- <theo> blocks: blue styling (bg-blue-500/10, border-blue-400/30), plain French text
+Règles absolues du prompt :
+1. Zéro français écrit par Mbuta hors balise <fr> (sous-titre technique)
+2. Production exclusive depuis le corpus (pas de génération libre)
+3. Pas de Markdown
+4. "Ngiele" = je vais (pas "je suis") — note explicite

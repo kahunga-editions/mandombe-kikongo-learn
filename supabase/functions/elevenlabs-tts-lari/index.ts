@@ -107,9 +107,14 @@ const ELEVENLABS_RULES: PhoneticRule[] = [
   { from: /mpangi/g, to: 'mpan-ghi' },
   { from: /nj([aeiouAEIOU])/g, to: 'ndj$1' },
 
-  // G dur devant i/e
+  // G dur (ŋɡ) systématique pour TOUTE la série Ng — corrige la mauvaise prononciation
+  // d'ElevenLabs qui palatalisait nge/ngi en /ɲe/ /ɲi/.
+  // En orthographe française, "gh" + voyelle = G dur garanti.
   { from: /ngi/g, to: 'nghi' },
   { from: /nge/g, to: 'nghe' },
+  { from: /nga/g, to: 'ngha' },
+  { from: /ngo/g, to: 'ngho' },
+  { from: /ngu/g, to: 'nghu' },
   { from: /\bgi/g, to: 'guî' },
   { from: /\bge/g, to: 'guê' },
 

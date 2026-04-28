@@ -1,0 +1,250 @@
+{
+  "meta": {
+    "description": "Corpus validé de phrases et mots en Kikongo Lari pour Mbuta Matondo — Nzo Mikanda",
+    "version": "2.0",
+    "methode": "Total Physical Response (TPR) + input compréhensible (méthode Krashen)",
+    "source": "Corpus Nzo Mikanda",
+    "usage": "Mbuta Matondo ne doit JAMAIS produire du Kikongo Lari hors de ce corpus",
+    "regle_fondamentale": "Mbuta Matondo ne pose pas de question en français. Il propose un QCM directement. Il ne demande jamais de répéter."
+  },
+
+  "presentation": {
+    "description": "Phrases pour se présenter",
+    "phrases": [
+      { "kikongo": "Me ni Mbuta Matondo, nlongi wa Kikongo Lari.", "fr": "Je suis Mbuta Matondo, professeur de Kikongo Lari." },
+      { "kikongo": "Me ni Mbuta Matondo, kilongisi kia Kikongo Lari.", "fr": "Je suis Mbuta Matondo, professeur de Kikongo Lari." },
+      { "kikongo": "Nkumbu ani Mbuta Matondo.", "fr": "Mon nom est Mbuta Matondo." },
+      { "kikongo": "Nkumbu ani Mbuta Matondo, mulongi wa Kikongo Lari.", "fr": "Je m'appelle Mbuta Matondo, professeur de Kikongo Lari." },
+      { "kikongo": "Nkumbu ani Mbuta Matondo, mulongi wa tshikongo lari ngie.", "fr": "Je m'appelle Mbuta Matondo, professeur de Kikongo Lari.", "note": "ngie se prononce /ndje/" },
+      { "kikongo": "Nkumbu ani Mbuta Matondo, mulongi wa Kikongo Lari ngiena.", "fr": "Je m'appelle Mbuta Matondo, professeur de Kikongo Lari.", "note": "ngiena se prononce /ndjena/" },
+      { "kikongo": "Nzololo wa longoka Kikongo Lari.", "fr": "Mon souhait est que tu apprennes le Kikongo Lari." }
+    ]
+  },
+
+  "salutations": {
+    "description": "Salutations et formules de politesse",
+    "phrases": [
+      { "kikongo": "Mbote!", "fr": "Bonjour !" },
+      { "kikongo": "Mbote mpangi, nkumbu aku nani?", "fr": "Bonjour petit frère/petite sœur, quel est ton nom ?" },
+      { "kikongo": "Mbote aku mpangi!", "fr": "Bonjour à toi petit frère/petite sœur !" },
+      { "kikongo": "Ta kuambileno!", "fr": "Bonjour à vous !" },
+      { "kikongo": "Lumbu kia kibote!", "fr": "Bonne journée !" },
+      { "kikongo": "Mpimpa ya mbote!", "fr": "Bonne nuit !" },
+      { "kikongo": "Lala bubote!", "fr": "Dors bien !" },
+      { "kikongo": "Seka bubote!", "fr": "Dors bien !" },
+      { "kikongo": "Tolo tua tu bote!", "fr": "Bonne nuit (sommeil) !" },
+      { "kikongo": "Nkokela!", "fr": "Soir !" },
+      { "kikongo": "Nkokela kua!", "fr": "À ce soir !" },
+      { "kikongo": "Mbaji kua!", "fr": "À demain !" },
+      { "kikongo": "Ntangu ka kua!", "fr": "À un autre moment, à bientôt !" },
+      { "kikongo": "Lumingu lua lubote.", "fr": "Bon dimanche." },
+      { "kikongo": "Kolele?", "fr": "Ça va ?" },
+      { "kikongo": "Matondo ma mingi.", "fr": "Merci beaucoup." },
+      { "kikongo": "Mbote yandi.", "fr": "Salue-le/la de ma part." }
+    ]
+  },
+
+  "gestion_lecon": {
+    "description": "Phrases pour animer et gérer la leçon",
+    "phrases": [
+      { "kikongo": "Lolo, mbo tu longoka...", "fr": "Aujourd'hui, nous allons étudier...", "note": "tu = nous (plus usité que beto)" },
+      { "kikongo": "Malongi ma lolo hema.", "fr": "Voici la leçon que nous allons voir aujourd'hui.", "note": "hema = voici, peut aussi être en fin de phrase" },
+      { "kikongo": "Hemi, tu longoka lolo.", "fr": "Voilà ce que nous allons voir aujourd'hui." },
+      { "kikongo": "Lolo, hemi tu longoka.", "fr": "Voilà ce que nous allons voir aujourd'hui." },
+      { "kikongo": "Lolo, mbo longoka mu hana mbote mu Kikongo Lari.", "fr": "Aujourd'hui, tu vas apprendre à saluer en Kikongo Lari." },
+      { "kikongo": "Lumbu tshi mbo longoka bu ba hanina mbote mu Tshikongo Lari.", "fr": "Aujourd'hui, tu vas apprendre à saluer en Kikongo Lari." },
+      { "kikongo": "Lumbu tshi mbo longoka bu ba bikila mu tshikongo lari.", "fr": "Aujourd'hui, tu vas apprendre à saluer en Kikongo Lari." },
+      { "kikongo": "Lumbu tshi, mbo longoka mu ta nge nani mu Kikongo Lari.", "fr": "Aujourd'hui, tu vas apprendre à te présenter en Kikongo Lari." },
+      { "kikongo": "Mbo longoka mu ta nge nani.", "fr": "Tu vas apprendre à te présenter." },
+      { "kikongo": "Mbo longoka mu ta nge ka na we.", "fr": "Tu vas apprendre à te présenter.", "note": "ka na we = qui tu es" },
+      { "kikongo": "Lolo, mbo longoka mu yula nsangu mu Kikongo Lari.", "fr": "Aujourd'hui, tu vas apprendre à demander des nouvelles en Kikongo Lari." },
+      { "kikongo": "Longaka mu yula nsangu mu Kongo Lari.", "fr": "Tu vas apprendre à demander des nouvelles en Kikongo Lari." },
+      { "kikongo": "Nki zololo longoka?", "fr": "Que veux-tu étudier ?" },
+      { "kikongo": "Nki zololo longoka lolo?", "fr": "Que veux-tu étudier aujourd'hui ?" },
+      { "kikongo": "Lumbu tshi nki tu longoka?", "fr": "C'est quoi la leçon du jour ?" },
+      { "kikongo": "Nkia longi wa longokele?", "fr": "Quelle leçon as-tu étudiée ?" },
+      { "kikongo": "Nki wa longokele.", "fr": "Quelle leçon as-tu étudiée ?" },
+      { "kikongo": "Nki wa longokele ku Nzo mikanda?", "fr": "Quelle leçon as-tu étudiée sur le site ?" },
+      { "kikongo": "Ta batika.", "fr": "On va commencer. / Commençons." },
+      { "kikongo": "Ta batikeno.", "fr": "Commençons (en groupe)." },
+      { "kikongo": "Batikeno.", "fr": "Commencez." },
+      { "kikongo": "Yenda!", "fr": "Vas-y !" },
+      { "kikongo": "Yendeno!", "fr": "Allez-y !" },
+      { "kikongo": "Tokueno.", "fr": "Allons-y." },
+      { "kikongo": "Wirikila.", "fr": "Sois attentif/attentive." },
+      { "kikongo": "Teka kutu.", "fr": "Concentre-toi." },
+      { "kikongo": "Ta batika, tala zololo.", "fr": "On peut commencer si tu veux." },
+      { "kikongo": "Mbo ta landi wa zonzela.", "fr": "Oui, on en parlera plus tard." },
+      { "kikongo": "Mbo ta zonzela wo, ntangu ka.", "fr": "On en parlera plus tard." },
+      { "kikongo": "Mbo ta tala wo ntangu ka.", "fr": "On verra ça plus tard." },
+      { "kikongo": "Ta kala ku malongi meto.", "fr": "Revenons à notre leçon." },
+      { "kikongo": "Ta vutukila malongi meto.", "fr": "Revenons à notre leçon." },
+      { "kikongo": "Ta zonza bima biaka.", "fr": "Parlons d'autre chose." },
+      { "kikongo": "Diambu dio tshika wa longoka dio.", "fr": "Tu vas apprendre ce mot bientôt." },
+      { "kikongo": "Tanga diambu di moshi di moshi.", "fr": "Lis chaque phrase." },
+      { "kikongo": "Muna diambu diambu, sola mvutu ya mbote.", "fr": "Pour chaque question, choisis la bonne réponse.", "note": "sola = choisir, mvutu = la réponse" }
+    ]
+  },
+
+  "corrections_encouragements": {
+    "description": "Corrections et encouragements — jamais de 'répète'",
+    "regle": "Mbuta Matondo ne demande jamais de répéter. En cas d'erreur, il reformule et repose la question via QCM.",
+    "phrases": [
+      { "kikongo": "Ta, vutu yela. ku ta andi, ka bua wa ko.", "fr": "Dis, essaie encore, au lieu de 'c'est faux'." },
+      { "kikongo": "Diambu di ka kia zebi dio ko.", "fr": "Je ne connais pas encore ce mot." },
+      { "kikongo": "Diambu dio ka nzebi a dio ko buabu.", "fr": "Je ne connais pas encore ce mot." },
+      { "kikongo": "Ka nzebi a ko.", "fr": "Je ne sais pas." },
+      { "kikongo": "Kua wiri?", "fr": "Tu comprends ?" },
+      { "kikongo": "Sa mayela.", "fr": "Attention !" },
+      { "kikongo": "Tomo jibula makutu.", "fr": "Écoutez bien." },
+      { "kikongo": "Wa tshifua tshi.", "fr": "Écoute cette forme." },
+      { "kikongo": "Lendi vutu ta?", "fr": "Peux-tu répéter ?" },
+      { "kikongo": "Na vutu ta!", "fr": "Laisse-moi répéter !" },
+      { "kikongo": "Longoka kua nzololo.", "fr": "J'aime apprendre." },
+      { "kikongo": "Longoka kua zololo?", "fr": "Tu aimes apprendre ?" },
+      { "kikongo": "Nzololo na bingi zaba.", "fr": "Je veux progresser / apprendre vite." },
+      { "kikongo": "Bu ngie ku ni mu longoka.", "fr": "Je suis ici pour apprendre.", "note": "ngie se prononce /ndje/" }
+    ]
+  },
+
+  "questions_sur_leleve": {
+    "description": "Questions que Mbuta Matondo pose pour connaître l'élève",
+    "phrases": [
+      { "kikongo": "Nki lembolo wa?", "fr": "Est-ce que tu as des questions ?" },
+      { "kikongo": "Nki lombolo wa?", "fr": "Est-ce que tu as des questions ?" },
+      { "kikongo": "Diambu die naku?", "fr": "Est-ce que tu as des questions ?" },
+      { "kikongo": "Tshibuka tshi we tsha djuna?", "fr": "Es-tu dans un endroit calme ?" },
+      { "kikongo": "Ba mu tshibuka tsha djuna.", "fr": "Il faut que tu sois dans un endroit au calme." },
+      { "kikongo": "Ba ha mbuka ya djuna.", "fr": "Il faut que tu sois dans un endroit au calme." },
+      { "kikongo": "Mu longoka ba ha tshibuka tsha djuna.", "fr": "Il faut que tu sois dans un endroit calme pour étudier." },
+      { "kikongo": "Nge kaka longoka?", "fr": "Est-ce que tu étudies seul(e) ?" },
+      { "kikongo": "Kikongo Lari zonza ka?", "fr": "Est-ce que tu parles Kikongo Lari ?" },
+      { "kikongo": "Kikongo Lari fioti ni zonza.", "fr": "Je parle un peu Kikongo Lari." },
+      { "kikongo": "Kikongo Lari longoka ku nzo.", "fr": "Est-ce que tu étudies le Kikongo Lari à la maison ?" },
+      { "kikongo": "Ku nzo Kikongo Lari longoka ka?", "fr": "Est-ce que tu étudies le Kikongo Lari à la maison ?" },
+      { "kikongo": "Ku nzo mikanda kuenda ka?", "fr": "Est-ce que tu vas dans une école ?" },
+      { "kikongo": "Ku nzo mikanda kuenda ka mu longa Kikongo Lari?", "fr": "Est-ce que tu vas dans une école pour apprendre le Kikongo Lari ?" },
+      { "kikongo": "Kikongo Lari na mulongi longoka tsho?", "fr": "Est-ce que tu apprends le Kikongo Lari avec un professeur ?" },
+      { "kikongo": "Kikongo Lari na mulongi longoka kio?", "fr": "Est-ce que tu apprends le Kikongo Lari avec un professeur ?" },
+      { "kikongo": "Ntama wa batika mu longoka Kikongo Lari.", "fr": "Depuis combien de temps étudies-tu le Kikongo Lari ?" },
+      { "kikongo": "Ntama wa batika mu longoka tsho?", "fr": "Depuis combien de temps étudies-tu le Kikongo Lari ?" },
+      { "kikongo": "Kuna nzo aku na zebi zonza Kikongo Lari?", "fr": "Qui sait parler Kikongo Lari dans ta famille ?" },
+      { "kikongo": "Kikongo Lari longoka na bibutu biaku?", "fr": "Est-ce que tu étudies le Kikongo Lari avec tes parents ?" },
+      { "kikongo": "Na tata na mama aku, kikongo lari longoka ka?", "fr": "Est-ce que tu étudies le Kikongo Lari avec tes parents ?" },
+      { "kikongo": "Bibutu biaku Kikongo Lari ba zonza ka?", "fr": "Est-ce que tes grands-parents parlent le Kikongo Lari ?" },
+      { "kikongo": "Kikongo Lari longoka ku nzo aku?", "fr": "Est-ce que tu étudies le Kikongo Lari en famille ?" },
+      { "kikongo": "Ku... ba ka.", "fr": "Tu habites à...", "exemple": "Ku Paris ba ka. = Tu habites à Paris." }
+    ]
+  },
+
+  "vocabulaire_de_base": {
+    "description": "Mots essentiels validés",
+    "mots": [
+      { "kikongo": "Nkumbu", "fr": "Nom" },
+      { "kikongo": "Meno", "fr": "Je, moi" },
+      { "kikongo": "Ani", "fr": "Mon, ma, mes" },
+      { "kikongo": "Aku", "fr": "Ton, ta, tes" },
+      { "kikongo": "Andi", "fr": "Son, sa, ses" },
+      { "kikongo": "Awu", "fr": "Leur, leurs" },
+      { "kikongo": "Mpangi", "fr": "Cadet, petit frère, petite sœur" },
+      { "kikongo": "Yaya", "fr": "Grand frère, grande sœur, aîné(e)" },
+      { "kikongo": "Kibushi", "fr": "La sœur" },
+      { "kikongo": "Nkaji", "fr": "Le frère (en général)" },
+      { "kikongo": "Nlongi", "fr": "Le professeur, l'enseignant" },
+      { "kikongo": "Mulongi", "fr": "Le professeur, l'enseignant" },
+      { "kikongo": "Kilongisi", "fr": "Celui qui enseigne, le professeur" },
+      { "kikongo": "Bilongisi", "fr": "Les professeurs (pluriel de kilongisi)" },
+      { "kikongo": "Milongi", "fr": "Les professeurs (pluriel de mulongi)" },
+      { "kikongo": "Mulongoki", "fr": "L'étudiant(e)" },
+      { "kikongo": "Nzo mikanda", "fr": "L'école (litt. maison des livres)" },
+      { "kikongo": "Malongi", "fr": "La leçon, les leçons, les conseils" },
+      { "kikongo": "Longoka", "fr": "Apprendre" },
+      { "kikongo": "Longa", "fr": "Enseigner" },
+      { "kikongo": "Zonza", "fr": "Parler" },
+      { "kikongo": "Tanga", "fr": "Lire" },
+      { "kikongo": "Sola", "fr": "Choisir" },
+      { "kikongo": "Mvutu", "fr": "La réponse" },
+      { "kikongo": "Diambu", "fr": "Mot, chose, sujet" },
+      { "kikongo": "Nani", "fr": "Qui ?" },
+      { "kikongo": "Nki", "fr": "Quoi ?, Pourquoi ?", "note": "se prononce /ntshi/" },
+      { "kikongo": "Kue", "fr": "Où ?" },
+      { "kikongo": "Bue", "fr": "Comment ?" },
+      { "kikongo": "Ntela", "fr": "Dis-moi...", "note": "TRANSITIF — ne jamais employer sans complément" },
+      { "kikongo": "Lolo", "fr": "Aujourd'hui" },
+      { "kikongo": "Lumbu tshi", "fr": "Aujourd'hui" },
+      { "kikongo": "Mbaji", "fr": "Demain" },
+      { "kikongo": "Ntangu ka", "fr": "Plus tard, à un autre moment" },
+      { "kikongo": "Tshika", "fr": "Bientôt" },
+      { "kikongo": "Buabu", "fr": "Maintenant, le présent (temps grammatical)" },
+      { "kikongo": "Luta", "fr": "Le passé (temps grammatical)" },
+      { "kikongo": "Ma kuiza", "fr": "Le futur (temps grammatical)" },
+      { "kikongo": "He", "fr": "Oui" },
+      { "kikongo": "Ko", "fr": "Non (marque de négation)" },
+      { "kikongo": "Kaka", "fr": "Seulement, encore" },
+      { "kikongo": "Mpe", "fr": "Aussi" },
+      { "kikongo": "Toma", "fr": "Très, bien, bon, beau" },
+      { "kikongo": "Mbote", "fr": "Bon, bien, bonjour" },
+      { "kikongo": "Vutu", "fr": "Encore, de nouveau, itération" },
+      { "kikongo": "Matondo", "fr": "Merci, remerciements" },
+      { "kikongo": "Ngie", "fr": "Moi (forme abrégée de ngiena)", "note": "se prononce /ndje/" },
+      { "kikongo": "Ngiena", "fr": "Moi", "note": "se prononce /ndjena/" },
+      { "kikongo": "Fioti", "fr": "Un peu, petit" },
+      { "kikongo": "Djuna", "fr": "Calme, tranquille" },
+      { "kikongo": "Tshibuka", "fr": "Endroit, lieu, position" },
+      { "kikongo": "Ngelo", "fr": "Argent" }
+    ]
+  },
+
+  "phrases_identite": {
+    "description": "Se présenter et parler de soi",
+    "phrases": [
+      { "kikongo": "Nge, nani wena?", "fr": "Toi, qui es-tu ?" },
+      { "kikongo": "Nkumbu aku nani?", "fr": "Quel est ton nom ?" },
+      { "kikongo": "Nkumbu ani [nkumbu].", "fr": "Mon nom est [prénom].", "note": "ani = mon/ma/mes" },
+      { "kikongo": "Nkumbu aku [nkumbu].", "fr": "Ton nom est [prénom]." },
+      { "kikongo": "Ku [ville] na tuka.", "fr": "Je viens de [ville]." },
+      { "kikongo": "Kue ta tuka?", "fr": "D'où venons-nous ?" },
+      { "kikongo": "Nge ni kilongisi.", "fr": "C'est toi le professeur." },
+      { "kikongo": "Nge ni mulongi.", "fr": "C'est toi le professeur." },
+      { "kikongo": "Nge ni nlongi.", "fr": "C'est toi le professeur." },
+      { "kikongo": "Mulongoki ngie.", "fr": "Je suis étudiant(e).", "note": "ngie se prononce /ndje/" },
+      { "kikongo": "Bu ngie ku ni mu longoka.", "fr": "Je suis ici pour apprendre." }
+    ]
+  },
+
+  "phonologie": {
+    "description": "Règles de prononciation — pour le TTS ElevenLabs (IPA)",
+    "regles": [
+      { "grapheme": "nge", "ipa": "ŋɡe", "explication": "G dur — comme NGO, jamais comme 'gné'" },
+      { "grapheme": "nga", "ipa": "ŋɡa", "explication": "G dur" },
+      { "grapheme": "ngo", "ipa": "ŋɡo", "explication": "G dur" },
+      { "grapheme": "ngu", "ipa": "ŋɡu", "explication": "G dur" },
+      { "grapheme": "ngi", "ipa": "ŋɡi", "explication": "G dur" },
+      { "grapheme": "nki", "ipa": "ntʃi", "explication": "Nki se prononce /ntshi/" },
+      { "grapheme": "nkumbu ani", "ipa": "nkuːmbwani", "explication": "Liaison — se prononce en un seul souffle" },
+      { "grapheme": "ngiena", "ipa": "ndʒena", "explication": "ngiena se prononce /ndjena/" },
+      { "grapheme": "ngie", "ipa": "ndʒe", "explication": "ngie se prononce /ndje/" },
+      { "grapheme": "nkimu", "ipa": "ntʃimu", "explication": "nkimu se prononce /ntshimu/" },
+      { "grapheme": "nzeri", "ipa": "ndʒeri", "explication": "nzeri se prononce /ndjeri/" },
+      { "grapheme": "ngiele", "ipa": "ŋɡele", "explication": "Ngiele = je vais — G dur, attention confusion possible" }
+    ]
+  },
+
+  "grammaire_notes": {
+    "description": "Notes grammaticales importantes pour Mbuta Matondo",
+    "notes": [
+      "La négation se construit avec ka...ko encadrant le verbe.",
+      "Le futur immédiat : infinitif + particule pronom + infinitif. Ex: Dia ni dia = je vais manger.",
+      "L'imparfait se marque avec KETI. Ex: Dia nketi dia = j'allais manger.",
+      "Le suffixe -anga exprime la répétition, l'habitude. Ex: dianga = mange souvent.",
+      "Le suffixe -asana exprime la réciprocité. Ex: banzasana = penser l'un à l'autre.",
+      "TU = nous au présent et au futur. TA, TUA = nous au passé. Plus usités que BETO.",
+      "L'ordre canonique de la phrase : ce dont on parle en premier. Ex: Kisalu ni ta tomba = Je suis en train de chercher un emploi.",
+      "NTELA est un verbe transitif — ne jamais employer sans complément.",
+      "NGIELE = je vais — ne pas confondre avec NGE.",
+      "Ngie (abréviation de ngiena) se prononce /ndje/.",
+      "Les liaisons sont importantes : nzo mikanda awu se prononce /nzo mikandawu/.",
+      "Nkumbu ani = mon nom est. Nkumbu aku = ton nom est. ANI ≠ AME (ame = Kimanianga, pas Kikongo Lari)."
+    ]
+  }
+}
