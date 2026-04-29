@@ -1,0 +1,179 @@
+{
+  "lecon_id": "00",
+  "titre_mbuta": "",
+  "titre_subtitle": "Nkumbu — Le nom",
+  "sources": [
+    "corpus Ntu Kanda",
+    "corpus Nzo Mikanda"
+  ],
+  "ouverture": {
+    "mbuta": "Mbote za zingi!",
+    "subtitle": "Bien le bonjour !"
+  },
+  "echanges": [
+    {
+      "id": "00-01",
+      "mbuta": "Nkumbu aku nani?",
+      "subtitle": "Quel est ton nom ?",
+      "type": "qcm_avec_blank",
+      "reponses": [
+        {
+          "mbuta": "Nkumbu ani ___",
+          "subtitle": "Mon nom c'est ___",
+          "correct": true,
+          "has_blank": true,
+          "blank_variable": "prenom",
+          "blank_placeholder": "ton prénom"
+        },
+        {
+          "mbuta": "Ka nzebi a ko.",
+          "subtitle": "Je ne sais pas.",
+          "correct": false,
+          "has_blank": false
+        },
+        {
+          "mbuta": "Matondo.",
+          "subtitle": "Merci.",
+          "correct": false,
+          "has_blank": false
+        }
+      ],
+      "reponse_correcte_mbuta": "Wa sala bubote! Nkumbu aku {prenom}.",
+      "reponse_correcte_subtitle": "Tu travailles bien ! Ton nom c'est {prenom}.",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Nkumbu aku nani?",
+      "reponse_incorrecte_subtitle": "Non... Essaie encore. Quel est ton nom ?"
+    },
+    {
+      "id": "00-02",
+      "mbuta": "Nkumbu ani Mbuta Matondo.",
+      "subtitle": "Mon nom c'est Mbuta Matondo.",
+      "type": "qcm",
+      "reponses": [
+        {
+          "mbuta": "Nkumbu ani Mbuta Matondo.",
+          "subtitle": "Mon nom c'est Mbuta Matondo.",
+          "correct": true,
+          "has_blank": false
+        },
+        {
+          "mbuta": "Nkumbu aku nani?",
+          "subtitle": "Quel est ton nom ?",
+          "correct": false,
+          "has_blank": false
+        },
+        {
+          "mbuta": "Ka nzebi a ko.",
+          "subtitle": "Je ne sais pas.",
+          "correct": false,
+          "has_blank": false
+        }
+      ],
+      "reponse_correcte_mbuta": "Mayela mpashi!",
+      "reponse_correcte_subtitle": "Bien !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Nkumbu ani Mbuta Matondo.",
+      "reponse_incorrecte_subtitle": "Non... Essaie encore. Mon nom c'est Mbuta Matondo."
+    },
+    {
+      "id": "00-03",
+      "mbuta": "Mbote za zingi, {prenom}!",
+      "subtitle": "Bien le bonjour, {prenom} !",
+      "note": "Mbuta Matondo utilise le prénom saisi en 00-01",
+      "type": "qcm",
+      "reponses": [
+        {
+          "mbuta": "Mbote za zingi!",
+          "subtitle": "Bien le bonjour !",
+          "correct": true,
+          "has_blank": false
+        },
+        {
+          "mbuta": "Matondo ma mingi.",
+          "subtitle": "Merci beaucoup.",
+          "correct": false,
+          "has_blank": false
+        },
+        {
+          "mbuta": "Ka nzebi a ko.",
+          "subtitle": "Je ne sais pas.",
+          "correct": false,
+          "has_blank": false
+        }
+      ],
+      "reponse_correcte_mbuta": "Wa sala bubote, {prenom}!",
+      "reponse_correcte_subtitle": "Tu travailles bien, {prenom} !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Mbote za zingi!",
+      "reponse_incorrecte_subtitle": "Non... Essaie encore. Bien le bonjour !"
+    },
+    {
+      "id": "00-04",
+      "mbuta": "Matondo.",
+      "subtitle": "Merci.",
+      "type": "qcm",
+      "reponses": [
+        {
+          "mbuta": "Matondo.",
+          "subtitle": "Merci.",
+          "correct": true,
+          "has_blank": false
+        },
+        {
+          "mbuta": "Mbote za zingi.",
+          "subtitle": "Bien le bonjour.",
+          "correct": false,
+          "has_blank": false
+        },
+        {
+          "mbuta": "Lumbu kia kibote.",
+          "subtitle": "Bonne journée.",
+          "correct": false,
+          "has_blank": false
+        }
+      ],
+      "reponse_correcte_mbuta": "Mayela mpashi!",
+      "reponse_correcte_subtitle": "Bien !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Matondo.",
+      "reponse_incorrecte_subtitle": "Non... Essaie encore. Merci."
+    },
+    {
+      "id": "00-05",
+      "mbuta": "Matondo ma mingi.",
+      "subtitle": "Merci beaucoup.",
+      "type": "qcm",
+      "reponses": [
+        {
+          "mbuta": "Matondo ma mingi.",
+          "subtitle": "Merci beaucoup.",
+          "correct": true,
+          "has_blank": false
+        },
+        {
+          "mbuta": "Matondo.",
+          "subtitle": "Merci.",
+          "correct": false,
+          "has_blank": false
+        },
+        {
+          "mbuta": "Ka nzebi a ko.",
+          "subtitle": "Je ne sais pas.",
+          "correct": false,
+          "has_blank": false
+        }
+      ],
+      "reponse_correcte_mbuta": "Wa sala bubote, {prenom}!",
+      "reponse_correcte_subtitle": "Tu travailles bien, {prenom} !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Matondo ma mingi.",
+      "reponse_incorrecte_subtitle": "Non... Essaie encore. Merci beaucoup."
+    }
+  ],
+  "cloture": {
+    "mbuta": "Matondo ma mingi, {prenom}! Lumbu kia kibote.",
+    "subtitle": "Merci beaucoup, {prenom} ! Bonne journée."
+  },
+  "variables": {
+    "prenom": {
+      "description": "Prénom saisi par l'apprenant dans l'échange 00-01",
+      "defaut": "Nlongoki",
+      "note": "Si l'apprenant ne saisit rien, utiliser Nlongoki (= l'apprenant)"
+    }
+  }
+}
