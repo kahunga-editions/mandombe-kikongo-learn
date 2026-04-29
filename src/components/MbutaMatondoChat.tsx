@@ -406,22 +406,39 @@ const MbutaMatondoChat = () => {
     }
   };
 
+  // ---- Variable interpolation ({prenom}, etc.) ----
+  const interpolate = useCallback((text: string): string => {
+    return text.replace(/\{(\w+)\}/g, (_, k) => vars[k] ?? `{${k}}`);
+  }, [vars]);
+
   // ---- MCQ pick ----
   const pickChoice = (msgIdx: number, optIdx: number, opt: string, correctIdx: number, options: string[]) => {
     if (isLoading || answeredIdx.get(msgIdx) === "correct") return;
     const isCorrect = optIdx === correctIdx;
+
+    // If option has a blank, fill it and store as {prenom}
+    let filledOpt = opt;
+    if (opt.includes("___")) {
+      const fill = (blankFills.get(`${msgIdx}:${optIdx}`) || "").trim();
+      if (!fill) {
+        toast({ title: "Complète d'abord le champ", variant: "destructive" });
+        return;
+      }
+      filledOpt = opt.replace(/_{2,}/g, fill);
+      // First blank in a question is conventionally the learner's first name
+      setVars((prev) => ({ ...prev, prenom: prev.prenom || fill }));
+    }
+
     setAnsweredIdx((prev) => {
       const next = new Map(prev);
       next.set(msgIdx, isCorrect ? "correct" : "wrong");
       return next;
     });
     if (isCorrect) {
-      send(opt);
+      send(filledOpt);
     } else {
-      // On wrong, ask Mbuta for the correction with single-button MCQ.
-      // We send a synthetic user message that nudges Mbuta to repeat the right answer alone.
       const correctOpt = options[correctIdx];
-      send(`(mauvaise réponse: "${opt}" — propose "${correctOpt}" en bouton unique pour répétition)`, { afterWrong: true });
+      send(`(mauvaise réponse: "${filledOpt}" — propose "${correctOpt}" en bouton unique pour répétition)`, { afterWrong: true });
     }
   };
 
