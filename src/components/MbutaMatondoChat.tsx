@@ -562,12 +562,75 @@ const MbutaMatondoChat = () => {
                   <div className="flex flex-wrap gap-2">
                     {displayChoices.options.map((opt, oi) => {
                       const answered = status === "correct";
+                      const hasBlank = opt.includes("___");
+                      const fillKey = `${i}:${oi}`;
+                      const fillValue = blankFills.get(fillKey) || "";
+
+                      if (hasBlank) {
+                        const parts = opt.split(/_{2,}/);
+                        const validate = () => {
+                          if (!fillValue.trim()) return;
+                          if (status === "wrong") {
+                            setAnsweredIdx((prev) => {
+                              const next = new Map(prev);
+                              next.set(i, "correct");
+                              return next;
+                            });
+                            const filled = opt.replace(/_{2,}/g, fillValue.trim());
+                            setVars((prev) => ({ ...prev, prenom: prev.prenom || fillValue.trim() }));
+                            send(filled);
+                          } else {
+                            pickChoice(i, oi, opt, choices!.correctIndex, choices!.options);
+                          }
+                        };
+                        return (
+                          <div
+                            key={oi}
+                            className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-gold/15 border border-gold/30 text-cream text-xs"
+                          >
+                            {parts.map((p, pi) => (
+                              <span key={pi} className="flex items-center gap-1">
+                                {p && <span>{p}</span>}
+                                {pi < parts.length - 1 && (
+                                  <input
+                                    type="text"
+                                    value={fillValue}
+                                    onChange={(e) =>
+                                      setBlankFills((prev) => {
+                                        const next = new Map(prev);
+                                        next.set(fillKey, e.target.value);
+                                        return next;
+                                      })
+                                    }
+                                    onKeyDown={(e) => {
+                                      if (e.key === "Enter") {
+                                        e.preventDefault();
+                                        validate();
+                                      }
+                                    }}
+                                    disabled={answered}
+                                    placeholder="…"
+                                    className="bg-earth-deep/60 border border-gold/40 rounded px-2 py-0.5 text-xs w-24 focus:outline-none focus:ring-1 focus:ring-gold"
+                                  />
+                                )}
+                              </span>
+                            ))}
+                            <button
+                              onClick={validate}
+                              disabled={answered || isLoading || !fillValue.trim()}
+                              className="ml-1 px-2 py-0.5 rounded-full bg-gold text-earth-deep text-[10px] font-semibold disabled:opacity-40"
+                            >
+                              OK
+                            </button>
+                          </div>
+                        );
+                      }
+
                       return (
                         <button
                           key={oi}
                           onClick={() => {
                             if (status === "wrong") {
-                              // Single-button mode: clicking validates the correct answer
                               setAnsweredIdx((prev) => {
                                 const next = new Map(prev);
                                 next.set(i, "correct");
