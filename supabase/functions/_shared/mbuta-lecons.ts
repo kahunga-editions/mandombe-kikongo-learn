@@ -1,4 +1,5 @@
 // Leçons validées Mbuta Matondo — corpus narratif Nzo Mikanda / Ntu Kanda
+import lecon00 from "./mbuta-lecon-00.json" with { type: "json" };
 import lecon03 from "./mbuta-lecon-03.json" with { type: "json" };
 
 type Reponse = { mbuta: string; correct: boolean };
@@ -23,7 +24,7 @@ type Lecon = {
   cloture?: { mbuta: string; subtitle: string };
 };
 
-const LECONS: Lecon[] = [lecon03 as unknown as Lecon];
+const LECONS: Lecon[] = [lecon00 as unknown as Lecon, lecon03 as unknown as Lecon];
 
 function fmtLecon(l: Lecon): string {
   const lines: string[] = [];
