@@ -616,6 +616,7 @@ const MbutaMatondoChat = () => {
                               </span>
                             ))}
                             <button
+                              type="button"
                               onClick={validate}
                               disabled={answered || isLoading || !fillValue.trim()}
                               className="ml-1 px-2 py-0.5 rounded-full bg-gold text-earth-deep text-[10px] font-semibold disabled:opacity-40"
@@ -629,6 +630,7 @@ const MbutaMatondoChat = () => {
                       return (
                         <button
                           key={oi}
+                          type="button"
                           onClick={() => {
                             if (status === "wrong") {
                               setAnsweredIdx((prev) => {
@@ -642,7 +644,7 @@ const MbutaMatondoChat = () => {
                             }
                           }}
                           disabled={answered || isLoading}
-                          className="px-3 py-1.5 rounded-full bg-gold/15 hover:bg-gold/30 border border-gold/30 text-cream text-xs transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+                          className="px-3 py-1.5 rounded-full bg-gold/15 hover:bg-gold/30 border border-gold/30 text-cream text-xs transition-colors disabled:opacity-40 disabled:cursor-not-allowed focus:outline-none focus-visible:ring-2 focus-visible:ring-gold/50"
                         >
                           {opt}
                         </button>
