@@ -2,6 +2,7 @@ import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.0";
 import { LESSONS_CORPUS, filterLessons, getExercisesByLesson } from "../_shared/lessons-corpus.ts";
 import { MBUTA_CORPUS_V2 } from "../_shared/mbuta-corpus-v2.ts";
+import { MBUTA_LECONS } from "../_shared/mbuta-lecons.ts";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -696,6 +697,8 @@ async function buildSystemPrompt(): Promise<string> {
   return `${BASE_SYSTEM_PROMPT}
 
 ${MBUTA_CORPUS_V2}
+
+${MBUTA_LECONS}
 
 CORPUS DYNAMIQUE — ENTRÉES VALIDÉES DU TRADUCTEUR / CORRECTIONS ADMIN
 Toute entrée enregistrée dans le traducteur ou validée par l'admin et impliquant le Kikongo Lari fait automatiquement partie du corpus de référence de Mbuta Matondo. Ces entrées sont prioritaires sur le corpus statique en cas de conflit.
