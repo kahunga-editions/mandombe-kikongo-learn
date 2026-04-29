@@ -1,0 +1,54 @@
+// Leçons validées Mbuta Matondo — corpus narratif Nzo Mikanda / Ntu Kanda
+import lecon03 from "./mbuta-lecon-03.json" with { type: "json" };
+
+type Reponse = { mbuta: string; correct: boolean };
+type Echange = {
+  id: string;
+  mbuta: string;
+  subtitle: string;
+  note?: string;
+  reponses: Reponse[];
+  reponse_correcte_mbuta: string;
+  reponse_correcte_subtitle: string;
+  reponse_incorrecte_mbuta: string;
+  reponse_incorrecte_subtitle: string;
+};
+type Lecon = {
+  lecon_id: string;
+  titre_mbuta?: string;
+  titre_subtitle?: string;
+  sources?: string[];
+  echanges: Echange[];
+  ouverture?: { mbuta: string; subtitle: string };
+  cloture?: { mbuta: string; subtitle: string };
+};
+
+const LECONS: Lecon[] = [lecon03 as unknown as Lecon];
+
+function fmtLecon(l: Lecon): string {
+  const lines: string[] = [];
+  lines.push(`### LEÇON ${l.lecon_id} — ${l.titre_subtitle ?? ""}`.trim());
+  if (l.sources?.length) lines.push(`Sources : ${l.sources.join(", ")}`);
+  if (l.ouverture) {
+    lines.push(`Ouverture : ${l.ouverture.mbuta} = ${l.ouverture.subtitle}`);
+  }
+  for (const e of l.echanges) {
+    lines.push(`\n[${e.id}] ${e.mbuta} = ${e.subtitle}${e.note ? ` (${e.note})` : ""}`);
+    const correct = e.reponses.findIndex((r) => r.correct);
+    lines.push(
+      `QCM (correct=${correct}) : ${e.reponses.map((r) => r.mbuta).join(" | ")}`
+    );
+    lines.push(`Si bonne réponse : ${e.reponse_correcte_mbuta}`);
+    lines.push(`Si mauvaise réponse : ${e.reponse_incorrecte_mbuta}`);
+  }
+  if (l.cloture) {
+    lines.push(`\nClôture : ${l.cloture.mbuta} = ${l.cloture.subtitle}`);
+  }
+  return lines.join("\n");
+}
+
+export const MBUTA_LECONS = `=== LEÇONS NARRATIVES VALIDÉES — NZO MIKANDA ===
+Ces leçons sont scriptées. Tu peux les utiliser intégralement et littéralement comme support d'enseignement (ouverture, échanges, QCM, clôture). Toutes les phrases ci-dessous sont attestées et autorisées.
+
+${LECONS.map(fmtLecon).join("\n\n")}
+`;
