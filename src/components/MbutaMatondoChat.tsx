@@ -262,6 +262,11 @@ const MbutaMatondoChat = () => {
   const [editNotes, setEditNotes] = useState("");
   const [savingCorrection, setSavingCorrection] = useState(false);
 
+  // Inline blank fills per message+option (key = `${msgIdx}:${optIdx}`)
+  const [blankFills, setBlankFills] = useState<Map<string, string>>(new Map());
+  // Persistent variables learned from blanks (e.g. {prenom})
+  const [vars, setVars] = useState<Record<string, string>>({});
+
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const mediaRecorderRef = useRef<MediaRecorder | null>(null);
   const chunksRef = useRef<Blob[]>([]);
