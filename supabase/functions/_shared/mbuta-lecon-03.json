@@ -1,0 +1,183 @@
+{
+  "lecon_id": "03",
+  "titre_mbuta": "",
+  "titre_subtitle": "Mfumu Kimbenza",
+  "sources": [
+    "corpus Ntu Kanda"
+  ],
+  "echanges": [
+    {
+      "id": "03-01",
+      "mbuta": "Mfumu ya ntangu ya nsi yo nkumbu andi Kimbenza.",
+      "subtitle": "Le maître du temps de cette dimension s'appelle Kimbenza.",
+      "reponses": [
+        {
+          "mbuta": "Mfumu ya ntangu ya nsi yo nkumbu andi Kimbenza.",
+          "correct": true
+        },
+        {
+          "mbuta": "Ntangu kinsono kie.",
+          "correct": false
+        },
+        {
+          "mbuta": "Ka nzebi a ko.",
+          "correct": false
+        }
+      ],
+      "reponse_correcte_mbuta": "Mayela mpashi! Mfumu ya ntangu ya nsi yo nkumbu andi Kimbenza.",
+      "reponse_correcte_subtitle": "Bien !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Mfumu ya ntangu ya nsi yo nkumbu andi Kimbenza.",
+      "reponse_incorrecte_subtitle": "Essaie encore."
+    },
+    {
+      "id": "03-02",
+      "mbuta": "Ntangu ya nsi yi nkumbu ntangu.",
+      "subtitle": "Le soleil de cette dimension s'appelle Ntangu.",
+      "reponses": [
+        {
+          "mbuta": "Ntangu ya nsi yi nkumbu ntangu.",
+          "correct": true
+        },
+        {
+          "mbuta": "Mfumu ya ntangu ya nsi yo nkumbu andi Kimbenza.",
+          "correct": false
+        },
+        {
+          "mbuta": "Ntangu kinsono kie.",
+          "correct": false
+        }
+      ],
+      "reponse_correcte_mbuta": "Wa sala bubote! Ntangu ya nsi yi nkumbu ntangu.",
+      "reponse_correcte_subtitle": "Bien !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Ntangu ya nsi yi nkumbu ntangu.",
+      "reponse_incorrecte_subtitle": "Essaie encore."
+    },
+    {
+      "id": "03-03",
+      "mbuta": "Ntangu kinsono kie.",
+      "subtitle": "Ntangu est un soleil holographique.",
+      "note": "kinsono = hologramme",
+      "reponses": [
+        {
+          "mbuta": "Ntangu kinsono kie.",
+          "correct": true
+        },
+        {
+          "mbuta": "Ntangu ya nsi yi nkumbu ntangu.",
+          "correct": false
+        },
+        {
+          "mbuta": "Ka nzebi a ko.",
+          "correct": false
+        }
+      ],
+      "reponse_correcte_mbuta": "Mayela mpashi! Ntangu kinsono kie.",
+      "reponse_correcte_subtitle": "Bien !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Ntangu kinsono kie.",
+      "reponse_incorrecte_subtitle": "Essaie encore."
+    },
+    {
+      "id": "03-04",
+      "mbuta": "Ntangu ni yandi wu tu vukasa na ntangu.",
+      "subtitle": "Ntangu est le soleil qui nous lie au temps.",
+      "note": "soleil = ntangu, temps = ntangu — compréhensible par déduction",
+      "reponses": [
+        {
+          "mbuta": "Ntangu ni yandi wu tu vukasa na ntangu.",
+          "correct": true
+        },
+        {
+          "mbuta": "Ntangu kinsono kie.",
+          "correct": false
+        },
+        {
+          "mbuta": "Mfumu ya ntangu ya nsi yo nkumbu andi Kimbenza.",
+          "correct": false
+        }
+      ],
+      "reponse_correcte_mbuta": "Wa sala bubote! Ntangu ni yandi wu tu vukasa na ntangu.",
+      "reponse_correcte_subtitle": "Bien !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Ntangu ni yandi wu tu vukasa na ntangu.",
+      "reponse_incorrecte_subtitle": "Essaie encore."
+    },
+    {
+      "id": "03-05",
+      "mbuta": "Mfumu Kimbenza ntangu yi ka tu hana ka ya butsheleka ko.",
+      "subtitle": "Mfumu Kimbenza nous donne l'illusion du temps.",
+      "note": "butsheleka = la vérité / ka butsheleka ko = l'illusion",
+      "reponses": [
+        {
+          "mbuta": "Mfumu Kimbenza ntangu yi ka tu hana ka ya butsheleka ko.",
+          "correct": true
+        },
+        {
+          "mbuta": "Mfumu Kimbenza nchimu ka tu katula ka.",
+          "correct": false
+        },
+        {
+          "mbuta": "Kimbenza ngolo za bela mu nza mu ka tu hana ka.",
+          "correct": false
+        }
+      ],
+      "reponse_correcte_mbuta": "Mayela mpashi! Mfumu Kimbenza ntangu yi ka tu hana ka ya butsheleka ko.",
+      "reponse_correcte_subtitle": "Bien !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Mfumu Kimbenza ntangu yi ka tu hana ka ya butsheleka ko.",
+      "reponse_incorrecte_subtitle": "Essaie encore."
+    },
+    {
+      "id": "03-06",
+      "mbuta": "Mfumu Kimbenza nchimu ka tu katula ka.",
+      "subtitle": "Mfumu Kimbenza nous rend amnésiques.",
+      "note": "nchimu = la mémoire (prononcer /ntshimu/), katula = retirer",
+      "reponses": [
+        {
+          "mbuta": "Mfumu Kimbenza nchimu ka tu katula ka.",
+          "correct": true
+        },
+        {
+          "mbuta": "Mfumu Kimbenza ntangu yi ka tu hana ka ya butsheleka ko.",
+          "correct": false
+        },
+        {
+          "mbuta": "Kimbenza ngolo za bela mu nza mu ka tu hana ka.",
+          "correct": false
+        }
+      ],
+      "reponse_correcte_mbuta": "Wa sala bubote! Mfumu Kimbenza nchimu ka tu katula ka.",
+      "reponse_correcte_subtitle": "Bien !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Mfumu Kimbenza nchimu ka tu katula ka.",
+      "reponse_incorrecte_subtitle": "Essaie encore."
+    },
+    {
+      "id": "03-07",
+      "mbuta": "Kimbenza ngolo za bela mu nza mu ka tu hana ka.",
+      "subtitle": "Kimbenza nous donne l'énergie pour fonctionner dans ce cosmos manifesté.",
+      "reponses": [
+        {
+          "mbuta": "Kimbenza ngolo za bela mu nza mu ka tu hana ka.",
+          "correct": true
+        },
+        {
+          "mbuta": "Mfumu Kimbenza nchimu ka tu katula ka.",
+          "correct": false
+        },
+        {
+          "mbuta": "Ntangu ni yandi wu tu vukasa na ntangu.",
+          "correct": false
+        }
+      ],
+      "reponse_correcte_mbuta": "Mayela mpashi! Kimbenza ngolo za bela mu nza mu ka tu hana ka.",
+      "reponse_correcte_subtitle": "Bien !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Kimbenza ngolo za bela mu nza mu ka tu hana ka.",
+      "reponse_incorrecte_subtitle": "Essaie encore."
+    }
+  ],
+  "ouverture": {
+    "mbuta": "Mbote za zingi! Nge zaba ti... Mfumu Kimbenza.",
+    "subtitle": "Bien le bonjour ! Saches que... Mfumu Kimbenza."
+  },
+  "cloture": {
+    "mbuta": "Matondo ma mingi! Lumbu kia kibote. Sala!",
+    "subtitle": "Merci beaucoup ! Bonne journée. Au revoir !"
+  }
+}
