@@ -519,8 +519,9 @@ const MbutaMatondoChat = () => {
             );
           }
 
-          const blocks = parseBlocks(msg.content);
-          const choices = parseChoices(msg.content);
+          const interpolatedContent = interpolate(msg.content);
+          const blocks = parseBlocks(interpolatedContent);
+          const choices = parseChoices(interpolatedContent);
           const status = answeredIdx.get(i);
           const audioDur = audioDurations.get(i) ?? null;
 
