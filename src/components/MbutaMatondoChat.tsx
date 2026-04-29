@@ -262,6 +262,11 @@ const MbutaMatondoChat = () => {
   const [editNotes, setEditNotes] = useState("");
   const [savingCorrection, setSavingCorrection] = useState(false);
 
+  // Inline blank fills per message+option (key = `${msgIdx}:${optIdx}`)
+  const [blankFills, setBlankFills] = useState<Map<string, string>>(new Map());
+  // Persistent variables learned from blanks (e.g. {prenom})
+  const [vars, setVars] = useState<Record<string, string>>({});
+
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const mediaRecorderRef = useRef<MediaRecorder | null>(null);
   const chunksRef = useRef<Blob[]>([]);
@@ -401,22 +406,39 @@ const MbutaMatondoChat = () => {
     }
   };
 
+  // ---- Variable interpolation ({prenom}, etc.) ----
+  const interpolate = useCallback((text: string): string => {
+    return text.replace(/\{(\w+)\}/g, (_, k) => vars[k] ?? `{${k}}`);
+  }, [vars]);
+
   // ---- MCQ pick ----
   const pickChoice = (msgIdx: number, optIdx: number, opt: string, correctIdx: number, options: string[]) => {
     if (isLoading || answeredIdx.get(msgIdx) === "correct") return;
     const isCorrect = optIdx === correctIdx;
+
+    // If option has a blank, fill it and store as {prenom}
+    let filledOpt = opt;
+    if (opt.includes("___")) {
+      const fill = (blankFills.get(`${msgIdx}:${optIdx}`) || "").trim();
+      if (!fill) {
+        toast({ title: "Complète d'abord le champ", variant: "destructive" });
+        return;
+      }
+      filledOpt = opt.replace(/_{2,}/g, fill);
+      // First blank in a question is conventionally the learner's first name
+      setVars((prev) => ({ ...prev, prenom: prev.prenom || fill }));
+    }
+
     setAnsweredIdx((prev) => {
       const next = new Map(prev);
       next.set(msgIdx, isCorrect ? "correct" : "wrong");
       return next;
     });
     if (isCorrect) {
-      send(opt);
+      send(filledOpt);
     } else {
-      // On wrong, ask Mbuta for the correction with single-button MCQ.
-      // We send a synthetic user message that nudges Mbuta to repeat the right answer alone.
       const correctOpt = options[correctIdx];
-      send(`(mauvaise réponse: "${opt}" — propose "${correctOpt}" en bouton unique pour répétition)`, { afterWrong: true });
+      send(`(mauvaise réponse: "${filledOpt}" — propose "${correctOpt}" en bouton unique pour répétition)`, { afterWrong: true });
     }
   };
 
@@ -497,8 +519,9 @@ const MbutaMatondoChat = () => {
             );
           }
 
-          const blocks = parseBlocks(msg.content);
-          const choices = parseChoices(msg.content);
+          const interpolatedContent = interpolate(msg.content);
+          const blocks = parseBlocks(interpolatedContent);
+          const choices = parseChoices(interpolatedContent);
           const status = answeredIdx.get(i);
           const audioDur = audioDurations.get(i) ?? null;
 
@@ -539,12 +562,75 @@ const MbutaMatondoChat = () => {
                   <div className="flex flex-wrap gap-2">
                     {displayChoices.options.map((opt, oi) => {
                       const answered = status === "correct";
+                      const hasBlank = opt.includes("___");
+                      const fillKey = `${i}:${oi}`;
+                      const fillValue = blankFills.get(fillKey) || "";
+
+                      if (hasBlank) {
+                        const parts = opt.split(/_{2,}/);
+                        const validate = () => {
+                          if (!fillValue.trim()) return;
+                          if (status === "wrong") {
+                            setAnsweredIdx((prev) => {
+                              const next = new Map(prev);
+                              next.set(i, "correct");
+                              return next;
+                            });
+                            const filled = opt.replace(/_{2,}/g, fillValue.trim());
+                            setVars((prev) => ({ ...prev, prenom: prev.prenom || fillValue.trim() }));
+                            send(filled);
+                          } else {
+                            pickChoice(i, oi, opt, choices!.correctIndex, choices!.options);
+                          }
+                        };
+                        return (
+                          <div
+                            key={oi}
+                            className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-gold/15 border border-gold/30 text-cream text-xs"
+                          >
+                            {parts.map((p, pi) => (
+                              <span key={pi} className="flex items-center gap-1">
+                                {p && <span>{p}</span>}
+                                {pi < parts.length - 1 && (
+                                  <input
+                                    type="text"
+                                    value={fillValue}
+                                    onChange={(e) =>
+                                      setBlankFills((prev) => {
+                                        const next = new Map(prev);
+                                        next.set(fillKey, e.target.value);
+                                        return next;
+                                      })
+                                    }
+                                    onKeyDown={(e) => {
+                                      if (e.key === "Enter") {
+                                        e.preventDefault();
+                                        validate();
+                                      }
+                                    }}
+                                    disabled={answered}
+                                    placeholder="…"
+                                    className="bg-earth-deep/60 border border-gold/40 rounded px-2 py-0.5 text-xs w-24 focus:outline-none focus:ring-1 focus:ring-gold"
+                                  />
+                                )}
+                              </span>
+                            ))}
+                            <button
+                              onClick={validate}
+                              disabled={answered || isLoading || !fillValue.trim()}
+                              className="ml-1 px-2 py-0.5 rounded-full bg-gold text-earth-deep text-[10px] font-semibold disabled:opacity-40"
+                            >
+                              OK
+                            </button>
+                          </div>
+                        );
+                      }
+
                       return (
                         <button
                           key={oi}
                           onClick={() => {
                             if (status === "wrong") {
-                              // Single-button mode: clicking validates the correct answer
                               setAnsweredIdx((prev) => {
                                 const next = new Map(prev);
                                 next.set(i, "correct");
