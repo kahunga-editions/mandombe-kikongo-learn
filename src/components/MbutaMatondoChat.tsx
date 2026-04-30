@@ -301,6 +301,9 @@ const MbutaMatondoChat = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 
+  // ---- Auto-start: open the day's lesson immediately, no user input required ----
+  const autoStartedRef = useRef(false);
+
   // ---- TTS sequential playback for one assistant message ----
   const handleSpeak = useCallback(async (content: string, idx: number) => {
     if (speakingIdx === idx) {
