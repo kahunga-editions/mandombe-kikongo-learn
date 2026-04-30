@@ -597,10 +597,7 @@ const MbutaMatondoChat = () => {
 
           return (
             <div key={i} className="flex gap-3 justify-start">
-              <div className="w-8 h-8 rounded-full bg-gold/20 flex items-center justify-center flex-shrink-0 mt-1">
-                <GraduationCap className="w-4 h-4 text-gold" />
-              </div>
-              <div className="flex flex-col gap-2 max-w-[85%]">
+              <div className="flex flex-col gap-2 max-w-[85%] w-full">
                 {blocks.length === 0 ? (
                   <div className="bg-muted/30 border border-gold/10 rounded-2xl rounded-bl-md px-4 py-3">
                     <p className="text-sm text-cream/80 whitespace-pre-wrap">{msg.content}</p>
