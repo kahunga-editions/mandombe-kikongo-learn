@@ -288,6 +288,8 @@ const MbutaMatondoChat = () => {
   const [blankFills, setBlankFills] = useState<Map<string, string>>(new Map());
   // Persistent variables learned from blanks (e.g. {prenom})
   const [vars, setVars] = useState<Record<string, string>>({});
+  // Pending first QCM — revealed only after the learner interacts
+  const [pendingFirstQcm, setPendingFirstQcm] = useState<Msg | null>(null);
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const mediaRecorderRef = useRef<MediaRecorder | null>(null);
@@ -345,7 +347,7 @@ const MbutaMatondoChat = () => {
     }
   }, [speakingIdx, t, toast]);
 
-  // ---- Auto-start: leçon 00 ouverture + premier QCM, sans input utilisateur ----
+  // ---- Auto-start: leçon 00 ouverture seule. Le premier QCM attend une interaction. ----
   useEffect(() => {
     if (autoStartedRef.current) return;
     if (messages.length > 0) return;
@@ -353,33 +355,42 @@ const MbutaMatondoChat = () => {
     if (!lecon?.ouverture) return;
     autoStartedRef.current = true;
 
-    // Message 1 : ouverture
+    // Message 1 : ouverture uniquement
     const opening = `<lari>${lecon.ouverture.mbuta}</lari>\n<fr>${lecon.ouverture.subtitle}</fr>`;
 
-    // Message 2 : premier échange QCM
+    // Préparer (sans afficher) le premier échange QCM
     const first = lecon.echanges?.[0];
-    let secondMsg: Msg | null = null;
     if (first?.reponses?.length) {
       const correctIndex = first.reponses.findIndex((r: any) => r.correct);
       const optionsStr = first.reponses.map((r: any) => r.mbuta).join("|");
       const qcmContent =
         `<lari>${first.mbuta}</lari>\n<fr>${first.subtitle}</fr>\n` +
         `<choices correct="${Math.max(0, correctIndex)}">${optionsStr}</choices>`;
-      secondMsg = { role: "assistant", content: qcmContent };
+      setPendingFirstQcm({ role: "assistant", content: qcmContent });
     }
 
-    const initial: Msg[] = [{ role: "assistant", content: opening }];
-    if (secondMsg) initial.push(secondMsg);
-    setMessages(initial);
+    setMessages([{ role: "assistant", content: opening }]);
 
     if (autoSpeakRef.current) {
       setTimeout(() => handleSpeak(opening, 0), 300);
-      if (secondMsg) {
-        setTimeout(() => handleSpeak(secondMsg!.content, 1), 3500);
-      }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  // Révèle le premier QCM en attente (après interaction de l'apprenant)
+  const revealPendingQcm = useCallback(() => {
+    if (!pendingFirstQcm) return;
+    const qcm = pendingFirstQcm;
+    setPendingFirstQcm(null);
+    setMessages((prev) => {
+      const next = [...prev, qcm];
+      const idx = next.length - 1;
+      if (autoSpeakRef.current) {
+        setTimeout(() => handleSpeak(qcm.content, idx), 200);
+      }
+      return next;
+    });
+  }, [pendingFirstQcm, handleSpeak]);
 
   // ---- Recording ----
   const startRecording = useCallback(async () => {
@@ -736,6 +747,18 @@ const MbutaMatondoChat = () => {
           );
         })}
 
+        {pendingFirstQcm && !isLoading && (
+          <div className="flex justify-center pt-2">
+            <button
+              type="button"
+              onClick={revealPendingQcm}
+              className="px-4 py-2 rounded-full bg-gold/20 hover:bg-gold/30 border border-gold/40 text-cream text-xs transition-colors animate-pulse"
+            >
+              Continuer →
+            </button>
+          </div>
+        )}
+
         {isLoading && messages[messages.length - 1]?.role !== "assistant" && (
           <div className="flex gap-3 justify-start">
             <div className="bg-muted/30 border border-gold/10 rounded-2xl rounded-bl-md px-4 py-3">
@@ -766,7 +789,10 @@ const MbutaMatondoChat = () => {
 
           <textarea
             value={input}
-            onChange={(e) => setInput(e.target.value)}
+            onChange={(e) => {
+              setInput(e.target.value);
+              if (e.target.value && pendingFirstQcm) revealPendingQcm();
+            }}
             onKeyDown={handleKeyDown}
             placeholder={t("mbuta.placeholder")}
             rows={1}
