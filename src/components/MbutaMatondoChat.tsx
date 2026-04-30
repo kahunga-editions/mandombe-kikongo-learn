@@ -288,6 +288,8 @@ const MbutaMatondoChat = () => {
   const [blankFills, setBlankFills] = useState<Map<string, string>>(new Map());
   // Persistent variables learned from blanks (e.g. {prenom})
   const [vars, setVars] = useState<Record<string, string>>({});
+  // Pending first QCM — revealed only after the learner interacts
+  const [pendingFirstQcm, setPendingFirstQcm] = useState<Msg | null>(null);
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const mediaRecorderRef = useRef<MediaRecorder | null>(null);
