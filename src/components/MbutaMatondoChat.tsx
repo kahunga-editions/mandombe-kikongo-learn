@@ -10,6 +10,28 @@ import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
 import { supabase } from "@/integrations/supabase/client";
 
+import lecon00 from "../../supabase/functions/_shared/mbuta-lecon-00.json";
+import lecon03 from "../../supabase/functions/_shared/mbuta-lecon-03.json";
+import leconRestaurant from "../../supabase/functions/_shared/mbuta-lecon-restaurant.json";
+import leconEcole from "../../supabase/functions/_shared/mbuta-lecon-ecole.json";
+import leconHotel from "../../supabase/functions/_shared/mbuta-lecon-hotel.json";
+
+const LECONS_DU_JOUR: Array<{ ouverture?: { mbuta: string; subtitle: string } }> = [
+  lecon00 as any,
+  lecon03 as any,
+  leconRestaurant as any,
+  leconEcole as any,
+  leconHotel as any,
+];
+
+function getLeconDuJour() {
+  const now = new Date();
+  const start = new Date(now.getFullYear(), 0, 0);
+  const diff = (now.getTime() - start.getTime()) + ((start.getTimezoneOffset() - now.getTimezoneOffset()) * 60 * 1000);
+  const dayOfYear = Math.floor(diff / 86400000);
+  return LECONS_DU_JOUR[dayOfYear % LECONS_DU_JOUR.length];
+}
+
 type Msg = { role: "user" | "assistant"; content: string };
 type Choices = { options: string[]; correctIndex: number };
 type Block = { lari: string; fr: string };
@@ -279,6 +301,9 @@ const MbutaMatondoChat = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 
+  // ---- Auto-start: open the day's lesson immediately, no user input required ----
+  const autoStartedRef = useRef(false);
+
   // ---- TTS sequential playback for one assistant message ----
   const handleSpeak = useCallback(async (content: string, idx: number) => {
     if (speakingIdx === idx) {
@@ -319,6 +344,21 @@ const MbutaMatondoChat = () => {
       setSpeakingIdx(null);
     }
   }, [speakingIdx, t, toast]);
+
+  // ---- Auto-start the day's lesson on mount (no user input required) ----
+  useEffect(() => {
+    if (autoStartedRef.current) return;
+    if (messages.length > 0) return;
+    const lecon = getLeconDuJour();
+    if (!lecon?.ouverture) return;
+    autoStartedRef.current = true;
+    const content = `<lari>${lecon.ouverture.mbuta}</lari>\n<fr>${lecon.ouverture.subtitle}</fr>`;
+    setMessages([{ role: "assistant", content }]);
+    if (autoSpeakRef.current) {
+      setTimeout(() => handleSpeak(content, 0), 300);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   // ---- Recording ----
   const startRecording = useCallback(async () => {
