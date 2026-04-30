@@ -789,7 +789,10 @@ const MbutaMatondoChat = () => {
 
           <textarea
             value={input}
-            onChange={(e) => setInput(e.target.value)}
+            onChange={(e) => {
+              setInput(e.target.value);
+              if (e.target.value && pendingFirstQcm) revealPendingQcm();
+            }}
             onKeyDown={handleKeyDown}
             placeholder={t("mbuta.placeholder")}
             rows={1}
