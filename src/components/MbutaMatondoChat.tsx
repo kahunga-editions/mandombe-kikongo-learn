@@ -345,17 +345,38 @@ const MbutaMatondoChat = () => {
     }
   }, [speakingIdx, t, toast]);
 
-  // ---- Auto-start the day's lesson on mount (no user input required) ----
+  // ---- Auto-start: leçon 00 ouverture + premier QCM, sans input utilisateur ----
   useEffect(() => {
     if (autoStartedRef.current) return;
     if (messages.length > 0) return;
-    const lecon = getLeconDuJour();
+    const lecon: any = lecon00;
     if (!lecon?.ouverture) return;
     autoStartedRef.current = true;
-    const content = `<lari>${lecon.ouverture.mbuta}</lari>\n<fr>${lecon.ouverture.subtitle}</fr>`;
-    setMessages([{ role: "assistant", content }]);
+
+    // Message 1 : ouverture
+    const opening = `<lari>${lecon.ouverture.mbuta}</lari>\n<fr>${lecon.ouverture.subtitle}</fr>`;
+
+    // Message 2 : premier échange QCM
+    const first = lecon.echanges?.[0];
+    let secondMsg: Msg | null = null;
+    if (first?.reponses?.length) {
+      const correctIndex = first.reponses.findIndex((r: any) => r.correct);
+      const optionsStr = first.reponses.map((r: any) => r.mbuta).join("|");
+      const qcmContent =
+        `<lari>${first.mbuta}</lari>\n<fr>${first.subtitle}</fr>\n` +
+        `<choices correct="${Math.max(0, correctIndex)}">${optionsStr}</choices>`;
+      secondMsg = { role: "assistant", content: qcmContent };
+    }
+
+    const initial: Msg[] = [{ role: "assistant", content: opening }];
+    if (secondMsg) initial.push(secondMsg);
+    setMessages(initial);
+
     if (autoSpeakRef.current) {
-      setTimeout(() => handleSpeak(content, 0), 300);
+      setTimeout(() => handleSpeak(opening, 0), 300);
+      if (secondMsg) {
+        setTimeout(() => handleSpeak(secondMsg!.content, 1), 3500);
+      }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -576,10 +597,7 @@ const MbutaMatondoChat = () => {
 
           return (
             <div key={i} className="flex gap-3 justify-start">
-              <div className="w-8 h-8 rounded-full bg-gold/20 flex items-center justify-center flex-shrink-0 mt-1">
-                <GraduationCap className="w-4 h-4 text-gold" />
-              </div>
-              <div className="flex flex-col gap-2 max-w-[85%]">
+              <div className="flex flex-col gap-2 max-w-[85%] w-full">
                 {blocks.length === 0 ? (
                   <div className="bg-muted/30 border border-gold/10 rounded-2xl rounded-bl-md px-4 py-3">
                     <p className="text-sm text-cream/80 whitespace-pre-wrap">{msg.content}</p>
@@ -711,9 +729,6 @@ const MbutaMatondoChat = () => {
 
         {isLoading && messages[messages.length - 1]?.role !== "assistant" && (
           <div className="flex gap-3 justify-start">
-            <div className="w-8 h-8 rounded-full bg-gold/20 flex items-center justify-center flex-shrink-0">
-              <GraduationCap className="w-4 h-4 text-gold" />
-            </div>
             <div className="bg-muted/30 border border-gold/10 rounded-2xl rounded-bl-md px-4 py-3">
               <Loader2 className="w-4 h-4 animate-spin text-gold" />
             </div>
