@@ -347,7 +347,7 @@ const MbutaMatondoChat = () => {
     }
   }, [speakingIdx, t, toast]);
 
-  // ---- Auto-start: leçon 00 ouverture + premier QCM, sans input utilisateur ----
+  // ---- Auto-start: leçon 00 ouverture seule. Le premier QCM attend une interaction. ----
   useEffect(() => {
     if (autoStartedRef.current) return;
     if (messages.length > 0) return;
@@ -355,33 +355,42 @@ const MbutaMatondoChat = () => {
     if (!lecon?.ouverture) return;
     autoStartedRef.current = true;
 
-    // Message 1 : ouverture
+    // Message 1 : ouverture uniquement
     const opening = `<lari>${lecon.ouverture.mbuta}</lari>\n<fr>${lecon.ouverture.subtitle}</fr>`;
 
-    // Message 2 : premier échange QCM
+    // Préparer (sans afficher) le premier échange QCM
     const first = lecon.echanges?.[0];
-    let secondMsg: Msg | null = null;
     if (first?.reponses?.length) {
       const correctIndex = first.reponses.findIndex((r: any) => r.correct);
       const optionsStr = first.reponses.map((r: any) => r.mbuta).join("|");
       const qcmContent =
         `<lari>${first.mbuta}</lari>\n<fr>${first.subtitle}</fr>\n` +
         `<choices correct="${Math.max(0, correctIndex)}">${optionsStr}</choices>`;
-      secondMsg = { role: "assistant", content: qcmContent };
+      setPendingFirstQcm({ role: "assistant", content: qcmContent });
     }
 
-    const initial: Msg[] = [{ role: "assistant", content: opening }];
-    if (secondMsg) initial.push(secondMsg);
-    setMessages(initial);
+    setMessages([{ role: "assistant", content: opening }]);
 
     if (autoSpeakRef.current) {
       setTimeout(() => handleSpeak(opening, 0), 300);
-      if (secondMsg) {
-        setTimeout(() => handleSpeak(secondMsg!.content, 1), 3500);
-      }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  // Révèle le premier QCM en attente (après interaction de l'apprenant)
+  const revealPendingQcm = useCallback(() => {
+    if (!pendingFirstQcm) return;
+    const qcm = pendingFirstQcm;
+    setPendingFirstQcm(null);
+    setMessages((prev) => {
+      const next = [...prev, qcm];
+      const idx = next.length - 1;
+      if (autoSpeakRef.current) {
+        setTimeout(() => handleSpeak(qcm.content, idx), 200);
+      }
+      return next;
+    });
+  }, [pendingFirstQcm, handleSpeak]);
 
   // ---- Recording ----
   const startRecording = useCallback(async () => {
