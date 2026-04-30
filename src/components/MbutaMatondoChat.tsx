@@ -345,6 +345,21 @@ const MbutaMatondoChat = () => {
     }
   }, [speakingIdx, t, toast]);
 
+  // ---- Auto-start the day's lesson on mount (no user input required) ----
+  useEffect(() => {
+    if (autoStartedRef.current) return;
+    if (messages.length > 0) return;
+    const lecon = getLeconDuJour();
+    if (!lecon?.ouverture) return;
+    autoStartedRef.current = true;
+    const content = `<lari>${lecon.ouverture.mbuta}</lari>\n<fr>${lecon.ouverture.subtitle}</fr>`;
+    setMessages([{ role: "assistant", content }]);
+    if (autoSpeakRef.current) {
+      setTimeout(() => handleSpeak(content, 0), 300);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   // ---- Recording ----
   const startRecording = useCallback(async () => {
     try {
