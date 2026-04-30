@@ -552,12 +552,21 @@ const MbutaMatondoChat = () => {
 
       {/* Messages */}
       <div className="flex-1 overflow-y-auto space-y-4 p-4">
+        {/* Vidéo d'intro Mbuta Matondo — toujours visible en tête */}
+        <div className="flex justify-center pb-2">
+          <video
+            src="/videos/mbuta-matondo-intro.mp4"
+            autoPlay loop muted playsInline controls
+            className="w-[240px] max-w-full rounded-2xl border-2 border-gold/30 shadow-lg"
+          />
+        </div>
+
         {messages.length === 0 && (
-          <div className="flex flex-col items-center justify-center h-full text-center gap-4 opacity-70">
+          <div className="flex flex-col items-center justify-center text-center gap-4 opacity-70">
             <video
               src="/videos/mbuta-matondo-intro.mp4"
               autoPlay loop muted playsInline controls
-              className="w-[280px] max-w-full rounded-2xl border-2 border-gold/30 shadow-lg"
+              className="w-[280px] max-w-full rounded-2xl border-2 border-gold/30 shadow-lg hidden"
             />
             <p className="text-cream/60 text-lg font-display">{t("mbuta.welcome")}</p>
             <p className="text-cream/40 text-sm max-w-md">{t("mbuta.welcomeHint")}</p>
