@@ -729,9 +729,6 @@ const MbutaMatondoChat = () => {
 
         {isLoading && messages[messages.length - 1]?.role !== "assistant" && (
           <div className="flex gap-3 justify-start">
-            <div className="w-8 h-8 rounded-full bg-gold/20 flex items-center justify-center flex-shrink-0">
-              <GraduationCap className="w-4 h-4 text-gold" />
-            </div>
             <div className="bg-muted/30 border border-gold/10 rounded-2xl rounded-bl-md px-4 py-3">
               <Loader2 className="w-4 h-4 animate-spin text-gold" />
             </div>
