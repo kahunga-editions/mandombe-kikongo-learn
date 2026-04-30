@@ -1,0 +1,181 @@
+{
+  "lecon_id": "hotel",
+  "titre_mbuta": "Ku Nzo Mbuanunu Nzenza",
+  "titre_subtitle": "À l'hôtel",
+  "sources": [
+    "corpus Nzo Mikanda",
+    "Ntu Kanda"
+  ],
+  "ouverture": {
+    "mbuta": "Mbote ! Ku nzo mbuanunu nzenza.",
+    "subtitle": "Bonjour ! Tu arrives à l'hôtel."
+  },
+  "echanges": [
+    {
+      "id": "H-01",
+      "mbuta": "Bue ta bu kota?",
+      "subtitle": "Que dis-tu en entrant ?",
+      "type": "qcm",
+      "reponses": [
+        {
+          "mbuta": "Mbote.",
+          "subtitle": "Bonjour.",
+          "correct": true
+        },
+        {
+          "mbuta": "Matondo.",
+          "subtitle": "Merci.",
+          "correct": false
+        },
+        {
+          "mbuta": "Sala.",
+          "subtitle": "Au revoir.",
+          "correct": false
+        }
+      ],
+      "reponse_correcte_mbuta": "Mayela ma mingi!",
+      "reponse_correcte_subtitle": "Bien !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Mbote.",
+      "reponse_incorrecte_subtitle": "Essaie encore."
+    },
+    {
+      "id": "H-02",
+      "mbuta": "Ni buna! Buka tsha sekela zololo. Sola mvutu ya mbote.",
+      "subtitle": "Très bien ! Tu veux une chambre. Choisis la bonne phrase.",
+      "type": "qcm",
+      "reponses": [
+        {
+          "mbuta": "Tshibuka tsha sekela nzololo, mulemvuaku.",
+          "subtitle": "Je voudrais une chambre, s'il vous plaît.",
+          "correct": true
+        },
+        {
+          "mbuta": "Dia ni ta dia buaubu.",
+          "subtitle": "Je mange maintenant.",
+          "correct": false
+        },
+        {
+          "mbuta": "Ndjele.",
+          "subtitle": "Je pars.",
+          "correct": false
+        }
+      ],
+      "reponse_correcte_mbuta": "Nkatika mayela!",
+      "reponse_correcte_subtitle": "Bien !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Tshibuka tsha sekela nzololo, mulemvuaku.",
+      "reponse_incorrecte_subtitle": "Essaie encore."
+    },
+    {
+      "id": "H-03",
+      "mbuta": "Kibuani kia nzo ta ku zonzesa. Bue ta?",
+      "subtitle": "La réceptionniste te parle. Que dis-tu pour répondre poliment ?",
+      "type": "qcm",
+      "reponses": [
+        {
+          "mbuta": "Hehe, mulemvuaku.",
+          "subtitle": "Oui, s'il vous plaît.",
+          "correct": true
+        },
+        {
+          "mbuta": "Ngana tsho.",
+          "subtitle": "Donne-moi ça.",
+          "correct": false
+        },
+        {
+          "mbuta": "Ngo nguani.",
+          "subtitle": "Je ne veux pas.",
+          "correct": false
+        }
+      ],
+      "reponse_correcte_mbuta": "Wa sala bubote!",
+      "reponse_correcte_subtitle": "Bien !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Hehe, mulemvuaku.",
+      "reponse_incorrecte_subtitle": "Essaie encore."
+    },
+    {
+      "id": "H-04",
+      "mbuta": "Ni buna! Ntangu kua ba ku. Sola mvutu ya mbote.",
+      "subtitle": "Très bien ! Tu veux préciser la durée. Choisis la bonne phrase.",
+      "type": "qcm",
+      "reponses": [
+        {
+          "mbuta": "Mpimpa zole, mulemvuaku.",
+          "subtitle": "Pour deux nuits, s'il vous plaît.",
+          "correct": true
+        },
+        {
+          "mbuta": "Nsekele buaubu.",
+          "subtitle": "Je dors maintenant.",
+          "correct": false
+        },
+        {
+          "mbuta": "Mbote, matondo.",
+          "subtitle": "Bonjour, merci.",
+          "correct": false
+        }
+      ],
+      "reponse_correcte_mbuta": "Bubote saridi!",
+      "reponse_correcte_subtitle": "Bien !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Mpimpa zole, mulemvuaku.",
+      "reponse_incorrecte_subtitle": "Essaie encore."
+    },
+    {
+      "id": "H-05",
+      "mbuta": "Ni buna! Ha buka tshaku we, nkia diambu kua. Bue ta?",
+      "subtitle": "Très bien ! Tu es dans ta chambre et tu as un problème. Que dis-tu ?",
+      "type": "qcm",
+      "reponses": [
+        {
+          "mbuta": "Diambu di ta lembo ba mu tshibuka mu.",
+          "subtitle": "Il y a un problème dans ma chambre.",
+          "correct": true
+        },
+        {
+          "mbuta": "Loso ni dia.",
+          "subtitle": "Je veux manger du riz.",
+          "correct": false
+        },
+        {
+          "mbuta": "Matondo, sala.",
+          "subtitle": "Merci, au revoir.",
+          "correct": false
+        }
+      ],
+      "reponse_correcte_mbuta": "Tomono sala.",
+      "reponse_correcte_subtitle": "Bien !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Diambu di ta lembo ba mu tshibuka mu.",
+      "reponse_incorrecte_subtitle": "Essaie encore."
+    },
+    {
+      "id": "H-06",
+      "mbuta": "Wa mubote! Katukiri ku nzo mbuanunu nzenza. Bue ta?",
+      "subtitle": "Excellent ! Tu quittes l'hôtel. Que dis-tu ?",
+      "type": "qcm",
+      "reponses": [
+        {
+          "mbuta": "Matondo, ndjele.",
+          "subtitle": "Merci, au revoir.",
+          "correct": true
+        },
+        {
+          "mbuta": "Nsekele.",
+          "subtitle": "Je dors.",
+          "correct": false
+        },
+        {
+          "mbuta": "Ngana.",
+          "subtitle": "Donne-moi.",
+          "correct": false
+        }
+      ],
+      "reponse_correcte_mbuta": "Mayela mpashi!",
+      "reponse_correcte_subtitle": "Bien !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Matondo, ndjele.",
+      "reponse_incorrecte_subtitle": "Essaie encore."
+    }
+  ],
+  "cloture": {
+    "mbuta": "Salu kia kibote! Bu zebi bu ba diatila ku nzo mbuanunu ba nzenza. Sala mbote.",
+    "subtitle": "Très bon travail ! Tu sais maintenant te débrouiller à l'hôtel. Au revoir !"
+  }
+}

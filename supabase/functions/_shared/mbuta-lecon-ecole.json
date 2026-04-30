@@ -1,0 +1,208 @@
+{
+  "lecon_id": "ecole",
+  "titre_mbuta": "Ku Nzo Mikanda",
+  "titre_subtitle": "À l'école",
+  "sources": [
+    "corpus Nzo Mikanda",
+    "Ntu Kanda"
+  ],
+  "ouverture": {
+    "mbuta": "Mbote! Turidi ku nzo mikanda.",
+    "subtitle": "Bonjour ! Tu arrives à l'école."
+  },
+  "echanges": [
+    {
+      "id": "E-01",
+      "mbuta": "Bue ta bu kota?",
+      "subtitle": "Que dis-tu en entrant ?",
+      "type": "qcm",
+      "reponses": [
+        {
+          "mbuta": "Mbote.",
+          "subtitle": "Bonjour.",
+          "correct": true
+        },
+        {
+          "mbuta": "Matondo.",
+          "subtitle": "Merci.",
+          "correct": false
+        },
+        {
+          "mbuta": "Sala.",
+          "subtitle": "Au revoir.",
+          "correct": false
+        }
+      ],
+      "reponse_correcte_mbuta": "Nkatika mayela!",
+      "reponse_correcte_subtitle": "Bien !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Mbote.",
+      "reponse_incorrecte_subtitle": "Essaie encore."
+    },
+    {
+      "id": "E-02",
+      "mbuta": "Ni buna! Na mulongi zololo zonza. Sola mvutu ya mbote.",
+      "subtitle": "Très bien ! Tu veux parler au professeur. Choisis la bonne réponse.",
+      "type": "qcm",
+      "reponses": [
+        {
+          "mbuta": "Mbote Mbuta Matondo.",
+          "subtitle": "Bonjour Mbuta Matondo.",
+          "correct": true
+        },
+        {
+          "mbuta": "Ngana tsho.",
+          "subtitle": "Donne-moi ça.",
+          "correct": false
+        },
+        {
+          "mbuta": "Dia ni ta dia.",
+          "subtitle": "Je mange.",
+          "correct": false
+        }
+      ],
+      "reponse_correcte_mbuta": "Mayela mpashi!",
+      "reponse_correcte_subtitle": "Bien !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Mbote Mbuta Matondo.",
+      "reponse_incorrecte_subtitle": "Essaie encore."
+    },
+    {
+      "id": "E-03",
+      "mbuta": "Mulongi ta ku yula. Tala mvutu ya zebi bue ta?",
+      "subtitle": "Le professeur te pose une question. Que dis-tu si tu connais la réponse ?",
+      "type": "qcm",
+      "reponses": [
+        {
+          "mbuta": "Nzebi.",
+          "subtitle": "Je sais.",
+          "correct": true
+        },
+        {
+          "mbuta": "Ndjele.",
+          "subtitle": "Je pars.",
+          "correct": false
+        },
+        {
+          "mbuta": "Matondo.",
+          "subtitle": "Merci.",
+          "correct": false
+        }
+      ],
+      "reponse_correcte_mbuta": "Mayela ma mingi!",
+      "reponse_correcte_subtitle": "Bien !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Nzebi.",
+      "reponse_incorrecte_subtitle": "Essaie encore."
+    },
+    {
+      "id": "E-04",
+      "mbuta": "Ni buna! Ambo tala ku wiri a ko? Sola mvutu ya mbote.",
+      "subtitle": "Très bien ! Et si tu ne comprends pas ?",
+      "type": "qcm",
+      "reponses": [
+        {
+          "mbuta": "Ka nguidi a ko.",
+          "subtitle": "Je ne comprends pas.",
+          "correct": true
+        },
+        {
+          "mbuta": "Dia ni ta dia.",
+          "subtitle": "Je mange.",
+          "correct": false
+        },
+        {
+          "mbuta": "Sala.",
+          "subtitle": "Au revoir.",
+          "correct": false
+        }
+      ],
+      "reponse_correcte_mbuta": "Wa sala bubote!",
+      "reponse_correcte_subtitle": "Bien !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Ka nguidi a ko.",
+      "reponse_incorrecte_subtitle": "Essaie encore."
+    },
+    {
+      "id": "E-05",
+      "mbuta": "Ni buna! Diambu zololo yula? Bue ta?",
+      "subtitle": "Parfait ! Tu veux poser une question. Que dis-tu ?",
+      "type": "qcm",
+      "reponses": [
+        {
+          "mbuta": "Diambu die nani.",
+          "subtitle": "J'ai une question.",
+          "correct": true
+        },
+        {
+          "mbuta": "Ngana.",
+          "subtitle": "Donne-moi.",
+          "correct": false
+        },
+        {
+          "mbuta": "Ndjele.",
+          "subtitle": "Je pars.",
+          "correct": false
+        }
+      ],
+      "reponse_correcte_mbuta": "Bubote saridi!",
+      "reponse_correcte_subtitle": "Bien !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Diambu die nani.",
+      "reponse_incorrecte_subtitle": "Essaie encore."
+    },
+    {
+      "id": "E-06",
+      "mbuta": "Ku kitangulu zololo kuenda? Bue ta?",
+      "subtitle": "Très bien ! Tu veux aller au tableau. Que dis-tu ?",
+      "type": "qcm",
+      "reponses": [
+        {
+          "mbuta": "Ndendi kuenda ku kitangulu?",
+          "subtitle": "Je peux aller au tableau ?",
+          "correct": true
+        },
+        {
+          "mbuta": "Ndjele.",
+          "subtitle": "Je pars.",
+          "correct": false
+        },
+        {
+          "mbuta": "Matondo sala.",
+          "subtitle": "Merci au revoir.",
+          "correct": false
+        }
+      ],
+      "reponse_correcte_mbuta": "Tomono sala.",
+      "reponse_correcte_subtitle": "Bien !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Ndendi kuenda ku kitangulu?",
+      "reponse_incorrecte_subtitle": "Essaie encore."
+    },
+    {
+      "id": "E-07",
+      "mbuta": "Ni buna! Malongi ma wiri. Bu kuenda bue ta?",
+      "subtitle": "Excellent ! Le cours est terminé. Que dis-tu en partant ?",
+      "type": "qcm",
+      "reponses": [
+        {
+          "mbuta": "Sala.",
+          "subtitle": "Au revoir.",
+          "correct": true
+        },
+        {
+          "mbuta": "Dia ni ta dia.",
+          "subtitle": "Je mange.",
+          "correct": false
+        },
+        {
+          "mbuta": "Ngana.",
+          "subtitle": "Donne-moi.",
+          "correct": false
+        }
+      ],
+      "reponse_correcte_mbuta": "Mayela mpashi!",
+      "reponse_correcte_subtitle": "Bien !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Sala.",
+      "reponse_incorrecte_subtitle": "Essaie encore."
+    }
+  ],
+  "cloture": {
+    "mbuta": "Salu kia kibote! Bu zebi bu ba diatila ku nzo mikanda. Matondo ma mingi!",
+    "subtitle": "Très bon travail ! Tu sais maintenant te débrouiller à l'école. Merci beaucoup !"
+  }
+}

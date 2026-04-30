@@ -1,0 +1,208 @@
+{
+  "lecon_id": "restaurant",
+  "titre_mbuta": "Ku Nzo Madia",
+  "titre_subtitle": "Au restaurant",
+  "sources": [
+    "corpus Nzo Mikanda",
+    "Ntu Kanda"
+  ],
+  "ouverture": {
+    "mbuta": "Mbote ! Ku nzo madia wena.",
+    "subtitle": "Bonjour ! Tu es au restaurant."
+  },
+  "echanges": [
+    {
+      "id": "R-01",
+      "mbuta": "Bue ta bu kota?",
+      "subtitle": "Que dis-tu en entrant ?",
+      "type": "qcm",
+      "reponses": [
+        {
+          "mbuta": "Mbote.",
+          "subtitle": "Bonjour.",
+          "correct": true
+        },
+        {
+          "mbuta": "Matondo.",
+          "subtitle": "Merci.",
+          "correct": false
+        },
+        {
+          "mbuta": "Sala.",
+          "subtitle": "Au revoir.",
+          "correct": false
+        }
+      ],
+      "reponse_correcte_mbuta": "Mayela mpashi!",
+      "reponse_correcte_subtitle": "Bien !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Mbote.",
+      "reponse_incorrecte_subtitle": "Essaie encore."
+    },
+    {
+      "id": "R-02",
+      "mbuta": "Ni buna! Buaubu lomba tshibuka. Sola mvutu ya mbote.",
+      "subtitle": "Très bien ! Tu veux une table. Choisis la bonne phrase.",
+      "type": "qcm",
+      "reponses": [
+        {
+          "mbuta": "Tshibuka tsha dila nkekolo, mulemvuaku.",
+          "subtitle": "Je voudrais une table, s'il vous plaît.",
+          "correct": true
+        },
+        {
+          "mbuta": "Dia ni ta dia buaubu.",
+          "subtitle": "Je mange maintenant.",
+          "correct": false
+        },
+        {
+          "mbuta": "Ngiele.",
+          "subtitle": "Je pars.",
+          "correct": false
+        }
+      ],
+      "reponse_correcte_mbuta": "Mayela ma mingi!",
+      "reponse_correcte_subtitle": "Bien !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Tshibuka tsha dila nkekolo, mulemvuaku.",
+      "reponse_incorrecte_subtitle": "Essaie encore."
+    },
+    {
+      "id": "R-03",
+      "mbuta": "Kinati kia madia ni yandi wo. Bue ta mu lomba mu kanda wa madia?",
+      "subtitle": "Le serveur arrive. Que dites-vous pour demander le menu ?",
+      "type": "qcm",
+      "reponses": [
+        {
+          "mbuta": "Nzololo mukanda wa madia, mulemvuaku.",
+          "subtitle": "Je voudrais le menu, s'il vous plaît.",
+          "correct": true
+        },
+        {
+          "mbuta": "Ngana mamba na nua.",
+          "subtitle": "Donnez-moi à boire.",
+          "correct": false
+        },
+        {
+          "mbuta": "Ngana madia.",
+          "subtitle": "Donnez-moi à manger.",
+          "correct": false
+        }
+      ],
+      "reponse_correcte_mbuta": "Nkatika mayela!",
+      "reponse_correcte_subtitle": "Bien !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Nzololo mukanda wa madia, mulemvuaku.",
+      "reponse_incorrecte_subtitle": "Essaie encore."
+    },
+    {
+      "id": "R-04",
+      "mbuta": "Wa mubote! Tsha tuma madia. Sola mvutu ya mbote.",
+      "subtitle": "Très bien ! Vous êtes prêt à commander. Choisis la bonne réponse.",
+      "type": "qcm",
+      "reponses": [
+        {
+          "mbuta": "Madezo nzololo na loso.",
+          "subtitle": "Je voudrais des haricots avec du riz.",
+          "correct": true
+        },
+        {
+          "mbuta": "Mbote, kolele?",
+          "subtitle": "Bonjour, comment ça va ?",
+          "correct": false
+        },
+        {
+          "mbuta": "Matondo ma mingi.",
+          "subtitle": "Merci beaucoup.",
+          "correct": false
+        }
+      ],
+      "reponse_correcte_mbuta": "Wa sala bubote!",
+      "reponse_correcte_subtitle": "Bien !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Madezo nzololo na loso.",
+      "reponse_incorrecte_subtitle": "Essaie encore."
+    },
+    {
+      "id": "R-05",
+      "mbuta": "Ni buna! Nki lu zololo nua? Bue ta?",
+      "subtitle": "Parfait ! Vous voulez une boisson. Que dis-tu ?",
+      "type": "qcm",
+      "reponses": [
+        {
+          "mbuta": "Mamba nzololo, mulemvuaku.",
+          "subtitle": "Je voudrais de l'eau, s'il vous plaît.",
+          "correct": true
+        },
+        {
+          "mbuta": "Madia nzololo, mulemvuaku.",
+          "subtitle": "Je voudrais de la nourriture, s'il vous plaît.",
+          "correct": false
+        },
+        {
+          "mbuta": "Sala mbote.",
+          "subtitle": "Au revoir.",
+          "correct": false
+        }
+      ],
+      "reponse_correcte_mbuta": "Bubote saridi!",
+      "reponse_correcte_subtitle": "Bien !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Mamba nzololo, mulemvuaku.",
+      "reponse_incorrecte_subtitle": "Essaie encore."
+    },
+    {
+      "id": "R-06",
+      "mbuta": "Ni buna! Dia ku manishi. Bue lombela ntalu ya madia?",
+      "subtitle": "Très bien ! Le repas est terminé. Comment demandez-vous l'addition ?",
+      "type": "qcm",
+      "reponses": [
+        {
+          "mbuta": "Ntalu ya madia, mulemvuaku.",
+          "subtitle": "L'addition, s'il vous plaît.",
+          "correct": true
+        },
+        {
+          "mbuta": "Nzololo ngie na dia buaubu.",
+          "subtitle": "Je veux partir maintenant manger.",
+          "correct": false
+        },
+        {
+          "mbuta": "Nzololo ndje na nua buaubu.",
+          "subtitle": "Je veux partir maintenant boire.",
+          "correct": false
+        }
+      ],
+      "reponse_correcte_mbuta": "Tomono sala.",
+      "reponse_correcte_subtitle": "Bien !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Ntalu ya madia, mulemvuaku.",
+      "reponse_incorrecte_subtitle": "Essaie encore."
+    },
+    {
+      "id": "R-07",
+      "mbuta": "Ni buna! Lu dukiri ku nzo ya madia. Bue ta?",
+      "subtitle": "Excellent ! Vous partez du restaurant. Que dites-vous ?",
+      "type": "qcm",
+      "reponses": [
+        {
+          "mbuta": "Matondo, sala.",
+          "subtitle": "Merci, au revoir.",
+          "correct": true
+        },
+        {
+          "mbuta": "Dia ni ta dia.",
+          "subtitle": "Je mange.",
+          "correct": false
+        },
+        {
+          "mbuta": "Ngana.",
+          "subtitle": "Donnez-moi.",
+          "correct": false
+        }
+      ],
+      "reponse_correcte_mbuta": "Mayela mpashi!",
+      "reponse_correcte_subtitle": "Bien !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Matondo, sala.",
+      "reponse_incorrecte_subtitle": "Essaie encore."
+    }
+  ],
+  "cloture": {
+    "mbuta": "Salu kiabote! Matondo ma mingi! Lumbu kia kibote.",
+    "subtitle": "Très bon travail ! Merci beaucoup ! Bonne journée."
+  }
+}
