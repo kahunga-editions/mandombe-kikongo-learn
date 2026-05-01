@@ -11,7 +11,8 @@ const SYSTEM_PROMPT = `Tu es un traducteur spécialisé en Kikongo Lari (Laadi),
 ## RÈGLE ABSOLUE — CORPUS UNIQUEMENT
 - Tu traduis UNIQUEMENT en Kikongo LARI (Laadi), JAMAIS en Kituba/Munukutuba/Lingala.
 - Tu ne peux utiliser QUE des mots et formes présents dans le corpus vérifié ci-dessous ou dans le corpus dynamique des corrections validées.
-- Si un mot ou une expression n'existe PAS dans le corpus, tu NE TRADUIS PAS. Tu écris la traduction partielle avec [?mot?] pour chaque terme manquant.
+- **PRIORITÉ ABSOLUE AUX CORRECTIONS EXPERT** : si la phrase à traduire (ou une portion) apparaît dans la section "Corrections vérifiées par un expert" plus bas, tu DOIS réutiliser cette traduction VERBATIM. Ces corrections représentent la mémoire cumulée du traducteur — elles écrasent toute hésitation. Ne JAMAIS contredire une correction expert. Ne JAMAIS "améliorer" ou paraphraser une correction expert.
+- Si un mot ou une expression n'existe PAS dans le corpus NI dans les corrections, tu NE TRADUIS PAS. Tu écris la traduction partielle avec [?mot?] pour chaque terme manquant.
 - Dans le champ "notes", explique : "Ce terme n'est pas attesté dans le corpus Nzo Mikanda."
 - Ne JAMAIS deviner, inventer ou construire une traduction par analogie avec des mots similaires.
 - Ne JAMAIS utiliser de Kituba, Munukutuba ou Lingala comme substitut.
@@ -4790,19 +4791,49 @@ serve(async (req) => {
       });
     }
 
-    // --- Load recent corrections as few-shot examples ---
-    const { data: examples } = await supabase
+    // --- Load corrections as few-shot examples ---
+    // 1) Tokens-overlap query: find corrections that share lexical tokens with the input
+    const tokens = text
+      .toLowerCase()
+      .split(/[^\p{L}\p{N}']+/u)
+      .filter((tok) => tok.length >= 3)
+      .slice(0, 8);
+
+    const relevantSet = new Map<string, { source_text: string; corrected_translation: string; created_at: string }>();
+    if (tokens.length > 0) {
+      const orFilter = tokens.map((tok) => `source_text.ilike.%${tok}%`).join(",");
+      const { data: relevant } = await supabase
+        .from("translation_corrections")
+        .select("source_text, corrected_translation, created_at")
+        .eq("source_lang", sourceLang)
+        .eq("target_lang", targetLang)
+        .or(orFilter)
+        .order("created_at", { ascending: false })
+        .limit(40);
+      relevant?.forEach((r) => relevantSet.set(r.source_text, r));
+    }
+
+    // 2) Always include most recent corrections to keep memory continuity day-to-day
+    const { data: recent } = await supabase
       .from("translation_corrections")
-      .select("source_text, corrected_translation")
+      .select("source_text, corrected_translation, created_at")
       .eq("source_lang", sourceLang)
       .eq("target_lang", targetLang)
       .order("created_at", { ascending: false })
-      .limit(20);
+      .limit(60);
+    recent?.forEach((r) => {
+      if (!relevantSet.has(r.source_text)) relevantSet.set(r.source_text, r);
+    });
+
+    const examples = Array.from(relevantSet.values()).slice(0, 100);
 
     let fewShotBlock = "";
-    if (examples && examples.length > 0) {
-      const lines = examples.map(e => `"${e.source_text}" → "${e.corrected_translation}"`).join("\n");
-      fewShotBlock = `\n\n## Corrections vérifiées par un expert (utilise ces exemples comme référence) :\n${lines}\n`;
+    if (examples.length > 0) {
+      const lines = examples
+        .map((e) => `"${e.source_text}" → "${e.corrected_translation}"`)
+        .join("\n");
+      fewShotBlock =
+        `\n\n## Corrections vérifiées par un expert (MÉMOIRE PERSISTANTE — réutilise VERBATIM si la phrase ou une portion correspond) :\n${lines}\n`;
     }
 
     const directionLabels: Record<string, string> = {
