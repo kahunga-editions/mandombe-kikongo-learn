@@ -759,17 +759,6 @@ const MbutaMatondoChat = () => {
           );
         })}
 
-        {pendingFirstQcm && !isLoading && (
-          <div className="flex justify-center pt-2">
-            <button
-              type="button"
-              onClick={revealPendingQcm}
-              className="px-4 py-2 rounded-full bg-gold/20 hover:bg-gold/30 border border-gold/40 text-cream text-xs transition-colors animate-pulse"
-            >
-              Continuer →
-            </button>
-          </div>
-        )}
 
         {isLoading && messages[messages.length - 1]?.role !== "assistant" && (
           <div className="flex gap-3 justify-start">
