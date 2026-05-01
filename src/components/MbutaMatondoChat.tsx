@@ -377,9 +377,14 @@ const MbutaMatondoChat = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  // Verrou pour empêcher la double révélation (click + typing simultanés)
+  const revealedRef = useRef(false);
+
   // Révèle le premier QCM en attente (après interaction de l'apprenant)
   const revealPendingQcm = useCallback(() => {
+    if (revealedRef.current) return;
     if (!pendingFirstQcm) return;
+    revealedRef.current = true;
     const qcm = pendingFirstQcm;
     setPendingFirstQcm(null);
     setMessages((prev) => {

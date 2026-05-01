@@ -73,8 +73,10 @@ Apprenant écrit : bonjour
 <choices correct="0">Nkumbu ani ___|Ka nzebi a ko.|Matondo.</choices>
 
 Apprenant écrit : matondo
-<lari>Mayela mpashi !</lari>
-<fr>Bien !</fr>
+<lari>Ni buna !</lari>
+<fr>Très bien !</fr>
+
+INTERDICTION ABSOLUE : NE JAMAIS dire "Mayela mpashi" pour féliciter ("très bien", "bravo"). La forme correcte est UNIQUEMENT "Ni buna" (= "c'est bien"). "Mayela mpashi" est réservé au sens littéral "intelligence des difficultés" et n'est PAS une félicitation.
 
 Apprenant écrit : un mot inconnu
 <lari>Ka nzebi a ko. Ta vutukila malongi meto.</lari>

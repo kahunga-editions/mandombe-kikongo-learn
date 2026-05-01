@@ -68,7 +68,7 @@
           "has_blank": false
         }
       ],
-      "reponse_correcte_mbuta": "Mayela mpashi!",
+      "reponse_correcte_mbuta": "Ni buna!",
       "reponse_correcte_subtitle": "Bien !",
       "reponse_incorrecte_mbuta": "Kani... Vutu yela. Nkumbu ani Mbuta Matondo.",
       "reponse_incorrecte_subtitle": "Non... Essaie encore. Mon nom c'est Mbuta Matondo."
@@ -129,7 +129,7 @@
           "has_blank": false
         }
       ],
-      "reponse_correcte_mbuta": "Mayela mpashi!",
+      "reponse_correcte_mbuta": "Ni buna!",
       "reponse_correcte_subtitle": "Bien !",
       "reponse_incorrecte_mbuta": "Kani... Vutu yela. Matondo.",
       "reponse_incorrecte_subtitle": "Non... Essaie encore. Merci."
