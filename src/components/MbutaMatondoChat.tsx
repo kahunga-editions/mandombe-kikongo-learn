@@ -290,6 +290,8 @@ const MbutaMatondoChat = () => {
   const [vars, setVars] = useState<Record<string, string>>({});
   // Pending first QCM — revealed only after the learner interacts
   const [pendingFirstQcm, setPendingFirstQcm] = useState<Msg | null>(null);
+  const [openingBlock, setOpeningBlock] = useState<{ mbuta: string; subtitle: string } | null>(null);
+  const openingContentRef = useRef<string>("");
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const mediaRecorderRef = useRef<MediaRecorder | null>(null);
@@ -355,8 +357,10 @@ const MbutaMatondoChat = () => {
     if (!lecon?.ouverture) return;
     autoStartedRef.current = true;
 
-    // Message 1 : ouverture uniquement
+    // Ouverture : affichée en clair sous la vidéo (pas dans une bulle)
     const opening = `<lari>${lecon.ouverture.mbuta}</lari>\n<fr>${lecon.ouverture.subtitle}</fr>`;
+    openingContentRef.current = opening;
+    setOpeningBlock({ mbuta: lecon.ouverture.mbuta, subtitle: lecon.ouverture.subtitle });
 
     // Préparer (sans afficher) le premier échange QCM
     const first = lecon.echanges?.[0];
@@ -369,10 +373,8 @@ const MbutaMatondoChat = () => {
       setPendingFirstQcm({ role: "assistant", content: qcmContent });
     }
 
-    setMessages([{ role: "assistant", content: opening }]);
-
     if (autoSpeakRef.current) {
-      setTimeout(() => handleSpeak(opening, 0), 300);
+      setTimeout(() => handleSpeak(opening, -1), 300);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -569,25 +571,30 @@ const MbutaMatondoChat = () => {
       {/* Messages */}
       <div className="flex-1 overflow-y-auto space-y-4 p-4">
         {/* Vidéo d'intro Mbuta Matondo — toujours visible en tête */}
-        <div className="flex justify-center pb-2">
+        <div className="flex flex-col items-center gap-3 pb-2">
           <video
             src="/videos/mbuta-matondo-intro.mp4"
             autoPlay loop muted playsInline controls
             className="w-[240px] max-w-full rounded-2xl border-2 border-gold/30 shadow-lg"
           />
+          {openingBlock && (
+            <div className="text-center space-y-1">
+              <div className="font-mandombe text-3xl text-gold leading-loose">
+                {openingBlock.mbuta}
+              </div>
+              <div className="text-sm text-cream/90">{openingBlock.mbuta}</div>
+              <div className="text-xs italic text-cream/50">{openingBlock.subtitle}</div>
+              <button
+                onClick={() => handleSpeak(openingContentRef.current, -1)}
+                className="mt-1 inline-flex items-center gap-1 text-xs text-cream/40 hover:text-gold transition-colors"
+                title={t("mbuta.speak")}
+              >
+                {speakingIdx === -1 ? <VolumeX className="w-3.5 h-3.5" /> : <Volume2 className="w-3.5 h-3.5" />}
+                <span>{speakingIdx === -1 ? "Stop" : t("mbuta.speak")}</span>
+              </button>
+            </div>
+          )}
         </div>
-
-        {messages.length === 0 && (
-          <div className="flex flex-col items-center justify-center text-center gap-4 opacity-70">
-            <video
-              src="/videos/mbuta-matondo-intro.mp4"
-              autoPlay loop muted playsInline controls
-              className="w-[280px] max-w-full rounded-2xl border-2 border-gold/30 shadow-lg hidden"
-            />
-            <p className="text-cream/60 text-lg font-display">{t("mbuta.welcome")}</p>
-            <p className="text-cream/40 text-sm max-w-md">{t("mbuta.welcomeHint")}</p>
-          </div>
-        )}
 
         {messages.map((msg, i) => {
           if (msg.role === "user") {
