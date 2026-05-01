@@ -290,6 +290,8 @@ const MbutaMatondoChat = () => {
   const [vars, setVars] = useState<Record<string, string>>({});
   // Pending first QCM — revealed only after the learner interacts
   const [pendingFirstQcm, setPendingFirstQcm] = useState<Msg | null>(null);
+  const [openingBlock, setOpeningBlock] = useState<{ mbuta: string; subtitle: string } | null>(null);
+  const openingContentRef = useRef<string>("");
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const mediaRecorderRef = useRef<MediaRecorder | null>(null);
