@@ -357,8 +357,10 @@ const MbutaMatondoChat = () => {
     if (!lecon?.ouverture) return;
     autoStartedRef.current = true;
 
-    // Message 1 : ouverture uniquement
+    // Ouverture : affichée en clair sous la vidéo (pas dans une bulle)
     const opening = `<lari>${lecon.ouverture.mbuta}</lari>\n<fr>${lecon.ouverture.subtitle}</fr>`;
+    openingContentRef.current = opening;
+    setOpeningBlock({ mbuta: lecon.ouverture.mbuta, subtitle: lecon.ouverture.subtitle });
 
     // Préparer (sans afficher) le premier échange QCM
     const first = lecon.echanges?.[0];
@@ -371,10 +373,8 @@ const MbutaMatondoChat = () => {
       setPendingFirstQcm({ role: "assistant", content: qcmContent });
     }
 
-    setMessages([{ role: "assistant", content: opening }]);
-
     if (autoSpeakRef.current) {
-      setTimeout(() => handleSpeak(opening, 0), 300);
+      setTimeout(() => handleSpeak(opening, -1), 300);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
