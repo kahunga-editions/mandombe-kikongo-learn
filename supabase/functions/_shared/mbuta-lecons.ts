@@ -61,10 +61,14 @@ function fmtLecon(l: Lecon): string {
   }
   for (const e of l.echanges) {
     lines.push(`\n[${e.id}] ${e.mbuta} = ${e.subtitle}${e.note ? ` (${e.note})` : ""}`);
-    const correct = e.reponses.findIndex((r) => r.correct);
-    lines.push(
-      `QCM (correct=${correct}) : ${e.reponses.map((r) => r.mbuta).join(" | ")}`
-    );
+    if (!e.reponses || e.reponses.length === 0) {
+      lines.push(`RÉPONSE LIBRE — l'apprenant tape sa propre réponse, NE PAS proposer de QCM (pas de <choices>).`);
+    } else {
+      const correct = e.reponses.findIndex((r) => r.correct);
+      lines.push(
+        `QCM (correct=${correct}) : ${e.reponses.map((r) => r.mbuta).join(" | ")}`
+      );
+    }
     lines.push(`Si bonne réponse : ${e.reponse_correcte_mbuta}`);
     lines.push(`Si mauvaise réponse : ${e.reponse_incorrecte_mbuta}`);
   }

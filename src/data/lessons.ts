@@ -20952,7 +20952,7 @@ export const lessons: Lesson[] = [
       { lari: "Muana ni diata keka diata.", mandombe: "Muana ni diata keka diata.", french: "L'enfant commence à marcher.", english: "The child is starting to walk.", portuguese: "A criança começa a andar." },
       { lari: "Ba tueka mona.", mandombe: "Ba tueka mona.", french: "Nous commençons à les voir.", english: "We are beginning to see them.", portuguese: "Estamos a começar a vê-los." },
       { lari: "Nketi kuenda ka mvula yi nokene.", mandombe: "Nketi kuenda ka mvula yi nokene.", french: "Je serais parti(e), mais il s'est mis à pleuvoir.", english: "I would have left, but it started raining.", portuguese: "Eu teria partido, mas começou a chover." },
-      { lari: "Bala bolo.", mandombe: "Bala bolo.", french: "2 enfants.", english: "2 children.", portuguese: "2 crianças." },
+      { lari: "Bala bole.", mandombe: "Bala bole.", french: "2 enfants.", english: "2 children.", portuguese: "2 crianças." },
       { lari: "Bala makumatatu na ba tanu.", mandombe: "Bala makumatatu na ba tanu.", french: "35 enfants.", english: "35 children.", portuguese: "35 crianças." },
       { lari: "Muana mu moshi.", mandombe: "Muana mu moshi.", french: "Un enfant.", english: "One child.", portuguese: "Uma criança." },
     ],
