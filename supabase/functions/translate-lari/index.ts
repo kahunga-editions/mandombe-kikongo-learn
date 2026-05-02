@@ -4805,41 +4805,75 @@ serve(async (req) => {
       .filter((tok) => tok.length >= 3)
       .slice(0, 8);
 
-    const relevantSet = new Map<string, { source_text: string; corrected_translation: string; created_at: string }>();
+    type CorrRow = { source_text: string; corrected_translation: string; notes: string | null; created_at: string };
+    const relevantSet = new Map<string, CorrRow>();
     if (tokens.length > 0) {
       const orFilter = tokens.map((tok) => `source_text.ilike.%${tok}%`).join(",");
       const { data: relevant } = await supabase
         .from("translation_corrections")
-        .select("source_text, corrected_translation, created_at")
+        .select("source_text, corrected_translation, notes, created_at")
         .eq("source_lang", sourceLang)
         .eq("target_lang", targetLang)
         .or(orFilter)
         .order("created_at", { ascending: false })
         .limit(40);
-      relevant?.forEach((r) => relevantSet.set(r.source_text, r));
+      relevant?.forEach((r: CorrRow) => relevantSet.set(r.source_text, r));
     }
 
     // 2) Always include most recent corrections to keep memory continuity day-to-day
     const { data: recent } = await supabase
       .from("translation_corrections")
-      .select("source_text, corrected_translation, created_at")
+      .select("source_text, corrected_translation, notes, created_at")
       .eq("source_lang", sourceLang)
       .eq("target_lang", targetLang)
       .order("created_at", { ascending: false })
       .limit(60);
-    recent?.forEach((r) => {
+    recent?.forEach((r: CorrRow) => {
       if (!relevantSet.has(r.source_text)) relevantSet.set(r.source_text, r);
     });
 
     const examples = Array.from(relevantSet.values()).slice(0, 100);
 
+    // 3) Load ALL corrections that contain expert linguistic notes — these are
+    //    rules/insights the expert wrote and must guide ALL future translations,
+    //    not only when the same source text reappears.
+    const { data: allNoted } = await supabase
+      .from("translation_corrections")
+      .select("source_text, corrected_translation, notes, created_at")
+      .eq("source_lang", sourceLang)
+      .eq("target_lang", targetLang)
+      .not("notes", "is", null)
+      .neq("notes", "")
+      .order("created_at", { ascending: false })
+      .limit(200);
+
+    const linguisticRules = (allNoted || [])
+      .filter((r: CorrRow) => (r.notes || "").trim().length > 0);
+
     let fewShotBlock = "";
     if (examples.length > 0) {
       const lines = examples
-        .map((e) => `"${e.source_text}" → "${e.corrected_translation}"`)
+        .map((e) => {
+          const noteSuffix = e.notes && e.notes.trim()
+            ? `   [note expert : ${e.notes.trim()}]`
+            : "";
+          return `"${e.source_text}" → "${e.corrected_translation}"${noteSuffix}`;
+        })
         .join("\n");
       fewShotBlock =
         `\n\n## Corrections vérifiées par un expert (MÉMOIRE PERSISTANTE — réutilise VERBATIM si la phrase ou une portion correspond) :\n${lines}\n`;
+    }
+
+    if (linguisticRules.length > 0) {
+      const ruleLines = linguisticRules
+        .map((r) => `- À propos de "${r.source_text}" → "${r.corrected_translation}" : ${r.notes!.trim()}`)
+        .join("\n");
+      fewShotBlock +=
+        `\n\n## Règles linguistiques de l'expert (À APPLIQUER SYSTÉMATIQUEMENT)\n` +
+        `Ces notes ont été ajoutées par un expert lors de corrections précédentes. ` +
+        `Elles décrivent des règles de grammaire, d'orthographe, d'accord, de prononciation ou de vocabulaire ` +
+        `qui s'appliquent à TOUTES les futures traductions, pas seulement à la phrase d'origine. ` +
+        `Tu DOIS respecter ces règles dans la traduction courante chaque fois qu'elles sont pertinentes :\n${ruleLines}\n`;
     }
 
     const directionLabels: Record<string, string> = {
