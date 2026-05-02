@@ -24,18 +24,6 @@
           "has_blank": true,
           "blank_variable": "prenom",
           "blank_placeholder": "ton prénom"
-        },
-        {
-          "mbuta": "Ka nzebi a ko.",
-          "subtitle": "Je ne sais pas.",
-          "correct": false,
-          "has_blank": false
-        },
-        {
-          "mbuta": "Matondo.",
-          "subtitle": "Merci.",
-          "correct": false,
-          "has_blank": false
         }
       ],
       "reponse_correcte_mbuta": "Wa sala bubote! Nkumbu aku {prenom}.",
