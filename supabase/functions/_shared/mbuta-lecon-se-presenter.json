@@ -94,30 +94,15 @@
     },
     {
       "id": "P-04",
-      "type": "qcm",
-      "mbuta": "Zololo wa ta ku wa tuka. Sola mvutu ya mbote.",
-      "subtitle": "Très bien ! Tu veux dire d'où tu viens. Choisis la bonne réponse.",
-      "reponses": [
-        {
-          "mbuta": "Ku Mputu na tuka.",
-          "subtitle": "Je viens de France.",
-          "correct": true
-        },
-        {
-          "mbuta": "Ku Mputu ni sala.",
-          "subtitle": "Je travaille en France.",
-          "correct": false
-        },
-        {
-          "mbuta": "Ku Mputu ni zeba.",
-          "subtitle": "Je voyage en France.",
-          "correct": false
-        }
-      ],
-      "reponse_correcte_mbuta": "Bubote saridi!",
+      "type": "libre",
+      "mbuta": "Ni buna! Kue wa tuka?",
+      "subtitle": "C'est bien ! D'où viens-tu ?",
+      "note": "RÉPONSE LIBRE — l'apprenant tape sa propre réponse, NE PAS proposer de QCM.",
+      "reponses": [],
+      "reponse_correcte_mbuta": "Sala bubote!",
       "reponse_correcte_subtitle": "Bien !",
-      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Ku Mputu na tuka.",
-      "reponse_incorrecte_subtitle": "Essaie encore."
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Bu ta : Ku ___ na tuka.",
+      "reponse_incorrecte_subtitle": "Essaie encore. Dis : Je viens de ___."
     },
     {
       "id": "P-05",
