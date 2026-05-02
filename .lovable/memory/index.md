@@ -12,6 +12,7 @@
 - Never use terms like 'dialecte' or 'bantou'; use 'langue'. Avoid invented ideophones like 'gbaa'/'kpoo'.
 
 ## Memories
+- [TTS Liaisons & Overrides](mem://audio/tts-liaisons-overrides) — Liaisons nkumbu ani/andi/aku, mungua, ngie
 - [Platform Vision](mem://project/vision) — Autonomous learning platform for Kikongo Lari and Mandombe
 - [Visual Aesthetic](mem://style/aesthetic) — Minimalist for lessons, vibrant for story panels
 - [Monetization](mem://business/monetization) — $9.99/mo Stripe sub, admin bypass logic
