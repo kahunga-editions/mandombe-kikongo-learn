@@ -134,6 +134,21 @@ const ELEVENLABS_RULES: PhoneticRule[] = [
   // nguri ya → bloc unique
   { from: /nguri ya/g, to: 'nguria' },
 
+  // /w/ TOUJOURS comme dans "win/we" (anglais), JAMAIS /v/ — on force la voyelle "ou"
+  { from: /\bwa/gi, to: 'oua' },
+  { from: /\bwe/gi, to: 'ouè' },
+  { from: /\bwi/gi, to: 'oui' },
+  { from: /\bwo/gi, to: 'ouo' },
+  { from: /\bwu/gi, to: 'ouou' },
+  { from: /([aeiou])wa/gi, to: '$1oua' },
+  { from: /([aeiou])we/gi, to: '$1ouè' },
+  { from: /([aeiou])wi/gi, to: '$1oui' },
+  { from: /([aeiou])wo/gi, to: '$1ouo' },
+  { from: /([aeiou])wu/gi, to: '$1ouou' },
+
+  // /s/ TOUJOURS sourd, JAMAIS voisé /z/ — double le s entre voyelles
+  { from: /([aeiouéèêà])s([aeiouéèêà])/gi, to: '$1ss$2' },
+
   // H aspiré (comme "hâche" en français) — hi/hu/he/ho/ha
   // ElevenLabs prononce déjà 'h' aspiré en mode FR ; on garantit qu'il n'est pas muet
   // en doublant le contexte vocalique.
