@@ -172,6 +172,7 @@ const PHONETIC_OVERRIDES: Record<string, string> = {
   "nye": "nyee",
   "ti": "tii",
   "wa": "waa",
+  "wuma": "ououma",     // /w/ comme "we" anglais, jamais /v/
   "nsi": "tsii",
 
   // Overrides phonétiques additionnels
