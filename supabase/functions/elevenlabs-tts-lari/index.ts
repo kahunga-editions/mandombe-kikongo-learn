@@ -83,8 +83,12 @@ const PHONETIC_OVERRIDES: Record<string, string> = {
   // Mungua — /muⁿɡwa/
   "mungua": "moungoua",
   "munguani": "moungouani",
-  // Interjection "he" — voyelle très étirée /heeee/
-  "he": "héééééé",
+  // Interjection "he" (oui kongo) — h très doux (quasi muet),
+  // modulation : voix qui monte (è→é) puis redescend (é→è).
+  // Virgules = courbe prosodique ; pas de "h" dur en attaque.
+  "he": "èéé,èè",
+  "He": "èéé,èè",
+  "HE": "èéé,èè",
   // Wuma — /w/ comme dans "we" anglais, JAMAIS /v/
   "wuma": "ououma",
 };
