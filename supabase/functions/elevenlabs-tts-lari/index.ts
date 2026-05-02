@@ -164,6 +164,14 @@ const ELEVENLABS_RULES: PhoneticRule[] = [
   // ElevenLabs prononce déjà 'h' aspiré en mode FR ; on garantit qu'il n'est pas muet
   // en doublant le contexte vocalique.
   { from: /\bh([aeiouAEIOU])/g, to: "h'$1" },
+
+  // ====== DÉSANASALISATION ======
+  // Le kikongo n'a JAMAIS de voyelles nasales françaises (/ɑ̃/ /ɛ̃/ /ɔ̃/ /œ̃/).
+  // ElevenLabs (moteur FR) tend à lire "an/en/in/on/un" + consonne comme nasale.
+  // On insère une apostrophe pour forcer la syllabation V.N+C : a-nda, e-nde, i-nki...
+  // Important : NE PAS toucher aux digrammes prénasalisés initiaux (mb, nd, ng, nk, ns, nz, nt, nj)
+  // déjà gérés ci-dessus. Ici on cible uniquement V + n + consonne où V ∈ {a,e,i,o,u}.
+  { from: /([aeiou])n([bcdfgjklmpqrstvwxz])/gi, to: "$1'n$2" },
 ];
 
 // ============================================================
