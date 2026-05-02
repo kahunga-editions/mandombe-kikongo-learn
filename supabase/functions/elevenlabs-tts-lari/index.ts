@@ -79,6 +79,8 @@ const PHONETIC_OVERRIDES: Record<string, string> = {
   // Mungua — /muⁿɡwa/
   "mungua": "moungoua",
   "munguani": "moungouani",
+  // Interjection "he" — voyelle très étirée /heeee/
+  "he": "héééééé",
 };
 
 // ============================================================
@@ -154,6 +156,11 @@ const LIAISONS: Array<[RegExp, string]> = [
   [/\bnkumbu\s+ani\b/gi, 'nkoumbouani'],
   [/\bnkumbu\s+andi\b/gi, 'nkoumbouandi'],
   [/\bnkumbu\s+aku\b/gi, 'nkoumbouaku'],
+  // Pauses obligatoires pour la compréhension par les locuteurs natifs
+  // "Bue ta kue nduku X" → segmenté avec virgules/points
+  [/\bbue\s+ta\s+kue\s+nduku\s+(ani|aku|andi)\b/gi, 'Bue. Ta. Kue. Nduku $1'],
+  // "Bue ta <verbe>" → pause après "ta"
+  [/\bbue\s+ta\b(?!\s*[,.])/gi, 'Bue. Ta,'],
 ];
 
 /**

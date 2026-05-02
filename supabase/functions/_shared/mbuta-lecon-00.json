@@ -26,7 +26,7 @@
           "blank_placeholder": "ton prénom"
         }
       ],
-      "reponse_correcte_mbuta": "Wa sala bubote! Nkumbu aku {prenom}.",
+      "reponse_correcte_mbuta": "Sala bubote! Nkumbu aku {prenom}.",
       "reponse_correcte_subtitle": "Tu travailles bien ! Ton nom c'est {prenom}.",
       "reponse_incorrecte_mbuta": "Kani... Vutu yela. Nkumbu aku nani?",
       "reponse_incorrecte_subtitle": "Non... Essaie encore. Quel est ton nom ?"
@@ -87,7 +87,7 @@
           "has_blank": false
         }
       ],
-      "reponse_correcte_mbuta": "Wa sala bubote, {prenom}!",
+      "reponse_correcte_mbuta": "Sala bubote, {prenom}!",
       "reponse_correcte_subtitle": "Tu travailles bien, {prenom} !",
       "reponse_incorrecte_mbuta": "Kani... Vutu yela. Mbote za zingi!",
       "reponse_incorrecte_subtitle": "Non... Essaie encore. Bien le bonjour !"
@@ -147,7 +147,7 @@
           "has_blank": false
         }
       ],
-      "reponse_correcte_mbuta": "Wa sala bubote, {prenom}!",
+      "reponse_correcte_mbuta": "Sala bubote, {prenom}!",
       "reponse_correcte_subtitle": "Tu travailles bien, {prenom} !",
       "reponse_incorrecte_mbuta": "Kani... Vutu yela. Matondo ma mingi.",
       "reponse_incorrecte_subtitle": "Non... Essaie encore. Merci beaucoup."
