@@ -191,7 +191,9 @@
       { "kikongo": "Fioti", "fr": "Un peu, petit" },
       { "kikongo": "Djuna", "fr": "Calme, tranquille" },
       { "kikongo": "Tshibuka", "fr": "Endroit, lieu, position" },
-      { "kikongo": "Ngelo", "fr": "Argent" }
+      { "kikongo": "Ngelo", "fr": "Argent" },
+      { "kikongo": "Shama", "fr": "Aller", "note": "infinitif — se prononce /ʃama/ (sh = ch français, jamais /tʃ/ anglais)" },
+      { "kikongo": "Shemi", "fr": "Je vais", "note": "forme conjuguée de Shama — se prononce /ʃɛmi/" }
     ]
   },
 
