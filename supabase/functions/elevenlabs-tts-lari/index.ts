@@ -85,6 +85,8 @@ const PHONETIC_OVERRIDES: Record<string, string> = {
   "munguani": "moungouani",
   // Interjection "he" — voyelle très étirée /heeee/
   "he": "héééééé",
+  // Wuma — /w/ comme dans "we" anglais, JAMAIS /v/
+  "wuma": "ououma",
 };
 
 // ============================================================
