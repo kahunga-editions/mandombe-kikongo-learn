@@ -2384,6 +2384,8 @@ export const lessons: Lesson[] = [
     vocabulary: [
       { lari: "Zeba", mandombe: "Zeba", french: "Voyager, se promener", english: "To travel, to take a walk", portuguese: "Viajar, passear" },
       { lari: "Kwenda", mandombe: "Kwenda", french: "Aller", english: "To go", portuguese: "Ir" },
+      { lari: "Shama", mandombe: "Shama", french: "Aller (variante)", english: "To go (variant)", portuguese: "Ir (variante)", note: "Prononcé /ʃama/ — sh = ch français (jamais /tʃ/ anglais). Forme conjuguée : Shemi /ʃɛmi/ = je vais." },
+      { lari: "Shemi", mandombe: "Shemi", french: "Je vais", english: "I am going", portuguese: "Eu vou", note: "Forme conjuguée de Shama. Prononcé /ʃɛmi/." },
       { lari: "Kwiza", mandombe: "Kwiza", french: "Venir", english: "To come", portuguese: "Vir" },
       { lari: "Mona", mandombe: "Mona", french: "Voir", english: "To see", portuguese: "Ver" },
       { lari: "Mpumbu", mandombe: "Mpumbu", french: "Kinshasa (nom traditionnel)", english: "Kinshasa (traditional name)", portuguese: "Kinshasa (nome tradicional)" },
