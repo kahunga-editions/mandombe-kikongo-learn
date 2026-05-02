@@ -73,7 +73,12 @@ const PHONETIC_OVERRIDES: Record<string, string> = {
   "wa": "waa",
   "nsi": "tsii",
   "nkia": "ntshia",
-  
+  // Nge / Ngie — G dur + affriquée prénasalisée
+  "nge": "nghé",
+  "ngie": "ndjé",           // /ndje/
+  // Mungua — /muⁿɡwa/
+  "mungua": "moungoua",
+  "munguani": "moungouani",
 };
 
 // ============================================================
@@ -143,11 +148,23 @@ const ELEVENLABS_RULES: PhoneticRule[] = [
 // ============================================================
 
 /**
- * Apply phonetic overrides first, then regex rules.
+ * Liaisons obligatoires (avant les overrides mot-par-mot).
+ */
+const LIAISONS: Array<[RegExp, string]> = [
+  [/\bnkumbu\s+ani\b/gi, 'nkoumbouani'],
+  [/\bnkumbu\s+andi\b/gi, 'nkoumbouandi'],
+  [/\bnkumbu\s+aku\b/gi, 'nkoumbouaku'],
+];
+
+/**
+ * Apply liaisons, phonetic overrides, then regex rules.
  */
 function preprocessForElevenLabs(text: string): string {
+  // Step 0: liaisons
+  let result = text;
+  for (const [re, to] of LIAISONS) result = result.replace(re, to);
   // Step 1: word-level overrides
-  let result = text.replace(/\b[\w']+\b/g, (word) => {
+  result = result.replace(/\b[\w']+\b/g, (word) => {
     const lower = word.toLowerCase();
     return PHONETIC_OVERRIDES[lower] || word;
   });

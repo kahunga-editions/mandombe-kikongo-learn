@@ -928,9 +928,9 @@ export const lessons: Lesson[] = [
         sentenceFr: "___ signifie 'année'",
         sentencePt: "___ significa 'ano'",
         blank: "mvula",
-        hint: "It also means 'rain' in many Bantu languages",
-        hintFr: "Ce mot signifie aussi 'pluie' dans de nombreuses langues bantoues",
-        hintPt: "Esta palavra também significa 'chuva' em muitas línguas bantas",
+        hint: "It also means 'rain' in several languages of the Kongo family",
+        hintFr: "Ce mot signifie aussi 'pluie' dans plusieurs langues de la famille kongo",
+        hintPt: "Esta palavra também significa 'chuva' em várias línguas da família kongo",
       },
       {
         type: "multiple-choice",
