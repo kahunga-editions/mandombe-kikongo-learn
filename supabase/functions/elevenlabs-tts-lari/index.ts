@@ -79,6 +79,8 @@ const PHONETIC_OVERRIDES: Record<string, string> = {
   // Mungua — /muⁿɡwa/
   "mungua": "moungoua",
   "munguani": "moungouani",
+  // Interjection "he" — voyelle très étirée /heeee/
+  "he": "héééééé",
 };
 
 // ============================================================
