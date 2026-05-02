@@ -13,6 +13,7 @@
 
 ## Memories
 - [TTS Liaisons & Overrides](mem://audio/tts-liaisons-overrides) — Liaisons nkumbu ani/andi/aku, mungua, ngie
+- [TTS sh rule](mem://audio/tts-sh-rule) — sh→ch (/ʃ/, jamais /tʃ/), shama=aller, shemi=je vais
 - [Platform Vision](mem://project/vision) — Autonomous learning platform for Kikongo Lari and Mandombe
 - [Visual Aesthetic](mem://style/aesthetic) — Minimalist for lessons, vibrant for story panels
 - [Monetization](mem://business/monetization) — $9.99/mo Stripe sub, admin bypass logic

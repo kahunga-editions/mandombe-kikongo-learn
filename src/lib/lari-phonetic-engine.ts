@@ -131,6 +131,10 @@ const ELEVENLABS_RULES: PhoneticRule[] = [
   // /s/ TOUJOURS sourd, JAMAIS voisé /z/ — double le s entre voyelles
   { from: /([aeiouéèêà])s([aeiouéèêà])/gi, to: '$1ss$2', note: 's intervocalique → ss (sourd)' },
 
+  // Sh + voyelle → /ʃ/ (français "ch", garantit la fricative et évite /tʃ/ anglais).
+  // Ne touche pas au cluster "tsh" voulu /tʃ/.
+  { from: /(^|[^t])sh([aeiouAEIOU])/g, to: '$1ch$2', note: 'sh → ch (/ʃ/, jamais /tʃ/)' },
+
   // H aspiré (comme "hâche" en français)
   { from: /\bh([aeiouAEIOU])/g, to: "h'$1", note: 'h aspiré' },
 ];
@@ -239,6 +243,9 @@ const PHONETIC_OVERRIDES: Record<string, string> = {
   "batika": "batika",
   "batikiri": "batikiri",
   "he": "héééééé",         // interjection /heee/ très long
+  // Shama / Shemi — /ʃ/ comme "chat" en français (PAS /tʃ/ anglais).
+  "shama": "chama",        // /ʃama/ — infinitif "aller"
+  "shemi": "chémi",        // /ʃɛmi/ — "je vais"
 }
 
 /**
