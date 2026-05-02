@@ -76,6 +76,7 @@ const PHONETIC_OVERRIDES: Record<string, string> = {
   // Nge / Ngie — G dur + affriquée prénasalisée
   "nge": "nghé",
   "ngie": "ndjé",           // /ndje/
+  "nzeka": "ndjeka",        // /ndjeka/
   // Mungua — /muⁿɡwa/
   "mungua": "moungoua",
   "munguani": "moungouani",
