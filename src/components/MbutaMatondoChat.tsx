@@ -15,6 +15,8 @@ import lecon03 from "../../supabase/functions/_shared/mbuta-lecon-03.json";
 import leconRestaurant from "../../supabase/functions/_shared/mbuta-lecon-restaurant.json";
 import leconEcole from "../../supabase/functions/_shared/mbuta-lecon-ecole.json";
 import leconHotel from "../../supabase/functions/_shared/mbuta-lecon-hotel.json";
+import leconSePresenter from "../../supabase/functions/_shared/mbuta-lecon-se-presenter.json";
+import leconKuNzariMungua from "../../supabase/functions/_shared/mbuta-lecon-ku-nzari-mungua.json";
 
 const LECONS_DU_JOUR: Array<{ ouverture?: { mbuta: string; subtitle: string } }> = [
   lecon00 as any,
@@ -22,6 +24,8 @@ const LECONS_DU_JOUR: Array<{ ouverture?: { mbuta: string; subtitle: string } }>
   leconRestaurant as any,
   leconEcole as any,
   leconHotel as any,
+  leconSePresenter as any,
+  leconKuNzariMungua as any,
 ];
 
 function getLeconDuJour() {
@@ -634,18 +638,26 @@ const MbutaMatondoChat = () => {
                   <div className="bg-muted/30 border border-gold/10 rounded-2xl rounded-bl-md px-4 py-3">
                     <p className="text-sm text-cream/80 whitespace-pre-wrap">{msg.content}</p>
                   </div>
-                ) : (
-                  blocks.map((b, bi) => (
+                ) : (() => {
+                  // Fusion : un seul message assistant = une seule bulle, même s'il contient
+                  // plusieurs paires <lari>/<fr> (felicitation + question suivante par ex.).
+                  const merged: Block = blocks.reduce<Block>(
+                    (acc, b) => ({
+                      lari: acc.lari ? `${acc.lari} ${b.lari}` : b.lari,
+                      fr: acc.fr ? `${acc.fr} ${b.fr}` : b.fr,
+                    }),
+                    { lari: "", fr: "" },
+                  );
+                  return (
                     <MandombeBubble
-                      key={bi}
-                      block={b}
+                      block={merged}
                       isPlaying={speakingIdx === i}
                       audioDurationMs={audioDur}
                       onAdminCorrect={openCorrection}
                       isAdmin={isAdmin}
                     />
-                  ))
-                )}
+                  );
+                })()}
 
                 {/* MCQ buttons */}
                 {mcqMode && displayChoices && !isLoading && (
