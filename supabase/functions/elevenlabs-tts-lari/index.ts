@@ -98,6 +98,11 @@ const PHONETIC_OVERRIDES: Record<string, string> = {
   "kanda": "ka'nda",
   "nkanda": "nka'nda",
   "mikanda": "mika'nda",
+  // Shama / Shemi — /ʃ/ comme "chat" en français, JAMAIS /tʃ/ anglais.
+  // En français, "ch" + voyelle = /ʃ/ garanti. La graphie reste "sh" en Lari
+  // mais le moteur lit "ch" pour forcer la fricative palato-alveolaire sourde.
+  "shama": "chama",          // /ʃama/ — infinitif "aller"
+  "shemi": "chémi",          // /ʃɛmi/ — "je vais"
 };
 
 // ============================================================
