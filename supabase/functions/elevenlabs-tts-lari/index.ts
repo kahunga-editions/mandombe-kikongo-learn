@@ -77,6 +77,9 @@ const PHONETIC_OVERRIDES: Record<string, string> = {
   "nge": "nghé",
   "ngie": "ndjé",           // /ndje/
   "nzeka": "ndjeka",        // /ndjeka/
+  // Mbaji — /ʒi/ fricative comme "Julien" (PAS /dʒi/ anglais)
+  // En français, "gi" = /ʒi/ (cf. "Régi"), évite l'affriquée /dʒ/
+  "mbaji": "mbagi",
   // Mungua — /muⁿɡwa/
   "mungua": "moungoua",
   "munguani": "moungouani",
