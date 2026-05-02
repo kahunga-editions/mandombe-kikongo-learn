@@ -165,6 +165,12 @@ const ELEVENLABS_RULES: PhoneticRule[] = [
   // /s/ TOUJOURS sourd, JAMAIS voisé /z/ — double le s entre voyelles
   { from: /([aeiouéèêà])s([aeiouéèêà])/gi, to: '$1ss$2' },
 
+  // Sh + voyelle → /ʃ/ (fricative palato-alvéolaire sourde, comme "chat" en français).
+  // ElevenLabs en mode FR lit parfois "sh" comme /tʃ/ (anglais) ; on remappe vers "ch"
+  // qui en orthographe française garantit /ʃ/. S'applique aux verbes "shama" (aller),
+  // "shemi" (je vais) et toutes formes conjuguées dérivées.
+  { from: /sh([aeiouAEIOU])/g, to: 'ch$1' },
+
   // H aspiré (comme "hâche" en français) — hi/hu/he/ho/ha
   // ElevenLabs prononce déjà 'h' aspiré en mode FR ; on garantit qu'il n'est pas muet
   // en doublant le contexte vocalique.
