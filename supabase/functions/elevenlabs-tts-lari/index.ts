@@ -91,6 +91,13 @@ const PHONETIC_OVERRIDES: Record<string, string> = {
   "HE": "èéé,èè",
   // Wuma — /w/ comme dans "we" anglais, JAMAIS /v/
   "wuma": "ououma",
+  // Nzomikanda / kanda — éviter la nasale française /ɑ̃/ dans "an".
+  // On force la séparation a + n + da via un trait d'union phonétique ("ka-nda").
+  // En français, "a-n" en début de syllabe distincte se prononce /a.n/, pas /ɑ̃/.
+  "nzomikanda": "nzomika'nda",
+  "kanda": "ka'nda",
+  "nkanda": "nka'nda",
+  "mikanda": "mika'nda",
 };
 
 // ============================================================
@@ -157,6 +164,14 @@ const ELEVENLABS_RULES: PhoneticRule[] = [
   // ElevenLabs prononce déjà 'h' aspiré en mode FR ; on garantit qu'il n'est pas muet
   // en doublant le contexte vocalique.
   { from: /\bh([aeiouAEIOU])/g, to: "h'$1" },
+
+  // ====== DÉSANASALISATION ======
+  // Le kikongo n'a JAMAIS de voyelles nasales françaises (/ɑ̃/ /ɛ̃/ /ɔ̃/ /œ̃/).
+  // ElevenLabs (moteur FR) tend à lire "an/en/in/on/un" + consonne comme nasale.
+  // On insère une apostrophe pour forcer la syllabation V.N+C : a-nda, e-nde, i-nki...
+  // Important : NE PAS toucher aux digrammes prénasalisés initiaux (mb, nd, ng, nk, ns, nz, nt, nj)
+  // déjà gérés ci-dessus. Ici on cible uniquement V + n + consonne où V ∈ {a,e,i,o,u}.
+  { from: /([aeiou])n([bcdfgjklmpqrstvwxz])/gi, to: "$1'n$2" },
 ];
 
 // ============================================================
