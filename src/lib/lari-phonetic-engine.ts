@@ -206,6 +206,7 @@ const PHONETIC_OVERRIDES: Record<string, string> = {
   // Nge / Ngie / Munienge — G dur /ŋɡ/ comme dans NGO
   "nge": "nghé",            // /ŋɡe/ — G dur, jamais /nʒe/
   "ngie": "ndjé",           // /ndje/ — affriquée prénasalisée /ndʒe/
+  "nzeka": "ndjeka",        // /ndjeka/
   "munienge": "mounienghé", // /muniɛŋɡe/ — G dur sur la finale
   "munienghe": "mounienghé",// variante orthographique
   // Mungua — /muⁿɡwa/
