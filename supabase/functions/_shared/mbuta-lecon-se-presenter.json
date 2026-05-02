@@ -1,0 +1,208 @@
+{
+  "lecon_id": "se_presenter",
+  "titre_mbuta": "Nkumbu na Butu",
+  "titre_subtitle": "Se présenter",
+  "sources": [
+    "corpus Nzo Mikanda",
+    "Ntu Kanda"
+  ],
+  "ouverture": {
+    "mbuta": "Mbote! Bueni muntu.",
+    "subtitle": "Bonjour ! Tu rencontres quelqu'un."
+  },
+  "echanges": [
+    {
+      "id": "P-01",
+      "type": "qcm",
+      "mbuta": "Bue ta?",
+      "subtitle": "Que dis-tu ?",
+      "reponses": [
+        {
+          "mbuta": "Mbote.",
+          "subtitle": "Bonjour.",
+          "correct": true
+        },
+        {
+          "mbuta": "Matondo.",
+          "subtitle": "Merci.",
+          "correct": false
+        },
+        {
+          "mbuta": "Sala.",
+          "subtitle": "Au revoir.",
+          "correct": false
+        }
+      ],
+      "reponse_correcte_mbuta": "Ni buna!",
+      "reponse_correcte_subtitle": "Bien !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Mbote.",
+      "reponse_incorrecte_subtitle": "Essaie encore."
+    },
+    {
+      "id": "P-02",
+      "type": "qcm",
+      "mbuta": "Ni buna! Nkumbu aku ta zolo ta. Sola mvutu ya mbote.",
+      "subtitle": "Très bien ! Tu veux dire ton nom. Choisis la bonne phrase.",
+      "reponses": [
+        {
+          "mbuta": "Nkumbu ani Malonga.",
+          "subtitle": "Je m'appelle Malonga.",
+          "correct": true
+        },
+        {
+          "mbuta": "Sakana ni ta sakana na Malonga.",
+          "subtitle": "Je joue avec Malonga.",
+          "correct": false
+        },
+        {
+          "mbuta": "Nsambi ni ta shika na Malonga.",
+          "subtitle": "Je joue du nsambi avec Malonga.",
+          "correct": false
+        }
+      ],
+      "reponse_correcte_mbuta": "Ni buna!",
+      "reponse_correcte_subtitle": "Bien !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Nkumbu ani Malonga.",
+      "reponse_incorrecte_subtitle": "Essaie encore."
+    },
+    {
+      "id": "P-03",
+      "type": "qcm",
+      "mbuta": "Muntu ta ku yula. Bue ta mu zaba nkumbu andi?",
+      "subtitle": "La personne te pose une question. Que dis-tu pour demander son nom ?",
+      "reponses": [
+        {
+          "mbuta": "Nkumbu aku nani?",
+          "subtitle": "Comment tu t'appelles ?",
+          "correct": true
+        },
+        {
+          "mbuta": "Kue ba ka?",
+          "subtitle": "Où habites-tu ?",
+          "correct": false
+        },
+        {
+          "mbuta": "Kue sala ka?",
+          "subtitle": "Où travailles-tu ?",
+          "correct": false
+        }
+      ],
+      "reponse_correcte_mbuta": "Wa sala bubote!",
+      "reponse_correcte_subtitle": "Bien !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Nkumbu aku nani?",
+      "reponse_incorrecte_subtitle": "Essaie encore."
+    },
+    {
+      "id": "P-04",
+      "type": "qcm",
+      "mbuta": "Zololo wa ta ku wa tuka. Sola mvutu ya mbote.",
+      "subtitle": "Très bien ! Tu veux dire d'où tu viens. Choisis la bonne réponse.",
+      "reponses": [
+        {
+          "mbuta": "Ku Mputu na tuka.",
+          "subtitle": "Je viens de France.",
+          "correct": true
+        },
+        {
+          "mbuta": "Ku Mputu ni sala.",
+          "subtitle": "Je travaille en France.",
+          "correct": false
+        },
+        {
+          "mbuta": "Ku Mputu ni zeba.",
+          "subtitle": "Je voyage en France.",
+          "correct": false
+        }
+      ],
+      "reponse_correcte_mbuta": "Bubote saridi!",
+      "reponse_correcte_subtitle": "Bien !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Ku Mputu na tuka.",
+      "reponse_incorrecte_subtitle": "Essaie encore."
+    },
+    {
+      "id": "P-05",
+      "type": "qcm",
+      "mbuta": "Ni buna! Mvula zaku zololo ta. Bue ta?",
+      "subtitle": "Parfait ! Tu veux dire ton âge. Que dis-tu ?",
+      "reponses": [
+        {
+          "mbuta": "Mvula makumole me nani.",
+          "subtitle": "J'ai 20 ans.",
+          "correct": true
+        },
+        {
+          "mbuta": "Mvula makumole ke ku Mputu.",
+          "subtitle": "Il habite en France depuis 20 ans.",
+          "correct": false
+        },
+        {
+          "mbuta": "Mvula makumole ngie ku Mputu.",
+          "subtitle": "J'habite en France depuis 20 ans.",
+          "correct": false
+        }
+      ],
+      "reponse_correcte_mbuta": "Tomono sala.",
+      "reponse_correcte_subtitle": "Bien !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Mvula makumole me nani.",
+      "reponse_incorrecte_subtitle": "Essaie encore."
+    },
+    {
+      "id": "P-06",
+      "type": "qcm",
+      "mbuta": "Salu kiaku zololo zonzela. Sola mvutu ya mbote.",
+      "subtitle": "Très bien ! Tu veux parler de ta profession. Choisis la bonne phrase.",
+      "reponses": [
+        {
+          "mbuta": "Mulongoki ngie.",
+          "subtitle": "Je suis étudiant.",
+          "correct": true
+        },
+        {
+          "mbuta": "Yebela ni ta yebela.",
+          "subtitle": "Je me lave.",
+          "correct": false
+        },
+        {
+          "mbuta": "Meno ni ta sukula.",
+          "subtitle": "Je me lave les dents.",
+          "correct": false
+        }
+      ],
+      "reponse_correcte_mbuta": "Ni buna!",
+      "reponse_correcte_subtitle": "Bien !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Mulongoki ngie.",
+      "reponse_incorrecte_subtitle": "Essaie encore."
+    },
+    {
+      "id": "P-07",
+      "type": "qcm",
+      "mbuta": "Ni buna! Zololo wa manisa mu zonza. Bue ta?",
+      "subtitle": "Excellent ! Tu veux terminer la conversation. Que dis-tu ?",
+      "reponses": [
+        {
+          "mbuta": "Ntondele.",
+          "subtitle": "Je te remercie.",
+          "correct": true
+        },
+        {
+          "mbuta": "Ka ni dia ka mbiji ko.",
+          "subtitle": "Je ne mange pas de viande.",
+          "correct": false
+        },
+        {
+          "mbuta": "Moko ni ta sukula.",
+          "subtitle": "Je me lave les mains.",
+          "correct": false
+        }
+      ],
+      "reponse_correcte_mbuta": "Ni buna!",
+      "reponse_correcte_subtitle": "Bien !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Ntondele.",
+      "reponse_incorrecte_subtitle": "Essaie encore."
+    }
+  ],
+  "cloture": {
+    "mbuta": "Salu kia kibote! Matondo ma mingi!",
+    "subtitle": "Très bon travail ! Merci beaucoup !"
+  }
+}

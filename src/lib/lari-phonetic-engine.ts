@@ -203,10 +203,14 @@ const PHONETIC_OVERRIDES: Record<string, string> = {
   "keri": "kéri",           // il/elle n'était pas — é fermé
   "tshari": "tshâri",       // triste (négation) — a ouvert
 
-  // Nge / Munienge — G dur /ŋɡ/ comme dans NGO
+  // Nge / Ngie / Munienge — G dur /ŋɡ/ comme dans NGO
   "nge": "nghé",            // /ŋɡe/ — G dur, jamais /nʒe/
+  "ngie": "ndjé",           // /ndje/ — affriquée prénasalisée /ndʒe/
   "munienge": "mounienghé", // /muniɛŋɡe/ — G dur sur la finale
   "munienghe": "mounienghé",// variante orthographique
+  // Mungua — /muⁿɡwa/
+  "mungua": "moungoua",
+  "munguani": "moungouani",
   "fuka": "pfouka",         // infinitif /pfuka/
   "meso": "messo",          // /s/ sourd intervocalique
   "honda": "honnda",        // /h/ aspiré + /nd/ net
@@ -233,11 +237,24 @@ const PHONETIC_OVERRIDES: Record<string, string> = {
 }
 
 /**
+ * Liaisons obligatoires (à appliquer AVANT les overrides de mots,
+ * sinon "nkumbu" est remplacé en isolation et la liaison est perdue).
+ */
+const LIAISONS: Array<[RegExp, string]> = [
+  [/\bnkumbu\s+ani\b/gi, 'nkoumbouani'],
+  [/\bnkumbu\s+andi\b/gi, 'nkoumbouandi'],
+  [/\bnkumbu\s+aku\b/gi, 'nkoumbouaku'],
+];
+
+/**
  * Applique les règles de prononciation pour ElevenLabs.
  */
 export function preprocessForElevenLabs(text: string): string {
+  // Step 0: liaisons obligatoires (avant tout)
+  let result = text;
+  for (const [re, to] of LIAISONS) result = result.replace(re, to);
   // Step 1: word-level overrides
-  let result = text.replace(/\b[\w']+\b/g, (word) => {
+  result = result.replace(/\b[\w']+\b/g, (word) => {
     const lower = word.toLowerCase();
     return PHONETIC_OVERRIDES[lower] || word;
   });

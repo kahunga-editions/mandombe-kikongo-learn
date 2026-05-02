@@ -1,0 +1,208 @@
+{
+  "lecon_id": "ku_nzari_mungua",
+  "titre_mbuta": "Ku Nzari Mungua",
+  "titre_subtitle": "À la mer",
+  "sources": [
+    "corpus Nzo Mikanda",
+    "Ntu Kanda"
+  ],
+  "ouverture": {
+    "mbuta": "Mbote! Turidi ku nzari mungua.",
+    "subtitle": "Bonjour ! Tu arrives à la mer."
+  },
+  "echanges": [
+    {
+      "id": "M-01",
+      "type": "qcm",
+      "mbuta": "Bue ta kue nduku aku?",
+      "subtitle": "Que dis-tu à ton ami ?",
+      "reponses": [
+        {
+          "mbuta": "Mbote.",
+          "subtitle": "Bonjour.",
+          "correct": true
+        },
+        {
+          "mbuta": "Matondo.",
+          "subtitle": "Merci.",
+          "correct": false
+        },
+        {
+          "mbuta": "Sala.",
+          "subtitle": "Au revoir.",
+          "correct": false
+        }
+      ],
+      "reponse_correcte_mbuta": "Ni buna!",
+      "reponse_correcte_subtitle": "Bien !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Mbote.",
+      "reponse_incorrecte_subtitle": "Essaie encore."
+    },
+    {
+      "id": "M-02",
+      "type": "qcm",
+      "mbuta": "Ni buna! Tsaba zololo kue tsaba. Sola mvutu ya mbote.",
+      "subtitle": "Très bien ! Tu veux aller nager. Choisis la bonne phrase.",
+      "reponses": [
+        {
+          "mbuta": "Tsaba ni kue tsaba.",
+          "subtitle": "Je vais nager.",
+          "correct": true
+        },
+        {
+          "mbuta": "Kani kuenda tsaba ko.",
+          "subtitle": "Je ne vais pas nager.",
+          "correct": false
+        },
+        {
+          "mbuta": "Ndjele ku nzo mikanda.",
+          "subtitle": "Je pars à l'école.",
+          "correct": false
+        }
+      ],
+      "reponse_correcte_mbuta": "Ni buna!",
+      "reponse_correcte_subtitle": "Bien !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Tsaba ni kue tsaba.",
+      "reponse_incorrecte_subtitle": "Essaie encore."
+    },
+    {
+      "id": "M-03",
+      "type": "qcm",
+      "mbuta": "Nduku aku mamba ka ta ku zonzela. Bue ta tala tioji me?",
+      "subtitle": "Ton ami te parle de l'eau. Que dis-tu si elle est froide ?",
+      "reponses": [
+        {
+          "mbuta": "Mamba mujija me.",
+          "subtitle": "L'eau est froide.",
+          "correct": true
+        },
+        {
+          "mbuta": "Mamba bunzenzeki me.",
+          "subtitle": "L'eau est sucrée.",
+          "correct": false
+        },
+        {
+          "mbuta": "Mamba nduri me.",
+          "subtitle": "L'eau est amère.",
+          "correct": false
+        }
+      ],
+      "reponse_correcte_mbuta": "Ni buna!",
+      "reponse_correcte_subtitle": "Bien !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Mamba mujija me.",
+      "reponse_incorrecte_subtitle": "Essaie encore."
+    },
+    {
+      "id": "M-04",
+      "type": "qcm",
+      "mbuta": "Ni buna! Tshima tsha ka ta zolo sa. Sola mvutu ya mbote.",
+      "subtitle": "Très bien ! Tu veux faire autre chose. Choisis la bonne réponse.",
+      "reponses": [
+        {
+          "mbuta": "Ku djelo tu sakana?",
+          "subtitle": "On joue dans le sable ?",
+          "correct": true
+        },
+        {
+          "mbuta": "Mamba mungua me.",
+          "subtitle": "L'eau est salée.",
+          "correct": false
+        },
+        {
+          "mbuta": "Djelo tiya dje.",
+          "subtitle": "Le sable est chaud.",
+          "correct": false
+        }
+      ],
+      "reponse_correcte_mbuta": "Wa sala bubote!",
+      "reponse_correcte_subtitle": "Bien !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Ku djelo tu sakana?",
+      "reponse_incorrecte_subtitle": "Essaie encore."
+    },
+    {
+      "id": "M-05",
+      "type": "qcm",
+      "mbuta": "Ni buna! Wuma zololo. Bue ta?",
+      "subtitle": "Parfait ! Tu veux te reposer. Que dis-tu ?",
+      "reponses": [
+        {
+          "mbuta": "Ngiele wuma.",
+          "subtitle": "Je vais me reposer.",
+          "correct": true
+        },
+        {
+          "mbuta": "Muendo ni kuenda.",
+          "subtitle": "Je vais partir.",
+          "correct": false
+        },
+        {
+          "mbuta": "Mbo ni seha.",
+          "subtitle": "Je vais rigoler.",
+          "correct": false
+        }
+      ],
+      "reponse_correcte_mbuta": "Bubote saridi!",
+      "reponse_correcte_subtitle": "Bien !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Ngiele wuma.",
+      "reponse_incorrecte_subtitle": "Essaie encore."
+    },
+    {
+      "id": "M-06",
+      "type": "qcm",
+      "mbuta": "Ni buna! Nki ma zololo nua. Bue ta?",
+      "subtitle": "Très bien ! Tu veux boire quelque chose. Que dis-tu ?",
+      "reponses": [
+        {
+          "mbuta": "Mamba nzololo.",
+          "subtitle": "Je voudrais de l'eau.",
+          "correct": true
+        },
+        {
+          "mbuta": "Nzololo na suba.",
+          "subtitle": "Je voudrais faire pipi.",
+          "correct": false
+        },
+        {
+          "mbuta": "Nzololo na zakala.",
+          "subtitle": "Je voudrais m'asseoir.",
+          "correct": false
+        }
+      ],
+      "reponse_correcte_mbuta": "Tomono sala.",
+      "reponse_correcte_subtitle": "Bien !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Mamba nzololo.",
+      "reponse_incorrecte_subtitle": "Essaie encore."
+    },
+    {
+      "id": "M-07",
+      "type": "qcm",
+      "mbuta": "Ni buna! Lumbu tshi manishi. Bue ta?",
+      "subtitle": "Excellent ! La journée se termine. Que dis-tu ?",
+      "reponses": [
+        {
+          "mbuta": "Ntangu ka kua.",
+          "subtitle": "À bientôt.",
+          "correct": true
+        },
+        {
+          "mbuta": "Tsaba ni ta tsaba.",
+          "subtitle": "Je nage maintenant.",
+          "correct": false
+        },
+        {
+          "mbuta": "Tuendi.",
+          "subtitle": "Viens avec moi.",
+          "correct": false
+        }
+      ],
+      "reponse_correcte_mbuta": "Ni buna!",
+      "reponse_correcte_subtitle": "Bien !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Ntangu ka kua.",
+      "reponse_incorrecte_subtitle": "Essaie encore."
+    }
+  ],
+  "cloture": {
+    "mbuta": "Salu kia kibote! Zebi bu ba zonzela nzari mungua. Matondo ma mingi!",
+    "subtitle": "Très bon travail ! Tu sais maintenant parler de la mer. Merci beaucoup !"
+  }
+}

@@ -18,6 +18,12 @@ const SYSTEM_PROMPT = `Tu es un traducteur spécialisé en Kikongo Lari (Laadi),
 - Ne JAMAIS utiliser de Kituba, Munukutuba ou Lingala comme substitut.
 - Si AUCUN mot de la phrase n'est dans le corpus, réponds avec : {"translation": "Ce terme n'est pas attesté dans le corpus", "mandombe": "", "ipa": "", "notes": "Aucune entrée correspondante trouvée dans le corpus Nzo Mikanda."}
 
+### TERMINOLOGIE INTERDITE — NE JAMAIS UTILISER (ni dans translation, ni dans notes)
+- "bantou", "bantoue", "bantous", "bantoues" sous AUCUNE forme
+- "langue bantoue", "langues bantoues", "peuple bantou", "peuples bantous", "famille bantoue"
+- "dialecte" (utiliser "langue")
+À la place : "langue kongo", "langue kikongo", "langue lari", "famille kongo", "ensemble kongo".
+
 ### Formes INTERDITES (Kituba/Munukutuba) — NE JAMAIS UTILISER
 - "mai" pour eau → utilise "mamba"
 - "ndenge nini" pour comment → utilise "bwe"

@@ -4,6 +4,9 @@ import lecon03 from "./mbuta-lecon-03.json" with { type: "json" };
 import leconRestaurant from "./mbuta-lecon-restaurant.json" with { type: "json" };
 import leconEcole from "./mbuta-lecon-ecole.json" with { type: "json" };
 import leconHotel from "./mbuta-lecon-hotel.json" with { type: "json" };
+import leconSePresenter from "./mbuta-lecon-se-presenter.json" with { type: "json" };
+import leconKuNzariMungua from "./mbuta-lecon-ku-nzari-mungua.json" with { type: "json" };
+import conjZololo from "./mbuta-conjugaisons-zololo.json" with { type: "json" };
 
 type Reponse = { mbuta: string; correct: boolean };
 type Echange = {
@@ -27,12 +30,26 @@ type Lecon = {
   cloture?: { mbuta: string; subtitle: string };
 };
 
+type ConjEntry = { fr: string; kikongo: string };
+type Conjugaison = {
+  verbe: string;
+  traduction: string;
+  source?: string;
+  paradigmes: Record<string, ConjEntry[]>;
+};
+
 const LECONS: Lecon[] = [
   lecon00 as unknown as Lecon,
   lecon03 as unknown as Lecon,
   leconRestaurant as unknown as Lecon,
   leconEcole as unknown as Lecon,
   leconHotel as unknown as Lecon,
+  leconSePresenter as unknown as Lecon,
+  leconKuNzariMungua as unknown as Lecon,
+];
+
+const CONJUGAISONS: Conjugaison[] = [
+  conjZololo as unknown as Conjugaison,
 ];
 
 function fmtLecon(l: Lecon): string {
@@ -57,8 +74,26 @@ function fmtLecon(l: Lecon): string {
   return lines.join("\n");
 }
 
+function fmtConjugaison(c: Conjugaison): string {
+  const lines: string[] = [];
+  lines.push(`### VERBE ${c.verbe} — ${c.traduction}`);
+  if (c.source) lines.push(`Source : ${c.source}`);
+  for (const [paradigme, entries] of Object.entries(c.paradigmes ?? {})) {
+    lines.push(`\n[${paradigme}]`);
+    for (const e of entries) {
+      lines.push(`${e.fr} = ${e.kikongo}`);
+    }
+  }
+  return lines.join("\n");
+}
+
 export const MBUTA_LECONS = `=== LEÇONS NARRATIVES VALIDÉES — NZO MIKANDA ===
 Ces leçons sont scriptées. Tu peux les utiliser intégralement et littéralement comme support d'enseignement (ouverture, échanges, QCM, clôture). Toutes les phrases ci-dessous sont attestées et autorisées.
 
 ${LECONS.map(fmtLecon).join("\n\n")}
+
+=== PARADIGMES VERBAUX VALIDÉS ===
+Tu peux piocher littéralement dans ces conjugaisons attestées.
+
+${CONJUGAISONS.map(fmtConjugaison).join("\n\n")}
 `;
