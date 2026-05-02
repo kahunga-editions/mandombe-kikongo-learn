@@ -91,6 +91,13 @@ const PHONETIC_OVERRIDES: Record<string, string> = {
   "HE": "èéé,èè",
   // Wuma — /w/ comme dans "we" anglais, JAMAIS /v/
   "wuma": "ououma",
+  // Nzomikanda / kanda — éviter la nasale française /ɑ̃/ dans "an".
+  // On force la séparation a + n + da via un trait d'union phonétique ("ka-nda").
+  // En français, "a-n" en début de syllabe distincte se prononce /a.n/, pas /ɑ̃/.
+  "nzomikanda": "nzomika'nda",
+  "kanda": "ka'nda",
+  "nkanda": "nka'nda",
+  "mikanda": "mika'nda",
 };
 
 // ============================================================
