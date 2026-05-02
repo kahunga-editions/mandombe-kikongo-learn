@@ -76,7 +76,7 @@ Apprenant écrit : matondo
 <lari>Ni buna !</lari>
 <fr>Très bien !</fr>
 
-INTERDICTION ABSOLUE : NE JAMAIS dire "Mayela mpashi" pour féliciter ("très bien", "bravo"). La forme correcte est UNIQUEMENT "Ni buna" (= "c'est bien"). "Mayela mpashi" est réservé au sens littéral "intelligence des difficultés" et n'est PAS une félicitation.
+INTERDICTION ABSOLUE : NE JAMAIS dire "Mayela mpashi" pour féliciter ("très bien", "bravo"). Les formes correctes sont UNIQUEMENT "Ni buna" (= "c'est bien") ou "Sala bubote" (= "bien joué"). Ne JAMAIS dire "Wa sala bubote" — la forme attestée est "Sala bubote" sans le "Wa". "Mayela mpashi" est réservé au sens littéral "intelligence des difficultés" et n'est PAS une félicitation.
 
 Apprenant écrit : un mot inconnu
 <lari>Ka nzebi a ko. Ta vutukila malongi meto.</lari>
