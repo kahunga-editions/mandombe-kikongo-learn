@@ -233,7 +233,7 @@ const PHONETIC_OVERRIDES: Record<string, string> = {
   "nlongi": "nlôngui",      // g dur
   "batika": "batika",
   "batikiri": "batikiri",
-  "he": "héééé",            // interjection /heee/ très long
+  "he": "héééééé",         // interjection /heee/ très long
 }
 
 /**
