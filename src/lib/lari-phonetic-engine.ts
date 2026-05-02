@@ -243,6 +243,9 @@ const PHONETIC_OVERRIDES: Record<string, string> = {
   "batika": "batika",
   "batikiri": "batikiri",
   "he": "héééééé",         // interjection /heee/ très long
+  // Shama / Shemi — /ʃ/ comme "chat" en français (PAS /tʃ/ anglais).
+  "shama": "chama",        // /ʃama/ — infinitif "aller"
+  "shemi": "chémi",        // /ʃɛmi/ — "je vais"
 }
 
 /**
