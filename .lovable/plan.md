@@ -1,111 +1,85 @@
+## Plan — 7 corrections groupées
 
-Ajouter le nouveau corpus + leçon 3 famille au `SYSTEM_PROMPT` de `supabase/functions/mbuta-matondo/index.ts`, durcir la règle anti-Lari pour Theo, ajouter un post-filtre code, et pousser des overrides phonétiques TTS.
+### 1. Bouton QCM 00-01 : ne garder que le champ "Nkumbu ani ___"
+Dans `supabase/functions/_shared/mbuta-lecon-00.json`, échange `00-01` :
+- Supprimer les deux distracteurs `Ka nzebi a ko.` et `Matondo.`.
+- Conserver uniquement la réponse à blanc `Nkumbu ani ___` (le champ libre suffit, pas besoin de QCM à 3 boutons pour saisir son prénom).
 
-## 1. Corpus à ajouter (`supabase/functions/mbuta-matondo/index.ts`)
+### 2. Fusionner les bulles simultanées
+Dans `src/components/MbutaMatondoChat.tsx`, quand un message assistant contient plusieurs paires `<lari>/<fr>` (ex. félicitation + question suivante), n'afficher qu'**une seule bulle** : concaténer tous les `lari` (séparés par un espace) et tous les `fr`. Modifier la boucle `blocks.map(...)` pour rendre une seule `MandombeBubble` issue d'un bloc fusionné.
+Effet : plus jamais deux cartes empilées comme dans la capture (Ni buna ! Mbote Meli! / Kue wa tuka?).
 
-Nouvelles sections dans `CORPUS_DE_BASE` :
+### 3. Règles TTS Lari supplémentaires
+Dans `src/lib/lari-phonetic-engine.ts` ET `supabase/functions/elevenlabs-tts-lari/index.ts` (les deux moteurs doivent rester synchronisés) :
 
-**Mot inconnu / gestion**
-- `Diambu dio ka nzebi a dio ko buabu.` = Je ne connais pas encore ce mot
-- `Mu tela ka ku bangurila mu lumputu.` = Demande-lui d'expliquer en français
-- `ntela / tu tela / ba tela` = dis-moi / dis-nous / dis-leur (/t/ palatal, /e:/ long)
-- `Diambu dio tshika wa longoka dio.` = Tu vas apprendre ce mot bientôt
+- **`mungua` → `mougnoua`** (override mot, pour /muⁿɡwa/).
+- **`ngie` → `ndjé`** (override mot, pour /ndje/) — actuellement seuls `nge`, `ngiena`, `ngiele` sont mappés.
+- **Liaisons obligatoires** : ajouter une règle de pré-traitement qui colle certains pairs en un seul bloc avant les autres règles :
+  - `nkumbu ani` → `nkumbouani`
+  - `nkumbu andi` → `nkumbouandi`
+  - `nkumbu aku` → `nkumbouaku`
+  Implémenté en tête de `preprocessForElevenLabs` via une table `LIAISONS` : `{ /\bnkumbu\s+ani\b/gi: 'nkumbouani', ... }`.
 
-**Changer de sujet / futur immédiat**
-- `Ta zonzela bima biaka.` / `Ta zonzela misamu miaka.` = Parlons d'autre chose
-- `Zonzeleno musamu ka / mambu maka / misamu miaka.` = Parlez d'autre chose
-- `Ba zonzela musamu ka / mambu maka.` = Qu'ils parlent d'autre chose
-- `Ta kala ku malongi meto.` / `Ta vutukila malongi meto.` = Revenons à notre leçon
-- `Vutukeno ku malongi meno.` / `Kaleno ku malongi meno.` = Revenez à votre leçon
-- `Mbo ta tala wo ntangu ka.` = On verra ça plus tard
-- `Mbo ta zonzela wo ntangu ka.` = On parlera de ça plus tard
+### 4. Interdire "langues bantoues" / "peuples bantous" dans le traducteur
+Dans `supabase/functions/translate-lari/index.ts`, ajouter au `SYSTEM_PROMPT` une interdiction explicite :
+> INTERDICTION ABSOLUE : Ne jamais utiliser les expressions "langue bantoue", "langues bantoues", "peuple bantou", "peuples bantous", ni le mot "bantou(e/s)" sous quelque forme que ce soit. Parler simplement de "langue kongo", "langue kikongo", "langue lari", ou "famille kongo".
 
-**Futur de ZONZA**
-- Aff : `mbo ni zonza`, `mbo zonza`, `mbo ka zonza`, `mbo tu zonza`, `mbo lu zonza`, `mbo ba zonza`
-- Nég : `ka ni zonza ko`, `ku zonza ko`, `ka zonza ko`, `ka tu zonza ko`, `ka lu zonza ko`, `ka ba zonza ko`
+Et corriger l'occurrence existante dans le code corpus : `src/data/lessons.ts` ligne 931–933 (`hint`, `hintFr`, `hintPt`) — remplacer "many Bantu languages" / "nombreuses langues bantoues" / "muitas línguas bantas" par "plusieurs langues de la famille kongo" (et équivalents EN/PT).
 
-**Méta-langage du professeur** (sans la phrase retirée précédemment)
-- `Lumbu tshi nki tu longoka ?` = C'est quoi la leçon du jour ?
-- `Tanga diambu di moshi di moshi.` = Lis chaque phrase
-- `Tanga nsangu zazi / zi / ji.` / `Tanga mambu ma.` / `Tanga diambu di.` = Lis cette information
-- `Bue ta tangila mazita ma ?` = Comment dis-tu ces syllabes ?
-- `Fulusa mambu ma nzuridi.` = Complète les questions suivantes
-- `Delakasa mambu ma nzuridi na mvutu zawu.` = Fais correspondre questions et réponses
-- `Wa / Wirikila mambu ma ni ta yula, hana mvutu.` = Écoute les questions et réponds
-- `Vutula / Hana mvutu zole keti tatu.` = Réponds en deux ou trois phrases
-- `Vutula mambu ma nzuridi.` = Réponds aux questions
-- `Tala bizidi bio, ta mi yirika / sa muna muntu muntu mbaji.` = Regarde les images et dis ce que chaque personne fera demain
-- `Sa ntangu yi fuanakane, sarila mpe nkumbu ji ba heni.` = Utilise le bon temps et les noms donnés
+### 5. Retirer "Falanse" du corpus
+Aucune occurrence détectée par `rg -i falanse` dans `supabase/functions/`, `src/`, `public/`. Rien à supprimer — je le confirmerai au moment de l'implémentation et passerai un grep final pour être sûr.
 
-**Vocabulaire**
-- `diambu/mambu` = mot/sujet/question, `nzuridi` (/ndjuridi/) = ce qui a été demandé
-- `lumputu` = français, `bangula` = expliquer, `tshika` = bientôt, `mbaji` = demain
-- `lolo` = aujourd'hui, `mutima/mitima` = cœur(s), `nlungu` = ennui, `yula` = demander
-- `muntu muntu` = chacun, `yirika` = faire/accomplir, `vutuka` = revenir, `kala` = retourner à
-- `mbo` = futur, `ntangu ka` = plus tard, `delakasa` = faire correspondre
+### 6. Ajouter les 3 JSON uploadés au prompt de Mbuta Matondo
+- Copier les fichiers uploadés vers `supabase/functions/_shared/` :
+  - `lecon_se_presenter.json` → `mbuta-lecon-se-presenter.json`
+  - `lecon_ku_nzari_mungua.json` → `mbuta-lecon-ku-nzari-mungua.json`
+  - `conjugaisons_zololo.json` → `mbuta-conjugaisons-zololo.json`
+- Dans `supabase/functions/_shared/mbuta-lecons.ts` : importer les 2 nouvelles leçons et les ajouter au tableau `LECONS` (ainsi elles entrent dans `MBUTA_LECONS` injecté côté serveur).
+- Pour les conjugaisons (format différent — pas une leçon, c'est un paradigme verbal) : ajouter une fonction `fmtConjugaison(c)` qui sérialise `affirmatif_present` / `negatif_present` / `interrogatif` / `affirmatif_manisa` en texte « fr = kikongo », et injecter ce bloc à la fin de la string exportée `MBUTA_LECONS` sous une section `=== PARADIGMES VERBAUX VALIDÉS ===`.
+- Côté client, ajouter aussi `lecon_se_presenter` et `lecon_ku_nzari_mungua` à la rotation `LECONS_DU_JOUR` dans `MbutaMatondoChat.tsx` pour qu'elles puissent être tirées comme leçon du jour.
+- **Note** : le JSON conjugaison contient `Mayela mpashi` (interdit). À l'import, je convertirai aussi cette occurrence en `Ni buna` côté fichier copié, conformément à la règle déjà mémorisée.
+- **Note 2** : `lecon_ku_nzari_mungua` contient `Mayela mpashi!` ligne 36 — même conversion en `Ni buna!`.
 
-## 2. Nouvelle leçon scriptée : LEÇON 3 — KANDA NA BANDIKU (Famille)
+### 7. Redéploiement
+Redéployer les edge functions modifiées : `mbuta-matondo`, `translate-lari`, `elevenlabs-tts-lari`.
 
-Ajouter une section `LECON_3_FAMILLE` au prompt avec :
-- Salutations : `Mbote mpangi. Nkumbu aku ani ?` / `Mbote kua nge mpangi.`
-- Famille : `nkazi` (frère, /nkaji/), `bushi/kibushi/tshibushi` (sœur), `yaya` (aîné, /a:/ longs), `mpangi` (cadet), `nduku` (ami)
-- Possessifs avec `nkumbu` (/u:/ long) : `nkumbu ani`, `nkumbu aku`, `nkumbu andi`, `nkumbu awu`
-- Présentation : `Nkumbu ani Mbuta Matondo.` / `Meno, Mbuta Matondo.`
-- Série `nduku ani / aku / andi`
-- Tests : `Yaya ni nki ?` / `Mpangi ni nki ?` avec feedback `Ni buna.`
-- Note culturelle aîné/cadet en français (Theo)
+---
 
-## 3. RÈGLE ABSOLUE durcie (remplace les règles Theo existantes)
+### Détails techniques
 
-> THEO NE PRONONCE ET N'ÉCRIT JAMAIS UN SEUL MOT EN KIKONGO LARI. Pas entre guillemets. Pas en exemple. Pas pour aider l'apprenant. Jamais. Si Theo doit faire référence à ce que Mbuta a dit, il dit uniquement "ce mot", "cette phrase", "ce que Mbuta vient de dire". Quand Theo doit guider l'apprenant pour répondre, il explique uniquement la logique en français. Exemple : "Mbuta vient de te demander ton nom. Pour répondre, utilise la même structure mais à la première personne — Mbuta te montrera la forme correcte."
+**Fusion de bulles (étape 2)** — pseudocode :
+```ts
+const merged: Block = blocks.reduce((acc, b) => ({
+  lari: acc.lari ? `${acc.lari} ${b.lari}` : b.lari,
+  fr:   acc.fr   ? `${acc.fr} ${b.fr}`   : b.fr,
+}), { lari: '', fr: '' });
+// rendre <MandombeBubble block={merged} ... /> au lieu du blocks.map
+```
 
-## 4. Post-filtre code sur les blocs `<theo>`
-
-Dans `supabase/functions/mbuta-matondo/index.ts`, intercepter le streaming SSE OpenAI et, à la volée (ou en buffer par segment `<theo>...</theo>`), appliquer un sanitizer sur le contenu de chaque bloc Theo avant ré-émission :
-
-```typescript
-function sanitizeTheo(text: string): string {
-  return text
-    // Supprime contenu entre guillemets droits/français/italiques markdown
-    .replace(/"[^"]*"/g, '')
-    .replace(/«[^»]*»/g, '')
-    .replace(/[""][^""]*[""]/g, '')
-    .replace(/\*[^*\n]+\*/g, '')
-    .replace(/_[^_\n]+_/g, '')
-    // Supprime phrases contenant déclencheurs
-    .split(/(?<=[.!?])\s+/)
-    .filter(s => !/\b(en Kikongo Lari|dit\s*:|réponds\s*:|repond\s*:)/i.test(s))
-    .join(' ')
-    .replace(/\s{2,}/g, ' ')
-    .trim();
+**Liaisons TTS (étape 3)** — appliquées AVANT les overrides de mots (sinon `nkumbu` est remplacé en isolation et la règle de liaison ne matche plus) :
+```ts
+const LIAISONS: Array<[RegExp, string]> = [
+  [/\bnkumbu\s+ani\b/gi, 'nkoumbouani'],
+  [/\bnkumbu\s+andi\b/gi, 'nkoumbouandi'],
+  [/\bnkumbu\s+aku\b/gi, 'nkoumbouaku'],
+];
+function preprocessForElevenLabs(text) {
+  let r = text;
+  for (const [re, to] of LIAISONS) r = r.replace(re, to);
+  // ... overrides + ELEVENLABS_RULES existants
 }
 ```
 
-Wrapping du flux : bufferiser jusqu'à la fermeture `</theo>`, sanitizer, ré-émettre comme deltas SSE. Les blocs `<lari>` (Mbuta) restent intacts.
+**Fichiers modifiés** (récapitulatif) :
+- `supabase/functions/_shared/mbuta-lecon-00.json`
+- `supabase/functions/_shared/mbuta-lecon-ku-nzari-mungua.json` (nouveau)
+- `supabase/functions/_shared/mbuta-lecon-se-presenter.json` (nouveau)
+- `supabase/functions/_shared/mbuta-conjugaisons-zololo.json` (nouveau)
+- `supabase/functions/_shared/mbuta-lecons.ts`
+- `supabase/functions/translate-lari/index.ts`
+- `supabase/functions/elevenlabs-tts-lari/index.ts`
+- `src/lib/lari-phonetic-engine.ts`
+- `src/components/MbutaMatondoChat.tsx`
+- `src/data/lessons.ts`
 
-**Note technique** : implémenter un parser d'état (`outside | inLari | inTheo`) sur le buffer concaténé, ne pas streamer caractère par caractère mais segment par segment pour permettre le filtrage, puis renvoyer chaque segment sanitisé en un chunk SSE unique.
-
-## 5. Overrides phonétiques TTS Lari
-
-Mettre à jour `src/lib/lari-phonetic-engine.ts` (ou table d'overrides g2p selon `mem://audio/tts-phonetics-g-logic`) :
-
-| Mot | Règle |
-|---|---|
-| `ntu` | bloc unique, pas de séparation /n/+/t/ |
-| `nse` | é ouvert sonore /nsɛ/ |
-| `lulabu` | /a/ très court, accent sur `la` |
-| `tshibanga` | /i:/ long |
-| `biyelo` | syllabation `bi.ye.lo`, jamais /bielo/ |
-| `hembo` / `mahembo` | /h/ doux à la française |
-| moustache | écrire `nzevo` (rendu /ndjevo/) |
-
-Ajout d'entrées dans la table de prononciation IPA/SSML (`mem://audio/ipa-ssml-table`).
-
-## 6. Déploiement
-
-`supabase--deploy_edge_functions(["mbuta-matondo"])` après édition.
-
-## Fichiers touchés
-- `supabase/functions/mbuta-matondo/index.ts` (corpus + leçon 3 + règle Theo + filtre code)
-- `src/lib/lari-phonetic-engine.ts` (overrides phonétiques)
-- `mem://grammar/...` : nouveau fichier `verb-zonza-future.md` + `meta-language-teacher.md` + update index
+Une fois le plan approuvé, je passe en mode build et j'exécute le tout d'un coup.
