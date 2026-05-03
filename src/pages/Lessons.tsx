@@ -7,6 +7,28 @@ import Footer from "@/components/Footer";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useTranslatedContent } from "@/hooks/useTranslatedContent";
 import LingalaMandombe from "@/components/LingalaMandombe";
+import familyKinshipIcon from "@/assets/family-kinship.png";
+
+const lessonIconImages: Record<string, string> = {
+  "termes-de-parente": familyKinshipIcon,
+};
+
+const renderLessonIcon = (lesson: { id: string; icon: string }, sizeClass = "w-14 h-14") => {
+  const img = lessonIconImages[lesson.id];
+  if (img) {
+    return (
+      <img
+        src={img}
+        alt=""
+        loading="lazy"
+        width={512}
+        height={512}
+        className={`${sizeClass} rounded-full object-cover ring-2 ring-gold/30`}
+      />
+    );
+  }
+  return <span className="text-4xl">{lesson.icon}</span>;
+};
 
 const levelColors = {
   beginner: "bg-green-500/10 text-green-700 border-green-500/30",
@@ -82,7 +104,7 @@ const Lessons = () => {
                   >
                     <div className="p-6">
                       <div className="flex items-start justify-between mb-4">
-                        <span className="text-4xl">{lesson.icon}</span>
+                        {renderLessonIcon(lesson)}
                         <span className={`text-xs font-medium px-2.5 py-1 rounded-full border ${levelColors[lesson.level]}`}>
                           {getLevelLabel(lesson.level)}
                         </span>
@@ -114,7 +136,7 @@ const Lessons = () => {
                 >
                   <div className="p-6">
                     <div className="flex items-start justify-between mb-4">
-                      <span className="text-4xl">{lesson.icon}</span>
+                      {renderLessonIcon(lesson)}
                       <span className={`text-xs font-medium px-2.5 py-1 rounded-full border ${levelColors[lesson.level]}`}>
                         {getLevelLabel(lesson.level)}
                       </span>
