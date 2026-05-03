@@ -28,6 +28,13 @@ Deno.serve(async (req) => {
         { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } });
     }
 
+    // Préserver "?" et "!" pour la prosodie ; ajouter "?" si question détectée sans ponctuation finale.
+    let speechText = String(text).trim();
+    if (speechText && !/[?!.]$/.test(speechText)) {
+      const isQuestion = /\b(qui|que|quoi|comment|pourquoi|où|quand|combien|est-ce|what|who|why|how|where|when|which|nani|bue|kue|nki)\b/i.test(speechText);
+      if (isQuestion) speechText += " ?";
+    }
+
     const isLingala = lang === "ln";
     const isKorean = lang === "ko";
     const voiceId = isLingala ? MBILIA_VOICE_ID : isKorean ? KOREAN_VOICE_ID : FRENCH_VOICE_ID;
