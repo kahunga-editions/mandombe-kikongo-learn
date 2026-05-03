@@ -81,6 +81,11 @@ const PHONETIC_OVERRIDES: Record<string, string> = {
   // En français, "j" + voyelle = /ʒ/ garanti. On garde la graphie "ji"
   // (PAS "gi" qui pouvait être lu /gi/ dur, ni "dji" qui donne /dʒ/).
   "mbaji": "mbaji",
+  // Djuna — /dzuna/ : affriquée /dz/ + "ou" français
+  "djuna": "dzouna",
+  "Djuna": "Dzouna",
+  "djunidi": "dzounidi",
+  "djunini": "dzounini",
   // Mungua — /muⁿɡwa/
   "mungua": "moungoua",
   "munguani": "moungouani",

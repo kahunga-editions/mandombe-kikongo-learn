@@ -215,6 +215,11 @@ const PHONETIC_OVERRIDES: Record<string, string> = {
   // Mbaji — /mbaʒi/ : "j" doux comme "Julien" en français (PAS /g/ dur).
   // En français, "j" + voyelle = /ʒ/ garanti.
   "mbaji": "mbaji",
+  // Djuna — /dzuna/ : affriquée /dz/ + "ou" français
+  "djuna": "dzouna",
+  "Djuna": "Dzouna",
+  "djunidi": "dzounidi",
+  "djunini": "dzounini",
   "munienge": "mounienghé", // /muniɛŋɡe/ — G dur sur la finale
   "munienghe": "mounienghé",// variante orthographique
   // Mungua — /muⁿɡwa/
