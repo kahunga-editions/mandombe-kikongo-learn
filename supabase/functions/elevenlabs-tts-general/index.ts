@@ -43,7 +43,7 @@ Deno.serve(async (req) => {
     console.log(`TTS: "${text.substring(0, 60)}" | lang: ${lang} | model: ${modelId} | voice: ${isLingala ? "Mbilia" : isKorean ? "Korean" : "French"}`);
 
     const body: Record<string, unknown> = {
-      text,
+      text: speechText,
       model_id: modelId,
       voice_settings: { stability: 0.5, similarity_boost: 0.75, style: 0.3, use_speaker_boost: true },
     };
