@@ -6,7 +6,11 @@ import leconEcole from "./mbuta-lecon-ecole.json" with { type: "json" };
 import leconHotel from "./mbuta-lecon-hotel.json" with { type: "json" };
 import leconSePresenter from "./mbuta-lecon-se-presenter.json" with { type: "json" };
 import leconKuNzariMungua from "./mbuta-lecon-ku-nzari-mungua.json" with { type: "json" };
+import leconKuZandu from "./mbuta-lecon-ku-zandu.json" with { type: "json" };
+import leconKuNzo from "./mbuta-lecon-ku-nzo.json" with { type: "json" };
+import leconNzoEmotions from "./mbuta-lecon-nzo-emotions.json" with { type: "json" };
 import conjZololo from "./mbuta-conjugaisons-zololo.json" with { type: "json" };
+import conjZololoManisa from "./mbuta-conjugaisons-zololo-manisa.json" with { type: "json" };
 
 type Reponse = { mbuta: string; correct: boolean };
 type Echange = {
@@ -46,10 +50,14 @@ const LECONS: Lecon[] = [
   leconHotel as unknown as Lecon,
   leconSePresenter as unknown as Lecon,
   leconKuNzariMungua as unknown as Lecon,
+  leconKuZandu as unknown as Lecon,
+  leconKuNzo as unknown as Lecon,
+  leconNzoEmotions as unknown as Lecon,
 ];
 
 const CONJUGAISONS: Conjugaison[] = [
   conjZololo as unknown as Conjugaison,
+  conjZololoManisa as unknown as Conjugaison,
 ];
 
 function fmtLecon(l: Lecon): string {
