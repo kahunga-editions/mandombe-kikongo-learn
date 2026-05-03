@@ -9,6 +9,7 @@ import leconKuNzariMungua from "./mbuta-lecon-ku-nzari-mungua.json" with { type:
 import leconKuZandu from "./mbuta-lecon-ku-zandu.json" with { type: "json" };
 import leconKuNzo from "./mbuta-lecon-ku-nzo.json" with { type: "json" };
 import leconNzoEmotions from "./mbuta-lecon-nzo-emotions.json" with { type: "json" };
+import leconNzoJournee from "./mbuta-lecon-nzo-journee.json" with { type: "json" };
 import conjZololo from "./mbuta-conjugaisons-zololo.json" with { type: "json" };
 import conjZololoManisa from "./mbuta-conjugaisons-zololo-manisa.json" with { type: "json" };
 
@@ -53,6 +54,7 @@ const LECONS: Lecon[] = [
   leconKuZandu as unknown as Lecon,
   leconKuNzo as unknown as Lecon,
   leconNzoEmotions as unknown as Lecon,
+  leconNzoJournee as unknown as Lecon,
 ];
 
 const CONJUGAISONS: Conjugaison[] = [
