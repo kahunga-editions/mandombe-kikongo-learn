@@ -1,0 +1,121 @@
+{
+  "lecon_id": "ku_zandu",
+  "titre_mbuta": "Ku Zandu",
+  "titre_subtitle": "Au marché",
+  "sources": ["corpus Nzo Mikanda", "Ntu Kanda"],
+  "ouverture": {
+    "mbuta": "Mbote! Turidi ku zandu.",
+    "subtitle": "Bonjour ! Tu arrives au marché."
+  },
+  "echanges": [
+    {
+      "id": "Z-01",
+      "type": "qcm",
+      "mbuta": "Bue ta kue munteki?",
+      "subtitle": "Que dis-tu au vendeur ?",
+      "reponses": [
+        { "mbuta": "Mbote.", "subtitle": "Bonjour.", "correct": true },
+        { "mbuta": "Matondo.", "subtitle": "Merci.", "correct": false },
+        { "mbuta": "Sala.", "subtitle": "Au revoir.", "correct": false }
+      ],
+      "reponse_correcte_mbuta": "Ni buna!",
+      "reponse_correcte_subtitle": "Très bien !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Mbote.",
+      "reponse_incorrecte_subtitle": "Essaie encore."
+    },
+    {
+      "id": "Z-02",
+      "type": "qcm",
+      "mbuta": "Ni buna! Manga na mankondi zololo sumba. Sola mvutu ya mbote.",
+      "subtitle": "Très bien ! Tu veux acheter des mangues et des bananes. Choisis la bonne réponse.",
+      "reponses": [
+        { "mbuta": "Manga na mankondi nzololo, mulemvuaku.", "subtitle": "Je voudrais des mangues et des bananes, s'il vous plaît.", "correct": true },
+        { "mbuta": "Dia ni ta dia buabu.", "subtitle": "Je mange maintenant.", "correct": false },
+        { "mbuta": "Ndjele.", "subtitle": "Je pars.", "correct": false }
+      ],
+      "reponse_correcte_mbuta": "Ni buna!",
+      "reponse_correcte_subtitle": "Très bien !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Manga na mankondi nzololo, mulemvuaku.",
+      "reponse_incorrecte_subtitle": "Essaie encore."
+    },
+    {
+      "id": "Z-03",
+      "type": "qcm",
+      "mbuta": "Ni buna! Munteki ka ta ku yula nki zololo. Bue ta?",
+      "subtitle": "Le vendeur te demande ce que tu veux. Que dis-tu ?",
+      "reponses": [
+        { "mbuta": "Mankondi zololo.", "subtitle": "Je voudrais des bananes.", "correct": true },
+        { "mbuta": "Ngana madia.", "subtitle": "Donne-moi à manger.", "correct": false },
+        { "mbuta": "Sala.", "subtitle": "Au revoir.", "correct": false }
+      ],
+      "reponse_correcte_mbuta": "Ni buna!",
+      "reponse_correcte_subtitle": "Très bien !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Mankondi zololo.",
+      "reponse_incorrecte_subtitle": "Essaie encore."
+    },
+    {
+      "id": "Z-04",
+      "type": "qcm",
+      "mbuta": "Ni buna! Ntalu zololo zaba. Sola mvutu ya mbote.",
+      "subtitle": "Tu veux connaître le prix. Choisis la bonne réponse.",
+      "reponses": [
+        { "mbuta": "Nkia ntalu? / Kuz me?", "subtitle": "Combien ça coûte ?", "correct": true },
+        { "mbuta": "Dia ni dia.", "subtitle": "Je vais manger.", "correct": false },
+        { "mbuta": "Matondo, sala.", "subtitle": "Merci, au revoir.", "correct": false }
+      ],
+      "reponse_correcte_mbuta": "Ni buna!",
+      "reponse_correcte_subtitle": "Très bien !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Nkia ntalu?",
+      "reponse_incorrecte_subtitle": "Essaie encore."
+    },
+    {
+      "id": "Z-05",
+      "type": "qcm",
+      "mbuta": "Ni buna! Ta banza ntalu yingi. Bue ta?",
+      "subtitle": "Tu trouves le prix trop cher. Que dis-tu ?",
+      "reponses": [
+        { "mbuta": "Ntalu yingi.", "subtitle": "C'est trop cher.", "correct": true },
+        { "mbuta": "Dia ni kuenda.", "subtitle": "Je veux partir manger.", "correct": false },
+        { "mbuta": "Mbote, matondo.", "subtitle": "Bonjour, merci.", "correct": false }
+      ],
+      "reponse_correcte_mbuta": "Ni buna!",
+      "reponse_correcte_subtitle": "Très bien !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Ntalu yingi.",
+      "reponse_incorrecte_subtitle": "Essaie encore."
+    },
+    {
+      "id": "Z-06",
+      "type": "qcm",
+      "mbuta": "Ni buna! Weka sumba. Bue ta?",
+      "subtitle": "Tu es d'accord pour acheter. Que dis-tu ?",
+      "reponses": [
+        { "mbuta": "Ni buna! Bonga nzeka bonga.", "subtitle": "D'accord, je prends.", "correct": true },
+        { "mbuta": "Ndjeka kuenda buabu.", "subtitle": "Je pars maintenant.", "correct": false },
+        { "mbuta": "Ngana.", "subtitle": "Donne-moi.", "correct": false }
+      ],
+      "reponse_correcte_mbuta": "Ni buna!",
+      "reponse_correcte_subtitle": "Très bien !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Ni buna! Bonga nzeka bonga.",
+      "reponse_incorrecte_subtitle": "Essaie encore."
+    },
+    {
+      "id": "Z-07",
+      "type": "qcm",
+      "mbuta": "Ni buna! Ni futa weka futa. Bue ta?",
+      "subtitle": "Tu veux payer. Que dis-tu ?",
+      "reponses": [
+        { "mbuta": "Ngela ni zauji.", "subtitle": "Voilà l'argent.", "correct": true },
+        { "mbuta": "Nguba ni ta dia.", "subtitle": "Je mange l'arachide.", "correct": false },
+        { "mbuta": "Sala.", "subtitle": "Au revoir.", "correct": false }
+      ],
+      "reponse_correcte_mbuta": "Ni buna!",
+      "reponse_correcte_subtitle": "Très bien !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Ngela ni zauji.",
+      "reponse_incorrecte_subtitle": "Essaie encore."
+    }
+  ],
+  "cloture": {
+    "mbuta": "Salu kia kibote! Bu zebi bu ba diatila ku zandu.",
+    "subtitle": "Très bon travail ! Tu sais maintenant te débrouiller au marché."
+  }
+}
