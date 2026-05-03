@@ -1096,7 +1096,7 @@ export const lessons: Lesson[] = [
       { lari: "Mbaji ku zandu NI kwenda", mandombe: "Mbaji ku zandu NI kwenda", french: "Demain j'irai au marché", english: "Tomorrow I will go to the market", portuguese: "Amanhã irei ao mercado" },
       { lari: "Mbaji ku Pointe-Noire nge kwiza", mandombe: "Mbaji ku Pointe-Noire nge kwiza", french: "Demain tu viendras à Pointe-Noire", english: "Tomorrow you will come to Pointe-Noire", portuguese: "Amanhã virás a Pointe-Noire" },
       { lari: "Mbaji ku nzo yandi lomba", mandombe: "Mbaji ku nzo yandi lomba", french: "Demain il/elle demandera à la maison", english: "Tomorrow he/she will ask at home", portuguese: "Amanhã ele/ela pedirá em casa" },
-      { lari: "Mbaji beto kwenda ku tshola", mandombe: "Mbaji beto kwenda ku tshola", french: "Demain nous irons à l'école", english: "Tomorrow we will go to school", portuguese: "Amanhã iremos à escola" },
+      { lari: "Mbaji ku tshola tu kwenda", mandombe: "Mbaji ku tshola tu kwenda", french: "Demain nous irons à l'école", english: "Tomorrow we will go to school", portuguese: "Amanhã iremos à escola" },
       { lari: "Duka wa dukidi mazono mu nkokela?", mandombe: "Duka wa dukidi mazono mu nkokela?", french: "Où es-tu sorti hier soir ?", english: "Where did you go out last night?", portuguese: "Onde saíste ontem à noite?" },
       { lari: "Mbo wa ntambila mu pari?", mandombe: "Mbo wa ntambila mu pari?", french: "Où vas-tu de bonne heure le matin ?", english: "Where do you go early in the morning?", portuguese: "Onde vais de manhã cedo?" },
     ],
