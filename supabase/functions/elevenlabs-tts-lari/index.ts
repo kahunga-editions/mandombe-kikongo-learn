@@ -73,9 +73,9 @@ const PHONETIC_OVERRIDES: Record<string, string> = {
   "wa": "waa",
   "nsi": "tsii",
   "nkia": "ntshia",
-  // Nge / Ngie — G dur + affriquée prénasalisée
+  // Nge — G dur. ATTENTION : "ngie" → /ndje/ UNIQUEMENT dans ngiena/ngiele
+  // (gérés via les overrides word-level). Pas de règle générale "ngie → ndje".
   "nge": "nghé",
-  "ngie": "ndjé",           // /ndje/
   "nzeka": "ndjeka",        // /ndjeka/
   // Mbaji — /mbaʒi/ : "j" doux comme "Julien" en français.
   // En français, "j" + voyelle = /ʒ/ garanti. On garde la graphie "ji"
