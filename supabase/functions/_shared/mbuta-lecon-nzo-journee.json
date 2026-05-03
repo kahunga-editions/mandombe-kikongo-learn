@@ -1,0 +1,136 @@
+{
+  "lecon_id": "nzo_journee",
+  "titre_mbuta": "Ku Nzo — Lumbu",
+  "titre_subtitle": "À la maison — Une journée",
+  "sources": ["corpus utilisateur validé"],
+  "ouverture": {
+    "mbuta": "Turidi ku nzo. Nsayi ye naku.",
+    "subtitle": "Tu arrives à la maison. Tu es content."
+  },
+  "echanges": [
+    {
+      "id": "J-01",
+      "type": "qcm",
+      "mbuta": "Mama : Mbote. Bue ta?",
+      "subtitle": "Maman : Bonjour ! Que dis-tu ?",
+      "reponses": [
+        { "mbuta": "Mbote Mama.", "subtitle": "Bonjour maman.", "correct": true },
+        { "mbuta": "Nsayi ye nawu.", "subtitle": "Elles sont contentes.", "correct": false },
+        { "mbuta": "Ba turidi.", "subtitle": "Ils arrivent.", "correct": false }
+      ],
+      "reponse_correcte_mbuta": "Ni buna!",
+      "reponse_correcte_subtitle": "Très bien !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Mbote Mama.",
+      "reponse_incorrecte_subtitle": "Essaie encore."
+    },
+    {
+      "id": "J-02",
+      "type": "qcm",
+      "mbuta": "Zonzele lumbu tshaku. Nsayi ye naku. Mama : Lumbu tshaku bubote tshi yokele? Bue ta?",
+      "subtitle": "Tu racontes ta journée. Tu es content. Maman : Ta journée s'est bien passée ? Que réponds-tu ?",
+      "reponses": [
+        { "mbuta": "Nsayi ye nani.", "subtitle": "Oui, je suis content.", "correct": true },
+        { "mbuta": "Ku nzo mikanda ngiele.", "subtitle": "Je vais à l'école.", "correct": false },
+        { "mbuta": "Na ndiku zani ni ta dia.", "subtitle": "Je mange avec mes amis.", "correct": false }
+      ],
+      "reponse_correcte_mbuta": "Ni buna!",
+      "reponse_correcte_subtitle": "Très bien !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Nsayi ye nani.",
+      "reponse_incorrecte_subtitle": "Essaie encore."
+    },
+    {
+      "id": "J-03",
+      "type": "qcm",
+      "mbuta": "Nsatu ye naku buaubu. Sola mvutu ya mbote.",
+      "subtitle": "Tu as faim maintenant. Choisis la bonne phrase.",
+      "reponses": [
+        { "mbuta": "Nsatu ye nani.", "subtitle": "J'ai faim.", "correct": true },
+        { "mbuta": "Tolo tue nani.", "subtitle": "J'ai sommeil.", "correct": false },
+        { "mbuta": "Buku die nani.", "subtitle": "J'ai un livre.", "correct": false }
+      ],
+      "reponse_correcte_mbuta": "Ni buna!",
+      "reponse_correcte_subtitle": "Très bien !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Nsatu ye nani.",
+      "reponse_incorrecte_subtitle": "Essaie encore."
+    },
+    {
+      "id": "J-04",
+      "type": "qcm",
+      "mbuta": "Mpangi aku ya bakala bongele madia maku. Nkeshi ji ku bakiri. Mpangi : Mbongele mo! Bue ta?",
+      "subtitle": "Ton frère prend ton goûter. Tu es fâché. Frère : Je prends ça ! Que dis-tu ?",
+      "reponses": [
+        { "mbuta": "Ngo nguani, ma meno.", "subtitle": "Non, c'est à moi.", "correct": true },
+        { "mbuta": "Bonga mo.", "subtitle": "Oui, prends-le.", "correct": false },
+        { "mbuta": "Matondo ma mo.", "subtitle": "Merci beaucoup.", "correct": false }
+      ],
+      "reponse_correcte_mbuta": "Ni buna!",
+      "reponse_correcte_subtitle": "Très bien !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Ngo nguani, ma meno.",
+      "reponse_incorrecte_subtitle": "Essaie encore."
+    },
+    {
+      "id": "J-05",
+      "type": "qcm",
+      "mbuta": "Nguri aku hu lu hambase. Djuna. Mama : Djuna. Bue ta?",
+      "subtitle": "Ta mère intervient. Tu te calmes. Maman : Calme-toi. Que réponds-tu ?",
+      "reponses": [
+        { "mbuta": "Kua nguiri.", "subtitle": "D'accord.", "correct": true },
+        { "mbuta": "Nsayi ya yingi ye nani.", "subtitle": "Je suis très content.", "correct": false },
+        { "mbuta": "Duka ni duka.", "subtitle": "Je vais sortir.", "correct": false }
+      ],
+      "reponse_correcte_mbuta": "Ni buna!",
+      "reponse_correcte_subtitle": "Très bien !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Kua nguiri.",
+      "reponse_incorrecte_subtitle": "Essaie encore."
+    },
+    {
+      "id": "J-06",
+      "type": "qcm",
+      "mbuta": "Ha manima ma dia, mukolo we naku. Mama : Mukolo we naku? Bue ta?",
+      "subtitle": "Après manger, tu es fatigué. Maman : Tu es fatigué ? Que réponds-tu ?",
+      "reponses": [
+        { "mbuta": "Heee, mukolo we nani.", "subtitle": "Oui, je suis fatigué.", "correct": true },
+        { "mbuta": "Ku nzo ngie.", "subtitle": "Je suis à la maison.", "correct": false },
+        { "mbuta": "Kitari tsha binsinsia ni ta tala.", "subtitle": "Je regarde la télévision.", "correct": false }
+      ],
+      "reponse_correcte_mbuta": "Ni buna!",
+      "reponse_correcte_subtitle": "Très bien !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Heee, mukolo we nani.",
+      "reponse_incorrecte_subtitle": "Essaie encore."
+    },
+    {
+      "id": "J-07",
+      "type": "qcm",
+      "mbuta": "Zololo we wa seka. Wa djuna we. Sola mvutu ya mbote.",
+      "subtitle": "Tu veux aller dormir. Tu es calme. Choisis la bonne phrase.",
+      "reponses": [
+        { "mbuta": "Ngiele seka.", "subtitle": "Je vais dormir.", "correct": true },
+        { "mbuta": "Ngiele sakana.", "subtitle": "Je vais jouer.", "correct": false },
+        { "mbuta": "Dia ni dia.", "subtitle": "Je vais manger.", "correct": false }
+      ],
+      "reponse_correcte_mbuta": "Ni buna!",
+      "reponse_correcte_subtitle": "Très bien !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Ngiele seka.",
+      "reponse_incorrecte_subtitle": "Essaie encore."
+    },
+    {
+      "id": "J-08",
+      "type": "qcm",
+      "mbuta": "Ta saleno ntete wa seka. Bue ta?",
+      "subtitle": "Tu dis au revoir avant de dormir. Que dis-tu ?",
+      "reponses": [
+        { "mbuta": "Mpimpa ya mbote.", "subtitle": "Bonne nuit.", "correct": true },
+        { "mbuta": "Ba sekele.", "subtitle": "Ils dorment.", "correct": false },
+        { "mbuta": "Ka tu sekele a ko.", "subtitle": "Nous ne dormons pas.", "correct": false }
+      ],
+      "reponse_correcte_mbuta": "Ni buna!",
+      "reponse_correcte_subtitle": "Très bien !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Mpimpa ya mbote.",
+      "reponse_incorrecte_subtitle": "Essaie encore."
+    }
+  ],
+  "cloture": {
+    "mbuta": "Salu kia kibote!",
+    "subtitle": "Très bon travail !"
+  }
+}
