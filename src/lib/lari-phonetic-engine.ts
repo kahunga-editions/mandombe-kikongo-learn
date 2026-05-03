@@ -212,9 +212,9 @@ const PHONETIC_OVERRIDES: Record<string, string> = {
   "nge": "nghé",            // /ŋɡe/ — G dur, jamais /nʒe/
   "ngie": "ndjé",           // /ndje/ — affriquée prénasalisée /ndʒe/
   "nzeka": "ndjeka",        // /ndjeka/
-  // Mbaji — /ʒi/ fricative comme "Julien" (PAS /dʒi/ anglais)
-  // "gi" en français = /ʒi/ (cf. "Régi"), évite l'affriquée
-  "mbaji": "mbagi",
+  // Mbaji — /mbaʒi/ : "j" doux comme "Julien" en français (PAS /g/ dur).
+  // En français, "j" + voyelle = /ʒ/ garanti.
+  "mbaji": "mbaji",
   "munienge": "mounienghé", // /muniɛŋɡe/ — G dur sur la finale
   "munienghe": "mounienghé",// variante orthographique
   // Mungua — /muⁿɡwa/
