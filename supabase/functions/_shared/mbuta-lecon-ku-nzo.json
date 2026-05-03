@@ -1,0 +1,136 @@
+{
+  "lecon_id": "ku_nzo",
+  "titre_mbuta": "Ku Nzo",
+  "titre_subtitle": "À la maison",
+  "sources": ["corpus Nzo Mikanda", "Ntu Kanda"],
+  "ouverture": {
+    "mbuta": "Mbote! Ku nzo we.",
+    "subtitle": "Bonjour ! Tu es à la maison."
+  },
+  "echanges": [
+    {
+      "id": "N-01",
+      "type": "qcm",
+      "mbuta": "Bue ta kue bantu be mu nzo aku mu pari?",
+      "subtitle": "Que dis-tu à ta famille le matin ?",
+      "reponses": [
+        { "mbuta": "Mbote.", "subtitle": "Bonjour.", "correct": true },
+        { "mbuta": "Mpimpa ya mbote.", "subtitle": "Bonne nuit.", "correct": false },
+        { "mbuta": "Mbaji kua.", "subtitle": "À demain.", "correct": false }
+      ],
+      "reponse_correcte_mbuta": "Ni buna!",
+      "reponse_correcte_subtitle": "Très bien !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Mbote.",
+      "reponse_incorrecte_subtitle": "Essaie encore."
+    },
+    {
+      "id": "N-02",
+      "type": "qcm",
+      "mbuta": "Ni buna! Zololo wa ta ku we. Sola mvutu ya mbote.",
+      "subtitle": "Tu veux dire où tu es. Choisis la bonne phrase.",
+      "reponses": [
+        { "mbuta": "Ku nzo ndje.", "subtitle": "Je suis à la maison.", "correct": true },
+        { "mbuta": "Ku nzo ni kuenda.", "subtitle": "Je vais à la maison.", "correct": false },
+        { "mbuta": "Nkatukiri ku nzo.", "subtitle": "Je quitte la maison.", "correct": false }
+      ],
+      "reponse_correcte_mbuta": "Ni buna!",
+      "reponse_correcte_subtitle": "Très bien !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Ku nzo ndje.",
+      "reponse_incorrecte_subtitle": "Essaie encore."
+    },
+    {
+      "id": "N-03",
+      "type": "qcm",
+      "mbuta": "Zololo wa zakala. Bue ta?",
+      "subtitle": "Tu veux t'asseoir. Que dis-tu ?",
+      "reponses": [
+        { "mbuta": "Zakala ni ta zakala.", "subtitle": "Je m'assieds.", "correct": true },
+        { "mbuta": "Seka ni ta seka.", "subtitle": "Je dors.", "correct": false },
+        { "mbuta": "Duka ni ta duka.", "subtitle": "Je sors.", "correct": false }
+      ],
+      "reponse_correcte_mbuta": "Ni buna!",
+      "reponse_correcte_subtitle": "Très bien !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Zakala ni ta zakala.",
+      "reponse_incorrecte_subtitle": "Essaie encore."
+    },
+    {
+      "id": "N-04",
+      "type": "qcm",
+      "mbuta": "Ni buna! Zololo wa dia. Sola mvutu ya mbote.",
+      "subtitle": "Tu veux manger. Choisis la bonne phrase.",
+      "reponses": [
+        { "mbuta": "Dia ni ta dia.", "subtitle": "Je mange.", "correct": true },
+        { "mbuta": "Tala ni ta tala.", "subtitle": "Je regarde.", "correct": false },
+        { "mbuta": "Ka ni dia ka kio ko.", "subtitle": "Je ne mange pas ça.", "correct": false }
+      ],
+      "reponse_correcte_mbuta": "Ni buna!",
+      "reponse_correcte_subtitle": "Très bien !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Dia ni ta dia.",
+      "reponse_incorrecte_subtitle": "Essaie encore."
+    },
+    {
+      "id": "N-05",
+      "type": "qcm",
+      "mbuta": "Na muntu ta zonza mu nzo. Bue ta mu bokila muntu yoyo?",
+      "subtitle": "Tu parles à quelqu'un dans la maison. Que dis-tu pour appeler cette personne ?",
+      "reponses": [
+        { "mbuta": "Yiza ku, mulemvuaku.", "subtitle": "Viens ici, s'il te plaît.", "correct": true },
+        { "mbuta": "Seka nzeka seka.", "subtitle": "Je vais dormir maintenant.", "correct": false },
+        { "mbuta": "Kela mbaji.", "subtitle": "Attends demain.", "correct": false }
+      ],
+      "reponse_correcte_mbuta": "Ni buna! Zololo we wa wuma.",
+      "reponse_correcte_subtitle": "Parfait, tu veux aller te reposer.",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Yiza ku, mulemvuaku.",
+      "reponse_incorrecte_subtitle": "Essaie encore."
+    },
+    {
+      "id": "N-06",
+      "type": "qcm",
+      "mbuta": "Ni buna! Zololo wa wuma. Sola mvutu ya mbote.",
+      "subtitle": "Tu veux te reposer. Choisis la bonne réponse.",
+      "reponses": [
+        { "mbuta": "Wuma ni ta wuma.", "subtitle": "Je me repose.", "correct": true },
+        { "mbuta": "Sala ni ta sala.", "subtitle": "Je travaille.", "correct": false },
+        { "mbuta": "Lamba ni ta lamba.", "subtitle": "Je cuisine.", "correct": false }
+      ],
+      "reponse_correcte_mbuta": "Ni buna!",
+      "reponse_correcte_subtitle": "Très bien !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Wuma ni ta wuma.",
+      "reponse_incorrecte_subtitle": "Essaie encore."
+    },
+    {
+      "id": "N-07",
+      "type": "qcm",
+      "mbuta": "Ni buna! Zololo wa seka. Bue ta?",
+      "subtitle": "Tu veux aller dormir. Que dis-tu ?",
+      "reponses": [
+        { "mbuta": "Seka ni seka.", "subtitle": "Je vais dormir.", "correct": true },
+        { "mbuta": "Duka ni duka.", "subtitle": "Je vais sortir.", "correct": false },
+        { "mbuta": "Djoka ni djoka.", "subtitle": "Je vais courir.", "correct": false }
+      ],
+      "reponse_correcte_mbuta": "Ni buna!",
+      "reponse_correcte_subtitle": "Très bien !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Seka ni seka.",
+      "reponse_incorrecte_subtitle": "Essaie encore."
+    },
+    {
+      "id": "N-08",
+      "type": "qcm",
+      "mbuta": "Ni buna! Manishi lumbu tshaku. Bue ta?",
+      "subtitle": "Tu termines ta journée. Que dis-tu ?",
+      "reponses": [
+        { "mbuta": "Mpimpa ya mbote.", "subtitle": "Bonne nuit.", "correct": true },
+        { "mbuta": "Mbote.", "subtitle": "Bonjour.", "correct": false },
+        { "mbuta": "Matondo ma mingi.", "subtitle": "Merci beaucoup.", "correct": false }
+      ],
+      "reponse_correcte_mbuta": "Ni buna!",
+      "reponse_correcte_subtitle": "Très bien !",
+      "reponse_incorrecte_mbuta": "Kani... Vutu yela. Mpimpa ya mbote.",
+      "reponse_incorrecte_subtitle": "Essaie encore."
+    }
+  ],
+  "cloture": {
+    "mbuta": "Salu kia kibote!",
+    "subtitle": "Très bon travail !"
+  }
+}

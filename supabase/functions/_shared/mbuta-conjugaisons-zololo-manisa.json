@@ -1,0 +1,30 @@
+{
+  "verbe": "ZOLOLO MANISA MU ZONZA",
+  "traduction": "vouloir terminer la conversation",
+  "source": "corpus Nzo Mikanda",
+  "paradigmes": {
+    "affirmatif_present": [
+      { "fr": "Je veux terminer la conversation", "kikongo": "Nzololo wa manisa mu zonza" },
+      { "fr": "Il/Elle veut terminer la conversation", "kikongo": "Zololo ka manisa mu zonza" },
+      { "fr": "Nous voulons terminer la conversation", "kikongo": "Tu zololo ta manisa mu zonza" },
+      { "fr": "Vous voulez terminer la conversation", "kikongo": "Lu zololo lua manisa mu zonza" },
+      { "fr": "Ils/Elles veulent terminer la conversation", "kikongo": "Ba zololo ba manisa mu zonza" }
+    ],
+    "negatif_present": [
+      { "fr": "Je ne veux pas terminer la conversation", "kikongo": "Ka nzololo a ko na manisa mu zonza" },
+      { "fr": "Tu ne veux pas terminer la conversation", "kikongo": "Ku zololo a ko wa manisa mu zonza" },
+      { "fr": "Elle ne veut pas terminer la conversation", "kikongo": "Ka zololo a ko ka manisa mu zonza" },
+      { "fr": "Nous ne voulons pas terminer la conversation", "kikongo": "Ka tu zololo a ko ta manisa mu zonza" },
+      { "fr": "Vous ne voulez pas terminer la conversation", "kikongo": "Ka lu zololo a ko lua manisa mu zonza" },
+      { "fr": "Ils ne veulent pas terminer la conversation", "kikongo": "Ka ba zololo a ko ba manisa mu zonza" }
+    ],
+    "interrogatif_present": [
+      { "fr": "Est-ce que je veux terminer la conversation ?", "kikongo": "Nzololo na manisa mu zonza?" },
+      { "fr": "Est-ce que tu veux terminer la conversation ?", "kikongo": "Zololo wa manisa mu zonza?" },
+      { "fr": "Est-ce qu'elle veut terminer la conversation ?", "kikongo": "Zololo ka manisa mu zonza?" },
+      { "fr": "Est-ce que nous voulons terminer la conversation ?", "kikongo": "Tu zololo tua manisa mu zonza?" },
+      { "fr": "Est-ce que vous voulez terminer la conversation ?", "kikongo": "Lu zololo lua manisa mu zonza?" },
+      { "fr": "Est-ce qu'ils veulent terminer la conversation ?", "kikongo": "Ba zololo ba manisa mu zonza?" }
+    ]
+  }
+}
