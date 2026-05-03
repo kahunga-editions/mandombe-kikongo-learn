@@ -256,8 +256,15 @@ Deno.serve(async (req) => {
 
     const selectedVoice = voiceId || DEFAULT_VOICE_ID;
     const processedText = preprocessForElevenLabs(text);
-    // Strip non-speech characters and check for empty result
-    const cleanedText = processedText.replace(/[\[\]?{}()<>]/g, '').trim();
+    // Strip non-speech characters but PRESERVE "?" and "!" for prosody
+    // (question mark = montée d'intonation finale, exclamation = emphase).
+    let cleanedText = processedText.replace(/[\[\]{}()<>]/g, '').trim();
+    // Si la phrase ressemble à une question (mots interrogatifs Lari/FR) et n'a pas de "?",
+    // en ajouter un pour forcer la montée intonative finale.
+    if (cleanedText && !/[?!.]$/.test(cleanedText)) {
+      const isQuestion = /\b(bue|nani|kue|nki|kani|inki|nkia|que|qui|comment|pourquoi|où|quand|combien|est-ce|quoi)\b/i.test(cleanedText);
+      if (isQuestion) cleanedText += ' ?';
+    }
     if (!cleanedText) {
       return new Response(
         JSON.stringify({ error: "Text contains no speakable content" }),
