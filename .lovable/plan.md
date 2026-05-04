@@ -1,68 +1,45 @@
-## 1. Correction TTS — « zingi » avec G dur
+## Pilote — 1 grille de mots croisés interactive avec Mandombe
 
-**Constat**
-La règle générale `ngi → nghi` existe déjà dans `supabase/functions/elevenlabs-tts-lari/index.ts`, mais ElevenLabs continue parfois à palataliser quand le `ngi` est précédé d'une voyelle dans un mot court fréquent comme « zingi ». Pour les mots à problème connus, on ajoute déjà des overrides explicites (ex : `mpangi → mpan-ghi`).
+Confirmé : pages 39 (énoncé) + 40 (solution) contiennent bien grille + définitions FR + illustration + réponses Mandombe. Réponses validées par toi :
 
-**Action**
-- Ajouter dans la liste des overrides word-level :
-  - `zingi → zin-ghi`
-  - `bizingi → bi-zin-ghi`
-  - `nzingi → nzin-ghi`
-- Ajouter une note de mémoire dans `.lovable/memory/audio/` (règle G dur pour la famille « zingi »).
-- Redéployer `elevenlabs-tts-lari`.
-
-Test rapide après déploiement avec « Mbote za zingi » pour valider.
-
-## 2. Mots croisés interactifs depuis PDF — Oui, c'est faisable
-
-**Réponse courte** : oui, je peux générer des mots croisés interactifs respectant exactement la grille du PDF, à condition d'extraire fiablement : (a) la grille (positions des cases noires/blanches et numérotation), (b) la liste des définitions horizontales/verticales en français, (c) les réponses en Lari, (d) les illustrations associées.
-
-**Le PDF fourni** fait 78 pages, généré par LibreOffice Draw, sans couche texte exploitable directement (`pdftotext` ne renvoie quasi rien). Il faudra donc passer par une extraction visuelle (OCR + lecture de grille) page par page.
-
-### Pipeline proposé
-
-```text
-PDF → split par page → pour chaque planche :
-  1. Détection grille (OpenCV) → matrice {noir, blanc, numéro}
-  2. OCR définitions (FR) + réponses (Lari) via Lovable AI (Gemini vision)
-  3. Extraction illustrations → src/assets/crosswords/
-  4. JSON normalisé { id, titre, grille, mots:[{num,dir,def,reponse,image?}] }
-→ stockage : supabase/functions/_shared/crosswords/<id>.json
-→ composant React réutilisant CrosswordPuzzle existant (src/components/exercises/CrosswordPuzzle.tsx)
+```
+HORIZONTAL                          VERTICAL
+4. homme               → BAKALA     1. argent          → NGELA
+5. femme               → MUKENTO    2. hommes          → BAKALA
+7. gagner, attraper    → BAKA       3. femmes          → BAKENTO
+                                    6. refuser, nier   → KALA
 ```
 
-### Schéma JSON cible
+On fait **uniquement cette grille pilote**. Si le rendu te convient, on industrialise ensuite. Sinon on s'arrête là, zéro perte.
 
-```json
-{
-  "id": "mc-01-famille",
-  "titre": "Mots croisés - La famille",
-  "rows": 10, "cols": 10,
-  "grid": [[".","#","A",...]],
-  "clues": {
-    "across": [{ "num": 1, "row": 0, "col": 0, "answer": "TAATA", "clue_fr": "Père", "clue_image": "/assets/crosswords/mc01/pere.png" }],
-    "down":   [{ "num": 1, "row": 0, "col": 0, "answer": "TATA", "clue_fr": "..." }]
-  }
-}
-```
+## Étapes
 
-### Intégration UI
+1. **Étendre `CrosswordPuzzle.tsx`**
+   - support grille rectangulaire (`gridRows` + `gridCols`, pas seulement carrée)
+   - rendu Mandombe à côté de chaque définition FR (`font-mandombe`, sans accents)
+   - illustration optionnelle sous la grille
+   - bouton 🔊 par mot via `MandombeSpeaker` (TTS Lari existant, déjà patché pour G dur)
+   - persistance localStorage (clé `crossword.<id>`)
 
-- Nouvelle page `/mots-croises` (liste) + `/mots-croises/:id` (jeu).
-- Réutilise et étend `CrosswordPuzzle.tsx` : support grille rectangulaire arbitraire, indices avec image+texte, validation case par case, audio Lari de la réponse via `MandombeSpeaker`/`elevenlabs-tts-lari`, score & objectif (même logique que Mbuta).
-- Entrée admin pour téléverser un nouveau PDF, lancer l'extraction, prévisualiser et corriger la grille avant publication.
+2. **Données pilote** : `src/data/crosswords/mc-01-bakala.ts` avec les 7 mots ci-dessus, coordonnées calées sur la grille image-40.
 
-### Étapes d'implémentation après ton OK
+3. **Illustration** : extraite de l'image-39 → `src/assets/crosswords/mc-01-bakala.png` (homme en costume, déjà conforme à la charte Black Congolese).
 
-1. Patch TTS « zingi ».
-2. Script d'extraction `scripts/extract-crossword-pdf.ts` (OpenCV + Gemini vision via gateway) — exécuté hors-app, sortie = JSON + assets.
-3. Lancer extraction sur le PDF fourni (78 pages → ~plusieurs grilles), QA visuelle planche par planche, corrections manuelles.
-4. Refacto `CrosswordPuzzle` pour grilles libres + indices image.
-5. Pages `/mots-croises` + admin upload + persistance progression (localStorage par grille).
+4. **Route démo** : `/mots-croises/pilote` accessible depuis un lien temporaire dans la navbar.
 
-### Ce dont j'ai besoin de toi avant l'étape 2
+5. **QA** : je vérifie que la grille rendue correspond pixel à pixel à l'image-40 (placement des cases noires/blanches, numérotation 1–7).
 
-- Confirmation que le PDF contient bien grille + définitions + réponses + illustrations sur les mêmes pages (pour que l'OCR fasse tout en une passe).
-- Préférence : génère **toutes** les grilles du PDF d'un coup, ou commence par 1–2 planches pilotes pour valider la qualité avant de passer à l'échelle ?
+## Hors scope (à décider après le pilote)
 
-Dis-moi si je pars sur (A) juste le fix TTS maintenant et on traite les mots croisés ensuite, ou (B) tout enchaîné dans la même passe.
+- Pipeline OCR/vision pour les 77 autres planches du PDF
+- Page liste `/mots-croises`
+- Admin upload PDF
+- Appariement automatique énoncé ↔ solution sur tout le PDF
+
+## Livrable
+
+URL `/mots-croises/pilote` que tu juges sur :
+- fidélité visuelle à la grille du PDF
+- lisibilité du Mandombe à côté des définitions FR
+- audio + saisie + score
+→ décision GO/NO-GO pour les 77 planches restantes.
