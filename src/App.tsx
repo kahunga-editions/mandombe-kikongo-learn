@@ -22,7 +22,7 @@ const AdminAnalytics = lazy(() => import("./pages/AdminAnalytics"));
 const MbutaMatondo = lazy(() => import("./pages/MbutaMatondo"));
 const Privacy = lazy(() => import("./pages/Privacy"));
 const Mvita = lazy(() => import("./pages/Mvita"));
-const MotsCroisesPilote = lazy(() => import("./pages/MotsCroisesPilote"));
+
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const routeFallback = (
