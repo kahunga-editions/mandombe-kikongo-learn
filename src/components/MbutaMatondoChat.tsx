@@ -280,6 +280,14 @@ const MbutaMatondoChat = () => {
   const [audioDurations, setAudioDurations] = useState<Map<number, number>>(new Map());
   const [isRecording, setIsRecording] = useState(false);
   const [isTranscribing, setIsTranscribing] = useState(false);
+  const [goalPct, setGoalPct] = useState<number>(() => {
+    const v = typeof window !== "undefined" ? window.localStorage.getItem("mbuta.goalPct") : null;
+    return v ? parseInt(v, 10) : 80;
+  });
+  const [goalCelebrated, setGoalCelebrated] = useState(false);
+  useEffect(() => {
+    if (typeof window !== "undefined") window.localStorage.setItem("mbuta.goalPct", String(goalPct));
+  }, [goalPct]);
 
   // Admin correction dialog
   const [editing, setEditing] = useState<{ block: Block } | null>(null);
@@ -570,25 +578,57 @@ const MbutaMatondoChat = () => {
           else if (v === "wrong") wrong++;
         });
         const answered = correct + wrong;
-        const pct = totalQcm > 0 ? Math.round((answered / totalQcm) * 100) : 0;
+        const successPct = answered > 0 ? Math.round((correct / answered) * 100) : 0;
+        const goalReached = answered >= 3 && successPct >= goalPct;
+        if (goalReached && !goalCelebrated) {
+          setTimeout(() => setGoalCelebrated(true), 0);
+          setTimeout(() => toast({ title: "🎉 Objectif atteint !", description: `${successPct}% de réussite (objectif ${goalPct}%)` }), 50);
+        }
         if (totalQcm === 0) return null;
         return (
           <div className="px-4 py-2 border-b border-gold/10 space-y-1.5">
-            <div className="flex items-center justify-between text-xs text-cream/70">
+            <div className="flex items-center justify-between text-xs text-cream/70 gap-3 flex-wrap">
               <span>
                 Progression : <span className="text-gold font-semibold">{answered}/{totalQcm}</span>
+                {answered > 0 && (
+                  <span className="ml-2">
+                    Réussite : <span className={goalReached ? "text-emerald-400 font-semibold" : "text-gold font-semibold"}>{successPct}%</span>
+                  </span>
+                )}
               </span>
               <span className="flex items-center gap-3">
                 <span className="text-emerald-400">✓ {correct}</span>
                 <span className="text-red-400">✗ {wrong}</span>
+                <label className="flex items-center gap-1 text-cream/50">
+                  Objectif
+                  <select
+                    value={goalPct}
+                    onChange={(e) => { setGoalPct(parseInt(e.target.value, 10)); setGoalCelebrated(false); }}
+                    className="bg-muted/30 border border-gold/20 rounded px-1 py-0.5 text-xs text-cream"
+                  >
+                    {[50, 60, 70, 80, 90, 100].map((g) => (
+                      <option key={g} value={g}>{g}%</option>
+                    ))}
+                  </select>
+                </label>
               </span>
             </div>
-            <div className="h-1.5 w-full rounded-full bg-muted/30 overflow-hidden">
+            <div className="relative h-1.5 w-full rounded-full bg-muted/30 overflow-hidden">
               <div
-                className="h-full bg-gradient-to-r from-gold/60 to-gold transition-all"
-                style={{ width: `${pct}%` }}
+                className={`h-full transition-all ${goalReached ? "bg-gradient-to-r from-emerald-500/70 to-emerald-400" : "bg-gradient-to-r from-gold/60 to-gold"}`}
+                style={{ width: `${answered > 0 ? successPct : 0}%` }}
+              />
+              <div
+                className="absolute top-0 bottom-0 w-px bg-cream/60"
+                style={{ left: `${goalPct}%` }}
+                title={`Objectif ${goalPct}%`}
               />
             </div>
+            {goalReached && (
+              <div className="text-[11px] text-emerald-400 font-semibold">
+                🎉 Objectif atteint — {successPct}% de réussite !
+              </div>
+            )}
           </div>
         );
       })()}
