@@ -280,14 +280,28 @@ const MbutaMatondoChat = () => {
   const [audioDurations, setAudioDurations] = useState<Map<number, number>>(new Map());
   const [isRecording, setIsRecording] = useState(false);
   const [isTranscribing, setIsTranscribing] = useState(false);
-  const [goalPct, setGoalPct] = useState<number>(() => {
-    const v = typeof window !== "undefined" ? window.localStorage.getItem("mbuta.goalPct") : null;
-    return v ? parseInt(v, 10) : 80;
+  const [currentLeconId, setCurrentLeconId] = useState<string>(((lecon00 as any)?.lecon_id) || "default");
+  const GOALS_KEY = "mbuta.goalPctByLecon";
+  const [goalsByLecon, setGoalsByLecon] = useState<Record<string, number>>(() => {
+    if (typeof window === "undefined") return {};
+    try {
+      const raw = window.localStorage.getItem(GOALS_KEY);
+      if (raw) return JSON.parse(raw);
+      // Migration depuis l'ancienne clé globale
+      const legacy = window.localStorage.getItem("mbuta.goalPct");
+      return legacy ? { default: parseInt(legacy, 10) } : {};
+    } catch { return {}; }
   });
+  const goalPct = goalsByLecon[currentLeconId] ?? goalsByLecon.default ?? 80;
+  const setGoalPct = (v: number) => {
+    setGoalsByLecon((prev) => {
+      const next = { ...prev, [currentLeconId]: v };
+      if (typeof window !== "undefined") window.localStorage.setItem(GOALS_KEY, JSON.stringify(next));
+      return next;
+    });
+  };
   const [goalCelebrated, setGoalCelebrated] = useState(false);
-  useEffect(() => {
-    if (typeof window !== "undefined") window.localStorage.setItem("mbuta.goalPct", String(goalPct));
-  }, [goalPct]);
+  useEffect(() => { setGoalCelebrated(false); }, [currentLeconId]);
 
   // Admin correction dialog
   const [editing, setEditing] = useState<{ block: Block } | null>(null);
