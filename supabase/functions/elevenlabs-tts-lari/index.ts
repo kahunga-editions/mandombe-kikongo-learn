@@ -81,6 +81,10 @@ const PHONETIC_OVERRIDES: Record<string, string> = {
   // En français, "j" + voyelle = /ʒ/ garanti. On garde la graphie "ji"
   // (PAS "gi" qui pouvait être lu /gi/ dur, ni "dji" qui donne /dʒ/).
   "mbaji": "mbaji",
+  // Bujitu — /buʒitu/ : "j" doux français ("Julien"). Tirets pour casser
+  // toute lecture en semi-voyelle /y/ et garantir /ʒ/.
+  "bujitu": "bou-ji-tou",
+  "bujidi": "bou-ji-di",
   // Djuna — /dzuna/ : affriquée /dz/ + "ou" français
   "djuna": "dzouna",
   "Djuna": "Dzouna",
@@ -146,6 +150,15 @@ const ELEVENLABS_RULES: PhoneticRule[] = [
   { from: /\bnzingi\b/gi, to: 'nzin-ghi' },
   { from: /\bzingi\b/gi, to: 'zin-ghi' },
   { from: /nj([aeiouAEIOU])/g, to: 'ndj$1' },
+
+  // /ʒ/ français ("Julien") pour j + voyelle isolé en lari.
+  // ElevenLabs (FR) lit parfois "ji" comme semi-voyelle /y/. On insère un tiret
+  // avant ji/ju isolés (ni d, ni n devant) pour forcer la syllabation et
+  // garantir la fricative palato-alvéolaire voisée /ʒ/.
+  { from: /([^dnDN])ji/g, to: '$1-ji' },
+  { from: /([^dnDN])ju/g, to: '$1-jou' },
+  { from: /\bji/g, to: 'ji' },
+  { from: /\bju/g, to: 'jou' },
 
   // G dur (ŋɡ) systématique pour TOUTE la série Ng — corrige la mauvaise prononciation
   // d'ElevenLabs qui palatalisait nge/ngi en /ɲe/ /ɲi/.
