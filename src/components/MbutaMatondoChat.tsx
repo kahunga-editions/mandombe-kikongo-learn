@@ -280,6 +280,14 @@ const MbutaMatondoChat = () => {
   const [audioDurations, setAudioDurations] = useState<Map<number, number>>(new Map());
   const [isRecording, setIsRecording] = useState(false);
   const [isTranscribing, setIsTranscribing] = useState(false);
+  const [goalPct, setGoalPct] = useState<number>(() => {
+    const v = typeof window !== "undefined" ? window.localStorage.getItem("mbuta.goalPct") : null;
+    return v ? parseInt(v, 10) : 80;
+  });
+  const [goalCelebrated, setGoalCelebrated] = useState(false);
+  useEffect(() => {
+    if (typeof window !== "undefined") window.localStorage.setItem("mbuta.goalPct", String(goalPct));
+  }, [goalPct]);
 
   // Admin correction dialog
   const [editing, setEditing] = useState<{ block: Block } | null>(null);
