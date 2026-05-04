@@ -1,7 +1,9 @@
-import { useState, useMemo, useCallback } from "react";
+import { useState, useMemo, useCallback, useEffect } from "react";
 import { CheckCircle, XCircle } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import MandombeSpeaker from "@/components/MandombeSpeaker";
 
+// ===== Legacy schema (kept for existing lessons) =====
 export interface CrosswordClue {
   answer: string;
   clue: string;
@@ -21,89 +23,177 @@ export interface CrosswordQuestion {
   clues: CrosswordClue[];
 }
 
-interface Props {
-  question: CrosswordQuestion;
-  onComplete: (correct: boolean) => void;
+// ===== New pilot schema (rectangular + trilingual + Mandombe + illustration) =====
+export interface CrosswordPilotClue {
+  num: number;
+  direction: "across" | "down";
+  row: number;
+  col: number;
+  answer: string;
+  mandombe: string;
+  fr: string;
+  en: string;
+  pt: string;
 }
 
-const CrosswordPuzzle = ({ question, onComplete }: Props) => {
+export interface CrosswordPilot {
+  id: string;
+  titleFr: string;
+  titleEn: string;
+  titlePt: string;
+  rows: number;
+  cols: number;
+  illustration?: string;
+  illustrationAlt?: string;
+  clues: CrosswordPilotClue[];
+}
+
+interface Props {
+  question?: CrosswordQuestion;
+  pilot?: CrosswordPilot;
+  onComplete?: (correct: boolean) => void;
+}
+
+const CrosswordPuzzle = ({ question, pilot, onComplete }: Props) => {
   const { language, t } = useLanguage();
-  const { gridSize, clues } = question;
 
-  const title = language === "fr"
-    ? (question.titleFr || question.title || "Mots croisés")
-    : language === "pt"
-      ? (question.titlePt || question.title || "Palavras cruzadas")
-      : (question.title || "Crossword");
+  // Normalize either schema into a unified shape
+  const normalized = useMemo(() => {
+    if (pilot) {
+      return {
+        rows: pilot.rows,
+        cols: pilot.cols,
+        title: language === "en" ? pilot.titleEn : language === "pt" ? pilot.titlePt : pilot.titleFr,
+        illustration: pilot.illustration,
+        illustrationAlt: pilot.illustrationAlt,
+        clues: pilot.clues.map((c) => ({
+          num: c.num,
+          row: c.row,
+          col: c.col,
+          direction: c.direction,
+          answer: c.answer,
+          mandombe: c.mandombe,
+          fr: c.fr,
+          en: c.en,
+          pt: c.pt,
+        })),
+        storageKey: `crossword.${pilot.id}`,
+        trilingual: true as const,
+      };
+    }
+    if (question) {
+      const q = question;
+      const sorted = [...q.clues].sort((a, b) => (a.row - b.row) || (a.col - b.col));
+      const used = new Set<string>();
+      let n = 0;
+      const numByPos: Record<string, number> = {};
+      sorted.forEach((c) => {
+        const k = `${c.row}-${c.col}`;
+        if (!used.has(k)) {
+          n += 1;
+          numByPos[k] = n;
+          used.add(k);
+        }
+      });
+      const title =
+        language === "fr"
+          ? q.titleFr || q.title || "Mots croises"
+          : language === "pt"
+            ? q.titlePt || q.title || "Palavras cruzadas"
+            : q.title || "Crossword";
+      return {
+        rows: q.gridSize,
+        cols: q.gridSize,
+        title,
+        illustration: undefined as string | undefined,
+        illustrationAlt: undefined as string | undefined,
+        clues: q.clues.map((c) => ({
+          num: numByPos[`${c.row}-${c.col}`] || 0,
+          row: c.row,
+          col: c.col,
+          direction: c.direction,
+          answer: c.answer,
+          mandombe: "",
+          fr: c.clueFr || c.clue,
+          en: c.clue,
+          pt: c.cluePt || c.clue,
+        })),
+        storageKey: undefined as string | undefined,
+        trilingual: false as const,
+      };
+    }
+    return null;
+  }, [pilot, question, language]);
 
-  // Build a grid map of which cells are active
+  if (!normalized) return null;
+
+  const { rows, cols, title, illustration, illustrationAlt, clues, storageKey, trilingual } = normalized;
+
   const { cellMap, numberedCells } = useMemo(() => {
     const map: Record<string, { clueIndices: number[] }> = {};
     const numbered: Record<string, number> = {};
-    let num = 1;
-
-    // Build a position-to-original-index mapping for numbering
-    // Sort by position for consistent numbering, but track original indices
-    const indexedClues = clues.map((clue, originalIndex) => ({ clue, originalIndex }));
-    const sorted = [...indexedClues].sort((a, b) =>
-      a.clue.row !== b.clue.row ? a.clue.row - b.clue.row : a.clue.col - b.clue.col
-    );
-    const usedPositions = new Set<string>();
-
-    sorted.forEach(({ clue, originalIndex }) => {
-      const posKey = `${clue.row}-${clue.col}`;
-      if (!usedPositions.has(posKey)) {
-        numbered[posKey] = num++;
-        usedPositions.add(posKey);
-      }
-
+    clues.forEach((clue, idx) => {
+      numbered[`${clue.row}-${clue.col}`] = clue.num;
       for (let i = 0; i < clue.answer.length; i++) {
         const r = clue.direction === "down" ? clue.row + i : clue.row;
         const c = clue.direction === "across" ? clue.col + i : clue.col;
         const key = `${r}-${c}`;
         if (!map[key]) map[key] = { clueIndices: [] };
-        map[key].clueIndices.push(originalIndex);
+        map[key].clueIndices.push(idx);
       }
     });
-
     return { cellMap: map, numberedCells: numbered };
   }, [clues]);
 
-  const [grid, setGrid] = useState<Record<string, string>>({});
+  const [grid, setGrid] = useState<Record<string, string>>(() => {
+    if (typeof window === "undefined" || !storageKey) return {};
+    try {
+      const raw = window.localStorage.getItem(`${storageKey}.grid`);
+      return raw ? JSON.parse(raw) : {};
+    } catch {
+      return {};
+    }
+  });
   const [submitted, setSubmitted] = useState(false);
   const [selectedCell, setSelectedCell] = useState<string | null>(null);
 
-  const handleCellChange = useCallback((key: string, value: string) => {
-    if (submitted) return;
-    const char = value.slice(-1).toUpperCase();
-    setGrid((prev) => ({ ...prev, [key]: char }));
-
-    // Auto-advance to next cell
-    if (char && selectedCell) {
-      const [r, c] = key.split("-").map(Number);
-      // Try right first, then down
-      const nextRight = `${r}-${c + 1}`;
-      const nextDown = `${r + 1}-${c}`;
-      if (cellMap[nextRight]) setSelectedCell(nextRight);
-      else if (cellMap[nextDown]) setSelectedCell(nextDown);
+  useEffect(() => {
+    if (storageKey && typeof window !== "undefined") {
+      window.localStorage.setItem(`${storageKey}.grid`, JSON.stringify(grid));
     }
-  }, [submitted, cellMap, selectedCell]);
+  }, [grid, storageKey]);
 
-  const handleSubmit = () => {
-    setSubmitted(true);
-    const allCorrect = clues.every((clue) => {
+  const handleCellChange = useCallback(
+    (key: string, value: string) => {
+      if (submitted) return;
+      const char = value.slice(-1).toUpperCase();
+      setGrid((prev) => ({ ...prev, [key]: char }));
+      if (char && selectedCell) {
+        const [r, c] = key.split("-").map(Number);
+        const right = `${r}-${c + 1}`;
+        const down = `${r + 1}-${c}`;
+        if (cellMap[right]) setSelectedCell(right);
+        else if (cellMap[down]) setSelectedCell(down);
+      }
+    },
+    [submitted, cellMap, selectedCell],
+  );
+
+  const isAllCorrect = () =>
+    clues.every((clue) => {
       for (let i = 0; i < clue.answer.length; i++) {
         const r = clue.direction === "down" ? clue.row + i : clue.row;
         const c = clue.direction === "across" ? clue.col + i : clue.col;
-        const key = `${r}-${c}`;
-        if ((grid[key] || "").toUpperCase() !== clue.answer[i].toUpperCase()) return false;
+        if ((grid[`${r}-${c}`] || "").toUpperCase() !== clue.answer[i].toUpperCase()) return false;
       }
       return true;
     });
-    onComplete(allCorrect);
+
+  const handleSubmit = () => {
+    setSubmitted(true);
+    onComplete?.(isAllCorrect());
   };
 
-  // Reveal all correct answers on the grid
   const handleReveal = () => {
     const revealed: Record<string, string> = {};
     clues.forEach((clue) => {
@@ -114,12 +204,6 @@ const CrosswordPuzzle = ({ question, onComplete }: Props) => {
       }
     });
     setGrid(revealed);
-  };
-
-  const getClueText = (clue: CrosswordClue) => {
-    if (language === "fr") return clue.clueFr || clue.clue;
-    if (language === "pt") return clue.cluePt || clue.clue;
-    return clue.clue;
   };
 
   const getCellStatus = (key: string) => {
@@ -142,35 +226,62 @@ const CrosswordPuzzle = ({ question, onComplete }: Props) => {
   const acrossClues = clues.filter((c) => c.direction === "across");
   const downClues = clues.filter((c) => c.direction === "down");
 
+  const renderClueLine = (clue: typeof clues[number]) => (
+    <li key={`${clue.direction}-${clue.num}`} className="space-y-1 border-l-2 border-border/40 pl-3">
+      <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
+        <span className="font-bold text-foreground">{clue.num}.</span>
+        {trilingual && (
+          <span className="font-mandombe text-2xl leading-none text-foreground" lang="kg-Mand">
+            {clue.mandombe}
+          </span>
+        )}
+        {submitted && (
+          <span className="font-display font-bold text-foreground tracking-wide">{clue.answer}</span>
+        )}
+        {trilingual && submitted && (
+          <MandombeSpeaker lariText={clue.answer.toLowerCase()} className="ml-1" />
+        )}
+      </div>
+      {trilingual ? (
+        <div className="grid gap-0.5 text-xs text-muted-foreground sm:grid-cols-3">
+          <span><span className="font-semibold text-foreground/80">FR</span> · {clue.fr}</span>
+          <span><span className="font-semibold text-foreground/80">EN</span> · {clue.en}</span>
+          <span><span className="font-semibold text-foreground/80">PT</span> · {clue.pt}</span>
+        </div>
+      ) : (
+        <div className="text-sm text-muted-foreground">
+          {language === "fr" ? clue.fr : language === "pt" ? clue.pt : clue.en}
+        </div>
+      )}
+    </li>
+  );
+
   return (
     <div className="space-y-4">
       <h4 className="font-display text-lg font-bold text-foreground">{title}</h4>
 
-      {/* Grid */}
       <div className="flex justify-center overflow-x-auto">
         <div
           className="grid gap-0"
           style={{
-            gridTemplateColumns: `repeat(${gridSize}, 2.5rem)`,
-            gridTemplateRows: `repeat(${gridSize}, 2.5rem)`,
+            gridTemplateColumns: `repeat(${cols}, 2.5rem)`,
+            gridTemplateRows: `repeat(${rows}, 2.5rem)`,
           }}
         >
-          {Array.from({ length: gridSize * gridSize }).map((_, idx) => {
-            const r = Math.floor(idx / gridSize);
-            const c = idx % gridSize;
+          {Array.from({ length: rows * cols }).map((_, idx) => {
+            const r = Math.floor(idx / cols);
+            const c = idx % cols;
             const key = `${r}-${c}`;
             const isActive = !!cellMap[key];
             const number = numberedCells[key];
             const status = getCellStatus(key);
 
-            if (!isActive) {
-              return <div key={key} className="w-10 h-10 bg-transparent" />;
-            }
+            if (!isActive) return <div key={key} className="h-10 w-10 bg-transparent" />;
 
             return (
               <div
                 key={key}
-                className={`w-10 h-10 relative border border-border/50 ${
+                className={`relative h-10 w-10 border border-border/50 ${
                   selectedCell === key ? "ring-2 ring-primary" : ""
                 } ${
                   status === "correct"
@@ -182,7 +293,7 @@ const CrosswordPuzzle = ({ question, onComplete }: Props) => {
                 onClick={() => setSelectedCell(key)}
               >
                 {number && (
-                  <span className="absolute top-0 left-0.5 text-[9px] text-muted-foreground font-bold leading-none">
+                  <span className="absolute left-0.5 top-0 text-[9px] font-bold leading-none text-muted-foreground">
                     {number}
                   </span>
                 )}
@@ -192,11 +303,11 @@ const CrosswordPuzzle = ({ question, onComplete }: Props) => {
                   value={grid[key] || ""}
                   onChange={(e) => handleCellChange(key, e.target.value)}
                   onFocus={() => setSelectedCell(key)}
-                  className="w-full h-full text-center font-display font-bold text-foreground bg-transparent outline-none text-lg uppercase"
+                  className="h-full w-full bg-transparent text-center font-display text-lg font-bold uppercase text-foreground outline-none"
                   disabled={submitted}
                 />
                 {submitted && status === "correct" && (
-                  <CheckCircle className="absolute -top-1 -right-1 w-3 h-3 text-green-500" />
+                  <CheckCircle className="absolute -right-1 -top-1 h-3 w-3 text-green-500" />
                 )}
               </div>
             );
@@ -204,77 +315,70 @@ const CrosswordPuzzle = ({ question, onComplete }: Props) => {
         </div>
       </div>
 
-      {/* Clues */}
-      <div className="grid sm:grid-cols-2 gap-6 text-sm">
+      {illustration && (
+        <div className="flex justify-center">
+          <img
+            src={illustration}
+            alt={illustrationAlt || ""}
+            loading="lazy"
+            width={320}
+            height={320}
+            className="h-auto w-64 rounded-lg border border-border/40 object-cover shadow-sm"
+          />
+        </div>
+      )}
+
+      <div className="grid gap-6 text-sm sm:grid-cols-2">
         <div>
-          <h5 className="font-display font-bold text-foreground mb-2">
+          <h5 className="mb-2 font-display font-bold text-foreground">
             {language === "fr" ? "Horizontal →" : language === "pt" ? "Horizontal →" : "Across →"}
           </h5>
-          <ul className="space-y-1.5 text-muted-foreground">
-            {acrossClues.map((clue, i) => (
-              <li key={i}>
-                <span className="font-bold text-foreground">{numberedCells[`${clue.row}-${clue.col}`]}.</span>{" "}
-                {getClueText(clue)}
-              </li>
-            ))}
-          </ul>
+          <ul className="space-y-3">{acrossClues.map(renderClueLine)}</ul>
         </div>
         <div>
-          <h5 className="font-display font-bold text-foreground mb-2">
+          <h5 className="mb-2 font-display font-bold text-foreground">
             {language === "fr" ? "Vertical ↓" : language === "pt" ? "Vertical ↓" : "Down ↓"}
           </h5>
-          <ul className="space-y-1.5 text-muted-foreground">
-            {downClues.map((clue, i) => (
-              <li key={i}>
-                <span className="font-bold text-foreground">{numberedCells[`${clue.row}-${clue.col}`]}.</span>{" "}
-                {getClueText(clue)}
-              </li>
-            ))}
-          </ul>
+          <ul className="space-y-3">{downClues.map(renderClueLine)}</ul>
         </div>
       </div>
 
       {!submitted && (
         <button
           onClick={handleSubmit}
-          className="bg-primary text-primary-foreground px-6 py-2.5 rounded-lg text-sm font-semibold transition-colors hover:bg-primary/90"
+          className="rounded-lg bg-primary px-6 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
         >
           {t("exercises.checkAnswer")}
         </button>
       )}
 
       {submitted && (
-        <div className="space-y-3">
-          <div className="flex items-center gap-2 text-sm">
-            {clues.every((clue) => {
-              for (let i = 0; i < clue.answer.length; i++) {
-                const r = clue.direction === "down" ? clue.row + i : clue.row;
-                const c = clue.direction === "across" ? clue.col + i : clue.col;
-                if ((grid[`${r}-${c}`] || "").toUpperCase() !== clue.answer[i].toUpperCase()) return false;
-              }
-              return true;
-            }) ? (
-              <>
-                <CheckCircle className="w-5 h-5 text-green-500" />
-                <span className="text-green-500 font-semibold">
-                  {language === "fr" ? "Parfait !" : language === "pt" ? "Perfeito!" : "Perfect!"}
-                </span>
-              </>
-            ) : (
-              <>
-                <XCircle className="w-5 h-5 text-destructive" />
-                <span className="text-destructive font-semibold">
-                  {language === "fr" ? "Certaines réponses sont incorrectes." : language === "pt" ? "Algumas respostas estão incorretas." : "Some answers are incorrect."}
-                </span>
-                <button
-                  onClick={handleReveal}
-                  className="ml-2 bg-accent text-accent-foreground px-4 py-1.5 rounded-lg text-sm font-semibold transition-colors hover:bg-accent/80"
-                >
-                  {language === "fr" ? "Voir les réponses" : language === "pt" ? "Ver respostas" : "Show answers"}
-                </button>
-              </>
-            )}
-          </div>
+        <div className="flex flex-wrap items-center gap-2 text-sm">
+          {isAllCorrect() ? (
+            <>
+              <CheckCircle className="h-5 w-5 text-green-500" />
+              <span className="font-semibold text-green-500">
+                {language === "fr" ? "Parfait !" : language === "pt" ? "Perfeito!" : "Perfect!"}
+              </span>
+            </>
+          ) : (
+            <>
+              <XCircle className="h-5 w-5 text-destructive" />
+              <span className="font-semibold text-destructive">
+                {language === "fr"
+                  ? "Certaines reponses sont incorrectes."
+                  : language === "pt"
+                    ? "Algumas respostas estao incorretas."
+                    : "Some answers are incorrect."}
+              </span>
+              <button
+                onClick={handleReveal}
+                className="ml-2 rounded-lg bg-accent px-4 py-1.5 text-sm font-semibold text-accent-foreground transition-colors hover:bg-accent/80"
+              >
+                {language === "fr" ? "Voir les reponses" : language === "pt" ? "Ver respostas" : "Show answers"}
+              </button>
+            </>
+          )}
         </div>
       )}
     </div>
