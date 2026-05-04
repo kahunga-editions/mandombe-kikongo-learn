@@ -151,6 +151,15 @@ const ELEVENLABS_RULES: PhoneticRule[] = [
   { from: /\bzingi\b/gi, to: 'zin-ghi' },
   { from: /nj([aeiouAEIOU])/g, to: 'ndj$1' },
 
+  // /ʒ/ français ("Julien") pour j + voyelle isolé en lari.
+  // ElevenLabs (FR) lit parfois "ji" comme semi-voyelle /y/. On insère un tiret
+  // avant ji/ju isolés (ni d, ni n devant) pour forcer la syllabation et
+  // garantir la fricative palato-alvéolaire voisée /ʒ/.
+  { from: /([^dnDN])ji/g, to: '$1-ji' },
+  { from: /([^dnDN])ju/g, to: '$1-jou' },
+  { from: /\bji/g, to: 'ji' },
+  { from: /\bju/g, to: 'jou' },
+
   // G dur (ŋɡ) systématique pour TOUTE la série Ng — corrige la mauvaise prononciation
   // d'ElevenLabs qui palatalisait nge/ngi en /ɲe/ /ɲi/.
   // En orthographe française, "gh" + voyelle = G dur garanti.
