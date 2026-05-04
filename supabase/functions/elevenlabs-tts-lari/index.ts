@@ -140,6 +140,11 @@ const ELEVENLABS_RULES: PhoneticRule[] = [
 
   // nj → ndj (affriquée prénasalisée) — specific words first
   { from: /mpangi/g, to: 'mpan-ghi' },
+
+  // « zingi » et famille — G dur explicite (sinon ElevenLabs palatalise après /zi/)
+  { from: /\bbizingi\b/gi, to: 'bi-zin-ghi' },
+  { from: /\bnzingi\b/gi, to: 'nzin-ghi' },
+  { from: /\bzingi\b/gi, to: 'zin-ghi' },
   { from: /nj([aeiouAEIOU])/g, to: 'ndj$1' },
 
   // G dur (ŋɡ) systématique pour TOUTE la série Ng — corrige la mauvaise prononciation
