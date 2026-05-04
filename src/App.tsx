@@ -22,7 +22,7 @@ const AdminAnalytics = lazy(() => import("./pages/AdminAnalytics"));
 const MbutaMatondo = lazy(() => import("./pages/MbutaMatondo"));
 const Privacy = lazy(() => import("./pages/Privacy"));
 const Mvita = lazy(() => import("./pages/Mvita"));
-const MotsCroisesPilote = lazy(() => import("./pages/MotsCroisesPilote"));
+
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const routeFallback = (
@@ -56,7 +56,7 @@ const App = () => (
                 <Route path="/admin/analytics" element={<AdminAnalytics />} />
                 <Route path="/mbuta-matondo" element={<MbutaMatondo />} />
                 <Route path="/mvita" element={<Mvita />} />
-                <Route path="/mots-croises/pilote" element={<MotsCroisesPilote />} />
+                
                 <Route path="/privacy" element={<Privacy />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
