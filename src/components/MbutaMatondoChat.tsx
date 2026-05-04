@@ -560,6 +560,39 @@ const MbutaMatondoChat = () => {
 
   return (
     <div className="flex flex-col h-[calc(100vh-8rem)] max-w-3xl mx-auto">
+      {/* Score & progression */}
+      {(() => {
+        const totalQcm = messages.filter((m) => m.role === "assistant" && parseChoices(m.content)).length;
+        let correct = 0;
+        let wrong = 0;
+        answeredIdx.forEach((v) => {
+          if (v === "correct") correct++;
+          else if (v === "wrong") wrong++;
+        });
+        const answered = correct + wrong;
+        const pct = totalQcm > 0 ? Math.round((answered / totalQcm) * 100) : 0;
+        if (totalQcm === 0) return null;
+        return (
+          <div className="px-4 py-2 border-b border-gold/10 space-y-1.5">
+            <div className="flex items-center justify-between text-xs text-cream/70">
+              <span>
+                Progression : <span className="text-gold font-semibold">{answered}/{totalQcm}</span>
+              </span>
+              <span className="flex items-center gap-3">
+                <span className="text-emerald-400">✓ {correct}</span>
+                <span className="text-red-400">✗ {wrong}</span>
+              </span>
+            </div>
+            <div className="h-1.5 w-full rounded-full bg-muted/30 overflow-hidden">
+              <div
+                className="h-full bg-gradient-to-r from-gold/60 to-gold transition-all"
+                style={{ width: `${pct}%` }}
+              />
+            </div>
+          </div>
+        );
+      })()}
+
       {/* Toggles */}
       <div className="flex items-center justify-end gap-4 px-4 py-2 border-b border-gold/10">
         <div className="flex items-center gap-2">
