@@ -56,7 +56,7 @@ const App = () => (
                 <Route path="/admin/analytics" element={<AdminAnalytics />} />
                 <Route path="/mbuta-matondo" element={<MbutaMatondo />} />
                 <Route path="/mvita" element={<Mvita />} />
-                <Route path="/mots-croises/pilote" element={<MotsCroisesPilote />} />
+                
                 <Route path="/privacy" element={<Privacy />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
