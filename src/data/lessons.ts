@@ -24689,7 +24689,7 @@ export const lessons: Lesson[] = [
       { lari: "Mpakasa", mandombe: "Mpakasa", french: "Le buffle", english: "The buffalo", portuguese: "O búfalo", image: "/images/mpakasa-buffalo.jpg" },
       { lari: "Nioka", mandombe: "Nioka", french: "Le serpent", english: "The snake", portuguese: "A cobra", image: "/images/nioka-snake.jpg" },
       { lari: "Ngongolo", mandombe: "Ngongolo", french: "Le mille-pattes", english: "The millipede", portuguese: "A centopeia", image: "/images/ngongolo-caterpillar.jpg" },
-      { lari: "Nkelele", mandombe: "Nkelele", french: "Le mille-pattes", english: "The millipede", portuguese: "A centopeia", note: "Variante de Ngongolo" },
+      { lari: "Nkelele", mandombe: "Nkelele", french: "La pintade", english: "The guinea fowl", portuguese: "A galinha-d'angola" },
       { lari: "Mpangu", mandombe: "Mpangu", french: "La grenouille", english: "The frog", portuguese: "A rã", image: "/images/mpangu-frog.jpg" },
       { lari: "Lembe | Malembe", mandombe: "Lembe", french: "La cigogne | Les cigognes", english: "The stork", portuguese: "A cegonha", image: "/images/lembe-stork.jpg" },
       { lari: "Tutu | Matutu", mandombe: "Tutu", french: "La souris | Les souris", english: "The mouse | The mice", portuguese: "O rato | Os ratos", image: "/images/tutu-mouse.jpg" },
@@ -24850,7 +24850,7 @@ export const lessons: Lesson[] = [
             examples: [
               { lari: "Ngongolo ku sangi yi ba.", mandombe: "Ngongolo ku sangi yi ba.", french: "Le mille-pattes habite dans la forêt.", english: "The millipede lives in the forest.", portuguese: "A centopeia vive na floresta." },
               { lari: "Ngongolo ku sangi ji ba.", mandombe: "Ngongolo ku sangi ji ba.", french: "Les mille-pattes habitent dans la forêt.", english: "The millipedes live in the forest.", portuguese: "As centopeias vivem na floresta." },
-              { lari: "Nkelele ku mukobo yi ba.", mandombe: "Nkelele ku mukobo yi ba.", french: "Le mille-pattes habite dans la savane.", english: "The millipede lives in the savannah.", portuguese: "A centopeia vive na savana." },
+              { lari: "Nkelele ku mukobo yi ba.", mandombe: "Nkelele ku mukobo yi ba.", french: "La pintade habite dans la savane.", english: "The guinea fowl lives in the savannah.", portuguese: "A galinha-d'angola vive na savana." },
               { lari: "Lembe ku mukobo di ba.", mandombe: "Lembe ku mukobo di ba.", french: "La cigogne habite dans la savane.", english: "The stork lives in the savannah.", portuguese: "A cegonha vive na savana." },
               { lari: "Malembe ku mukobo ma ba.", mandombe: "Malembe ku mukobo ma ba.", french: "Les cigognes habitent dans la savane.", english: "The storks live in the savannah.", portuguese: "As cegonhas vivem na savana." },
               { lari: "Tutu ku hata di ba.", mandombe: "Tutu ku hata di ba.", french: "La souris habite au village.", english: "The mouse lives in the village.", portuguese: "O rato vive na aldeia." },
