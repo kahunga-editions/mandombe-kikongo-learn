@@ -17088,7 +17088,7 @@ export const LESSONS_CORPUS: LessonSummary[] = [
       },
       {
         "lari": "Nkelele",
-        "french": "Le mille-pattes"
+        "french": "La pintade"
       },
       {
         "lari": "Mpangu",
