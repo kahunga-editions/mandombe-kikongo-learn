@@ -213,13 +213,24 @@ const PHONETIC_OVERRIDES: Record<string, string> = {
   "ngie": "ndjé",           // /ndje/ — affriquée prénasalisée /ndʒe/
   "nzeka": "ndjeka",        // /ndjeka/
   // Mbaji — /mbaʒi/ : "j" doux comme "Julien" en français (PAS /g/ dur).
-  // En français, "j" + voyelle = /ʒ/ garanti.
-  "mbaji": "mbaji",
+  "mbaji": "mba-ji",
+  // Bujitu — /buʒitu/
+  "bujitu": "bou-ji-tou",
+  "bujidi": "bou-ji-di",
+  // Jimbakane — /ʒimbakane/
+  "jimbakane": "ji-mbakane",
+  "njimbakane": "n-ji-mbakane",
   // Djuna — /dzuna/ : affriquée /dz/ + "ou" français
   "djuna": "dzouna",
   "Djuna": "Dzouna",
   "djunidi": "dzounidi",
   "djunini": "dzounini",
+  // Djunu (la paix) — /dzunu/
+  "djunu": "dzounou",
+  "Djunu": "Dzounou",
+  // Nkima — /ntʃima/ : un singe.
+  "nkima": "ntshima",
+  "Nkima": "Ntshima",
   "munienge": "mounienghé", // /muniɛŋɡe/ — G dur sur la finale
   "munienghe": "mounienghé",// variante orthographique
   // Mungua — /muⁿɡwa/

@@ -78,18 +78,26 @@ const PHONETIC_OVERRIDES: Record<string, string> = {
   "nge": "nghé",
   "nzeka": "ndjeka",        // /ndjeka/
   // Mbaji — /mbaʒi/ : "j" doux comme "Julien" en français.
-  // En français, "j" + voyelle = /ʒ/ garanti. On garde la graphie "ji"
-  // (PAS "gi" qui pouvait être lu /gi/ dur, ni "dji" qui donne /dʒ/).
-  "mbaji": "mbaji",
+  // Tiret pour forcer la syllabation et garantir /ʒ/ (sinon ElevenLabs lit /y/).
+  "mbaji": "mba-ji",
   // Bujitu — /buʒitu/ : "j" doux français ("Julien"). Tirets pour casser
   // toute lecture en semi-voyelle /y/ et garantir /ʒ/.
   "bujitu": "bou-ji-tou",
   "bujidi": "bou-ji-di",
+  // Jimbakane — /ʒimbakane/ : "j" doux français ("Julien"), PAS /dʒ/.
+  "jimbakane": "ji-mbakane",
+  "njimbakane": "n-ji-mbakane",
   // Djuna — /dzuna/ : affriquée /dz/ + "ou" français
   "djuna": "dzouna",
   "Djuna": "Dzouna",
   "djunidi": "dzounidi",
   "djunini": "dzounini",
+  // Djunu (la paix) — /dzunu/
+  "djunu": "dzounou",
+  "Djunu": "Dzounou",
+  // Nkima — /ntʃima/ "un singe" : cluster prénasalisé + /tʃ/ comme "tch".
+  "nkima": "ntshima",
+  "Nkima": "Ntshima",
   // Mungua — /muⁿɡwa/
   "mungua": "moungoua",
   "munguani": "moungouani",
