@@ -2803,6 +2803,9 @@ Tueri = Quatre
 Bieri = Trois
 Neto = Nous
 Tshijinga = Étang (sg.)
+N'samu wa mubote = Bonne idée
+Bunene na bakiri = J'ai pris du poids
+Wa yikiri wa munene = Il/elle a pris du poids
 
 ## Phrases d'exemple vérifiées (1856 entrées)
 
