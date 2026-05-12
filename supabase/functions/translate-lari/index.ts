@@ -43,7 +43,7 @@ const SYSTEM_PROMPT = `Tu es un traducteur spécialisé en Kikongo Lari (Laadi),
 - "kolonga" pour apprendre → utilise "longa"
 - Pronom sujet "beto" + verbe à l'infinitif (ex. "beto kwenda") → STRUCTURE KITUBA. En Lari, le sujet pluriel "nous" est marqué par le préfixe verbal "tu-" (ex. "tu kwenda" = nous allons/irons). Reformuler systématiquement : "Mbaji ku tshola tu kwenda" et JAMAIS "Mbaji beto kwenda ku tshola".
 
-## Corpus vérifié — Vocabulaire (2758 entrées)
+## Corpus vérifié — Vocabulaire (2761 entrées)
 
 Mbote = bonjour
 Nkokela = Soir
