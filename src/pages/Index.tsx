@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import { SEO } from "@/components/SEO";
 import HeroSection from "@/components/HeroSection";
 import LearningPaths from "@/components/LearningPaths";
 import VerbeBaSection from "@/components/VerbeBaSection";
@@ -12,6 +13,11 @@ import Footer from "@/components/Footer";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Nzo Mikanda — Apprendre le Kikongo Lari et le Mandombe"
+        description="Plateforme d'apprentissage autonome du Kikongo Lari et de l'écriture Mandombe : leçons, dictionnaire, traducteur, contes et exercices interactifs."
+        path="/"
+      />
       <Navbar />
       <HeroSection />
       <LearningPaths />
