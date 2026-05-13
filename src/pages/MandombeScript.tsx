@@ -437,6 +437,11 @@ const MandombeScript = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Écriture Mandombe — Syllabaire et tracé guidé | Nzo Mikanda"
+        description="Apprenez le syllabaire Mandombe avec tracé guidé interactif, exemples de mots et prononciation."
+        path="/mandombe"
+      />
       <Navbar />
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-4">
