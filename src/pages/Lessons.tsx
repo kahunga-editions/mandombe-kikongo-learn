@@ -67,13 +67,12 @@ const Lessons = () => {
   };
 
   return (
-    <>
+    <div className="min-h-screen bg-background">
       <SEO
         title="Leçons — Kikongo Lari et Mandombe | Nzo Mikanda"
         description="Leçons progressives de Kikongo Lari et de l'écriture Mandombe : grammaire, vocabulaire, conjugaison et exercices interactifs."
         path="/lessons"
       />
-    {(() => null)()}
       <Navbar />
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-4">
