@@ -1,4 +1,5 @@
 import { useState, useCallback, useRef } from "react";
+import { SEO } from "@/components/SEO";
 import { ArrowRightLeft, Languages, Loader2, AlertCircle, Copy, Check, ImageIcon, Pencil } from "lucide-react";
 import html2canvas from "html2canvas";
 import { toast } from "sonner";
@@ -193,6 +194,11 @@ const Translator = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Traducteur Kikongo Lari ↔ 9 langues | Nzo Mikanda"
+        description="Traduisez instantanément entre le Kikongo Lari et 9 langues (FR, EN, PT, IT, ES, LN, EL, KO, DE) avec rendu Mandombe et audio."
+        path="/translator"
+      />
       <Navbar />
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-4 max-w-5xl">

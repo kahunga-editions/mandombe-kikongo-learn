@@ -1,0 +1,19 @@
+# Nzo Mikanda
+
+> Plateforme d'apprentissage autonome du Kikongo Lari (langue du Congo) et de l'écriture Mandombe, avec leçons interactives, dictionnaire, traducteur, contes et exercices.
+
+## Pages
+
+- [Accueil](/): Présentation de la plateforme et parcours d'apprentissage.
+- [Leçons](/lessons): Leçons progressives de Kikongo Lari et de Mandombe.
+- [Dictionnaire](/dictionary): Buku dia Binsono — dictionnaire bilingue Lari ↔ Français.
+- [Traducteur](/translator): Traducteur Lari ↔ 9 langues (FR, EN, PT, IT, ES, LN, EL, KO, DE).
+- [Écriture Mandombe](/mandombe): Apprentissage du syllabaire Mandombe avec tracé guidé.
+- [Flashcards](/flashcards): Cartes mémoire avec système de répétition espacée.
+- [Mbuta Matondo](/mbuta-matondo): Professeur IA conversationnel pour le Lari.
+- [Mvita](/mvita): Mode duel — questions de vocabulaire et grammaire.
+
+## Optional
+
+- [Authentification](/auth): Connexion et inscription.
+- [Confidentialité](/privacy): Politique de confidentialité.

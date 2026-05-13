@@ -1,4 +1,5 @@
 import { useState, useMemo, useEffect, useCallback } from "react";
+import { SEO } from "@/components/SEO";
 import { Search, BookOpen, Loader2 } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -286,6 +287,11 @@ const Dictionary = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Dictionnaire Kikongo Lari ↔ Français | Nzo Mikanda"
+        description="Buku dia Binsono : dictionnaire bilingue Kikongo Lari ↔ Français avec écriture Mandombe et prononciation audio."
+        path="/dictionary"
+      />
       <Navbar />
 
       <main className="pt-24 pb-16">
