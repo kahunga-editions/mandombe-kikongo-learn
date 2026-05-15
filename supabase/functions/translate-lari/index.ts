@@ -43,7 +43,7 @@ const SYSTEM_PROMPT = `Tu es un traducteur spécialisé en Kikongo Lari (Laadi),
 - "kolonga" pour apprendre → utilise "longa"
 - Pronom sujet "beto" + verbe à l'infinitif (ex. "beto kwenda") → STRUCTURE KITUBA. En Lari, le sujet pluriel "nous" est marqué par le préfixe verbal "tu-" (ex. "tu kwenda" = nous allons/irons). Reformuler systématiquement : "Mbaji ku tshola tu kwenda" et JAMAIS "Mbaji beto kwenda ku tshola".
 
-## Corpus vérifié — Vocabulaire (2761 entrées)
+## Corpus vérifié — Vocabulaire (2790 entrées)
 
 Mbote = bonjour
 Nkokela = Soir
@@ -2806,6 +2806,35 @@ Tshijinga = Étang (sg.)
 N'samu wa mubote = Bonne idée
 Bunene na bakiri = J'ai pris du poids
 Wa yikiri wa munene = Il/elle a pris du poids
+Yaka = Le pain de manioc
+Makaya = Les maniocs
+Nkaba = Les tubercules de manioc
+Nti ma yaka = La plante de manioc
+Nti ntoba = La plante de manioc
+Mfinda = Un village isolé dans la forêt
+Muna = Chaque
+Muna muana na tata andi = À chaque enfant son père
+Nge ku nikuki = Ne bouge pas
+Ku nikuka andi = Ne bouge pas
+Toko = Allons-y, on y va
+Toko eno = Allons-y, on y va (pluriel)
+Tuendi = Allons-y, on y va
+Tuendi eno = Allons-y, on y va (pluriel)
+Ti toko = Allons-y, on y va
+Toko eno kueto = Allons-nous-en
+Sidi = Tu restes ?
+Shidi = Est-ce que tu restes ? (sh = /ʃ/)
+Nge sidi kuaku = Toi, tu restes ?
+Ni tu kuenda = Viens-tu avec nous ?
+Ka ni kuenda na beno ko = Je ne pars pas avec vous
+Ka na kubamane ko = Je ne suis pas encore prêt(e)
+Ka na kubamane eti ko = Je ne suis pas encore prêt(e)
+N'samu we nani ni ku tela = J'ai quelque chose à te dire
+Nsatu ye nani = J'ai faim
+Ku lembi a ko = N'as-tu pas cuisiné ?
+Ngana nki lembi = Qu'as-tu cuisiné ?
+Lumbu tshi ka ndembi a ko = Je n'ai pas cuisiné aujourd'hui
+Ngana nki lembu lumbu tshi = Qu'as-tu cuisiné aujourd'hui ?
 
 ## Phrases d'exemple vérifiées (1856 entrées)
 
