@@ -13597,7 +13597,15 @@ export const LESSONS_CORPUS: LessonSummary[] = [
       },
       {
         "lari": "Kela dia mungua",
-        "french": "grain de sable"
+        "french": "grain de sel"
+      },
+      {
+        "lari": "Munienge",
+        "french": "le sable mouillé (des cours d'eau, de la mer)"
+      },
+      {
+        "lari": "Djelo",
+        "french": "le sable sec"
       },
       {
         "lari": "Kela menga",
