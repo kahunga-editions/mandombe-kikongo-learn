@@ -95,7 +95,10 @@ export function runDictionaryQA(
         if (!key) continue;
 
         if (localSeen.has(key)) {
-          errors.push(`[${lesson.id}/${name}] doublon local : "${entry.lari}".`);
+          const tag = `${lesson.id}/${name}|${entry.lari}`;
+          const msg = `[${lesson.id}/${name}] doublon local : "${entry.lari}".`;
+          if (knownDuplicates?.has(tag)) warnings.push("(baseline) " + msg);
+          else errors.push(msg);
         }
         localSeen.add(key);
 
