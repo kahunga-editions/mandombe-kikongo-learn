@@ -46,6 +46,7 @@ const SMART_QUOTES = /[’‘“”]/;
 export function runDictionaryQA(
   lessons: LessonLike[],
   corpusV2?: CorpusV2Like,
+  knownDuplicates?: ReadonlySet<string>,
 ): QAReport {
   const errors: string[] = [];
   const warnings: string[] = [];
