@@ -14,7 +14,11 @@ const DEFAULT_VOICE_ID = (Deno.env.get("LARI_VOICE_ID") || "").trim() || "Gz9w9R
 // ============================================================
 
 const PHONETIC_OVERRIDES: Record<string, string> = {
+  // moshi — "sh" = /ʃ/ comme "shoes" en anglais
   "mosi": "moshi",
+  "Mosi": "Moshi",
+  "moshi": "moshi",
+  "Moshi": "Moshi",
   // Zaba — premier /a/ long /zaːba/
   "zaba": "zââba",
   "Zaba": "Zââba",
