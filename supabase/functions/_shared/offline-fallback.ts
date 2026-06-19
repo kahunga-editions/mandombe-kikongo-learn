@@ -234,9 +234,10 @@ export function translateOffline(
   // 1) Lookup exact (phrase entière)
   const exact = lookup.get(key);
   if (exact) {
+    const translation = toLari ? exact.lari : exact.fr;
     return {
-      translation: toLari ? exact.lari : exact.fr,
-      mandombe: "",
+      translation,
+      mandombe: toLari ? translation : "",
       ipa: "",
       notes: baseNotes + (exact.note ? ` Note expert : ${exact.note}` : ""),
       offline: true,
@@ -272,8 +273,15 @@ export function translateOffline(
     ? `${baseNotes} ${missing} terme(s) non attesté(s) dans le corpus — marqué(s) [?...?].`
     : baseNotes;
 
-  return { translation, mandombe: "", ipa: "", notes, offline: true };
+  // Pour le rendu Mandombe, on retire les marqueurs [?...?] (mots non attestés)
+  // car ils ne peuvent pas être rendus en écriture Mandombe.
+  const mandombe = toLari
+    ? translation.replace(/\[\?[^\]]+\?\]/g, "").replace(/\s+/g, " ").trim()
+    : "";
+
+  return { translation, mandombe, ipa: "", notes, offline: true };
 }
+
 
 // ---------- Mbuta Matondo offline ----------
 
