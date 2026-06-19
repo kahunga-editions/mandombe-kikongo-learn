@@ -112,6 +112,32 @@ const STATIC_PAIRS: Pair[] = (() => {
     }
   }
 
+  // 4) Lexique de base — UNIQUEMENT mots attestés dans le corpus Jacquot & Lumwamu
+  // et présents dans les leçons Nzo Mikanda (vérifié manuellement).
+  const BASE_LEXICON: [string, string][] = [
+    ["mamba", "eau"],
+    ["madia", "nourriture"],
+    ["mungua", "sel"],
+    ["nzo", "maison"],
+    ["zandu", "marché"],
+    ["nduku", "ami"],
+    ["muntu", "personne"],
+    ["bantu", "personnes"],
+    ["nkumbu", "nom"],
+    ["mbote", "bonjour"],
+    ["matondo", "merci"],
+    ["nge", "toi"],
+    ["beto", "nous"],
+    ["beno", "vous"],
+    ["yandi", "lui"],
+    ["kiese", "joie"],
+    ["ntangu", "soleil"],
+    ["mvula", "pluie"],
+    ["nzari", "rivière"],
+    ["zulu", "ciel"],
+  ];
+  for (const [k, f] of BASE_LEXICON) push(k, f);
+
   return out;
 })();
 
