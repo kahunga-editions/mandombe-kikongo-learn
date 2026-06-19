@@ -247,6 +247,7 @@ export function translateOffline(
   // 2) Scan n-grammes (jusqu'à 6 mots) pour couvrir les expressions
   const toks = norm(text).split(/\s+/).filter(Boolean);
   const out: string[] = [];
+  const matchedNotes: string[] = [];
   let i = 0;
   const maxN = 6;
   while (i < toks.length) {
@@ -256,6 +257,7 @@ export function translateOffline(
       const hit = lookup.get(sub);
       if (hit) {
         out.push(toLari ? hit.lari : hit.fr);
+        if (hit.note && hit.note.trim()) matchedNotes.push(hit.note.trim());
         i += n;
         matched = true;
         break;
@@ -269,12 +271,17 @@ export function translateOffline(
 
   const translation = out.join(" ");
   const missing = (translation.match(/\[\?[^\]]+\?\]/g) || []).length;
-  const notes = missing > 0
+  let notes = missing > 0
     ? `${baseNotes} ${missing} terme(s) non attesté(s) dans le corpus — marqué(s) [?...?].`
     : baseNotes;
 
+  // Surface les notes expert correspondant aux segments traduits (mémoire linguistique).
+  const uniqueNotes = Array.from(new Set(matchedNotes)).slice(0, 5);
+  if (uniqueNotes.length > 0) {
+    notes += ` Notes expert : ${uniqueNotes.join(" | ")}.`;
+  }
+
   // Pour le rendu Mandombe, on retire les marqueurs [?...?] (mots non attestés)
-  // car ils ne peuvent pas être rendus en écriture Mandombe.
   const mandombe = toLari
     ? translation.replace(/\[\?[^\]]+\?\]/g, "").replace(/\s+/g, " ").trim()
     : "";
