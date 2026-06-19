@@ -112,25 +112,14 @@ const STATIC_PAIRS: Pair[] = (() => {
     }
   }
 
-  // 4) Lexique de base (mots isolés attestés Jacquot & Lumwamu / Nzo Mikanda)
+  // 4) Lexique de base — UNIQUEMENT mots attestés dans le corpus Jacquot & Lumwamu
+  // et présents dans les leçons Nzo Mikanda (vérifié manuellement).
   const BASE_LEXICON: [string, string][] = [
     ["mamba", "eau"],
     ["madia", "nourriture"],
-    ["mbizi", "viande"],
-    ["mbizi ya masa", "poisson"],
     ["mungua", "sel"],
-    ["sukadi", "sucre"],
-    ["dimputu", "pain"],
-    ["luzaba", "manioc"],
-    ["mbongo", "argent"],
     ["nzo", "maison"],
-    ["nzila", "chemin"],
     ["zandu", "marché"],
-    ["sukulu", "école"],
-    ["mwana", "enfant"],
-    ["bana", "enfants"],
-    ["taata", "papa"],
-    ["maama", "maman"],
     ["nduku", "ami"],
     ["muntu", "personne"],
     ["bantu", "personnes"],
@@ -138,23 +127,14 @@ const STATIC_PAIRS: Pair[] = (() => {
     ["mbote", "bonjour"],
     ["matondo", "merci"],
     ["nge", "toi"],
-    ["mu", "moi"],
     ["beto", "nous"],
     ["beno", "vous"],
-    ["bau", "eux"],
     ["yandi", "lui"],
     ["kiese", "joie"],
-    ["mpasi", "douleur"],
     ["ntangu", "soleil"],
-    ["ngonda", "lune"],
     ["mvula", "pluie"],
     ["nzari", "rivière"],
-    ["mbu", "mer"],
     ["zulu", "ciel"],
-    ["ntoto", "terre"],
-    ["nzo nkanda", "école"],
-    ["ku zandu", "au marché"],
-    ["ku nzo", "à la maison"],
   ];
   for (const [k, f] of BASE_LEXICON) push(k, f);
 
