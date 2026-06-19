@@ -211,7 +211,7 @@ export function translateOffline(
   }
 
   // 2) Scan n-grammes (jusqu'à 6 mots) pour couvrir les expressions
-  const toks = tokens(text);
+  const toks = norm(text).split(/\s+/).filter(Boolean);
   const out: string[] = [];
   let i = 0;
   const maxN = 6;
