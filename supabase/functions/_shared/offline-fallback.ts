@@ -16,6 +16,7 @@ import leconResto from "./mbuta-lecon-restaurant.json" with { type: "json" };
 import leconSePresenter from "./mbuta-lecon-se-presenter.json" with { type: "json" };
 import conjZololo from "./mbuta-conjugaisons-zololo.json" with { type: "json" };
 import conjZololoManisa from "./mbuta-conjugaisons-zololo-manisa.json" with { type: "json" };
+import dictionary from "./dictionary.json" with { type: "json" };
 
 type Phrase = { kikongo: string; fr: string; note?: string };
 type Mot = { kikongo: string; fr: string; note?: string };
@@ -137,6 +138,12 @@ const STATIC_PAIRS: Pair[] = (() => {
     ["zulu", "ciel"],
   ];
   for (const [k, f] of BASE_LEXICON) push(k, f);
+
+  // 5) Dictionnaire Buku dia Binsono (extrait automatiquement de src/data/lessons.ts —
+  //    vocab + phrases attestées). ~4000 entrées lari↔fr.
+  for (const e of dictionary as { lari?: string; fr?: string; note?: string }[]) {
+    push(e.lari, e.fr, e.note);
+  }
 
   return out;
 })();
