@@ -139,6 +139,12 @@ const STATIC_PAIRS: Pair[] = (() => {
   ];
   for (const [k, f] of BASE_LEXICON) push(k, f);
 
+  // 5) Dictionnaire Buku dia Binsono (extrait automatiquement de src/data/lessons.ts —
+  //    vocab + phrases attestées). ~4000 entrées lari↔fr.
+  for (const e of dictionary as { lari?: string; fr?: string; note?: string }[]) {
+    push(e.lari, e.fr, e.note);
+  }
+
   return out;
 })();
 
