@@ -52,6 +52,8 @@ interface ConjugaisonFile {
   paradigmes?: Record<string, { fr?: string; kikongo?: string }[]>;
 }
 
+type Pair = { fr: string; lari: string; note?: string };
+
 const STATIC_PAIRS: Pair[] = (() => {
   const out: Pair[] = [];
   const push = (kikongo?: string, fr?: string, note?: string) => {
