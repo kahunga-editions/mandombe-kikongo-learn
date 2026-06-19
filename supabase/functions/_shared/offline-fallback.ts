@@ -159,6 +159,16 @@ function norm(s: string | undefined | null): string {
     .trim();
 }
 
+function splitGlosses(s: string): string[] {
+  // Sépare "Savoir, connaître" / "X / Y" / "X ; Y" en glosses indépendantes.
+  // Retire les parenthèses explicatives "(impératif)" → "".
+  const cleaned = s.replace(/\([^)]*\)/g, " ");
+  return cleaned
+    .split(/\s*[,;/|]\s*|\s+ou\s+/i)
+    .map((x) => x.trim())
+    .filter((x) => x.length > 0 && x.length <= 60);
+}
+
 function buildIndex(extra: Pair[] = []) {
   const all = [...STATIC_PAIRS, ...extra];
   const frToLari = new Map<string, Pair>();
@@ -169,10 +179,19 @@ function buildIndex(extra: Pair[] = []) {
   for (const p of byFrLen) {
     const k = norm(p.fr);
     if (k && !frToLari.has(k)) frToLari.set(k, p);
+    // Index aussi chaque gloss individuel ("Savoir, connaître" → "savoir" + "connaitre")
+    for (const g of splitGlosses(p.fr)) {
+      const gk = norm(g);
+      if (gk && !frToLari.has(gk)) frToLari.set(gk, p);
+    }
   }
   for (const p of byLariLen) {
     const k = norm(p.lari);
     if (k && !lariToFr.has(k)) lariToFr.set(k, p);
+    for (const g of splitGlosses(p.lari)) {
+      const gk = norm(g);
+      if (gk && !lariToFr.has(gk)) lariToFr.set(gk, p);
+    }
   }
   return { all, frToLari, lariToFr };
 }
