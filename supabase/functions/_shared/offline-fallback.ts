@@ -115,6 +115,17 @@ const STATIC_PAIRS: Pair[] = (() => {
   return out;
 })();
 
+function norm(s: string | undefined | null): string {
+  if (!s) return "";
+  return s
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^\p{L}\p{N}\s'-]/gu, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 function buildIndex(extra: Pair[] = []) {
   const all = [...STATIC_PAIRS, ...extra];
   const frToLari = new Map<string, Pair>();
