@@ -73,7 +73,13 @@ serve(async (req) => {
     const customers = await stripe.customers.list({ email: user.email, limit: 1 });
 
     if (customers.data.length === 0) {
-      return new Response(JSON.stringify({ subscribed: false, isAdmin }), {
+      return new Response(JSON.stringify({
+        subscribed: false,
+        isAdmin,
+        hasLifetimeTranslator,
+        translatorUsesRemaining,
+        translatorUsesLimit: FREE_LIMIT,
+      }), {
         headers: { ...corsHeaders, "Content-Type": "application/json" },
         status: 200,
       });
