@@ -8,6 +8,9 @@ interface AuthState {
   isAdmin: boolean;
   isPremium: boolean;
   subscriptionEnd: string | null;
+  hasLifetimeTranslator: boolean;
+  translatorUsesRemaining: number | null;
+  translatorUsesLimit: number;
   loading: boolean;
 }
 
