@@ -184,13 +184,29 @@ const Translator = () => {
 
   const translate = useCallback(async () => {
     if (!inputText.trim()) return;
+    if (!user) {
+      navigate("/auth?next=/translator");
+      return;
+    }
     setIsLoading(true);
     setError(null);
     setResult(null);
     setIsEditing(false);
+    setQuotaExceeded(false);
 
     const direction = `${sourceLang}-to-${targetLang}`;
     const notesLang = sourceLang === "lari" ? targetLang : sourceLang;
+
+    let accessToken = session?.access_token;
+    if (!accessToken) {
+      const { data } = await supabase.auth.getSession();
+      accessToken = data.session?.access_token;
+    }
+    if (!accessToken) {
+      setIsLoading(false);
+      navigate("/auth?next=/translator");
+      return;
+    }
 
     try {
       const response = await fetch(
@@ -200,11 +216,17 @@ const Translator = () => {
           headers: {
             "Content-Type": "application/json",
             apikey: import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY,
-            Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
+            Authorization: `Bearer ${accessToken}`,
           },
           body: JSON.stringify({ text: inputText.trim(), direction, notesLang }),
         }
       );
+
+      if (response.status === 402) {
+        setQuotaExceeded(true);
+        void checkSubscription();
+        return;
+      }
 
       if (!response.ok) {
         const err = await response.json().catch(() => ({}));
@@ -213,12 +235,14 @@ const Translator = () => {
 
       const data: TranslationResult = await response.json();
       setResult(data);
+      // refresh remaining count
+      void checkSubscription();
     } catch (err) {
       setError(err instanceof Error ? err.message : "Erreur inconnue");
     } finally {
       setIsLoading(false);
     }
-  }, [inputText, sourceLang, targetLang]);
+  }, [inputText, sourceLang, targetLang, user, session, navigate, checkSubscription]);
 
   // Translator is now public — admin still has correction privileges below.
 
