@@ -1,7 +1,8 @@
-import { Crown, BookOpen, Headphones, ScrollText } from "lucide-react";
+import { Crown, BookOpen, Headphones, ScrollText, Infinity as InfinityIcon, Languages } from "lucide-react";
 import { useAuth } from "@/contexts/AuthContext";
 import { useNavigate } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
 
 const features = [
   { icon: BookOpen, label: "Full vocabulary with 500+ words" },
