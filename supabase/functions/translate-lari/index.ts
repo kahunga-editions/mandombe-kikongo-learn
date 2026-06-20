@@ -4779,6 +4779,8 @@ Réponds UNIQUEMENT en JSON valide :
 
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
+const MAX_TRANSLATE_CHARS = 2000;
+
 serve(async (req) => {
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
@@ -4793,6 +4795,35 @@ serve(async (req) => {
         JSON.stringify({ error: "Missing 'text' or 'direction'" }),
         { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
+    }
+
+    if (typeof text !== "string" || text.length > MAX_TRANSLATE_CHARS) {
+      return new Response(
+        JSON.stringify({ error: `'text' must be a string of max ${MAX_TRANSLATE_CHARS} chars` }),
+        { status: 413, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+
+    // Require authenticated user for AI calls (cost protection).
+    // Admin correction-save path below performs an additional admin check.
+    {
+      const authHeader = req.headers.get("Authorization") || req.headers.get("authorization") || "";
+      const token = authHeader.replace(/^Bearer\s+/i, "").trim();
+      if (!token) {
+        return new Response(JSON.stringify({ error: "Authentication required" }), {
+          status: 401, headers: { ...corsHeaders, "Content-Type": "application/json" },
+        });
+      }
+      const tmpClient = createClient(
+        Deno.env.get("SUPABASE_URL")!,
+        Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
+      );
+      const { data: { user } } = await tmpClient.auth.getUser(token);
+      if (!user) {
+        return new Response(JSON.stringify({ error: "Invalid or expired token" }), {
+          status: 401, headers: { ...corsHeaders, "Content-Type": "application/json" },
+        });
+      }
     }
 
     const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
