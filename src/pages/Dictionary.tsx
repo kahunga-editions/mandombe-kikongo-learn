@@ -105,11 +105,43 @@ const saveCachedTranslations = (cache: Record<string, string>) => {
 const Dictionary = () => {
   const { language, t } = useLanguage();
   const { getTranslation, isDynamic } = useTranslatedContent();
+  const { user, isAdmin, isPremium, hasLifetimeTranslator, translatorUsesRemaining, translatorUsesLimit, checkSubscription } = useAuth();
+  const navigate = useNavigate();
   const [search, setSearch] = useState("");
   const [activeLetter, setActiveLetter] = useState<string | null>(null);
   const [ptTranslations, setPtTranslations] = useState<Record<string, string>>(loadCachedTranslations);
   const [isTranslating, setIsTranslating] = useState(false);
   const [dynamicEntries, setDynamicEntries] = useState<DictionaryEntry[]>([]);
+  const [quotaExceeded, setQuotaExceeded] = useState(false);
+  const recordedQueriesRef = useRef<Set<string>>(new Set());
+
+  const hasUnlimited = isAdmin || isPremium || hasLifetimeTranslator;
+
+  // Debounced: each NEW non-trivial search consumes 1 of the 11 free uses (signed-in users only).
+  useEffect(() => {
+    const q = search.trim().toLowerCase();
+    if (!q || q.length < 2) return;
+    if (hasUnlimited) return;
+    if (!user) return; // gated UI message will prompt sign-in
+    if (recordedQueriesRef.current.has(q)) return;
+
+    const timer = setTimeout(async () => {
+      recordedQueriesRef.current.add(q);
+      try {
+        const { data, error } = await supabase.functions.invoke("record-feature-usage", {
+          body: { feature: "translator_dictionary" },
+        });
+        if (error || (data as any)?.error === "quota_exceeded") {
+          setQuotaExceeded(true);
+        }
+        void checkSubscription();
+      } catch {
+        // silent — search still works locally
+      }
+    }, 700);
+    return () => clearTimeout(timer);
+  }, [search, hasUnlimited, user, checkSubscription]);
+
 
   // Fetch corrections from DB and map to DictionaryEntry
   useEffect(() => {
