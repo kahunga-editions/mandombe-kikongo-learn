@@ -1,79 +1,33 @@
-## Goal
+# Fix: admin (and all signed-in users) lose access when JWT expires
 
-Introduce a one-time **$19.99 lifetime unlock** that gives signed-in users unlimited access to the **Translator** and **Dictionary**. Non-buyers get **11 free uses total** (lifetime, per account). The existing $9.99/month Premium subscription stays unchanged and continues to unlock everything (lessons, stories, Kilolaka, Mbuta Matondo, etc.).
+## Diagnostic
 
-## Why $19.99
+The translator page shows `Invalid or expired token` even for the admin. The admin bypass for the 11-use quota already exists server-side (`hasUnlimitedAccess` in `_shared/quota.ts`), so the quota is not the problem.
 
-- ~2 months of Premium → feels fair for *forever* access to a narrow toolset.
-- High enough to not cannibalize the subscription (which still wins on breadth).
-- Sweet spot for niche language/diaspora tools — low enough for impulse purchase after hitting the 11-use wall, high enough to be meaningful revenue per user.
-- Admins and active Premium subscribers automatically have access (no double-charging).
+The real cause is in `src/pages/Translator.tsx`: both `translate()` and `saveCorrection()` call the edge function with raw `fetch(...)` using `session?.access_token` from React state. When the in-memory token has expired (long-lived tab, returning user), the edge function's `auth.getUser(token)` rejects it with HTTP 401 `Invalid or expired token`. The Supabase JS client would normally auto-refresh, but raw `fetch` bypasses that.
 
-## User-facing behavior
+Admin status is irrelevant here — the request is rejected before any role check.
 
-- **Translator page & Dictionary page**: each call increments a counter on the user's account. A small "X / 11 free uses remaining" indicator appears below the input.
-- **At 0 remaining**: input is disabled, replaced by a paywall card:
-  > "You've used your 11 free translations. Unlock the Translator + Dictionary forever for $19.99 — or get everything with Premium ($9.99/mo)."
-  Two buttons: **Buy lifetime access — $19.99** and **Go Premium — $9.99/mo**.
-- **Not signed in**: redirected to /auth before the first use is counted (prevents anonymous abuse / quota reset by clearing cookies).
-- **After purchase**: paywall disappears, counter hidden, unlimited use.
-- **Premium subscribers / admins**: never see the counter or paywall.
+## Fix
 
-## Technical design
+In `src/pages/Translator.tsx`:
 
-### Database (one migration)
+1. Before each `translate()` / `saveCorrection()` request, ensure a fresh JWT:
+   - `const { data } = await supabase.auth.getSession();`
+   - If `!data.session` or the token is within ~60s of `expires_at`, call `await supabase.auth.refreshSession()` and use the refreshed token.
+2. Replace the raw `fetch(...VITE_SUPABASE_URL/functions/v1/translate-lari)` calls with `supabase.functions.invoke("translate-lari", { body })`, which:
+   - Uses the live session from the Supabase client (auto-refresh enabled).
+   - Avoids hardcoding `VITE_SUPABASE_PUBLISHABLE_KEY` and the URL.
+   - Still surfaces non-2xx via `error` / `response.status` (we'll read `error.context?.response` to detect HTTP 402 → `quotaExceeded`).
+3. If a 401 still comes back after a refresh attempt, show a clear toast "Session expirée, reconnectez-vous" and route to `/auth?next=/translator` instead of leaving the cryptic raw message in the result panel.
 
-```text
-table public.lifetime_unlocks
-  user_id uuid PK references auth.users on delete cascade
-  product text not null         -- 'translator_dictionary'
-  stripe_session_id text
-  amount_cents int
-  purchased_at timestamptz default now()
+No backend changes — admin quota bypass is already correct. No price / paywall / UI restructuring.
 
-table public.feature_usage
-  user_id uuid
-  feature text                  -- 'translator' | 'dictionary'
-  count int default 0
-  updated_at timestamptz
-  PK (user_id, feature)
-```
+## Files touched
 
-- GRANTs: `authenticated` SELECT own rows; `service_role` ALL. Writes happen only via edge functions (service role).
-- RLS: users can read their own rows; no client-side INSERT/UPDATE.
-- New SQL helper `public.has_lifetime_access(_user_id uuid, _product text) returns boolean` (SECURITY DEFINER).
+- `src/pages/Translator.tsx` — swap raw `fetch` for `supabase.functions.invoke`, add pre-call session refresh, friendlier 401 handling.
 
-### Edge functions
+## Out of scope
 
-- **`create-lifetime-checkout`** — new. Creates a Stripe Checkout session in `mode: "payment"` for a new $19.99 one-time price (created via the Stripe tool). Success URL refreshes entitlements.
-- **`verify-lifetime-purchase`** — new. Called on success-URL return; reads the Checkout session, on `payment_status === "paid"` upserts into `lifetime_unlocks`.
-- **`check-subscription`** — extended to also return `lifetimeTranslator: boolean` so the frontend can gate in one round-trip.
-- **`translate-lari`**, **`translate-batch`**, and the dictionary lookup path — wrapped with a quota check helper:
-  1. If admin / premium / lifetime → allow, no increment.
-  2. Else read `feature_usage.count`; if ≥ 11 → return `403 { error: "quota_exceeded" }`.
-  3. Else atomically increment and proceed.
-  - Counter is incremented **server-side only**, so it can't be tampered with from the browser.
-
-### Frontend
-
-- **`AuthContext`** — add `hasLifetimeTranslator: boolean` and `translatorUsesRemaining: number | null`, populated by `check-subscription`.
-- **New component `TranslatorQuotaGate`** — wraps the translator input area. Shows remaining count, swaps to paywall card at 0, handles the two CTAs (lifetime checkout vs. monthly Premium).
-- **`Translator.tsx`** and **`Dictionary.tsx`** — wrap the interactive area with `TranslatorQuotaGate`. The 403 from edge functions also triggers the paywall (defense in depth).
-- **`PremiumSection.tsx`** — add a second card next to the monthly plan: "Lifetime Translator + Dictionary — $19.99 one-time".
-
-### Stripe
-
-- Create one new product **"Lifetime Translator + Dictionary"** with a one-time $19.99 USD price via `stripe--create_stripe_product_and_price`. Hard-code the resulting `price_…` ID in `create-lifetime-checkout`.
-- Existing $9.99/mo subscription product is untouched.
-
-## Out of scope (explicit)
-
-- No webhook handler — verification happens on success-URL return, matching the existing `check-subscription` pattern.
-- Mbuta Matondo, lessons, stories, Kilolaka remain Premium-only.
-- No refund flow / no "transfer lifetime to another account" flow.
-- Existing 11 free uses are granted to all current users (no retroactive deduction based on past usage).
-
-## Risk notes
-
-- Quota is per-account, so users can create multiple emails to reset. Acceptable for v1; can add device fingerprinting later if abuse appears.
-- If the user is also a Premium subscriber and later cancels, lifetime entitlement (if purchased) persists; if not purchased, they fall back to the 11-use quota (already exhausted counter stays exhausted).
+- Dictionary page (same pattern may apply; will tackle separately if you confirm it also breaks).
+- Any change to free quota, lifetime unlock, or premium logic.
