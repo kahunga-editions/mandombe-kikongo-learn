@@ -800,19 +800,49 @@ async function callGateway(messages: unknown[], stream: boolean) {
   });
 }
 
+const MAX_MESSAGES = 30;
+const MAX_MESSAGE_CHARS = 4000;
+
 serve(async (req) => {
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
   }
 
+  // Require authenticated user (cost protection on AI gateway).
+  const authHeader = req.headers.get("Authorization") || req.headers.get("authorization") || "";
+  const token = authHeader.replace(/^Bearer\s+/i, "").trim();
+  if (!token) {
+    return new Response(JSON.stringify({ error: "Authentication required" }), {
+      status: 401, headers: { ...corsHeaders, "Content-Type": "application/json" },
+    });
+  }
+  {
+    const tmp = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY);
+    const { data: { user } } = await tmp.auth.getUser(token);
+    if (!user) {
+      return new Response(JSON.stringify({ error: "Invalid or expired token" }), {
+        status: 401, headers: { ...corsHeaders, "Content-Type": "application/json" },
+      });
+    }
+  }
+
   try {
-    const { messages } = await req.json();
-    if (!messages || !Array.isArray(messages)) {
+    const { messages: rawMessages } = await req.json();
+    if (!rawMessages || !Array.isArray(rawMessages)) {
       return new Response(JSON.stringify({ error: "Messages array is required" }), {
         status: 400,
         headers: { ...corsHeaders, "Content-Type": "application/json" },
       });
     }
+
+    // Cap conversation history to prevent unbounded prompt growth.
+    const trimmed = rawMessages.slice(-MAX_MESSAGES).map((m: any) => {
+      if (typeof m?.content === "string" && m.content.length > MAX_MESSAGE_CHARS) {
+        return { ...m, content: m.content.slice(0, MAX_MESSAGE_CHARS) };
+      }
+      return m;
+    });
+    const messages = trimmed;
 
     const systemPrompt = await buildSystemPrompt();
 
