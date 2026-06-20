@@ -127,6 +127,9 @@ serve(async (req) => {
       subscribed: hasActiveSub,
       isAdmin,
       subscription_end: subscriptionEnd,
+      hasLifetimeTranslator,
+      translatorUsesRemaining,
+      translatorUsesLimit: FREE_LIMIT,
     }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 200,
