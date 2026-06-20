@@ -1,12 +1,14 @@
-import { useState, useCallback, useRef } from "react";
+import { useState, useCallback, useRef, useEffect } from "react";
+import { useSearchParams, useNavigate } from "react-router-dom";
 import { SEO } from "@/components/SEO";
-import { ArrowRightLeft, Languages, Loader2, AlertCircle, Copy, Check, ImageIcon, Pencil } from "lucide-react";
+import { ArrowRightLeft, Languages, Loader2, AlertCircle, Copy, Check, ImageIcon, Pencil, Infinity as InfinityIcon } from "lucide-react";
 import html2canvas from "html2canvas";
 import { toast } from "sonner";
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MandombeSpeaker from "@/components/MandombeSpeaker";
+import TranslatorPaywall from "@/components/TranslatorPaywall";
 import { supabase } from "@/integrations/supabase/client";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useAuth } from "@/contexts/AuthContext";
@@ -44,16 +46,47 @@ const langLabels: Record<SourceLang, string> = {
 
 const Translator = () => {
   const { t } = useLanguage();
-  const { isAdmin, session, checkSubscription } = useAuth();
+  const { user, isAdmin, isPremium, hasLifetimeTranslator, translatorUsesRemaining, translatorUsesLimit, session, checkSubscription } = useAuth();
   const [sourceLang, setSourceLang] = useState<SourceLang>("fr");
   const [targetLang, setTargetLang] = useState<SourceLang>("lari");
   const [inputText, setInputText] = useState("");
   const [result, setResult] = useState<TranslationResult | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [quotaExceeded, setQuotaExceeded] = useState(false);
   const [copied, setCopied] = useState<"source" | "target" | "mandombe" | null>(null);
   const [isEditing, setIsEditing] = useState(false);
   const mandombeRef = useRef<HTMLParagraphElement>(null);
+  const [searchParams, setSearchParams] = useSearchParams();
+  const navigate = useNavigate();
+
+  const hasUnlimited = isAdmin || isPremium || hasLifetimeTranslator;
+
+  // Handle Stripe return: verify lifetime purchase
+  useEffect(() => {
+    const status = searchParams.get("lifetime");
+    const sessionId = searchParams.get("session_id");
+    if (status === "success" && sessionId && session?.access_token) {
+      supabase.functions
+        .invoke("verify-lifetime-purchase", { body: { session_id: sessionId } })
+        .then(({ data, error }) => {
+          if (error) {
+            toast.error("Vérification du paiement échouée");
+          } else if (data?.verified) {
+            toast.success("🎉 Accès à vie activé !");
+            void checkSubscription();
+          }
+          searchParams.delete("lifetime");
+          searchParams.delete("session_id");
+          setSearchParams(searchParams, { replace: true });
+        });
+    } else if (status === "cancel") {
+      toast.info("Paiement annulé");
+      searchParams.delete("lifetime");
+      setSearchParams(searchParams, { replace: true });
+    }
+  }, [searchParams, session, checkSubscription, setSearchParams]);
+
 
   const copyMandombeAsImage = useCallback(async () => {
     if (!mandombeRef.current) return;
@@ -151,13 +184,29 @@ const Translator = () => {
 
   const translate = useCallback(async () => {
     if (!inputText.trim()) return;
+    if (!user) {
+      navigate("/auth?next=/translator");
+      return;
+    }
     setIsLoading(true);
     setError(null);
     setResult(null);
     setIsEditing(false);
+    setQuotaExceeded(false);
 
     const direction = `${sourceLang}-to-${targetLang}`;
     const notesLang = sourceLang === "lari" ? targetLang : sourceLang;
+
+    let accessToken = session?.access_token;
+    if (!accessToken) {
+      const { data } = await supabase.auth.getSession();
+      accessToken = data.session?.access_token;
+    }
+    if (!accessToken) {
+      setIsLoading(false);
+      navigate("/auth?next=/translator");
+      return;
+    }
 
     try {
       const response = await fetch(
@@ -167,11 +216,17 @@ const Translator = () => {
           headers: {
             "Content-Type": "application/json",
             apikey: import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY,
-            Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
+            Authorization: `Bearer ${accessToken}`,
           },
           body: JSON.stringify({ text: inputText.trim(), direction, notesLang }),
         }
       );
+
+      if (response.status === 402) {
+        setQuotaExceeded(true);
+        void checkSubscription();
+        return;
+      }
 
       if (!response.ok) {
         const err = await response.json().catch(() => ({}));
@@ -180,12 +235,14 @@ const Translator = () => {
 
       const data: TranslationResult = await response.json();
       setResult(data);
+      // refresh remaining count
+      void checkSubscription();
     } catch (err) {
       setError(err instanceof Error ? err.message : "Erreur inconnue");
     } finally {
       setIsLoading(false);
     }
-  }, [inputText, sourceLang, targetLang]);
+  }, [inputText, sourceLang, targetLang, user, session, navigate, checkSubscription]);
 
   // Translator is now public — admin still has correction privileges below.
 
@@ -214,6 +271,41 @@ const Translator = () => {
               {t("translator.subtitle")}
             </p>
           </div>
+
+          {/* Quota / paywall banner */}
+          {quotaExceeded && !hasUnlimited ? (
+            <div className="mb-8">
+              <TranslatorPaywall reason="quota" />
+            </div>
+          ) : !user ? (
+            <div className="mb-8">
+              <TranslatorPaywall reason="auth" />
+            </div>
+          ) : !hasUnlimited && translatorUsesRemaining !== null ? (
+            <div className="mb-6 flex items-center justify-center gap-2 text-sm">
+              <span className="text-muted-foreground">
+                {translatorUsesRemaining} / {translatorUsesLimit} traductions gratuites restantes
+              </span>
+              <button
+                onClick={async () => {
+                  try {
+                    const { data, error } = await supabase.functions.invoke("create-lifetime-checkout");
+                    if (error) throw error;
+                    if (data?.url) window.open(data.url, "_blank");
+                  } catch {
+                    toast.error("Erreur");
+                  }
+                }}
+                className="text-gold hover:underline font-medium inline-flex items-center gap-1"
+              >
+                <InfinityIcon className="w-3.5 h-3.5" /> Débloquer à vie — 19,99 $
+              </button>
+            </div>
+          ) : hasUnlimited ? (
+            <div className="mb-6 text-center text-xs text-gold/70 uppercase tracking-widest">
+              ✦ Accès illimité ✦
+            </div>
+          ) : null}
 
           {/* Language selector bar */}
           <div className="flex items-center justify-center gap-4 mb-6">

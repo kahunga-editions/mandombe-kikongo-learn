@@ -49,11 +49,37 @@ serve(async (req) => {
 
     const isAdmin = roles?.some((r: any) => r.role === "admin") ?? false;
 
+    // Lifetime translator/dictionary unlock
+    const { data: lifetimeRow } = await supabaseClient
+      .from("lifetime_unlocks")
+      .select("user_id")
+      .eq("user_id", user.id)
+      .eq("product", "translator_dictionary")
+      .maybeSingle();
+    const hasLifetimeTranslator = !!lifetimeRow;
+
+    // Free-tier usage counter
+    const FREE_LIMIT = 11;
+    const { data: usageRow } = await supabaseClient
+      .from("feature_usage")
+      .select("count")
+      .eq("user_id", user.id)
+      .eq("feature", "translator_dictionary")
+      .maybeSingle();
+    const usedCount = usageRow?.count ?? 0;
+    const translatorUsesRemaining = Math.max(0, FREE_LIMIT - usedCount);
+
     const stripe = new Stripe(stripeKey, { apiVersion: "2025-08-27.basil" });
     const customers = await stripe.customers.list({ email: user.email, limit: 1 });
 
     if (customers.data.length === 0) {
-      return new Response(JSON.stringify({ subscribed: false, isAdmin }), {
+      return new Response(JSON.stringify({
+        subscribed: false,
+        isAdmin,
+        hasLifetimeTranslator,
+        translatorUsesRemaining,
+        translatorUsesLimit: FREE_LIMIT,
+      }), {
         headers: { ...corsHeaders, "Content-Type": "application/json" },
         status: 200,
       });
@@ -107,6 +133,9 @@ serve(async (req) => {
       subscribed: hasActiveSub,
       isAdmin,
       subscription_end: subscriptionEnd,
+      hasLifetimeTranslator,
+      translatorUsesRemaining,
+      translatorUsesLimit: FREE_LIMIT,
     }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 200,

@@ -8,6 +8,9 @@ interface AuthState {
   isAdmin: boolean;
   isPremium: boolean;
   subscriptionEnd: string | null;
+  hasLifetimeTranslator: boolean;
+  translatorUsesRemaining: number | null;
+  translatorUsesLimit: number;
   loading: boolean;
 }
 
@@ -33,6 +36,9 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     isAdmin: false,
     isPremium: false,
     subscriptionEnd: null,
+    hasLifetimeTranslator: false,
+    translatorUsesRemaining: null,
+    translatorUsesLimit: 11,
     loading: true,
   });
 
@@ -48,6 +54,8 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
           isAdmin: false,
           isPremium: false,
           subscriptionEnd: null,
+          hasLifetimeTranslator: false,
+          translatorUsesRemaining: null,
           loading: false,
         }));
         return;
@@ -84,6 +92,13 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
         isPremium: data?.subscribed || data?.isAdmin || adminRole || false,
         isAdmin: data?.isAdmin || adminRole || false,
         subscriptionEnd: data?.subscription_end || null,
+        hasLifetimeTranslator: Boolean(data?.hasLifetimeTranslator),
+        translatorUsesRemaining: typeof data?.translatorUsesRemaining === "number"
+          ? data.translatorUsesRemaining
+          : null,
+        translatorUsesLimit: typeof data?.translatorUsesLimit === "number"
+          ? data.translatorUsesLimit
+          : 11,
         loading: false,
       }));
     } catch (err) {
@@ -111,6 +126,8 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
             isAdmin: false,
             isPremium: false,
             subscriptionEnd: null,
+            hasLifetimeTranslator: false,
+            translatorUsesRemaining: null,
             loading: false,
           }));
         }

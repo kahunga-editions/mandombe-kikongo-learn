@@ -1,14 +1,17 @@
-import { useState, useMemo, useEffect, useCallback } from "react";
+import { useState, useMemo, useEffect, useCallback, useRef } from "react";
 import { SEO } from "@/components/SEO";
-import { Search, BookOpen, Loader2 } from "lucide-react";
+import { Search, BookOpen, Loader2, Infinity as InfinityIcon } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useAuth } from "@/contexts/AuthContext";
 import { useTranslatedContent } from "@/hooks/useTranslatedContent";
+import { useNavigate } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import LingalaMandombe from "@/components/LingalaMandombe";
 import TranslationSpeaker from "@/components/TranslationSpeaker";
 import MandombeSpeaker from "@/components/MandombeSpeaker";
+import TranslatorPaywall from "@/components/TranslatorPaywall";
 import { lessons, VocabItem } from "@/data/lessons";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
@@ -102,11 +105,43 @@ const saveCachedTranslations = (cache: Record<string, string>) => {
 const Dictionary = () => {
   const { language, t } = useLanguage();
   const { getTranslation, isDynamic } = useTranslatedContent();
+  const { user, isAdmin, isPremium, hasLifetimeTranslator, translatorUsesRemaining, translatorUsesLimit, checkSubscription } = useAuth();
+  const navigate = useNavigate();
   const [search, setSearch] = useState("");
   const [activeLetter, setActiveLetter] = useState<string | null>(null);
   const [ptTranslations, setPtTranslations] = useState<Record<string, string>>(loadCachedTranslations);
   const [isTranslating, setIsTranslating] = useState(false);
   const [dynamicEntries, setDynamicEntries] = useState<DictionaryEntry[]>([]);
+  const [quotaExceeded, setQuotaExceeded] = useState(false);
+  const recordedQueriesRef = useRef<Set<string>>(new Set());
+
+  const hasUnlimited = isAdmin || isPremium || hasLifetimeTranslator;
+
+  // Debounced: each NEW non-trivial search consumes 1 of the 11 free uses (signed-in users only).
+  useEffect(() => {
+    const q = search.trim().toLowerCase();
+    if (!q || q.length < 2) return;
+    if (hasUnlimited) return;
+    if (!user) return; // gated UI message will prompt sign-in
+    if (recordedQueriesRef.current.has(q)) return;
+
+    const timer = setTimeout(async () => {
+      recordedQueriesRef.current.add(q);
+      try {
+        const { data, error } = await supabase.functions.invoke("record-feature-usage", {
+          body: { feature: "translator_dictionary" },
+        });
+        if (error || (data as any)?.error === "quota_exceeded") {
+          setQuotaExceeded(true);
+        }
+        void checkSubscription();
+      } catch {
+        // silent — search still works locally
+      }
+    }, 700);
+    return () => clearTimeout(timer);
+  }, [search, hasUnlimited, user, checkSubscription]);
+
 
   // Fetch corrections from DB and map to DictionaryEntry
   useEffect(() => {
@@ -318,17 +353,50 @@ const Dictionary = () => {
             )}
           </div>
 
+          {/* Quota / paywall banner */}
+          {quotaExceeded && !hasUnlimited ? (
+            <div className="max-w-2xl mx-auto mb-8">
+              <TranslatorPaywall reason="quota" variant="inline" />
+            </div>
+          ) : !hasUnlimited && user && translatorUsesRemaining !== null ? (
+            <div className="max-w-xl mx-auto mb-3 flex items-center justify-center gap-2 text-xs text-muted-foreground">
+              <span>
+                {translatorUsesRemaining} / {translatorUsesLimit} recherches gratuites restantes (partagées avec le traducteur)
+              </span>
+              <button
+                onClick={async () => {
+                  try {
+                    const { data, error } = await supabase.functions.invoke("create-lifetime-checkout");
+                    if (error) throw error;
+                    if (data?.url) window.open(data.url, "_blank");
+                  } catch {
+                    toast.error("Erreur");
+                  }
+                }}
+                className="text-gold hover:underline font-medium inline-flex items-center gap-1"
+              >
+                <InfinityIcon className="w-3 h-3" /> 19,99 $
+              </button>
+            </div>
+          ) : null}
+
           {/* Search */}
           <div className="max-w-xl mx-auto mb-8 relative">
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
             <Input
               value={search}
               onChange={(e) => {
+                if (!user) {
+                  navigate("/auth?next=/dictionary");
+                  return;
+                }
+                if (quotaExceeded && !hasUnlimited) return;
                 setSearch(e.target.value);
                 setActiveLetter(null);
               }}
-              placeholder={t("dict.searchPlaceholder")}
-              className="pl-12 h-14 text-lg rounded-xl border-border bg-card shadow-sm focus-visible:ring-primary"
+              placeholder={!user ? "Connectez-vous pour rechercher…" : (quotaExceeded && !hasUnlimited) ? "Recherches épuisées — débloquez à vie" : t("dict.searchPlaceholder")}
+              disabled={quotaExceeded && !hasUnlimited}
+              className="pl-12 h-14 text-lg rounded-xl border-border bg-card shadow-sm focus-visible:ring-primary disabled:opacity-60"
             />
           </div>
 

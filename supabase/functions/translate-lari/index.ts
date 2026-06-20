@@ -4778,6 +4778,7 @@ Réponds UNIQUEMENT en JSON valide :
 }`;
 
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
+import { consumeQuota, FREE_LIMIT, quotaExceededResponse } from "../_shared/quota.ts";
 
 const MAX_TRANSLATE_CHARS = 2000;
 
@@ -4805,7 +4806,7 @@ serve(async (req) => {
     }
 
     // Require authenticated user for AI calls (cost protection).
-    // Admin correction-save path below performs an additional admin check.
+    let authedUserId: string | null = null;
     {
       const authHeader = req.headers.get("Authorization") || req.headers.get("authorization") || "";
       const token = authHeader.replace(/^Bearer\s+/i, "").trim();
@@ -4824,11 +4825,18 @@ serve(async (req) => {
           status: 401, headers: { ...corsHeaders, "Content-Type": "application/json" },
         });
       }
+      authedUserId = user.id;
     }
 
     const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
     const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
     const supabase = createClient(supabaseUrl, supabaseServiceKey);
+
+    // Enforce free-tier quota for non-correction calls.
+    if (!correction) {
+      const quota = await consumeQuota(supabase, authedUserId!, "translator_dictionary", FREE_LIMIT);
+      if (!quota.allowed) return quotaExceededResponse(corsHeaders);
+    }
 
     // Parse direction to get source_lang and target_lang
     const [sourceLang, , targetLang] = direction.split("-"); // e.g. "fr-to-lari"
