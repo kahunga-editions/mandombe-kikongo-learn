@@ -115,7 +115,8 @@ const Dictionary = () => {
   const [quotaExceeded, setQuotaExceeded] = useState(false);
   const recordedQueriesRef = useRef<Set<string>>(new Set());
 
-  const hasUnlimited = isAdmin || isPremium || hasLifetimeTranslator;
+  // Paywall temporarily suspended — free unlimited access for everyone.
+  const hasUnlimited = true;
 
   // Debounced: each NEW non-trivial search consumes 1 of the 11 free uses (signed-in users only).
   useEffect(() => {
