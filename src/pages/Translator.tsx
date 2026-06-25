@@ -260,40 +260,14 @@ const Translator = () => {
             </p>
           </div>
 
-          {/* Quota / paywall banner */}
-          {quotaExceeded && !hasUnlimited ? (
-            <div className="mb-8">
-              <TranslatorPaywall reason="quota" />
-            </div>
-          ) : !user ? (
+          {/* Paywall temporarily suspended */}
+          {!user ? (
             <div className="mb-8">
               <TranslatorPaywall reason="auth" />
             </div>
-          ) : !hasUnlimited && translatorUsesRemaining !== null ? (
-            <div className="mb-6 flex items-center justify-center gap-2 text-sm">
-              <span className="text-muted-foreground">
-                {translatorUsesRemaining} / {translatorUsesLimit} traductions gratuites restantes
-              </span>
-              <button
-                onClick={async () => {
-                  try {
-                    const { data, error } = await supabase.functions.invoke("create-lifetime-checkout");
-                    if (error) throw error;
-                    if (data?.url) window.open(data.url, "_blank");
-                  } catch {
-                    toast.error("Erreur");
-                  }
-                }}
-                className="text-gold hover:underline font-medium inline-flex items-center gap-1"
-              >
-                <InfinityIcon className="w-3.5 h-3.5" /> Débloquer à vie — 19,99 $
-              </button>
-            </div>
-          ) : hasUnlimited ? (
-            <div className="mb-6 text-center text-xs text-gold/70 uppercase tracking-widest">
-              ✦ Accès illimité ✦
-            </div>
           ) : null}
+
+
 
           {/* Language selector bar */}
           <div className="flex items-center justify-center gap-4 mb-6">
