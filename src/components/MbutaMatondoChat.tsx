@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
 import { supabase } from "@/integrations/supabase/client";
+import PronunciationCheck from "@/components/PronunciationCheck";
 
 import lecon00 from "../../supabase/functions/_shared/mbuta-lecon-00.json";
 import lecon03 from "../../supabase/functions/_shared/mbuta-lecon-03.json";
@@ -42,7 +43,7 @@ type Block = { lari: string; fr: string };
 
 const CHAT_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/mbuta-matondo`;
 const TTS_LARI_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/elevenlabs-tts-lari`;
-const STT_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/elevenlabs-stt`;
+const STT_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/stt-lari`;
 
 // ---------- Parsing helpers ----------
 
@@ -259,6 +260,11 @@ function MandombeBubble({ block, isPlaying, audioDurationMs, onAdminCorrect, isA
         >
           {block.fr}
         </div>
+      )}
+
+      {/* Pronunciation evaluator — appears once typewriter is finished */}
+      {showLari && (
+        <PronunciationCheck expected={block.lari} className="pt-1" />
       )}
     </div>
   );
