@@ -446,6 +446,11 @@ const Translator = () => {
                     </p>
                   )}
 
+                  {/* Pronunciation evaluator — only when target is Lari */}
+                  {targetIsLari && lariText && (
+                    <PronunciationCheck expected={lariText} className="mb-3" />
+                  )}
+
                   {/* Notes */}
                   {(result.notes || (isEditing && isAdmin)) && (
                     <div className="mt-4 p-3 bg-muted/50 rounded-lg border border-border">
