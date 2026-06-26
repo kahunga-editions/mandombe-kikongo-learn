@@ -214,6 +214,23 @@ const PronunciationCheck = ({ expected, mandombe, meaning, className, compact }:
             <RotateCcw className="w-3 h-3" /> Réessayer
           </button>
         )}
+
+        <button
+          type="button"
+          onClick={() => setOffline((v) => !v)}
+          disabled={busy || recording}
+          title={offline ? "Mode hors-ligne (navigateur)" : "Mode en ligne (IA Gateway)"}
+          className={cn(
+            "ml-auto inline-flex items-center gap-1 rounded-md px-1.5 py-0.5 text-[10px] font-medium border transition-colors",
+            offline
+              ? "border-amber-500/40 bg-amber-500/10 text-amber-500"
+              : "border-border bg-muted/40 text-muted-foreground hover:text-foreground",
+          )}
+        >
+          {offline ? <WifiOff className="w-3 h-3" /> : <Wifi className="w-3 h-3" />}
+          {offline ? "Hors-ligne" : "En ligne"}
+        </button>
+
       </div>
 
       {error && <div className="text-[11px] text-rose-500">{error}</div>}
