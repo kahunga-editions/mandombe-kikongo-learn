@@ -4,6 +4,10 @@ import { LESSONS_CORPUS, filterLessons, getExercisesByLesson } from "../_shared/
 import { MBUTA_CORPUS_V2 } from "../_shared/mbuta-corpus-v2.ts";
 import { MBUTA_LECONS } from "../_shared/mbuta-lecons.ts";
 import { mbutaOfflineReply } from "../_shared/offline-fallback.ts";
+import DICTIONARY from "../_shared/dictionary.json" with { type: "json" };
+
+type DictEntry = { lari: string; fr: string; mandombe?: string };
+const DICT = DICTIONARY as DictEntry[];
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -577,7 +581,7 @@ const TOOLS = [
     function: {
       name: "search_dictionary",
       description:
-        "Cherche un mot ou une expression dans le dictionnaire du site (corrections admin + corpus Lari). Retourne les entrées correspondantes ou vide.",
+        "Cherche un mot ou une expression dans TOUTES les sources Lari du site : (1) corrections admin du traducteur, (2) corpus des leçons, (3) dictionnaire complet Buku dia Binsono (~3900 entrées), et en dernier recours (4) appel automatique au traducteur officiel. Retourne admin_corrections, corpus_entries, dictionary_entries, et translator_fallback. À utiliser systématiquement avant de dire 'Ka nzebi a ko.'",
       parameters: {
         type: "object",
         properties: {
@@ -734,10 +738,34 @@ async function handleToolCall(name: string, args: Record<string, unknown>): Prom
         ).map((v) => ({ ...v, lesson: l.id }))
       );
 
+      const dictHits = DICT.filter(
+        (e) =>
+          e.lari.toLowerCase().includes(lower) ||
+          e.fr.toLowerCase().includes(lower)
+      ).slice(0, 15);
+
+      // Auto-fallback : si rien trouvé localement, on interroge le traducteur officiel.
+      let translator_fallback: unknown = null;
+      const totalLocal =
+        (corrections?.length ?? 0) + corpusHits.length + dictHits.length;
+      if (totalLocal === 0) {
+        const lang = (args.lang as string) || "fr";
+        const target = lang === "lari" ? "fr" : "lari";
+        const { data: t } = await supabase.functions.invoke("translate-lari", {
+          body: { text: query, sourceLang: lang, targetLang: target },
+        });
+        translator_fallback = t ?? null;
+      }
+
       return {
         admin_corrections: corrections ?? [],
         corpus_entries: corpusHits,
-        found: (corrections?.length ?? 0) + corpusHits.length > 0,
+        dictionary_entries: dictHits,
+        translator_fallback,
+        found:
+          totalLocal > 0 ||
+          (translator_fallback != null &&
+            typeof translator_fallback === "object"),
       };
     }
 
