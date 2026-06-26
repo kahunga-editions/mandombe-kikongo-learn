@@ -1,9 +1,10 @@
 import { useCallback, useRef, useState } from "react";
 import {
-  Mic, Square, Loader2, CheckCircle2, AlertCircle, XCircle, Volume2, RotateCcw,
+  Mic, Square, Loader2, CheckCircle2, AlertCircle, XCircle, Volume2, RotateCcw, Wifi, WifiOff,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { lookupLari } from "@/lib/lariDictionary";
+import { diagnose as diagnoseLocal, isWebSpeechSupported, recognizeOnce } from "@/lib/lariSyllables";
 
 const STT_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/stt-lari`;
 const TTS_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/tts-lari-cached`;
@@ -49,6 +50,7 @@ const PronunciationCheck = ({ expected, mandombe, meaning, className, compact }:
   const [busy, setBusy] = useState(false);
   const [result, setResult] = useState<ApiResult | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [offline, setOffline] = useState<boolean>(() => !navigator.onLine && isWebSpeechSupported());
 
   const recorderRef = useRef<MediaRecorder | null>(null);
   const chunksRef = useRef<Blob[]>([]);
@@ -57,6 +59,18 @@ const PronunciationCheck = ({ expected, mandombe, meaning, className, compact }:
   const dictHit = (!mandombe || !meaning) ? lookupLari(expected) : null;
   const exampleMandombe = mandombe ?? dictHit?.mandombe ?? expected;
   const exampleMeaning = meaning ?? dictHit?.fr ?? "";
+
+  const buildLocalResult = useCallback((heard: string): ApiResult => {
+    const d = diagnoseLocal(expected, heard);
+    return {
+      text: heard,
+      score: d.score,
+      verdict: d.verdict,
+      syllables: d.cells,
+      expectedSyllables: d.expectedSyllables,
+      issues: d.issues,
+    };
+  }, [expected]);
 
   const submit = useCallback(async (blob: Blob) => {
     setBusy(true);
@@ -80,7 +94,28 @@ const PronunciationCheck = ({ expected, mandombe, meaning, className, compact }:
     }
   }, [expected]);
 
+  const startOffline = useCallback(async () => {
+    setError(null);
+    setResult(null);
+    if (!isWebSpeechSupported()) {
+      setError("Mode hors-ligne indisponible (utilise Chrome ou Edge).");
+      return;
+    }
+    setRecording(true);
+    setBusy(true);
+    try {
+      const heard = await recognizeOnce("fr-FR");
+      setResult(buildLocalResult(heard));
+    } catch (e) {
+      setError(e instanceof Error ? e.message : "Reconnaissance vocale échouée.");
+    } finally {
+      setRecording(false);
+      setBusy(false);
+    }
+  }, [buildLocalResult]);
+
   const start = useCallback(async () => {
+    if (offline) return startOffline();
     setError(null);
     setResult(null);
     try {
@@ -100,7 +135,8 @@ const PronunciationCheck = ({ expected, mandombe, meaning, className, compact }:
     } catch {
       setError("Accès au microphone refusé.");
     }
-  }, [submit]);
+  }, [submit, offline, startOffline]);
+
 
   const stop = useCallback(() => {
     if (recorderRef.current?.state === "recording") recorderRef.current.stop();
@@ -178,6 +214,23 @@ const PronunciationCheck = ({ expected, mandombe, meaning, className, compact }:
             <RotateCcw className="w-3 h-3" /> Réessayer
           </button>
         )}
+
+        <button
+          type="button"
+          onClick={() => setOffline((v) => !v)}
+          disabled={busy || recording}
+          title={offline ? "Mode hors-ligne (navigateur)" : "Mode en ligne (IA Gateway)"}
+          className={cn(
+            "ml-auto inline-flex items-center gap-1 rounded-md px-1.5 py-0.5 text-[10px] font-medium border transition-colors",
+            offline
+              ? "border-amber-500/40 bg-amber-500/10 text-amber-500"
+              : "border-border bg-muted/40 text-muted-foreground hover:text-foreground",
+          )}
+        >
+          {offline ? <WifiOff className="w-3 h-3" /> : <Wifi className="w-3 h-3" />}
+          {offline ? "Hors-ligne" : "En ligne"}
+        </button>
+
       </div>
 
       {error && <div className="text-[11px] text-rose-500">{error}</div>}
