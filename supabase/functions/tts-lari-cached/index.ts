@@ -189,21 +189,24 @@ Deno.serve(async (req) => {
     if (uploadError) {
       console.error("Upload error:", uploadError);
       // Even if upload fails, return base64 so playback still works.
+      const { encode: base64Encode } = await import("https://deno.land/std@0.168.0/encoding/base64.ts");
       return new Response(
         JSON.stringify({
           url: null,
           cached: false,
-          audioContent,
+          audioContent: base64Encode(audioBytes),
+          provider: usedFallback ? "lovable-ai" : "elevenlabs",
           uploadError: uploadError.message,
         }),
         { headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
     }
 
-    console.log(`TTS cached: ${objectPath}`);
-    return new Response(JSON.stringify({ url: publicUrl, cached: false }), {
-      headers: { ...corsHeaders, "Content-Type": "application/json" },
-    });
+    console.log(`TTS cached (${usedFallback ? "lovable-ai" : "elevenlabs"}): ${objectPath}`);
+    return new Response(
+      JSON.stringify({ url: publicUrl, cached: false, provider: usedFallback ? "lovable-ai" : "elevenlabs" }),
+      { headers: { ...corsHeaders, "Content-Type": "application/json" } }
+    );
   } catch (err) {
     console.error("tts-lari-cached error:", err);
     const message = err instanceof Error ? err.message : "Unknown error";
