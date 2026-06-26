@@ -581,7 +581,7 @@ const TOOLS = [
     function: {
       name: "search_dictionary",
       description:
-        "Cherche un mot ou une expression dans le dictionnaire du site (corrections admin + corpus Lari). Retourne les entrées correspondantes ou vide.",
+        "Cherche un mot ou une expression dans TOUTES les sources Lari du site : (1) corrections admin du traducteur, (2) corpus des leçons, (3) dictionnaire complet Buku dia Binsono (~3900 entrées), et en dernier recours (4) appel automatique au traducteur officiel. Retourne admin_corrections, corpus_entries, dictionary_entries, et translator_fallback. À utiliser systématiquement avant de dire 'Ka nzebi a ko.'",
       parameters: {
         type: "object",
         properties: {
