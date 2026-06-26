@@ -8,6 +8,7 @@ import { toast } from "sonner";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MandombeSpeaker from "@/components/MandombeSpeaker";
+import PronunciationCheck from "@/components/PronunciationCheck";
 import TranslatorPaywall from "@/components/TranslatorPaywall";
 import { supabase } from "@/integrations/supabase/client";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -443,6 +444,11 @@ const Translator = () => {
                     <p className="text-sm font-mono text-muted-foreground mb-3">
                       /{result.ipa}/
                     </p>
+                  )}
+
+                  {/* Pronunciation evaluator — only when target is Lari */}
+                  {targetIsLari && lariText && (
+                    <PronunciationCheck expected={lariText} className="mb-3" />
                   )}
 
                   {/* Notes */}

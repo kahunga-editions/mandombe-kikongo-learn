@@ -7,6 +7,8 @@
 //      score (Levenshtein-based) and return a verdict + colored feedback.
 // Public: open to anonymous users, like its peers (mbuta-matondo, translate-lari).
 
+import { diagnose } from "../_shared/lari-syllables.ts";
+
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
@@ -129,12 +131,16 @@ Deno.serve(async (req) => {
       });
     }
 
-    const score = similarity(text, expected);
+    const diag = diagnose(expected, text);
     return new Response(JSON.stringify({
       text,
       expected,
-      score,
-      verdict: verdictOf(score),
+      score: diag.score,
+      verdict: diag.verdict,
+      syllables: diag.cells,
+      expectedSyllables: diag.expectedSyllables,
+      heardSyllables: diag.heardSyllables,
+      issues: diag.issues,
       normalized: { heard: normalizeLari(text), expected: normalizeLari(expected) },
     }), { headers: { ...corsHeaders, "Content-Type": "application/json" } });
   } catch (e) {
