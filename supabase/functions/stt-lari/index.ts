@@ -5,7 +5,7 @@
 //   2. Pronunciation check: client passes `expected` (the Lari word/phrase the
 //      user was supposed to say). We transcribe, normalize, compute a similarity
 //      score (Levenshtein-based) and return a verdict + colored feedback.
-import { requireAuth, unauthorizedResponse } from "../_shared/auth.ts";
+// Public: open to anonymous users, like its peers (mbuta-matondo, translate-lari).
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
