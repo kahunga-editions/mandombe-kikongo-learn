@@ -1,9 +1,10 @@
 import { useCallback, useRef, useState } from "react";
 import {
-  Mic, Square, Loader2, CheckCircle2, AlertCircle, XCircle, Volume2, RotateCcw,
+  Mic, Square, Loader2, CheckCircle2, AlertCircle, XCircle, Volume2, RotateCcw, Wifi, WifiOff,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { lookupLari } from "@/lib/lariDictionary";
+import { diagnose as diagnoseLocal, isWebSpeechSupported, recognizeOnce } from "@/lib/lariSyllables";
 
 const STT_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/stt-lari`;
 const TTS_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/tts-lari-cached`;
