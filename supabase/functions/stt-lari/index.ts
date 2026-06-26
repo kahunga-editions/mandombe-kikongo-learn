@@ -64,9 +64,6 @@ function verdictOf(score: number): "excellent" | "good" | "retry" {
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response("ok", { headers: corsHeaders });
 
-  const auth = await requireAuth(req);
-  if (!auth.ok) return unauthorizedResponse(auth, corsHeaders);
-
   try {
     const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY");
     if (!LOVABLE_API_KEY) {
