@@ -318,6 +318,7 @@ const ComicPanel = ({
           alt={`Story panel ${panelNumber}`}
           className={`w-full object-cover ${isWide ? "h-64 md:h-80 object-top" : "h-56 md:h-full"}`}
           loading="lazy"
+          decoding="async"
         />
         {/* Panel number badge */}
         <div className="absolute top-3 left-3 w-8 h-8 rounded-full bg-gold text-earth-deep flex items-center justify-center font-bold text-sm shadow-lg">
