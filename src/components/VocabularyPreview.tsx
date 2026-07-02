@@ -613,7 +613,7 @@ const VocabularyPreview = () => {
           {categories.map((cat) => (
             <TabsContent key={cat.id} value={cat.id}>
               <div className="flex items-center gap-6 mb-8 p-6 bg-card rounded-2xl border border-border">
-                <img src={cat.image} alt={cat.label} className="w-20 h-20 md:w-24 md:h-24 rounded-xl object-cover" />
+                <img src={cat.image} alt={cat.label} loading="lazy" decoding="async" className="w-20 h-20 md:w-24 md:h-24 rounded-xl object-cover" />
                 <div>
                   <p className="font-mandombe text-2xl text-gold leading-normal mb-4">{cat.lariLabel}</p>
                   <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground">{cat.lariLabel}</h3>
