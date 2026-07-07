@@ -44,13 +44,18 @@ serve(async (req) => {
       });
     }
     const metaUser = session.metadata?.user_id;
-    if (metaUser && metaUser !== user.id) {
+    const metaProduct = session.metadata?.product;
+    // Strict ownership: reject any session without a matching user_id in metadata.
+    // Also require the product metadata to match, so subscription sessions
+    // (which don't set product=translator_dictionary) cannot be used to claim
+    // a lifetime unlock.
+    if (!metaUser || metaUser !== user.id || metaProduct !== "translator_dictionary") {
       return new Response(JSON.stringify({ error: "Session does not belong to this user" }), {
         status: 403,
         headers: { ...corsHeaders, "Content-Type": "application/json" },
       });
     }
-    const product = session.metadata?.product || "translator_dictionary";
+    const product = metaProduct;
 
     await supabase.from("lifetime_unlocks").upsert(
       {
