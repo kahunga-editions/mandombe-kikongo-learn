@@ -288,6 +288,12 @@ const Lessons = () => {
                       {lesson.conjugations && <span>{lesson.conjugations.length} {t("lessons.conjugations")}</span>}
                       <span>{lesson.exercises.length} {t("lessons.exercises")}</span>
                     </div>
+                    {matches[lesson.id] && matches[lesson.id].lari && (
+                      <div className="mt-4 pt-3 border-t border-border/60 text-xs">
+                        <p className="text-gold font-semibold">{matches[lesson.id].lari}</p>
+                        <p className="text-muted-foreground italic">→ {matches[lesson.id].translation}</p>
+                      </div>
+                    )}
                   </div>
                 </Link>
               );
