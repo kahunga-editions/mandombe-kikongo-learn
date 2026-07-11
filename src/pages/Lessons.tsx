@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
+import { useMemo, useState } from "react";
 import { SEO } from "@/components/SEO";
-import { Lock, Loader2 } from "lucide-react";
+import { Lock, Loader2, Search, X } from "lucide-react";
 import { lessons } from "@/data/lessons";
 import { useAuth } from "@/contexts/AuthContext";
 import Navbar from "@/components/Navbar";
