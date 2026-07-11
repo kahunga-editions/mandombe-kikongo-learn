@@ -18816,7 +18816,7 @@ export const LESSONS_CORPUS: LessonSummary[] = [
         "french": "pleuvoir finement"
       },
       {
-        "lari": "bvuka",
+        "lari": "vuka",
         "french": "rassembler"
       },
       {
@@ -19087,7 +19087,7 @@ export const LESSONS_CORPUS: LessonSummary[] = [
         "french": "ouvrir"
       },
       {
-        "lari": "bvukana",
+        "lari": "vukana",
         "french": "se rencontrer"
       },
       {
@@ -19104,7 +19104,7 @@ export const LESSONS_CORPUS: LessonSummary[] = [
       {
         "type": "matching",
         "question": "Associez le verbe dérivé au type d'affixe",
-        "answer": "bikisa=causative (-is-), butila=applicative (-il-), butuka=passive (-uk-), bvukana=reciprocal (-an-)"
+        "answer": "bikisa=causative (-is-), butila=applicative (-il-), butuka=passive (-uk-), vukana=reciprocal (-an-)"
       },
       {
         "type": "fill-in-blank",
@@ -19769,7 +19769,7 @@ export const LESSONS_CORPUS: LessonSummary[] = [
         "french": "saluer d'habitude"
       },
       {
-        "lari": "bvukana",
+        "lari": "vukana",
         "french": "se rencontrer (réciproque)"
       }
     ],
