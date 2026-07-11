@@ -44,10 +44,24 @@ const levelLabels = {
   advanced: { fr: "avancé", en: "advanced", pt: "avançado" },
 };
 
+type LessonMatch = {
+  field: "title" | "description" | "vocabulary" | "phrase";
+  lari: string;
+  translation: string;
+};
+
+const norm = (s: string) =>
+  s
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .trim();
+
 const Lessons = () => {
   const { isPremium } = useAuth();
   const { language, t } = useLanguage();
   const { getTranslation, isDynamic, isTranslating } = useTranslatedContent();
+  const [query, setQuery] = useState("");
 
   const getLessonTitle = (lesson: typeof lessons[0]) => {
     if (isDynamic) return getTranslation(lesson.titleFr || lesson.title, lesson.title);
@@ -66,6 +80,69 @@ const Lessons = () => {
   const getLevelLabel = (level: "beginner" | "intermediate" | "advanced") => {
     return levelLabels[level][language] || levelLabels[level].en;
   };
+
+  const q = norm(query);
+
+  // Build a match per lesson (first best hit) — searches vocabulary, phrases, titles, descriptions.
+  const { filteredLessons, matches } = useMemo(() => {
+    if (!q) return { filteredLessons: lessons, matches: {} as Record<string, LessonMatch> };
+
+    const found: Record<string, LessonMatch> = {};
+    const list: typeof lessons = [];
+
+    for (const lesson of lessons) {
+      let match: LessonMatch | null = null;
+
+      for (const v of lesson.vocabulary ?? []) {
+        const hay = [v.lari, v.french, v.english, v.portuguese, v.note].filter(Boolean).map((x) => norm(String(x)));
+        if (hay.some((h) => h.includes(q))) {
+          const translation =
+            language === "fr" ? v.french : language === "pt" ? v.portuguese ?? v.french : v.english;
+          match = { field: "vocabulary", lari: v.lari, translation: translation || v.french };
+          break;
+        }
+      }
+
+      if (!match) {
+        for (const p of lesson.phrases ?? []) {
+          const hay = [p.lari, p.french, p.english, p.portuguese].filter(Boolean).map((x) => norm(String(x)));
+          if (hay.some((h) => h.includes(q))) {
+            const translation =
+              language === "fr" ? p.french : language === "pt" ? p.portuguese ?? p.french : p.english;
+            match = { field: "phrase", lari: p.lari, translation: translation || p.french };
+            break;
+          }
+        }
+      }
+
+      if (!match) {
+        const titleHay = [lesson.title, lesson.titleFr, lesson.titlePt, lesson.titleLari]
+          .filter(Boolean)
+          .map((x) => norm(String(x)));
+        if (titleHay.some((h) => h.includes(q))) {
+          match = { field: "title", lari: lesson.titleLari, translation: getLessonTitle(lesson) };
+        }
+      }
+
+      if (!match) {
+        const descHay = [lesson.description, lesson.descriptionFr, lesson.descriptionPt]
+          .filter(Boolean)
+          .map((x) => norm(String(x)));
+        if (descHay.some((h) => h.includes(q))) {
+          match = { field: "description", lari: "", translation: getLessonDescription(lesson) };
+        }
+      }
+
+      if (match) {
+        found[lesson.id] = match;
+        list.push(lesson);
+      }
+    }
+
+    return { filteredLessons: list, matches: found };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [q, language, isDynamic]);
+
 
   return (
     <div className="min-h-screen bg-background">
