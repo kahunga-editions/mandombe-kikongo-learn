@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
+import { useMemo, useState } from "react";
 import { SEO } from "@/components/SEO";
-import { Lock, Loader2 } from "lucide-react";
+import { Lock, Loader2, Search, X } from "lucide-react";
 import { lessons } from "@/data/lessons";
 import { useAuth } from "@/contexts/AuthContext";
 import Navbar from "@/components/Navbar";
@@ -43,10 +44,24 @@ const levelLabels = {
   advanced: { fr: "avancé", en: "advanced", pt: "avançado" },
 };
 
+type LessonMatch = {
+  field: "title" | "description" | "vocabulary" | "phrase";
+  lari: string;
+  translation: string;
+};
+
+const norm = (s: string) =>
+  s
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .trim();
+
 const Lessons = () => {
   const { isPremium } = useAuth();
   const { language, t } = useLanguage();
   const { getTranslation, isDynamic, isTranslating } = useTranslatedContent();
+  const [query, setQuery] = useState("");
 
   const getLessonTitle = (lesson: typeof lessons[0]) => {
     if (isDynamic) return getTranslation(lesson.titleFr || lesson.title, lesson.title);
@@ -65,6 +80,69 @@ const Lessons = () => {
   const getLevelLabel = (level: "beginner" | "intermediate" | "advanced") => {
     return levelLabels[level][language] || levelLabels[level].en;
   };
+
+  const q = norm(query);
+
+  // Build a match per lesson (first best hit) — searches vocabulary, phrases, titles, descriptions.
+  const { filteredLessons, matches } = useMemo(() => {
+    if (!q) return { filteredLessons: lessons, matches: {} as Record<string, LessonMatch> };
+
+    const found: Record<string, LessonMatch> = {};
+    const list: typeof lessons = [];
+
+    for (const lesson of lessons) {
+      let match: LessonMatch | null = null;
+
+      for (const v of lesson.vocabulary ?? []) {
+        const hay = [v.lari, v.french, v.english, v.portuguese, v.note].filter(Boolean).map((x) => norm(String(x)));
+        if (hay.some((h) => h.includes(q))) {
+          const translation =
+            language === "fr" ? v.french : language === "pt" ? v.portuguese ?? v.french : v.english;
+          match = { field: "vocabulary", lari: v.lari, translation: translation || v.french };
+          break;
+        }
+      }
+
+      if (!match) {
+        for (const p of lesson.phrases ?? []) {
+          const hay = [p.lari, p.french, p.english, p.portuguese].filter(Boolean).map((x) => norm(String(x)));
+          if (hay.some((h) => h.includes(q))) {
+            const translation =
+              language === "fr" ? p.french : language === "pt" ? p.portuguese ?? p.french : p.english;
+            match = { field: "phrase", lari: p.lari, translation: translation || p.french };
+            break;
+          }
+        }
+      }
+
+      if (!match) {
+        const titleHay = [lesson.title, lesson.titleFr, lesson.titlePt, lesson.titleLari]
+          .filter(Boolean)
+          .map((x) => norm(String(x)));
+        if (titleHay.some((h) => h.includes(q))) {
+          match = { field: "title", lari: lesson.titleLari, translation: getLessonTitle(lesson) };
+        }
+      }
+
+      if (!match) {
+        const descHay = [lesson.description, lesson.descriptionFr, lesson.descriptionPt]
+          .filter(Boolean)
+          .map((x) => norm(String(x)));
+        if (descHay.some((h) => h.includes(q))) {
+          match = { field: "description", lari: "", translation: getLessonDescription(lesson) };
+        }
+      }
+
+      if (match) {
+        found[lesson.id] = match;
+        list.push(lesson);
+      }
+    }
+
+    return { filteredLessons: list, matches: found };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [q, language, isDynamic]);
+
 
   return (
     <div className="min-h-screen bg-background">
@@ -98,8 +176,57 @@ const Lessons = () => {
            )}
           </div>
 
+          {/* Barre de recherche : indexe vocabulaire, phrases, titres, descriptions */}
+          <div className="max-w-2xl mx-auto mb-8">
+            <div className="relative">
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground pointer-events-none" />
+              <input
+                type="search"
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                placeholder={
+                  language === "fr"
+                    ? "Rechercher un mot ou une phrase : merci, manger, hello…"
+                    : language === "pt"
+                    ? "Procurar uma palavra ou frase: obrigado, comer…"
+                    : "Search a word or phrase: thanks, eat, hello…"
+                }
+                aria-label="Search lessons"
+                className="w-full pl-12 pr-12 py-3 rounded-full border border-border bg-card text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+              />
+              {query && (
+                <button
+                  type="button"
+                  onClick={() => setQuery("")}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full flex items-center justify-center hover:bg-muted"
+                  aria-label="Clear search"
+                >
+                  <X className="w-4 h-4 text-muted-foreground" />
+                </button>
+              )}
+            </div>
+            {q && (
+              <p className="text-center text-xs text-muted-foreground mt-3">
+                {filteredLessons.length}{" "}
+                {filteredLessons.length <= 1
+                  ? language === "fr" ? "leçon trouvée" : language === "pt" ? "lição encontrada" : "lesson found"
+                  : language === "fr" ? "leçons trouvées" : language === "pt" ? "lições encontradas" : "lessons found"}
+              </p>
+            )}
+          </div>
+
+          {q && filteredLessons.length === 0 && (
+            <div className="max-w-xl mx-auto text-center py-12 text-muted-foreground">
+              {language === "fr"
+                ? "Aucune leçon ne contient ce terme. Essaie un autre mot."
+                : language === "pt"
+                ? "Nenhuma lição contém este termo."
+                : "No lesson contains this term."}
+            </div>
+          )}
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {lessons.map((lesson) => {
+            {filteredLessons.map((lesson) => {
               const isLocked = lesson.level === "advanced" && !isPremium;
 
               if (isLocked) {
@@ -161,6 +288,12 @@ const Lessons = () => {
                       {lesson.conjugations && <span>{lesson.conjugations.length} {t("lessons.conjugations")}</span>}
                       <span>{lesson.exercises.length} {t("lessons.exercises")}</span>
                     </div>
+                    {matches[lesson.id] && matches[lesson.id].lari && (
+                      <div className="mt-4 pt-3 border-t border-border/60 text-xs">
+                        <p className="text-gold font-semibold">{matches[lesson.id].lari}</p>
+                        <p className="text-muted-foreground italic">→ {matches[lesson.id].translation}</p>
+                      </div>
+                    )}
                   </div>
                 </Link>
               );
