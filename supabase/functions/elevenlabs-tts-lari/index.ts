@@ -296,10 +296,9 @@ Deno.serve(async (req) => {
   const expectedServiceToken = Deno.env.get("TTS_SERVICE_TOKEN");
   const isServiceCall = !!serviceToken && !!expectedServiceToken && serviceToken === expectedServiceToken;
 
-  if (!isServiceCall) {
-    const auth = await requireAuth(req);
-    if (!auth.ok) return unauthorizedResponse(auth, corsHeaders);
-  }
+  // Public endpoint: TTS is used on public pages (e.g. /mbuta-matondo) so we
+  // do NOT require a signed-in user. Service token still bypasses any future gate.
+  void isServiceCall;
 
   try {
     const ELEVENLABS_API_KEY = Deno.env.get("ELEVENLABS_API_KEY");
