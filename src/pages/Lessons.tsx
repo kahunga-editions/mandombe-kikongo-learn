@@ -176,8 +176,57 @@ const Lessons = () => {
            )}
           </div>
 
+          {/* Barre de recherche : indexe vocabulaire, phrases, titres, descriptions */}
+          <div className="max-w-2xl mx-auto mb-8">
+            <div className="relative">
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground pointer-events-none" />
+              <input
+                type="search"
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                placeholder={
+                  language === "fr"
+                    ? "Rechercher un mot ou une phrase : merci, manger, hello…"
+                    : language === "pt"
+                    ? "Procurar uma palavra ou frase: obrigado, comer…"
+                    : "Search a word or phrase: thanks, eat, hello…"
+                }
+                aria-label="Search lessons"
+                className="w-full pl-12 pr-12 py-3 rounded-full border border-border bg-card text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+              />
+              {query && (
+                <button
+                  type="button"
+                  onClick={() => setQuery("")}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full flex items-center justify-center hover:bg-muted"
+                  aria-label="Clear search"
+                >
+                  <X className="w-4 h-4 text-muted-foreground" />
+                </button>
+              )}
+            </div>
+            {q && (
+              <p className="text-center text-xs text-muted-foreground mt-3">
+                {filteredLessons.length}{" "}
+                {filteredLessons.length <= 1
+                  ? language === "fr" ? "leçon trouvée" : language === "pt" ? "lição encontrada" : "lesson found"
+                  : language === "fr" ? "leçons trouvées" : language === "pt" ? "lições encontradas" : "lessons found"}
+              </p>
+            )}
+          </div>
+
+          {q && filteredLessons.length === 0 && (
+            <div className="max-w-xl mx-auto text-center py-12 text-muted-foreground">
+              {language === "fr"
+                ? "Aucune leçon ne contient ce terme. Essaie un autre mot."
+                : language === "pt"
+                ? "Nenhuma lição contém este termo."
+                : "No lesson contains this term."}
+            </div>
+          )}
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {lessons.map((lesson) => {
+            {filteredLessons.map((lesson) => {
               const isLocked = lesson.level === "advanced" && !isPremium;
 
               if (isLocked) {
