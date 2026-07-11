@@ -28344,7 +28344,7 @@ export const lessons: Lesson[] = [
       { lari: "fuka", mandombe: "Fuka", french: "couvrir", english: "to cover", note: "Le son f — les dents du haut touchent la lèvre du bas" },
       { lari: "vula", mandombe: "Vula", french: "être supérieur", english: "to be superior", note: "Le son v — comme f, mais avec la voix qui vibre" },
       { lari: "pfuka", mandombe: "Pfuka", french: "pleuvoir finement", english: "to drizzle", note: "Le son pf — on commence par p et on finit par f, les deux ensemble" },
-      { lari: "vuka", mandombe: "Vuka", french: "rassembler", english: "to gather", note: "Le son bv — on commence par b et on finit par v, les deux ensemble" },
+      { lari: "vuka", mandombe: "Vuka", french: "rassembler", english: "to gather", note: "Le son v — autrefois prononcé 'bv', aujourd'hui simplement 'v'" },
       { lari: "tala", mandombe: "Tala", french: "regarder attentivement", english: "to look carefully", note: "Le son t — la langue touche les dents du haut, avec un petit souffle" },
       { lari: "sala", mandombe: "Sala", french: "travailler", english: "to work", note: "Le son s — comme un serpent qui siffle" },
       { lari: "kala", mandombe: "Kala", french: "refuser", english: "to refuse", note: "Le son k — le fond de la langue touche le palais, avec un petit souffle" },
