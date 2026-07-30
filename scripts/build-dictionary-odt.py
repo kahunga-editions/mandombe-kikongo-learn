@@ -171,42 +171,42 @@ def span(style, text):
 para(BookTitle, "BUKU DIA BINSONO")
 para(BookSub, "Dictionnaire Kikongo Lari – Français – English")
 para(BookMandombe, "Buku dia Binsono")
-para(BookMeta, f"{len(clean)} entrees · Ecriture Mandombe")
+para(BookMeta, f"{len(clean)} entrées · Écriture Mandombe")
 para(BookMeta, "Nzo Mikanda")
 
 para(Chapter, "Avant-propos")
 para(Body,
      "Ce dictionnaire rassemble le lexique et les expressions du Kikongo Lari tels qu'ils "
-     "sont enseignes sur la plateforme Nzo Mikanda. Chaque entree donne la forme en Lari, "
-     "sa transcription en ecriture Mandombe, puis le sens en francais et en anglais.")
+     "sont enseignés sur la plateforme Nzo Mikanda. Chaque entrée donne la forme en Lari, "
+     "sa transcription en écriture Mandombe, puis le sens en français et en anglais.")
 para(Body,
-     "Le corpus provient exclusivement de sources attestees : aucune forme n'a ete inventee "
-     "ni empruntee au Kituba ou au Lingala. Lorsqu'une nuance culturelle ou grammaticale "
-     "existe, elle est signalee en note sous l'entree.")
+     "Le corpus provient exclusivement de sources attestées : aucune forme n'a été inventée "
+     "ni empruntée au Kituba ou au Lingala. Lorsqu'une nuance culturelle ou grammaticale "
+     "existe, elle est signalée en note sous l'entrée.")
 para(Body,
-     "L'ecriture Mandombe, mise au jour par Wabeladio Payi, est reproduite ici avec la police "
-     "Masono Mandombe, integree au fichier. Si les caracteres ne s'affichent pas, installez "
-     "la police sur votre systeme.")
+     "L'écriture Mandombe, mise au jour par Wabeladio Payi, est reproduite ici avec la police "
+     "Masono Mandombe, intégrée au fichier. Si les caractères ne s'affichent pas, installez "
+     "la police sur votre système.")
 
 para(Chapter, "Prononciation")
 para(SubHead, "Voyelles")
-para(Body, "a, e, i, o, u se prononcent comme en francais. Le u se lit /ou/ (comme dans « roue »). "
-           "Une voyelle peut etre allongee : zaba se prononce zaaba.")
+para(Body, "a, e, i, o, u se prononcent comme en français. Le u se lit /ou/ (comme dans « roue »). "
+           "Une voyelle peut être allongée : zaba se prononce zaaba.")
 para(SubHead, "Consonnes et groupes")
 for line in [
     "g : toujours dur, comme dans « gare » — jamais /ʒ/.",
-    "j : comme le j francais /ʒ/ — bujitu (respect), mbaji, jimbakane.",
+    "j : comme le j français /ʒ/ — bujitu (respect), mbaji, jimbakane.",
     "sh : comme le sh anglais de « shoes » — moshi.",
     "nz : nzila se prononce /ndjila/.",
-    "ns : nsoneka (ecrire) se prononce /tsoneka/.",
+    "ns : nsoneka (écrire) se prononce /tsoneka/.",
     "nk : nkima (singe) se prononce /ntshima/.",
     "dj : djunu (la paix) se prononce /dzunu/.",
 ]:
     para(BodySmall, "• " + line)
 
 para(Chapter, "Mode d'emploi")
-para(Body, "Les entrees sont classees par ordre alphabetique de la forme Lari. "
-           "Chaque entree se presente ainsi :")
+para(Body, "Les entrées sont classées par ordre alphabétique de la forme Lari. "
+           "Chaque entrée se présente ainsi :")
 p = P(stylename=Entry)
 p.addElement(span(Lari, "Mbote"))
 p.addText("  ")
@@ -216,7 +216,7 @@ p.addElement(span(Fr, "bonjour"))
 p.addText("  ·  ")
 p.addElement(span(En, "hello"))
 doc.text.addElement(p)
-para(BodySmall, "forme Lari en gras · ecriture Mandombe en brun · sens francais · sens anglais en italique")
+para(BodySmall, "forme Lari en gras · écriture Mandombe en brun · sens français · sens anglais en italique")
 
 # ================= DICTIONARY (2 columns) =================
 sec_style = Style(name="DictSec", family="section")
@@ -228,7 +228,7 @@ sp.addElement(cols)
 sec_style.addElement(sp)
 doc.automaticstyles.addElement(sec_style)
 
-para(Chapter, "Dictionnaire Lari – Francais – English")
+para(Chapter, "Dictionnaire Lari – Français – English")
 
 section = Section(name="Dico", stylename=sec_style)
 doc.text.addElement(section)
@@ -271,7 +271,7 @@ for e in clean:
         section.addElement(np)
 
 para(Chapter, "Index thematique")
-para(Body, "Les entrees de ce dictionnaire sont issues des modules d'apprentissage suivants :")
+para(Body, "Les entrées de ce dictionnaire sont issues des modules d'apprentissage suivants :")
 cats = []
 for e in clean:
     if e["cat"] and e["cat"] not in cats:
@@ -279,9 +279,9 @@ for e in clean:
 for c in sorted(cats):
     para(BodySmall, "• " + c)
 
-para(Chapter, "A propos")
-para(Body, "Nzo Mikanda est une plateforme d'apprentissage du Kikongo Lari et de l'ecriture "
-           "Mandombe : lecons progressives, exercices interactifs, dictionnaire, traducteur "
+para(Chapter, "À propos")
+para(Body, "Nzo Mikanda est une plateforme d'apprentissage du Kikongo Lari et de l'écriture "
+           "Mandombe : leçons progressives, exercices interactifs, dictionnaire, traducteur "
            "et prononciation audio.")
 para(BookMeta, "www.nzomikanda.com")
 
