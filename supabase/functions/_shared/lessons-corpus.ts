@@ -1611,6 +1611,14 @@ export const LESSONS_CORPUS: LessonSummary[] = [
         "french": "Aller"
       },
       {
+        "lari": "Shama",
+        "french": "Aller (variante)"
+      },
+      {
+        "lari": "Shemi",
+        "french": "Je vais"
+      },
+      {
         "lari": "Kwiza",
         "french": "Venir"
       },
@@ -13658,14 +13666,6 @@ export const LESSONS_CORPUS: LessonSummary[] = [
       {
         "lari": "nsekoso",
         "french": "oiseaux tisserands qui aiment nicher sur les bambous"
-      },
-      {
-        "lari": "tieri",
-        "french": "sorte de guêpe dont les larves sont comestibles"
-      },
-      {
-        "lari": "magansengo",
-        "french": "sorte de guêpes dont la piqûre peut faire doubler de volume"
       }
     ],
     "exercises": []
@@ -19935,7 +19935,7 @@ export const LESSONS_CORPUS: LessonSummary[] = [
   },
   {
     "id": "termes-de-parente",
-    "title": "Les termes de parenté — Ta·ta, Ma·ma, Gia·gia",
+    "title": "Les termes de parenté — Ta·ta, Ma·ma, Ya·ya",
     "level": "beginner",
     "topic": "termes",
     "vocab": [
@@ -19952,11 +19952,11 @@ export const LESSONS_CORPUS: LessonSummary[] = [
         "french": "mère, parent maternel, madame"
       },
       {
-        "lari": "giagia",
+        "lari": "yaya",
         "french": "aîné, grand-parent"
       },
       {
-        "lari": "magiagia",
+        "lari": "mayaya",
         "french": "aînés, grands-parents"
       },
       {
@@ -19965,11 +19965,11 @@ export const LESSONS_CORPUS: LessonSummary[] = [
       },
       {
         "lari": "má Malonga",
-        "french": "Mère Malonga, Madame Malonga"
+        "french": "Oncle Malonga"
       },
       {
-        "lari": "giá Malonga",
-        "french": "Grand-Parent Malonga"
+        "lari": "yá Malonga",
+        "french": "Grand-Parent Malonga, Aîné Malonga"
       },
       {
         "lari": "ngulu",
@@ -19984,18 +19984,18 @@ export const LESSONS_CORPUS: LessonSummary[] = [
       },
       {
         "type": "fill-in-blank",
-        "question": "___ Malonga (Madame/Mère Malonga)",
+        "question": "___ Malonga (Oncle Malonga — Malonga est un nom d'homme)",
         "answer": "má"
       },
       {
         "type": "matching",
         "question": "Associez chaque terme lari à sa signification",
-        "answer": "taata=father, maama=mother, giagia=elder / grandparent, bataata=fathers (plural)"
+        "answer": "taata=father, maama=mother, yaya=elder / grandparent, bataata=fathers (plural)"
       },
       {
         "type": "multiple-choice",
-        "question": "Quel est le pluriel de « giagia » (aîné) ?",
-        "answer": "magiagia"
+        "question": "Quel est le pluriel de « yaya » (aîné) ?",
+        "answer": "mayaya"
       },
       {
         "type": "mandombe-recognition",
