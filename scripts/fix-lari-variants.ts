@@ -47,6 +47,87 @@ const rules = JSON.parse(readFileSync(RULES_PATH, "utf8")) as {
 
 const APPLY = process.argv.includes("--fix");
 const BOOK = process.argv.includes("--book");
+const UNDO = process.argv.includes("--undo");
+
+const REPORT_DIR = "/mnt/documents/rapports-variantes";
+
+// ------------------------------------------------------------------ Undo
+/**
+ * Annule la derniere execution en re-appliquant a l'envers le patch genere.
+ *   bun run scripts/fix-lari-variants.ts --undo            # dernier patch
+ *   bun run scripts/fix-lari-variants.ts --undo <fichier>  # patch precis
+ */
+if (UNDO) {
+  const argPatch = process.argv.find((a) => a.endsWith(".patch"));
+  const patchFile = argPatch
+    ? path.resolve(argPatch)
+    : path.join(REPORT_DIR, "rapport-dernier.patch");
+  if (!existsSync(patchFile)) {
+    console.error(`✖ Aucun patch trouvé : ${patchFile}`);
+    process.exit(1);
+  }
+  const lines = readFileSync(patchFile, "utf8").split("\n");
+
+  type Hunk = { bStart: number; after: string[]; before: string[] };
+  const files: { rel: string; hunks: Hunk[] }[] = [];
+  let cur: { rel: string; hunks: Hunk[] } | null = null;
+  let hunk: Hunk | null = null;
+  for (const line of lines) {
+    if (line.startsWith("diff --git ")) {
+      cur = { rel: line.split(" b/")[1] ?? "", hunks: [] };
+      files.push(cur);
+      hunk = null;
+    } else if (line.startsWith("@@")) {
+      const m = line.match(/@@ -\d+(?:,\d+)? \+(\d+)(?:,\d+)? @@/);
+      if (!m || !cur) continue;
+      hunk = { bStart: Number(m[1]), after: [], before: [] };
+      cur.hunks.push(hunk);
+    } else if (hunk) {
+      const tag = line[0];
+      const body = line.slice(1);
+      if (tag === " ") {
+        hunk.after.push(body);
+        hunk.before.push(body);
+      } else if (tag === "+") hunk.after.push(body);
+      else if (tag === "-") hunk.before.push(body);
+    }
+  }
+
+  let restored = 0;
+  let failed = 0;
+  for (const f of files) {
+    const abs = path.join(ROOT, f.rel);
+    if (!existsSync(abs)) {
+      console.error(`✖ ${f.rel} — fichier introuvable`);
+      failed++;
+      continue;
+    }
+    let content = readFileSync(abs, "utf8").split("\n");
+    let ok = true;
+    // Reverse: on remplace le bloc "après" par le bloc "avant", en partant de la fin
+    for (const h of [...f.hunks].reverse()) {
+      const start = h.bStart - 1;
+      const slice = content.slice(start, start + h.after.length);
+      if (slice.join("\n") !== h.after.join("\n")) {
+        console.error(`✖ ${f.rel}:${h.bStart} — le contenu a changé, hunk ignoré`);
+        ok = false;
+        continue;
+      }
+      content = [...content.slice(0, start), ...h.before, ...content.slice(start + h.after.length)];
+    }
+    writeFileSync(abs, content.join("\n"));
+    if (ok) {
+      restored++;
+      console.log(`↩ ${f.rel} restauré (${f.hunks.length} hunk(s))`);
+    } else failed++;
+  }
+  console.log(
+    `\nAnnulation terminée : ${restored} fichier(s) restauré(s)${failed ? `, ${failed} en échec` : ""}.`,
+  );
+  console.log(`Patch source : ${patchFile}`);
+  process.exit(failed ? 1 : 0);
+}
+
 
 const escapeRe = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 /** Tolere apostrophes droites/typographiques, accents optionnels, ponctuation finale. */
@@ -214,7 +295,7 @@ if (!APPLY && totalChanges) console.log("Relance avec --fix pour appliquer.");
 const now = new Date();
 const stamp = now.toISOString().replace(/[:.]/g, "-").slice(0, 19);
 const mode = APPLY ? "corrections appliquées" : "dry-run (aucune écriture)";
-const outDir = "/mnt/documents/rapports-variantes";
+const outDir = REPORT_DIR;
 mkdirSync(outDir, { recursive: true });
 
 const esc = (s: string) =>
