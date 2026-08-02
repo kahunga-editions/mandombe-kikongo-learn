@@ -395,6 +395,76 @@ writeFileSync(path.join(outDir, "rapport-dernier.md"), md);
 writeFileSync(path.join(outDir, "rapport-dernier.html"), html);
 console.log(`\n📄 Rapport : ${mdPath}\n📄 Rapport : ${htmlPath}`);
 
+// ------------------------------------------------- Patch unifie (.patch)
+/** Diff ligne a ligne (LCS) -> hunks unifies avec 3 lignes de contexte. */
+function unifiedDiff(rel: string, before: string, after: string, ctx = 3): string {
+  const A = before.split("\n");
+  const B = after.split("\n");
+  const m = A.length,
+    n = B.length;
+  // LCS en O(m*n) memoire compacte (Uint32 rows)
+  const dp: Uint32Array[] = Array.from({ length: m + 1 }, () => new Uint32Array(n + 1));
+  for (let i = m - 1; i >= 0; i--)
+    for (let j = n - 1; j >= 0; j--)
+      dp[i][j] = A[i] === B[j] ? dp[i + 1][j + 1] + 1 : Math.max(dp[i + 1][j], dp[i][j + 1]);
+
+  type Op = { t: " " | "-" | "+"; s: string; a: number; b: number };
+  const ops: Op[] = [];
+  let i = 0,
+    j = 0;
+  while (i < m && j < n) {
+    if (A[i] === B[j]) ops.push({ t: " ", s: A[i], a: i++, b: j++ });
+    else if (dp[i + 1][j] >= dp[i][j + 1]) ops.push({ t: "-", s: A[i], a: i++, b: j });
+    else ops.push({ t: "+", s: B[j], a: i, b: j++ });
+  }
+  while (i < m) ops.push({ t: "-", s: A[i], a: i++, b: j });
+  while (j < n) ops.push({ t: "+", s: B[j], a: i, b: j++ });
+
+  const changed = ops.map((o) => o.t !== " ");
+  if (!changed.some(Boolean)) return "";
+
+  // Regroupe les changements en hunks avec contexte
+  const groups: [number, number][] = [];
+  for (let k = 0; k < ops.length; k++) {
+    if (!changed[k]) continue;
+    let start = Math.max(0, k - ctx);
+    let end = k;
+    while (end + 1 < ops.length) {
+      let next = end + 1;
+      while (next < ops.length && !changed[next]) next++;
+      if (next < ops.length && next - end <= ctx * 2) end = next;
+      else break;
+    }
+    end = Math.min(ops.length - 1, end + ctx);
+    const last = groups[groups.length - 1];
+    if (last && start <= last[1] + 1) last[1] = Math.max(last[1], end);
+    else groups.push([start, end]);
+    k = end;
+  }
+
+  let out = `diff --git a/${rel} b/${rel}\n--- a/${rel}\n+++ b/${rel}\n`;
+  for (const [start, end] of groups) {
+    const slice = ops.slice(start, end + 1);
+    const aStart = (slice.find((o) => o.t !== "+")?.a ?? slice[0].a) + 1;
+    const bStart = (slice.find((o) => o.t !== "-")?.b ?? slice[0].b) + 1;
+    const aCount = slice.filter((o) => o.t !== "+").length;
+    const bCount = slice.filter((o) => o.t !== "-").length;
+    out += `@@ -${aStart},${aCount} +${bStart},${bCount} @@\n`;
+    for (const o of slice) out += `${o.t}${o.s}\n`;
+  }
+  return out;
+}
+
+let patch = `# Patch genere le ${now.toISOString()} — ${mode}\n`;
+patch += `# Fichiers: ${fileSnapshots.length} — occurrences: ${totalOcc}\n`;
+patch += `# Application: git apply rapport-${stamp}.patch  (ou: patch -p1 < ...)\n`;
+for (const s of fileSnapshots) patch += unifiedDiff(s.rel, s.before, s.after);
+
+const patchPath = path.join(outDir, `rapport-${stamp}.patch`);
+writeFileSync(patchPath, patch);
+writeFileSync(path.join(outDir, "rapport-dernier.patch"), patch);
+console.log(`🩹 Patch  : ${patchPath}`);
+
 if (APPLY && BOOK) {
   console.log("\n→ Régénération ODT + PDF…");
   const r = spawnSync("python3", [path.join(ROOT, "scripts/fix-book-variants.py")], {
