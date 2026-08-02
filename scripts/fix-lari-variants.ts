@@ -154,7 +154,9 @@ for (const rel of TARGETS) {
         after: rule.description,
         count: flagged.length,
         lines: flagged.map(({ n }) => n),
+        samples: flagged.map(({ line, n }) => ({ line: n, before: line.trim(), after: line.trim() })),
       });
+
       continue;
     }
     const matches = content.match(re);
