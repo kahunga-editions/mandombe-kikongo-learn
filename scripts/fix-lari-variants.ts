@@ -84,6 +84,10 @@ const bump = (r: Omit<Record_, "count"> & { count?: number }) => {
   } else records.push({ ...r, count: r.count ?? 1 });
 };
 
+/** Snapshots avant/apres pour generer le patch unifie. */
+const fileSnapshots: { rel: string; before: string; after: string }[] = [];
+
+
 
 for (const rel of TARGETS) {
   const file = path.join(ROOT, rel);
