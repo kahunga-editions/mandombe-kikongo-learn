@@ -97,7 +97,7 @@ for (const rel of TARGETS) {
     const lariRe = new RegExp(escapeRe(rule.lari).replace(/ /g, "\\s+"), "i");
     content = content
       .split("\n")
-      .map((line) => {
+      .map((line, idx) => {
         if (!lariRe.test(line)) return line;
         let out = line;
         for (const [lang, variants] of Object.entries(rule.wrong)) {
@@ -107,6 +107,7 @@ for (const rel of TARGETS) {
             const re = looseVariantRegex(bad);
             if (re.test(out)) {
               const n = out.match(looseVariantRegex(bad))?.length ?? 1;
+              const lineBefore = out;
               out = out.replace(looseVariantRegex(bad), (m) =>
                 m.trimEnd().endsWith(".") ? `${good}.` : good,
               );
@@ -119,12 +120,15 @@ for (const rel of TARGETS) {
                 before: bad,
                 after: good,
                 count: n,
+                lines: [idx + 1],
+                samples: [{ line: idx + 1, before: lineBefore.trim(), after: out.trim() }],
               });
             }
           }
         }
         return out;
       })
+
       .join("\n");
   }
 
