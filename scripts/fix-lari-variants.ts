@@ -159,7 +159,20 @@ for (const rel of TARGETS) {
     }
     const matches = content.match(re);
     if (!matches?.length) continue;
-    content = content.replace(re, rule.replacement);
+    const samples: Sample[] = [];
+    const hitLines: number[] = [];
+    content = content
+      .split("\n")
+      .map((line, idx) => {
+        const lineRe = new RegExp(rule.pattern, rule.flags || "g");
+        if (!lineRe.test(line)) return line;
+        const next = line.replace(new RegExp(rule.pattern, rule.flags || "g"), rule.replacement!);
+        if (next === line) return line;
+        hitLines.push(idx + 1);
+        samples.push({ line: idx + 1, before: line.trim(), after: next.trim() });
+        return next;
+      })
+      .join("\n");
     log.push(`  [${rule.id}] ${matches.length} remplacement(s)`);
     bump({
       file: rel,
@@ -168,8 +181,10 @@ for (const rel of TARGETS) {
       before: rule.pattern,
       after: rule.replacement,
       count: matches.length,
-      lines: [],
+      lines: hitLines,
+      samples,
     });
+
   }
 
 
