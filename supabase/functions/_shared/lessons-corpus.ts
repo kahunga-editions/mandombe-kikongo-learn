@@ -17860,7 +17860,7 @@ export const LESSONS_CORPUS: LessonSummary[] = [
       {
         "type": "matching",
         "question": "Associe chaque expression lari à sa traduction française",
-        "answer": "Manga za jingi=Many mangos, Ndambu loso=A little rice, Kena na nduku za zingi ko=She doesn't have many friends, Mankondi nzololo dia=You like to eat bananas"
+        "answer": "Manga za jingi=Many mangos, Ndambu loso=A little rice, Kena na nduku za zingi ko=She doesn't have many friends, Mankondi nzololo dia=I would like to eat bananas"
       },
       {
         "type": "multiple-choice",
