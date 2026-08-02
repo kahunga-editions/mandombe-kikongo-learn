@@ -295,7 +295,7 @@ if (!APPLY && totalChanges) console.log("Relance avec --fix pour appliquer.");
 const now = new Date();
 const stamp = now.toISOString().replace(/[:.]/g, "-").slice(0, 19);
 const mode = APPLY ? "corrections appliquées" : "dry-run (aucune écriture)";
-const outDir = "/mnt/documents/rapports-variantes";
+const outDir = REPORT_DIR;
 mkdirSync(outDir, { recursive: true });
 
 const esc = (s: string) =>
