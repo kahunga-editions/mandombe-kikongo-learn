@@ -19,6 +19,7 @@ const MandombeScript = lazy(() => import("./pages/MandombeScript"));
 const Translator = lazy(() => import("./pages/Translator"));
 const AdminCorrections = lazy(() => import("./pages/AdminCorrections"));
 const AdminAnalytics = lazy(() => import("./pages/AdminAnalytics"));
+const AdminIllustrations = lazy(() => import("./pages/AdminIllustrations"));
 const MbutaMatondo = lazy(() => import("./pages/MbutaMatondo"));
 const Privacy = lazy(() => import("./pages/Privacy"));
 const Mvita = lazy(() => import("./pages/Mvita"));
@@ -54,6 +55,8 @@ const App = () => (
                 <Route path="/translator" element={<Translator />} />
                 <Route path="/admin/corrections" element={<AdminCorrections />} />
                 <Route path="/admin/analytics" element={<AdminAnalytics />} />
+                <Route path="/admin/illustrations" element={<AdminIllustrations />} />
+
                 <Route path="/mbuta-matondo" element={<MbutaMatondo />} />
                 <Route path="/mvita" element={<Mvita />} />
                 

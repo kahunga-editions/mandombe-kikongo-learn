@@ -9,23 +9,39 @@ import sys
 import unicodedata
 import zipfile
 import shutil
+import os
 from odf.opendocument import OpenDocumentText
 from odf.style import (
     Style, TextProperties, ParagraphProperties, PageLayout, PageLayoutProperties,
     MasterPage, FontFace, Columns, Column, SectionProperties, Header, Footer,
     GraphicProperties,
 )
+from odf.draw import Frame, Image
 from odf.text import (
     P, H, Section, PageNumber, SoftPageBreak,
 )
 
 SRC = sys.argv[1] if len(sys.argv) > 1 else "/tmp/dico.json"
 DST = sys.argv[2] if len(sys.argv) > 2 else "/mnt/documents/dictionnaire.odt"
+# Dossier d'illustrations (ZIP exporte depuis /admin/illustrations) : A.png, B.jpg, cover.png...
+IMG_DIR = sys.argv[3] if len(sys.argv) > 3 else None
 FONT_TTF = "/dev-server/public/fonts/masono_mandombe-webfont.ttf"
 
 MANDOMBE_FONT = "HapaxMandombe"
 BODY_FONT = "Liberation Serif"
 TITLE_FONT = "Liberation Sans"
+
+
+def find_illustration(slot: str):
+    """Retourne le chemin de l'illustration du slot (A..Z, cover, hash) si elle existe."""
+    if not IMG_DIR:
+        return None
+    for ext in ("png", "jpg", "jpeg", "webp"):
+        p = os.path.join(IMG_DIR, f"{slot}.{ext}")
+        if os.path.exists(p):
+            return p
+    return None
+
 
 
 def norm(s: str) -> str:
@@ -158,6 +174,10 @@ Illus = pstyle("Illus", textalign="center", fontname=BODY_FONT, fontsize="9pt",
                paddingtop="1.2cm", paddingbottom="1.2cm",
                borderleft="0.5pt dashed #bbbbbb", borderright="0.5pt dashed #bbbbbb",
                bordertop="0.5pt dashed #bbbbbb", borderbottom="0.5pt dashed #bbbbbb")
+IllusImg = pstyle("IllusImg", textalign="center", margintop="0.3cm", marginbottom="0.4cm")
+ImgStyle = Style(name="ImgFrame", family="graphic")
+ImgStyle.addElement(GraphicProperties(wrap="none", verticalpos="middle", verticalrel="text"))
+doc.automaticstyles.addElement(ImgStyle)
 Letter = pstyle("LetterHead", textalign="center", fontname=TITLE_FONT, fontsize="22pt",
                 fontweight="bold", color="#8a5a20", margintop="0.5cm",
                 marginbottom="0.35cm", keepwithnext="always",
@@ -194,6 +214,13 @@ def span(style, text):
 
 
 # ================= FRONT MATTER =================
+cover = find_illustration("cover")
+if cover:
+    cp = P(stylename=IllusImg)
+    cf = Frame(stylename=ImgStyle, width="11.5cm", height="8.6cm", anchortype="as-char")
+    cf.addElement(Image(href=doc.addPicture(cover)))
+    cp.addElement(cf)
+    doc.text.addElement(cp)
 para(BookTitle, "BUKU DIA BINSONO")
 para(BookSub, "Dictionnaire Kikongo Lari – Français – English")
 para(BookMandombe, "Buku dia Binsono")
@@ -280,9 +307,21 @@ for e in clean:
         lp = P(stylename=Letter)
         lp.addText(first)
         section.addElement(lp)
-        ip = P(stylename=Illus)
-        ip.addText("[ illustration — lettre %s ]" % first)
-        section.addElement(ip)
+        slot = first if first.isalpha() else "hash"
+        path = find_illustration(slot)
+        if path:
+            ip = P(stylename=IllusImg)
+            href = doc.addPicture(path)
+            frame = Frame(stylename=ImgStyle, width="5.2cm", height="3.9cm",
+                          anchortype="as-char")
+            frame.addElement(Image(href=href))
+            ip.addElement(frame)
+            section.addElement(ip)
+        else:
+            ip = P(stylename=Illus)
+            ip.addText("[ illustration — lettre %s ]" % first)
+            section.addElement(ip)
+
     runs = [span(Lari, e["lari"])]
     if e["mandombe"]:
         runs += ["  ", span(Mand, e["mandombe"])]
