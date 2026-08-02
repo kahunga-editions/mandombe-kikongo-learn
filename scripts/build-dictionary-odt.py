@@ -174,6 +174,10 @@ Illus = pstyle("Illus", textalign="center", fontname=BODY_FONT, fontsize="9pt",
                paddingtop="1.2cm", paddingbottom="1.2cm",
                borderleft="0.5pt dashed #bbbbbb", borderright="0.5pt dashed #bbbbbb",
                bordertop="0.5pt dashed #bbbbbb", borderbottom="0.5pt dashed #bbbbbb")
+IllusImg = pstyle("IllusImg", textalign="center", margintop="0.3cm", marginbottom="0.4cm")
+ImgStyle = Style(name="ImgFrame", family="graphic")
+ImgStyle.addElement(GraphicProperties(wrap="none", verticalpos="middle", verticalrel="text"))
+doc.automaticstyles.addElement(ImgStyle)
 Letter = pstyle("LetterHead", textalign="center", fontname=TITLE_FONT, fontsize="22pt",
                 fontweight="bold", color="#8a5a20", margintop="0.5cm",
                 marginbottom="0.35cm", keepwithnext="always",
