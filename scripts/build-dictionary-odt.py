@@ -214,6 +214,13 @@ def span(style, text):
 
 
 # ================= FRONT MATTER =================
+cover = find_illustration("cover")
+if cover:
+    cp = P(stylename=IllusImg)
+    cf = Frame(stylename=ImgStyle, width="11.5cm", height="8.6cm", anchortype="as-char")
+    cf.addElement(Image(href=doc.addPicture(cover)))
+    cp.addElement(cf)
+    doc.text.addElement(cp)
 para(BookTitle, "BUKU DIA BINSONO")
 para(BookSub, "Dictionnaire Kikongo Lari – Français – English")
 para(BookMandombe, "Buku dia Binsono")
