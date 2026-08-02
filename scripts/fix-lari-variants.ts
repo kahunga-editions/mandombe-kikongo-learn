@@ -60,6 +60,7 @@ function looseVariantRegex(phrase: string): RegExp {
 let totalChanges = 0;
 let totalWarnings = 0;
 
+type Sample = { line: number; before: string; after: string };
 type Record_ = {
   file: string;
   ruleId: string;
@@ -69,15 +70,20 @@ type Record_ = {
   after: string;
   count: number;
   lines?: number[];
+  samples?: Sample[];
 };
 const records: Record_[] = [];
 const bump = (r: Omit<Record_, "count"> & { count?: number }) => {
   const found = records.find(
     (x) => x.file === r.file && x.ruleId === r.ruleId && x.before === r.before && x.after === r.after,
   );
-  if (found) found.count += r.count ?? 1;
-  else records.push({ ...r, count: r.count ?? 1 });
+  if (found) {
+    found.count += r.count ?? 1;
+    if (r.samples?.length) found.samples = [...(found.samples ?? []), ...r.samples];
+    if (r.lines?.length) found.lines = [...(found.lines ?? []), ...r.lines];
+  } else records.push({ ...r, count: r.count ?? 1 });
 };
+
 
 for (const rel of TARGETS) {
   const file = path.join(ROOT, rel);
