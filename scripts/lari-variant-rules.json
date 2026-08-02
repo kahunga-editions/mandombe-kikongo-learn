@@ -46,21 +46,33 @@
       "description": "Mbuma = chat, jamais 'fruit'. Signale (sans corriger auto) toute association mbuma/fruit.",
       "pattern": "\\bmbuma\\b[^\\n]{0,80}\\b(fruit|fruits)\\b",
       "flags": "gi",
-      "reportOnly": true
+      "reportOnly": true,
+      "skipIfLineContains": [
+        "distractors",
+        "options:"
+      ]
     },
     {
       "id": "nkelele-pintade",
       "description": "Nkelele = une pintade (jamais mille-pattes).",
       "pattern": "\\bnkelele\\b[^\\n]{0,60}mille[- ]pattes?",
       "flags": "gi",
-      "reportOnly": true
+      "reportOnly": true,
+      "skipIfLineContains": [
+        "distractors",
+        "options:"
+      ]
     },
     {
       "id": "ngongolo-mille-pattes",
       "description": "Ngongolo = un mille-pattes (jamais pintade).",
       "pattern": "\\bngongolo\\b[^\\n]{0,60}pintade",
       "flags": "gi",
-      "reportOnly": true
+      "reportOnly": true,
+      "skipIfLineContains": [
+        "distractors",
+        "options:"
+      ]
     }
   ]
 }

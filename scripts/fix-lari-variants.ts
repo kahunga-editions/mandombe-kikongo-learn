@@ -37,6 +37,7 @@ type TextRule = {
   flags?: string;
   replacement?: string;
   reportOnly?: boolean;
+  skipIfLineContains?: string[];
 };
 
 const rules = JSON.parse(readFileSync(RULES_PATH, "utf8")) as {
