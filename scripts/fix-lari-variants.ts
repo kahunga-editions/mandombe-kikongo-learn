@@ -8,7 +8,7 @@
  *   bun run scripts/fix-lari-variants.ts --fix      # applique les corrections
  *   bun run scripts/fix-lari-variants.ts --fix --book  # + regenere ODT/PDF
  */
-import { readFileSync, writeFileSync, existsSync } from "fs";
+import { readFileSync, writeFileSync, existsSync, mkdirSync } from "fs";
 import { spawnSync } from "child_process";
 import path from "path";
 
