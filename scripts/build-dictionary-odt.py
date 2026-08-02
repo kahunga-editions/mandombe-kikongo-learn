@@ -296,9 +296,21 @@ for e in clean:
         lp = P(stylename=Letter)
         lp.addText(first)
         section.addElement(lp)
-        ip = P(stylename=Illus)
-        ip.addText("[ illustration — lettre %s ]" % first)
-        section.addElement(ip)
+        slot = first if first.isalpha() else "hash"
+        path = find_illustration(slot)
+        if path:
+            ip = P(stylename=IllusImg)
+            href = doc.addPicture(path)
+            frame = Frame(stylename=ImgStyle, width="5.2cm", height="3.9cm",
+                          anchortype="as-char")
+            frame.addElement(Image(href=href))
+            ip.addElement(frame)
+            section.addElement(ip)
+        else:
+            ip = P(stylename=Illus)
+            ip.addText("[ illustration — lettre %s ]" % first)
+            section.addElement(ip)
+
     runs = [span(Lari, e["lari"])]
     if e["mandombe"]:
         runs += ["  ", span(Mand, e["mandombe"])]
