@@ -196,6 +196,7 @@ for (const rel of TARGETS) {
 
   if (content !== before) {
     totalChanges++;
+    fileSnapshots.push({ rel, before, after: content });
     if (APPLY) writeFileSync(file, content);
   }
   if (log.length) {
