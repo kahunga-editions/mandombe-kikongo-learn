@@ -1085,6 +1085,7 @@ export const lessons: Lesson[] = [
       { lari: "Mini mia mbangala", mandombe: "Mini mia mbangala", french: "Les chaleurs de mbangala", english: "The mbangala heat", portuguese: "Os calores de mbangala" },
       { lari: "Mvula za jingi", mandombe: "Mvula za jingi", french: "Plusieurs années", english: "Several years", portuguese: "Vários anos" },
       { lari: "N'mvu mia mingi", mandombe: "N'mvu mia mingi", french: "Plusieurs années (variante)", english: "Several years (variant)", portuguese: "Vários anos (variante)" },
+      { lari: "Tekela", mandombe: "Tekela", french: "Y être avant", english: "To be there before", portuguese: "Estar lá antes" },
     ],
     phrases: [
       { lari: "Mazuji ku Mfua NA yele", mandombe: "Mazuji ku Mfua NA yele", french: "Avant-hier j'étais à Mfua", english: "The day before yesterday I was in Mfua", portuguese: "Anteontem eu estava em Mfua" },
