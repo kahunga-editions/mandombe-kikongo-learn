@@ -60,6 +60,7 @@ function looseVariantRegex(phrase: string): RegExp {
 let totalChanges = 0;
 let totalWarnings = 0;
 
+type Sample = { line: number; before: string; after: string };
 type Record_ = {
   file: string;
   ruleId: string;
@@ -69,15 +70,20 @@ type Record_ = {
   after: string;
   count: number;
   lines?: number[];
+  samples?: Sample[];
 };
 const records: Record_[] = [];
 const bump = (r: Omit<Record_, "count"> & { count?: number }) => {
   const found = records.find(
     (x) => x.file === r.file && x.ruleId === r.ruleId && x.before === r.before && x.after === r.after,
   );
-  if (found) found.count += r.count ?? 1;
-  else records.push({ ...r, count: r.count ?? 1 });
+  if (found) {
+    found.count += r.count ?? 1;
+    if (r.samples?.length) found.samples = [...(found.samples ?? []), ...r.samples];
+    if (r.lines?.length) found.lines = [...(found.lines ?? []), ...r.lines];
+  } else records.push({ ...r, count: r.count ?? 1 });
 };
+
 
 for (const rel of TARGETS) {
   const file = path.join(ROOT, rel);
@@ -91,7 +97,7 @@ for (const rel of TARGETS) {
     const lariRe = new RegExp(escapeRe(rule.lari).replace(/ /g, "\\s+"), "i");
     content = content
       .split("\n")
-      .map((line) => {
+      .map((line, idx) => {
         if (!lariRe.test(line)) return line;
         let out = line;
         for (const [lang, variants] of Object.entries(rule.wrong)) {
@@ -101,6 +107,7 @@ for (const rel of TARGETS) {
             const re = looseVariantRegex(bad);
             if (re.test(out)) {
               const n = out.match(looseVariantRegex(bad))?.length ?? 1;
+              const lineBefore = out;
               out = out.replace(looseVariantRegex(bad), (m) =>
                 m.trimEnd().endsWith(".") ? `${good}.` : good,
               );
@@ -113,12 +120,15 @@ for (const rel of TARGETS) {
                 before: bad,
                 after: good,
                 count: n,
+                lines: [idx + 1],
+                samples: [{ line: idx + 1, before: lineBefore.trim(), after: out.trim() }],
               });
             }
           }
         }
         return out;
       })
+
       .join("\n");
   }
 
@@ -144,12 +154,27 @@ for (const rel of TARGETS) {
         after: rule.description,
         count: flagged.length,
         lines: flagged.map(({ n }) => n),
+        samples: flagged.map(({ line, n }) => ({ line: n, before: line.trim(), after: line.trim() })),
       });
+
       continue;
     }
     const matches = content.match(re);
     if (!matches?.length) continue;
-    content = content.replace(re, rule.replacement);
+    const samples: Sample[] = [];
+    const hitLines: number[] = [];
+    content = content
+      .split("\n")
+      .map((line, idx) => {
+        const lineRe = new RegExp(rule.pattern, rule.flags || "g");
+        if (!lineRe.test(line)) return line;
+        const next = line.replace(new RegExp(rule.pattern, rule.flags || "g"), rule.replacement!);
+        if (next === line) return line;
+        hitLines.push(idx + 1);
+        samples.push({ line: idx + 1, before: line.trim(), after: next.trim() });
+        return next;
+      })
+      .join("\n");
     log.push(`  [${rule.id}] ${matches.length} remplacement(s)`);
     bump({
       file: rel,
@@ -158,8 +183,10 @@ for (const rel of TARGETS) {
       before: rule.pattern,
       after: rule.replacement,
       count: matches.length,
-      lines: [],
+      lines: hitLines,
+      samples,
     });
+
   }
 
 
@@ -210,8 +237,71 @@ if (!records.length) {
       )} | ${r.count} | ${r.lines?.length ? r.lines.slice(0, 10).join(", ") : "—"} |\n`;
     }
     md += `\n`;
+    const withSamples = records.filter((x) => x.file === f && x.samples?.length);
+    if (withSamples.length) {
+      md += `### Diffs — ${f}\n\n`;
+      for (const r of withSamples) {
+        for (const s of r.samples!.slice(0, 20)) {
+          md += `- \`${r.ruleId}\` — [${f}:${s.line}](${f}#L${s.line})\n\n`;
+          md += `  \`\`\`diff\n  - ${mdCell(s.before)}\n  + ${mdCell(s.after)}\n  \`\`\`\n\n`;
+        }
+      }
+    }
   }
 }
+
+// --- Diff mot a mot (LCS) pour surligner precisement les changements
+function wordDiff(a: string, b: string): { del: string; ins: string } {
+  const A = a.split(/(\s+)/);
+  const B = b.split(/(\s+)/);
+  const m = A.length,
+    n = B.length;
+  const dp: number[][] = Array.from({ length: m + 1 }, () => new Array(n + 1).fill(0));
+  for (let i = m - 1; i >= 0; i--)
+    for (let j = n - 1; j >= 0; j--)
+      dp[i][j] = A[i] === B[j] ? dp[i + 1][j + 1] + 1 : Math.max(dp[i + 1][j], dp[i][j + 1]);
+  let i = 0,
+    j = 0;
+  let del = "",
+    ins = "";
+  while (i < m && j < n) {
+    if (A[i] === B[j]) {
+      del += esc(A[i]);
+      ins += esc(B[j]);
+      i++;
+      j++;
+    } else if (dp[i + 1][j] >= dp[i][j + 1]) {
+      del += `<del>${esc(A[i++])}</del>`;
+    } else {
+      ins += `<ins>${esc(B[j++])}</ins>`;
+    }
+  }
+  while (i < m) del += `<del>${esc(A[i++])}</del>`;
+  while (j < n) ins += `<ins>${esc(B[j++])}</ins>`;
+  return { del, ins };
+}
+
+const diffBlock = (r: Record_) => {
+  const samples = r.samples?.slice(0, 20) ?? [];
+  if (!samples.length) return "";
+  return samples
+    .map((s) => {
+      const abs = path.join(ROOT, r.file);
+      const vscode = `vscode://file${abs}:${s.line}`;
+      const cursor = `cursor://file${abs}:${s.line}`;
+      const { del, ins } = wordDiff(s.before, s.after);
+      return `<div class="diff">
+  <div class="diff-head">
+    <a class="loc" href="${esc(vscode)}" title="Ouvrir dans VS Code">${esc(r.file)}:${s.line}</a>
+    <a class="alt" href="${esc(cursor)}" title="Ouvrir dans Cursor">Cursor</a>
+    <button class="copy" data-loc="${esc(r.file)}:${s.line}">Copier le chemin</button>
+  </div>
+  <pre class="del"><span class="gutter">-</span>${del}</pre>
+  <pre class="ins"><span class="gutter">+</span>${ins}</pre>
+</div>`;
+    })
+    .join("\n");
+};
 
 const rowsHtml = filesTouched
   .map(
@@ -219,13 +309,30 @@ const rowsHtml = filesTouched
 <table><thead><tr><th>Règle</th><th>Type</th><th>Langue</th><th>Avant</th><th>Après</th><th>Occ.</th><th>Lignes</th></tr></thead><tbody>
 ${records
   .filter((x) => x.file === f)
-  .map(
-    (r) => `<tr class="${r.kind}"><td><code>${esc(r.ruleId)}</code></td><td>${r.kind}</td><td>${esc(
+  .map((r) => {
+    const diffs = diffBlock(r);
+    const row = `<tr class="${r.kind}"><td><code>${esc(r.ruleId)}</code></td><td>${r.kind}</td><td>${esc(
       r.lang ?? "—",
     )}</td><td class="before">${esc(r.before)}</td><td class="after">${esc(r.after)}</td><td>${
       r.count
-    }</td><td>${r.lines?.length ? esc(r.lines.slice(0, 10).join(", ")) : "—"}</td></tr>`,
-  )
+    }</td><td>${
+      r.lines?.length
+        ? r.lines
+            .slice(0, 10)
+            .map(
+              (n) =>
+                `<a class="linkline" href="vscode://file${esc(path.join(ROOT, r.file))}:${n}">${n}</a>`,
+            )
+            .join(", ")
+        : "—"
+    }</td></tr>`;
+    const detail = diffs
+      ? `<tr class="detailrow"><td colspan="7"><details><summary>Voir le diff (${
+          r.samples!.length
+        } occurrence(s))</summary>${diffs}</details></td></tr>`
+      : "";
+    return row + "\n" + detail;
+  })
   .join("\n")}
 </tbody></table>`,
   )
@@ -245,11 +352,35 @@ tr.avertissement{background:#fff8e1}
 td.before{color:#b3261e}
 td.after{color:#1b5e20}
 code{background:#f4f4f5;padding:.1rem .3rem;border-radius:3px}
+summary{cursor:pointer;font-weight:600;padding:.2rem 0}
+.diff{margin:.6rem 0 1rem;border:1px solid #e4e4e7;border-radius:6px;overflow:hidden}
+.diff-head{display:flex;gap:.75rem;align-items:center;background:#fafafa;padding:.35rem .6rem;font-size:.8rem;border-bottom:1px solid #e4e4e7}
+.diff-head a{color:#1a73e8;text-decoration:none}
+.diff-head a:hover{text-decoration:underline}
+.diff pre{margin:0;padding:.35rem .6rem;white-space:pre-wrap;word-break:break-word;font-size:.82rem;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+.diff pre.del{background:#fdecea}
+.diff pre.ins{background:#e8f5e9}
+.gutter{display:inline-block;width:1.2em;opacity:.6;user-select:none}
+del{background:#f8c9c4;text-decoration:none}
+ins{background:#b7e1bd;text-decoration:none}
+button.copy{margin-left:auto;font-size:.75rem;cursor:pointer;border:1px solid #d4d4d8;background:#fff;border-radius:4px;padding:.15rem .5rem}
+a.linkline{color:#1a73e8;text-decoration:none}
+a.linkline:hover{text-decoration:underline}
 </style></head><body>
 <h1>Rapport de correction des variantes Lari</h1>
 <p class="meta">${now.toLocaleString("fr-FR")} — ${esc(mode)} — ${filesTouched.length} fichier(s), ${totalOcc} occurrence(s), ${totalWarnings} avertissement(s)</p>
 ${records.length ? rowsHtml : "<p>Aucune variante détectée. Le corpus est propre.</p>"}
+<script>
+document.querySelectorAll("button.copy").forEach(function(b){
+  b.addEventListener("click", function(){
+    navigator.clipboard.writeText(b.dataset.loc || "");
+    var t = b.textContent; b.textContent = "Copié !";
+    setTimeout(function(){ b.textContent = t; }, 1200);
+  });
+});
+</script>
 </body></html>`;
+
 
 const mdPath = path.join(outDir, `rapport-${stamp}.md`);
 const htmlPath = path.join(outDir, `rapport-${stamp}.html`);
