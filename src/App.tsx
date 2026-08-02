@@ -55,6 +55,8 @@ const App = () => (
                 <Route path="/translator" element={<Translator />} />
                 <Route path="/admin/corrections" element={<AdminCorrections />} />
                 <Route path="/admin/analytics" element={<AdminAnalytics />} />
+                <Route path="/admin/illustrations" element={<AdminIllustrations />} />
+
                 <Route path="/mbuta-matondo" element={<MbutaMatondo />} />
                 <Route path="/mvita" element={<Mvita />} />
                 
