@@ -95,16 +95,25 @@ for (const rel of TARGETS) {
   // --- Regles textuelles generiques
   for (const rule of rules.textRules) {
     const re = new RegExp(rule.pattern, rule.flags || "g");
-    const matches = content.match(re);
-    if (!matches?.length) continue;
     if (rule.reportOnly || rule.replacement === undefined) {
-      totalWarnings += matches.length;
-      log.push(`  ⚠ [${rule.id}] ${matches.length} occurrence(s) à vérifier — ${rule.description}`);
+      const skip = rule.skipIfLineContains || [];
+      const flagged = content
+        .split("\n")
+        .map((line, i) => ({ line, n: i + 1 }))
+        .filter(({ line }) => new RegExp(rule.pattern, rule.flags || "g").test(line))
+        .filter(({ line }) => !skip.some((s) => line.includes(s)));
+      if (!flagged.length) continue;
+      totalWarnings += flagged.length;
+      log.push(`  ⚠ [${rule.id}] ${flagged.length} occurrence(s) à vérifier — ${rule.description}`);
+      flagged.slice(0, 5).forEach(({ n }) => log.push(`      ligne ${n}`));
       continue;
     }
+    const matches = content.match(re);
+    if (!matches?.length) continue;
     content = content.replace(re, rule.replacement);
     log.push(`  [${rule.id}] ${matches.length} remplacement(s)`);
   }
+
 
   if (content !== before) {
     totalChanges++;
