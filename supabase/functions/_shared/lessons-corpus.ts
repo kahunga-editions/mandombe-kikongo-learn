@@ -20164,6 +20164,115 @@ export const LESSONS_CORPUS: LessonSummary[] = [
         "question": "Recognize derived verbs in Mandombe"
       }
     ]
+  },
+  {
+    "id": "mambu-ma-lumbu-quotidien",
+    "title": "Le lari du quotidien — rendez-vous, directions et paroles de tous les jours",
+    "level": "beginner",
+    "topic": "mambu",
+    "vocab": [
+      {
+        "lari": "wawa",
+        "french": "un rendez-vous"
+      },
+      {
+        "lari": "wawana",
+        "french": "se donner rendez-vous"
+      },
+      {
+        "lari": "Mbaji mbo ta buabana",
+        "french": "Demain on va se rencontrer"
+      },
+      {
+        "lari": "a ma",
+        "french": "ma chère"
+      },
+      {
+        "lari": "ehe",
+        "french": "oui"
+      },
+      {
+        "lari": "ni mbote",
+        "french": "bonjour (c'est moi qui dis bonjour à plusieurs personnes)"
+      },
+      {
+        "lari": "nsamba ya ntuku",
+        "french": "vin de palme frais"
+      },
+      {
+        "lari": "mamba na lungolobi",
+        "french": "eau tiède"
+      },
+      {
+        "lari": "Bakongo ba Boko",
+        "french": "les Kongo de Boko"
+      },
+      {
+        "lari": "Mulari",
+        "french": "une personne Lari"
+      },
+      {
+        "lari": "nseho",
+        "french": "un sourire"
+      },
+      {
+        "lari": "ku buila mupepe",
+        "french": "une piste d'atterrissage"
+      },
+      {
+        "lari": "bambangi",
+        "french": "témoins"
+      },
+      {
+        "lari": "Nge ku nikuki",
+        "french": "Ne bouge pas"
+      },
+      {
+        "lari": "Ku nikukandi",
+        "french": "Ne bouge pas"
+      },
+      {
+        "lari": "Toko",
+        "french": "Allons-y"
+      },
+      {
+        "lari": "Toko eno",
+        "french": "Allons-y (à plusieurs)"
+      },
+      {
+        "lari": "Tuendi",
+        "french": "Allons-y"
+      },
+      {
+        "lari": "tuendi eno",
+        "french": "Allons-y (à plusieurs)"
+      },
+      {
+        "lari": "ti toko",
+        "french": "Allons-y"
+      },
+      {
+        "lari": "sidi",
+        "french": "tu restes ?"
+      },
+      {
+        "lari": "nge shidi kuaku?",
+        "french": "Toi, tu restes ?"
+      },
+      {
+        "lari": "ni tu kuenda?",
+        "french": "Est-ce que tu viens ?"
+      },
+      {
+        "lari": "ka ni kuenda na beno ko",
+        "french": "je ne viens pas avec vous"
+      },
+      {
+        "lari": "ka na kubamane ko",
+        "french": "je ne suis pas prêt"
+      }
+    ],
+    "exercises": []
   }
 ];
 
