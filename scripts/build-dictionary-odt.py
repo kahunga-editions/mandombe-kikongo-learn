@@ -9,23 +9,39 @@ import sys
 import unicodedata
 import zipfile
 import shutil
+import os
 from odf.opendocument import OpenDocumentText
 from odf.style import (
     Style, TextProperties, ParagraphProperties, PageLayout, PageLayoutProperties,
     MasterPage, FontFace, Columns, Column, SectionProperties, Header, Footer,
     GraphicProperties,
 )
+from odf.draw import Frame, Image
 from odf.text import (
     P, H, Section, PageNumber, SoftPageBreak,
 )
 
 SRC = sys.argv[1] if len(sys.argv) > 1 else "/tmp/dico.json"
 DST = sys.argv[2] if len(sys.argv) > 2 else "/mnt/documents/dictionnaire.odt"
+# Dossier d'illustrations (ZIP exporte depuis /admin/illustrations) : A.png, B.jpg, cover.png...
+IMG_DIR = sys.argv[3] if len(sys.argv) > 3 else None
 FONT_TTF = "/dev-server/public/fonts/masono_mandombe-webfont.ttf"
 
 MANDOMBE_FONT = "HapaxMandombe"
 BODY_FONT = "Liberation Serif"
 TITLE_FONT = "Liberation Sans"
+
+
+def find_illustration(slot: str):
+    """Retourne le chemin de l'illustration du slot (A..Z, cover, hash) si elle existe."""
+    if not IMG_DIR:
+        return None
+    for ext in ("png", "jpg", "jpeg", "webp"):
+        p = os.path.join(IMG_DIR, f"{slot}.{ext}")
+        if os.path.exists(p):
+            return p
+    return None
+
 
 
 def norm(s: str) -> str:
