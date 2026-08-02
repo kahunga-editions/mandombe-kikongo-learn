@@ -36,17 +36,40 @@ def norm(s: str) -> str:
 
 entries = json.load(open(SRC))
 clean = []
-seen = set()
+index = {}
+
+
+def merge_sense(current: str, extra: str) -> str:
+    """Concatene les sens distincts d'un homonyme : « echapper ; unir »."""
+    extra = extra.strip()
+    if not extra:
+        return current
+    if not current:
+        return extra
+    parts = [p.strip().lower() for p in current.split(" ; ")]
+    if extra.lower() in parts:
+        return current
+    return current + " ; " + extra
+
+
 for e in entries:
     lari = (e.get("lari") or "").strip()
     fr = (e.get("french") or "").strip()
     if not lari or not fr:
         continue
     k = norm(lari)
-    if not k or k in seen:
+    if not k:
         continue
-    seen.add(k)
-    clean.append({
+    rec = index.get(k)
+    if rec is not None:
+        # Homonyme : on fusionne les sens distincts au lieu de perdre l'entree.
+        rec["fr"] = merge_sense(rec["fr"], fr)
+        rec["en"] = merge_sense(rec["en"], (e.get("english") or "").strip())
+        rec["note"] = merge_sense(rec["note"], (e.get("note") or "").strip())
+        if not rec["mandombe"]:
+            rec["mandombe"] = (e.get("mandombe") or "").strip()
+        continue
+    rec = {
         "lari": lari,
         "mandombe": (e.get("mandombe") or "").strip(),
         "fr": fr,
@@ -54,8 +77,11 @@ for e in entries:
         "note": (e.get("note") or "").strip(),
         "cat": (e.get("category") or "").strip(),
         "key": k,
-    })
+    }
+    index[k] = rec
+    clean.append(rec)
 clean.sort(key=lambda x: (x["key"], x["fr"]))
+
 
 doc = OpenDocumentText()
 
