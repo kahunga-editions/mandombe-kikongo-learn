@@ -26333,7 +26333,7 @@ export const lessons: Lesson[] = [
       { lari: "Ndambu loso tu ta dia", mandombe: "Ndambu loso tu ta dia", french: "Nous mangeons un peu de riz.", english: "We eat a little rice.", portuguese: "Nós comemos um pouco de arroz." },
       { lari: "Ndambu loso lu ta dia", mandombe: "Ndambu loso lu ta dia", french: "Vous mangez un peu de riz.", english: "You (pl.) eat a little rice.", portuguese: "Vocês comem um pouco de arroz." },
       { lari: "Ndambu loso ba ta dia", mandombe: "Ndambu loso ba ta dia", french: "Ils mangent un peu de riz.", english: "They eat a little rice.", portuguese: "Eles comem um pouco de arroz." },
-      { lari: "Mankondi nzololo dia", mandombe: "Mankondi nzololo dia", french: "Tu aimes manger les bananes.", english: "You like to eat bananas.", portuguese: "Tu gostas de comer bananas." },
+      { lari: "Mankondi nzololo dia", mandombe: "Mankondi nzololo dia", french: "J'aimerais manger les bananes.", english: "I would like to eat bananas.", portuguese: "Eu gostaria de comer bananas." },
     ],
     syntax: [
       {
@@ -26438,7 +26438,7 @@ export const lessons: Lesson[] = [
           { left: "Manga za jingi", right: "Many mangos", rightFr: "Beaucoup de mangues", rightPt: "Muitas mangas" },
           { left: "Ndambu loso", right: "A little rice", rightFr: "Un peu de riz", rightPt: "Um pouco de arroz" },
           { left: "Kena na nduku za zingi ko", right: "She doesn't have many friends", rightFr: "Elle n'a pas beaucoup d'amis", rightPt: "Ela não tem muitos amigos" },
-          { left: "Mankondi nzololo dia", right: "You like to eat bananas", rightFr: "Tu aimes manger les bananes", rightPt: "Tu gostas de comer bananas" },
+          { left: "Mankondi nzololo dia", right: "I would like to eat bananas", rightFr: "J'aimerais manger les bananes", rightPt: "Eu gostaria de comer bananas" },
           { left: "Ndambu loso ni ta dia", right: "I eat a little rice", rightFr: "Je mange un peu de riz", rightPt: "Eu como um pouco de arroz" },
         ],
       },
@@ -26561,7 +26561,7 @@ export const lessons: Lesson[] = [
       { lari: "Ku nsaba ngueyi kuenda ka buishi bu yiriri", mandombe: "Ku nsaba ngueyi kuenda ka buishi bu yiriri", french: "Je voulais aller au jardin mais la nuit est tombée.", english: "I wanted to go to the garden but night has fallen.", portuguese: "Eu queria ir ao jardim mas a noite caiu.", note: "ka = mais (avec /a:/ long)" },
       { lari: "Buishi bu tshele", mandombe: "Buishi bu tshele", french: "Le jour s'est levé.", english: "The day has risen.", portuguese: "O dia nasceu." },
       { lari: "Dia na nua, ni ta nua", mandombe: "Dia na nuwa, ni ta nuwa", french: "Je suis en train de manger et de boire.", english: "I am eating and drinking.", portuguese: "Estou a comer e a beber." },
-      { lari: "Mankondi nzololo dia", mandombe: "Mankondi nzololo dia", french: "Tu aimes manger les bananes.", english: "You like to eat bananas.", portuguese: "Tu gostas de comer bananas." },
+      { lari: "Mankondi nzololo dia", mandombe: "Mankondi nzololo dia", french: "J'aimerais manger les bananes.", english: "I would like to eat bananas.", portuguese: "Eu gostaria de comer bananas." },
     ],
     syntax: [
       {
