@@ -246,7 +246,7 @@ if cover:
     cp.addElement(cf)
     doc.text.addElement(cp)
 para(BookTitle, "BUKU DIA BINSONO")
-para(BookSub, "Dictionnaire Kikongo Lari – Français – English")
+para(BookSub, "Dictionnaire Kikongo Lari – Français – English" + (" – 한국어" if KO else ""))
 para(BookMandombe, "Buku dia Binsono")
 para(BookMeta, f"{len(clean)} entrées · Écriture Mandombe")
 para(BookMeta, "Nzo Mikanda")
@@ -280,6 +280,24 @@ para(Body,
      "The Mandombe script was shared by Professor Wabeladio Payi in the last century. It is "
      "reproduced here with the Masono Mandombe font, embedded in this file. If the characters "
      "do not display, install the font on your system.")
+
+if KO:
+    para(Chapter, "머리말")
+    para(KoBody,
+         "이 사전은 Nzo Mikanda 플랫폼에서 가르치는 키콩고 라리(Kikongo Lari)의 어휘와 표현을 "
+         "모은 것입니다. 각 표제어는 만돔베(Mandombe) 문자, 라틴 문자 표기, 그리고 프랑스어 · "
+         "영어 · 한국어 뜻의 순서로 제시됩니다. 여기에 실린 키콩고 라리는 음바무(Mbamou) 지역의 "
+         "말입니다.")
+    para(KoBody,
+         "모든 자료는 실제로 확인된 출처에서만 가져왔습니다. 지어낸 형태나 키투바 · 링갈라에서 "
+         "빌려온 형태는 없습니다. 문화적 또는 문법적인 뉘앙스가 있는 경우에는 표제어 아래에 "
+         "주석으로 표시했습니다.")
+    para(KoBody,
+         "한국어 뜻은 프랑스어와 영어 뜻을 바탕으로 옮긴 것이며, 키콩고 낱말을 한글로 음역한 "
+         "것이 아닙니다. 발음은 아래의 «Prononciation» 장을 참고하십시오.")
+    para(KoBody,
+         "만돔베 문자는 지난 세기에 와벨라디오 파이(Wabeladio Payi) 교수가 널리 알린 문자입니다. "
+         "이 책에는 Masono Mandombe 글꼴이 포함되어 있습니다.")
 
 para(Chapter, "Prononciation · Pronunciation")
 para(SubHead, "Voyelles · Vowels")
@@ -326,6 +344,8 @@ p.addElement(span(En, "hello"))
 doc.text.addElement(p)
 para(BodySmall, "écriture Mandombe en premier, en grand et en brun · forme Lari latine en gras · sens français · sens anglais en italique")
 para(BodySmall, "Mandombe script first, large and brown · Lari latin form in bold · French meaning · English meaning in italics")
+if KO:
+    para(BodySmall, "Mandombe · Lari · français · English · 한국어 (en bleu)")
 
 
 # ================= DICTIONARY (2 columns) =================
@@ -338,7 +358,7 @@ sp.addElement(cols)
 sec_style.addElement(sp)
 doc.automaticstyles.addElement(sec_style)
 
-para(Chapter, "Dictionnaire Lari – Français – English")
+para(Chapter, "Dictionnaire Lari – Français – English" + (" – 한국어" if KO else ""))
 
 section = Section(name="Dico", stylename=sec_style)
 doc.text.addElement(section)
@@ -386,6 +406,8 @@ for e in clean:
     runs += ["  ", span(Fr, e["fr"])]
     if e["en"]:
         runs += ["  ·  ", span(En, e["en"])]
+    if KO and e.get("ko"):
+        runs += ["  ·  ", span(Ko, e["ko"])]
     sadd(Entry, runs)
     if e["note"]:
         np = P(stylename=EntryNote)
