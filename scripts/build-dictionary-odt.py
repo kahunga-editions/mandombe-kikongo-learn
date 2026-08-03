@@ -211,6 +211,12 @@ Mand = tstyle("MandT", fontname=MANDOMBE_FONT, fontsize="17pt", fontweight="bold
 Fr = tstyle("FrT", fontname=BODY_FONT, fontsize="9.5pt")
 En = tstyle("EnT", fontname=BODY_FONT, fontsize="9pt", fontstyle="italic", color="#555555")
 NoteT = tstyle("NoteT", fontname=BODY_FONT, fontsize="8.5pt", fontstyle="italic")
+Ko = tstyle("KoT", fontname=KO_FONT, fontnameasian=KO_FONT, fontsize="9pt",
+            fontsizeasian="9pt", color="#1f4e79")
+KoBody = pstyle("KoBody", fontname=KO_FONT, fontnameasian=KO_FONT, fontsize="10pt",
+                fontsizeasian="10pt", lineheight="140%", marginbottom="0.25cm",
+                textalign="justify")
+
 
 
 def para(style, *runs):
