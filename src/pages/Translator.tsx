@@ -378,6 +378,25 @@ const Translator = () => {
 
               {result && !isLoading && (
                 <div className="flex-1 min-h-[180px]">
+                  {/* Mandombe rendering (mis en avant) */}
+                  {result.mandombe && (
+                    <div className="flex items-center gap-2 mb-4 rounded-xl border border-gold/30 bg-gold/5 p-4">
+                      <p ref={mandombeRef} className="font-mandombe text-4xl md:text-5xl text-gold leading-[1.5] flex-1">
+                        {result.mandombe}
+                      </p>
+                      {lariText && <MandombeSpeaker lariText={lariText} />}
+                      <Button
+                        variant="ghost"
+                        size="icon"
+                        onClick={copyMandombeAsImage}
+                        className="h-8 w-8 shrink-0"
+                        aria-label="Copier le Mandombe en image"
+                      >
+                        {copied === "mandombe" ? <Check className="w-4 h-4 text-green-500" /> : <ImageIcon className="w-4 h-4" />}
+                      </Button>
+                    </div>
+                  )}
+
                   {/* Translation text */}
                   <div className="flex items-start justify-between gap-2 mb-4">
                     {isEditing ? (
@@ -420,24 +439,6 @@ const Translator = () => {
                     </div>
                   </div>
 
-                  {/* Mandombe rendering */}
-                  {result.mandombe && (
-                    <div className="flex items-center gap-2 mb-3">
-                      <p ref={mandombeRef} className="font-mandombe text-3xl text-primary leading-relaxed">
-                        {result.mandombe}
-                      </p>
-                      {lariText && <MandombeSpeaker lariText={lariText} />}
-                      <Button
-                        variant="ghost"
-                        size="icon"
-                        onClick={copyMandombeAsImage}
-                        className="h-8 w-8 shrink-0"
-                        aria-label="Copier le Mandombe en image"
-                      >
-                        {copied === "mandombe" ? <Check className="w-4 h-4 text-green-500" /> : <ImageIcon className="w-4 h-4" />}
-                      </Button>
-                    </div>
-                  )}
 
                   {/* IPA */}
                   {result.ipa && (
