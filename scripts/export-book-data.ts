@@ -110,11 +110,16 @@ const isShortLemma = (s: string) => {
 };
 
 try {
-  const res = await fetch(
-    `${SB_URL}/rest/v1/translation_corrections?select=source_lang,target_lang,source_text,corrected_translation,corrected_mandombe,notes`,
-    { headers: { apikey: SB_KEY, Authorization: `Bearer ${SB_KEY}` } }
-  );
-  const rows: any[] = res.ok ? await res.json() : [];
+  const res = await fetch(`${SB_URL}/functions/v1/export-corrections`, {
+    headers: {
+      apikey: SB_KEY,
+      Authorization: `Bearer ${SB_KEY}`,
+      "x-service-token": process.env.TTS_SERVICE_TOKEN ?? "",
+    },
+  });
+  const json: any = res.ok ? await res.json() : {};
+  const rows: any[] = json.corrections ?? [];
+
   let added = 0;
   for (const c of rows) {
     let lari = "";
