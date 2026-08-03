@@ -231,35 +231,66 @@ para(Chapter, "Avant-propos")
 para(Body,
      "Ce dictionnaire rassemble le lexique et les expressions du Kikongo Lari tels qu'ils "
      "sont enseignés sur la plateforme Nzo Mikanda. Chaque entrée donne la forme en Lari, "
-     "sa transcription en écriture Mandombe, puis le sens en français et en anglais.")
+     "sa transcription en écriture Mandombe, puis le sens en français et en anglais. "
+     "Le Kikongo Lari utilisé est celui de la région de Mbamou.")
 para(Body,
      "Le corpus provient exclusivement de sources attestées : aucune forme n'a été inventée "
      "ni empruntée au Kituba ou au Lingala. Lorsqu'une nuance culturelle ou grammaticale "
      "existe, elle est signalée en note sous l'entrée.")
 para(Body,
-     "L'écriture Mandombe, mise au jour par Wabeladio Payi, est reproduite ici avec la police "
-     "Masono Mandombe, intégrée au fichier. Si les caractères ne s'affichent pas, installez "
-     "la police sur votre système.")
+     "L'écriture Mandombe a été partagée par Professeur Wabeladio Payi au siècle dernier. "
+     "Elle est reproduite ici avec la police Masono Mandombe, intégrée au fichier. Si les "
+     "caractères ne s'affichent pas, installez la police sur votre système.")
 
-para(Chapter, "Prononciation")
-para(SubHead, "Voyelles")
+para(Chapter, "Foreword")
+para(Body,
+     "This dictionary gathers the vocabulary and expressions of Kikongo Lari as they are "
+     "taught on the Nzo Mikanda platform. Each entry gives the Lari form, its transcription "
+     "in the Mandombe script, then the meaning in French and in English. The Kikongo Lari "
+     "used here is that of the Mbamou region.")
+para(Body,
+     "The corpus comes exclusively from attested sources: no form has been invented or "
+     "borrowed from Kituba or Lingala. Whenever a cultural or grammatical nuance exists, it "
+     "is given as a note below the entry.")
+para(Body,
+     "The Mandombe script was shared by Professor Wabeladio Payi in the last century. It is "
+     "reproduced here with the Masono Mandombe font, embedded in this file. If the characters "
+     "do not display, install the font on your system.")
+
+para(Chapter, "Prononciation · Pronunciation")
+para(SubHead, "Voyelles · Vowels")
 para(Body, "a, e, i, o, u se prononcent comme en français. Le u se lit /ou/ (comme dans « roue »). "
            "Une voyelle peut être allongée : zaba se prononce zaaba.")
-para(SubHead, "Consonnes et groupes")
-for line in [
-    "g : toujours dur, comme dans « gare » — jamais /ʒ/.",
-    "j : comme le j français /ʒ/ — bujitu (respect), mbaji, jimbakane.",
-    "sh : comme le sh anglais de « shoes » — moshi.",
-    "nz : nzila se prononce /ndjila/.",
-    "ns : nsoneka (écrire) se prononce /tsoneka/.",
-    "nk : nkima (singe) se prononce /ntshima/.",
-    "dj : djunu (la paix) se prononce /dzunu/.",
+para(BodySmall, "a, e, i, o, u are pronounced as in French; u reads /u/ as in « boot ». "
+                "A vowel may be lengthened: zaba is pronounced zaaba.")
+para(SubHead, "Consonnes et groupes · Consonants and clusters")
+for fr_line, en_line in [
+    ("g : toujours dur, comme dans « gare » — jamais /ʒ/.",
+     "g: always hard, as in « go » — never /ʒ/."),
+    ("j : comme le j français /ʒ/ — bujitu (respect), mbaji, jimbakane.",
+     "j: as the French j /ʒ/ (like « s » in « measure ») — bujitu, mbaji, jimbakane."),
+    ("sh : comme le sh anglais de « shoes » — moshi.",
+     "sh: as the English sh in « shoes » — moshi."),
+    ("nz : nzila se prononce /nzila/ ou /ndjila/ ; les deux sont admis. Cette variation n'est "
+     "pas systématique : d'autres mots en nz gardent /nz/.",
+     "nz: nzila may be said /nzila/ or /ndjila/; both are accepted. This variation is not "
+     "systematic: other nz words keep /nz/."),
+    ("ns : nsoneka (écrire) se prononce /tsoneka/, mais ns se prononce souvent /ns/ ailleurs — "
+     "la prononciation dépend du mot.",
+     "ns: nsoneka (to write) is pronounced /tsoneka/, yet ns is often kept as /ns/ elsewhere — "
+     "pronunciation depends on the word."),
+    ("nk : nkima (singe) se prononce /ntshima/.",
+     "nk: nkima (monkey) is pronounced /ntshima/."),
+    ("dj : djunu (la paix) se prononce /dzunu/.",
+     "dj: djunu (peace) is pronounced /dzunu/."),
 ]:
-    para(BodySmall, "• " + line)
+    para(BodySmall, "• " + fr_line)
+    para(BodySmall, "   " + en_line)
 
-para(Chapter, "Mode d'emploi")
+para(Chapter, "Mode d'emploi · How to use")
 para(Body, "Les entrées sont classées par ordre alphabétique de la forme Lari. "
            "Chaque entrée se présente ainsi :")
+para(BodySmall, "Entries are sorted alphabetically by the Lari form. Each entry looks like this:")
 p = P(stylename=Entry)
 p.addElement(span(Mand, "Mbote"))
 p.addText("   ")
@@ -270,6 +301,8 @@ p.addText("  ·  ")
 p.addElement(span(En, "hello"))
 doc.text.addElement(p)
 para(BodySmall, "écriture Mandombe en premier, en grand et en brun · forme Lari latine en gras · sens français · sens anglais en italique")
+para(BodySmall, "Mandombe script first, large and brown · Lari latin form in bold · French meaning · English meaning in italics")
+
 
 # ================= DICTIONARY (2 columns) =================
 sec_style = Style(name="DictSec", family="section")
