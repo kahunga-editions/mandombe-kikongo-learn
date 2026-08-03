@@ -182,8 +182,8 @@ Letter = pstyle("LetterHead", textalign="center", fontname=TITLE_FONT, fontsize=
                 fontweight="bold", color="#8a5a20", margintop="0.5cm",
                 marginbottom="0.35cm", keepwithnext="always",
                 borderbottom="1pt solid #8a5a20", paddingbottom="0.1cm")
-Entry = pstyle("Entry", fontname=BODY_FONT, fontsize="9.5pt", lineheight="0.42cm",
-               marginbottom="0.12cm", keeptogether="always", orphans="2", widows="2")
+Entry = pstyle("Entry", fontname=BODY_FONT, fontsize="9.5pt", lineheight="0.80cm",
+               marginbottom="0.20cm", keeptogether="always", orphans="2", widows="2")
 EntryNote = pstyle("EntryNote", fontname=BODY_FONT, fontsize="8.5pt", lineheight="0.36cm",
                    marginleft="0.35cm", marginbottom="0.14cm", color="#555555",
                    keeptogether="always")
