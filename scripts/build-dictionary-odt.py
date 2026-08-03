@@ -261,15 +261,15 @@ para(Chapter, "Mode d'emploi")
 para(Body, "Les entrées sont classées par ordre alphabétique de la forme Lari. "
            "Chaque entrée se présente ainsi :")
 p = P(stylename=Entry)
-p.addElement(span(Lari, "Mbote"))
-p.addText("  ")
 p.addElement(span(Mand, "Mbote"))
+p.addText("   ")
+p.addElement(span(Lari, "Mbote"))
 p.addText("   ")
 p.addElement(span(Fr, "bonjour"))
 p.addText("  ·  ")
 p.addElement(span(En, "hello"))
 doc.text.addElement(p)
-para(BodySmall, "forme Lari en gras · écriture Mandombe en brun · sens français · sens anglais en italique")
+para(BodySmall, "écriture Mandombe en premier, en grand et en brun · forme Lari latine en gras · sens français · sens anglais en italique")
 
 # ================= DICTIONARY (2 columns) =================
 sec_style = Style(name="DictSec", family="section")
