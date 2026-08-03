@@ -501,6 +501,11 @@ const Dictionary = () => {
                   </div>
                 </div>
               ))}
+              {visibleCount < filtered.length && (
+                <div ref={sentinelRef} className="py-8 flex justify-center">
+                  <Loader2 className="w-5 h-5 animate-spin text-muted-foreground" />
+                </div>
+              )}
             </div>
           )}
         </div>
