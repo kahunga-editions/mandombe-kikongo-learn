@@ -285,7 +285,7 @@ for fr_line, en_line in [
      "dj: djunu (peace) is pronounced /dzunu/."),
 ]:
     para(BodySmall, "• " + fr_line)
-    para(BodySmall, "   " + en_line)
+    para(BodySmall, "   EN — " + en_line)
 
 para(Chapter, "Mode d'emploi · How to use")
 para(Body, "Les entrées sont classées par ordre alphabétique de la forme Lari. "
