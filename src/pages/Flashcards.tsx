@@ -225,28 +225,30 @@ const Flashcards = () => {
             >
               {!showBack ? (
                 <div className="text-center space-y-3">
-                  <p className="font-display text-3xl md:text-4xl font-bold text-foreground">
-                    {currentCard.front_lari}
-                  </p>
                   {currentCard.front_mandombe && (
-                    <p className="font-mandombe text-2xl text-primary">
+                    <p className="font-mandombe text-5xl md:text-6xl text-gold leading-[1.5]">
                       {currentCard.front_mandombe}
                     </p>
                   )}
+                  <p className="font-display text-2xl md:text-3xl font-bold text-foreground/80">
+                    {currentCard.front_lari}
+                  </p>
+
                   <p className="text-sm text-muted-foreground mt-6">
                     {t("flashcards.tapToReveal")}
                   </p>
                 </div>
               ) : (
                 <div className="text-center space-y-4">
-                  <p className="font-display text-2xl font-bold text-foreground mb-2">
-                    {currentCard.front_lari}
-                  </p>
                   {currentCard.front_mandombe && (
-                    <p className="font-mandombe text-xl text-primary">
+                    <p className="font-mandombe text-4xl text-gold leading-[1.5]">
                       {currentCard.front_mandombe}
                     </p>
                   )}
+                  <p className="font-display text-xl font-bold text-foreground/80 mb-2">
+                    {currentCard.front_lari}
+                  </p>
+
                   <div className="border-t border-border pt-4 space-y-2">
                     {currentCard.front_french && (
                       <p className="text-lg text-foreground">🇫🇷 {currentCard.front_french}</p>
