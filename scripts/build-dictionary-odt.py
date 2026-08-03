@@ -188,8 +188,8 @@ EntryNote = pstyle("EntryNote", fontname=BODY_FONT, fontsize="8.5pt", lineheight
                    marginleft="0.35cm", marginbottom="0.14cm", color="#555555",
                    keeptogether="always")
 
-Lari = tstyle("LariT", fontweight="bold", fontsize="10.5pt", fontname=BODY_FONT)
-Mand = tstyle("MandT", fontname=MANDOMBE_FONT, fontsize="12pt", color="#8a5a20")
+Lari = tstyle("LariT", fontweight="bold", fontsize="9.5pt", fontname=BODY_FONT, color="#333333")
+Mand = tstyle("MandT", fontname=MANDOMBE_FONT, fontsize="17pt", fontweight="bold", color="#8a5a20")
 Fr = tstyle("FrT", fontname=BODY_FONT, fontsize="9.5pt")
 En = tstyle("EnT", fontname=BODY_FONT, fontsize="9pt", fontstyle="italic", color="#555555")
 NoteT = tstyle("NoteT", fontname=BODY_FONT, fontsize="8.5pt", fontstyle="italic")
