@@ -9,22 +9,43 @@ import { LanguageProvider } from "@/contexts/LanguageContext";
 import { PageTracker } from "./components/PageTracker";
 import { CookieConsent } from "./components/CookieConsent";
 
-const Index = lazy(() => import("./pages/Index"));
-const Lessons = lazy(() => import("./pages/Lessons"));
-const LessonDetail = lazy(() => import("./pages/LessonDetail"));
-const Auth = lazy(() => import("./pages/Auth"));
-const Dictionary = lazy(() => import("./pages/Dictionary"));
-const Flashcards = lazy(() => import("./pages/Flashcards"));
-const MandombeScript = lazy(() => import("./pages/MandombeScript"));
-const Translator = lazy(() => import("./pages/Translator"));
-const AdminCorrections = lazy(() => import("./pages/AdminCorrections"));
-const AdminAnalytics = lazy(() => import("./pages/AdminAnalytics"));
-const AdminIllustrations = lazy(() => import("./pages/AdminIllustrations"));
-const MbutaMatondo = lazy(() => import("./pages/MbutaMatondo"));
-const Privacy = lazy(() => import("./pages/Privacy"));
-const Mvita = lazy(() => import("./pages/Mvita"));
+// Retries a dynamic import once, then forces a single hard reload.
+// Handles stale chunk hashes after a new deployment.
+const lazyWithRetry = <T extends { default: React.ComponentType<any> }>(
+  importer: () => Promise<T>
+) =>
+  lazy(async () => {
+    const RELOAD_KEY = "chunk-reload-attempted";
+    try {
+      const mod = await importer();
+      sessionStorage.removeItem(RELOAD_KEY);
+      return mod;
+    } catch (error) {
+      if (!sessionStorage.getItem(RELOAD_KEY)) {
+        sessionStorage.setItem(RELOAD_KEY, "1");
+        window.location.reload();
+        return new Promise<T>(() => {});
+      }
+      throw error;
+    }
+  });
 
-const NotFound = lazy(() => import("./pages/NotFound"));
+const Index = lazyWithRetry(() => import("./pages/Index"));
+const Lessons = lazyWithRetry(() => import("./pages/Lessons"));
+const LessonDetail = lazyWithRetry(() => import("./pages/LessonDetail"));
+const Auth = lazyWithRetry(() => import("./pages/Auth"));
+const Dictionary = lazyWithRetry(() => import("./pages/Dictionary"));
+const Flashcards = lazyWithRetry(() => import("./pages/Flashcards"));
+const MandombeScript = lazyWithRetry(() => import("./pages/MandombeScript"));
+const Translator = lazyWithRetry(() => import("./pages/Translator"));
+const AdminCorrections = lazyWithRetry(() => import("./pages/AdminCorrections"));
+const AdminAnalytics = lazyWithRetry(() => import("./pages/AdminAnalytics"));
+const AdminIllustrations = lazyWithRetry(() => import("./pages/AdminIllustrations"));
+const MbutaMatondo = lazyWithRetry(() => import("./pages/MbutaMatondo"));
+const Privacy = lazyWithRetry(() => import("./pages/Privacy"));
+const Mvita = lazyWithRetry(() => import("./pages/Mvita"));
+
+const NotFound = lazyWithRetry(() => import("./pages/NotFound"));
 
 const routeFallback = (
   <div className="min-h-screen bg-background text-muted-foreground grid place-items-center">
