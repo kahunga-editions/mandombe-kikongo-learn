@@ -335,6 +335,54 @@ for e in clean:
         np.addElement(span(NoteT, e["note"]))
         section.addElement(np)
 
+# ================= ANNEXE : CONJUGAISONS =================
+CONJ_SRC = sys.argv[4] if len(sys.argv) > 4 else None
+conjugations = []
+if CONJ_SRC and os.path.exists(CONJ_SRC):
+    conjugations = json.load(open(CONJ_SRC))
+
+if conjugations:
+    ConjVerb = pstyle("ConjVerb", fontname=TITLE_FONT, fontsize="13pt", fontweight="bold",
+                      color="#8a5a20", margintop="0.5cm", marginbottom="0.05cm",
+                      keepwithnext="always")
+    ConjTense = pstyle("ConjTense", fontname=BODY_FONT, fontsize="9pt", fontstyle="italic",
+                       color="#555555", marginbottom="0.15cm", keepwithnext="always")
+    ConjRow = pstyle("ConjRow", fontname=BODY_FONT, fontsize="9.5pt", lineheight="0.72cm",
+                     marginleft="0.35cm", marginbottom="0.05cm", keeptogether="always")
+    PersonT = tstyle("PersonT", fontname=BODY_FONT, fontsize="9pt", color="#555555")
+
+    para(Chapter, "Annexe — Conjugaisons")
+    para(Body, "Cette annexe rassemble tous les tableaux de conjugaison rencontrés dans les "
+               "leçons de Nzo Mikanda. Chaque forme est donnée en écriture Mandombe puis en "
+               "transcription latine.")
+    for c in conjugations:
+        verb = (c.get("verb") or "").strip()
+        if not verb:
+            continue
+        meaning = (c.get("meaning") or "").strip()
+        vp = P(stylename=ConjVerb)
+        if c.get("verbMandombe"):
+            vp.addElement(span(Mand, c["verbMandombe"].strip()))
+            vp.addText("   ")
+        vp.addText(verb + (f" — {meaning}" if meaning else ""))
+        doc.text.addElement(vp)
+        tense = (c.get("tense") or "").strip()
+        if tense:
+            para(ConjTense, tense)
+        for r in c.get("rows") or []:
+            lari = (r.get("lari") or "").strip()
+            if not lari:
+                continue
+            rp = P(stylename=ConjRow)
+            if r.get("mandombe"):
+                rp.addElement(span(Mand, r["mandombe"].strip()))
+                rp.addText("   ")
+            rp.addElement(span(Lari, lari))
+            if r.get("person"):
+                rp.addText("   ")
+                rp.addElement(span(PersonT, r["person"].strip()))
+            doc.text.addElement(rp)
+
 para(Chapter, "Index thematique")
 para(Body, "Les entrées de ce dictionnaire sont issues des modules d'apprentissage suivants :")
 cats = []
@@ -343,6 +391,7 @@ for e in clean:
         cats.append(e["cat"])
 for c in sorted(cats):
     para(BodySmall, "• " + c)
+
 
 para(Chapter, "À propos")
 para(Body, "Nzo Mikanda est une plateforme d'apprentissage du Kikongo Lari et de l'écriture "
