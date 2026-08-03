@@ -108,6 +108,7 @@
 - [TTS Sanitization](mem://technical/tts/sanitization) — Stripping non-speech characters
 - [Mandombe Orthography Double Letters](mem://grammar/orthography-mandombe-double-letters) — Removal of double letters
 - [Smart Quotes Constraint](mem://constraints/smart-quotes) — Straight apostrophes only in TS files
+- [Book Export Format](mem://technical/book-export-format) — ODT + PDF only, never DOCX (Mandombe unsupported)
 - [Kinship Terms](mem://grammar/kinship-terms) — Full vs short forms (tata vs ta), yaya for grandparent
 - [AI Teacher](mem://features/ai-teacher) — Mbuta Matondo Gemini SSE implementation
 - [Verb Zonza Future](mem://grammar/verb-zonza-future) — Futur affirmatif (mbo+préfixe) et négatif (ka...ko) de zonza
