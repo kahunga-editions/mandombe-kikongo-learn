@@ -330,7 +330,37 @@ const Dictionary = () => {
     }
 
     return results;
+  }, [search, activeLetter, dictionary]);
+
+  // Incremental rendering: only mount a slice of the results to keep the page fast.
+  const PAGE_SIZE = 40;
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
+  const sentinelRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    setVisibleCount(PAGE_SIZE);
   }, [search, activeLetter]);
+
+  useEffect(() => {
+    const node = sentinelRef.current;
+    if (!node) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0]?.isIntersecting) {
+          setVisibleCount((c) => Math.min(c + PAGE_SIZE, filtered.length));
+        }
+      },
+      { rootMargin: "600px" }
+    );
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, [filtered.length, visibleCount]);
+
+  const visibleEntries = useMemo(
+    () => filtered.slice(0, visibleCount),
+    [filtered, visibleCount]
+  );
+
 
   return (
     <div className="min-h-screen bg-background">
@@ -426,7 +456,7 @@ const Dictionary = () => {
             </div>
           ) : (
             <div className="max-w-4xl mx-auto grid gap-3">
-              {filtered.map((entry, i) => (
+              {visibleEntries.map((entry, i) => (
                 <div
                   key={`${entry.lari}-${i}`}
                   className="group bg-card rounded-xl border border-border p-5 hover:border-primary/30 hover:shadow-md transition-all"
@@ -471,6 +501,11 @@ const Dictionary = () => {
                   </div>
                 </div>
               ))}
+              {visibleCount < filtered.length && (
+                <div ref={sentinelRef} className="py-8 flex justify-center">
+                  <Loader2 className="w-5 h-5 animate-spin text-muted-foreground" />
+                </div>
+              )}
             </div>
           )}
         </div>
