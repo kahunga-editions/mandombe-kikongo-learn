@@ -77,6 +77,12 @@ def merge_sense(current: str, extra: str) -> str:
     return current + " ; " + extra
 
 
+def ko_of(e):
+    fr = (e.get("french") or e.get("fr") or "").strip()
+    en = (e.get("english") or e.get("en") or "").strip()
+    return (ko_cache.get(fr + "|" + en) or "").strip()
+
+
 for e in entries:
     lari = (e.get("lari") or "").strip()
     fr = (e.get("french") or e.get("fr") or "").strip()
@@ -90,6 +96,7 @@ for e in entries:
         # Homonyme : on fusionne les sens distincts au lieu de perdre l'entree.
         rec["fr"] = merge_sense(rec["fr"], fr)
         rec["en"] = merge_sense(rec["en"], (e.get("english") or e.get("en") or "").strip())
+        rec["ko"] = merge_sense(rec["ko"], ko_of(e))
         rec["note"] = merge_sense(rec["note"], (e.get("note") or "").strip())
         if not rec["mandombe"]:
             rec["mandombe"] = (e.get("mandombe") or "").strip()
@@ -99,6 +106,7 @@ for e in entries:
         "mandombe": (e.get("mandombe") or "").strip(),
         "fr": fr,
         "en": (e.get("english") or e.get("en") or "").strip(),
+        "ko": ko_of(e),
         "note": (e.get("note") or "").strip(),
         "cat": (e.get("category") or "").strip(),
         "key": k,
@@ -110,8 +118,9 @@ clean.sort(key=lambda x: (x["key"], x["fr"]))
 
 doc = OpenDocumentText()
 
-for fam in (BODY_FONT, TITLE_FONT):
+for fam in (BODY_FONT, TITLE_FONT, KO_FONT):
     doc.fontfacedecls.addElement(FontFace(name=fam, fontfamily=fam, fontpitch="variable"))
+
 doc.fontfacedecls.addElement(
     FontFace(name=MANDOMBE_FONT, fontfamily=MANDOMBE_FONT, fontpitch="variable")
 )
