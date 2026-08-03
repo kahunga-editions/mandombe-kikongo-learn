@@ -97,6 +97,57 @@ for (const d of offline as any[]) {
   });
 }
 
+// Corrections validées du traducteur (table translation_corrections)
+const SB_URL = "https://zckjqudeoodfxikhdfvh.supabase.co";
+const SB_KEY =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inpja2pxdWRlb29kZnhpa2hkZnZoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzE4MDY0MjAsImV4cCI6MjA4NzM4MjQyMH0.TOLUKkoTIaxcUD2-Yp-nNkl0w2RReTrmpFfs1mGX8pk";
+
+const isShortLemma = (s: string) => {
+  const t = (s ?? "").trim();
+  if (!t || t.length > 60) return false;
+  if (t.split(/\s+/).length > 8) return false;
+  return true;
+};
+
+try {
+  const res = await fetch(
+    `${SB_URL}/rest/v1/translation_corrections?select=source_lang,target_lang,source_text,corrected_translation,corrected_mandombe,notes`,
+    { headers: { apikey: SB_KEY, Authorization: `Bearer ${SB_KEY}` } }
+  );
+  const rows: any[] = res.ok ? await res.json() : [];
+  let added = 0;
+  for (const c of rows) {
+    let lari = "";
+    let french = "";
+    let english = "";
+    if (c.target_lang === "lari") {
+      lari = c.corrected_translation;
+      if (c.source_lang === "en") english = c.source_text;
+      else french = c.source_text;
+    } else if (c.source_lang === "lari") {
+      lari = c.source_text;
+      if (c.target_lang === "en") english = c.corrected_translation;
+      else french = c.corrected_translation;
+    } else continue;
+    if (!isShortLemma(lari) || !isShortLemma(french || english)) continue;
+    const before = entries.length;
+    push({
+      lari,
+      mandombe: c.corrected_mandombe || undefined,
+      french: french || english,
+      english: english || undefined,
+      category: "Traducteur",
+      kind: "dictionary",
+    });
+    if (entries.length > before) added++;
+  }
+  console.log(`Corrections traducteur ajoutées: ${added}/${rows.length}`);
+} catch (e) {
+  console.warn("Corrections traducteur non récupérées:", e);
+}
+
+
+
 conjugations.sort((a, b) =>
   a.verb.localeCompare(b.verb, "fr") || a.tense.localeCompare(b.tense, "fr")
 );
