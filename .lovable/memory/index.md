@@ -115,3 +115,4 @@
 - [TTS Djuna Rule](mem://audio/tts-djuna-rule) — djuna → /dzuna/ override
 - [Teacher Meta-Language](mem://grammar/meta-language-teacher) — Consignes de classe : lire, compléter, écouter, répondre, changer de sujet
 - [Mvita za Ndinga](mem://features/mvita-za-ndinga) — Duels vocabulaire, ligues Nlongoki→Nlongi→Kinuani→Mbuta→Nganga
+- [TTS nz/ns Rules](mem://audio/tts-nz-ns-rules) — nz et ns non systématiques, overrides mot par mot
