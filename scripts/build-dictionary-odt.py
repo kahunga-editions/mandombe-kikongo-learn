@@ -70,7 +70,7 @@ def merge_sense(current: str, extra: str) -> str:
 
 for e in entries:
     lari = (e.get("lari") or "").strip()
-    fr = (e.get("french") or "").strip()
+    fr = (e.get("french") or e.get("fr") or "").strip()
     if not lari or not fr:
         continue
     k = norm(lari)
