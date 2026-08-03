@@ -80,7 +80,7 @@ for e in entries:
     if rec is not None:
         # Homonyme : on fusionne les sens distincts au lieu de perdre l'entree.
         rec["fr"] = merge_sense(rec["fr"], fr)
-        rec["en"] = merge_sense(rec["en"], (e.get("english") or "").strip())
+        rec["en"] = merge_sense(rec["en"], (e.get("english") or e.get("en") or "").strip())
         rec["note"] = merge_sense(rec["note"], (e.get("note") or "").strip())
         if not rec["mandombe"]:
             rec["mandombe"] = (e.get("mandombe") or "").strip()
@@ -89,7 +89,7 @@ for e in entries:
         "lari": lari,
         "mandombe": (e.get("mandombe") or "").strip(),
         "fr": fr,
-        "en": (e.get("english") or "").strip(),
+        "en": (e.get("english") or e.get("en") or "").strip(),
         "note": (e.get("note") or "").strip(),
         "cat": (e.get("category") or "").strip(),
         "key": k,
