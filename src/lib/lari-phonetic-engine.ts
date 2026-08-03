@@ -281,6 +281,8 @@ const PHONETIC_OVERRIDES: Record<string, string> = {
  * sinon "nkumbu" est remplacé en isolation et la liaison est perdue).
  */
 const LIAISONS: Array<[RegExp, string]> = [
+  // Tata Nzambi tala eti — liaison obligatoire : /taleti/
+  [/\btala\s+eti\b/gi, 'taléti'],
   [/\bnkumbu\s+ani\b/gi, 'nkoumbouani'],
   [/\bnkumbu\s+andi\b/gi, 'nkoumbouandi'],
   [/\bnkumbu\s+aku\b/gi, 'nkoumbouaku'],
