@@ -25,11 +25,20 @@ SRC = sys.argv[1] if len(sys.argv) > 1 else "/tmp/dico.json"
 DST = sys.argv[2] if len(sys.argv) > 2 else "/mnt/documents/dictionnaire.odt"
 # Dossier d'illustrations (ZIP exporte depuis /admin/illustrations) : A.png, B.jpg, cover.png...
 IMG_DIR = sys.argv[3] if len(sys.argv) > 3 else None
+# sys.argv[4] = conjugaisons.json (optionnel), sys.argv[5] = cache coreen (optionnel)
+KO_SRC = sys.argv[5] if len(sys.argv) > 5 else None
 FONT_TTF = "/dev-server/public/fonts/masono_mandombe-webfont.ttf"
 
 MANDOMBE_FONT = "HapaxMandombe"
 BODY_FONT = "Liberation Serif"
 TITLE_FONT = "Liberation Sans"
+KO_FONT = "Noto Sans CJK KR"
+
+ko_cache = {}
+if KO_SRC and os.path.exists(KO_SRC):
+    ko_cache = json.load(open(KO_SRC))
+KO = bool(ko_cache)
+
 
 
 def find_illustration(slot: str):
@@ -68,6 +77,12 @@ def merge_sense(current: str, extra: str) -> str:
     return current + " ; " + extra
 
 
+def ko_of(e):
+    fr = (e.get("french") or e.get("fr") or "").strip()
+    en = (e.get("english") or e.get("en") or "").strip()
+    return (ko_cache.get(fr + "|" + en) or "").strip()
+
+
 for e in entries:
     lari = (e.get("lari") or "").strip()
     fr = (e.get("french") or e.get("fr") or "").strip()
@@ -81,6 +96,7 @@ for e in entries:
         # Homonyme : on fusionne les sens distincts au lieu de perdre l'entree.
         rec["fr"] = merge_sense(rec["fr"], fr)
         rec["en"] = merge_sense(rec["en"], (e.get("english") or e.get("en") or "").strip())
+        rec["ko"] = merge_sense(rec["ko"], ko_of(e))
         rec["note"] = merge_sense(rec["note"], (e.get("note") or "").strip())
         if not rec["mandombe"]:
             rec["mandombe"] = (e.get("mandombe") or "").strip()
@@ -90,6 +106,7 @@ for e in entries:
         "mandombe": (e.get("mandombe") or "").strip(),
         "fr": fr,
         "en": (e.get("english") or e.get("en") or "").strip(),
+        "ko": ko_of(e),
         "note": (e.get("note") or "").strip(),
         "cat": (e.get("category") or "").strip(),
         "key": k,
@@ -101,8 +118,9 @@ clean.sort(key=lambda x: (x["key"], x["fr"]))
 
 doc = OpenDocumentText()
 
-for fam in (BODY_FONT, TITLE_FONT):
+for fam in (BODY_FONT, TITLE_FONT, KO_FONT):
     doc.fontfacedecls.addElement(FontFace(name=fam, fontfamily=fam, fontpitch="variable"))
+
 doc.fontfacedecls.addElement(
     FontFace(name=MANDOMBE_FONT, fontfamily=MANDOMBE_FONT, fontpitch="variable")
 )
@@ -193,6 +211,12 @@ Mand = tstyle("MandT", fontname=MANDOMBE_FONT, fontsize="17pt", fontweight="bold
 Fr = tstyle("FrT", fontname=BODY_FONT, fontsize="9.5pt")
 En = tstyle("EnT", fontname=BODY_FONT, fontsize="9pt", fontstyle="italic", color="#555555")
 NoteT = tstyle("NoteT", fontname=BODY_FONT, fontsize="8.5pt", fontstyle="italic")
+Ko = tstyle("KoT", fontname=KO_FONT, fontnameasian=KO_FONT, fontsize="9pt",
+            fontsizeasian="9pt", color="#1f4e79")
+KoBody = pstyle("KoBody", fontname=KO_FONT, fontnameasian=KO_FONT, fontsize="10pt",
+                fontsizeasian="10pt", lineheight="140%", marginbottom="0.25cm",
+                textalign="justify")
+
 
 
 def para(style, *runs):
@@ -222,7 +246,7 @@ if cover:
     cp.addElement(cf)
     doc.text.addElement(cp)
 para(BookTitle, "BUKU DIA BINSONO")
-para(BookSub, "Dictionnaire Kikongo Lari – Français – English")
+para(BookSub, "Dictionnaire Kikongo Lari – Français – English" + (" – 한국어" if KO else ""))
 para(BookMandombe, "Buku dia Binsono")
 para(BookMeta, f"{len(clean)} entrées · Écriture Mandombe")
 para(BookMeta, "Nzo Mikanda")
@@ -256,6 +280,24 @@ para(Body,
      "The Mandombe script was shared by Professor Wabeladio Payi in the last century. It is "
      "reproduced here with the Masono Mandombe font, embedded in this file. If the characters "
      "do not display, install the font on your system.")
+
+if KO:
+    para(Chapter, "머리말")
+    para(KoBody,
+         "이 사전은 Nzo Mikanda 플랫폼에서 가르치는 키콩고 라리(Kikongo Lari)의 어휘와 표현을 "
+         "모은 것입니다. 각 표제어는 만돔베(Mandombe) 문자, 라틴 문자 표기, 그리고 프랑스어 · "
+         "영어 · 한국어 뜻의 순서로 제시됩니다. 여기에 실린 키콩고 라리는 음바무(Mbamou) 지역의 "
+         "말입니다.")
+    para(KoBody,
+         "모든 자료는 실제로 확인된 출처에서만 가져왔습니다. 지어낸 형태나 키투바 · 링갈라에서 "
+         "빌려온 형태는 없습니다. 문화적 또는 문법적인 뉘앙스가 있는 경우에는 표제어 아래에 "
+         "주석으로 표시했습니다.")
+    para(KoBody,
+         "한국어 뜻은 프랑스어와 영어 뜻을 바탕으로 옮긴 것이며, 키콩고 낱말을 한글로 음역한 "
+         "것이 아닙니다. 발음은 아래의 «Prononciation» 장을 참고하십시오.")
+    para(KoBody,
+         "만돔베 문자는 지난 세기에 와벨라디오 파이(Wabeladio Payi) 교수가 널리 알린 문자입니다. "
+         "이 책에는 Masono Mandombe 글꼴이 포함되어 있습니다.")
 
 para(Chapter, "Prononciation · Pronunciation")
 para(SubHead, "Voyelles · Vowels")
@@ -302,6 +344,8 @@ p.addElement(span(En, "hello"))
 doc.text.addElement(p)
 para(BodySmall, "écriture Mandombe en premier, en grand et en brun · forme Lari latine en gras · sens français · sens anglais en italique")
 para(BodySmall, "Mandombe script first, large and brown · Lari latin form in bold · French meaning · English meaning in italics")
+if KO:
+    para(BodySmall, "Mandombe · Lari · français · English · 한국어 (en bleu)")
 
 
 # ================= DICTIONARY (2 columns) =================
@@ -314,7 +358,7 @@ sp.addElement(cols)
 sec_style.addElement(sp)
 doc.automaticstyles.addElement(sec_style)
 
-para(Chapter, "Dictionnaire Lari – Français – English")
+para(Chapter, "Dictionnaire Lari – Français – English" + (" – 한국어" if KO else ""))
 
 section = Section(name="Dico", stylename=sec_style)
 doc.text.addElement(section)
@@ -362,6 +406,8 @@ for e in clean:
     runs += ["  ", span(Fr, e["fr"])]
     if e["en"]:
         runs += ["  ·  ", span(En, e["en"])]
+    if KO and e.get("ko"):
+        runs += ["  ·  ", span(Ko, e["ko"])]
     sadd(Entry, runs)
     if e["note"]:
         np = P(stylename=EntryNote)
