@@ -256,6 +256,8 @@ const ELEVENLABS_RULES: PhoneticRule[] = [
  * Liaisons obligatoires (avant les overrides mot-par-mot).
  */
 const LIAISONS: Array<[RegExp, string]> = [
+  // Tata Nzambi tala eti — liaison obligatoire : /taleti/
+  [/\btala\s+eti\b/gi, 'taléti'],
   [/\bnkumbu\s+ani\b/gi, 'nkoumbouani'],
   [/\bnkumbu\s+andi\b/gi, 'nkoumbouandi'],
   [/\bnkumbu\s+aku\b/gi, 'nkoumbouaku'],
