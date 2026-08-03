@@ -19361,7 +19361,7 @@ export const lessons: Lesson[] = [
       { lari: "humunu", mandombe: "humunu", french: "souffle de vie, respiration, haleine, souffle", english: "breath of life, breathing, breath" },
       { lari: "mumvuka", mandombe: "mumvuka", french: "grand village", english: "large village", note: "Pluriel: mimvuka" },
       { lari: "Mikuri mumvuka weri", mandombe: "Mikuri mumvuka weri", french: "Mikouri etait un grand village", english: "Mikouri was a large village" },
-      { lari: "Kuya hata dia kanda", mandombe: "Kuya hata dia kanda", french: "Kouya etait un village familial", english: "Kouya was a family village", note: "Variante: Kuya hata dia dirir" },
+      { lari: "Kuya hata dia kanda", mandombe: "Kuya hata dia kanda", french: "Kouya etait un village familial", english: "Kouya was a family village", note: "Variante: Kuya hata dia diri" },
       { lari: "ngantu", mandombe: "ngantu", french: "de peur que, pour ne pas que, afin que", english: "lest, so that not, in order to", note: "Variante: nganti" },
       { lari: "pinzumuka", mandombe: "pinzumuka", french: "tenir quelque chose qui vous échappe des mains en roulant", english: "to hold something that rolls out of your hands" },
       { lari: "kubuka", mandombe: "kubuka", french: "désamorcer, un piège qui se désamorce tout seul", english: "to disarm, a trap that disarms itself" },
