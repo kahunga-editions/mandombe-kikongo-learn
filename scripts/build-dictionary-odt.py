@@ -335,6 +335,69 @@ for e in clean:
         np.addElement(span(NoteT, e["note"]))
         section.addElement(np)
 
+# ================= ANNEXE : CONJUGAISONS =================
+CONJ_SRC = sys.argv[4] if len(sys.argv) > 4 else None
+conjugations = []
+if CONJ_SRC and os.path.exists(CONJ_SRC):
+    conjugations = json.load(open(CONJ_SRC))
+
+if conjugations:
+    ConjVerb = pstyle("ConjVerb", fontname=TITLE_FONT, fontsize="11.5pt", fontweight="bold",
+                      color="#8a5a20", margintop="0.4cm", marginbottom="0.05cm",
+                      keepwithnext="always")
+    ConjTense = pstyle("ConjTense", fontname=BODY_FONT, fontsize="8.5pt", fontstyle="italic",
+                       color="#555555", marginbottom="0.1cm", keepwithnext="always")
+    ConjRow = pstyle("ConjRow", fontname=BODY_FONT, fontsize="9pt", lineheight="0.70cm",
+                     marginleft="0.25cm", marginbottom="0.02cm")
+    PersonT = tstyle("PersonT", fontname=BODY_FONT, fontsize="8.5pt", color="#555555")
+
+    para(Chapter, "Annexe — Conjugaisons")
+    para(Body, "Cette annexe rassemble tous les tableaux de conjugaison rencontrés dans les "
+               "leçons de Nzo Mikanda. Chaque forme est donnée en écriture Mandombe puis en "
+               "transcription latine.")
+
+    conj_sec_style = Style(name="ConjSec", family="section")
+    ccols = Columns(columncount=2, columngap="0.55cm")
+    ccols.addElement(Column(relwidth="1*", startindent="0cm", endindent="0.27cm"))
+    ccols.addElement(Column(relwidth="1*", startindent="0.27cm", endindent="0cm"))
+    csp = SectionProperties()
+    csp.addElement(ccols)
+    conj_sec_style.addElement(csp)
+    doc.automaticstyles.addElement(conj_sec_style)
+    conj_section = Section(name="Conjugaisons", stylename=conj_sec_style)
+    doc.text.addElement(conj_section)
+
+    for c in conjugations:
+        verb = (c.get("verb") or "").strip()
+        if not verb:
+            continue
+        meaning = (c.get("meaning") or "").strip()
+        vp = P(stylename=ConjVerb)
+        if c.get("verbMandombe"):
+            vp.addElement(span(Mand, c["verbMandombe"].strip()))
+            vp.addText("   ")
+        vp.addText(verb + (f" — {meaning}" if meaning else ""))
+        conj_section.addElement(vp)
+        tense = (c.get("tense") or "").strip()
+        if tense:
+            tp = P(stylename=ConjTense)
+            tp.addText(tense)
+            conj_section.addElement(tp)
+        for r in c.get("rows") or []:
+            lari = (r.get("lari") or "").strip()
+            if not lari:
+                continue
+            rp = P(stylename=ConjRow)
+            if r.get("mandombe"):
+                rp.addElement(span(Mand, r["mandombe"].strip()))
+                rp.addText("   ")
+            rp.addElement(span(Lari, lari))
+            if r.get("person"):
+                rp.addText("   ")
+                rp.addElement(span(PersonT, r["person"].strip()))
+            conj_section.addElement(rp)
+
+
 para(Chapter, "Index thematique")
 para(Body, "Les entrées de ce dictionnaire sont issues des modules d'apprentissage suivants :")
 cats = []
@@ -343,6 +406,7 @@ for e in clean:
         cats.append(e["cat"])
 for c in sorted(cats):
     para(BodySmall, "• " + c)
+
 
 para(Chapter, "À propos")
 para(Body, "Nzo Mikanda est une plateforme d'apprentissage du Kikongo Lari et de l'écriture "
