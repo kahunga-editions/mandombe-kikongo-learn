@@ -456,7 +456,7 @@ const Dictionary = () => {
             </div>
           ) : (
             <div className="max-w-4xl mx-auto grid gap-3">
-              {filtered.map((entry, i) => (
+              {visibleEntries.map((entry, i) => (
                 <div
                   key={`${entry.lari}-${i}`}
                   className="group bg-card rounded-xl border border-border p-5 hover:border-primary/30 hover:shadow-md transition-all"
