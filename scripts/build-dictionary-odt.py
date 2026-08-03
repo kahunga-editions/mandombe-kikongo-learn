@@ -322,10 +322,10 @@ for e in clean:
             ip.addText("[ illustration — lettre %s ]" % first)
             section.addElement(ip)
 
-    runs = [span(Lari, e["lari"])]
+    runs = []
     if e["mandombe"]:
-        runs += ["  ", span(Mand, e["mandombe"])]
-    runs += ["\n"] if False else []
+        runs += [span(Mand, e["mandombe"]), "   "]
+    runs += [span(Lari, e["lari"])]
     runs += ["  ", span(Fr, e["fr"])]
     if e["en"]:
         runs += ["  ·  ", span(En, e["en"])]
