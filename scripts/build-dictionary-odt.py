@@ -70,7 +70,7 @@ def merge_sense(current: str, extra: str) -> str:
 
 for e in entries:
     lari = (e.get("lari") or "").strip()
-    fr = (e.get("french") or "").strip()
+    fr = (e.get("french") or e.get("fr") or "").strip()
     if not lari or not fr:
         continue
     k = norm(lari)
@@ -80,7 +80,7 @@ for e in entries:
     if rec is not None:
         # Homonyme : on fusionne les sens distincts au lieu de perdre l'entree.
         rec["fr"] = merge_sense(rec["fr"], fr)
-        rec["en"] = merge_sense(rec["en"], (e.get("english") or "").strip())
+        rec["en"] = merge_sense(rec["en"], (e.get("english") or e.get("en") or "").strip())
         rec["note"] = merge_sense(rec["note"], (e.get("note") or "").strip())
         if not rec["mandombe"]:
             rec["mandombe"] = (e.get("mandombe") or "").strip()
@@ -89,7 +89,7 @@ for e in entries:
         "lari": lari,
         "mandombe": (e.get("mandombe") or "").strip(),
         "fr": fr,
-        "en": (e.get("english") or "").strip(),
+        "en": (e.get("english") or e.get("en") or "").strip(),
         "note": (e.get("note") or "").strip(),
         "cat": (e.get("category") or "").strip(),
         "key": k,
@@ -182,14 +182,14 @@ Letter = pstyle("LetterHead", textalign="center", fontname=TITLE_FONT, fontsize=
                 fontweight="bold", color="#8a5a20", margintop="0.5cm",
                 marginbottom="0.35cm", keepwithnext="always",
                 borderbottom="1pt solid #8a5a20", paddingbottom="0.1cm")
-Entry = pstyle("Entry", fontname=BODY_FONT, fontsize="9.5pt", lineheight="0.42cm",
-               marginbottom="0.12cm", keeptogether="always", orphans="2", widows="2")
+Entry = pstyle("Entry", fontname=BODY_FONT, fontsize="9.5pt", lineheight="0.80cm",
+               marginbottom="0.20cm", keeptogether="always", orphans="2", widows="2")
 EntryNote = pstyle("EntryNote", fontname=BODY_FONT, fontsize="8.5pt", lineheight="0.36cm",
                    marginleft="0.35cm", marginbottom="0.14cm", color="#555555",
                    keeptogether="always")
 
-Lari = tstyle("LariT", fontweight="bold", fontsize="10.5pt", fontname=BODY_FONT)
-Mand = tstyle("MandT", fontname=MANDOMBE_FONT, fontsize="12pt", color="#8a5a20")
+Lari = tstyle("LariT", fontweight="bold", fontsize="9.5pt", fontname=BODY_FONT, color="#333333")
+Mand = tstyle("MandT", fontname=MANDOMBE_FONT, fontsize="17pt", fontweight="bold", color="#8a5a20")
 Fr = tstyle("FrT", fontname=BODY_FONT, fontsize="9.5pt")
 En = tstyle("EnT", fontname=BODY_FONT, fontsize="9pt", fontstyle="italic", color="#555555")
 NoteT = tstyle("NoteT", fontname=BODY_FONT, fontsize="8.5pt", fontstyle="italic")
@@ -261,15 +261,15 @@ para(Chapter, "Mode d'emploi")
 para(Body, "Les entrées sont classées par ordre alphabétique de la forme Lari. "
            "Chaque entrée se présente ainsi :")
 p = P(stylename=Entry)
-p.addElement(span(Lari, "Mbote"))
-p.addText("  ")
 p.addElement(span(Mand, "Mbote"))
+p.addText("   ")
+p.addElement(span(Lari, "Mbote"))
 p.addText("   ")
 p.addElement(span(Fr, "bonjour"))
 p.addText("  ·  ")
 p.addElement(span(En, "hello"))
 doc.text.addElement(p)
-para(BodySmall, "forme Lari en gras · écriture Mandombe en brun · sens français · sens anglais en italique")
+para(BodySmall, "écriture Mandombe en premier, en grand et en brun · forme Lari latine en gras · sens français · sens anglais en italique")
 
 # ================= DICTIONARY (2 columns) =================
 sec_style = Style(name="DictSec", family="section")
@@ -322,10 +322,10 @@ for e in clean:
             ip.addText("[ illustration — lettre %s ]" % first)
             section.addElement(ip)
 
-    runs = [span(Lari, e["lari"])]
+    runs = []
     if e["mandombe"]:
-        runs += ["  ", span(Mand, e["mandombe"])]
-    runs += ["\n"] if False else []
+        runs += [span(Mand, e["mandombe"]), "   "]
+    runs += [span(Lari, e["lari"])]
     runs += ["  ", span(Fr, e["fr"])]
     if e["en"]:
         runs += ["  ·  ", span(En, e["en"])]
