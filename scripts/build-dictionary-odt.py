@@ -261,11 +261,13 @@ if cover:
     cf.addElement(Image(href=doc.addPicture(cover)))
     cp.addElement(cf)
     doc.text.addElement(cp)
+para(BookMandombe, "Buku dia Binsono")
 para(BookTitle, "BUKU DIA BINSONO")
 para(BookSub, "Dictionnaire Kikongo Lari – Français – English" + (" – 한국어" if KO else ""))
-para(BookMandombe, "Buku dia Binsono")
 para(BookMeta, f"{len(clean)} entrées · Écriture Mandombe")
-para(BookMeta, "Nzo Mikanda")
+para(BookMandombe, "Nzo Mikanda")
+para(BookMeta, "Nzo Mikanda · www.nzomikanda.com")
+
 
 para(Chapter, "Avant-propos")
 para(Body,
