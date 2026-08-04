@@ -26,7 +26,9 @@ DST = sys.argv[2] if len(sys.argv) > 2 else "/mnt/documents/dictionnaire.odt"
 # Dossier d'illustrations (ZIP exporte depuis /admin/illustrations) : A.png, B.jpg, cover.png...
 IMG_DIR = sys.argv[3] if len(sys.argv) > 3 else None
 # sys.argv[4] = conjugaisons.json (optionnel), sys.argv[5] = cache coreen (optionnel)
+# sys.argv[6] = cache anglais (optionnel) : complete les sens anglais manquants
 KO_SRC = sys.argv[5] if len(sys.argv) > 5 else None
+EN_SRC = sys.argv[6] if len(sys.argv) > 6 else "/tmp/en-cache.json"
 FONT_TTF = "/dev-server/public/fonts/masono_mandombe-webfont.ttf"
 
 MANDOMBE_FONT = "HapaxMandombe"
@@ -38,6 +40,11 @@ ko_cache = {}
 if KO_SRC and os.path.exists(KO_SRC):
     ko_cache = json.load(open(KO_SRC))
 KO = bool(ko_cache)
+
+en_cache = {}
+if EN_SRC and os.path.exists(EN_SRC):
+    en_cache = json.load(open(EN_SRC))
+
 
 
 
@@ -83,6 +90,14 @@ def ko_of(e):
     return (ko_cache.get(fr + "|" + en) or "").strip()
 
 
+def en_of(e):
+    en = (e.get("english") or e.get("en") or "").strip()
+    if en:
+        return en
+    fr = (e.get("french") or e.get("fr") or "").strip()
+    return (en_cache.get(fr) or "").strip()
+
+
 for e in entries:
     lari = (e.get("lari") or "").strip()
     fr = (e.get("french") or e.get("fr") or "").strip()
@@ -95,7 +110,7 @@ for e in entries:
     if rec is not None:
         # Homonyme : on fusionne les sens distincts au lieu de perdre l'entree.
         rec["fr"] = merge_sense(rec["fr"], fr)
-        rec["en"] = merge_sense(rec["en"], (e.get("english") or e.get("en") or "").strip())
+        rec["en"] = merge_sense(rec["en"], en_of(e))
         rec["ko"] = merge_sense(rec["ko"], ko_of(e))
         rec["note"] = merge_sense(rec["note"], (e.get("note") or "").strip())
         if not rec["mandombe"]:
@@ -105,8 +120,9 @@ for e in entries:
         "lari": lari,
         "mandombe": (e.get("mandombe") or "").strip(),
         "fr": fr,
-        "en": (e.get("english") or e.get("en") or "").strip(),
+        "en": en_of(e),
         "ko": ko_of(e),
+
         "note": (e.get("note") or "").strip(),
         "cat": (e.get("category") or "").strip(),
         "key": k,
