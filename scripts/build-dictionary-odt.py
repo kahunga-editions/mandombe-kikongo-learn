@@ -90,6 +90,14 @@ def ko_of(e):
     return (ko_cache.get(fr + "|" + en) or "").strip()
 
 
+def en_of(e):
+    en = (e.get("english") or e.get("en") or "").strip()
+    if en:
+        return en
+    fr = (e.get("french") or e.get("fr") or "").strip()
+    return (en_cache.get(fr) or "").strip()
+
+
 for e in entries:
     lari = (e.get("lari") or "").strip()
     fr = (e.get("french") or e.get("fr") or "").strip()
@@ -102,7 +110,7 @@ for e in entries:
     if rec is not None:
         # Homonyme : on fusionne les sens distincts au lieu de perdre l'entree.
         rec["fr"] = merge_sense(rec["fr"], fr)
-        rec["en"] = merge_sense(rec["en"], (e.get("english") or e.get("en") or "").strip())
+        rec["en"] = merge_sense(rec["en"], en_of(e))
         rec["ko"] = merge_sense(rec["ko"], ko_of(e))
         rec["note"] = merge_sense(rec["note"], (e.get("note") or "").strip())
         if not rec["mandombe"]:
@@ -112,8 +120,9 @@ for e in entries:
         "lari": lari,
         "mandombe": (e.get("mandombe") or "").strip(),
         "fr": fr,
-        "en": (e.get("english") or e.get("en") or "").strip(),
+        "en": en_of(e),
         "ko": ko_of(e),
+
         "note": (e.get("note") or "").strip(),
         "cat": (e.get("category") or "").strip(),
         "key": k,
