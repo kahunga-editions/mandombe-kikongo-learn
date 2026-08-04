@@ -279,8 +279,10 @@ para(Body,
      "existe, elle est signalée en note sous l'entrée.")
 para(Body,
      "L'écriture Mandombe a été partagée par Professeur Wabeladio Payi au siècle dernier. "
-     "Elle est reproduite ici avec la police Masono Mandombe, intégrée au fichier. Si les "
-     "caractères ne s'affichent pas, installez la police sur votre système.")
+     "Elle est reproduite ici avec la police Masono Mandombe. Pour écouter la prononciation, "
+     "réviser le vocabulaire et poursuivre l'apprentissage en ligne, rendez-vous sur "
+     "www.nzomikanda.com.")
+
 
 para(Chapter, "Foreword")
 para(Body,
