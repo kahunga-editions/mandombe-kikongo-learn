@@ -279,8 +279,10 @@ para(Body,
      "existe, elle est signalée en note sous l'entrée.")
 para(Body,
      "L'écriture Mandombe a été partagée par Professeur Wabeladio Payi au siècle dernier. "
-     "Elle est reproduite ici avec la police Masono Mandombe, intégrée au fichier. Si les "
-     "caractères ne s'affichent pas, installez la police sur votre système.")
+     "Elle est reproduite ici avec la police Masono Mandombe. Pour écouter la prononciation, "
+     "réviser le vocabulaire et poursuivre l'apprentissage en ligne, rendez-vous sur "
+     "www.nzomikanda.com.")
+
 
 para(Chapter, "Foreword")
 para(Body,
@@ -294,8 +296,9 @@ para(Body,
      "is given as a note below the entry.")
 para(Body,
      "The Mandombe script was shared by Professor Wabeladio Payi in the last century. It is "
-     "reproduced here with the Masono Mandombe font, embedded in this file. If the characters "
-     "do not display, install the font on your system.")
+     "reproduced here with the Masono Mandombe font. To hear the pronunciation, review the "
+     "vocabulary and keep learning online, visit www.nzomikanda.com.")
+
 
 if KO:
     para(Chapter, "머리말")
@@ -313,7 +316,8 @@ if KO:
          "것이 아닙니다. 발음은 아래의 «Prononciation» 장을 참고하십시오.")
     para(KoBody,
          "만돔베 문자는 지난 세기에 와벨라디오 파이(Wabeladio Payi) 교수가 널리 알린 문자입니다. "
-         "이 책에는 Masono Mandombe 글꼴이 포함되어 있습니다.")
+         "발음을 듣고 어휘를 복습하며 학습을 이어가려면 www.nzomikanda.com 을 방문하십시오.")
+
 
 para(Chapter, "Prononciation · Pronunciation")
 para(SubHead, "Voyelles · Vowels")
