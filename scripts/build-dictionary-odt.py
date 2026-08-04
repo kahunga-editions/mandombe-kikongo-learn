@@ -26,7 +26,9 @@ DST = sys.argv[2] if len(sys.argv) > 2 else "/mnt/documents/dictionnaire.odt"
 # Dossier d'illustrations (ZIP exporte depuis /admin/illustrations) : A.png, B.jpg, cover.png...
 IMG_DIR = sys.argv[3] if len(sys.argv) > 3 else None
 # sys.argv[4] = conjugaisons.json (optionnel), sys.argv[5] = cache coreen (optionnel)
+# sys.argv[6] = cache anglais (optionnel) : complete les sens anglais manquants
 KO_SRC = sys.argv[5] if len(sys.argv) > 5 else None
+EN_SRC = sys.argv[6] if len(sys.argv) > 6 else "/tmp/en-cache.json"
 FONT_TTF = "/dev-server/public/fonts/masono_mandombe-webfont.ttf"
 
 MANDOMBE_FONT = "HapaxMandombe"
@@ -38,6 +40,11 @@ ko_cache = {}
 if KO_SRC and os.path.exists(KO_SRC):
     ko_cache = json.load(open(KO_SRC))
 KO = bool(ko_cache)
+
+en_cache = {}
+if EN_SRC and os.path.exists(EN_SRC):
+    en_cache = json.load(open(EN_SRC))
+
 
 
 
