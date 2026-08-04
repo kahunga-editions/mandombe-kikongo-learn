@@ -47,39 +47,59 @@ async def render_glyphs(items):
         await b.close()
     return res
 
-def card(letter,glyph_path,lari,fr,out,sub=None,ltsize=110):
-    img=Image.new("RGB",(W,H),(36,21,9)); d=ImageDraw.Draw(img)
+def bg(img,d):
     for y in range(H):
         t=abs(y-330)/H
         c=tuple(int(a+(b-a)*min(t*1.5,1)) for a,b in zip((58,35,20),(31,18,9)))
         d.line([(0,y),(W,y)],fill=c)
     d.rectangle([38,38,W-38,H-38],outline=(138,106,46),width=3)
     d.rectangle([56,56,W-56,H-56],outline=(92,66,31),width=1)
+
+def paste_glyph(img,glyph_path,top,maxh,maxw=W-320):
     g=Image.open(glyph_path).convert("RGBA")
     bb=g.getbbox()
     if bb: g=g.crop(bb)
-    maxw,maxh=W-320,430
     r=min(maxw/g.width,maxh/g.height)
     g=g.resize((max(1,int(g.width*r)),max(1,int(g.height*r))),Image.LANCZOS)
-    img.paste(g,((W-g.width)//2,300+(430-g.height)//2),g)
+    img.paste(g,((W-g.width)//2,top+(maxh-g.height)//2),g)
+
+def card(glyph_path,lari,fr,out):
+    """Illustration de lettre : le mot en Mandombe, puis sa translitteration et son sens."""
+    img=Image.new("RGB",(W,H),(36,21,9)); d=ImageDraw.Draw(img)
+    bg(img,d)
+    paste_glyph(img,glyph_path,230,470)
     def ctr(text,font,y,fill):
         b=d.textbbox((0,0),text,font=font)
         d.text(((W-(b[2]-b[0]))/2-b[0],y),text,font=font,fill=fill)
-    ctr(letter,ImageFont.truetype(SERIF,ltsize),150+(110-ltsize)//2,(138,106,46))
-    d.line([(W/2-60,790),(W/2+60,790)],fill=(138,106,46),width=1)
-    ctr(lari,ImageFont.truetype(SERIF,58),830,(224,178,86))
-    ctr(fr,ImageFont.truetype(SANS,32),910,(192,160,117))
-    if sub: ctr(sub,ImageFont.truetype(SANS,24),955,(138,106,46))
+    d.line([(W/2-60,780),(W/2+60,780)],fill=(138,106,46),width=1)
+    ctr(lari,ImageFont.truetype(SERIF,64),820,(224,178,86))
+    ctr(fr,ImageFont.truetype(SANS,34),910,(192,160,117))
+    img.save(out,quality=94)
+
+def cover(glyph_title,glyph_brand,out):
+    """Couverture : Mandombe d'abord, puis le latin. Nzo Mikanda toujours accompagne du Mandombe."""
+    img=Image.new("RGB",(W,H),(36,21,9)); d=ImageDraw.Draw(img)
+    bg(img,d)
+    paste_glyph(img,glyph_title,140,340)
+    def ctr(text,font,y,fill):
+        b=d.textbbox((0,0),text,font=font)
+        d.text(((W-(b[2]-b[0]))/2-b[0],y),text,font=font,fill=fill)
+    ctr("Buku dia Binsono",ImageFont.truetype(SERIF,62),520,(224,178,86))
+    ctr("Dictionnaire Kikongo Lari - Mandombe",ImageFont.truetype(SANS,30),605,(192,160,117))
+    d.line([(W/2-90,680),(W/2+90,680)],fill=(138,106,46),width=1)
+    paste_glyph(img,glyph_brand,720,130,maxw=520)
+    ctr("Nzo Mikanda",ImageFont.truetype(SERIF,40),880,(224,178,86))
+    ctr("www.nzomikanda.com",ImageFont.truetype(SANS,24),940,(138,106,46))
     img.save(out,quality=94)
 
 async def main():
     items=[(L,best[L][1]) for L in sorted(best)]
-    items+= [("cover","Buku dia Binsono"),("hash","Ntalu")]
+    items+= [("cover","Buku dia Binsono"),("brand","Nzo Mikanda"),("hash","Ntalu")]
     g=await render_glyphs(items)
     for L in sorted(best):
-        lari,m,fr=best[L]; card(L,g[L],lari,fr,f"{OUT}/{L}.png")
-    card("NZO MIKANDA",g["cover"],"Buku dia Binsono","Dictionnaire Kikongo Lari - Mandombe",f"{OUT}/cover.png","www.nzomikanda.com",ltsize=56)
-    card("#",g["hash"],"Ntalu","Les nombres / Numbers",f"{OUT}/hash.png")
+        lari,m,fr=best[L]; card(g[L],lari,fr,f"{OUT}/{L}.png")
+    cover(g["cover"],g["brand"],f"{OUT}/cover.png")
+    card(g["hash"],"Ntalu","Les nombres / Numbers",f"{OUT}/hash.png")
     for f in os.listdir(OUT):
         if f.startswith("_g_"): os.remove(os.path.join(OUT,f))
     print("ok",sorted(best))
