@@ -316,7 +316,8 @@ if KO:
          "것이 아닙니다. 발음은 아래의 «Prononciation» 장을 참고하십시오.")
     para(KoBody,
          "만돔베 문자는 지난 세기에 와벨라디오 파이(Wabeladio Payi) 교수가 널리 알린 문자입니다. "
-         "이 책에는 Masono Mandombe 글꼴이 포함되어 있습니다.")
+         "발음을 듣고 어휘를 복습하며 학습을 이어가려면 www.nzomikanda.com 을 방문하십시오.")
+
 
 para(Chapter, "Prononciation · Pronunciation")
 para(SubHead, "Voyelles · Vowels")
