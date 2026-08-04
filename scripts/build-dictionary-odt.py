@@ -296,8 +296,9 @@ para(Body,
      "is given as a note below the entry.")
 para(Body,
      "The Mandombe script was shared by Professor Wabeladio Payi in the last century. It is "
-     "reproduced here with the Masono Mandombe font, embedded in this file. If the characters "
-     "do not display, install the font on your system.")
+     "reproduced here with the Masono Mandombe font. To hear the pronunciation, review the "
+     "vocabulary and keep learning online, visit www.nzomikanda.com.")
+
 
 if KO:
     para(Chapter, "머리말")
