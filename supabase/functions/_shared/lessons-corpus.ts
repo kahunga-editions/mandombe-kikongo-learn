@@ -8759,7 +8759,7 @@ export const LESSONS_CORPUS: LessonSummary[] = [
       },
       {
         "lari": "Bamindele",
-        "french": "Les Blancs (classe ba-)"
+        "french": "Les choses qui appartiennent aux Blancs"
       },
       {
         "lari": "Muntu | Bantu",
