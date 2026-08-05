@@ -3245,7 +3245,7 @@ export const lessons: Lesson[] = [
         items: [
             { mandombe: "Binkubudi", lari: "Binkubudi", distractors: ["Nzo zeto ha ndeko nto ze(na).", "Mapapayi", "Lemba dia Bakulu"], french: "Puces de poule", english: "Chicken fleas", mode: "glyph-to-latin" as const },
             { mandombe: "Bipidi", lari: "Bipidi", distractors: ["Minjioka", "Kulu yaya ku ta yaya.", "Munkono"], french: "Aliments envoyés à la fiancée", english: "Food sent to the fiancée", mode: "latin-to-glyph" as const },
-            { mandombe: "Banga", lari: "Banga", distractors: ["Bamindele ha ndeko nzo mikanda be(na).", "Muamba", "Tsaka"], french: "Petite liane (vannerie, alcool)", english: "Small vine (basketry, alcohol)", mode: "glyph-to-latin" as const },
+            { mandombe: "Banga", lari: "Banga", distractors: ["Bala ba mindele ha ndeko nzo mikanda be(na).", "Muamba", "Tsaka"], french: "Petite liane (vannerie, alcool)", english: "Small vine (basketry, alcohol)", mode: "glyph-to-latin" as const },
             { mandombe: "Bikakudi", lari: "Bikakudi", distractors: ["nsekoso", "Nsingu", "Mabanga"], french: "Objet de délivrance", english: "Object of deliverance", mode: "latin-to-glyph" as const },
             { mandombe: "Bingi", lari: "Bingi", distractors: ["Nkesi / Nkeshi", "Ntoto wa nene we.", "Tumbula"], french: "Nombreux", english: "Numerous, many", mode: "glyph-to-latin" as const },
             { mandombe: "Bikuta", lari: "Bikuta", distractors: ["mbawu", "Nkombo yine", "Luse / Tuse"], french: "Objet pour calmer un bébé", english: "Baby soothing object", mode: "latin-to-glyph" as const },
@@ -14122,7 +14122,7 @@ export const lessons: Lesson[] = [
         titleFr: "Déchiffrer le Mandombe – Ha Ndeko — À côté de",
         titlePt: "Decifrar o Mandombe – Ha Ndeko — Ao lado de",
         items: [
-            { mandombe: "Bamindele ha ndeko nzo mikanda bena.", lari: "Bamindele ha ndeko nzo mikanda be(na).", distractors: ["Mufide", "Mpatanga", "Bitunga kue bie(na)?"], french: "Les Blancs sont à côté de l'école.", english: "The white people are next to the school.", mode: "glyph-to-latin" as const },
+            { mandombe: "Bala ba mindele ha ndeko nzo mikanda bena.", lari: "Bala ba mindele ha ndeko nzo mikanda be(na).", distractors: ["Mufide", "Mpatanga", "Bitunga kue bie(na)?"], french: "Les enfants des Blancs sont à côté de l'école.", english: "The children of white people are next to the school.", mode: "glyph-to-latin" as const },
             { mandombe: "Mindele ha ndeko nzo mikanda miena.", lari: "Mindele ha ndeko nzo mikanda mie(na).", distractors: ["Ba ha ndeko n'ti/muti die(na).", "Ambo kue lu ta kuenda?", "Mapapayi"], french: "Les Blancs sont à côté de l'école.", english: "The white people are next to the school.", mode: "latin-to-glyph" as const },
             { mandombe: "Nzo ani ha ndeko mamba yena.", lari: "Nzo ani ha ndeko mamba ye(na).", distractors: ["fumba", "Komba nzo", "Vuku + verbe"], french: "Ma maison est à côté de la rivière.", english: "My house is next to the river.", mode: "glyph-to-latin" as const },
             { mandombe: "Bantu ha ndeko nti bena.", lari: "Bantu ha ndeko nti be(na).", distractors: ["Mpakanu", "Bembe / Mabembe", "Lemba"], french: "Les personnes sont à côté de l'arbre.", english: "The people are next to the tree.", mode: "latin-to-glyph" as const },
