@@ -14051,10 +14051,10 @@ export const lessons: Lesson[] = [
             { lari: "Nzo zeto ha ndeko nto ze(na).", mandombe: "Nzo zeto ha ndeko nto zena.", french: "Nos maisons sont à côté de la rivière.", english: "Our houses are next to the river." },
             { lari: "Bantu ha ndeko nti be(na).", mandombe: "Bantu ha ndeko nti bena.", french: "Les personnes sont à côté de l'arbre.", english: "The people are next to the tree." },
             { lari: "Mindele ha ndeko nzo mikanda mie(na).", mandombe: "Mindele ha ndeko nzo mikanda miena.", french: "Les Blancs sont à côté de l'école.", english: "The white people are next to the school." },
-            { lari: "Bamindele ha ndeko nzo mikanda be(na).", mandombe: "Bamindele ha ndeko nzo mikanda bena.", french: "Les Blancs sont à côté de l'école.", english: "The white people are next to the school." },
+            { lari: "Bala ba mindele ha ndeko nzo mikanda be(na).", mandombe: "Bala ba mindele ha ndeko nzo mikanda bena.", french: "Les enfants des Blancs sont à côté de l'école.", english: "The children of white people are next to the school." },
             { lari: "Maba ha ndeko n'ti me(na).", mandombe: "Maba ha ndeko nti mena.", french: "Les palmiers sont à côté de l'arbre.", english: "The palm trees are next to the tree." },
           ],
-          note: "Mindele (classe mi-) prend mie(na), Bamindele (classe ba-) prend be(na).",
+          note: "Mindele (classe mi-) = les Blancs, prend mie(na). Bala ba mindele (classe ba-) prend be(na). Bamindele designe les choses des Blancs, pas les personnes.",
         },
         {
           title: "Identifying — Nka muana we?",
