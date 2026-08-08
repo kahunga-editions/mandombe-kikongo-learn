@@ -479,17 +479,28 @@ for e in clean:
 
 
 # ================= INDEX II / III (compacts) =================
+MAX_WORDS_REVERSE = 4
+
+
 def reverse_index(lang: str):
-    """Regroupe les entrees par sens (fr ou en). Retourne [(tete, [rec, ...]), ...]."""
+    """Regroupe les entrees par sens (fr ou en). Retourne [(tete, [rec, ...]), ...].
+
+    Les index II et III sont des index de recherche lexicale : on n'y garde que les
+    mots et expressions courtes. Les phrases completes restent dans l'index I.
+    """
     buckets = {}
     for rec in clean:
+        if len(rec["lari"].split()) > MAX_WORDS_REVERSE:
+            continue
         for sense in split_senses(rec[lang]):
+            if len(sense.split()) > MAX_WORDS_REVERSE:
+                continue
             k = cmp_key(sense)
             if not k:
                 continue
             b = buckets.get(k)
             if b is None:
-                b = buckets[k] = {"head": sense, "recs": []}
+                b = buckets[k] = {"head": sense.rstrip("."), "recs": []}
             if rec not in b["recs"]:
                 b["recs"].append(rec)
     return sorted(buckets.values(), key=lambda b: (norm(b["head"]), b["head"]))
