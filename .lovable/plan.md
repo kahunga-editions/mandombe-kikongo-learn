@@ -6,7 +6,7 @@ Le v12 que vous avez corrigé sert de référence visuelle (Mandombe d'abord, en
 
 1. **Kikongo Lari → Français → English** (index actuel, conservé)
 2. **Français → Kikongo Lari → English**
-3. **English → Français → Kikongo Lari**
+3. **English → Kikongo Lari → Français**
 
 Dans les trois sections, le **Mandombe apparaît toujours** (en tête de la forme Lari) avec sa **translittération latine**. Seul l'ordre de classement et la langue de tête changent.
 
