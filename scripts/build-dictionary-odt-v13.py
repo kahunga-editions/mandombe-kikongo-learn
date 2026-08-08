@@ -274,21 +274,21 @@ LetterSmall = pstyle("LetterHeadSmall", textalign="center", fontname=TITLE_FONT,
                      fontsize="14pt", fontweight="bold", color="#8a5a20",
                      margintop="0.25cm", marginbottom="0.18cm", keepwithnext="always",
                      borderbottom="0.5pt solid #8a5a20", paddingbottom="0.05cm")
-Entry = pstyle("Entry", fontname=BODY_FONT, fontsize="9.5pt", lineheight="0.80cm",
-               marginbottom="0.20cm", keeptogether="always", orphans="2", widows="2")
-EntryNote = pstyle("EntryNote", fontname=BODY_FONT, fontsize="8.5pt", lineheight="0.36cm",
-                   marginleft="0.35cm", marginbottom="0.14cm", color="#555555",
+Entry = pstyle("Entry", fontname=BODY_FONT, fontsize="9.5pt", lineheight="0.72cm",
+               marginbottom="0.15cm", keeptogether="always", orphans="2", widows="2")
+EntryNote = pstyle("EntryNote", fontname=BODY_FONT, fontsize="8.5pt", lineheight="0.34cm",
+                   marginleft="0.35cm", marginbottom="0.10cm", color="#555555",
                    keeptogether="always")
-EntrySmall = pstyle("EntrySmall", fontname=BODY_FONT, fontsize="7.5pt", lineheight="0.55cm",
-                    marginbottom="0.10cm", keeptogether="always", orphans="2", widows="2")
+EntrySmall = pstyle("EntrySmall", fontname=BODY_FONT, fontsize="7.5pt", lineheight="0.50cm",
+                    marginbottom="0.06cm", keeptogether="always", orphans="2", widows="2")
 
 Lari = tstyle("LariT", fontweight="bold", fontsize="9.5pt", fontname=BODY_FONT, color="#333333")
-Mand = tstyle("MandT", fontname=MANDOMBE_FONT, fontsize="17pt", fontweight="bold", color="#8a5a20")
+Mand = tstyle("MandT", fontname=MANDOMBE_FONT, fontsize="15pt", fontweight="bold", color="#8a5a20")
 Fr = tstyle("FrT", fontname=BODY_FONT, fontsize="9.5pt")
 En = tstyle("EnT", fontname=BODY_FONT, fontsize="9pt", fontstyle="italic", color="#555555")
 NoteT = tstyle("NoteT", fontname=BODY_FONT, fontsize="8.5pt", fontstyle="italic")
 HeadS = tstyle("HeadS", fontweight="bold", fontsize="7.5pt", fontname=BODY_FONT, color="#333333")
-MandS = tstyle("MandS", fontname=MANDOMBE_FONT, fontsize="11pt", fontweight="bold",
+MandS = tstyle("MandS", fontname=MANDOMBE_FONT, fontsize="10pt", fontweight="bold",
                color="#8a5a20")
 LariS = tstyle("LariS", fontname=BODY_FONT, fontsize="7.5pt", color="#333333")
 FrS = tstyle("FrS", fontname=BODY_FONT, fontsize="7.5pt")
