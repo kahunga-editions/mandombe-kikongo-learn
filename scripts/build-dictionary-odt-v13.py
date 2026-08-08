@@ -65,19 +65,31 @@ def find_illustration(slot: str):
     return None
 
 
-def split_senses(s: str):
+SENTENCE_END = ".!?\u2026"
+
+
+def split_senses(s: str, fine: bool = False):
+    """Decoupe les sens. `fine` decoupe aussi sur / et , pour les glosses courtes."""
+    raw = re.split(r"\s*;\s*", (s or "").strip())
     out = []
-    for part in re.split(r"\s*;\s*", (s or "").strip()):
+    for part in raw:
         part = part.strip()
-        if part:
+        if not part:
+            continue
+        if fine and part[-1:] not in SENTENCE_END and len(part.split()) <= 6:
+            for sub in re.split(r"\s*[/,]\s*", part):
+                sub = sub.strip()
+                if sub:
+                    out.append(sub)
+        else:
             out.append(part)
     return out
 
 
 def dedupe_senses(s: str) -> str:
-    """« echapper ; Echapper. ; unir » -> « echapper ; unir »."""
+    """« echapper ; Echapper. ; unir / echapper » -> « echapper ; unir »."""
     seen, out = set(), []
-    for part in split_senses(s):
+    for part in split_senses(s, fine=True):
         k = cmp_key(part)
         if not k or k in seen:
             continue
@@ -88,9 +100,6 @@ def dedupe_senses(s: str) -> str:
 
 def merge_sense(current: str, extra: str) -> str:
     return dedupe_senses(((current or "") + " ; " + (extra or "")).strip(" ;"))
-
-
-SENTENCE_END = ".!?…"
 
 
 def is_sentence(text: str, lari: str) -> bool:
@@ -250,8 +259,8 @@ BookTitle = pstyle("BookTitle", textalign="center", fontname=TITLE_FONT, fontsiz
 BookSub = pstyle("BookSub", textalign="center", fontname=TITLE_FONT, fontsize="13pt",
                  color="#8a5a20", marginbottom="0.3cm")
 BookMandombe = pstyle("BookMandombe", textalign="center", fontname=MANDOMBE_FONT,
-                      fontsize="30pt", lineheight="200%", margintop="0.8cm",
-                      marginbottom="0.8cm")
+                      fontsize="26pt", lineheight="170%", margintop="0.5cm",
+                      marginbottom="0.5cm")
 BookMeta = pstyle("BookMeta", textalign="center", fontname=BODY_FONT, fontsize="10pt",
                   color="#555555")
 Chapter = pstyle("Chapter", masterpage="Standard", fontname=TITLE_FONT, fontsize="17pt",
@@ -503,7 +512,10 @@ def reverse_index(lang: str):
                 continue
             b = buckets.get(k)
             if b is None:
-                b = buckets[k] = {"head": sense.rstrip("."), "recs": []}
+                head = sense.rstrip(".")
+                if head[1:] == head[1:].lower():
+                    head = head[0].lower() + head[1:]
+                b = buckets[k] = {"head": head, "recs": []}
             if rec not in b["recs"]:
                 b["recs"].append(rec)
     return sorted(buckets.values(), key=lambda b: (norm(b["head"]), b["head"]))
