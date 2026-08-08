@@ -1,99 +1,50 @@
-## Objectif
+# Dictionnaire v13 — trois index de recherche
 
-Transformer **« Évaluer ma prononciation »** d'un simple score % en un **diagnostic actionnable** (sons/syllabes ratés, contre-exemple correct en Mandombe + translittération + traduction), et **déployer ce STT partout dans Nzo Mikanda**, pas seulement dans la bulle Mbuta.
+## Ce que j'ai compris
 
----
+Le v12 que vous avez corrigé sert de référence visuelle (Mandombe d'abord, en grand et en doré/brun, puis la forme latine en gras, puis les sens). La v13 garde exactement cette esthétique, mais devient un dictionnaire à **trois entrées** :
 
-## 1. Backend — `stt-lari` : passer du score plat au diagnostic syllabique
+1. **Kikongo Lari → Français → English** (index actuel, conservé)
+2. **Français → Kikongo Lari → English**
+3. **English → Français → Kikongo Lari**
 
-Édition de `supabase/functions/stt-lari/index.ts`.
+Dans les trois sections, le **Mandombe apparaît toujours** (en tête de la forme Lari) avec sa **translittération latine**. Seul l'ordre de classement et la langue de tête changent.
 
-### a. Syllabification Lari (CV / CCV / CVN)
-Petit segmenteur déterministe basé sur la phonotactique Lari du `lari-phonetic-engine` (clusters initiaux `mb, mp, nd, nt, nk, ng, nz, ns, ts, tsh, sh`, voyelles `a e i o u`, nasale finale). Découpe `bujitu` → `bu-ji-tu`, `nzila` → `nzi-la`, `nsoneka` → `nso-ne-ka`.
+## Corrections demandées, en plus
 
-### b. Alignement attendu vs entendu
-Algorithme de Needleman–Wunsch sur les syllabes (gap = 1, mismatch = distance Levenshtein normalisée entre syllabes). Produit un tableau :
+- **Pas de doublons dans une même entrée** : quand le français et l'anglais sont identiques (ex. « They've taught me. · They've taught me. »), ou quand un sens est répété dans la liste des sens fusionnés, on n'affiche la valeur qu'une fois.
+- **Ponctuation** : si le sens est une phrase (contient un verbe / plusieurs mots avec ponctuation finale attendue), majuscule initiale + point final. Si c'est un simple mot ou syntagme, pas de majuscule ajoutée, pas de point. Même règle pour le Lari, le français et l'anglais.
+- **Notes culturelles bilingues** : chaque note s'affiche en français puis en anglais (`FR — … / EN — …`). Les notes qui n'ont pas encore de version anglaise seront traduites par lot, comme cela a été fait pour les sens anglais manquants.
+- **Avant-propos / pages liminaires** : je reprends votre version corrigée du v12 (le texte anglais que vous avez ajouté) et j'ajoute le mode d'emploi des trois index en FR et EN.
+- **Couverture ODT** : le cadre de couverture occupe la **page entière** (bord à bord, sans marges), le Mandombe en premier.
+
+## Structure du livre v13
 
 ```text
-[
-  { expected: "bu",  heard: "bu",  status: "ok" },
-  { expected: "ji",  heard: "zi",  status: "wrong", hint: "ji-rule" },
-  { expected: "tu",  heard: "tou", status: "ok" }
-]
+Couverture pleine page (Mandombe d'abord)
+Avant-propos (FR) / Foreword (EN)
+Prononciation · Pronunciation
+Mode d'emploi des trois index · How to use the three indexes
+I.   Lari – Français – English      (~4 700 entrées)
+II.  Français – Lari – English
+III. English – Français – Lari
+Annexe — Conjugaisons
+Index thématique · À propos
 ```
 
-### c. Règles de coaching ciblées
-Map `phoneme → conseil FR` dérivée des règles déjà mémorisées (`mem://audio/ipa-ssml-table`, `mem://audio/tts-phonetics-g-logic`). Exemples :
+Les sections II et III sont générées à partir du même corpus : chaque sens français (ou anglais) devient une vedette, les sens multiples séparés par « ; » sont éclatés, et les vedettes identiques regroupent leurs équivalents Lari (Mandombe + latin) sur une même entrée, sans répétition.
 
-| Erreur détectée | Conseil renvoyé |
-|---|---|
-| `ji` entendu `zi` / `dzi` | « Le **j** se prononce comme dans *Julien* (/ʒ/), pas /z/ ni /dz/ » |
-| `sh` entendu `s` / `ts` | « **sh** = *shoes* en anglais (/ʃ/) » |
-| `g` entendu `j` | « **g** est toujours dur, comme dans *gare* » |
-| `nz` simplifié en `z` | « Garde la nasale **n** avant **z** : *n-zi-la* » |
-| voyelle longue manquée | « Allonge la voyelle : *zââba* » |
+## Détails techniques
 
-### d. Réponse JSON enrichie
-```json
-{
-  "text": "buzitou",
-  "expected": "bujitu",
-  "score": 0.62,
-  "verdict": "good",
-  "syllables": [...],
-  "issues": [
-    { "syllable": "ji", "heard": "zi", "tip": "Le j se prononce comme Julien (/ʒ/)" }
-  ]
-}
-```
+- Mise à jour de `scripts/build-dictionary-odt.py` :
+  - fonctions `dedupe_senses()` et `normalize_sentence()` appliquées à tous les champs ;
+  - construction des index inverses FR et EN à partir de `clean` ;
+  - rendu d'entrée réutilisable, paramétré par la langue de tête ;
+  - couverture pleine page (page layout dédié à marges nulles + frame 15,24 × 22,86 cm) ;
+  - notes rendues sur deux lignes FR/EN.
+- Nouveau cache `notes-en.json` alimenté par un script de traduction par lot (même approche que `translate-book-english.py`) pour les notes sans version anglaise.
+- Génération de l'ODT puis conversion PDF ; les deux fichiers seront déposés dans `/mnt/documents/` avec un lien de téléchargement dans le chat.
 
----
+## Volume attendu
 
-## 2. Frontend — `PronunciationCheck` : panneau de feedback
-
-Refonte de `src/components/PronunciationCheck.tsx`.
-
-- Score coloré conservé.
-- **Bande syllabique** : chaque syllabe rendue avec couleur verte (ok) / rouge (faute), survol = la syllabe entendue.
-- **Liste de conseils** : 1–3 puces FR ciblées tirées des `issues`.
-- **Carte « exemple correct »** :
-  - Mandombe (grande police `font-mandombe`, le mot attendu),
-  - translittération latine,
-  - traduction FR (résolue via dictionnaire — voir §3),
-  - bouton 🔊 réutilisant `tts-lari-cached` (zéro crédit EL si déjà en cache).
-- Bouton « Réessayer » qui relance directement l'enregistrement.
-
----
-
-## 3. Brancher le STT partout dans Nzo Mikanda
-
-Le composant `PronunciationCheck` accepte déjà `expected: string`. Pour qu'il sache afficher la traduction FR dans la carte « exemple correct », on lui ajoute un prop optionnel `meaning?: string`. Sinon, lookup auto dans le dictionnaire local (`src/data/dictionary.json`).
-
-Points de montage :
-
-| Surface | Où | Mot attendu |
-|---|---|---|
-| **Dictionnaire** (`src/pages/Dictionary.tsx`) | Sous chaque entrée, à côté du bouton 🔊 | l'entrée Lari |
-| **Traducteur** (`src/pages/Translator.tsx`) | Sous la sortie Lari quand direction = vers Lari | le texte traduit |
-| **Leçons** (composants d'exercices vocabulaire) | À côté du mot à apprendre | le mot Lari |
-| **Mbuta chat** (déjà fait) | inchangé | bloc Lari |
-
-Tous les appels passent par la fonction edge unique `stt-lari` → un seul point d'entrée à maintenir.
-
----
-
-## 4. Détails techniques
-
-- Pas de nouveau secret, pas de migration DB.
-- Lovable AI Gateway (`openai/gpt-4o-mini-transcribe`) reste le seul provider STT → **zéro crédit ElevenLabs consommé** pour l'évaluation.
-- Le `tts-lari-cached` existant fournit l'audio de l'« exemple correct » → 0 crédit EL après la première écoute.
-- Pas de changement de config.toml (`stt-lari` reste public sans JWT, comme ses pairs `mbuta-matondo` et `translate-lari`).
-- Tests post-déploiement : `supabase--curl_edge_functions` sur `/stt-lari` avec un blob de test pour vérifier la nouvelle réponse JSON.
-
----
-
-## Hors-scope (à voir plus tard si besoin)
-
-- Évaluation **prosodique** (intonation, durée) — Whisper-mini ne renvoie pas les timestamps phonèmes.
-- Historique de progression par syllabe par utilisateur (table dédiée + dashboard).
-- Mode « drill » qui propose 5 mots ciblant le son raté.
+Environ trois fois le corps du dictionnaire actuel : ~700 à 800 pages. Si c'est trop pour l'impression KDP, je peux produire les index II et III en corps plus petit (3 colonnes, forme abrégée) — dites-le-moi et j'ajuste.
