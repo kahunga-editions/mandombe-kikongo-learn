@@ -92,6 +92,40 @@ def cover(glyph_title,glyph_brand,out):
     ctr("www.nzomikanda.com",ImageFont.truetype(SANS,24),940,(138,106,46))
     img.save(out,quality=94)
 
+def cover_portrait(glyph_title, glyph_brand, out):
+    """Couverture pleine page (ratio KDP 15,24 x 22,86 cm) : Mandombe d'abord."""
+    CW, CH = 1024, 1536
+    img = Image.new("RGB", (CW, CH), (36, 21, 9)); d = ImageDraw.Draw(img)
+    for y in range(CH):
+        t = abs(y - 500) / CH
+        c = tuple(int(a + (b - a) * min(t * 1.5, 1)) for a, b in zip((58, 35, 20), (31, 18, 9)))
+        d.line([(0, y), (CW, y)], fill=c)
+    d.rectangle([46, 46, CW - 46, CH - 46], outline=(138, 106, 46), width=3)
+    d.rectangle([66, 66, CW - 66, CH - 66], outline=(92, 66, 31), width=1)
+
+    def paste(glyph_path, top, maxh, maxw=CW - 200):
+        g = Image.open(glyph_path).convert("RGBA")
+        bb = g.getbbox()
+        if bb: g = g.crop(bb)
+        r = min(maxw / g.width, maxh / g.height)
+        g = g.resize((max(1, int(g.width * r)), max(1, int(g.height * r))), Image.LANCZOS)
+        img.paste(g, ((CW - g.width) // 2, top + (maxh - g.height) // 2), g)
+
+    def ctr(text, font, y, fill):
+        b = d.textbbox((0, 0), text, font=font)
+        d.text(((CW - (b[2] - b[0])) / 2 - b[0], y), text, font=font, fill=fill)
+
+    paste(glyph_title, 210, 380)
+    ctr("Buku dia Binsono", ImageFont.truetype(SERIF, 68), 700, (224, 178, 86))
+    ctr("Dictionnaire Kikongo Lari - Mandombe", ImageFont.truetype(SANS, 30), 800, (192, 160, 117))
+    ctr("Francais · English · Kikongo Lari", ImageFont.truetype(SANS, 28), 850, (192, 160, 117))
+    d.line([(CW / 2 - 90, 940), (CW / 2 + 90, 940)], fill=(138, 106, 46), width=1)
+    paste(glyph_brand, 1010, 140, maxw=520)
+    ctr("Nzo Mikanda", ImageFont.truetype(SERIF, 44), 1240, (224, 178, 86))
+    ctr("www.nzomikanda.com", ImageFont.truetype(SANS, 26), 1310, (138, 106, 46))
+    img.save(out, quality=94)
+
+
 async def main():
     items=[(L,best[L][1]) for L in sorted(best)]
     items+= [("cover","Buku dia Binsono"),("brand","Nzo Mikanda"),("hash","Ntalu")]
@@ -99,6 +133,7 @@ async def main():
     for L in sorted(best):
         lari,m,fr=best[L]; card(g[L],lari,fr,f"{OUT}/{L}.png")
     cover(g["cover"],g["brand"],f"{OUT}/cover.png")
+    cover_portrait(g["cover"],g["brand"],f"{OUT}/cover_page.png")
     card(g["hash"],"Ntalu","Les nombres / Numbers",f"{OUT}/hash.png")
     for f in os.listdir(OUT):
         if f.startswith("_g_"): os.remove(os.path.join(OUT,f))
