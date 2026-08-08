@@ -521,7 +521,7 @@ def render_reverse(title, lang, other):
             sec.addElement(lp)
         runs = [span(HeadS, b["head"]), "  "]
         seen_other, others = set(), []
-        for i, rec in enumerate(b["recs"][:6]):
+        for i, rec in enumerate(b["recs"][:4]):
             if i:
                 runs.append(" ; ")
             if rec["mandombe"]:
