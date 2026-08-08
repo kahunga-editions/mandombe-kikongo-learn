@@ -440,8 +440,11 @@ para(SubHead, "Index III — English → Kikongo Lari → Français")
 doc.text.addElement(build_p(EntrySmall, [
     span(HeadS, "hello"), "  ", span(MandS, "Mbote"), " ", span(LariS, "Mbote"),
     "  ·  ", span(FrS, "bonjour")]))
-para(BodySmall, "Les index II et III sont composés en corps réduit sur trois colonnes. "
-                "Indexes II and III are set in a smaller size on three columns.")
+para(BodySmall, "Les index II et III sont composés en corps réduit sur trois colonnes et ne "
+                "reprennent que les mots et expressions courtes ; les phrases complètes se "
+                "trouvent dans l'index I.")
+para(BodySmall, "Indexes II and III are set in a smaller size on three columns and only list "
+                "words and short expressions; full sentences are found in Index I.")
 
 
 # ================= INDEX I : LARI -> FR -> EN =================
@@ -533,7 +536,7 @@ def render_reverse(title, lang, other):
                     seen_other.add(k)
                     others.append(s)
         if others:
-            runs += ["  ·  ", span(EnS if other == "en" else FrS, " ; ".join(others[:3]))]
+            runs += ["  ·  ", span(EnS if other == "en" else FrS, " ; ".join(others[:2]))]
         sec.addElement(build_p(EntrySmall, runs))
 
 
