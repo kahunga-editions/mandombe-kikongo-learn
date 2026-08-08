@@ -44,6 +44,15 @@ const SYSTEM_PROMPT = `Tu es un traducteur spécialisé en Kikongo Lari (Laadi),
 - "kolonga" pour apprendre → utilise "longa"
 - Pronom sujet "beto" + verbe à l'infinitif (ex. "beto kwenda") → STRUCTURE KITUBA. En Lari, le sujet pluriel "nous" est marqué par le préfixe verbal "tu-" (ex. "tu kwenda" = nous allons/irons). Reformuler systématiquement : "Mbaji ku tshola tu kwenda" et JAMAIS "Mbaji beto kwenda ku tshola".
 
+### RÈGLE LEXICALE OBLIGATOIRE — MUNDELE / MINDELE / BAMINDELE
+Cette règle s'applique dans TOUTES les langues cibles (français, anglais, portugais, espagnol, italien, allemand, grec, coréen, lingala) et dans les deux sens de traduction. Ne jamais la contredire, ne jamais paraphraser autrement :
+- **Mundele** (classe mu-) = le Blanc, une personne blanche. EN: "the white person / a white man" · PT: "o branco" · ES: "el blanco" · IT: "il bianco" · DE: "der Weiße" · EL: "ο λευκός" · KO: "백인" · LN: "mundele".
+- **Mindele** (classe mi-, pluriel de mundele) = les Blancs (personnes). EN: "the white people" · PT: "os brancos" · ES: "los blancos" · IT: "i bianchi" · DE: "die Weißen" · EL: "οι λευκοί" · KO: "백인들" · LN: "mindele".
+- **Bamindele** (classe ba-) = les CHOSES qui appartiennent aux Blancs / ce qui est des Blancs. NE DÉSIGNE JAMAIS DES PERSONNES. EN: "things belonging to white people" · PT: "as coisas dos brancos" · ES: "las cosas de los blancos" · IT: "le cose dei bianchi" · DE: "die Sachen der Weißen" · EL: "τα πράγματα των λευκών" · KO: "백인들의 물건" · LN: "biloko ya mindele". Traduire "bamindele" par "les Blancs" est une ERREUR.
+- **Bala ba mindele** = les enfants des Blancs. EN: "the children of the white people" · PT: "os filhos dos brancos" · ES: "los hijos de los blancos" · IT: "i figli dei bianchi" · DE: "die Kinder der Weißen" · EL: "τα παιδιά των λευκών" · KO: "백인들의 아이들" · LN: "bana ya mindele". La forme correcte pour "les enfants des Blancs" est "bala ba mindele" (jamais "bala ba bamindele").
+- Dans le sens langue-source → Lari : "les Blancs / white people" → "mindele" ; "un Blanc / a white man" → "mundele" ; "les affaires/choses des Blancs" → "bamindele" ; "les enfants des Blancs" → "bala ba mindele".
+
+
 ## Corpus vérifié — Vocabulaire (2790 entrées)
 
 Mbote = bonjour
@@ -3730,6 +3739,10 @@ Mbata ka ku wuindiri = Il t
 Mbaji mbo ni wuinda muntu mbata = Demain, je giflerai quelqu
 Ha ndeko = À côté (de)
 Mundele | Mindele = Le Blanc | Les Blancs (sing./pl. classe mu-/mi-)
+Mundele = Le Blanc, une personne blanche (sg., classe mu-)
+Mindele = Les Blancs, les personnes blanches (pl., classe mi-)
+Bamindele = Les choses qui appartiennent aux Blancs (classe ba-, ne désigne jamais des personnes)
+Bala ba mindele = Les enfants des Blancs
 Muntu | Bantu = personne | personnes
 Nka muana we? = Quel enfant ?
 Nzo ani ha ndeko mamba ye(na). = Ma maison est à côté de la rivière.
