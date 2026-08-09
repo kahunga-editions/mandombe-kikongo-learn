@@ -143,6 +143,15 @@ const ELEVENLABS_RULES: PhoneticRule[] = [
 // OVERRIDES PHONÉTIQUES MOT PAR MOT (côté client)
 // ============================================================
 const PHONETIC_OVERRIDES: Record<string, string> = {
+  // Corrections v14
+  "jundika": "dzoundika",
+  "djundika": "dzoundika",
+  "kamu": "kâmou",
+  "makamu": "makâmou",
+  "mzansi": "mzansi",
+  "nzansi": "mzansi",
+  "mfiela": "mfiéla",
+  "mfiyela": "mfiéla",
   // moshi — "sh" prononcé /ʃ/ comme "shoes" en anglais
   "mosi": "moshi",
   "Mosi": "Moshi",
