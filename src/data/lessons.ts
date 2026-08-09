@@ -29360,7 +29360,7 @@ export const lessons: Lesson[] = [
       { lari: "yaya", mandombe: "Yaya", french: "celui-ci, celle-ci (proche)", english: "this one (near)" },
       { lari: "yayi", mandombe: "Yayi", french: "celui-là, celle-là (loin)", english: "that one (far)" },
       { lari: "baba", mandombe: "Baba", french: "ceux-ci (proche, pluriel)", english: "these ones (near)" },
-      { lari: "babi", mandombe: "Babi", french: "ceux-là (loin, pluriel)", english: "those ones (far)" },
+      { lari: "ba bo / ba wu bo", mandombe: "Ba bo / Ba wu bo", french: "ceux-là", english: "those ones (far)" },
     ],
     syntax: [
       {
@@ -29415,7 +29415,7 @@ export const lessons: Lesson[] = [
               { lari: "yaya", mandombe: "Yaya", french: "celui-ci (proche)", english: "this one (near)" },
               { lari: "yayi", mandombe: "Yayi", french: "celui-là (loin)", english: "that one (far)" },
               { lari: "baba", mandombe: "Baba", french: "ceux-ci (proche)", english: "these (near)" },
-              { lari: "babi", mandombe: "Babi", french: "ceux-là (loin)", english: "those (far)" },
+              { lari: "ba bo / ba wu bo", mandombe: "Ba bo / Ba wu bo", french: "ceux-là", english: "those (far)" },
             ],
           },
         ],

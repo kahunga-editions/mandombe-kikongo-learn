@@ -19338,8 +19338,8 @@ export const LESSONS_CORPUS: LessonSummary[] = [
         "french": "ceux-ci (proche, pluriel)"
       },
       {
-        "lari": "babi",
-        "french": "ceux-là (loin, pluriel)"
+        "lari": "ba bo / ba wu bo",
+        "french": "ceux-là"
       }
     ],
     "exercises": [
