@@ -217,6 +217,8 @@ for e in entries:
 
 # normalisation typographique + suppression des redondances FR/EN
 for r in clean:
+    # les variantes notees « a | b » ou « a / b » deviennent « a · b »
+    r["lari"] = re.sub(r"\s*[|/]\s*", " \u00b7 ", r["lari"]).strip()
     r["lari"] = r["lari"][0].upper() + r["lari"][1:]
     if is_sentence(r["lari"], r["lari"]) and r["lari"][-1] not in SENTENCE_END:
         r["lari"] += "."
