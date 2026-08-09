@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Dictionnaire Nzo Mikanda v13 — ODT pret pour impression (Amazon KDP 15.24 x 22.86 cm).
+"""Dictionnaire Nzo Mikanda v14 — ODT pret pour impression (Amazon KDP 15.24 x 22.86 cm).
 
 Trois index de recherche :
   I.   Kikongo Lari -> Francais -> English   (mise en page principale, illustrations)
@@ -7,7 +7,7 @@ Trois index de recherche :
   III. English -> Kikongo Lari -> Francais   (compact, 3 colonnes)
 
 Usage:
-  python scripts/build-dictionary-odt-v13.py /tmp/dico.json /mnt/documents/xxx.odt \
+  python scripts/build-dictionary-odt-v14.py /tmp/dico.json /mnt/documents/xxx.odt \
       /tmp/letters /tmp/conjugaisons.json /tmp/en-cache.json /tmp/notes-en.json
 """
 import json
@@ -27,7 +27,7 @@ from odf.draw import Frame, Image
 from odf.text import P, Section, PageNumber, Span
 
 SRC = sys.argv[1] if len(sys.argv) > 1 else "/tmp/dico.json"
-DST = sys.argv[2] if len(sys.argv) > 2 else "/mnt/documents/dictionnaire-v13.odt"
+DST = sys.argv[2] if len(sys.argv) > 2 else "/mnt/documents/dictionnaire-v14.odt"
 IMG_DIR = sys.argv[3] if len(sys.argv) > 3 else None
 CONJ_SRC = sys.argv[4] if len(sys.argv) > 4 else None
 EN_SRC = sys.argv[5] if len(sys.argv) > 5 else "/tmp/en-cache.json"
@@ -51,8 +51,40 @@ def norm(s: str) -> str:
 
 
 def cmp_key(s: str) -> str:
-    """Cle de comparaison pour eliminer les doublons de sens (casse, accents, ponctuation)."""
-    return re.sub(r"[^a-z0-9 ]+", "", norm(s)).strip()
+    """Cle de comparaison pour eliminer les doublons de sens.
+
+    Les precisions entre parentheses (pl.), (sg.), (fig.)... sont ignorees :
+    « Mushrooms » et « Mushrooms (pl.) » sont un seul et meme sens.
+    """
+    base = re.sub(r"\([^)]*\)", " ", norm(s))
+    return re.sub(r"[^a-z0-9 ]+", "", base).strip()
+
+
+MANDOMBE_SPLIT = re.compile(r"\s*[|/]\s*")
+
+
+def clean_mandombe(text: str) -> str:
+    """REGLE ABSOLUE : aucune lettre latine parasite ne se promene avec le Mandombe.
+
+    On retire toute ponctuation latine et tout accent ; les variantes separees par
+    | ou / deviennent deux blocs Mandombe separes par une espace large.
+    """
+    blocks = []
+    for part in MANDOMBE_SPLIT.split(text or ""):
+        part = norm_keep_case(part)
+        part = part.replace("(", "").replace(")", "")
+        part = re.sub(r"[^A-Za-z ]+", " ", part)
+        part = re.sub(r"\s+", " ", part).strip()
+        if part:
+            blocks.append(part)
+    return "\u2003".join(blocks)
+
+
+def norm_keep_case(s: str) -> str:
+    return "".join(
+        c for c in unicodedata.normalize("NFD", s or "")
+        if unicodedata.category(c) != "Mn"
+    )
 
 
 def find_illustration(slot: str):
@@ -114,7 +146,7 @@ def is_sentence(text: str, lari: str) -> bool:
 def normalize_sentence(text: str, lari: str, add_period=True) -> str:
     """Majuscule + point final pour les phrases ; rien pour les mots isoles."""
     parts = []
-    for t in split_senses(text):
+    for i, t in enumerate(split_senses(text)):
         t = t.strip()
         if not t:
             continue
@@ -124,6 +156,10 @@ def normalize_sentence(text: str, lari: str, add_period=True) -> str:
                 t += "."
         else:
             t = t.rstrip(".")
+            # Majuscule uniquement en debut de phrase : apres un point-virgule,
+            # un simple mot ou syntagme reste en minuscule.
+            if i and t[:1].isupper() and t[1:2].islower() and t.lower() != t[:1] + t[1:]:
+                t = t[0].lower() + t[1:]
         parts.append(t)
     return " ; ".join(parts)
 
@@ -165,11 +201,11 @@ for e in entries:
         rec["en"] = merge_sense(rec["en"], en_of(e))
         rec["note"] = merge_sense(rec["note"], (e.get("note") or "").strip())
         if not rec["mandombe"]:
-            rec["mandombe"] = (e.get("mandombe") or "").strip()
+            rec["mandombe"] = clean_mandombe(e.get("mandombe") or "")
         continue
     rec = {
         "lari": lari,
-        "mandombe": (e.get("mandombe") or "").strip(),
+        "mandombe": clean_mandombe(e.get("mandombe") or ""),
         "fr": dedupe_senses(fr),
         "en": dedupe_senses(en_of(e)),
         "note": (e.get("note") or "").strip(),
@@ -467,10 +503,10 @@ for e in clean:
         first = "#"
     if first != current:
         current = first
-        lp = P(stylename=Letter)
-        lp.addText(first)
-        section.addElement(lp)
         path = find_illustration(first if first.isalpha() else "hash")
+        if not path:
+            # pas d'illustration : on garde un simple filet, jamais de lettre latine
+            section.addElement(P(stylename=Letter))
         if path:
             ip = P(stylename=IllusImg)
             frame = Frame(stylename=ImgStyle, width="5.2cm", height="3.9cm",
