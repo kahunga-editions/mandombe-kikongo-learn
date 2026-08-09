@@ -1,0 +1,2258 @@
+dictionary.json	, ?	Mbote mpangi, nkumbu aku nani?
+dictionary.json	?	Kolele?
+dictionary.json	,	Meno, mpe nkolele
+dictionary.json	'	N'mvu mia mingi
+dictionary.json	-	Mbaji ku Pointe-Noire nge kwiza
+dictionary.json	?	Duka wa dukidi mazono mu nkokela?
+dictionary.json	?	Mbo wa ntambila mu pari?
+dictionary.json	|	Tshima | Bima
+dictionary.json	|	Bidiki | Bibidiki
+dictionary.json	.	Beno ngatu lu zonzesz mababa.
+dictionary.json	|	Bakala | Babakala
+dictionary.json	/	Bagukila / Bahukila
+dictionary.json	|	Tshikumbi | Bikumbi
+dictionary.json	|	Kikumbi | Bikumbi
+dictionary.json	( )	Mu kiese we(na)
+dictionary.json	( )	Mu nsayi we(na)
+dictionary.json	/	Babula / Labula
+dictionary.json	|	Bafu | Mabafu
+dictionary.json	/	Bagu / Bahu
+dictionary.json	/	Baguka / Bahuka
+dictionary.json	/	Bagukisa / Bahukisa
+dictionary.json	/	Bakitina / Bakishina
+dictionary.json	|	Baki | Bibaki
+dictionary.json	|	Nleke | Baleke
+dictionary.json	|	Muleke | Baleke
+dictionary.json	?	Bikua bie naku?
+dictionary.json	|	Basu | Bibasu
+dictionary.json	-	Bandi-bandi
+dictionary.json	/	Tshijinga / Bijinga
+dictionary.json	( ) ?	Nkia mvu(la) wa biyala?
+dictionary.json	|	Lunguenia | Tunguenia
+dictionary.json	|	Lukami | Nkami
+dictionary.json	é |	Mundengué | Minengue
+dictionary.json	-	Poto-poto
+dictionary.json	|	Tshitari | Bitari
+dictionary.json	|	Nlandu|Milandu
+dictionary.json	, |	Nleke, Muleke|Baleke
+dictionary.json	|	Lulendo|Tulendo
+dictionary.json	|	Lubu|Mbu
+dictionary.json	,	Ludiatulu, Ndiatulu
+dictionary.json	|	Ludimi|Tudimi
+dictionary.json	|	Zu|Mazu
+dictionary.json	|	Jiku|Majiku
+dictionary.json	|	Zimi|Mazimi
+dictionary.json	|	Jimi|Majimi
+dictionary.json	|	Ziku|Maziku
+dictionary.json	|	Zongo|Bizongo
+dictionary.json	/ |	Tshizongo / Kizongo|Bizongo
+dictionary.json	| /	Zoba|Mazoba / Bizoba
+dictionary.json	/ |	Nzita / Muzita|Mizita
+dictionary.json	|	Jibuku|Bijibuku
+dictionary.json	|	Jita|Majita
+dictionary.json	|	Zita|Mazita
+dictionary.json	|	Tshizingu|Bizingu
+dictionary.json	|	Lukaya | Makaya
+dictionary.json	|	Lundala | Mandala
+dictionary.json	|	Kifua|Bifua
+dictionary.json	|	Kumbi | Makumbi
+dictionary.json	|	Yele|Mayele
+dictionary.json	|	Konko|Makonko
+dictionary.json	?	Kumbi kuwe diyena?
+dictionary.json	( ) .	Tshikuku mala tshe(na).
+dictionary.json	( ) ?	Mulunga kuwe we(na)?
+dictionary.json	?	Milunga kuwe miyena?
+dictionary.json	( ) ?	Vunga kuwe diye(na)?
+dictionary.json	?	Mavunga kuwe mena?
+dictionary.json	?	Mapapa kuwe mena?
+dictionary.json	?	Mayaka kuwe mena?
+dictionary.json	( ) ?	Yaka kuwe diye(na)?
+dictionary.json	?	Mabuku kuwe mena?
+dictionary.json	?	Madezo kuwe mena?
+dictionary.json	( ) ?	Dezo kuwe diye(na)?
+dictionary.json	?	Meza kuwe mena?
+dictionary.json	( ) ?	Bumuntu kuwe buwe(na)?
+dictionary.json	( ) ?	Buku kuwe diye(na)?
+dictionary.json	( ) ?	Bitunga kuwe biye(na)?
+dictionary.json	?	Mfulu kuwe zena?
+dictionary.json	?	Mfulu kuwe yena?
+dictionary.json	( ) ?	Ngombe kuwe ye(na)?
+dictionary.json	( ) ?	Konko kuwe diye(na)?
+dictionary.json	?	Nkangabumi kuwe yena?
+dictionary.json	?	Nkangabumi kuwe zena?
+dictionary.json	?	Nungu kuwe zena?
+dictionary.json	?	Ngulu kuwe yena?
+dictionary.json	( ) ?	Ndonga kuwe ye(na)?
+dictionary.json	( ) ?	Malonga kuwe ke(na)?
+dictionary.json	?	Luto kuwe luwe?
+dictionary.json	( ) ?	Nkombo kuwe ye(na)?
+dictionary.json	( ) ?	Mbuwa kuwe ye(na)?
+dictionary.json	( ) ?	Bindongo kuwe biye(na)?
+dictionary.json	?	Mulele kuwe wena?
+dictionary.json	/	Ndozi / Ndoji
+dictionary.json	/	Yiba / Djuana
+dictionary.json	/	Jima / Kanga
+dictionary.json	|	Lusembo | Tusembo
+dictionary.json	|	Tshikuwa|Bikuwa
+dictionary.json	, |	Nuandu, Muwandu|Miwandu
+dictionary.json	|	Tshintu|Bintu
+dictionary.json	|	Dinkondi|Mankondi
+dictionary.json	/	Tshibulu / Kibulu
+dictionary.json	/	Kinienia / Tshinienia
+dictionary.json	, |	Tshibubu, Kibubu|Bibubu
+dictionary.json	/	Kivuadangu / Tshivuadangu
+dictionary.json	/	Nana / Mpomo
+dictionary.json	|	Nlele|Milele
+dictionary.json	|	Kikoba|Bikoba
+dictionary.json	|	Hembo|Mahembo
+dictionary.json	|	Beni | Mabeni
+dictionary.json	|	Mukumba | Mikumba
+dictionary.json	, |	Nlembo, Mulembo|Milembo
+dictionary.json	|	Tshifundu | Bifundu
+dictionary.json	|	Hisi|Bihisi
+dictionary.json	|	Tuvi | Matuvi
+dictionary.json	|	Njevo | Manjevo
+dictionary.json	.	Zulu dia mbudi diena.
+dictionary.json	.	Zulu ka diena dia mbudi ko.
+dictionary.json	.	Manga ya mbuaki.
+dictionary.json	.	Manga ka yena ya mbuaki ko.
+dictionary.json	.	Manga ya mbuaki yena.
+dictionary.json	.	Manga za mbuaki zena.
+dictionary.json	.	Manga ka zena za mbuaki ko.
+dictionary.json	.	Mulele wa ntundu wena.
+dictionary.json	.	Mulele ka wena wa ntundu ko.
+dictionary.json	.	Milele mia ntundu miena.
+dictionary.json	.	Milele ka miena mia ntundu ko.
+dictionary.json	.	Ka nguidi a ko.
+dictionary.json	.	Ku wiri a ko.
+dictionary.json	.	Ka wiri a ko.
+dictionary.json	.	Ka tu wiri a ko.
+dictionary.json	.	Ka lu wiri a ko.
+dictionary.json	.	Ka ba wiri a ko.
+dictionary.json	/	Nkesi / Nkeshi
+dictionary.json	|	Nlongi | Milongi
+dictionary.json	, |	Thsifu, Kifu | Bifu
+dictionary.json	|	Tshikoyi | Bikoyi
+dictionary.json	, |	Tshikua, Kikua | Bikua
+dictionary.json	|	Mukala | Mikala
+dictionary.json	,	Ba na nsaba, mbo bakila yo ndandu
+dictionary.json	/	Ngati / Ngatu
+dictionary.json	'	N'kento
+dictionary.json	'	N'kaka
+dictionary.json	! .	Papumuka! Bika buyumba.
+dictionary.json	!	Bika buhulu!
+dictionary.json	!	Bika buzoba!
+dictionary.json	.	Muana wu ka wena tshiyumba a ko.
+dictionary.json	.	Muana wu ka tshiyumba a ko.
+dictionary.json	, .	Lumbu tshi, lumbu tshi ba sa bakento nsangu.
+dictionary.json	|	Musa | Misa
+dictionary.json	.	Nkokela masangu tu diya.
+dictionary.json	.	Mbaji musa ni lamba na mbala.
+dictionary.json	|	Buki | Mbuki
+dictionary.json	|	Kalaka | Makalaka
+dictionary.json	|	Laka | Malaka
+dictionary.json	,	Tala lumbu, ndendi tanga kinitu kiyaku, mbo ni ba mu nsayi
+dictionary.json	,	Tala lumbu ndendi tanga kinitu kiyaku, nsayi mbo yi ku mbaka
+dictionary.json	( )	Ntangu za ka(ka)
+dictionary.json	|	Kidukiya|Bidukiya
+dictionary.json	|	Dimpa|Mampa
+dictionary.json	|	Kintu|Bintu
+dictionary.json	|	Diki|Meki
+dictionary.json	,	Sala kua kue mpashi, yelesa ka kuena mpashi ko
+dictionary.json	,	Wa dia fua, yika dio
+dictionary.json	|	Lala | Malala
+dictionary.json	|	Muniche | Miniche
+dictionary.json	|	Dimpa | Mampa
+dictionary.json	|	Lutundu | Ntundu
+dictionary.json	|	Lusafu | Nsafu
+dictionary.json	|	Lumfimfini | Mfimfini
+dictionary.json	|	Mulembo | Milembo
+dictionary.json	|	Koto | Makoto
+dictionary.json	|	Dinu | Meno
+dictionary.json	|	Tshikoba | Bikoba
+dictionary.json	.	Bima bi yiri.
+dictionary.json	.	Loso lu yiri.
+dictionary.json	.	Masangu ma yiri.
+dictionary.json	.	Mbala ji yiri.
+dictionary.json	.	Nzo yi yiri.
+dictionary.json	.	Mukobo wu yiri.
+dictionary.json	.	Mputa yaya yi ta yaya.
+dictionary.json	.	Meso yaya ma ta yaya.
+dictionary.json	.	Kulu yaya ku ta yaya.
+dictionary.json	.	Dinu yaya di ta yaya.
+dictionary.json	, |	Tshiyimba, Kiyimba, Yimba | Biyimba
+dictionary.json	.	Bintu bi wiri yoya.
+dictionary.json	.	Bintu bi bi wiri yoya.
+dictionary.json	/ .	Manga ji/zi wiri yoya.
+dictionary.json	.	Manga ji ji wiri yoya.
+dictionary.json	.	Malala ma wiri yoya.
+dictionary.json	.	Malala ma ma wiri yoya.
+dictionary.json	.	Malala ma nsa ma wiri yoya.
+dictionary.json	.	Malala ma nsa ma ma wiri yoya.
+dictionary.json	.	Mulumba njunini.
+dictionary.json	.	Mulumba yunini.
+dictionary.json	.	Mulumba ka yunini.
+dictionary.json	.	Mulumba tu yunini.
+dictionary.json	.	Mulumba lu yunini.
+dictionary.json	.	Mulumba ba yunini.
+dictionary.json	.	Muana tshiyimba we.
+dictionary.json	.	Muana tshiyimba wena.
+dictionary.json	.	Futikila die nani.
+dictionary.json	.	Futikila die naku.
+dictionary.json	.	Futikila die nandi.
+dictionary.json	.	Futikila die neto.
+dictionary.json	.	Futikila die neno.
+dictionary.json	.	Futikila die nawu.
+dictionary.json	.	Nzololo.
+dictionary.json	.	Tu zololo.
+dictionary.json	.	Ba zololo.
+dictionary.json	|	Tshinkuti | Binkuti
+dictionary.json	|	Mulele | Milele
+dictionary.json	|	Tambala | Bitambala
+dictionary.json	.	Nsuki ji zezele.
+dictionary.json	.	Binkuti bi zezele.
+dictionary.json	.	Tshinkuti tshi zezele.
+dictionary.json	.	Mapapa ma zezele.
+dictionary.json	, .	Kanga mulele, wu zezele.
+dictionary.json	, .	Kanga mapapa, ma zezele.
+dictionary.json	, .	Kanga nsuki, ji zezele.
+dictionary.json	, .	Kanga tshinkuti, tshi zezele.
+dictionary.json	, .	Kanga tambala, tshi zezele.
+dictionary.json	.	Nzezesa nsuki.
+dictionary.json	|	Dinteketa | Manteketa
+dictionary.json	.	Zaza ni ta zaza mu bungu dia madia.
+dictionary.json	.	Zaza ta zaza mu bungu dia madia.
+dictionary.json	.	Zaza ka ta zaza mu bungu dia madia.
+dictionary.json	.	Zaza tu ta zaza mu bungu dia madia.
+dictionary.json	.	Zaza lu ta zaza mu bungu dia madia.
+dictionary.json	.	Zaza ba ta zaza mu bungu dia madia.
+dictionary.json	.	Mfuekene zaza ka ta zaza mu bungu dia madia.
+dictionary.json	, .	Yalavunga ka mala ko na Tshinkala, mu nzila ya Mfua.
+dictionary.json	.	Hata die mpe ha ma hambu ma nzila ya Boko na Kinkala.
+dictionary.json	/	Luse / Tuse
+dictionary.json	/	Luto / Tuto
+dictionary.json	|	Tuti | Matuti
+dictionary.json	/	Bembe / Mabembe
+dictionary.json	/	Lumfikini / Tumfikini
+dictionary.json	/	Sangi / Masangi
+dictionary.json	/	Tshitunga / Bitunga
+dictionary.json	.	Yela tshinkuti.
+dictionary.json	.	Yela mu dia.
+dictionary.json	.	Yela mu luata.
+dictionary.json	.	Yela mu yebela.
+dictionary.json	.	Sukula luse.
+dictionary.json	.	Sukula luse luaku.
+dictionary.json	.	Mu sukula luse.
+dictionary.json	.	Mu sukula mapapa.
+dictionary.json	.	Sukula mulele andi.
+dictionary.json	' /	N'kolo / Mukolo
+dictionary.json	' .	N'kolo we nani.
+dictionary.json	' .	N'kolo we naku.
+dictionary.json	' .	N'kolo we nandi.
+dictionary.json	' .	N'kolo we neto.
+dictionary.json	' .	N'kolo we neno.
+dictionary.json	' .	N'kolo we nawu.
+dictionary.json	, |	Mfumba, Mufumba | Mifumba
+dictionary.json	. , |	Dim. mpoka, Mpoka | Mampoka
+dictionary.json	?	Nani?
+dictionary.json	|	Bungu | Mabungu
+dictionary.json	|	Tshibungu | Bibungu
+dictionary.json	?	Bue ntele?
+dictionary.json	?	Bue tele?
+dictionary.json	?	Bue ka tele?
+dictionary.json	?	Bue tu tele?
+dictionary.json	?	Bue lu tele?
+dictionary.json	?	Bue ba tele?
+dictionary.json	?	Nki ni ta dirila?
+dictionary.json	?	Nki ta dirila?
+dictionary.json	?	Nki ka ta dirila?
+dictionary.json	?	Nki tu ta dirila?
+dictionary.json	?	Nki lu ta dirila?
+dictionary.json	?	Nki ba ta dirila?
+dictionary.json	?	Nki ta dia?
+dictionary.json	?	Nki ni ta dia?
+dictionary.json	?	Nki ka ta dia?
+dictionary.json	?	Nki tu ta dia?
+dictionary.json	?	Nki lu ta dia?
+dictionary.json	?	Nki ba ta dia?
+dictionary.json	?	Nki ni ta dila?
+dictionary.json	?	Nki ta dila?
+dictionary.json	?	Nki ka ta dila?
+dictionary.json	?	Nki tu ta dila?
+dictionary.json	?	Nki lu ta dila?
+dictionary.json	?	Nki ba ta dila?
+dictionary.json	?	Nkia bungu lembolo kuijila?
+dictionary.json	?	Kue ta kuenda?
+dictionary.json	( ) ?	Kue ke(na)?
+dictionary.json	( ) ?	Kue kotela (ka)?
+dictionary.json	?	Kue ka?
+dictionary.json	?	Kue ba?
+dictionary.json	?	Kue lu?
+dictionary.json	( ) ?	Nzo mikanda aku kue ye(na)?
+dictionary.json	( ) ?	Nzo mikanda andi kue ye(na)?
+dictionary.json	( ) ?	Nzo mikanda eno kue ye(na)?
+dictionary.json	( ) ?	Nzo mikanda awu kue ye(na)?
+dictionary.json	|	Tshiba | Biba
+dictionary.json	|	Nkama | Mikama
+dictionary.json	|	Ba | Maba
+dictionary.json	|	Lupangu | Tupangu
+dictionary.json	|	Baka | Tshibaka | Kibaka | Bibaka
+dictionary.json	|	Mubaku | Mibaku
+dictionary.json	|	Lubamba | Mbamba
+dictionary.json	|	Banda | Mabanda
+dictionary.json	| '	Musongi | N'songi | Misongi
+dictionary.json	' |	N'ti | Muti | Miti
+dictionary.json	|	Mulendi | Milendi
+dictionary.json	|	Kibaka | Bibaka
+dictionary.json	.	Maba ma tatu me ku lupangu luwani.
+dictionary.json	' .	N'songi maba ka ta baka.
+dictionary.json	.	Musongi maba pari na nkokela ka senga mo.
+dictionary.json	.	Musongi ba diyandi pari na nkokela ka senga diyo.
+dictionary.json	.	Mbuta Wabeladiyo Payi pakudungu na pelekete ka mona mu kibaka kiya bibiriki.
+dictionary.json	|	Mundele | Mindele
+dictionary.json	|	Muntu | Bantu
+dictionary.json	, |	Nti, Muti | Miti
+dictionary.json	?	Nka muana we?
+dictionary.json	|	Mulala | Milala
+dictionary.json	|	Mumanga | Mimanga
+dictionary.json	|	Musafu | Misafu
+dictionary.json	|	Musavoka | Misavoka
+dictionary.json	|	Munkondi | Minkondi
+dictionary.json	|	Mukokoti | Mikokoti
+dictionary.json	|	Mupapaayi | Mipapaayi
+dictionary.json	, |	Tshinzu, Kinzu | Binzu
+dictionary.json	|	Vunga | Mavunga
+dictionary.json	|	Buku | Mabuku
+dictionary.json	.	Zonzeka mabuku maku.
+dictionary.json	|	Tshintu | Bintu
+dictionary.json	|	Mulengi | Milengi
+dictionary.json	|	Koshi | Makoshi
+dictionary.json	|	Luto | Tuto
+dictionary.json	?	Tuto kuwe tuena?
+dictionary.json	, |	Tshizongo, Kizongo, Zongo | Bizongo
+dictionary.json	|	Lusonso | Nsonso
+dictionary.json	|	Lami | Malami
+dictionary.json	|	Yuma | Mayuma
+dictionary.json	|	Kiyungila | Biyungila
+dictionary.json	, |	Yengi, Kiyengi | Biyengi
+dictionary.json	|	Luzabu | Tuzabu
+dictionary.json	|	Munjanda | Minjanda
+dictionary.json	|	Zandu | Mazandu
+dictionary.json	|	Zanga | Mazanga
+dictionary.json	|	Zanza | Mazanza
+dictionary.json	|	Kinzembele | Binzembele
+dictionary.json	|	Kakasi | Bikakasi
+dictionary.json	|	Kamu | Makamu
+dictionary.json	|	Kamisi | Bikamisi
+dictionary.json	|	Kanda | Makanda
+dictionary.json	|	Kazu | Makazu
+dictionary.json	|	Fua | Mafua
+dictionary.json	|	Fundi | Madundi
+dictionary.json	|	Fungu | Mafungu
+dictionary.json	|	Kitemo | Tshitemo | Bitemo
+dictionary.json	|	Muela | Miela
+dictionary.json	|	Yengi | Kiyengi | Biyengi
+dictionary.json	|	Lufundusulu | Tufundusulu
+dictionary.json	|	Lufungusulu | Tufungusulu
+dictionary.json	|	Lufutu | Tufutu
+dictionary.json	|	Lukaka | Tukaka
+dictionary.json	|	Lukandu | Tukandu
+dictionary.json	|	Lukombo | Tukombo
+dictionary.json	|	Lueka | Tueka
+dictionary.json	|	Lwoni | Kiluoni | Tshiluoni | Bilwoni
+dictionary.json	|	Luoni | Tuoni
+dictionary.json	|	Luandu | Tuandu
+dictionary.json	|	Luziolo | Tuziolo
+dictionary.json	|	Luzolanu | Tuzolanu
+dictionary.json	|	Lundindi | Tundindi
+dictionary.json	|	Lufita | Tufita
+dictionary.json	|	Lufulu | Tufulu
+dictionary.json	|	Lufumba | Tufumba
+dictionary.json	|	Lusemo | Tusemo
+dictionary.json	|	Nsa | Musa
+dictionary.json	|	Kibakala | Tshibakala
+dictionary.json	|	Kilenga | Tshilenga | Bilenga
+dictionary.json	|	Kilo | Thsilo | Bilo
+dictionary.json	|	Kilobi | Tshilobi | Bilobi
+dictionary.json	|	Tsilonda | Bilonda
+dictionary.json	|	Kilongiki | Tshilongiki | Bilongiki
+dictionary.json	|	Kilongisi | Thsilongisi | Bilongisi
+dictionary.json	|	Kilongokelo | Thilongokelo | Bilongokelo
+dictionary.json	|	Kimangu | Tshimangu | Bimangu
+dictionary.json	|	Kuala | Makuala
+dictionary.json	|	Kuele | Makuele
+dictionary.json	|	Laki | Malaki
+dictionary.json	|	Kimfitshimfi | Bimfi
+dictionary.json	|	Luyi | Mayi
+dictionary.json	|	Munkua | Bankua
+dictionary.json	|	Kilue | Bilue
+dictionary.json	|	Kilembo | Bilembo
+dictionary.json	|	Lusampa | Sampa
+dictionary.json	|	Sa minu | Sa tshiminu | Sa kiminu
+dictionary.json	-	Saki-masaki
+dictionary.json	|	Nkia ngu | Ntshia ngu
+dictionary.json	|	Nkia | Ntshia
+dictionary.json	|	Nki | Nthsi
+dictionary.json	|	Mu nki | Mu ntshi
+dictionary.json	,	Tala, ntebe ye ho
+dictionary.json	,	Njila yi tuizidi, ntebe mayela kani
+dictionary.json	'	Ku nsila n'lemvo
+dictionary.json	'	Muana wa n'kento
+dictionary.json	|	Musi | Muishi | Bis | Bishi
+dictionary.json	|	Mpasi | Mpashi
+dictionary.json	|	Kia mpasi | Tshia mpashi
+dictionary.json	|	Moyo | Mioyo
+dictionary.json	|	Minu | Kiminu | Tshiminu
+dictionary.json	|	Hata | Mahata
+dictionary.json	.	Mubaku wu diya nsusu.
+dictionary.json	.	Ngela za zingi ze nandi.
+dictionary.json	.	Nsusu mubaku wa diri zo.
+dictionary.json	.	Mubaku wa kotele ku hata.
+dictionary.json	.	Bumuana ku Mbamu na yokesela buo.
+dictionary.json	|	Yestela | Yetela
+dictionary.json	.	Yetana ka ta yetana.
+dictionary.json	-	Kimburika-malenge
+dictionary.json	-	Ngundu-nuwa
+dictionary.json	-	Nkala-nseke
+dictionary.json	-	Na konzi-konzi
+dictionary.json	-	Nkunda-nkunda
+dictionary.json	-	Muafuta-miafuta
+dictionary.json	, |	Tshina, Kina | Bina
+dictionary.json	|	Tshina | Bina
+dictionary.json	|	Lukuni | Nkuni
+dictionary.json	( )	Tshitari (a court)
+dictionary.json	( )	Tshitari (a long)
+dictionary.json	|	Kitunga | Bitunga
+dictionary.json	|	Munturia | Minturia
+dictionary.json	|	Kisalu | Tshisalu | Salu | Bisalu
+dictionary.json	|	Kifulu | Tshifulu | Bifulu
+dictionary.json	|	Luvu | Mvu
+dictionary.json	|	Lembe | Malembe
+dictionary.json	|	Munkiobo | Minkiobo
+dictionary.json	|	Munganga | Tunganga
+dictionary.json	|	Mushikimbila | Mishikimbila
+dictionary.json	|	Kikuku | Bikuku
+dictionary.json	-	nkoma-nkoma
+dictionary.json	'	n'kelo
+dictionary.json	|	lumbumbuzi | tumbumbuzi
+dictionary.json	|	luila | tuila
+dictionary.json	|	lukilazi | tukilazi
+dictionary.json	|	luhe | mahe
+dictionary.json	|	lukoka | tukoka
+dictionary.json	|	lubumba | tubumba
+dictionary.json	|	luke | tuke
+dictionary.json	|	lubadi | tubadi
+dictionary.json	-	buaku-maku
+dictionary.json	|	buala | mala
+dictionary.json	|	buatu | matu
+dictionary.json	|	buko | mako
+dictionary.json	|	koko | moko
+dictionary.json	|	kibabala | bibabala
+dictionary.json	|	kibalabala | bibalabala
+dictionary.json	|	kikola | bikola
+dictionary.json	|	kimvinzingila | bimvinzingila
+dictionary.json	|	kinkuelankuela | binkuelankuela
+dictionary.json	|	kindiongoloko | bindiongoloko
+dictionary.json	|	muniungutinunu | miniungutinunu
+dictionary.json	|	mubati | mibati
+dictionary.json	|	mubasa | mibasa
+dictionary.json	|	kinionia | binionia
+dictionary.json	|	kimfinia | bimfinia
+dictionary.json	|	lubanji | mbanji
+dictionary.json	|	mutima | mitima
+dictionary.json	|	Muloki | Miloki
+dictionary.json	|	Musaka | Misaka
+dictionary.json	: , .	Kifuani : Bole bantu, bukaka musongo.
+dictionary.json	?	Nzangu lu ta bula?
+dictionary.json	?	Ambo kue lu ta kuenda?
+dictionary.json	?	Ambo kue lu baka?
+dictionary.json	?	Ambo nsayi kue ke?
+dictionary.json	?	Nki zololo dia mbaji?
+dictionary.json	?	Lu ta sa nki?
+dictionary.json	.	Moyo tatika.
+dictionary.json	.	Moyo tatika wu ta ku ntatika.
+dictionary.json	.	Bubelo nje.
+dictionary.json	.	Muana yema ka ta yema.
+dictionary.json	.	Muana mabeni ka ta nua.
+dictionary.json	, .	Muana wu sakalale, dia ka ta dia.
+dictionary.json	.	Kinienia wa zolo bia fua.
+dictionary.json	.	Muana nkiri ku nima.
+dictionary.json	?	Sakalale?
+dictionary.json	.	Nsuki za zingi ze nani.
+dictionary.json	.	Meso nandi ma toma me.
+dictionary.json	.	Ntu ani wa mpamba.
+dictionary.json	.	Diatulu aku.
+dictionary.json	.	Meso mani.
+dictionary.json	.	Mpashi zo ntama za tuka.
+dictionary.json	!	Nsoni kua beno!
+dictionary.json	.	Nsoni na mpasi ta tamburi tala fua tala vuka.
+dictionary.json	, .	Matondo, Mama Ntangu.
+dictionary.json	.	Nsaba ya toma.
+dictionary.json	.	Nsaba ya beto ya nene.
+dictionary.json	!	Sa musualu!
+dictionary.json	.	Dema dia dingi.
+dictionary.json	.	Bola dia bola.
+dictionary.json	.	Tata ani wa yenda ku mavula.
+dictionary.json	.	Mandala meka mayuma.
+dictionary.json	.	Nua fumu.
+dictionary.json	.	Su keri nua.
+dictionary.json	' , .	Nkaka aku ya n'kento, su keri nua.
+dictionary.json	.	Nkaka aku ya bakala fumu dia ba mindele keri nua.
+dictionary.json	.	Nsibidi.
+dictionary.json	.	Bala ba tomene sala.
+dictionary.json	.	Malavu mu tiari ka ma fuluka ka ko.
+dictionary.json	.	Ntela.
+dictionary.json	.	Nzambi ka bua ka tolo ko.
+dictionary.json	.	Zinga dimbu.
+dictionary.json	.	Makayabu mungua nduri mena.
+dictionary.json	.	Nsusu ya mbakala kuba yi ta kuba.
+dictionary.json	.	Mbua yi bolele.
+dictionary.json	.	Binkuti bi bolele.
+dictionary.json	, .	Mazono mvula bu ya nokene, binkuti bia bolele.
+dictionary.json	.	Bunene na bakiri.
+dictionary.json	.	Njeka wa nuna.
+dictionary.json	.	Njeka wa djuna.
+dictionary.json	.	Nunini.
+dictionary.json	.	Ku nkeshi nje.
+dictionary.json	.	Nkeshi mbakiri.
+dictionary.json	.	Njunini.
+dictionary.json	.	Nuni zi nunini.
+dictionary.json	.	Njeka wa munene.
+dictionary.json	.	Ntemo wa zulu.
+dictionary.json	.	Muini we ko.
+dictionary.json	.	Mbaji noka ka noka.
+dictionary.json	.	Tshifulu tshi tshia toma.
+dictionary.json	.	Mu nza ya mvimba.
+dictionary.json	.	Ntoto wa nene we.
+dictionary.json	.	Zulu dia di nene die.
+dictionary.json	?	Nkombo kue ye?
+dictionary.json	?	Ngulu kue ye?
+dictionary.json	?	Mbua kue ye?
+dictionary.json	?	Tshibuka tshi tsha muntu teshe?
+dictionary.json	.	Bakento bole.
+dictionary.json	.	Nuni zole.
+dictionary.json	.	Nzo zole.
+dictionary.json	.	Mapapa mole.
+dictionary.json	.	Binkuti biole.
+dictionary.json	.	Mbuata zole.
+dictionary.json	.	Dimpa di moshi.
+dictionary.json	.	Mampa ma tatu.
+dictionary.json	.	Mampa makumatatu na ma tanu.
+dictionary.json	.	Binkuti makumatatu na bi tanu.
+dictionary.json	.	Bintu biole.
+dictionary.json	.	Mbua makumatatu na tanu.
+dictionary.json	.	Mbuma moshi.
+dictionary.json	.	Mbuma makumatatu na tanu.
+dictionary.json	!	Djoka Milou!
+dictionary.json	.	Ngulu ani nkumbu Paul.
+dictionary.json	?	Paul kue kue?
+dictionary.json	?	Nsafu kue yena?
+dictionary.json	?	Nsafu kue ye?
+dictionary.json	?	Nsafu kue zena?
+dictionary.json	?	Nsafu kue ze?
+dictionary.json	?	Luzala kue luena?
+dictionary.json	?	Luzala kue lue?
+dictionary.json	?	Nzala kue ze?
+dictionary.json	?	Nzala kue zena?
+dictionary.json	?	Lukuba kue luena?
+dictionary.json	?	Lukuba kue lue?
+dictionary.json	?	Tukuba kue tue?
+dictionary.json	?	Tukuba kue tuena?
+dictionary.json	?	Dimpa kue diena?
+dictionary.json	?	Dimpa kue die?
+dictionary.json	?	Mampa kue mena?
+dictionary.json	?	Mampa kue me?
+dictionary.json	?	Bitenda kue biena?
+dictionary.json	' .	Bu keri n'kento andi.
+dictionary.json	.	Bala ba ngulu bia bitatu.
+dictionary.json	.	Madia ma bele mpimpa.
+dictionary.json	, .	Bo bu wa tshiri na meno, dia masangu.
+dictionary.json	.	Na yikidi.
+dictionary.json	.	Na yikidi ntshana muana nsusu.
+dictionary.json	.	Tolo tua tu bote.
+dictionary.json	!	Duka!
+dictionary.json	.	Dukeno.
+dictionary.json	.	Ta dukeno.
+dictionary.json	.	Telama.
+dictionary.json	.	Ta telama.
+dictionary.json	.	Telameno.
+dictionary.json	.	Zakala.
+dictionary.json	.	Zakaleti.
+dictionary.json	.	Ta zakala.
+dictionary.json	.	Zakaleno.
+dictionary.json	.	Dia.
+dictionary.json	.	Ta dieno.
+dictionary.json	.	Dieno.
+dictionary.json	.	Sala.
+dictionary.json	.	Ta sala.
+dictionary.json	.	Saleno.
+dictionary.json	!	Ba sala!
+dictionary.json	.	Saleno mbote.
+dictionary.json	.	Bilongo ngiele sumba.
+dictionary.json	.	Nge bikua ku zololo a bio ko.
+dictionary.json	.	Ka njena na nsatu ko.
+dictionary.json	.	Kuena na nsatu ko.
+dictionary.json	.	Kena na nsatu ko.
+dictionary.json	.	Ka tuena na nsatu.
+dictionary.json	.	Ka luena na nsatu ko.
+dictionary.json	.	Ka bena na nsatu ko.
+dictionary.json	.	Mbua yi sekele.
+dictionary.json	.	Mbua zi sekele.
+dictionary.json	.	Tshinzingu tsho.
+dictionary.json	' .	Mbua ka tiamukini kulu mu n'samu ntela.
+dictionary.json	.	Mvula makumatatu na tanu ze nani.
+dictionary.json	.	Mvula lusambuadi na tanu ze naku.
+dictionary.json	.	Mvula nkama ze nani.
+dictionary.json	.	Mvula makumaya na ya ze nani.
+dictionary.json	.	Mvuka kumi.
+dictionary.json	.	Mvukulu bua.
+dictionary.json	.	Wa wuna yoka wa zakala ba ku tunguridi.
+dictionary.json	?	Kua wirir?
+dictionary.json	?	Lu wiri?
+dictionary.json	.	Binsono bieto.
+dictionary.json	.	Ndinga ya banuni.
+dictionary.json	.	Mpeho ya nene ye.
+dictionary.json	.	Bantu ba wu bo.
+dictionary.json	' .	N'kento wa wu wo.
+dictionary.json	.	Koko ku.
+dictionary.json	.	Kulu ku.
+dictionary.json	.	Buku dio.
+dictionary.json	.	Ndinga yo.
+dictionary.json	.	Ya me.
+dictionary.json	.	Ya nge.
+dictionary.json	.	Ya yandi.
+dictionary.json	.	Ya beto.
+dictionary.json	.	Ya beno.
+dictionary.json	.	Ya bawu.
+dictionary.json	.	Kua kuo nso.
+dictionary.json	.	Ntoto wa mvimba.
+dictionary.json	.	Mutoto wa mukaka.
+dictionary.json	.	Bu wa butuka.
+dictionary.json	?	Ehe bue?
+dictionary.json	?	Ha nki kua?
+dictionary.json	.	Mbote zeno.
+dictionary.json	.	Mbote aku.
+dictionary.json	.	Salu tshe nani.
+dictionary.json	.	Salu kie nani.
+dictionary.json	.	Sala ni ta sala.
+dictionary.json	.	Ka nzololo a ko.
+dictionary.json	?	Dia dia?
+dictionary.json	.	Kintu kieka kia yuma.
+dictionary.json	.	Bintu bieka bia yuma.
+dictionary.json	.	Mbua zeka za bola.
+dictionary.json	.	Mbua ji bolele.
+dictionary.json	.	Yandi wa nuna.
+dictionary.json	.	Wa toma we.
+dictionary.json	.	Ku mamba ke.
+dictionary.json	.	Mbua ya toma ke na yo.
+dictionary.json	.	Nge kaka.
+dictionary.json	.	Yandi kaka.
+dictionary.json	.	Nkento andi wa kaka.
+dictionary.json	.	Nkento andi wa bole.
+dictionary.json	' .	N'kento andi wa ba tatu.
+dictionary.json	' .	N'kento andi wa ba ya.
+dictionary.json	' .	N'kento andi wa ba tanu.
+dictionary.json	.	Lari kia tu ta kue bonge.
+dictionary.json	.	Mvula ya yeka noka.
+dictionary.json	.	Muana ni diata keka diata.
+dictionary.json	.	Ba tueka mona.
+dictionary.json	.	Nketi kuenda ka mvula yi nokene.
+dictionary.json	.	Bala bole.
+dictionary.json	.	Bala makumatatu na ba tanu.
+dictionary.json	.	Muana mu moshi.
+dictionary.json	.	Ka...ko
+dictionary.json	?	Lu kolele?
+dictionary.json	?	Vumbukidi?
+dictionary.json	?	Lu vumbukidi?
+dictionary.json	?	Chemi?
+dictionary.json	?	Lu chemi?
+dictionary.json	|	Muana | Bala
+dictionary.json	|	Mutekolo | Batekolo
+dictionary.json	|	Nkaka | Bankaka
+dictionary.json	|	Nkento | Bakento
+dictionary.json	|	Muti | Miti
+dictionary.json	|	Mulumba | Milumba
+dictionary.json	|	Mutshila | Mitshila
+dictionary.json	|	Kizengi | Bizengi
+dictionary.json	|	Kikoba | Bikoba
+dictionary.json	|	Kibanga | Bibanga
+dictionary.json	|	Kiamvu | Biamvu
+dictionary.json	|	Kihota | Bihota
+dictionary.json	|	Kizongo | Bizongo
+dictionary.json	|	Luwa | Buwa
+dictionary.json	|	Lumbembemba | Tumbembemba
+dictionary.json	|	Lubo | Tubo
+dictionary.json	|	Lumbuetete | Mbuetete
+dictionary.json	|	Kulu | Malu
+dictionary.json	|	Kutu | Makutu
+dictionary.json	|	Kuku | Makuku
+dictionary.json	|	Zu | Mazu
+dictionary.json	|	Lala dia nsa | Malala dia nsa
+dictionary.json	|	Boria | Maboria
+dictionary.json	,	Tshimoko tshi na zolo yika, ka tsha wa ko
+dictionary.json	?	Tolo tua bakiriki?
+dictionary.json	?	Kue nge?
+dictionary.json	?	Tolo tua bakiri?
+dictionary.json	,	Mbakisa eno, nlemvu eno
+dictionary.json	,	Muini we ku, ntsha tuele zeba
+dictionary.json	,	Ni mu bungu diyo, tuele zeba
+dictionary.json	,	Tala nsayi na naku, shika nsaki
+dictionary.json	,	Dia na nuwa, ni ta nuwa
+dictionary.json	?	Wiri?
+dictionary.json	?	Kuwa wiri?
+dictionary.json	?	Dimpa dia bakiri?
+dictionary.json	/	Ba bo / Ba wu bo
+dictionary.json	.	Ka...Ko
+dictionary.json	,	Njila ya ku jimbakana, kala hana hambu
+dictionary.json	:	Pluriel : maloko
+src/data/lessons.ts:215	, ?	Mbote mpangi, nkumbu aku nani?
+src/data/lessons.ts:218	?	Kolele?
+src/data/lessons.ts:220	,	Meno, mpe nkolele
+src/data/lessons.ts:437	( )	we(na)
+src/data/lessons.ts:438	( )	ke(na)
+src/data/lessons.ts:439	( )	tuwe(na)
+src/data/lessons.ts:440	( )	luwe(na)
+src/data/lessons.ts:441	( )	be(na)
+src/data/lessons.ts:1087	'	N'mvu mia mingi
+src/data/lessons.ts:1098	-	Mbaji ku Pointe-Noire nge kwiza
+src/data/lessons.ts:1101	?	Duka wa dukidi mazono mu nkokela?
+src/data/lessons.ts:1102	?	Mbo wa ntambila mu pari?
+src/data/lessons.ts:1406	|	Tshima | Bima
+src/data/lessons.ts:1571	|	Bidiki | Bibidiki
+src/data/lessons.ts:1602	.	Beno ngatu lu zonzesz mababa.
+src/data/lessons.ts:1737	|	Bakala | Babakala
+src/data/lessons.ts:1756	/	Bagukila / Bahukila
+src/data/lessons.ts:1912	|	Tshikumbi | Bikumbi
+src/data/lessons.ts:1913	|	Kikumbi | Bikumbi
+src/data/lessons.ts:2061	…	kuena…ko
+src/data/lessons.ts:2062	…	kena…ko
+src/data/lessons.ts:2075	( )	Mu kiese we(na)
+src/data/lessons.ts:2076	( )	Mu nsayi we(na)
+src/data/lessons.ts:2258	( )	Mu nsayi we(na)
+src/data/lessons.ts:2706	/	Babula / Labula
+src/data/lessons.ts:2716	|	Bafu | Mabafu
+src/data/lessons.ts:2719	/	Bagu / Bahu
+src/data/lessons.ts:2720	/	Baguka / Bahuka
+src/data/lessons.ts:2721	/	Bagukisa / Bahukisa
+src/data/lessons.ts:2727	/	Bakitina / Bakishina
+src/data/lessons.ts:2729	|	Baki | Bibaki
+src/data/lessons.ts:2736	|	Nleke | Baleke
+src/data/lessons.ts:2737	|	Muleke | Baleke
+src/data/lessons.ts:2740	.	Beno ngatu lu zonzesz mababa.
+src/data/lessons.ts:2858	/	Babula / Labula
+src/data/lessons.ts:2860	/	Bakitina / Bakishina
+src/data/lessons.ts:2863	/	Bagu / Bahu
+src/data/lessons.ts:2865	/	Bagukisa / Bahukisa
+src/data/lessons.ts:3129	|	Bidiki | Bibidiki
+src/data/lessons.ts:3149	?	Bikua bie naku?
+src/data/lessons.ts:3291	|	Basu | Bibasu
+src/data/lessons.ts:3294	-	Bandi-bandi
+src/data/lessons.ts:3296	/	Tshijinga / Bijinga
+src/data/lessons.ts:3496	( ) ?	Nkia mvu(la) wa biyala?
+src/data/lessons.ts:3604	|	Bidiki | Bibidiki
+src/data/lessons.ts:3623	|	Lunguenia | Tunguenia
+src/data/lessons.ts:3624	|	Lukami | Nkami
+src/data/lessons.ts:3626	é |	Mundengué | Minengue
+src/data/lessons.ts:3627	-	Poto-poto
+src/data/lessons.ts:3633	|	Tshitari | Bitari
+src/data/lessons.ts:3748	/	Babula / Labula
+src/data/lessons.ts:3755	/	Bakitina / Bakishina
+src/data/lessons.ts:3756	|	Bakala | Babakala
+src/data/lessons.ts:3757	|	Baki | Bibaki
+src/data/lessons.ts:3853	/	Babula / Labula
+src/data/lessons.ts:4704	|	Nlandu|Milandu
+src/data/lessons.ts:4707	, |	Nleke, Muleke|Baleke
+src/data/lessons.ts:4711	|	Lulendo|Tulendo
+src/data/lessons.ts:4839	|	Lubu|Mbu
+src/data/lessons.ts:4840	,	Ludiatulu, Ndiatulu
+src/data/lessons.ts:4841	|	Ludimi|Tudimi
+src/data/lessons.ts:4843	|	Zu|Mazu
+src/data/lessons.ts:4850	|	Jiku|Majiku
+src/data/lessons.ts:4857	|	Zimi|Mazimi
+src/data/lessons.ts:4858	|	Jimi|Majimi
+src/data/lessons.ts:4872	|	Ziku|Maziku
+src/data/lessons.ts:4882	|	Zongo|Bizongo
+src/data/lessons.ts:4883	/ |	Tshizongo / Kizongo|Bizongo
+src/data/lessons.ts:4884	| /	Zoba|Mazoba / Bizoba
+src/data/lessons.ts:4892	/ |	Nzita / Muzita|Mizita
+src/data/lessons.ts:4897	|	Jibuku|Bijibuku
+src/data/lessons.ts:4902	|	Jita|Majita
+src/data/lessons.ts:4903	|	Zita|Mazita
+src/data/lessons.ts:4908	|	Tshizingu|Bizingu
+src/data/lessons.ts:4913	|	Lukaya | Makaya
+src/data/lessons.ts:5057	|	Lundala | Mandala
+src/data/lessons.ts:5184	|	Kifua|Bifua
+src/data/lessons.ts:5185	|	Kumbi | Makumbi
+src/data/lessons.ts:5230	|	Yele|Mayele
+src/data/lessons.ts:5263	|	Konko|Makonko
+src/data/lessons.ts:5283	( )	we(na)
+src/data/lessons.ts:5284	( )	ke(na)
+src/data/lessons.ts:5285	( )	tuwe(na)
+src/data/lessons.ts:5286	( )	luwe(na)
+src/data/lessons.ts:5287	( )	be(na)
+src/data/lessons.ts:5292	?	Kumbi kuwe diyena?
+src/data/lessons.ts:5293	( ) .	Tshikuku mala tshe(na).
+src/data/lessons.ts:5294	( ) ?	Mulunga kuwe we(na)?
+src/data/lessons.ts:5295	?	Milunga kuwe miyena?
+src/data/lessons.ts:5296	( ) ?	Vunga kuwe diye(na)?
+src/data/lessons.ts:5297	?	Mavunga kuwe mena?
+src/data/lessons.ts:5298	?	Mapapa kuwe mena?
+src/data/lessons.ts:5299	?	Mayaka kuwe mena?
+src/data/lessons.ts:5300	( ) ?	Yaka kuwe diye(na)?
+src/data/lessons.ts:5301	?	Mabuku kuwe mena?
+src/data/lessons.ts:5302	?	Madezo kuwe mena?
+src/data/lessons.ts:5303	( ) ?	Dezo kuwe diye(na)?
+src/data/lessons.ts:5304	?	Meza kuwe mena?
+src/data/lessons.ts:5305	( ) ?	Bumuntu kuwe buwe(na)?
+src/data/lessons.ts:5306	( ) ?	Buku kuwe diye(na)?
+src/data/lessons.ts:5307	( ) ?	Bitunga kuwe biye(na)?
+src/data/lessons.ts:5308	?	Mfulu kuwe zena?
+src/data/lessons.ts:5309	?	Mfulu kuwe yena?
+src/data/lessons.ts:5310	( ) ?	Ngombe kuwe ye(na)?
+src/data/lessons.ts:5311	( ) ?	Konko kuwe diye(na)?
+src/data/lessons.ts:5312	?	Nkangabumi kuwe yena?
+src/data/lessons.ts:5313	?	Nkangabumi kuwe zena?
+src/data/lessons.ts:5314	?	Nungu kuwe zena?
+src/data/lessons.ts:5315	?	Ngulu kuwe yena?
+src/data/lessons.ts:5316	( ) ?	Ndonga kuwe ye(na)?
+src/data/lessons.ts:5317	( ) ?	Malonga kuwe ke(na)?
+src/data/lessons.ts:5318	?	Luto kuwe luwe?
+src/data/lessons.ts:5319	( ) ?	Nkombo kuwe ye(na)?
+src/data/lessons.ts:5320	( ) ?	Mbuwa kuwe ye(na)?
+src/data/lessons.ts:5321	( ) ?	Bindongo kuwe biye(na)?
+src/data/lessons.ts:5322	?	Mulele kuwe wena?
+src/data/lessons.ts:5428	( ) ?	Bindongo kuwe biye(na)?
+src/data/lessons.ts:5431	( ) ?	Bitunga kuwe biye(na)?
+src/data/lessons.ts:5454	/	Ndozi / Ndoji
+src/data/lessons.ts:5472	/	Yiba / Djuana
+src/data/lessons.ts:5504	/	Jima / Kanga
+src/data/lessons.ts:5548	|	Lusembo | Tusembo
+src/data/lessons.ts:5817	|	Tshikuwa|Bikuwa
+src/data/lessons.ts:5822	, |	Nuandu, Muwandu|Miwandu
+src/data/lessons.ts:5823	|	Tshintu|Bintu
+src/data/lessons.ts:5824	|	Dinkondi|Mankondi
+src/data/lessons.ts:5990	/	Tshibulu / Kibulu
+src/data/lessons.ts:5996	/	Kinienia / Tshinienia
+src/data/lessons.ts:5998	, |	Tshibubu, Kibubu|Bibubu
+src/data/lessons.ts:5999	/	Kivuadangu / Tshivuadangu
+src/data/lessons.ts:6129	/	Nana / Mpomo
+src/data/lessons.ts:6261	|	Konko|Makonko
+src/data/lessons.ts:6269	|	Nlele|Milele
+src/data/lessons.ts:6478	|	Kikoba|Bikoba
+src/data/lessons.ts:6492	|	Hembo|Mahembo
+src/data/lessons.ts:6495	|	Beni | Mabeni
+src/data/lessons.ts:6498	|	Mukumba | Mikumba
+src/data/lessons.ts:6507	, |	Nlembo, Mulembo|Milembo
+src/data/lessons.ts:6523	|	Tshifundu | Bifundu
+src/data/lessons.ts:6526	|	Hisi|Bihisi
+src/data/lessons.ts:6545	|	Tuvi | Matuvi
+src/data/lessons.ts:6555	|	Njevo | Manjevo
+src/data/lessons.ts:7015	.	Yebela ni ta yebela.
+src/data/lessons.ts:7016	.	Yebela ... ta yebela.
+src/data/lessons.ts:7017	.	Yebela ka ta yebela.
+src/data/lessons.ts:7018	.	Yebela tu ta yebela.
+src/data/lessons.ts:7019	.	Yebela lu ta yebela.
+src/data/lessons.ts:7020	.	Yebela ba ta yebela.
+src/data/lessons.ts:7031	.	Nuni yebela yi ta yebela.
+src/data/lessons.ts:7032	.	Nuni yebela zi ta yebela.
+src/data/lessons.ts:7033	.	Ngulu dia yi ta dia.
+src/data/lessons.ts:7034	.	Ngulu dia zi ta dia.
+src/data/lessons.ts:7048	.	Nzonzi zonza yi ta zonza.
+src/data/lessons.ts:7049	.	Nzonzi zonza zi ta zonza.
+src/data/lessons.ts:7050	.	Nganga buka yi ta buka.
+src/data/lessons.ts:7051	.	Nganga buka zi ta buka.
+src/data/lessons.ts:7062	.	Tshinienia yebela tshi ta yebela.
+src/data/lessons.ts:7063	.	Binienia zonza bi ta zonza.
+src/data/lessons.ts:7064	.	Kisari yebela ki ta yebela.
+src/data/lessons.ts:7065	.	Bisari yebela bi ta yebela.
+src/data/lessons.ts:7066	.	Nlongi longisa ka ta longisa.
+src/data/lessons.ts:7067	.	Milongi longisa mi ta longisa.
+src/data/lessons.ts:7068	.	Muana yebela wu ta yebela.
+src/data/lessons.ts:7069	.	Bala yebela ba ta yebela.
+src/data/lessons.ts:7078	.	Mulumi ani yebela wu ta yebela.
+src/data/lessons.ts:7079	.	Milumi mieto yebela mi ta yebela.
+src/data/lessons.ts:7087	.	KA ni ta yebela ko.
+src/data/lessons.ts:7088	.	Ku ta yebela ko.
+src/data/lessons.ts:7089	.	Ka ta yebela ko.
+src/data/lessons.ts:7090	.	Ka tu ta yebela ko.
+src/data/lessons.ts:7091	.	Ka lu ta yebela ko.
+src/data/lessons.ts:7092	.	Ka ba ta yebela ko.
+src/data/lessons.ts:7100	.	Nuni yebela yi ta yebela.
+src/data/lessons.ts:7101	.	Nuni KA yebela yi ta yebela KO.
+src/data/lessons.ts:7102	.	Nuni yebela zi ta yebela.
+src/data/lessons.ts:7103	.	Nuni KA yebela zi ta yebela ko.
+src/data/lessons.ts:7111	.	Zulu dia mbudi diena.
+src/data/lessons.ts:7112	.	Zulu ka diena dia mbudi ko.
+src/data/lessons.ts:7114	.	Manga ya mbuaki.
+src/data/lessons.ts:7115	.	Manga ka yena ya mbuaki ko.
+src/data/lessons.ts:7117	.	Manga ya mbuaki yena.
+src/data/lessons.ts:7118	.	Manga za mbuaki zena.
+src/data/lessons.ts:7119	.	Manga ka zena za mbuaki ko.
+src/data/lessons.ts:7121	.	Mulele wa ntundu wena.
+src/data/lessons.ts:7122	.	Mulele ka wena wa ntundu ko.
+src/data/lessons.ts:7124	.	Milele mia ntundu miena.
+src/data/lessons.ts:7125	.	Milele ka miena mia ntundu ko.
+src/data/lessons.ts:7128	.	Ka nguidi a ko.
+src/data/lessons.ts:7129	.	Ku wiri a ko.
+src/data/lessons.ts:7130	.	Ka wiri a ko.
+src/data/lessons.ts:7131	.	Ka tu wiri a ko.
+src/data/lessons.ts:7132	.	Ka lu wiri a ko.
+src/data/lessons.ts:7133	.	Ka ba wiri a ko.
+src/data/lessons.ts:7404	.	Ku ta yebela ko.
+src/data/lessons.ts:7405	.	Ka lu ta yebela ko.
+src/data/lessons.ts:7407	.	Ka lu wiri a ko.
+src/data/lessons.ts:7408	.	Manga ya mbuaki.
+src/data/lessons.ts:7410	.	Manga ka yena ya mbuaki ko.
+src/data/lessons.ts:7411	.	Yebela ka ta yebela.
+src/data/lessons.ts:7562	|	Nleke | Baleke
+src/data/lessons.ts:7564	/	Nkesi / Nkeshi
+src/data/lessons.ts:7566	|	Nlongi | Milongi
+src/data/lessons.ts:7568	, |	Thsifu, Kifu | Bifu
+src/data/lessons.ts:7569	|	Tshikoyi | Bikoyi
+src/data/lessons.ts:7570	, |	Tshikua, Kikua | Bikua
+src/data/lessons.ts:7571	|	Mukala | Mikala
+src/data/lessons.ts:7576	,	Ba na nsaba, mbo bakila yo ndandu
+src/data/lessons.ts:7756	/	Ngati / Ngatu
+src/data/lessons.ts:7760	/	Nkesi / Nkeshi
+src/data/lessons.ts:7804	,	Tomo dia, ngatu wa lembo baku nsatu
+src/data/lessons.ts:7805	,	Tomo dia, nga wa lembo baku nsatu
+src/data/lessons.ts:7939	/	Ngati / Ngatu
+src/data/lessons.ts:8272	'	N'kento
+src/data/lessons.ts:8276	'	N'kaka
+src/data/lessons.ts:8283	|	Kumbi | Makumbi
+src/data/lessons.ts:8306	'	N'kento wu
+src/data/lessons.ts:8311	'	N'kaka yi
+src/data/lessons.ts:8325	'	N'kaka ji
+src/data/lessons.ts:8352	.	Muana wu ka wena tshiyumba a ko.
+src/data/lessons.ts:8353	.	Muana wu ka tshiyumba a ko.
+src/data/lessons.ts:8363	! .	Papumuka! Bika buyumba.
+src/data/lessons.ts:8364	!	Bika buhulu!
+src/data/lessons.ts:8365	!	Bika buzoba!
+src/data/lessons.ts:8366	.	Muana wu ka wena tshiyumba a ko.
+src/data/lessons.ts:8367	.	Muana wu ka tshiyumba a ko.
+src/data/lessons.ts:8368	, .	Lumbu tshi, lumbu tshi ba sa bakento nsangu.
+src/data/lessons.ts:8542	.	Muana wu ka wena tshiyumba a ko.
+src/data/lessons.ts:8544	'	N'kaka
+src/data/lessons.ts:8548	!	Bika buhulu!
+src/data/lessons.ts:8549	'	N'kaka yi
+src/data/lessons.ts:8572	|	Musa | Misa
+src/data/lessons.ts:8596	.	Nkokela masangu tu diya.
+src/data/lessons.ts:8597	.	Mbaji musa ni lamba na mbala.
+src/data/lessons.ts:8708	.	Nkokela masangu tu diya.
+src/data/lessons.ts:8714	.	Mbaji musa ni lamba na mbala.
+src/data/lessons.ts:8740	|	Buki | Mbuki
+src/data/lessons.ts:8742	|	Kalaka | Makalaka
+src/data/lessons.ts:8743	|	Laka | Malaka
+src/data/lessons.ts:8754	,	Tala lumbu, ndendi tanga kinitu kiyaku, mbo ni ba mu nsayi
+src/data/lessons.ts:8755	,	Tala lumbu ndendi tanga kinitu kiyaku, nsayi mbo yi ku mbaka
+src/data/lessons.ts:8820	,	Tala lumbu, ndendi tanga kinitu kiyaku, mbo ni ba mu nsayi
+src/data/lessons.ts:8827	,	Tala lumbu ndendi tanga kinitu kiyaku, nsayi mbo yi ku mbaka
+src/data/lessons.ts:9057	/	Siri / Sidi / Shiri / Shidi
+src/data/lessons.ts:9058	/	Ka sidi / siri / shiri / shidi
+src/data/lessons.ts:9059	/	Ta/Tua sidi / siri / shiri / shidi
+src/data/lessons.ts:9060	/	Lua sidi / siri / shiri / shidi
+src/data/lessons.ts:9061	/	Ba sidi / siri / shiri / shidi
+src/data/lessons.ts:9217	( )	Ntangu za ka(ka)
+src/data/lessons.ts:9218	|	Kidukiya|Bidukiya
+src/data/lessons.ts:9220	|	Dimpa|Mampa
+src/data/lessons.ts:9221	|	Kintu|Bintu
+src/data/lessons.ts:9222	|	Diki|Meki
+src/data/lessons.ts:9459	,	Sala kua kue mpashi, yelesa ka kuena mpashi ko
+src/data/lessons.ts:9460	,	Wa dia fua, yika dio
+src/data/lessons.ts:9476	.	Hata dio dia toma die.
+src/data/lessons.ts:9477	( )	Dinkondi di dia mbuaki dje(na)
+src/data/lessons.ts:9488	( ) .	Mahata mo ma toma (me).
+src/data/lessons.ts:9489	.	Mankondi mo ma mbuali me.
+src/data/lessons.ts:9682	( ) .	Mahata mo ma toma (me).
+src/data/lessons.ts:9684	( )	Dinkondi di dia mbuaki dje(na)
+src/data/lessons.ts:9685	.	Hata dio dia toma die.
+src/data/lessons.ts:9916	|	Tshintu|Bintu
+src/data/lessons.ts:9983	( )	Mankondi mungua nduri me(na)
+src/data/lessons.ts:9984	( )	Dinkondi mungua nduri die(na)
+src/data/lessons.ts:9985	( )	Buwa mungua nduri bue(na)
+src/data/lessons.ts:9986	( )	Loso mungua nduri lue(na)
+src/data/lessons.ts:10205	( )	Buwa mungua nduri bue(na)
+src/data/lessons.ts:10229	|	Lala | Malala
+src/data/lessons.ts:10233	|	Muniche | Miniche
+src/data/lessons.ts:10235	|	Dimpa | Mampa
+src/data/lessons.ts:10239	|	Lutundu | Ntundu
+src/data/lessons.ts:10240	|	Lusafu | Nsafu
+src/data/lessons.ts:10340	,	Mamba ma miniche, ma ma bote
+src/data/lessons.ts:10555	|	Lumfimfini | Mfimfini
+src/data/lessons.ts:10561	|	Mulembo | Milembo
+src/data/lessons.ts:10562	|	Mukumba | Mikumba
+src/data/lessons.ts:10563	|	Koto | Makoto
+src/data/lessons.ts:10564	|	Dinu | Meno
+src/data/lessons.ts:10565	|	Tshikoba | Bikoba
+src/data/lessons.ts:10584	.	Bima bi yiri.
+src/data/lessons.ts:10585	.	Loso lu yiri.
+src/data/lessons.ts:10586	.	Masangu ma yiri.
+src/data/lessons.ts:10587	.	Mbala ji yiri.
+src/data/lessons.ts:10595	.	Nzo yi yiri.
+src/data/lessons.ts:10596	.	Mukobo wu yiri.
+src/data/lessons.ts:10629	.	Mputa yaya yi ta yaya.
+src/data/lessons.ts:10630	.	Ludimi yaya lu ta yaya.
+src/data/lessons.ts:10631	.	Mbombo yaya yi ta yaya.
+src/data/lessons.ts:10632	.	Kulu yaya ku ta yaya.
+src/data/lessons.ts:10633	.	Mulembo yaya wu ta yaya.
+src/data/lessons.ts:10634	.	Mukumba yaya wu ta yaya.
+src/data/lessons.ts:10635	.	Koto yaya di ta yaya.
+src/data/lessons.ts:10636	.	Dinu yaya di ta yaya.
+src/data/lessons.ts:10637	.	Tshikoba yaya tshi ta yaya.
+src/data/lessons.ts:10645	.	Mfimfini yaya ji ta yaya.
+src/data/lessons.ts:10646	.	Meso yaya ma ta yaya.
+src/data/lessons.ts:10647	.	Malu yaya ma ta yaya.
+src/data/lessons.ts:10648	.	Milembo yaya mi ta yaya.
+src/data/lessons.ts:10649	.	Makoto yaya ma ta yaya.
+src/data/lessons.ts:10650	.	Meno yaya ma ta yaya.
+src/data/lessons.ts:10651	.	Bikoba yaya bi ta yaya.
+src/data/lessons.ts:10661	.	Bima bi yiri.
+src/data/lessons.ts:10662	.	Loso lu yiri.
+src/data/lessons.ts:10663	.	Masangu ma yiri.
+src/data/lessons.ts:10664	.	Mbala ji yiri.
+src/data/lessons.ts:10665	.	Nzo yi yiri.
+src/data/lessons.ts:10666	.	Mukobo wu yiri.
+src/data/lessons.ts:10667	.	Mputa yaya yi ta yaya.
+src/data/lessons.ts:10668	.	Meso yaya ma ta yaya.
+src/data/lessons.ts:10669	.	Kulu yaya ku ta yaya.
+src/data/lessons.ts:10670	.	Dinu yaya di ta yaya.
+src/data/lessons.ts:10887	.	Bima bi yiri.
+src/data/lessons.ts:10888	.	Mbala ji yiri.
+src/data/lessons.ts:10889	.	Dinu yaya di ta yaya.
+src/data/lessons.ts:10890	.	Nzo yi yiri.
+src/data/lessons.ts:10891	.	Tshikoba yaya tshi ta yaya.
+src/data/lessons.ts:10892	.	Masangu ma yiri.
+src/data/lessons.ts:10894	.	Mputa yaya yi ta yaya.
+src/data/lessons.ts:10920	, |	Tshiyimba, Kiyimba, Yimba | Biyimba
+src/data/lessons.ts:10941	.	Bintu bi wiri yoya.
+src/data/lessons.ts:10942	.	Bintu bi bi wiri yoya.
+src/data/lessons.ts:10950	/ .	Manga ji/zi wiri yoya.
+src/data/lessons.ts:10951	.	Manga ji ji wiri yoya.
+src/data/lessons.ts:10959	.	Malala ma wiri yoya.
+src/data/lessons.ts:10960	.	Malala ma ma wiri yoya.
+src/data/lessons.ts:10968	.	Malala ma nsa ma wiri yoya.
+src/data/lessons.ts:10969	.	Malala ma nsa ma ma wiri yoya.
+src/data/lessons.ts:10988	.	Muana tshiyimba we.
+src/data/lessons.ts:10989	.	Muana tshiyimba wena.
+src/data/lessons.ts:11008	.	Futikila die nani.
+src/data/lessons.ts:11009	.	Futikila die naku.
+src/data/lessons.ts:11010	.	Futikila die nandi.
+src/data/lessons.ts:11011	.	Futikila die neto.
+src/data/lessons.ts:11012	.	Futikila die neno.
+src/data/lessons.ts:11013	.	Futikila die nawu.
+src/data/lessons.ts:11032	.	Nzololo.
+src/data/lessons.ts:11033	.	Zololo.
+src/data/lessons.ts:11034	.	Zololo.
+src/data/lessons.ts:11035	.	Tu zololo.
+src/data/lessons.ts:11036	.	Lu zololo.
+src/data/lessons.ts:11037	.	Ba zololo.
+src/data/lessons.ts:11078	.	Bintu bi wiri yoya.
+src/data/lessons.ts:11079	.	Bintu bi bi wiri yoya.
+src/data/lessons.ts:11080	/ .	Manga ji/zi wiri yoya.
+src/data/lessons.ts:11081	.	Manga ji ji wiri yoya.
+src/data/lessons.ts:11082	.	Malala ma wiri yoya.
+src/data/lessons.ts:11083	.	Malala ma ma wiri yoya.
+src/data/lessons.ts:11084	.	Malala ma nsa ma wiri yoya.
+src/data/lessons.ts:11085	.	Malala ma nsa ma ma wiri yoya.
+src/data/lessons.ts:11086	.	Mulumba njunini.
+src/data/lessons.ts:11087	.	Mulumba yunini.
+src/data/lessons.ts:11088	.	Mulumba ka yunini.
+src/data/lessons.ts:11089	.	Mulumba tu yunini.
+src/data/lessons.ts:11090	.	Mulumba lu yunini.
+src/data/lessons.ts:11091	.	Mulumba ba yunini.
+src/data/lessons.ts:11092	.	Muana tshiyimba we.
+src/data/lessons.ts:11093	.	Muana tshiyimba wena.
+src/data/lessons.ts:11094	.	Futikila die nani.
+src/data/lessons.ts:11095	.	Futikila die naku.
+src/data/lessons.ts:11096	.	Futikila die nandi.
+src/data/lessons.ts:11097	.	Futikila die neto.
+src/data/lessons.ts:11098	.	Futikila die neno.
+src/data/lessons.ts:11099	.	Futikila die nawu.
+src/data/lessons.ts:11100	.	Nzololo.
+src/data/lessons.ts:11101	.	Tu zololo.
+src/data/lessons.ts:11102	.	Ba zololo.
+src/data/lessons.ts:11290	.	Tu zololo.
+src/data/lessons.ts:11291	.	Malala ma wiri yoya.
+src/data/lessons.ts:11292	.	Bintu bi bi wiri yoya.
+src/data/lessons.ts:11293	.	Malala ma nsa ma wiri yoya.
+src/data/lessons.ts:11295	.	Malala ma ma wiri yoya.
+src/data/lessons.ts:11296	.	Futikila die naku.
+src/data/lessons.ts:11297	.	Nzololo.
+src/data/lessons.ts:11321	|	Tshinkuti | Binkuti
+src/data/lessons.ts:11322	|	Mulele | Milele
+src/data/lessons.ts:11324	|	Tambala | Bitambala
+src/data/lessons.ts:11342	.	Nsuki ji zezele.
+src/data/lessons.ts:11343	.	Binkuti bi zezele.
+src/data/lessons.ts:11344	.	Tshinkuti tshi zezele.
+src/data/lessons.ts:11345	.	Mapapa ma zezele.
+src/data/lessons.ts:11356	, .	Kanga mulele, wu zezele.
+src/data/lessons.ts:11357	, .	Kanga mapapa, ma zezele.
+src/data/lessons.ts:11358	, .	Kanga nsuki, ji zezele.
+src/data/lessons.ts:11359	, .	Kanga tshinkuti, tshi zezele.
+src/data/lessons.ts:11360	, .	Kanga tambala, tshi zezele.
+src/data/lessons.ts:11371	.	Nzezesa nsuki.
+src/data/lessons.ts:11378	.	Nsuki ji zezele.
+src/data/lessons.ts:11379	.	Binkuti bi zezele.
+src/data/lessons.ts:11380	.	Tshinkuti tshi zezele.
+src/data/lessons.ts:11381	.	Mapapa ma zezele.
+src/data/lessons.ts:11382	, .	Kanga mulele, wu zezele.
+src/data/lessons.ts:11383	, .	Kanga mapapa, ma zezele.
+src/data/lessons.ts:11384	, .	Kanga nsuki, ji zezele.
+src/data/lessons.ts:11385	, .	Kanga tshinkuti, tshi zezele.
+src/data/lessons.ts:11386	, .	Kanga tambala, tshi zezele.
+src/data/lessons.ts:11387	.	Nzezesa nsuki.
+src/data/lessons.ts:11540	.	Mapapa ma zezele.
+src/data/lessons.ts:11543	.	Mapapa ma zezele.
+src/data/lessons.ts:11544	.	Nsuki ji zezele.
+src/data/lessons.ts:11570	|	Dinteketa | Manteketa
+src/data/lessons.ts:11588	.	Zaza ni ta zaza mu bungu dia madia.
+src/data/lessons.ts:11589	.	Zaza ta zaza mu bungu dia madia.
+src/data/lessons.ts:11590	.	Zaza ka ta zaza mu bungu dia madia.
+src/data/lessons.ts:11591	.	Zaza tu ta zaza mu bungu dia madia.
+src/data/lessons.ts:11592	.	Zaza lu ta zaza mu bungu dia madia.
+src/data/lessons.ts:11593	.	Zaza ba ta zaza mu bungu dia madia.
+src/data/lessons.ts:11601	.	Mfuekene zaza ka ta zaza mu bungu dia madia.
+src/data/lessons.ts:11638	.	Zaza ni ta zaza mu bungu dia madia.
+src/data/lessons.ts:11639	.	Zaza ta zaza mu bungu dia madia.
+src/data/lessons.ts:11640	.	Zaza ka ta zaza mu bungu dia madia.
+src/data/lessons.ts:11641	.	Zaza tu ta zaza mu bungu dia madia.
+src/data/lessons.ts:11642	.	Zaza lu ta zaza mu bungu dia madia.
+src/data/lessons.ts:11643	.	Zaza ba ta zaza mu bungu dia madia.
+src/data/lessons.ts:11644	.	Mfuekene zaza ka ta zaza mu bungu dia madia.
+src/data/lessons.ts:11823	.	Zaza ni ta zaza mu bungu dia madia.
+src/data/lessons.ts:11828	.	Zaza tu ta zaza mu bungu dia madia.
+src/data/lessons.ts:11830	.	Zaza ba ta zaza mu bungu dia madia.
+src/data/lessons.ts:11872	.	Nkuala ni ta yala.
+src/data/lessons.ts:11873	.	Nkuala ta yala.
+src/data/lessons.ts:11874	.	Nkuala ka ta yala.
+src/data/lessons.ts:11875	.	Nkuala tu ta yala.
+src/data/lessons.ts:11876	.	Nkuala lu ta yala.
+src/data/lessons.ts:11877	.	Nkuala ba ta yala.
+src/data/lessons.ts:11885	.	Vunga ni ta yala.
+src/data/lessons.ts:11894	, .	Yalavunga ka mala ko na Tshinkala, mu nzila ya Mfua.
+src/data/lessons.ts:11902	.	Hata die mpe ha ma hambu ma nzila ya Boko na Kinkala.
+src/data/lessons.ts:12077	.	Nkuala ni ta yala.
+src/data/lessons.ts:12080	.	Nkuala ka ta yala.
+src/data/lessons.ts:12083	.	Nkuala lu ta yala.
+src/data/lessons.ts:12105	/	Luse / Tuse
+src/data/lessons.ts:12106	/	Luto / Tuto
+src/data/lessons.ts:12112	|	Tuti | Matuti
+src/data/lessons.ts:12113	/	Bembe / Mabembe
+src/data/lessons.ts:12116	/	Lumfikini / Tumfikini
+src/data/lessons.ts:12117	/	Sangi / Masangi
+src/data/lessons.ts:12118	/	Tshitunga / Bitunga
+src/data/lessons.ts:12134	.	Yela tshinkuti.
+src/data/lessons.ts:12141	.	Yela mu dia.
+src/data/lessons.ts:12142	.	Yela mu luata.
+src/data/lessons.ts:12143	.	Yela mu yebela.
+src/data/lessons.ts:12196	.	Mu sukula luse.
+src/data/lessons.ts:12197	.	Mu sukula mapapa.
+src/data/lessons.ts:12198	.	Mu sukula moko.
+src/data/lessons.ts:12199	.	Mu sukula mbombo.
+src/data/lessons.ts:12208	.	Sukula mapapa mandi.
+src/data/lessons.ts:12209	.	Sukula mulele andi.
+src/data/lessons.ts:12253	.	Yela tshinkuti.
+src/data/lessons.ts:12254	.	Yela mu dia.
+src/data/lessons.ts:12255	.	Yela mu luata.
+src/data/lessons.ts:12256	.	Yela mu yebela.
+src/data/lessons.ts:12257	.	Sukula luse.
+src/data/lessons.ts:12258	.	Sukula luse luaku.
+src/data/lessons.ts:12259	.	Mu sukula luse.
+src/data/lessons.ts:12260	.	Mu sukula mapapa.
+src/data/lessons.ts:12261	.	Sukula mulele andi.
+src/data/lessons.ts:12425	.	Mu sukula luse.
+src/data/lessons.ts:12426	/	Sangi / Masangi
+src/data/lessons.ts:12428	/	Luse / Tuse
+src/data/lessons.ts:12432	.	Mu sukula mapapa.
+src/data/lessons.ts:12450	' /	N'kolo / Mukolo
+src/data/lessons.ts:12469	' .	N'kolo we nani.
+src/data/lessons.ts:12470	' .	N'kolo we naku.
+src/data/lessons.ts:12471	' .	N'kolo we nandi.
+src/data/lessons.ts:12472	' .	N'kolo we neto.
+src/data/lessons.ts:12473	' .	N'kolo we neno.
+src/data/lessons.ts:12474	' .	N'kolo we nawu.
+src/data/lessons.ts:12481	' .	N'kolo we nani.
+src/data/lessons.ts:12482	' .	N'kolo we naku.
+src/data/lessons.ts:12483	' .	N'kolo we nandi.
+src/data/lessons.ts:12484	' .	N'kolo we neto.
+src/data/lessons.ts:12485	' .	N'kolo we neno.
+src/data/lessons.ts:12486	' .	N'kolo we nawu.
+src/data/lessons.ts:12633	' .	N'kolo we naku.
+src/data/lessons.ts:12634	' .	N'kolo we nani.
+src/data/lessons.ts:12635	' .	N'kolo we neto.
+src/data/lessons.ts:12636	' .	N'kolo we neto.
+src/data/lessons.ts:12637	' .	N'kolo we neno.
+src/data/lessons.ts:12638	' .	N'kolo we neno.
+src/data/lessons.ts:12639	' .	N'kolo we nandi.
+src/data/lessons.ts:12640	' .	N'kolo we naku.
+src/data/lessons.ts:12665	, |	Mfumba, Mufumba | Mifumba
+src/data/lessons.ts:12708	. , |	Dim. mpoka, Mpoka | Mampoka
+src/data/lessons.ts:12720	?	Nani?
+src/data/lessons.ts:12723	' /	N'kolo / Mukolo
+src/data/lessons.ts:12781	?	Nani?
+src/data/lessons.ts:12814	|	Bungu | Mabungu
+src/data/lessons.ts:12815	|	Tshibungu | Bibungu
+src/data/lessons.ts:12821	?	Bue ntele?
+src/data/lessons.ts:12822	?	Bue tele?
+src/data/lessons.ts:12823	?	Bue ka tele?
+src/data/lessons.ts:12824	?	Bue tu tele?
+src/data/lessons.ts:12825	?	Bue lu tele?
+src/data/lessons.ts:12826	?	Bue ba tele?
+src/data/lessons.ts:12828	?	Nki ni ta dirila?
+src/data/lessons.ts:12829	?	Nki ta dirila?
+src/data/lessons.ts:12830	?	Nki ka ta dirila?
+src/data/lessons.ts:12831	?	Nki tu ta dirila?
+src/data/lessons.ts:12832	?	Nki lu ta dirila?
+src/data/lessons.ts:12833	?	Nki ba ta dirila?
+src/data/lessons.ts:12842	?	Nki ta dia?
+src/data/lessons.ts:12843	?	Nki ni ta dia?
+src/data/lessons.ts:12844	?	Nki ka ta dia?
+src/data/lessons.ts:12845	?	Nki tu ta dia?
+src/data/lessons.ts:12846	?	Nki lu ta dia?
+src/data/lessons.ts:12847	?	Nki ba ta dia?
+src/data/lessons.ts:12849	?	Nki ni ta dila?
+src/data/lessons.ts:12850	?	Nki ta dila?
+src/data/lessons.ts:12851	?	Nki ka ta dila?
+src/data/lessons.ts:12852	?	Nki tu ta dila?
+src/data/lessons.ts:12853	?	Nki lu ta dila?
+src/data/lessons.ts:12854	?	Nki ba ta dila?
+src/data/lessons.ts:12856	?	Nkia bungu lembolo kuijila?
+src/data/lessons.ts:12858	?	Kue ta kuenda?
+src/data/lessons.ts:12859	( ) ?	Kue ke(na)?
+src/data/lessons.ts:12860	( ) ?	Kue kotela (ka)?
+src/data/lessons.ts:12861	?	Kue ka?
+src/data/lessons.ts:12862	?	Kue ba?
+src/data/lessons.ts:12863	?	Kue lu?
+src/data/lessons.ts:12864	( ) ?	Nzo mikanda aku kue ye(na)?
+src/data/lessons.ts:12865	( ) ?	Nzo mikanda andi kue ye(na)?
+src/data/lessons.ts:12866	( ) ?	Nzo mikanda eno kue ye(na)?
+src/data/lessons.ts:12867	( ) ?	Nzo mikanda awu kue ye(na)?
+src/data/lessons.ts:12884	?	Bue ntele?
+src/data/lessons.ts:12885	?	Bue tele?
+src/data/lessons.ts:12886	?	Bue ka tele?
+src/data/lessons.ts:12887	?	Bue tu tele?
+src/data/lessons.ts:12888	?	Bue lu tele?
+src/data/lessons.ts:12889	?	Bue ba tele?
+src/data/lessons.ts:12908	?	Nki ni ta dirila?
+src/data/lessons.ts:12909	?	Nki ta dirila?
+src/data/lessons.ts:12910	?	Nki ka ta dirila?
+src/data/lessons.ts:12911	?	Nki tu ta dirila?
+src/data/lessons.ts:12912	?	Nki lu ta dirila?
+src/data/lessons.ts:12913	?	Nki ba ta dirila?
+src/data/lessons.ts:12932	?	Nki ta dia?
+src/data/lessons.ts:12933	?	Nki ni ta dia?
+src/data/lessons.ts:12934	?	Nki ka ta dia?
+src/data/lessons.ts:12935	?	Nki tu ta dia?
+src/data/lessons.ts:12936	?	Nki lu ta dia?
+src/data/lessons.ts:12937	?	Nki ba ta dia?
+src/data/lessons.ts:12945	?	Nki ta dila?
+src/data/lessons.ts:12946	?	Nki ta dia?
+src/data/lessons.ts:12989	?	Kue ta kuenda?
+src/data/lessons.ts:12990	( ) ?	Kue ke(na)?
+src/data/lessons.ts:12991	( ) ?	Kue kotela (ka)?
+src/data/lessons.ts:12992	?	Kue ka?
+src/data/lessons.ts:12993	?	Kue ba?
+src/data/lessons.ts:12994	?	Kue lu?
+src/data/lessons.ts:13002	( ) ?	Nzo mikanda aku kue ye(na)?
+src/data/lessons.ts:13003	( ) ?	Nzo mikanda andi kue ye(na)?
+src/data/lessons.ts:13004	( ) ?	Nzo mikanda eno kue ye(na)?
+src/data/lessons.ts:13005	( ) ?	Nzo mikanda awu kue ye(na)?
+src/data/lessons.ts:13024	?	Nkia bungu lembolo kuijila?
+src/data/lessons.ts:13220	?	Nkia bungu lembolo kuijila?
+src/data/lessons.ts:13221	?	Kue ka?
+src/data/lessons.ts:13222	( ) ?	Nzo mikanda eno kue ye(na)?
+src/data/lessons.ts:13223	?	Nkia bungu lembolo kuijila?
+src/data/lessons.ts:13225	?	Nki tu ta dia?
+src/data/lessons.ts:13227	?	Nki ni ta dila?
+src/data/lessons.ts:13266	|	Tshiba | Biba
+src/data/lessons.ts:13267	|	Nkama | Mikama
+src/data/lessons.ts:13271	|	Ba | Maba
+src/data/lessons.ts:13274	|	Lupangu | Tupangu
+src/data/lessons.ts:13276	|	Baka | Tshibaka | Kibaka | Bibaka
+src/data/lessons.ts:13282	|	Mubaku | Mibaku
+src/data/lessons.ts:13286	|	Lubamba | Mbamba
+src/data/lessons.ts:13289	|	Banda | Mabanda
+src/data/lessons.ts:13295	| '	Musongi | N'songi | Misongi
+src/data/lessons.ts:13298	' |	N'ti | Muti | Miti
+src/data/lessons.ts:13299	|	Mukala | Mikala
+src/data/lessons.ts:13300	|	Mulendi | Milendi
+src/data/lessons.ts:13311	'	N'ti
+src/data/lessons.ts:13358	, .	Na mana sa bubolo, mbo ni fuwa nsatu.
+src/data/lessons.ts:13359	, .	Wa mana sa bubolo, mbo fuwa nsatu.
+src/data/lessons.ts:13360	, .	Ka mana sa bubolo, mbo ka fuwa nsatu.
+src/data/lessons.ts:13361	, .	Ta mana sa bubolo, mbo tu fuwa nsatu.
+src/data/lessons.ts:13362	, .	Luwa mana sa bubolo, mbo lu fuwa nsatu.
+src/data/lessons.ts:13363	, .	Ba mana sa bubolo, mbo ba fuwa nsatu.
+src/data/lessons.ts:13410	|	Ba | Maba
+src/data/lessons.ts:13411	| '	Musongi | N'songi | Misongi
+src/data/lessons.ts:13413	|	Lupangu | Tupangu
+src/data/lessons.ts:13417	|	Kibaka | Bibaka
+src/data/lessons.ts:13422	.	Maba ma tatu me ku lupangu luwani.
+src/data/lessons.ts:13423	' .	N'songi maba ka ta baka.
+src/data/lessons.ts:13424	.	Musongi maba pari na nkokela ka senga mo.
+src/data/lessons.ts:13425	.	Musongi ba diyandi pari na nkokela ka senga diyo.
+src/data/lessons.ts:13426	.	Mbuta Wabeladiyo Payi pakudungu na pelekete ka mona mu kibaka kiya bibiriki.
+src/data/lessons.ts:13452	.	Maba ma tatu me ku lupangu luwani.
+src/data/lessons.ts:13453	.	Maba ma tatu me ku lupangu luwaku.
+src/data/lessons.ts:13454	.	Maba ma tatu me ku lupangu luwandi.
+src/data/lessons.ts:13455	.	Maba ma tatu me ku lupangu luweto.
+src/data/lessons.ts:13456	.	Maba ma tatu me ku lupangu luweno.
+src/data/lessons.ts:13457	.	Maba ma tatu me ku lupangu luwawu.
+src/data/lessons.ts:13473	.	Maba ni ta baka.
+src/data/lessons.ts:13474	.	Maba ta baka.
+src/data/lessons.ts:13475	.	Maba ka ta baka.
+src/data/lessons.ts:13476	.	Maba tu ta baka.
+src/data/lessons.ts:13477	.	Maba lu ta baka.
+src/data/lessons.ts:13478	.	Maba ba ta baka.
+src/data/lessons.ts:13494	.	Tshihala muini mu kibaka kiya bibiriki.
+src/data/lessons.ts:13495	.	Tshihala muini mu kibaka kiya bibiriki.
+src/data/lessons.ts:13496	.	Tshihala ka muini mu kibaka kiya bibiriki.
+src/data/lessons.ts:13497	.	Tshihala tu muini mu kibaka kiya bibiriki.
+src/data/lessons.ts:13498	.	Tshihala lu muini mu kibaka kiya bibiriki.
+src/data/lessons.ts:13499	.	Tshihala ba muini mu kibaka kiya bibiriki.
+src/data/lessons.ts:13522	.	Maba ta baka.
+src/data/lessons.ts:13523	.	Maba ma tatu me ku lupangu luwawu.
+src/data/lessons.ts:13525	.	Musongi ba diyandi pari na nkokela ka senga diyo.
+src/data/lessons.ts:13526	.	Maba ba ta baka.
+src/data/lessons.ts:13528	.	Maba ma tatu me ku lupangu luwaku.
+src/data/lessons.ts:13529	.	Maba ni ta baka.
+src/data/lessons.ts:13565	.	Wa ku ngunini.
+src/data/lessons.ts:13566	.	Wa ku wunini.
+src/data/lessons.ts:13567	.	Wa mu wunini.
+src/data/lessons.ts:13568	.	Wa tu wunini.
+src/data/lessons.ts:13569	.	Wa lu wunini.
+src/data/lessons.ts:13570	.	Wa ba wunini.
+src/data/lessons.ts:13586	.	Wuna ni ta wuna.
+src/data/lessons.ts:13587	.	Wuna ta wuna.
+src/data/lessons.ts:13588	.	Wuna ka ta wuna.
+src/data/lessons.ts:13589	.	Wuna tu ta wuna.
+src/data/lessons.ts:13590	.	Wuna lu ta wuna.
+src/data/lessons.ts:13591	.	Wuna ba ta wuna.
+src/data/lessons.ts:13621	.	Wuna ba ta wuna.
+src/data/lessons.ts:13623	.	Nzangu tu ta bula.
+src/data/lessons.ts:13689	.	Nzila Mbamu ku banda diya Nzari yena.
+src/data/lessons.ts:13690	.	Buku ku banda mfulu diena.
+src/data/lessons.ts:13691	.	Mabuku ku banda mfulu mena.
+src/data/lessons.ts:13701	.	Buku ku nkia meza diena.
+src/data/lessons.ts:13702	.	Buku ku nkia mfulu diena.
+src/data/lessons.ts:13703	.	Vungula ku nkia nkuala yena.
+src/data/lessons.ts:13704	.	Vunga ku nkia mfulu yena.
+src/data/lessons.ts:13705	.	Mavunga ku nkia mfulu mena.
+src/data/lessons.ts:13706	.	Mbuma ku nkia mfulu yena.
+src/data/lessons.ts:13707	.	Mbuma ku nkia mfulu zena.
+src/data/lessons.ts:13708	.	Mulumba ku nkia mfulu wena.
+src/data/lessons.ts:13709	.	Milumba ku nkia mfulu miena.
+src/data/lessons.ts:13710	.	Lupungunzala ku nkia lukaya luena.
+src/data/lessons.ts:13711	.	Tupungunzala ku nkia lukaya tuena.
+src/data/lessons.ts:13720	.	Tshula ha lukaya tshena.
+src/data/lessons.ts:13721	.	Biula ha lukaya biena.
+src/data/lessons.ts:13722	.	Tshihala ku nsaba tshena.
+src/data/lessons.ts:13723	.	Bihala ku nsaba biena.
+src/data/lessons.ts:13724	.	Tshisari ku nsaba tshena.
+src/data/lessons.ts:13725	.	Bisari ku nsaba biena.
+src/data/lessons.ts:13735	.	Buku ku nkia mfulu dieri.
+src/data/lessons.ts:13736	.	Vungula ku nkia nkuala yeri.
+src/data/lessons.ts:13737	.	Vunga ku nkia mfulu dieri.
+src/data/lessons.ts:13738	.	Mavunga ku nkia mfulu meri.
+src/data/lessons.ts:13739	.	Mbuma ku nkia mfulu yeri.
+src/data/lessons.ts:13740	.	Mbuma ku nkia mfulu zeri.
+src/data/lessons.ts:13741	.	Mulumba ku nkia mfulu weri.
+src/data/lessons.ts:13742	.	Milumba ku nkia mfulu mieri.
+src/data/lessons.ts:13743	.	Lupungunzala ku nkia lukaya lueri.
+src/data/lessons.ts:13744	.	Tupungunzala ku nkia lukaya tueri.
+src/data/lessons.ts:13745	.	Tshisari ku nsaba tshieri.
+src/data/lessons.ts:13746	.	Bisari ku nsaba bieri.
+src/data/lessons.ts:13747	.	Biula ha lukaya bieri.
+src/data/lessons.ts:13748	.	Bihala ha lukaya bieri.
+src/data/lessons.ts:13817	.	Tshula ha lukaya tshena.
+src/data/lessons.ts:13820	.	Vungula ku nkia nkuala yeri.
+src/data/lessons.ts:14016	|	Mundele | Mindele
+src/data/lessons.ts:14019	|	Muntu | Bantu
+src/data/lessons.ts:14020	, |	Nti, Muti | Miti
+src/data/lessons.ts:14021	|	Ba | Maba
+src/data/lessons.ts:14022	?	Nka muana we?
+src/data/lessons.ts:14037	.	Nzo ani ha ndeko mamba yena.
+src/data/lessons.ts:14038	.	Nzo ani ha ndeko nto yena.
+src/data/lessons.ts:14039	.	Muntu ha ndeko nti wena.
+src/data/lessons.ts:14040	.	Mundele ha ndeko nzo mikanda wena.
+src/data/lessons.ts:14041	.	Ta Masamba ha ndeko nzo mikanda kena.
+src/data/lessons.ts:14042	.	Ba ha ndeko nti diena.
+src/data/lessons.ts:14051	.	Nzo zeto ha ndeko nto zena.
+src/data/lessons.ts:14052	.	Bantu ha ndeko nti bena.
+src/data/lessons.ts:14053	.	Mindele ha ndeko nzo mikanda miena.
+src/data/lessons.ts:14054	.	Bala ba mindele ha ndeko nzo mikanda bena.
+src/data/lessons.ts:14055	.	Maba ha ndeko nti mena.
+src/data/lessons.ts:14063	?	Nka muana we?
+src/data/lessons.ts:14064	.	Wo wena na mpu.
+src/data/lessons.ts:14065	.	Wo weri na mpu.
+src/data/lessons.ts:14125	.	Bala ba mindele ha ndeko nzo mikanda bena.
+src/data/lessons.ts:14126	.	Mindele ha ndeko nzo mikanda miena.
+src/data/lessons.ts:14127	.	Nzo ani ha ndeko mamba yena.
+src/data/lessons.ts:14128	.	Bantu ha ndeko nti bena.
+src/data/lessons.ts:14156	|	Mulala | Milala
+src/data/lessons.ts:14157	|	Mumanga | Mimanga
+src/data/lessons.ts:14158	|	Musafu | Misafu
+src/data/lessons.ts:14159	|	Musavoka | Misavoka
+src/data/lessons.ts:14160	|	Munkondi | Minkondi
+src/data/lessons.ts:14161	|	Mukokoti | Mikokoti
+src/data/lessons.ts:14162	|	Mupapaayi | Mipapaayi
+src/data/lessons.ts:14177	?	Na we ku nima nzo?
+src/data/lessons.ts:14178	.	Ta Malongo ku nima nzo kena.
+src/data/lessons.ts:14179	.	Mulala ku nima nzo wena.
+src/data/lessons.ts:14180	.	Ku nima nzo mulala wena ko.
+src/data/lessons.ts:14187	.	Ku nima nzo mulala weri ko.
+src/data/lessons.ts:14194	.	Ku nima nzo mbo ku ba mulala.
+src/data/lessons.ts:14208	.	Mbo ni kuna mumanga ku nima nzo.
+src/data/lessons.ts:14209	.	Mbo kuna mumanga ku nima nzo.
+src/data/lessons.ts:14210	.	Mbo ka kuna mumanga ku nima nzo.
+src/data/lessons.ts:14211	.	Mbo tu kuna mumanga ku nima nzo.
+src/data/lessons.ts:14212	.	Mbo lu kuna mumanga ku nima nzo.
+src/data/lessons.ts:14213	.	Mbo ba kuna mumanga ku nima nzo.
+src/data/lessons.ts:14264	.	Ku nima nzo mbo ku ba mulala.
+src/data/lessons.ts:14265	.	Ku nima nzo mulala weri ko.
+src/data/lessons.ts:14293	, |	Tshinzu, Kinzu | Binzu
+src/data/lessons.ts:14316	.	Nguya mu kati diya ntebe yena.
+src/data/lessons.ts:14317	.	Nguya mu banda zena.
+src/data/lessons.ts:14324	.	Madia ma ba lambila mu kinzu matoma me.
+src/data/lessons.ts:14325	.	Bima biya ba lambila mu kinzu biyatoma biena.
+src/data/lessons.ts:14326	.	Tshima tshi ba lambila mu kinzu kiya kibote kiena.
+src/data/lessons.ts:14327	.	Loso lu ba lambila mu kinzu luwa lubote luena.
+src/data/lessons.ts:14328	.	Dimpa di ba lambila mu kinzu diya dibote diena.
+src/data/lessons.ts:14329	.	Mapapayi ma ba lambila mu kinzu ma mabote mena.
+src/data/lessons.ts:14330	.	Buwa bu ba lambila mu kinzu buwa bubote buena.
+src/data/lessons.ts:14331	.	Bikola bi ba lambila mu kinzu biya bibote biena.
+src/data/lessons.ts:14332	.	Madezo ma ba lambila mu kinzu matoma mena.
+src/data/lessons.ts:14403	.	Bikola bi ba lambila mu kinzu biya bibote biena.
+src/data/lessons.ts:14404	.	Bima biya ba lambila mu kinzu biyatoma biena.
+src/data/lessons.ts:14427	|	Vunga | Mavunga
+src/data/lessons.ts:14431	|	Mulele | Milele
+src/data/lessons.ts:14432	|	Buku | Mabuku
+src/data/lessons.ts:14435	.	Zonzeka mabuku maku.
+src/data/lessons.ts:14445	.	Vunga diyani diya nkutikiri.
+src/data/lessons.ts:14446	.	Binkuti biyaku biya kutikiri.
+src/data/lessons.ts:14447	.	Mavunga mandi ma ka kutikiri.
+src/data/lessons.ts:14448	.	Lukuba luto luwa tu kutikiri.
+src/data/lessons.ts:14449	.	Kumbi diyeno diya lu kutikiri.
+src/data/lessons.ts:14450	.	Milele miyawu miya ba kutikiri.
+src/data/lessons.ts:14489	.	Zonzeka mabuku maku.
+src/data/lessons.ts:14520	|	Lala | Malala
+src/data/lessons.ts:14521	|	Tshintu | Bintu
+src/data/lessons.ts:14524	|	Mulele | Milele
+src/data/lessons.ts:14538	.	Kani nzundu ya ba nani.
+src/data/lessons.ts:14539	.	Kani nzundu njieri na yo.
+src/data/lessons.ts:14540	.	Kani nzundu weri na yo.
+src/data/lessons.ts:14541	.	Kani nzundu keri na yo.
+src/data/lessons.ts:14542	.	Kani nzundu tueri na zo.
+src/data/lessons.ts:14543	.	Kani nzundu lueri na zo.
+src/data/lessons.ts:14544	.	Kani nzundu beri na zo.
+src/data/lessons.ts:14553	.	Kani malala njieri na mo.
+src/data/lessons.ts:14554	.	Kani lala njieri na diyo.
+src/data/lessons.ts:14555	.	Kani tshintu njieri na tsho.
+src/data/lessons.ts:14556	.	Kani bintu njieri na biyo.
+src/data/lessons.ts:14557	.	Kani matu weri na mo.
+src/data/lessons.ts:14558	.	Kani lunguba keri na luwo.
+src/data/lessons.ts:14559	.	Kani milele weri na miyo.
+src/data/lessons.ts:14560	.	Kani mulele weri na wo.
+src/data/lessons.ts:14612	.	Kani nzundu beri na zo.
+src/data/lessons.ts:14614	.	Kani bintu njieri na biyo.
+src/data/lessons.ts:14616	.	Kani lunguba keri na luwo.
+src/data/lessons.ts:14617	.	Kani mulele weri na wo.
+src/data/lessons.ts:14719	|	Mulengi | Milengi
+src/data/lessons.ts:14726	|	Koshi | Makoshi
+src/data/lessons.ts:14727	|	Luto | Tuto
+src/data/lessons.ts:14729	?	Tuto kuwe tuena?
+src/data/lessons.ts:14742	, |	Tshizongo, Kizongo, Zongo | Bizongo
+src/data/lessons.ts:14750	, |	Tshinzu, Kinzu | Binzu
+src/data/lessons.ts:14754	|	Lusonso | Nsonso
+src/data/lessons.ts:14761	|	Lami | Malami
+src/data/lessons.ts:14763	|	Yuma | Mayuma
+src/data/lessons.ts:14767	|	Kiyungila | Biyungila
+src/data/lessons.ts:14783	, |	Yengi, Kiyengi | Biyengi
+src/data/lessons.ts:14789	|	Luzabu | Tuzabu
+src/data/lessons.ts:14792	|	Munjanda | Minjanda
+src/data/lessons.ts:14793	|	Zandu | Mazandu
+src/data/lessons.ts:14794	|	Zanga | Mazanga
+src/data/lessons.ts:14796	|	Zanza | Mazanza
+src/data/lessons.ts:14799	|	Kinzembele | Binzembele
+src/data/lessons.ts:14878	|	Kiyungila | Biyungila
+src/data/lessons.ts:14884	|	Lami | Malami
+src/data/lessons.ts:14906	.	Ku nsaba biyungila biya bingi biena ko.
+src/data/lessons.ts:14907	.	Ku nsaba biyungila biya bingi biyeri ko.
+src/data/lessons.ts:14908	.	Ku mbaji biyungila biya bingi biyeri ko.
+src/data/lessons.ts:14915	.	Mu mamba biyungila biya bingi biyeri mo.
+src/data/lessons.ts:14922	.	Ha mamba biyungila biya bingi biyeri ho.
+src/data/lessons.ts:14923	.	Ha nzo biyungila biya bingi biyeri ho.
+src/data/lessons.ts:14930	?	Lami kuwe diyena?
+src/data/lessons.ts:14931	?	Malami kuwe mena?
+src/data/lessons.ts:14932	?	Biyungila kuwe biena?
+src/data/lessons.ts:14933	?	Tshiyungila kuwe tshena?
+src/data/lessons.ts:14934	.	Muntu wa zangama.
+src/data/lessons.ts:15015	.	Ha nzo biyungila biya bingi biyeri ho.
+src/data/lessons.ts:15016	.	Ha mamba biyungila biya bingi biyeri ho.
+src/data/lessons.ts:15018	?	Tshiyungila kuwe tshena?
+src/data/lessons.ts:15019	?	Malami kuwe mena?
+src/data/lessons.ts:15020	.	Muntu wa zangama.
+src/data/lessons.ts:15066	.	Ku mbongo kena.
+src/data/lessons.ts:15067	.	Wa zelokele.
+src/data/lessons.ts:15074	.	Zibika nzo.
+src/data/lessons.ts:15081	.	Mfuenge buyelele buwe nandi.
+src/data/lessons.ts:15096	.	Yengo diya mpamba.
+src/data/lessons.ts:15097	/ .	Yengo diya buna / mpamba.
+src/data/lessons.ts:15169	.	Zibika nzo.
+src/data/lessons.ts:15198	|	Kakasi | Bikakasi
+src/data/lessons.ts:15205	|	Kamu | Makamu
+src/data/lessons.ts:15206	|	Kamisi | Bikamisi
+src/data/lessons.ts:15207	|	Kanda | Makanda
+src/data/lessons.ts:15222	|	Kazu | Makazu
+src/data/lessons.ts:15292	|	Fua | Mafua
+src/data/lessons.ts:15331	|	Fundi | Madundi
+src/data/lessons.ts:15342	|	Fungu | Mafungu
+src/data/lessons.ts:15541	|	Kitemo | Tshitemo | Bitemo
+src/data/lessons.ts:15736	|	Muela | Miela
+src/data/lessons.ts:15796	|	Lami | Malami
+src/data/lessons.ts:15797	|	Yuma | Mayuma
+src/data/lessons.ts:15803	|	Munjanda | Minjanda
+src/data/lessons.ts:15804	|	Zandu | Mazandu
+src/data/lessons.ts:15805	|	Zanga | Mazanga
+src/data/lessons.ts:15806	|	Zanza | Mazanza
+src/data/lessons.ts:15807	|	Kinzembele | Binzembele
+src/data/lessons.ts:15819	|	Yengi | Kiyengi | Biyengi
+src/data/lessons.ts:15877	|	Lufundusulu | Tufundusulu
+src/data/lessons.ts:15880	|	Lufungusulu | Tufungusulu
+src/data/lessons.ts:15882	|	Lufutu | Tufutu
+src/data/lessons.ts:15883	|	Lukaka | Tukaka
+src/data/lessons.ts:15885	|	Lukandu | Tukandu
+src/data/lessons.ts:15886	|	Lukombo | Tukombo
+src/data/lessons.ts:15892	|	Lueka | Tueka
+src/data/lessons.ts:15904	|	Lwoni | Kiluoni | Tshiluoni | Bilwoni
+src/data/lessons.ts:15905	|	Luoni | Tuoni
+src/data/lessons.ts:15906	|	Luandu | Tuandu
+src/data/lessons.ts:15910	|	Luziolo | Tuziolo
+src/data/lessons.ts:15912	|	Luzolanu | Tuzolanu
+src/data/lessons.ts:15914	|	Lundindi | Tundindi
+src/data/lessons.ts:15915	|	Lufita | Tufita
+src/data/lessons.ts:15916	|	Lufulu | Tufulu
+src/data/lessons.ts:15917	|	Lufumba | Tufumba
+src/data/lessons.ts:16088	|	Kitemo | Tshitemo | Bitemo
+src/data/lessons.ts:16343	|	Lusemo | Tusemo
+src/data/lessons.ts:16434	|	Nsa | Musa
+src/data/lessons.ts:16513	|	Fundi | Madundi
+src/data/lessons.ts:16517	|	Fungu | Mafungu
+src/data/lessons.ts:16585	|	Kibakala | Tshibakala
+src/data/lessons.ts:16591	|	Kilenga | Tshilenga | Bilenga
+src/data/lessons.ts:16594	|	Kilo | Thsilo | Bilo
+src/data/lessons.ts:16596	|	Kilobi | Tshilobi | Bilobi
+src/data/lessons.ts:16597	|	Tsilonda | Bilonda
+src/data/lessons.ts:16598	|	Kilongiki | Tshilongiki | Bilongiki
+src/data/lessons.ts:16599	|	Kilongisi | Thsilongisi | Bilongisi
+src/data/lessons.ts:16600	|	Kilongokelo | Thilongokelo | Bilongokelo
+src/data/lessons.ts:16601	|	Kimangu | Tshimangu | Bimangu
+src/data/lessons.ts:16615	|	Kuala | Makuala
+src/data/lessons.ts:16619	|	Kuele | Makuele
+src/data/lessons.ts:16623	|	Laki | Malaki
+src/data/lessons.ts:16628	|	Kimfitshimfi | Bimfi
+src/data/lessons.ts:16629	|	Mubaku | Mibaku
+src/data/lessons.ts:16720	|	Lufundusulu | Tufundusulu
+src/data/lessons.ts:16724	|	Lufungusulu | Tufungusulu
+src/data/lessons.ts:16726	|	Lufutu | Tufutu
+src/data/lessons.ts:16728	|	Lukaka | Tukaka
+src/data/lessons.ts:16734	|	Luyi | Mayi
+src/data/lessons.ts:16748	|	Munkua | Bankua
+src/data/lessons.ts:16749	|	Kilue | Bilue
+src/data/lessons.ts:16750	|	Kilembo | Bilembo
+src/data/lessons.ts:16893	|	Lusampa | Sampa
+src/data/lessons.ts:16905	|	Sa minu | Sa tshiminu | Sa kiminu
+src/data/lessons.ts:16922	-	Saki-masaki
+src/data/lessons.ts:17053	-	Saki-masaki
+src/data/lessons.ts:17090	|	Nkia ngu | Ntshia ngu
+src/data/lessons.ts:17091	|	Nkia | Ntshia
+src/data/lessons.ts:17092	|	Nki | Nthsi
+src/data/lessons.ts:17093	|	Mu nki | Mu ntshi
+src/data/lessons.ts:17122	,	Tala, ntebe ye ho
+src/data/lessons.ts:17123	,	Njila yi tuizidi, ntebe mayela kani
+src/data/lessons.ts:17136	'	Ku nsila n'lemvo
+src/data/lessons.ts:17254	'	Muana wa n'kento
+src/data/lessons.ts:17259	|	Musi | Muishi | Bis | Bishi
+src/data/lessons.ts:17261	|	Muntu | Bantu
+src/data/lessons.ts:17269	|	Mpasi | Mpashi
+src/data/lessons.ts:17270	|	Kia mpasi | Tshia mpashi
+src/data/lessons.ts:17274	|	Moyo | Mioyo
+src/data/lessons.ts:17286	|	Minu | Kiminu | Tshiminu
+src/data/lessons.ts:17292	|	Lundindi | Tundindi
+src/data/lessons.ts:17293	|	Lufita | Tufita
+src/data/lessons.ts:17294	|	Lufulu | Tufulu
+src/data/lessons.ts:17295	|	Lufumba | Tufumba
+src/data/lessons.ts:17337	'	Muana wa n'kento
+src/data/lessons.ts:17363	|	Mubaku | Mibaku
+src/data/lessons.ts:17366	|	Hata | Mahata
+src/data/lessons.ts:17374	.	Mubaku wu diya nsusu.
+src/data/lessons.ts:17375	.	Ngela za zingi ze nandi.
+src/data/lessons.ts:17376	.	Nsusu mubaku wa diri zo.
+src/data/lessons.ts:17377	.	Mubaku wa kotele ku hata.
+src/data/lessons.ts:17378	.	Bumuana ku Mbamu na yokesela buo.
+src/data/lessons.ts:17394	.	Na kotele ku hata.
+src/data/lessons.ts:17395	.	Kotele ku hata.
+src/data/lessons.ts:17396	.	Wa kotele ku hata.
+src/data/lessons.ts:17397	.	Ta kotele ku hata.
+src/data/lessons.ts:17398	.	Lua kotele ku hata.
+src/data/lessons.ts:17399	.	Ba kotele ku hata.
+src/data/lessons.ts:17406	.	Ku hata ni ta kota.
+src/data/lessons.ts:17407	.	Ku hata ta kota.
+src/data/lessons.ts:17408	.	Ku hata ka ta kota.
+src/data/lessons.ts:17409	.	Ku hata tu ta kota.
+src/data/lessons.ts:17410	.	Ku hata lu ta kota.
+src/data/lessons.ts:17411	.	Ku hata ba ta kota.
+src/data/lessons.ts:17479	.	Wa kotele ku hata.
+src/data/lessons.ts:17483	.	Bumuana ku Mbamu na yokesela buo.
+src/data/lessons.ts:17484	.	Kotele ku hata.
+src/data/lessons.ts:17485	.	Ta kotele ku hata.
+src/data/lessons.ts:17508	|	Yestela | Yetela
+src/data/lessons.ts:17520	.	Yetana ka ta yetana.
+src/data/lessons.ts:17536	.	Yetela ni ta yetela.
+src/data/lessons.ts:17537	.	Yetela ta yetela.
+src/data/lessons.ts:17538	.	Yetela ka ta yetela.
+src/data/lessons.ts:17539	.	Yetela tu ta yetela.
+src/data/lessons.ts:17540	.	Yetela lu ta yetela.
+src/data/lessons.ts:17541	.	Yetela ba ta yetela.
+src/data/lessons.ts:17548	.	Mazono na yetele.
+src/data/lessons.ts:17549	.	Mazono wa yetele.
+src/data/lessons.ts:17550	.	Mazono wa yetele.
+src/data/lessons.ts:17551	.	Mazono tua yetele.
+src/data/lessons.ts:17552	.	Mazona lua yetele.
+src/data/lessons.ts:17553	.	Mazono ba yetele.
+src/data/lessons.ts:17571	.	Ngiele yilulu ku mamba.
+src/data/lessons.ts:17572	.	Wele yilulu ku mamba.
+src/data/lessons.ts:17573	.	Wele yilulu ku mamba.
+src/data/lessons.ts:17574	.	Tuele yilulu ku mamba.
+src/data/lessons.ts:17575	.	Luele yilulu ku mamba.
+src/data/lessons.ts:17576	.	Bele yilulu ku mamba.
+src/data/lessons.ts:17583	.	Ngiele mu nzila Kongo.
+src/data/lessons.ts:17584	.	Wele mu nzila Kongo.
+src/data/lessons.ts:17585	.	Wele mu nzila Kongo.
+src/data/lessons.ts:17586	.	Tuele mu nzila Kongo.
+src/data/lessons.ts:17587	.	Luele mu nzila Kongo.
+src/data/lessons.ts:17588	.	Bele mu nzila Kongo.
+src/data/lessons.ts:17671	.	Wele yilulu ku mamba.
+src/data/lessons.ts:17672	.	Tuele mu nzila Kongo.
+src/data/lessons.ts:17673	.	Mazono wa yetele.
+src/data/lessons.ts:17674	.	Mazono wa yetele.
+src/data/lessons.ts:17675	.	Tuele yilulu ku mamba.
+src/data/lessons.ts:17676	.	Yetela tu ta yetela.
+src/data/lessons.ts:17677	.	Yetela ba ta yetela.
+src/data/lessons.ts:17699	|	Munkua | Bankua
+src/data/lessons.ts:17722	.	Luika lue nani.
+src/data/lessons.ts:17723	.	Luika lue naku.
+src/data/lessons.ts:17724	.	Luika lue nandi.
+src/data/lessons.ts:17725	.	Luika lue neto.
+src/data/lessons.ts:17726	.	Luika lue neno.
+src/data/lessons.ts:17727	.	Luika lue nawu.
+src/data/lessons.ts:17734	.	Luika lueri nani.
+src/data/lessons.ts:17735	.	Luika lueri naku.
+src/data/lessons.ts:17736	.	Luika lueri nandi.
+src/data/lessons.ts:17737	.	Luika lueri neto.
+src/data/lessons.ts:17738	.	Luika lueri neno.
+src/data/lessons.ts:17739	.	Luika lueri nawu.
+src/data/lessons.ts:17823	.	Luika lue nandi.
+src/data/lessons.ts:17824	.	Luika lue nani.
+src/data/lessons.ts:17825	.	Luika lue neno.
+src/data/lessons.ts:17829	.	Luika lueri nandi.
+src/data/lessons.ts:18304	-	Kimburika-malenge
+src/data/lessons.ts:18364	-	Ngundu-nuwa
+src/data/lessons.ts:18371	-	Nkala-nseke
+src/data/lessons.ts:18414	-	Nkala-nseke
+src/data/lessons.ts:18443	-	Na konzi-konzi
+src/data/lessons.ts:18448	-	Nkunda-nkunda
+src/data/lessons.ts:18520	-	Na konzi-konzi
+src/data/lessons.ts:18685	( ) ?	Mapapa ma kuwa me(na)?
+src/data/lessons.ts:18686	( ) ?	Tshinkuti tshi kuwa tshie(na)?
+src/data/lessons.ts:18687	( ) ?	Binkuti bi kuwa bie(na)?
+src/data/lessons.ts:18688	?	Mabuku ma kuwa me mu nzo mu?
+src/data/lessons.ts:18689	?	Mampa ma kuwa me ha zandu ha?
+src/data/lessons.ts:18690	?	Miti mi kuwa mie ku nsaba ku?
+src/data/lessons.ts:18696	( ) .	Ku nsaba ku miti mia mingi mie(na) ku.
+src/data/lessons.ts:18697	, ( ) .	Ha zandu ha, mampa ma mingi me(na) ha.
+src/data/lessons.ts:18698	, ( ) .	Mu nzo mu, mabuku ma mingi me(na) mu.
+src/data/lessons.ts:18713	( ) ?	Ambo tshinkuti tshi kuwa tshie(na)?
+src/data/lessons.ts:18714	?	Ambo nge?
+src/data/lessons.ts:18715	?	Ambo kuwe wa tuka?
+src/data/lessons.ts:18716	?	Ambo nki lu ta sa?
+src/data/lessons.ts:18717	?	Ambo kuwe lu ta kuwenda?
+src/data/lessons.ts:18718	?	Ambo kuwe lu baka?
+src/data/lessons.ts:18719	( ) ?	Ambo nsayi kuwe ke(na)?
+src/data/lessons.ts:18734	?	Mvula kuwa ze nani?
+src/data/lessons.ts:18735	?	Mvula kuwa ze naku?
+src/data/lessons.ts:18736	?	Mvula kuwa ze nandi?
+src/data/lessons.ts:18751	( ) ?	Na(ni) diri nsusu ani?
+src/data/lessons.ts:18752	?	Na labiri lala dia Ta Samba?
+src/data/lessons.ts:18753	( ) ?	Lala di dia na(ni)?
+src/data/lessons.ts:18754	( ) ?	Mulele wu wa na(ni)?
+src/data/lessons.ts:18755	( ) ?	Mbele yi ya na(ni)?
+src/data/lessons.ts:18756	( ) ?	Mbele ji za na(ni)?
+src/data/lessons.ts:18757	( ) ?	Tshinkuti tshi tsha na(ni)?
+src/data/lessons.ts:18758	( ) ?	Binkuti bi bia na(ni)?
+src/data/lessons.ts:18759	( ) ?	Miti mi mia na(ni)?
+src/data/lessons.ts:18774	.	Nzangu tu ta bula.
+src/data/lessons.ts:18775	?	Nzangu lu ta bula?
+src/data/lessons.ts:18776	?	Nki zololo dia mbaji?
+src/data/lessons.ts:18835	?	Na labiri lala dia Ta Samba?
+src/data/lessons.ts:18836	( ) ?	Ambo tshinkuti tshi kuwa tshie(na)?
+src/data/lessons.ts:18837	( ) ?	Tshinkuti tshi tsha na(ni)?
+src/data/lessons.ts:18838	( ) ?	Tshinkuti tshi kuwa tshie(na)?
+src/data/lessons.ts:18840	( ) ?	Na(ni) diri nsusu ani?
+src/data/lessons.ts:18904	.	Hana mono mamba.
+src/data/lessons.ts:18905	.	Baku malavu.
+src/data/lessons.ts:18906	.	Sekola malavu mu mbungu.
+src/data/lessons.ts:18963	.	Sekola malavu mu mbungu.
+src/data/lessons.ts:19066	-	Muafuta-miafuta
+src/data/lessons.ts:19098	, |	Tshina, Kina | Bina
+src/data/lessons.ts:19099	|	Tshina | Bina
+src/data/lessons.ts:19133	|	Lukuni | Nkuni
+src/data/lessons.ts:19138	( )	Tshitari (a court)
+src/data/lessons.ts:19139	( )	Tshitari (a long)
+src/data/lessons.ts:19148	|	Kitunga | Bitunga
+src/data/lessons.ts:19150	|	Munturia | Minturia
+src/data/lessons.ts:19151	|	Kisalu | Tshisalu | Salu | Bisalu
+src/data/lessons.ts:19158	|	Kifulu | Tshifulu | Bifulu
+src/data/lessons.ts:19161	|	Luvu | Mvu
+src/data/lessons.ts:19169	|	Lembe | Malembe
+src/data/lessons.ts:19170	|	Munkiobo | Minkiobo
+src/data/lessons.ts:19172	|	Munganga | Tunganga
+src/data/lessons.ts:19173	|	Mushikimbila | Mishikimbila
+src/data/lessons.ts:19175	|	Kikuku | Bikuku
+src/data/lessons.ts:19190	( )	Tshitari (a long)
+src/data/lessons.ts:19220	-	nkoma-nkoma
+src/data/lessons.ts:19275	'	n'kelo
+src/data/lessons.ts:19412	,	Njila ya ku jimbakana, kala hana hambu
+src/data/lessons.ts:19757	|	lumbumbuzi | tumbumbuzi
+src/data/lessons.ts:19758	|	luila | tuila
+src/data/lessons.ts:19759	|	lukilazi | tukilazi
+src/data/lessons.ts:19760	|	luhe | mahe
+src/data/lessons.ts:19761	|	lukoka | tukoka
+src/data/lessons.ts:19762	|	lubumba | tubumba
+src/data/lessons.ts:19763	|	luke | tuke
+src/data/lessons.ts:19764	|	lubadi | tubadi
+src/data/lessons.ts:19765	-	buaku-maku
+src/data/lessons.ts:19766	|	buala | mala
+src/data/lessons.ts:19767	|	buatu | matu
+src/data/lessons.ts:19768	|	buko | mako
+src/data/lessons.ts:19769	|	koko | moko
+src/data/lessons.ts:19770	|	kibabala | bibabala
+src/data/lessons.ts:19771	|	kibalabala | bibalabala
+src/data/lessons.ts:19772	|	kikola | bikola
+src/data/lessons.ts:19773	|	kimvinzingila | bimvinzingila
+src/data/lessons.ts:19774	|	kinkuelankuela | binkuelankuela
+src/data/lessons.ts:19775	|	kindiongoloko | bindiongoloko
+src/data/lessons.ts:19776	|	muniungutinunu | miniungutinunu
+src/data/lessons.ts:19780	|	mubati | mibati
+src/data/lessons.ts:19781	|	mubasa | mibasa
+src/data/lessons.ts:19785	|	kinionia | binionia
+src/data/lessons.ts:19786	|	kimfinia | bimfinia
+src/data/lessons.ts:19787	|	lubanji | mbanji
+src/data/lessons.ts:19789	|	mutima | mitima
+src/data/lessons.ts:19973	|	Muloki | Miloki
+src/data/lessons.ts:19976	|	Musaka | Misaka
+src/data/lessons.ts:19983	: , .	Kifuani : Bole bantu, bukaka musongo.
+src/data/lessons.ts:19998	?	Bue ba tele?
+src/data/lessons.ts:20005	?	Nzangu lu ta bula?
+src/data/lessons.ts:20006	?	Ambo kue lu ta kuenda?
+src/data/lessons.ts:20007	?	Ambo kue lu baka?
+src/data/lessons.ts:20008	?	Ambo nsayi kue ke?
+src/data/lessons.ts:20009	?	Nki zololo dia mbaji?
+src/data/lessons.ts:20010	?	Lu ta sa nki?
+src/data/lessons.ts:20212	.	Moyo tatika.
+src/data/lessons.ts:20213	.	Moyo tatika wu ta ku ntatika.
+src/data/lessons.ts:20214	.	Bubelo nje.
+src/data/lessons.ts:20215	.	Muana yema ka ta yema.
+src/data/lessons.ts:20216	.	Muana mabeni ka ta nua.
+src/data/lessons.ts:20217	, .	Muana wu sakalale, dia ka ta dia.
+src/data/lessons.ts:20218	.	Kinienia wa zolo bia fua.
+src/data/lessons.ts:20219	.	Muana nkiri ku nima.
+src/data/lessons.ts:20220	?	Sakalale?
+src/data/lessons.ts:20221	.	Nsuki za zingi ze nani.
+src/data/lessons.ts:20222	.	Meso nandi ma toma me.
+src/data/lessons.ts:20223	.	Ntu ani wa mpamba.
+src/data/lessons.ts:20224	.	Diatulu aku.
+src/data/lessons.ts:20225	.	Meso mani.
+src/data/lessons.ts:20305	.	Meso nandi ma toma me.
+src/data/lessons.ts:20306	.	Meso ma toma me nandi.
+src/data/lessons.ts:20307	.	Yelo tshiandi tia tingi tie.
+src/data/lessons.ts:20421	.	Mpashi zo ntama za tuka.
+src/data/lessons.ts:20422	!	Nsoni kua beno!
+src/data/lessons.ts:20423	.	Nsoni na mpasi ta tamburi tala fua tala vuka.
+src/data/lessons.ts:20424	, .	Matondo, Mama Ntangu.
+src/data/lessons.ts:20425	.	Nsaba ya toma.
+src/data/lessons.ts:20426	.	Nsaba ya beto ya nene.
+src/data/lessons.ts:20427	!	Sa musualu!
+src/data/lessons.ts:20428	.	Dema dia dingi.
+src/data/lessons.ts:20429	.	Bola dia bola.
+src/data/lessons.ts:20430	.	Tata ani wa yenda ku mavula.
+src/data/lessons.ts:20431	.	Mandala meka mayuma.
+src/data/lessons.ts:20432	.	Nua fumu.
+src/data/lessons.ts:20433	.	Su keri nua.
+src/data/lessons.ts:20434	' , .	Nkaka aku ya n'kento, su keri nua.
+src/data/lessons.ts:20435	.	Nkaka aku ya bakala fumu dia ba mindele keri nua.
+src/data/lessons.ts:20436	.	Nsibidi.
+src/data/lessons.ts:20437	.	Bala ba tomene sala.
+src/data/lessons.ts:20438	.	Malavu mu tiari ka ma fuluka ka ko.
+src/data/lessons.ts:20439	.	Ntela.
+src/data/lessons.ts:20440	.	Nzambi ka bua ka tolo ko.
+src/data/lessons.ts:20441	.	Zinga dimbu.
+src/data/lessons.ts:20442	.	Makayabu mungua nduri mena.
+src/data/lessons.ts:20443	.	Nsusu ya mbakala kuba yi ta kuba.
+src/data/lessons.ts:20444	.	Mbua yi bolele.
+src/data/lessons.ts:20445	.	Binkuti bi bolele.
+src/data/lessons.ts:20446	, .	Mazono mvula bu ya nokene, binkuti bia bolele.
+src/data/lessons.ts:20447	.	Bunene na bakiri.
+src/data/lessons.ts:20448	.	Njeka wa nuna.
+src/data/lessons.ts:20449	.	Njeka wa djuna.
+src/data/lessons.ts:20450	.	Nunini.
+src/data/lessons.ts:20451	.	Ku nkeshi nje.
+src/data/lessons.ts:20452	.	Nkeshi mbakiri.
+src/data/lessons.ts:20453	.	Njunini.
+src/data/lessons.ts:20454	.	Nuni zi nunini.
+src/data/lessons.ts:20455	.	Njeka wa munene.
+src/data/lessons.ts:20456	.	Ntemo wa zulu.
+src/data/lessons.ts:20457	.	Muini we ko.
+src/data/lessons.ts:20458	.	Mbaji noka ka noka.
+src/data/lessons.ts:20459	.	Tshifulu tshi tshia toma.
+src/data/lessons.ts:20460	.	Mu nza ya mvimba.
+src/data/lessons.ts:20461	.	Ntoto wa nene we.
+src/data/lessons.ts:20462	.	Zulu dia di nene die.
+src/data/lessons.ts:20495	.	Buna bu ka turidi.
+src/data/lessons.ts:20496	.	Mazono bu beri sala.
+src/data/lessons.ts:20497	.	Dieka bu ka telamane.
+src/data/lessons.ts:20498	.	Muini ngo bu i djokele.
+src/data/lessons.ts:20499	.	Mfumu bu ka kuiza.
+src/data/lessons.ts:20500	, .	Bu beri kue sari, tata awu turidi.
+src/data/lessons.ts:20501	.	Bu ya nokene.
+src/data/lessons.ts:20511	.	Mazono.
+src/data/lessons.ts:20512	.	Buaubu.
+src/data/lessons.ts:20513	.	Mbaji noka ka noka.
+src/data/lessons.ts:20529	.	Tshima thsia ngana.
+src/data/lessons.ts:20530	.	Ka diambu a ko.
+src/data/lessons.ts:20531	.	Mu diambu dio.
+src/data/lessons.ts:20532	.	Mu nkiangu dio.
+src/data/lessons.ts:20533	.	Mu mpila yo.
+src/data/lessons.ts:20534	.	Mu kia bungu.
+src/data/lessons.ts:20535	.	Nzala ku yula.
+src/data/lessons.ts:20536	.	Nge zebi longesa.
+src/data/lessons.ts:20537	.	Ngiendi kuani ju zeba.
+src/data/lessons.ts:20538	.	Ntomono dia.
+src/data/lessons.ts:20539	.	Ndiri bu bote.
+src/data/lessons.ts:20540	, .	Bika, bika.
+src/data/lessons.ts:20541	.	Lumbu tshi nsaba ya toma ye.
+src/data/lessons.ts:20542	.	Kune miti mia mingi mie kuna.
+src/data/lessons.ts:20543	.	Hane bifulu bia bingi bie hana.
+src/data/lessons.ts:20544	.	Hana nzo bifulu bia bingi bie hana.
+src/data/lessons.ts:20545	.	Beto bifulu bia bingi bie neto.
+src/data/lessons.ts:20546	.	Ya beto ya fieti kua.
+src/data/lessons.ts:20647	?	Nkombo kue ye?
+src/data/lessons.ts:20648	?	Ngulu kue ye?
+src/data/lessons.ts:20649	?	Mbua kue ye?
+src/data/lessons.ts:20650	?	Tshibuka tshi tsha muntu teshe?
+src/data/lessons.ts:20651	.	Bakento bole.
+src/data/lessons.ts:20652	.	Nuni zole.
+src/data/lessons.ts:20653	.	Nzo zole.
+src/data/lessons.ts:20654	.	Mapapa mole.
+src/data/lessons.ts:20655	.	Binkuti biole.
+src/data/lessons.ts:20656	.	Mbuata zole.
+src/data/lessons.ts:20657	.	Dimpa di moshi.
+src/data/lessons.ts:20658	.	Mampa ma tatu.
+src/data/lessons.ts:20659	.	Mampa makumatatu na ma tanu.
+src/data/lessons.ts:20660	.	Binkuti makumatatu na bi tanu.
+src/data/lessons.ts:20661	.	Bintu biole.
+src/data/lessons.ts:20662	.	Mbua makumatatu na tanu.
+src/data/lessons.ts:20663	.	Mbuma moshi.
+src/data/lessons.ts:20664	.	Mbuma makumatatu na tanu.
+src/data/lessons.ts:20665	!	Djoka Milou!
+src/data/lessons.ts:20666	.	Ngulu ani nkumbu Paul.
+src/data/lessons.ts:20667	?	Paul kue kue?
+src/data/lessons.ts:20668	?	Nsafu kue yena?
+src/data/lessons.ts:20669	?	Nsafu kue ye?
+src/data/lessons.ts:20670	?	Nsafu kue zena?
+src/data/lessons.ts:20671	?	Nsafu kue ze?
+src/data/lessons.ts:20672	?	Luzala kue luena?
+src/data/lessons.ts:20673	?	Luzala kue lue?
+src/data/lessons.ts:20674	?	Nzala kue ze?
+src/data/lessons.ts:20675	?	Nzala kue zena?
+src/data/lessons.ts:20676	?	Lukuba kue luena?
+src/data/lessons.ts:20677	?	Lukuba kue lue?
+src/data/lessons.ts:20678	?	Tukuba kue tue?
+src/data/lessons.ts:20679	?	Tukuba kue tuena?
+src/data/lessons.ts:20680	?	Dimpa kue diena?
+src/data/lessons.ts:20681	?	Dimpa kue die?
+src/data/lessons.ts:20682	?	Mampa kue mena?
+src/data/lessons.ts:20683	?	Mampa kue me?
+src/data/lessons.ts:20684	?	Bitenda kue biena?
+src/data/lessons.ts:20685	' .	Bu keri n'kento andi.
+src/data/lessons.ts:20700	?	Nsafu kue ye?
+src/data/lessons.ts:20701	?	Nsafu kue ze?
+src/data/lessons.ts:20702	?	Luzala kue lue?
+src/data/lessons.ts:20703	?	Nzala kue ze?
+src/data/lessons.ts:20704	?	Lukuba kue lue?
+src/data/lessons.ts:20705	?	Tukuba kue tue?
+src/data/lessons.ts:20706	?	Dimpa kue die?
+src/data/lessons.ts:20707	?	Mampa kue me?
+src/data/lessons.ts:20811	.	Bala ba ngulu bia bitatu.
+src/data/lessons.ts:20812	.	Madia ma bele mpimpa.
+src/data/lessons.ts:20813	, .	Bo bu wa tshiri na meno, dia masangu.
+src/data/lessons.ts:20814	.	Na yikidi.
+src/data/lessons.ts:20815	.	Na yikidi ntshana muana nsusu.
+src/data/lessons.ts:20816	.	Tolo tua tu bote.
+src/data/lessons.ts:20817	!	Duka!
+src/data/lessons.ts:20818	.	Dukeno.
+src/data/lessons.ts:20819	.	Ta dukeno.
+src/data/lessons.ts:20820	.	Telama.
+src/data/lessons.ts:20821	.	Ta telama.
+src/data/lessons.ts:20822	.	Telameno.
+src/data/lessons.ts:20823	.	Zakala.
+src/data/lessons.ts:20824	.	Zakaleti.
+src/data/lessons.ts:20825	.	Ta zakala.
+src/data/lessons.ts:20826	.	Zakaleno.
+src/data/lessons.ts:20827	.	Dia.
+src/data/lessons.ts:20828	.	Ta dieno.
+src/data/lessons.ts:20829	.	Dieno.
+src/data/lessons.ts:20830	.	Sala.
+src/data/lessons.ts:20831	.	Ta sala.
+src/data/lessons.ts:20832	.	Saleno.
+src/data/lessons.ts:20833	!	Ba sala!
+src/data/lessons.ts:20834	.	Saleno mbote.
+src/data/lessons.ts:20835	.	Bilongo ngiele sumba.
+src/data/lessons.ts:20836	.	Nge bikua ku zololo a bio ko.
+src/data/lessons.ts:20837	.	Ka njena na nsatu ko.
+src/data/lessons.ts:20838	.	Kuena na nsatu ko.
+src/data/lessons.ts:20839	.	Kena na nsatu ko.
+src/data/lessons.ts:20840	.	Ka tuena na nsatu.
+src/data/lessons.ts:20841	.	Ka luena na nsatu ko.
+src/data/lessons.ts:20842	.	Ka bena na nsatu ko.
+src/data/lessons.ts:20843	.	Mbua yi sekele.
+src/data/lessons.ts:20844	.	Mbua zi sekele.
+src/data/lessons.ts:20845	.	Tshinzingu tsho.
+src/data/lessons.ts:20846	' .	Mbua ka tiamukini kulu mu n'samu ntela.
+src/data/lessons.ts:20879	!	Duka!
+src/data/lessons.ts:20880	.	Ta dukeno.
+src/data/lessons.ts:20881	.	Dukeno.
+src/data/lessons.ts:20882	.	Telama.
+src/data/lessons.ts:20883	.	Telameno.
+src/data/lessons.ts:20884	.	Zakala.
+src/data/lessons.ts:20885	.	Zakaleti.
+src/data/lessons.ts:20886	.	Zakaleno.
+src/data/lessons.ts:20896	.	Ka njena na nsatu ko.
+src/data/lessons.ts:20897	.	Kuena na nsatu ko.
+src/data/lessons.ts:20898	.	Kena na nsatu ko.
+src/data/lessons.ts:20899	.	Ka tuena na nsatu.
+src/data/lessons.ts:20900	.	Ka luena na nsatu ko.
+src/data/lessons.ts:20901	.	Ka bena na nsatu ko.
+src/data/lessons.ts:21005	.	Mvula makumatatu na tanu ze nani.
+src/data/lessons.ts:21006	.	Mvula lusambuadi na tanu ze naku.
+src/data/lessons.ts:21007	.	Mvula nkama ze nani.
+src/data/lessons.ts:21008	.	Mvula makumaya na ya ze nani.
+src/data/lessons.ts:21009	.	Mvuka kumi.
+src/data/lessons.ts:21010	.	Mvukulu bua.
+src/data/lessons.ts:21011	.	Wa wuna yoka wa zakala ba ku tunguridi.
+src/data/lessons.ts:21012	?	Kua wirir?
+src/data/lessons.ts:21013	?	Lu wiri?
+src/data/lessons.ts:21014	.	Binsono bieto.
+src/data/lessons.ts:21015	.	Ndinga ya banuni.
+src/data/lessons.ts:21016	.	Mpeho ya nene ye.
+src/data/lessons.ts:21017	.	Bantu ba wu bo.
+src/data/lessons.ts:21018	' .	N'kento wa wu wo.
+src/data/lessons.ts:21019	.	Koko ku.
+src/data/lessons.ts:21020	.	Kulu ku.
+src/data/lessons.ts:21021	.	Buku dio.
+src/data/lessons.ts:21022	.	Ndinga yo.
+src/data/lessons.ts:21023	.	Ya me.
+src/data/lessons.ts:21024	.	Ya nge.
+src/data/lessons.ts:21025	.	Ya yandi.
+src/data/lessons.ts:21026	.	Ya beto.
+src/data/lessons.ts:21027	.	Ya beno.
+src/data/lessons.ts:21028	.	Ya bawu.
+src/data/lessons.ts:21029	.	Kua kuo nso.
+src/data/lessons.ts:21030	.	Ntoto wa mvimba.
+src/data/lessons.ts:21031	.	Mutoto wa mukaka.
+src/data/lessons.ts:21032	.	Bu wa butuka.
+src/data/lessons.ts:21033	?	Ehe bue?
+src/data/lessons.ts:21034	?	Ha nki kua?
+src/data/lessons.ts:21035	.	Mbote zeno.
+src/data/lessons.ts:21036	.	Mbote aku.
+src/data/lessons.ts:21037	.	Salu tshe nani.
+src/data/lessons.ts:21038	.	Salu kie nani.
+src/data/lessons.ts:21039	.	Sala ni ta sala.
+src/data/lessons.ts:21040	.	Ka nzololo a ko.
+src/data/lessons.ts:21041	?	Dia dia?
+src/data/lessons.ts:21042	.	Kintu kieka kia yuma.
+src/data/lessons.ts:21043	.	Bintu bieka bia yuma.
+src/data/lessons.ts:21044	.	Mbua zeka za bola.
+src/data/lessons.ts:21045	.	Mbua ji bolele.
+src/data/lessons.ts:21046	.	Yandi wa nuna.
+src/data/lessons.ts:21047	.	Wa toma we.
+src/data/lessons.ts:21048	.	Ku mamba ke.
+src/data/lessons.ts:21049	.	Mbua ya toma ke na yo.
+src/data/lessons.ts:21050	.	Nge kaka.
+src/data/lessons.ts:21051	.	Yandi kaka.
+src/data/lessons.ts:21052	.	Nkento andi wa kaka.
+src/data/lessons.ts:21053	.	Nkento andi wa bole.
+src/data/lessons.ts:21054	' .	N'kento andi wa ba tatu.
+src/data/lessons.ts:21055	' .	N'kento andi wa ba ya.
+src/data/lessons.ts:21056	' .	N'kento andi wa ba tanu.
+src/data/lessons.ts:21057	.	Lari kia tu ta kue bonge.
+src/data/lessons.ts:21058	.	Mvula ya yeka noka.
+src/data/lessons.ts:21059	.	Muana ni diata keka diata.
+src/data/lessons.ts:21060	.	Ba tueka mona.
+src/data/lessons.ts:21061	.	Nketi kuenda ka mvula yi nokene.
+src/data/lessons.ts:21062	.	Bala bole.
+src/data/lessons.ts:21063	.	Bala makumatatu na ba tanu.
+src/data/lessons.ts:21064	.	Muana mu moshi.
+src/data/lessons.ts:21079	.	Bantu ba wu bo.
+src/data/lessons.ts:21080	' .	N'kento wa wu wo.
+src/data/lessons.ts:21081	.	Koko ku.
+src/data/lessons.ts:21082	.	Kulu ku.
+src/data/lessons.ts:21083	.	Buku dio.
+src/data/lessons.ts:21084	.	Ndinga yo.
+src/data/lessons.ts:21101	.	Ya me.
+src/data/lessons.ts:21102	.	Ya nge.
+src/data/lessons.ts:21103	.	Ya yandi.
+src/data/lessons.ts:21104	.	Ya beto.
+src/data/lessons.ts:21105	.	Ya beno.
+src/data/lessons.ts:21106	.	Ya bawu.
+src/data/lessons.ts:21123	.	Mvula ya yeka noka.
+src/data/lessons.ts:21124	.	Muana ni diata keka diata.
+src/data/lessons.ts:21125	.	Ba tueka mona.
+src/data/lessons.ts:22174	.	Ka...ko
+src/data/lessons.ts:22392	/	Nioka / Banioka
+src/data/lessons.ts:22393	/	Ngombe / Bangombe
+src/data/lessons.ts:22394	/	Nkala / Bankala
+src/data/lessons.ts:22395	/	Nkusu / Bankusu
+src/data/lessons.ts:22547	!	Buka!
+src/data/lessons.ts:22548	!	Benda!
+src/data/lessons.ts:22549	!	Buila!
+src/data/lessons.ts:22550	!	Betama!
+src/data/lessons.ts:22551	!	Bumba!
+src/data/lessons.ts:22697	→	Mwana → Bumwana
+src/data/lessons.ts:22698	→	Kuluntu → Bukuluntu
+src/data/lessons.ts:22699	→	Yaya → Buyaya
+src/data/lessons.ts:22700	→	Zitu → Buzitu
+src/data/lessons.ts:22701	→	Kundi → Bukundi
+src/data/lessons.ts:22815	?	Lu kolele?
+src/data/lessons.ts:22816	?	Vumbukidi?
+src/data/lessons.ts:22817	?	Lu vumbukidi?
+src/data/lessons.ts:22820	?	Chemi?
+src/data/lessons.ts:22821	?	Lu chemi?
+src/data/lessons.ts:22859	?	Lu kolele?
+src/data/lessons.ts:22860	?	Vumbukidi?
+src/data/lessons.ts:22861	?	Lu vumbukidi?
+src/data/lessons.ts:22862	?	Chemi?
+src/data/lessons.ts:22863	?	Lu chemi?
+src/data/lessons.ts:22960	|	Muntu | Bantu
+src/data/lessons.ts:22961	|	Muana | Bala
+src/data/lessons.ts:22962	|	Mutekolo | Batekolo
+src/data/lessons.ts:22963	|	Nkaka | Bankaka
+src/data/lessons.ts:22964	|	Nkento | Bakento
+src/data/lessons.ts:22966	|	Mulele | Milele
+src/data/lessons.ts:22967	|	Muti | Miti
+src/data/lessons.ts:22968	|	Mulembo | Milembo
+src/data/lessons.ts:22969	|	Mulumba | Milumba
+src/data/lessons.ts:22970	|	Mutshila | Mitshila
+src/data/lessons.ts:22990	→	Muntu → Bantu
+src/data/lessons.ts:22991	→	Muana → Bala
+src/data/lessons.ts:22992	→	Mutekolo → Batekolo
+src/data/lessons.ts:23003	→	Muti → Miti
+src/data/lessons.ts:23004	→	Mulele → Milele
+src/data/lessons.ts:23005	→	Mulembo → Milembo
+src/data/lessons.ts:23006	→	Mutshila → Mitshila
+src/data/lessons.ts:23123	|	Kizengi | Bizengi
+src/data/lessons.ts:23124	|	Kikoba | Bikoba
+src/data/lessons.ts:23125	|	Kibanga | Bibanga
+src/data/lessons.ts:23126	|	Kiamvu | Biamvu
+src/data/lessons.ts:23127	|	Kihota | Bihota
+src/data/lessons.ts:23128	|	Kizongo | Bizongo
+src/data/lessons.ts:23129	|	Lembe | Malembe
+src/data/lessons.ts:23130	|	Lukaya | Makaya
+src/data/lessons.ts:23131	|	Luwa | Buwa
+src/data/lessons.ts:23132	|	Lumbembemba | Tumbembemba
+src/data/lessons.ts:23133	|	Lubo | Tubo
+src/data/lessons.ts:23134	|	Lumbuetete | Mbuetete
+src/data/lessons.ts:23135	|	Kulu | Malu
+src/data/lessons.ts:23136	|	Kutu | Makutu
+src/data/lessons.ts:23137	|	Kuku | Makuku
+src/data/lessons.ts:23138	|	Zu | Mazu
+src/data/lessons.ts:23139	|	Lala dia nsa | Malala dia nsa
+src/data/lessons.ts:23140	|	Boria | Maboria
+src/data/lessons.ts:23156	→	Kikoba → Bikoba
+src/data/lessons.ts:23157	→	Kibanga → Bibanga
+src/data/lessons.ts:23158	→	Kiamvu → Biamvu
+src/data/lessons.ts:23159	→	Kizongo → Bizongo
+src/data/lessons.ts:23170	→	Lukaya → Makaya
+src/data/lessons.ts:23171	→	Lumbembemba → Tumbembemba
+src/data/lessons.ts:23172	→	Luwa → Buwa
+src/data/lessons.ts:23173	→	Lumbuetete → Mbuetete
+src/data/lessons.ts:23184	→	Kulu → Malu
+src/data/lessons.ts:23185	→	Kutu → Makutu
+src/data/lessons.ts:23186	→	Zu → Mazu
+src/data/lessons.ts:23187	→	Boria → Maboria
+src/data/lessons.ts:23389	,	Tshimoko tshi na zolo yika, ka tsha wa ko
+src/data/lessons.ts:23416	,	Tshimoko tshi na zolo yika, ka tsha wa ko
+src/data/lessons.ts:23805	,	Ta, Tela
+src/data/lessons.ts:23806	,	Sa, Sila
+src/data/lessons.ts:23807	,	Tala, Tadila
+src/data/lessons.ts:23808	,	Londa, Londela
+src/data/lessons.ts:23809	,	Gana, Ganina
+src/data/lessons.ts:23810	,	Nata, Natina
+src/data/lessons.ts:23811	,	Diata, Diatila
+src/data/lessons.ts:23812	,	Tsala, Tsadila
+src/data/lessons.ts:23830	,	Yabama, Yabamana
+src/data/lessons.ts:23831	,	Pokama, Pokamana
+src/data/lessons.ts:23849	,	Bemba, Bembesa
+src/data/lessons.ts:23850	,	Bua, Buisa
+src/data/lessons.ts:23851	,	Kia, Kiesa
+src/data/lessons.ts:23852	,	Bula, Bulasa
+src/data/lessons.ts:23853	,	Buta, Butasa
+src/data/lessons.ts:23854	,	Djuta, Djutasa
+src/data/lessons.ts:23875	,	Sasuna, Sasuka
+src/data/lessons.ts:23876	,	Yakuna, Yakuka
+src/data/lessons.ts:23877	,	Zingumuna, Zingumuka
+src/data/lessons.ts:23895	,	Kela, Kelana
+src/data/lessons.ts:23896	,	Zaba, Zabana
+src/data/lessons.ts:23919	?	Tolo tua bakiriki?
+src/data/lessons.ts:23956	?	Tolo tua bakiriki?
+src/data/lessons.ts:24820	.	Nsusu ku mpaka yi ba.
+src/data/lessons.ts:24821	.	Nsusu ku mpaka ji ba.
+src/data/lessons.ts:24822	.	Nsusu mu mpaka yi sekela.
+src/data/lessons.ts:24823	.	Nsusu mu mpaka ji sekela.
+src/data/lessons.ts:24835	.	Nkombo ku tshikaku yi sekela.
+src/data/lessons.ts:24836	.	Nkombo ku tshikaku ji sekela.
+src/data/lessons.ts:24848	.	Tshindongo ku tshikaku ka sekela.
+src/data/lessons.ts:24849	.	Bindongo ku tshikaku bi sekela.
+src/data/lessons.ts:24870	.	Ngo ku sangi yi ba.
+src/data/lessons.ts:24871	.	Ngo ku sangi ji ba.
+src/data/lessons.ts:24872	.	Tshibibu ku sangi tshi ba.
+src/data/lessons.ts:24873	.	Bibibu ku sangi bi ba.
+src/data/lessons.ts:24884	.	Ngombulu ku mukobo yi ba.
+src/data/lessons.ts:24885	.	Ngombulu ku mukobo ji ba.
+src/data/lessons.ts:24886	.	Nkabi ku mukobo ka ba.
+src/data/lessons.ts:24887	.	Nkabi ku mukobo ji ba.
+src/data/lessons.ts:24888	.	Mbulu ku mukobo ka ba.
+src/data/lessons.ts:24889	.	Mbulu ku mukobo ji ba.
+src/data/lessons.ts:24890	.	Tshimbungu ku mukobo tshi ba.
+src/data/lessons.ts:24891	.	Bimbungu ku mukobo bi ba.
+src/data/lessons.ts:24912	.	Nguvu mu mamba yi ba.
+src/data/lessons.ts:24913	.	Nguvu mu mamba yi ba na ku makanga.
+src/data/lessons.ts:24914	.	Ngandu mu mamba yi ba.
+src/data/lessons.ts:24915	.	Ngandu mu mamba ji ba.
+src/data/lessons.ts:24916	.	Ngandu ku makanga mpe yi ba.
+src/data/lessons.ts:24917	.	Ngandu ku makanga mpe ji ba.
+src/data/lessons.ts:24928	.	Nzau ku sangi na ku mukobo ka ba.
+src/data/lessons.ts:24929	.	Nzau ku sangi na ku mukobo ji ba.
+src/data/lessons.ts:24930	.	Mpakasa ku mukobo yi ba.
+src/data/lessons.ts:24931	.	Mpakasa ku mukobo ji ba.
+src/data/lessons.ts:24932	, .	Nioka mu mamba ku makanga, ku mukobo na ku sangi yi ba.
+src/data/lessons.ts:24933	, .	Nioka mu mamba ku makanga, ku mukobo na ku sangi ji ba.
+src/data/lessons.ts:24934	.	Mpangu mu mamba na ku makanga yi ba.
+src/data/lessons.ts:24935	.	Mpangu mu mamba na ku makanga ji ba.
+src/data/lessons.ts:24956	.	Ngongolo ku sangi yi ba.
+src/data/lessons.ts:24957	.	Ngongolo ku sangi ji ba.
+src/data/lessons.ts:24958	.	Nkelele ku mukobo yi ba.
+src/data/lessons.ts:24959	.	Lembe ku mukobo di ba.
+src/data/lessons.ts:24960	.	Malembe ku mukobo ma ba.
+src/data/lessons.ts:24961	.	Tutu ku hata di ba.
+src/data/lessons.ts:24962	.	Matutu ku hata ma ba.
+src/data/lessons.ts:24963	.	Muntu ku hata wu ba.
+src/data/lessons.ts:24964	.	Bantu ku hata ba ba.
+src/data/lessons.ts:25158	.	Mambumbu ku nsi ya mutoto ma ba.
+src/data/lessons.ts:25159	.	Mambumbu ma kaka mu bisama ma ba.
+src/data/lessons.ts:25171	.	Bisama bia kaka bia nguri ya bia bila.
+src/data/lessons.ts:25252	.	Mbuata ya mukaka.
+src/data/lessons.ts:25253	?	Mbuata ya mukaka?
+src/data/lessons.ts:25254	, .	Kani, ya mukono.
+src/data/lessons.ts:25323	.	Tata Nzonzi ngombe keri tuila.
+src/data/lessons.ts:25324	.	Tata Nzonzi ngombe keri tuila ku Biebie.
+src/data/lessons.ts:25367	.	Nkayi hata dia di nene.
+src/data/lessons.ts:25368	.	Lubomo hata dia di nene.
+src/data/lessons.ts:25369	.	Nkayi mu nzila ya Lubomo kampe.
+src/data/lessons.ts:25496	-	-ani
+src/data/lessons.ts:25497	-	-aku
+src/data/lessons.ts:25498	-	-andi
+src/data/lessons.ts:25499	-	-eto
+src/data/lessons.ts:25500	-	-eno
+src/data/lessons.ts:25501	-	-awu
+src/data/lessons.ts:25627	?	Kue nge?
+src/data/lessons.ts:25628	?	Kue we?
+src/data/lessons.ts:25629	?	Kue ke?
+src/data/lessons.ts:25630	?	Kue tue?
+src/data/lessons.ts:25631	?	Kue lue?
+src/data/lessons.ts:25632	?	Kue be?
+src/data/lessons.ts:25781	?	Tolo tua mbakiri?
+src/data/lessons.ts:25782	?	Tolo tua bakiri?
+src/data/lessons.ts:25783	?	Tolo tua ka bakiri?
+src/data/lessons.ts:25784	?	Tolo tua tu bakiri?
+src/data/lessons.ts:25785	?	Tolo tua lu bakiri?
+src/data/lessons.ts:25786	?	Tolo tua ba bakiri?
+src/data/lessons.ts:25793	?	Kue nge?
+src/data/lessons.ts:25799	?	Tolo tua bakiri?
+src/data/lessons.ts:25847	?	Kue we?
+src/data/lessons.ts:25850	?	Tolo tua bakiri?
+src/data/lessons.ts:25871	/	Tshijinga / Bijinga
+src/data/lessons.ts:25894	.	Bizinga bi ya tueri na bio.
+src/data/lessons.ts:25895	.	Bizinga bi ya bieri neto.
+src/data/lessons.ts:25896	.	Tshizinga tsha bi ya tsheri tsha bala.
+src/data/lessons.ts:25897	.	Beto bala mu tshijinga tshina tueri loba.
+src/data/lessons.ts:25898	.	Bijinga bia tilapia bieri.
+src/data/lessons.ts:26141	,	Mbakisa eno, nlemvu eno
+src/data/lessons.ts:26613	,	Muini we ku, ntsha tuele zeba
+src/data/lessons.ts:26614	,	Ni mu bungu diyo, tuele zeba
+src/data/lessons.ts:26615	,	Tala nsayi na naku, shika nsaki
+src/data/lessons.ts:26623	,	Dia na nuwa, ni ta nuwa
+src/data/lessons.ts:26699	,	Muini we ku, ntsha tuele zeba
+src/data/lessons.ts:26700	,	Ni mu bungu diyo, tuele zeba
+src/data/lessons.ts:27436	,	Bu ni kuenda ku mbazi, binkuti ni sumba
+src/data/lessons.ts:27437	,	Bu kuenda ku mbazi, binkuti sumba
+src/data/lessons.ts:27438	,	Bu ka kuenda ku mbazi, binkuti ka sumba
+src/data/lessons.ts:27752	?	Mpashi ta mona?
+src/data/lessons.ts:27760	?	Wiri?
+src/data/lessons.ts:27761	?	Kuwa wiri?
+src/data/lessons.ts:27916	?	Nkumbu aku nani?
+src/data/lessons.ts:27917	.	Nkumbu ani...
+src/data/lessons.ts:27918	?	Kue wa tuka?
+src/data/lessons.ts:27919	.	Na tuka...
+src/data/lessons.ts:27971	?	Mupepe nkia ntangu wu nanguka?
+src/data/lessons.ts:27974	?	Ntalu yo na madia ma pari mpe ni mu kati?
+src/data/lessons.ts:27996	?	Lumputu zonza ka?
+src/data/lessons.ts:27998	?	Lendi zonza malembe?
+src/data/lessons.ts:27999	?	Lendi baka lami diaku?
+src/data/lessons.ts:28027	?	Tolo tuwa bakiri?
+src/data/lessons.ts:28201	?	Ndonga ye nani?
+src/data/lessons.ts:28202	?	Ndonga ye naku?
+src/data/lessons.ts:28203	?	Ndonga ye nandi?
+src/data/lessons.ts:28204	?	Ndonga ye neto?
+src/data/lessons.ts:28205	?	Ndonga ye neno?
+src/data/lessons.ts:28206	?	Ndonga ye nawu?
+src/data/lessons.ts:28292	?	Dimpa dia bakiri?
+src/data/lessons.ts:29391	/	Me / Meno
+src/data/lessons.ts:29400	/	Ba bo / Ba wu bo
+src/data/lessons.ts:29418	/	Me / Meno
+src/data/lessons.ts:29455	/	Ba bo / Ba wu bo
+src/data/lessons.ts:29873	!	Ndeke Katuka Fyu!
+src/data/lessons.ts:29875	!	Yandi Tala Wa!
+src/data/lessons.ts:29893	!	Muwana Kuzila Nye!
+src/data/lessons.ts:29894	,	Ho Ka Zakale, Te
+src/data/lessons.ts:30286	→	Bika → Bikisa
+src/data/lessons.ts:30287	→	Buta → Butisa
+src/data/lessons.ts:30288	→	Kota → Kotisa
+src/data/lessons.ts:30298	→	Bika → Bikila
+src/data/lessons.ts:30299	→	Sumba → Sumbila
+src/data/lessons.ts:30309	→	Ziba → Zibuka
+src/data/lessons.ts:30310	→	Ziba → Zibula
+src/data/lessons.ts:30320	→	Fumba → Fumbama
+src/data/lessons.ts:30321	→	Ziba → Zibama
+src/data/lessons.ts:30322	→	Zita → Zitama
+src/data/lessons.ts:30332	→	Vuka → Vukana
+src/data/lessons.ts:30342	→	Bika → Bikabika
+src/data/lessons.ts:30343	→	Kota → Kotabika
+src/data/lessons.ts:30426	.	Ka...Ko
+src/data/lessons.ts:30739	→	Tata → Batata
+src/data/lessons.ts:30740	→	Yaya → Mayaya
+src/data/lessons.ts:30982	→	Kaba → Kabisa
+src/data/lessons.ts:30983	→	Bika → Bikisa
+src/data/lessons.ts:30994	→	Bika → Bikila
+src/data/lessons.ts:31005	→	Zibika → Zibuka
+src/data/lessons.ts:31006	→	Zibika → Zibula

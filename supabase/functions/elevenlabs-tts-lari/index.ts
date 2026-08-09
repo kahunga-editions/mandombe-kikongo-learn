@@ -17,6 +17,15 @@ const DEFAULT_VOICE_ID = (Deno.env.get("LARI_VOICE_ID") || "").trim() || "Gz9w9R
 // ============================================================
 
 const PHONETIC_OVERRIDES: Record<string, string> = {
+  // Corrections v14
+  "jundika": "dzoundika",
+  "djundika": "dzoundika",
+  "kamu": "kâmou",
+  "makamu": "makâmou",
+  "mzansi": "mzansi",
+  "nzansi": "mzansi",
+  "mfiela": "mfiéla",
+  "mfiyela": "mfiéla",
   // moshi — "sh" = /ʃ/ comme "shoes" en anglais / "chat" en français.
   // ⚠️ NE PAS laisser le mot devenir "mochi" : ElevenLabs (v3 et multilingual)
   // reconnaît "mochi" comme le mot japonais et le prononce /motʃi/.

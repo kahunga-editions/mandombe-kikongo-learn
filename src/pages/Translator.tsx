@@ -1,4 +1,5 @@
 import { useState, useCallback, useRef, useEffect } from "react";
+import { cleanMandombe } from "@/lib/mandombeText";
 import { useSearchParams, useNavigate } from "react-router-dom";
 import { SEO } from "@/components/SEO";
 import { ArrowRightLeft, Languages, Loader2, AlertCircle, Copy, Check, ImageIcon, Pencil, Infinity as InfinityIcon } from "lucide-react";
@@ -382,7 +383,7 @@ const Translator = () => {
                   {result.mandombe && (
                     <div className="flex items-center gap-2 mb-4 rounded-xl border border-gold/30 bg-gold/5 p-4">
                       <p ref={mandombeRef} className="font-mandombe text-4xl md:text-5xl text-gold leading-[1.5] flex-1">
-                        {result.mandombe}
+                        {cleanMandombe(result.mandombe)}
                       </p>
                       {lariText && <MandombeSpeaker lariText={lariText} />}
                       <Button

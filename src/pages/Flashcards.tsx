@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { cleanMandombe } from "@/lib/mandombeText";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useAuth } from "@/contexts/AuthContext";
 import { useFlashcards, type Flashcard } from "@/hooks/useFlashcards";
@@ -227,7 +228,7 @@ const Flashcards = () => {
                 <div className="text-center space-y-3">
                   {currentCard.front_mandombe && (
                     <p className="font-mandombe text-5xl md:text-6xl text-gold leading-[1.5]">
-                      {currentCard.front_mandombe}
+                      {cleanMandombe(currentCard.front_mandombe)}
                     </p>
                   )}
                   <p className="font-display text-2xl md:text-3xl font-bold text-foreground/80">
@@ -242,7 +243,7 @@ const Flashcards = () => {
                 <div className="text-center space-y-4">
                   {currentCard.front_mandombe && (
                     <p className="font-mandombe text-4xl text-gold leading-[1.5]">
-                      {currentCard.front_mandombe}
+                      {cleanMandombe(currentCard.front_mandombe)}
                     </p>
                   )}
                   <p className="font-display text-xl font-bold text-foreground/80 mb-2">

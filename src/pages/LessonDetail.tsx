@@ -1,4 +1,5 @@
 import { useParams, Link } from "react-router-dom";
+import { cleanMandombe } from "@/lib/mandombeText";
 import { useState } from "react";
 import { lessons } from "@/data/lessons";
 import Navbar from "@/components/Navbar";
@@ -96,7 +97,7 @@ const LessonDetail = () => {
           )}
 
           <div className="mb-8">
-            <p className="font-mandombe text-3xl md:text-4xl text-gold mb-4">{lesson.titleMandombe}</p>
+            <p className="font-mandombe text-3xl md:text-4xl text-gold mb-4">{cleanMandombe(lesson.titleMandombe)}</p>
             <LingalaMandombe frenchText={lesson.titleFr || lesson.title} className="text-3xl md:text-4xl mb-2" />
             <div className="flex items-center gap-3 mb-2">
               <span className="text-4xl">{lesson.icon}</span>
@@ -160,7 +161,7 @@ const LessonDetail = () => {
                             <img src={item.image} alt={item.lari} loading="lazy" className="w-full h-32 object-cover" />
                           )}
                           <div className="p-4">
-                          <p className="font-mandombe text-3xl text-gold mb-4">{item.mandombe}</p>
+                          <p className="font-mandombe text-3xl text-gold mb-4">{cleanMandombe(item.mandombe)}</p>
                           <LingalaMandombe frenchText={item.french} className="text-2xl mb-2" />
                           <div className="flex items-center gap-2">
                             <p className="font-display text-lg font-bold text-foreground">{item.lari}</p>
@@ -212,7 +213,7 @@ const LessonDetail = () => {
                               return (
                                 <div key={gi} className="px-6 py-5">
                                   {group.titleMandombe && (
-                                    <p className="font-mandombe text-gold text-lg mb-0.5">{group.titleMandombe}</p>
+                                    <p className="font-mandombe text-gold text-lg mb-0.5">{cleanMandombe(group.titleMandombe)}</p>
                                   )}
                                   <h4 className="font-display text-lg font-bold text-foreground mb-1">{groupTitle}</h4>
                                   {groupDesc && (
@@ -224,7 +225,7 @@ const LessonDetail = () => {
                                       return (
                                         <div key={ei} className="bg-muted/30 rounded-lg px-4 py-3 border border-border/50">
                                           {ex.mandombe && (
-                                            <p className="font-mandombe text-3xl text-gold mb-2">{ex.mandombe}</p>
+                                            <p className="font-mandombe text-3xl text-gold mb-2">{cleanMandombe(ex.mandombe)}</p>
                                           )}
                                           <LingalaMandombe frenchText={ex.french} className="text-2xl mb-1" />
                                           <div className="flex items-center gap-2">
@@ -264,7 +265,7 @@ const LessonDetail = () => {
                     {lesson.conjugations.map((conj, i) => (
                       <div key={i} className="bg-card rounded-xl border border-border overflow-hidden">
                         <div className="bg-earth-deep px-6 py-4">
-                          <p className="font-mandombe text-4xl text-gold mb-4">{conj.verbMandombe}</p>
+                          <p className="font-mandombe text-4xl text-gold mb-4">{cleanMandombe(conj.verbMandombe)}</p>
                           <LingalaMandombe frenchText={conj.meaning.fr} className="text-2xl mb-1" />
                           <h3 className="font-display text-xl font-bold text-gold flex items-center gap-1">
                             {conj.verb} — {getConjMeaning(conj.meaning)}
@@ -279,7 +280,7 @@ const LessonDetail = () => {
                             <div key={j} className="flex items-start px-6 py-3 gap-6">
                               <span className="text-sm text-muted-foreground w-20 shrink-0 pt-1">{row.person}</span>
                               <div className="flex flex-col flex-1">
-                                <span className="font-mandombe text-2xl text-gold leading-tight">{row.mandombe}</span>
+                                <span className="font-mandombe text-2xl text-gold leading-tight">{cleanMandombe(row.mandombe)}</span>
                                 <div className="flex items-center gap-1 mt-1">
                                   <MandombeSpeaker lariText={row.lari} className="shrink-0" />
                                   <span className="font-display font-semibold text-foreground">{row.lari}</span>
@@ -309,7 +310,7 @@ const LessonDetail = () => {
                           className="bg-card rounded-lg border border-border p-4 border-l-4 border-l-primary"
                         >
                           <div className="flex items-center gap-2 mb-4">
-                            <p className="font-mandombe text-3xl text-gold">{phrase.mandombe}</p>
+                            <p className="font-mandombe text-3xl text-gold">{cleanMandombe(phrase.mandombe)}</p>
                             <MandombeSpeaker lariText={phrase.lari} />
                           </div>
                           <LingalaMandombe frenchText={phrase.french} className="text-2xl mb-1" />

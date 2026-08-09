@@ -1,4 +1,5 @@
 import { Volume2 } from "lucide-react";
+import { cleanMandombe } from "@/lib/mandombeText";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import PremiumGate from "@/components/PremiumGate";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -569,7 +570,7 @@ const WordCard = ({ word }: { word: VocabEntry }) => {
 
   return (
     <div className="bg-card rounded-xl p-5 border border-border hover:border-primary/30 transition-all group">
-      <p className="font-mandombe text-3xl text-gold leading-relaxed mb-4">{word.lari}</p>
+      <p className="font-mandombe text-3xl text-gold leading-relaxed mb-4">{cleanMandombe(word.lari)}</p>
       <h4 className="font-display text-xl font-bold text-foreground mb-3 flex items-center gap-2">
         {word.lari}
         <Volume2 className="w-4 h-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer" />
@@ -615,7 +616,7 @@ const VocabularyPreview = () => {
               <div className="flex items-center gap-6 mb-8 p-6 bg-card rounded-2xl border border-border">
                 <img src={cat.image} alt={cat.label} loading="lazy" decoding="async" className="w-20 h-20 md:w-24 md:h-24 rounded-xl object-cover" />
                 <div>
-                  <p className="font-mandombe text-2xl text-gold leading-normal mb-4">{cat.lariLabel}</p>
+                  <p className="font-mandombe text-2xl text-gold leading-normal mb-4">{cleanMandombe(cat.lariLabel)}</p>
                   <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground">{cat.lariLabel}</h3>
                   <p className="text-muted-foreground font-body">
                     {cat.label} — {cat.words.length} {t("vocab.freeWords")}{cat.premiumWords ? ` + ${cat.premiumWords.length} ${t("vocab.premium")}` : ""}

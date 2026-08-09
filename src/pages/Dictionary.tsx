@@ -1,4 +1,5 @@
 import { useState, useMemo, useEffect, useCallback, useRef } from "react";
+import { cleanMandombe } from "@/lib/mandombeText";
 import { SEO } from "@/components/SEO";
 import { Search, BookOpen, Loader2, Infinity as InfinityIcon } from "lucide-react";
 import { Input } from "@/components/ui/input";
@@ -465,7 +466,7 @@ const Dictionary = () => {
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-2 flex-wrap">
                         <span className="font-mandombe text-4xl md:text-5xl text-gold leading-[1.5]">
-                          {entry.mandombe}
+                          {cleanMandombe(entry.mandombe)}
                         </span>
                         <MandombeSpeaker lariText={entry.lari} />
                       </div>
@@ -481,7 +482,7 @@ const Dictionary = () => {
                       )}
                       <PronunciationCheck
                         expected={entry.lari}
-                        mandombe={entry.mandombe}
+                        mandombe={cleanMandombe(entry.mandombe)}
                         meaning={entry.french}
                         className="mt-2"
                       />
