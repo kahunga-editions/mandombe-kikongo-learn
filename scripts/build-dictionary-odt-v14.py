@@ -102,7 +102,7 @@ SENTENCE_END = ".!?\u2026"
 
 def split_senses(s: str, fine: bool = False):
     """Decoupe les sens. `fine` decoupe aussi sur / et , pour les glosses courtes."""
-    raw = re.split(r"\s*;\s*", (s or "").strip())
+    raw = re.split(r"\s*[;|]\s*", (s or "").strip())
     out = []
     for part in raw:
         part = part.strip()
