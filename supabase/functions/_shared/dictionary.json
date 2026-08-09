@@ -14445,9 +14445,10 @@
   },
   {
     "lari": "Mfiela",
-    "fr": "Sorte de safou que les gens font cuire en gardant dans leur joue",
+    "fr": "Sorte de safou que les gens font cuire en gardant dans leur joue ; le plongeon",
     "mandombe": "Mfiyela",
-    "en": "A type of safou cooked while kept in the cheek"
+    "en": "A type of safou cooked while kept in the cheek; the dive",
+    "note": "Pour le plongeon, l'intonation sur mfie est montante et le /ie/ est bref"
   },
   {
     "lari": "Nsati",
@@ -20890,13 +20891,6 @@
     "mandombe": "Minga miya fofolo"
   },
   {
-    "lari": "Ku lumoso / Ku lukento",
-    "fr": "À gauche",
-    "en": "On the left / to the left",
-    "mandombe": "Ku lumoso Ku lukento",
-    "note": "Les deux formes se disent"
-  },
-  {
     "lari": "Lufutu lu buiri ku zandu",
     "fr": "Il s'est passé quelque chose de dur au marché",
     "en": "Something rough happened at the market",
@@ -20967,13 +20961,6 @@
     "fr": "Les champignons vénéneux",
     "en": "Poisonous mushrooms",
     "mandombe": "Maloko"
-  },
-  {
-    "lari": "Mfiela (plongeon)",
-    "fr": "Le plongeon",
-    "en": "The dive",
-    "mandombe": "Mfiyela",
-    "note": "Intonation montante sur mfie, le /ie/ est bref"
   },
   {
     "lari": "Sakanana",
@@ -21091,5 +21078,12 @@
     "en": "I approve of your path",
     "mandombe": "Njila aku ya nsingase",
     "note": "De singasa = approuver"
+  },
+  {
+    "lari": "Ku lukento",
+    "fr": "À gauche",
+    "en": "On the left",
+    "mandombe": "Ku lukento",
+    "note": "Les deux formes se disent : Ku lumoso et Ku lukento"
   }
 ]
