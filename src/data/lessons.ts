@@ -1599,7 +1599,7 @@ export const lessons: Lesson[] = [
     phrases: [
       { lari: "Bi signifie la multiplication de l'etre interieur", mandombe: "Bi", french: "/bi/ signifie la multiplication de l'être intérieur", english: "/bi/ means the multiplication of the inner being" },
       { lari: "Nzo ka biadila", mandombe: "Nzo ka biyadila", french: "Il a hérité la maison", english: "He inherited the house" },
-      { lari: "Beno ngatu lu zonzesz mababa.", mandombe: "Beno ngatu lu zonzesz mababa.", french: "Vous risqueriez de faire parler les muets", english: "You would risk making the mute speak — don't test our patience" },
+      { lari: "Beno ngatu lu zonzesa mababa.", mandombe: "Beno ngatu lu zonzesa mababa.", french: "Vous risqueriez de faire parler les muets", english: "You would risk making the mute speak — don't test our patience" },
     ],
     exercises: [
       {
@@ -2737,7 +2737,7 @@ export const lessons: Lesson[] = [
       { lari: "Muleke | Baleke", mandombe: "Muleke | Baleke", french: "Un(e) cadet(te), plus jeune", english: "A younger one, junior", note: "Muleke (singulier) / Baleke (pluriel)" },
     ],
     phrases: [
-      { lari: "Beno ngatu lu zonzesz mababa.", mandombe: "Beno ngatu lu zonzesz mababa.", french: "N'abusez pas de notre patience", english: "Don't test our patience — you'd make the mute speak" },
+      { lari: "Beno ngatu lu zonzesa mababa.", mandombe: "Beno ngatu lu zonzesa mababa.", french: "N'abusez pas de notre patience", english: "Don't test our patience — you'd make the mute speak" },
       { lari: "Banda moyo", mandombe: "Banda moyo", french: "Bas-ventre", english: "Lower belly" },
       { lari: "Banda", mandombe: "Banda", french: "Le sud, le bas de", english: "The south, the bottom of" },
       { lari: "Tandu", mandombe: "Tandu", french: "Le haut, le nord", english: "The top, the north" },
@@ -14014,7 +14014,7 @@ export const lessons: Lesson[] = [
     { lari: "Nto", mandombe: "Nto", french: "La rivière", english: "The river", portuguese: "O rio" },
     { lari: "Nzo mikanda", mandombe: "Nzo mikanda", french: "L'école", english: "The school", portuguese: "A escola" },
     { lari: "Mundele | Mindele", mandombe: "Mundele | Mindele", french: "Le Blanc | Les Blancs (sing./pl. classe mu-/mi-)", english: "White person | White people (mu-/mi- class)", portuguese: "O Branco | Os Brancos" },
-    { lari: "Bamindele", mandombe: "Bamindele", french: "Les choses qui appartiennent aux Blancs", english: "Things belonging to white people", portuguese: "As coisas que pertencem aos Brancos", note: "Bamindele ne designe pas les personnes : les Blancs se dit mindele." },
+    { lari: "Ba mindele", mandombe: "Ba mindele", french: "Les choses qui appartiennent aux Blancs (deux mots)", english: "Things belonging to white people", portuguese: "As coisas que pertencem aos Brancos", note: "Ba mindele ne designe pas les personnes : les Blancs se dit mindele." },
     { lari: "Bala ba mindele", mandombe: "Bala ba mindele", french: "Les enfants des Blancs", english: "The children of white people", portuguese: "As criancas dos Brancos" },
     { lari: "Muntu | Bantu", mandombe: "Muntu | Bantu", french: "Personne | Personnes", english: "Person | People", portuguese: "Pessoa | Pessoas" },
     { lari: "N'ti, Muti | Miti", mandombe: "Nti, Muti | Miti", french: "Arbre(s)", english: "Tree(s)", portuguese: "Árvore(s)" },
@@ -14054,7 +14054,7 @@ export const lessons: Lesson[] = [
             { lari: "Bala ba mindele ha ndeko nzo mikanda be(na).", mandombe: "Bala ba mindele ha ndeko nzo mikanda bena.", french: "Les enfants des Blancs sont à côté de l'école.", english: "The children of white people are next to the school." },
             { lari: "Maba ha ndeko n'ti me(na).", mandombe: "Maba ha ndeko nti mena.", french: "Les palmiers sont à côté de l'arbre.", english: "The palm trees are next to the tree." },
           ],
-          note: "Mindele (classe mi-) = les Blancs, prend mie(na). Bala ba mindele (classe ba-) prend be(na). Bamindele designe les choses des Blancs, pas les personnes.",
+          note: "Mindele (classe mi-) = les Blancs, prend mie(na). Bala ba mindele (classe ba-) prend be(na). Ba mindele designe les choses des Blancs, pas les personnes.",
         },
         {
           title: "Identifying — Nka muana we?",
@@ -15579,7 +15579,7 @@ export const lessons: Lesson[] = [
         items: [
             { mandombe: "Ntonto", lari: "Ntonto", distractors: ["Nsatu ye neno", "kalu", "Mankondi mungua nduri me(na)"], french: "La répugnance, le dégoût", english: "Repugnance, disgust", portuguese: "A repugnância, o nojo", mode: "glyph-to-latin" as const },
             { mandombe: "Ntinu", lari: "Ntinu", distractors: ["Maba ma tatu me ku lupangu luaku.", "Bileko", "Nzonzolo"], french: "La vitesse", english: "Speed", portuguese: "A velocidade", mode: "latin-to-glyph" as const },
-            { mandombe: "Tuasi", lari: "Tuasi", distractors: ["Ku hata ta kota.", "Bi mene mena", "Ngongolo"], french: "Un abcès", english: "An abscess", portuguese: "Um abscesso", mode: "glyph-to-latin" as const },
+            { mandombe: "Tuasi", lari: "Tuasi", distractors: ["Ku hata ta kota.", "Bimenina", "Ngongolo"], french: "Un abcès", english: "An abscess", portuguese: "Um abscesso", mode: "glyph-to-latin" as const },
             { mandombe: "Tua", lari: "Tua", distractors: ["Bilumbu bi", "Ya me.", "Tuma"], french: "Frapper", english: "To hit, to strike", portuguese: "Bater", mode: "latin-to-glyph" as const },
             { mandombe: "Teka", lari: "Teka", distractors: ["Mumanga", "Nki lu ta dila?", "muisunu"], french: "Vendre", english: "To sell", portuguese: "Vender", mode: "glyph-to-latin" as const },
             { mandombe: "Teleka", lari: "Teleka", distractors: ["Tolo tue neno", "ndia", "Bidila"], french: "Faire cuire", english: "To cook", portuguese: "Cozinhar", mode: "latin-to-glyph" as const },
@@ -18113,7 +18113,7 @@ export const lessons: Lesson[] = [
     { lari: "Mazuji", mandombe: "Mazuji", french: "Avant-hier", english: "Day before yesterday" },
     { lari: "Mboko", mandombe: "Mboko", french: "Ensuite, après", english: "Then, after" },
     { lari: "Mena", mandombe: "Mena", french: "Germer", english: "To sprout, to germinate" },
-    { lari: "Bi mene mena", mandombe: "Bi mene mena", french: "Les végétaux", english: "Plants, vegetation" },
+    { lari: "Bimenina", mandombe: "Bimenina", french: "Les végétaux", english: "Plants, vegetation" },
     { lari: "Meno", mandombe: "Meno", french: "Moi", english: "Me" },
   ],
   exercises: [
@@ -18137,7 +18137,7 @@ export const lessons: Lesson[] = [
             { mandombe: "Maza", lari: "Maza", distractors: ["Nsambi ya mputu", "muaumu", "Tomo dia"], french: "L'eau", english: "Water", mode: "latin-to-glyph" as const },
             { mandombe: "Matu", lari: "Matu", distractors: ["Lomba", "Nima", "Bua"], french: "Les pirogues", english: "Canoes, pirogues", mode: "glyph-to-latin" as const },
             { mandombe: "Mamba ma nti", lari: "Mamba ma nti", distractors: ["Bikola bi ba lambila mu kinzu bia bibote bie(na).", "Wa kotele ku hata.", "N'ti"], french: "La sève", english: "Tree sap", mode: "latin-to-glyph" as const },
-            { mandombe: "Bi mene mena", lari: "Bi mene mena", distractors: ["Mbemba", "Mukambakani", "Tuseho"], french: "Les végétaux", english: "Plants, vegetation", mode: "glyph-to-latin" as const },
+            { mandombe: "Bimenina", lari: "Bimenina", distractors: ["Mbemba", "Mukambakani", "Tuseho"], french: "Les végétaux", english: "Plants, vegetation", mode: "glyph-to-latin" as const },
             { mandombe: "Mambu", lari: "Mambu", distractors: ["Labila", "Senza kiamasanza", "Siono"], french: "L'amende", english: "Fine, penalty", mode: "latin-to-glyph" as const },
         ],
       },
@@ -22811,7 +22811,7 @@ export const lessons: Lesson[] = [
       { lari: "Mbote zêno", mandombe: "Mbote zeno", french: "bonjour à vous", english: "hello to you (plural)", portuguese: "olá a vocês" },
       { lari: "Mbote aku", mandombe: "Mbote aku", french: "bonjour à toi", english: "hello to you (singular)", portuguese: "olá a ti" },
       { lari: "Mbote zawu", mandombe: "Mbote zawu", french: "bonjour à eux", english: "hello to them", portuguese: "olá a eles" },
-      { lari: "Batata mbote zawu", mandombe: "Batata mbote zawu", french: "bonjour aux parents", english: "hello to the parents", portuguese: "olá aos pais" },
+      { lari: "Batata mbote zawu", mandombe: "Batata mbote zawu", french: "Bonjour à leurs parents.", english: "Hello to their parents.", portuguese: "Olá aos pais deles." },
       { lari: "Lu kolele?", mandombe: "Lu kolele?", french: "Vous allez bien ?", english: "Are you well? (plural)", portuguese: "Vocês estão bem?" },
       { lari: "Vumbukidi?", mandombe: "Vumbukidi?", french: "Bien réveillé ?", english: "Well awoken?", portuguese: "Bem acordado?" },
       { lari: "Lu vumbukidi?", mandombe: "Lu vumbukidi?", french: "Vous êtes bien réveillés ?", english: "Are you well awoken? (plural)", portuguese: "Vocês acordaram bem?" },
@@ -22838,7 +22838,7 @@ export const lessons: Lesson[] = [
               { lari: "Mbote aku", mandombe: "Mbote aku", french: "Bonjour à toi", english: "Hello to you (sing.)", portuguese: "Olá a ti" },
               { lari: "Mbote zêno", mandombe: "Mbote zeno", french: "Bonjour à vous", english: "Hello to you (pl.)", portuguese: "Olá a vocês" },
               { lari: "Mbote zawu", mandombe: "Mbote zawu", french: "Bonjour à eux", english: "Hello to them", portuguese: "Olá a eles" },
-              { lari: "Batata mbote zawu", mandombe: "Batata mbote zawu", french: "Bonjour aux parents", english: "Hello to the parents", portuguese: "Olá aos pais" },
+              { lari: "Batata mbote zawu", mandombe: "Batata mbote zawu", french: "Bonjour à leurs parents.", english: "Hello to their parents.", portuguese: "Olá aos pais deles." },
             ],
           },
         ],
@@ -29013,7 +29013,7 @@ export const lessons: Lesson[] = [
     vocabulary: [
       { lari: "bumuntu", mandombe: "Bumuntu", french: "humanité", english: "humanity", note: "bu- 'abstrait' + muntu (§3.7.1)" },
       { lari: "bukento", mandombe: "Bukento", french: "féminité", english: "femininity", note: "bu- 'abstrait' + kento" },
-      { lari: "babantu", mandombe: "Babantu", french: "les humains (générique)", english: "humankind", note: "ba- 'générique' + bantu (§3.7.5)" },
+      { lari: "ba bantu", mandombe: "Ba bantu", french: "être humains", english: "to be humans", note: "Deux mots : ba 'être' + bantu 'humains'." },
       { lari: "lufua", mandombe: "Lufuwa", french: "la mort", english: "death", note: "lu- 'nomino-verbal' + fua 'mourir' (§3.7.8)" },
       { lari: "nkoka", mandombe: "Nkoka", french: "descente(s)", english: "descent(s)", note: "n- 'nomino-verbal' + koka 'descendre' (§3.7.8)" },
       { lari: "mfumba", mandombe: "Mfumba", french: "cercle", english: "circle", note: "m- 'perfectif' + fumba 'courber' (§3.7.9)" },

@@ -73,6 +73,34 @@
         "distractors",
         "options:"
       ]
+    },
+    {
+      "id": "ba-bantu-two-words",
+      "description": "ba bantu = etre humains, toujours en deux mots.",
+      "pattern": "\\bbabantu\\b",
+      "flags": "gi",
+      "replacement": "ba bantu"
+    },
+    {
+      "id": "ba-mindele-two-words",
+      "description": "ba mindele = les choses des Blancs, toujours en deux mots.",
+      "pattern": "\\bbamindele\\b",
+      "flags": "gi",
+      "replacement": "ba mindele"
+    },
+    {
+      "id": "bimenina-one-word",
+      "description": "bimenina = les vegetaux, en un seul mot.",
+      "pattern": "\\bbi\\s+mene\\s+mena\\b|\\bbi\\s+menina\\b",
+      "flags": "gi",
+      "replacement": "bimenina"
+    },
+    {
+      "id": "zonzesa-typo",
+      "description": "Faute de frappe zonzesz -> zonzesa.",
+      "pattern": "\\bzonzesz\\b",
+      "flags": "gi",
+      "replacement": "zonzesa"
     }
   ]
 }

@@ -535,6 +535,10 @@ export const LESSONS_CORPUS: LessonSummary[] = [
         "french": "Plusieurs années (variante)"
       },
       {
+        "lari": "Tekela",
+        "french": "Y être avant"
+      },
+      {
         "lari": "Mazuji ku Mfua NA yele",
         "french": "Avant-hier j'étais à Mfua"
       },
@@ -1002,7 +1006,7 @@ export const LESSONS_CORPUS: LessonSummary[] = [
         "french": "Il a hérité la maison"
       },
       {
-        "lari": "Beno ngatu lu zonzesz mababa.",
+        "lari": "Beno ngatu lu zonzesa mababa.",
         "french": "Vous risqueriez de faire parler les muets"
       }
     ],
@@ -1990,7 +1994,7 @@ export const LESSONS_CORPUS: LessonSummary[] = [
         "french": "Dominer, avoir le dessus / Harceler"
       },
       {
-        "lari": "Beno ngatu lu zonzesz mababa.",
+        "lari": "Beno ngatu lu zonzesa mababa.",
         "french": "N'abusez pas de notre patience"
       },
       {
@@ -6434,7 +6438,7 @@ export const LESSONS_CORPUS: LessonSummary[] = [
       },
       {
         "lari": "Dukila",
-        "french": "Sortir de, à travers"
+        "french": "Sortir par, sortir à travers un endroit"
       },
       {
         "lari": "Dukisa",
@@ -6784,7 +6788,7 @@ export const LESSONS_CORPUS: LessonSummary[] = [
       },
       {
         "lari": "Mankondi",
-        "french": "Les bananes (pluriel)"
+        "french": "Les bananes"
       },
       {
         "lari": "Mbuaki",
@@ -8758,8 +8762,12 @@ export const LESSONS_CORPUS: LessonSummary[] = [
         "french": "Le Blanc | Les Blancs (sing./pl. classe mu-/mi-)"
       },
       {
-        "lari": "Bamindele",
-        "french": "Les choses qui appartiennent aux Blancs"
+        "lari": "Ba mindele",
+        "french": "Les choses qui appartiennent aux Blancs (deux mots)"
+      },
+      {
+        "lari": "Bala ba mindele",
+        "french": "Les enfants des Blancs"
       },
       {
         "lari": "Muntu | Bantu",
@@ -11255,7 +11263,7 @@ export const LESSONS_CORPUS: LessonSummary[] = [
       },
       {
         "lari": "Lufutu",
-        "french": "Difficulté à grandir, à pousser, lenteur"
+        "french": "Ambiance, animation intense, événement marquant"
       },
       {
         "lari": "Lukaka | Tukaka",
@@ -12514,7 +12522,7 @@ export const LESSONS_CORPUS: LessonSummary[] = [
         "french": "Germer"
       },
       {
-        "lari": "Bi mene mena",
+        "lari": "Bimenina",
         "french": "Les végétaux"
       },
       {
@@ -13119,7 +13127,7 @@ export const LESSONS_CORPUS: LessonSummary[] = [
       },
       {
         "lari": "Kabila",
-        "french": "Partager, distribuer"
+        "french": "Offrir, donner, partager, distribuer"
       },
       {
         "lari": "Kabisa",
@@ -13523,7 +13531,7 @@ export const LESSONS_CORPUS: LessonSummary[] = [
       },
       {
         "lari": "muanzi",
-        "french": "souche, racine, fibre, filament, corps étranger"
+        "french": "souche, racine, fibre, filament"
       },
       {
         "lari": "singini",
@@ -13945,44 +13953,44 @@ export const LESSONS_CORPUS: LessonSummary[] = [
         "french": "coin d'une chambre, angle des murs"
       },
       {
-        "lari": "fulamana",
-        "french": "dormir sur le ventre, se prostrer"
+        "lari": "tshikonko",
+        "french": "angle des murs, coin"
       },
       {
-        "lari": "fulamasa",
-        "french": "faire coucher sur le ventre"
+        "lari": "bikonko",
+        "french": "angles des murs, coins"
       },
       {
-        "lari": "dekakana",
-        "french": "marcher de travers"
+        "lari": "Bikonko bia nzo",
+        "french": "les coins des maisons"
       },
       {
-        "lari": "dekele",
-        "french": "démarche des personnes"
+        "lari": "niekona",
+        "french": "abandonner"
       },
       {
-        "lari": "dekodeko",
-        "french": "sans force, sans résistance, instable, influençable"
+        "lari": "yambirika",
+        "french": "abandonner"
       },
       {
-        "lari": "buimi",
-        "french": "avarice, égoïsme, égocentrisme"
+        "lari": "kuanga",
+        "french": "stopper (arrêter la démangeaison)"
       },
       {
-        "lari": "lukokoto",
-        "french": "avarice, égoïsme, égocentrisme"
+        "lari": "mukuluntu",
+        "french": "l'aîné, celui qui vient avant"
       },
       {
-        "lari": "lunomo",
-        "french": "avarice, égoïsme, égocentrisme"
+        "lari": "mukuruntu",
+        "french": "l'aîné, celui qui vient avant"
       },
       {
-        "lari": "buota",
-        "french": "malaxer, moudre, pétrir, frapper, jeter à terre avec force, empirer (pour une maladie)"
+        "lari": "tshindiku",
+        "french": "l'amitié"
       },
       {
-        "lari": "buotana",
-        "french": "se cogner, être cogné, être joint"
+        "lari": "tshinduku",
+        "french": "l'amitié"
       },
       {
         "lari": "Buedi ntama",
@@ -15991,7 +15999,7 @@ export const LESSONS_CORPUS: LessonSummary[] = [
       },
       {
         "lari": "Batata mbote zawu",
-        "french": "bonjour aux parents"
+        "french": "Bonjour à leurs parents."
       },
       {
         "lari": "Lu kolele?",
@@ -19064,7 +19072,7 @@ export const LESSONS_CORPUS: LessonSummary[] = [
       },
       {
         "lari": "kabila",
-        "french": "partager à (pour)"
+        "french": "offrir à, donner à, partager pour"
       },
       {
         "lari": "butuka",
@@ -19138,8 +19146,8 @@ export const LESSONS_CORPUS: LessonSummary[] = [
         "french": "féminité"
       },
       {
-        "lari": "babantu",
-        "french": "les humains (générique)"
+        "lari": "ba bantu",
+        "french": "être humains"
       },
       {
         "lari": "lufua",
