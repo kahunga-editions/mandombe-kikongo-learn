@@ -118,16 +118,27 @@ def split_senses(s: str, fine: bool = False):
     return out
 
 
+# Abreviations residuelles qui ne portent aucun sens une fois isolees
+JUNK_SENSES = {
+    "f", "m", "n", "v", "s", "pl", "sg", "fig", "adj", "adv", "sing", "plur",
+    "fem", "masc", "nom", "vb",
+}
+
+
 def dedupe_senses(s: str) -> str:
-    """« echapper ; Echapper. ; unir / echapper » -> « echapper ; unir »."""
+    """« echapper ; Echapper. ; unir / echapper » -> « echapper ; unir ».
+
+    Les fragments vides de sens (« f », « pl. », « m »…) sont supprimes.
+    """
     seen, out = set(), []
     for part in split_senses(s, fine=True):
         k = cmp_key(part)
-        if not k or k in seen:
+        if not k or k in seen or k in JUNK_SENSES:
             continue
         seen.add(k)
         out.append(part)
     return " ; ".join(out)
+
 
 
 def merge_sense(current: str, extra: str) -> str:
@@ -135,12 +146,20 @@ def merge_sense(current: str, extra: str) -> str:
 
 
 def is_sentence(text: str, lari: str) -> bool:
+    """Une entree est une phrase des que le Lari compte plusieurs mots.
+
+    Les phrases nominales (« grain de sel », « bonne idee ») sont traitees comme
+    des phrases : majuscule initiale et point final.
+    """
     t = (text or "").strip()
     if not t:
         return False
     if t[-1] in "!?":
         return True
-    return len(t.split()) >= 4 and len((lari or "").split()) >= 3
+    if len((lari or "").split()) >= 3:
+        return True
+    return len(t.split()) >= 4 and len((lari or "").split()) >= 2
+
 
 
 def normalize_sentence(text: str, lari: str, add_period=True) -> str:
@@ -611,8 +630,68 @@ def render_reverse(title, lang, other):
 render_reverse("Index II — Français → Kikongo Lari → English", "fr", "en")
 render_reverse("Index III — English → Kikongo Lari → Français", "en", "fr")
 
-
 # ================= ANNEXE : CONJUGAISONS =================
+TENSE_EN = {
+    "present": "Present",
+    "passe": "Past",
+    "passe compose": "Past",
+    "passe recent": "Recent past",
+    "passe lointain": "Remote past",
+    "futur": "Future",
+    "futur proche": "Near future",
+    "imperatif": "Imperative",
+    "progressif": "Progressive",
+    "present progressif": "Present progressive",
+    "habituel": "Habitual",
+    "parfait": "Perfect",
+    "conditionnel": "Conditional",
+    "subjonctif": "Subjunctive",
+    "negation": "Negation",
+    "forme negative": "Negative form",
+    "imparfait": "Imperfect",
+    "imparfait negatif": "Negative imperfect",
+    "futur negatif": "Negative future",
+    "passe compose negatif": "Negative present perfect",
+    "present affirmatif": "Present affirmative",
+    "present negatif": "Present negative",
+    "negation ka...ko": "Negation (ka...ko)",
+    "obligation": "Obligation",
+    "possession avec ze + pronoms": "Possession with ze + pronouns",
+    "infinitif": "Infinitive",
+}
+
+PERSON_EN = {
+    "je": "I",
+    "j'": "I",
+    "tu": "You",
+    "il": "He",
+    "elle": "She",
+    "il/elle": "He/She",
+    "nous": "We",
+    "vous": "You (pl.)",
+    "ils": "They",
+    "elles": "They",
+    "ils/elles": "They",
+}
+
+
+def bilingual(fr: str, table: dict) -> str:
+    """« Passé » -> « Passé · Past » quand la traduction est connue.
+
+    Pour les temps qualifies (« Futur négatif », « Passé (accompli) »), on traduit
+    la base et l'on conserve la precision entre parentheses.
+    """
+    fr = (fr or "").strip()
+    if not fr:
+        return ""
+    base = re.split(r"\s*[—\-(]\s*", fr)[0].strip()
+    en = table.get(norm(fr).rstrip(".")) or table.get(norm(base).rstrip("."))
+    if not en or norm(en) == norm(fr):
+        return fr
+    return f"{fr} · {en}"
+
+
+
 conjugations = json.load(open(CONJ_SRC)) if CONJ_SRC and os.path.exists(CONJ_SRC) else []
 if conjugations:
     ConjVerb = pstyle("ConjVerb", fontname=TITLE_FONT, fontsize="11.5pt", fontweight="bold",
@@ -624,23 +703,30 @@ if conjugations:
                      marginleft="0.25cm", marginbottom="0.02cm")
     PersonT = tstyle("PersonT", fontname=BODY_FONT, fontsize="8.5pt", color="#555555")
 
-    para(Chapter, "Annexe — Conjugaisons")
+    para(Chapter, "Annexe — Conjugaisons · Appendix — Conjugations")
     para(Body, "Cette annexe rassemble tous les tableaux de conjugaison rencontrés dans les "
                "leçons de Nzo Mikanda. Chaque forme est donnée en écriture Mandombe puis en "
-               "transcription latine.")
+               "transcription latine, avec le sens en français et en anglais.")
+    para(BodySmall, "This appendix gathers every conjugation table found in the Nzo Mikanda "
+                    "lessons. Each form is given in Mandombe script and Latin transcription, "
+                    "with its French and English meaning.")
     conj_section = columns_section("Conjugaisons", 2, "0.55cm")
     for c in conjugations:
         verb = (c.get("verb") or "").strip()
         if not verb:
             continue
-        meaning = (c.get("meaning") or "").strip()
+        m_fr = (c.get("meaningFr") or c.get("meaning") or "").strip().rstrip(".")
+        m_en = (c.get("meaningEn") or "").strip().rstrip(".")
+        if m_en and cmp_key(m_en) == cmp_key(m_fr):
+            m_en = ""
+        meaning = " · ".join(x for x in (m_fr, m_en) if x)
         vp = P(stylename=ConjVerb)
         if c.get("verbMandombe"):
             vp.addElement(span(Mand, c["verbMandombe"].strip()))
             vp.addText("   ")
         vp.addText(verb + (f" — {meaning}" if meaning else ""))
         conj_section.addElement(vp)
-        tense = (c.get("tense") or "").strip()
+        tense = bilingual(c.get("tense") or "", TENSE_EN)
         if tense:
             tp = P(stylename=ConjTense)
             tp.addText(tense)
@@ -654,17 +740,13 @@ if conjugations:
                 rp.addElement(span(Mand, r["mandombe"].strip()))
                 rp.addText("   ")
             rp.addElement(span(Lari, lari))
-            if r.get("person"):
+            person = bilingual(r.get("person") or "", PERSON_EN)
+            if person:
                 rp.addText("   ")
-                rp.addElement(span(PersonT, r["person"].strip()))
+                rp.addElement(span(PersonT, person))
             conj_section.addElement(rp)
 
 
-para(Chapter, "Index thématique")
-para(Body, "Les entrées de ce dictionnaire sont issues des modules d'apprentissage suivants :")
-cats = sorted({e["cat"] for e in clean if e["cat"]})
-for c in cats:
-    para(BodySmall, "• " + c)
 
 para(Chapter, "À propos · About")
 para(Body, "Nzo Mikanda est une plateforme d'apprentissage du Kikongo Lari et de l'écriture "
