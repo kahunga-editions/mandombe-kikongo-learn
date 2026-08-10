@@ -440,33 +440,51 @@ para(Body,
 
 para(Chapter, "Prononciation · Pronunciation")
 para(SubHead, "Voyelles · Vowels")
-para(Body, "a, e, i, o, u se prononcent comme en français. Le u se lit /ou/ (comme dans « roue »). "
-           "Une voyelle peut être allongée : zaba se prononce zaaba.")
-para(BodySmall, "a, e, i, o, u are pronounced as in French; u reads /u/ as in « boot ». "
-                "A vowel may be lengthened: zaba is pronounced zaaba.")
+para(Body, "a, i, o se prononcent comme en français. Le u se lit /ou/ (comme dans « roue »). "
+           "e se prononce /é/. Une voyelle peut être allongée : zaba se prononce zaaba.")
+para(BodySmall, "a, i, o are pronounced as in French; u reads /u/ as in « boot ». "
+                "e is pronounced /é/. A vowel may be lengthened: zaba is pronounced zaaba.")
+doc.text.addElement(build_p(Entry, [
+    span(Mand, "Zaba"), "   ", span(Lari, "Zaba"), "  ", span(Fr, "savoir"),
+    "  ·  ", span(En, "to know"), "  ", span(Fr, "/zaaba/")]))
+
 para(SubHead, "Consonnes et groupes · Consonants and clusters")
-for fr_line, en_line in [
+for fr_line, en_line, examples in [
     ("g : toujours dur, comme dans « gare » — jamais /ʒ/.",
-     "g: always hard, as in « go » — never /ʒ/."),
+     "g: always hard, as in « go » — never /ʒ/.",
+     [("Ngolo", "Ngolo", "force", "strength", "/ŋɡolo/")]),
     ("j : comme le j français /ʒ/ — bujitu (respect), mbaji, jimbakane.",
-     "j: as the French j /ʒ/ (like « s » in « measure ») — bujitu, mbaji, jimbakane."),
+     "j: as the French j /ʒ/ (like « s » in « measure ») — bujitu, mbaji, jimbakane.",
+     [("Bujitu", "Bujitu", "respect", "respect", "/buʒitu/"),
+      ("Mbaji", "Mbaji", "voisin", "neighbour", "/mbaʒi/"),
+      ("Jimbakane", "Jimbakane", "oublier", "to forget", "/ʒimbakane/")]),
     ("sh : comme le sh anglais de « shoes » — moshi.",
-     "sh: as the English sh in « shoes » — moshi."),
+     "sh: as the English sh in « shoes » — moshi.",
+     [("Moshi", "Moshi", "un", "one", "/moʃi/")]),
     ("nz : nzila se prononce /nzila/ ou /ndjila/ ; les deux sont admis. Cette variation n'est "
      "pas systématique : d'autres mots en nz gardent /nz/.",
      "nz: nzila may be said /nzila/ or /ndjila/; both are accepted. This variation is not "
-     "systematic: other nz words keep /nz/."),
+     "systematic: other nz words keep /nz/.",
+     [("Nzila", "Nzila", "chemin", "path", "/nzila/ ~ /ndjila/")]),
     ("ns : nsoneka (écrire) se prononce /tsoneka/, mais ns se prononce souvent /ns/ ailleurs — "
      "la prononciation dépend du mot.",
      "ns: nsoneka (to write) is pronounced /tsoneka/, yet ns is often kept as /ns/ elsewhere — "
-     "pronunciation depends on the word."),
+     "pronunciation depends on the word.",
+     [("Nsoneka", "Nsoneka", "écrire", "to write", "/tsoneka/")]),
     ("nk : nkima (singe) se prononce /ntshima/.",
-     "nk: nkima (monkey) is pronounced /ntshima/."),
+     "nk: nkima (monkey) is pronounced /ntshima/.",
+     [("Nkima", "Nkima", "singe", "monkey", "/ntʃima/")]),
     ("dj : djunu (la paix) se prononce /dzunu/.",
-     "dj: djunu (peace) is pronounced /dzunu/."),
+     "dj: djunu (peace) is pronounced /dzunu/.",
+     [("Djunu", "Djunu", "paix", "peace", "/dzunu/")]),
 ]:
     para(BodySmall, "• " + fr_line)
     para(BodySmall, "   EN — " + en_line)
+    for mand, lari, fr_s, en_s, ipa in examples:
+        doc.text.addElement(build_p(Entry, [
+            span(Mand, clean_mandombe(mand)), "   ", span(Lari, lari), "  ", span(Fr, fr_s),
+            "  ·  ", span(En, en_s), "  ", span(Fr, ipa)]))
+
 
 para(Chapter, "Mode d'emploi · How to use")
 para(Body, "L'ouvrage comporte trois index. Le premier est classé par ordre alphabétique de la "
