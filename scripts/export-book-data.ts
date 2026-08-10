@@ -35,6 +35,8 @@ type Conj = {
   verb: string;
   verbMandombe?: string;
   meaning: string;
+  meaningFr?: string;
+  meaningEn?: string;
   tense: string;
   rows: { person: string; lari: string; mandombe: string }[];
   lesson: string;
@@ -74,6 +76,8 @@ for (const lesson of lessons as any[]) {
       verb: c.verb,
       verbMandombe: c.verbMandombe,
       meaning: c.meaning?.fr || c.meaning?.en || "",
+      meaningFr: c.meaning?.fr || "",
+      meaningEn: c.meaning?.en || "",
       tense: c.tenseFr || c.tense,
       rows: (c.rows ?? []).map((r: any) => ({
         person: r.person,
