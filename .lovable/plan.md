@@ -1,20 +1,25 @@
-# Origine de « babantu » et suppression
+# Correction de « babantu » → « ba bantu »
 
-## D'où vient l'entrée
+## Le problème
 
-L'entrée existe à trois endroits :
+L'entrée est écrite en un seul mot et glosée « les humains (générique) · humankind », avec une note de dérivation « ba- 'générique' + bantu ». C'est faux : il s'agit de deux mots, `ba` (être) + `bantu` (humains), donc « être humains · to be human(s) ».
 
-- `src/data/lessons.ts:29016` — leçon « Dérivation nominale » (affixes de dérivation, notes renvoyant à des paragraphes §3.7.x)
-- `supabase/functions/_shared/lessons-corpus.ts:19141` — copie du corpus pour les fonctions backend
-- `supabase/functions/_shared/dictionary.json:19858` — dictionnaire partagé (traducteur, Mbuta Matondo, dictionnaire en ligne, livre ODT/PDF)
+Emplacements :
 
-Elle est glosée « les humains (générique) · humankind » avec la note « ba- 'générique' + bantu (§3.7.5) ». C'est une forme construite par règle morphologique (préfixe ba- appliqué à un pluriel déjà formé), pas une forme relevée dans le corpus Nzo Mikanda. Cela viole la règle du lecteur de corpus : aucune forme ne doit être fabriquée par analogie.
+- `src/data/lessons.ts:29016` — leçon « Dérivation nominale »
+- `supabase/functions/_shared/lessons-corpus.ts:19141` — copie backend du corpus
+- `supabase/functions/_shared/dictionary.json:19858` — dictionnaire partagé (traducteur, Mbuta Matondo, dictionnaire en ligne, livre)
 
-## Correction proposée
+## Correction
 
-1. Supprimer l'entrée `babantu` des trois fichiers ci-dessus.
-2. Vérifier les caches de traduction du livre (`en`/notes/coréen) et retirer les clés correspondantes s'il y en a.
-3. Relancer l'audit des gloses (`scripts/audit-book-glosses.ts`) et le QA dictionnaire pour confirmer qu'aucune référence ne subsiste.
-4. Rechercher dans la même leçon les autres formes issues d'une construction par règle plutôt que d'une attestation (notes en §3.7.x) et les signaler dans un rapport, sans les supprimer sans votre validation.
+1. Remplacer dans les trois fichiers :
+   - lari : `ba bantu`
+   - mandombe : `Ba bantu` (deux mots, glyphes séparés)
+   - français : `être humains`
+   - anglais : `to be human`
+   - note : supprimer la note de dérivation « ba- 'générique' + bantu » et la remplacer par « ba 'être' + bantu 'humains' ».
+2. Comme l'entrée n'est plus un exemple de dérivation nominale, la déplacer hors de la liste des affixes de cette leçon (la garder au dictionnaire, pas comme illustration du préfixe ba-).
+3. Rechercher toute autre occurrence de `babantu` (caches de traduction du livre, corpus Mbuta Matondo) et l'aligner.
+4. Relancer l'audit des gloses et le QA dictionnaire pour vérifier l'absence de doublon `ba bantu` / `babantu`.
 
-Aucune régénération de l'ODT/PDF n'est incluse ici ; à faire à la prochaine version du livre si vous le souhaitez.
+Le livre ODT/PDF sera mis à jour à la prochaine génération de version.
