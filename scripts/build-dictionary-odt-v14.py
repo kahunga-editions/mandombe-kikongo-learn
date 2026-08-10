@@ -724,7 +724,7 @@ if conjugations:
                       keepwithnext="always")
     ConjTense = pstyle("ConjTense", fontname=BODY_FONT, fontsize="8pt", fontstyle="italic",
                        color="#555555", marginbottom="0.06cm", keepwithnext="always")
-    ConjRow = pstyle("ConjRow", fontname=BODY_FONT, fontsize="8.5pt", lineheight="0.62cm",
+    ConjRow = pstyle("ConjRow", fontname=BODY_FONT, fontsize="8.5pt", lineheight="0.58cm",
                      marginleft="0.2cm", marginbottom="0cm")
     PersonT = tstyle("PersonT", fontname=BODY_FONT, fontsize="8pt", color="#555555")
 
