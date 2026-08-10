@@ -8,6 +8,7 @@ Une seule version v19 qui remplace à la fois la v18 et l'ancienne version coré
 
 - `babantu` → `ba bantu` (deux mots) = « être humains · to be human », note « ba 'être' + bantu 'humains' ». Corrigé dans `src/data/lessons.ts`, `supabase/functions/_shared/lessons-corpus.ts` et `dictionary.json`, puis sorti de la liste des affixes de dérivation.
 - `bamindele` → `ba mindele` (deux mots) : la forme agglutinée n'existe pas. Deux emplois distincts, `ba` = connectif « de » (ex. « bala ba mindele » = les enfants des Blancs) et `ba` = être (« ba mindele » = être blancs). `mindele` reste « les Blancs », `mundele` le singulier. Correction dans le corpus, le dictionnaire, le traducteur et le prompt de Mbuta Matondo.
+- `Batata mbote zawu.` = « Bonjour à leurs parents. · Hello to their parents. » — corrigé dans le dictionnaire, le corpus des leçons, le traducteur et le corpus Mbuta Matondo, avec majuscule initiale et point final dans les trois langues.
 - Reprise des correctifs déjà validés : `mbaji` = demain (jamais « voisin »), `jimbakane` = perdu (chemin), `mundele/mindele`, `humunu`, `tina` (avoir peur de), `mumvuka`, `muhangu`, `tekela`, `ba bo / ba wu bo`, suppression de `mbuma` = fruit, `nkelele` = pintade, `ngongolo` = mille-pattes, `munienge`/`djelo`.
 - Ajout d'une règle dans `scripts/lari-variant-rules.json` signalant toute forme agglutinée `babantu` / `bamindele` pour éviter leur réapparition.
 - Passage de `scripts/fix-lari-variants.ts` puis de l'audit des gloses pour vérifier qu'aucune de ces erreurs ne subsiste dans les données exportées.
