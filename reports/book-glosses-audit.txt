@@ -1,0 +1,3 @@
+build-dictionary-odt-v14.py	Moshi	livre: "un"	dico: "Un (1)"
+build-dictionary-odt-v14.py	Nkima	absent de dictionary.json (glose "singe" non verifiable)
+build-dictionary-odt-v14.py	Djunu	absent de dictionary.json (glose "paix" non verifiable)
