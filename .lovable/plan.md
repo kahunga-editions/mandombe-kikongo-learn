@@ -19,6 +19,7 @@ Une seule version v19 qui remplace à la fois la v18 et l'ancienne version coré
 - Couverture, page de titre, avant-propos et annexes entièrement bilingues — plus une ligne coréenne sur la couverture et le titre.
 - « Mbamou » en français, « Mbamu » en anglais.
 - Annexe conjugaisons avec la phrase entière traduite (FR · EN, + KO), pas seulement le pronom. Pas d'index thématique.
+- Gloses anglaises sans article : on retire le `the` / `a` / `an` initial des sens anglais (« the jaw » → « jaw »), pour ne pas répéter deux fois le même mot dans l'index anglais et dans l'entrée. L'article est conservé uniquement quand il fait partie d'une vraie phrase (ex. « The child is eating. ») ou d'une locution figée. Le français garde ses articles, qui portent le genre.
 
 ## 3. Les quatre index
 
