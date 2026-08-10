@@ -32,6 +32,8 @@ IMG_DIR = sys.argv[3] if len(sys.argv) > 3 else None
 CONJ_SRC = sys.argv[4] if len(sys.argv) > 4 else None
 EN_SRC = sys.argv[5] if len(sys.argv) > 5 else "/tmp/en-cache.json"
 NOTES_EN_SRC = sys.argv[6] if len(sys.argv) > 6 else "/tmp/notes-en.json"
+CONJ_GLOSS_SRC = sys.argv[7] if len(sys.argv) > 7 else "/tmp/conj-gloss.json"
+
 FONT_TTF = "/dev-server/public/fonts/masono_mandombe-webfont.ttf"
 
 MANDOMBE_FONT = "HapaxMandombe"
@@ -233,7 +235,6 @@ for e in entries:
     }
     index[k] = rec
     clean.append(rec)
-
 # normalisation typographique + suppression des redondances FR/EN
 for r in clean:
     # les variantes notees « a | b » ou « a / b » deviennent « a · b »
@@ -241,11 +242,17 @@ for r in clean:
     r["lari"] = r["lari"][0].upper() + r["lari"][1:]
     if is_sentence(r["lari"], r["lari"]) and r["lari"][-1] not in SENTENCE_END:
         r["lari"] += "."
+    # le bloc Mandombe suit la meme regle : majuscule initiale, point final
+    # (le point est ajoute hors de la police Mandombe, au rendu).
+    if r["mandombe"]:
+        r["mandombe"] = r["mandombe"][0].upper() + r["mandombe"][1:]
+        r["mperiod"] = r["lari"].rstrip()[-1:] in SENTENCE_END
     r["fr"] = normalize_sentence(dedupe_senses(r["fr"]), r["lari"])
     r["en"] = normalize_sentence(dedupe_senses(r["en"]), r["lari"])
     if cmp_key(r["en"]) == cmp_key(r["fr"]):
         r["en"] = ""
     r["note"] = note_bilingual(dedupe_senses(r["note"]))
+
 
 clean.sort(key=lambda x: (x["key"], x["fr"]))
 
@@ -413,10 +420,14 @@ para(Chapter, " ")
 para(BookMandombe, "Buku dia Binsono")
 para(BookTitle, "BUKU DIA BINSONO")
 para(BookSub, "Dictionnaire Kikongo Lari – Français – English")
+para(BookSub, "Kikongo Lari – French – English Dictionary")
 para(BookMeta, f"{len(clean)} entrées · Écriture Mandombe")
+para(BookMeta, f"{len(clean)} entries · Mandombe script")
 para(BookMeta, "Trois index de recherche : Lari · Français · English")
+para(BookMeta, "Three search indexes: Lari · French · English")
 para(BookMandombe, "Nzo Mikanda")
 para(BookMeta, "Nzo Mikanda · www.nzomikanda.com")
+
 
 para(Chapter, "Avant-propos")
 para(Body,
@@ -443,7 +454,7 @@ para(Body,
      "This dictionary gathers the vocabulary and expressions of Kikongo Lari as they are "
      "taught on the Nzo Mikanda platform. Each entry gives the Mandombe script, the Latin "
      "Lari form, then the meaning in French and in English. The Kikongo Lari used here is "
-     "that of the Mbamou region.")
+     "that of the Mbamu region.")
 para(Body,
      "The corpus comes exclusively from attested sources: no form has been invented or "
      "borrowed from Kituba or Lingala. Whenever a cultural or grammatical nuance exists, it "
@@ -556,8 +567,12 @@ for e in clean:
 
     runs = []
     if e["mandombe"]:
-        runs += [span(Mand, e["mandombe"]), "   "]
+        runs += [span(Mand, e["mandombe"])]
+        if e.get("mperiod"):
+            runs.append(".")
+        runs.append("   ")
     runs += [span(Lari, e["lari"]), "  ", span(Fr, e["fr"])]
+
     if e["en"]:
         runs += ["  ·  ", span(En, e["en"])]
     section.addElement(build_p(Entry, runs))
@@ -615,7 +630,11 @@ def render_reverse(title, lang, other):
             if i:
                 runs.append(" ; ")
             if rec["mandombe"]:
-                runs += [span(MandS, rec["mandombe"]), " "]
+                runs += [span(MandS, rec["mandombe"])]
+                if rec.get("mperiod"):
+                    runs.append(".")
+                runs.append(" ")
+
             runs.append(span(LariS, rec["lari"]))
             for s in split_senses(rec[other]):
                 k = cmp_key(s)
@@ -693,15 +712,22 @@ def bilingual(fr: str, table: dict) -> str:
 
 
 conjugations = json.load(open(CONJ_SRC)) if CONJ_SRC and os.path.exists(CONJ_SRC) else []
+conj_gloss = (
+    json.load(open(CONJ_GLOSS_SRC))
+    if CONJ_GLOSS_SRC and os.path.exists(CONJ_GLOSS_SRC)
+    else {}
+)
+
 if conjugations:
-    ConjVerb = pstyle("ConjVerb", fontname=TITLE_FONT, fontsize="11.5pt", fontweight="bold",
-                      color="#8a5a20", margintop="0.4cm", marginbottom="0.05cm",
+    ConjVerb = pstyle("ConjVerb", fontname=TITLE_FONT, fontsize="10.5pt", fontweight="bold",
+                      color="#8a5a20", margintop="0.3cm", marginbottom="0.03cm",
                       keepwithnext="always")
-    ConjTense = pstyle("ConjTense", fontname=BODY_FONT, fontsize="8.5pt", fontstyle="italic",
-                       color="#555555", marginbottom="0.1cm", keepwithnext="always")
-    ConjRow = pstyle("ConjRow", fontname=BODY_FONT, fontsize="9pt", lineheight="0.70cm",
-                     marginleft="0.25cm", marginbottom="0.02cm")
-    PersonT = tstyle("PersonT", fontname=BODY_FONT, fontsize="8.5pt", color="#555555")
+    ConjTense = pstyle("ConjTense", fontname=BODY_FONT, fontsize="8pt", fontstyle="italic",
+                       color="#555555", marginbottom="0.06cm", keepwithnext="always")
+    ConjRow = pstyle("ConjRow", fontname=BODY_FONT, fontsize="8.5pt", lineheight="0.58cm",
+                     marginleft="0.2cm", marginbottom="0cm")
+    PersonT = tstyle("PersonT", fontname=BODY_FONT, fontsize="8pt", color="#555555")
+
 
     para(Chapter, "Annexe — Conjugaisons · Appendix — Conjugations")
     para(Body, "Cette annexe rassemble tous les tableaux de conjugaison rencontrés dans les "
@@ -735,16 +761,33 @@ if conjugations:
             lari = (r.get("lari") or "").strip()
             if not lari:
                 continue
+            lari_disp = lari[0].upper() + lari[1:]
+            if lari_disp[-1] not in SENTENCE_END:
+                lari_disp += "."
             rp = P(stylename=ConjRow)
             if r.get("mandombe"):
-                rp.addElement(span(Mand, r["mandombe"].strip()))
-                rp.addText("   ")
-            rp.addElement(span(Lari, lari))
+                mand = r["mandombe"].strip()
+                mand = mand[0].upper() + mand[1:]
+                rp.addElement(span(Mand, mand))
+                rp.addText(".   ")
+            rp.addElement(span(Lari, lari_disp))
             person = bilingual(r.get("person") or "", PERSON_EN)
             if person:
                 rp.addText("   ")
                 rp.addElement(span(PersonT, person))
+            g = conj_gloss.get(
+                f"{c.get('verb')}|{c.get('tense','')}|{r.get('person','')}|{lari}"
+            ) or {}
+            g_fr = (g.get("fr") or "").strip()
+            g_en = (g.get("en") or "").strip()
+            if g_fr:
+                rp.addText("   ")
+                rp.addElement(span(Fr, g_fr))
+            if g_en and cmp_key(g_en) != cmp_key(g_fr):
+                rp.addText("  ·  ")
+                rp.addElement(span(En, g_en))
             conj_section.addElement(rp)
+
 
 
 
