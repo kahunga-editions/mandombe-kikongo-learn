@@ -826,10 +826,8 @@ if conjugations:
                 rp.addElement(span(Mand, mand))
                 rp.addText(".   ")
             rp.addElement(span(Lari, lari_disp))
-            person = bilingual(r.get("person") or "", PERSON_EN)
-            if person:
-                rp.addText("   ")
-                rp.addElement(span(PersonT, person))
+            # pas d'etiquette de personne : Mandombe + latin + gloses seulement
+
             g = conj_gloss.get(
                 f"{c.get('verb')}|{c.get('tense','')}|{r.get('person','')}|{lari}"
             ) or {}
