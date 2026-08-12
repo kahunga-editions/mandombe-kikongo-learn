@@ -4258,7 +4258,7 @@ export const LESSONS_CORPUS: LessonSummary[] = [
       },
       {
         "lari": "Buisi",
-        "french": "La nuit"
+        "french": "Le jour, la lumière du jour"
       },
       {
         "lari": "Pari",
@@ -15542,7 +15542,7 @@ export const LESSONS_CORPUS: LessonSummary[] = [
       },
       {
         "lari": "Bele mpimpa",
-        "french": "La nuit (il fait nuit)"
+        "french": "La nuit dernière"
       }
     ],
     "exercises": [
@@ -17557,7 +17557,7 @@ export const LESSONS_CORPUS: LessonSummary[] = [
       },
       {
         "lari": "Bieri",
-        "french": "Trois"
+        "french": "C'était, c'étaient"
       },
       {
         "lari": "Neto",
@@ -17709,7 +17709,7 @@ export const LESSONS_CORPUS: LessonSummary[] = [
       },
       {
         "lari": "Bua ka bua",
-        "french": "Il/elle va tomber"
+        "french": "Il/elle est sur le point de tomber"
       }
     ],
     "exercises": [
