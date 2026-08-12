@@ -14,16 +14,17 @@ const STRIP_ACCENTS = (s: string) =>
 
 /**
  * Nettoie un bloc Mandombe : lettres et espaces uniquement.
- * - Le "y" de la translitteration s'ecrit "i" en Mandombe (fyu -> fiu).
- * - Jamais deux voyelles identiques a la suite (Iyaa -> Iia) : la police
- *   genererait une lettre latine parasite.
+ * - Apres une consonne, le "y" de la translitteration s'ecrit "i" (fyu -> fiu,
+ *   kya -> kia). Le "y" initial de mot est conserve (ya, yandi) : la police
+ *   le rend correctement.
+ * - Jamais deux voyelles identiques a la suite (Iyaa -> Iya) : la police
+ *   generait une lettre latine parasite.
  */
 export const cleanMandombe = (text: string): string =>
   STRIP_ACCENTS(text ?? "")
     .replace(/[()]/g, "")
     .replace(/[^A-Za-z ]+/g, " ")
-    .replace(/y/g, "i")
-    .replace(/Y/g, "I")
+    .replace(/([BCDFGJKLMNPQRSTVWXZbcdfgjklmnpqrstvwxz])[yY]/g, "$1i")
     .replace(/([AaEeIiOoUu])\1+/g, "$1")
     .replace(/\s+/g, " ")
     .trim();
