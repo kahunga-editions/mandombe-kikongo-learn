@@ -12,11 +12,20 @@
 const STRIP_ACCENTS = (s: string) =>
   s.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 
-/** Nettoie un bloc Mandombe : lettres et espaces uniquement. */
+/**
+ * Nettoie un bloc Mandombe : lettres et espaces uniquement.
+ * - Apres une consonne, le "y" de la translitteration s'ecrit "i" (fyu -> fiu,
+ *   kya -> kia). Le "y" initial de mot est conserve (ya, yandi) : la police
+ *   le rend correctement.
+ * - Jamais deux voyelles identiques a la suite (Iyaa -> Iya) : la police
+ *   generait une lettre latine parasite.
+ */
 export const cleanMandombe = (text: string): string =>
   STRIP_ACCENTS(text ?? "")
     .replace(/[()]/g, "")
     .replace(/[^A-Za-z ]+/g, " ")
+    .replace(/([BCDFGJKLMNPQRSTVWXZbcdfgjklmnpqrstvwxz])[yY]/g, "$1i")
+    .replace(/([AaEeIiOoUu])\1+/g, "$1")
     .replace(/\s+/g, " ")
     .trim();
 

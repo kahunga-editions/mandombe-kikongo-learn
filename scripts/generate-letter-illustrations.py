@@ -73,7 +73,14 @@ def card(glyph_path,lari,fr,out):
         d.text(((W-(b[2]-b[0]))/2-b[0],y),text,font=font,fill=fill)
     d.line([(W/2-60,780),(W/2+60,780)],fill=(138,106,46),width=1)
     ctr(lari,ImageFont.truetype(SERIF,64),820,(224,178,86))
-    ctr(fr,ImageFont.truetype(SANS,34),910,(192,160,117))
+    # la glose est reduite si elle depasse la marge interieure
+    size=34
+    while size>16:
+        f=ImageFont.truetype(SANS,size)
+        b=d.textbbox((0,0),fr,font=f)
+        if b[2]-b[0]<=W-200: break
+        size-=2
+    ctr(fr,ImageFont.truetype(SANS,size),910,(192,160,117))
     img.save(out,quality=94)
 
 def cover(glyph_title,glyph_brand,out):

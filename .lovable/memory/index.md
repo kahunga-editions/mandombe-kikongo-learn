@@ -63,6 +63,7 @@
 - [Possession & Ownership](mem://grammar/possession-ownership) — Independent pronouns and possessive suffixes
 - [Adjective Agreement](mem://grammar/adjective-agreement) — Adjectives agreeing with noun class
 - [Superlatives](mem://grammar/superlatives) — 'yokele' verb usage
+- [Mandombe y & doubles voyelles](mem://grammar/orthography-mandombe-y-double-vowels) — Pas de "aa", y -> i apres consonne, y initial conserve
 - [Orthography Mandombe Rules](mem://grammar/orthography-mandombe-rules) — No transition semi-vowels, Title Case
 - [Terminology Constraint](mem://constraints/terminology) — Avoid 'dialecte' or 'bantou'
 - [Interactive Grammatical Tables](mem://features/interactive-grammatical-tables) — Design and color palettes

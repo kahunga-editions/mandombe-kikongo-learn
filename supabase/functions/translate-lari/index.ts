@@ -675,7 +675,7 @@ Nkoyi = Jeudi
 Bukonzo = Vendredi
 Sabala = Samedi
 Mpimpa = La nuit
-Buisi = La nuit
+Buisi = Le jour, la lumière du jour
 Pari = Matin
 Suka = Finir, terminer
 Ntangu = Le soleil, temps, heure, horloge
@@ -2899,10 +2899,15 @@ Vumbukiri = Il/elle va bien
 Mbambukiri = Je me souviens
 Tilapia = Tilapia
 Tueri = Quatre
-Bieri = Trois
+Bieri = C'était, c'étaient
 Neto = Nous
 Tshijinga = Étang (sg.)
 N'samu wa mubote = Bonne idée
+Belesa = Ce qui rend malade
+Okenenge = Coiffure aux cheveux rasés très courts pour les filles (période coloniale, pour éviter le regard des professeurs blancs)
+Tuvi tua nkombo = Caca de cabri
+Mpua nani = Ma chère, mon cher
+Bua ka bua = Il/elle est sur le point de tomber
 Bunene na bakiri = J'ai pris du poids
 Wa yikiri wa munene = Il/elle a pris du poids
 Yaka = Le pain de manioc
@@ -3002,7 +3007,7 @@ Ta hana matondo = Remercions
 Mbo ni vutula matondo kue Ta Malonga = Je remercierai Ta Malonga
 Lumbu tshi = Ce jour
 Pari tshi = Ce matin
-Bele mpimpa = la nuit
+Bele mpimpa = La nuit dernière
 Lumingu lu kwiza = la semaine prochaine
 Ngonda yi kwiza = Le mois prochain
 Mvula yi kwiza = L
@@ -4837,7 +4842,7 @@ Tolo tua tu bakiri? = Avons-nous bien dormi ?
 Tolo tua lu bakiri? = Avez-vous bien dormi ?
 Tolo tua ba bakiri? = Ont-ils/elles bien dormi ?
 Bizinga bi ya tueri na bio. = On avait 4 étangs.
-Bizinga bi ya bieri neto. = Les 3 étangs pour nous.
+Bizinga bi ya bieri neto. = Les étangs étaient pour nous.
 Tshizinga tsha bi ya tsheri tsha bala. = Le quatrième était pour les enfants.
 Beto bala mu tshijinga tshina tueri loba. = Nous les enfants pêchions dans cet étang-là.
 Bijinga bia tilapia bieri. = Les étangs étaient des étangs pour tilapias.
@@ -4870,6 +4875,7 @@ Adjectifs après le nom. Possessifs avec connectif -a.
 ## Écriture Mandombe
 Pour le champ "mandombe", écris le texte Lari normalement tel quel (ex: "Mbote", "kiese", "moyo").
 Ne JAMAIS utiliser de caractères Unicode Adlam. Utiliser uniquement des caractères latins.
+Dans le champ "mandombe" : ne JAMAIS écrire deux "a" à la suite ("aa") et ne JAMAIS utiliser la lettre "y" (écris "i" à la place : fyu → fiu, Iyaa → Iya). Ces graphies génèrent du latin parasite dans la police Mandombe.
 
 ## Format de réponse
 Réponds UNIQUEMENT en JSON valide :
