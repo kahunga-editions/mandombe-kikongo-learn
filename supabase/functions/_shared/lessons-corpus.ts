@@ -3200,10 +3200,6 @@ export const LESSONS_CORPUS: LessonSummary[] = [
         "french": "Nudité"
       },
       {
-        "lari": "Bunutnu",
-        "french": "Vieillesse"
-      },
-      {
         "lari": "Bunganga",
         "french": "Savoir du nganga, médecine Kongo"
       },
@@ -17550,10 +17546,6 @@ export const LESSONS_CORPUS: LessonSummary[] = [
       {
         "lari": "Tilapia",
         "french": "Tilapia"
-      },
-      {
-        "lari": "Tueri",
-        "french": "Quatre"
       },
       {
         "lari": "Bieri",
