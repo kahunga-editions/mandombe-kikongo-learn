@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Dictionnaire Nzo Mikanda v19 — ODT pret pour impression (Amazon KDP 15.24 x 22.86 cm).
+"""Dictionnaire Nzo Mikanda v22 — ODT pret pour impression (Amazon KDP 15.24 x 22.86 cm).
 
 Trois index de recherche :
   I.   Kikongo Lari -> Francais -> English   (mise en page principale, illustrations)
@@ -7,7 +7,7 @@ Trois index de recherche :
   III. English -> Kikongo Lari -> Francais   (compact, 3 colonnes)
 
 Usage:
-  python scripts/build-dictionary-odt-v19.py /tmp/dico.json /mnt/documents/xxx.odt \
+  python scripts/build-dictionary-odt-v22.py /tmp/dico.json /mnt/documents/xxx.odt \
       /tmp/letters /tmp/conjugaisons.json /tmp/en-cache.json /tmp/notes-en.json
 """
 import json
@@ -86,6 +86,27 @@ def clean_mandombe(text: str) -> str:
         if part:
             blocks.append(part)
     return "\u2003".join(blocks)
+
+
+def mandombe_terminal(lari: str, mandombe_source: str) -> str:
+    """Signe final affiche apres le bloc Mandombe.
+
+    La translitteration latine commande lorsqu'elle porte un signe : une question
+    reste une question, tandis qu'un point d'exclamation devient un point simple.
+    A defaut, on conserve le point de la source Mandombe. Les lemmes sans signe ne
+    recoivent aucune ponctuation artificielle.
+    """
+    latin_sign = (lari or "").rstrip()[-1:]
+    source_sign = (mandombe_source or "").rstrip()[-1:]
+    if latin_sign == "?":
+        return "?"
+    if latin_sign in ".!\u2026":
+        return "."
+    if source_sign == "?":
+        return "?"
+    if source_sign in ".!\u2026":
+        return "."
+    return ""
 
 
 def norm_keep_case(s: str) -> str:
@@ -380,6 +401,7 @@ for e in raw_entries:
     rec = {
         "lari": lari,
         "mandombe": clean_mandombe(mand),
+        "mandombe_source": mand,
         "fr": dedupe_gloss(fr),
         "en": dedupe_gloss(en),
         "note": note,
@@ -419,8 +441,10 @@ for r in clean:
             r["lari"] += "."
     if r["mandombe"]:
         r["mandombe"] = r["mandombe"][0].upper() + r["mandombe"][1:]
-    # toute phrase se termine par un point, y compris la ligne Mandombe
-    r["mperiod"] = bool(r["mandombe"]) and r["lari"].rstrip()[-1:] in SENTENCE_END
+    # Le signe est rendu hors de la police Mandombe pour eviter tout glyphe latin
+    # parasite. Les questions gardent ?, les exclamations deviennent un point.
+    r["mterminal"] = (mandombe_terminal(r["lari"], r.get("mandombe_source") or "")
+                      if r["mandombe"] else "")
     for f in ("fr", "en"):
         r[f] = fix_semicolon_case(normalize_sentence(dedupe_gloss(r[f]), r["lari"]))
     if not r["en"]:
@@ -444,8 +468,37 @@ for r in clean:
                                   if notes_en.get(r.get("note_raw") or "") else r["note"])
 
 missing_en = [r["lari"] for r in clean if not r["en"]]
-write_report(os.environ.get("BOOK_REPORT", "/tmp/book-clean-report-v21.txt"),
+write_report(os.environ.get("BOOK_REPORT", "/tmp/book-clean-report-v22.txt"),
              report, len(clean), missing_en)
+
+# QA bloquante de ponctuation Mandombe. Une divergence ici invalide le livre.
+punctuation_errors = []
+question_count = statement_count = 0
+for r in clean:
+    latin_sign = r["lari"].rstrip()[-1:]
+    terminal = r.get("mterminal") or ""
+    if latin_sign == "?":
+        question_count += 1
+        if terminal != "?":
+            punctuation_errors.append(f"QUESTION\t{r['lari']}\t{terminal or '[absent]'}")
+    elif latin_sign in ".!\u2026":
+        statement_count += 1
+        if terminal != ".":
+            punctuation_errors.append(f"PHRASE\t{r['lari']}\t{terminal or '[absent]'}")
+    if terminal == "!":
+        punctuation_errors.append(f"EXCLAMATION\t{r['lari']}\t!")
+
+qa_path = os.environ.get("BOOK_PUNCT_REPORT", "/tmp/book-punctuation-report-v22.txt")
+with open(qa_path, "w", encoding="utf-8") as fh:
+    fh.write("Validation ponctuation Mandombe — dictionnaire v22\n\n")
+    fh.write(f"Entrees controlees : {len(clean)}\n")
+    fh.write(f"Questions controlees : {question_count}\n")
+    fh.write(f"Phrases declaratives controlees : {statement_count}\n")
+    fh.write(f"Erreurs : {len(punctuation_errors)}\n")
+    if punctuation_errors:
+        fh.write("\n" + "\n".join(punctuation_errors) + "\n")
+if punctuation_errors:
+    raise RuntimeError(f"Ponctuation Mandombe invalide : voir {qa_path}")
 print("Entrees :", len(clean), "| sans anglais :", len(missing_en))
 
 clean.sort(key=lambda x: (0 if x["key"][:1].isalpha() else 1, x["key"], x["fr"]))
@@ -763,8 +816,8 @@ for e in clean:
     runs = []
     if e["mandombe"]:
         runs += [span(Mand, e["mandombe"])]
-        if e.get("mperiod"):
-            runs.append(".")
+        if e.get("mterminal"):
+            runs.append(e["mterminal"])
         runs.append("   ")
     runs += [span(Lari, e["lari"]), "  ", span(Fr, e["fr"])]
 
@@ -842,8 +895,8 @@ def render_reverse(title, lang, other):
                 runs.append(" ; ")
             if rec["mandombe"]:
                 runs.append(span(MandS, rec["mandombe"]))
-                if rec.get("mperiod"):
-                    runs.append(".")
+                if rec.get("mterminal"):
+                    runs.append(rec["mterminal"])
                 runs.append(" ")
             runs.append(span(LariS, rec["lari"]))
         sec.addElement(build_p(EntrySmall, runs))
@@ -950,11 +1003,12 @@ if CONJ_ROWS:
         if lari[-1] not in SENTENCE_END:
             lari += "."
         rp = P(stylename=ConjRow)
-        mand = clean_mandombe(strip_seps(r.get("mandombe") or ""))
+        mand_source = strip_seps(r.get("mandombe") or "")
+        mand = clean_mandombe(mand_source)
         if mand:
             mand = mand[0].upper() + mand[1:]
             rp.addElement(span(Mand, mand))
-            rp.addText(".   ")
+            rp.addText(mandombe_terminal(lari, mand_source) + "   ")
         rp.addElement(span(Lari, lari))
         # Mandombe -> Lari -> glose francaise -> glose anglaise. Jamais d'etiquette
         # de personne isolee au milieu de la ligne.
