@@ -379,6 +379,10 @@ for e in raw_entries:
     note = drop_etymology(note_raw)
     if not lari:
         continue
+    # Quelques retouches manuelles de la v20 ont perdu uniquement le style MandT.
+    # La translitteration reste alors la source du texte rendu avec la police Mandombe.
+    if not mand:
+        mand = lari
     # retouches manuelles ou le sens a debordé sur la ligne Lari
     m = re.match(r"^([A-Za-z'\u2019\u00b7 ]{1,20}?)\s+(le |la |les |un |une |the )", lari)
     if m and len(lari.split()) > 2 and lari.split()[0].lower() in SENSE_FIXES:
