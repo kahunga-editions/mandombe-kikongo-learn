@@ -1,65 +1,42 @@
-# Zéro lettre latine dans le Mandombe
+# Correction du Mandombe : aucune invention, aucune lettre latine
 
-## Test réalisé avant toute modification
+## Principe (règle déjà donnée, appliquée strictement)
 
-Chaque groupe de lettres a été rendu avec la vraie police Mandombe (moteur du site,
-ligatures OpenType). Résultat mesuré :
+Le champ `mandombe` est **le même mot que le Lari**. Il ne peut différer que par les transformations déjà validées :
 
-```text
-Se tapent proprement (100 % glyphes) :
-  nz  dj  ns  nt  nk  ng  nd  mb  mp  mv  mf  sh  tsh  ki  ni  ny
-  bw  kw  mw  nw  sw  tw  zw  ch  b d f g h j k l m n p r s t v w y z
+- jamais deux voyelles identiques à la suite (`Iyaa` → `Iya`)
+- `tshio` → `kio`, `tshie` → `kie`
+- `ia` final long → `iya` (en Mandombe seulement)
+- pas d'apostrophe (`n'lemvo` → `nlemvo`)
+- `y` de la translittération → `i` en Mandombe (`fyu` → `fiu`)
+- `N'kila mulemvo` → `Ntshila mulemvo`
+- noms propres avec majuscule (`Paul` → `Paulo`)
 
-Laissent une lettre latine visible :
-  nj -> n     dz -> d     ndz -> nd   ndj -> n    nsh -> n
-  ts -> t     ky -> k     kp -> k     nzw -> n    fy -> f
-  ph -> p     th -> t     c -> c      q -> q      x -> flèche
-```
+Aucun remplacement de son n'est autorisé. `nj` ≠ `nz`, `dz` ≠ `dj`. La table de remappage phonétique proposée précédemment est abandonnée.
 
-## Règle appliquée
+## Ce qui est corrigé
 
-Aucune lettre latine résiduelle nulle part. Chaque graphie non typable est remplacée par
-la graphie typable qui rend le même son :
+1. **Bunkunzu** — le mot du dictionnaire est `Bunkunzu`. Le champ Mandombe contient `Bunkunju` (2 occurrences dans `src/data/lessons.ts`, dont un exercice). Correction en `Bunkunzu`.
 
-```text
-nj  -> nz        (Njo -> Nzo, Bunkunju -> Bunkunzu)
-dz  -> dj        (Budzabu -> Budjabu, Dzuna -> Djuna)
-ndz -> ndj? non typable non plus -> nz ou dj selon le mot
-nsh -> nsh non typable -> ns + sh scindé, ou nk selon le mot
-ts  -> tsh       (tsa -> tsha)
-ky  -> ki        fy -> fi        kp -> k       c -> k
-ph  -> p         th -> t         q -> kw       x -> ks
-```
+2. **Audit z/j et autres divergences** — pour chaque entrée du corpus, comparer le champ `mandombe` au Lari après application des seules transformations autorisées ci-dessus. Toute divergence non autorisée (lettre changée, son substitué) est ramenée sur le Lari. Les 13 entrées repérées (`Budjabu`, `Njo`, `Nzeka`, etc.) sont traitées par cette règle : le Mandombe suit le Lari, pas l'inverse.
 
-Les 13 entrées de l'audit initial se répartissent ainsi : les six formes en `Nj`
-(Bunkunju, Njo mikanda, Njo ja bilongo, Njo mikanda makalaka yi dukisa, Njeka, kwija)
-passent en `Nz` ; les formes en `dj` (Budjabu, Budjakata, Budjoki, Budjulu, Djuna,
-Djuneno, Kwa djuna) restent telles quelles car elles se tapent déjà proprement — c'est
-`dz` qui est intypable, pas `dj`.
+3. **Lettres latines résiduelles** — pour les suites que la police ne ligature pas, je ne substitue rien. Je produis un rapport listant chaque mot concerné avec son rendu, et je te le soumets avant toute modification. Rien n'est changé sans ta validation mot par mot.
 
-## Ce que je fais
+## Garde-fous
 
-1. Audit automatique de **tous** les champs Mandombe (leçons, dictionnaire, traducteur,
-   corpus Mbuta Matondo, et tous les spans Mandombe du document v25) : rendu headless
-   avec la police, détection pixel/glyphe de toute lettre latine restante.
-2. Correction de chaque cas détecté selon la table ci-dessus ; les cas ambigus
-   (`ndz`, `nsh`) me sont listés mot par mot pour validation avant application.
-3. Ajout d'un contrôle QA bloquant : toute valeur Mandombe contenant un groupe non
-   typable est refusée à l'écriture.
-4. Régénération de `dictionnaire-lari-v26.odt` (trilingue) puis
-   `dictionnaire-lari-ko-vol1-v3.odt` / `-vol2-v3.odt`, sans reconstruction complète.
-5. Contrôle visuel final : zéro lettre latine dans les pages Mandombe.
+- Règle ajoutée dans `scripts/lari-variant-rules.json` : interdiction de toute substitution de consonne entre Lari et Mandombe.
+- Contrôle QA dans `scripts/qa-dictionary-core.ts` : échec si un champ `mandombe` diverge du Lari au-delà des transformations autorisées.
+
+## Régénération
+
+Une fois le corpus corrigé et le rapport de résidus validé par toi :
+- `dictionnaire-lari-v26.odt` (trilingue)
+- volumes coréens v3 (Vol. I / Vol. II)
+
+Format ODT uniquement, comme demandé.
 
 ## Détails techniques
 
-- Sonde de rendu : Chromium + `public/fonts/masono_mandombe-webfont.ttf` ; un groupe est
-  déclaré typable si aucun glyphe latin n'apparaît dans le rendu.
-- Fichiers corpus : `src/data/lessons.ts`,
-  `supabase/functions/_shared/dictionary.json`,
-  `supabase/functions/_shared/lessons-corpus.ts`,
-  `supabase/functions/_shared/mbuta-corpus-v2.json`,
-  `supabase/functions/translate-lari/index.ts`.
-- Règles et QA : `scripts/lari-variant-rules.json`, `scripts/qa-dictionary-core.ts`,
-  fonction `cleanMandombe` côté site.
-- Chaîne ODT : correction des spans `MandT` / `MandS` du `content.xml` v25, puis
-  `scripts/rebuild-index-iv-en.py` et `scripts/build-dictionary-odt-v26-ko.py`.
+- Source des entrées : l'ODT v20 corrigé manuellement + `src/data/lessons.ts`.
+- `cleanMandombe` (`src/lib/mandombeText.ts`) reste la seule couche de transformation ; aucune règle phonétique n'y est ajoutée.
+- Le rapport de résidus latins est généré par sonde de rendu Chromium sur la police `masono_mandombe-webfont.ttf`, en HTML + Markdown.
