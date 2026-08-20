@@ -92,6 +92,10 @@ def clean_gloss(s: str) -> str:
     s = re.sub(r"\s*;\s*(?=;)", "", s)
     s = re.sub(r"\(\s+", "(", s)
     s = re.sub(r"\s+\)", ")", s)
+    s = s.strip()
+    # parenthese ouverte restee sans fermeture apres nettoyage du separateur
+    if s.count("(") == s.count(")") + 1:
+        s += ")"
     return s.strip()
 
 
@@ -102,7 +106,8 @@ def clean_mandombe_src(s: str) -> str:
     m = re.search(r"([.?!\u2026]+)\s*$", s)
     if m:
         signs = m.group(1)
-        term = "?" if "?" in signs else "."
+        last = signs.rstrip()[-1]
+        term = "?" if last == "?" else "."
         s = s[: m.start()].rstrip() + term
     return s.strip()
 
