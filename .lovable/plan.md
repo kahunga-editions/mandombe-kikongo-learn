@@ -32,7 +32,8 @@ Si un mot semble mal rendu, la cause est soit une faute de saisie dans le corpus
 
 **3. Lexique de contrôle** (erreurs déjà commises, à ne pas reproduire)
 
-`Bunkunju` n'existe pas — la racine est `Nkunzu` (cru), `Bunkunzu` (ce qui est cru). `Kue` = où. `Lowa` = les êtres du Soleil. `Lupungunzala` = libellule. `Tshioni` = grippe aviaire. `Bunutnu` et `Tueri` = quatre n'existent pas.
+`Bunkunju` n'existe pas — la racine est `Nkunzu` (cru), `Bunkunzu` (ce qui est cru). `Kue` = où. `Lowa` = les êtres du Soleil. `Lupungunzala` = libellule. `Tshioni` = grippe aviaire. `Bunutnu` n'existe pas. `Tueri` = « nous étions », du verbe `ba` = être.
+
 
 **4. Procédure de vérification**
 
