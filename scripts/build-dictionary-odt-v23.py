@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Dictionnaire Nzo Mikanda v22 — ODT pret pour impression (Amazon KDP 15.24 x 22.86 cm).
+"""Dictionnaire Nzo Mikanda v23 — ODT pret pour impression (Amazon KDP 15.24 x 22.86 cm).
 
 Trois index de recherche :
   I.   Kikongo Lari -> Francais -> English   (mise en page principale, illustrations)
@@ -7,7 +7,7 @@ Trois index de recherche :
   III. English -> Kikongo Lari -> Francais   (compact, 3 colonnes)
 
 Usage:
-  python scripts/build-dictionary-odt-v22.py /tmp/dico.json /mnt/documents/xxx.odt \
+  python scripts/build-dictionary-odt-v23.py /tmp/dico.json /mnt/documents/xxx.odt \
       /tmp/letters /tmp/conjugaisons.json /tmp/en-cache.json /tmp/notes-en.json
 """
 import json
@@ -626,6 +626,11 @@ def span(style, text):
     return s
 
 
+def mandombe_span(style, text, terminal=""):
+    """Compose le texte et son signe terminal dans un seul span Mandombe."""
+    return span(style, text + terminal)
+
+
 def build_p(style, runs):
     p = P(stylename=style)
     for r in runs:
@@ -819,9 +824,7 @@ for e in clean:
 
     runs = []
     if e["mandombe"]:
-        runs += [span(Mand, e["mandombe"])]
-        if e.get("mterminal"):
-            runs.append(e["mterminal"])
+        runs += [mandombe_span(Mand, e["mandombe"], e.get("mterminal") or "")]
         runs.append("   ")
     runs += [span(Lari, e["lari"]), "  ", span(Fr, e["fr"])]
 
@@ -898,9 +901,8 @@ def render_reverse(title, lang, other):
             if i:
                 runs.append(" ; ")
             if rec["mandombe"]:
-                runs.append(span(MandS, rec["mandombe"]))
-                if rec.get("mterminal"):
-                    runs.append(rec["mterminal"])
+                runs.append(mandombe_span(
+                    MandS, rec["mandombe"], rec.get("mterminal") or ""))
                 runs.append(" ")
             runs.append(span(LariS, rec["lari"]))
         sec.addElement(build_p(EntrySmall, runs))
@@ -1011,8 +1013,9 @@ if CONJ_ROWS:
         mand = clean_mandombe(mand_source)
         if mand:
             mand = mand[0].upper() + mand[1:]
-            rp.addElement(span(Mand, mand))
-            rp.addText(mandombe_terminal(lari, mand_source) + "   ")
+            rp.addElement(mandombe_span(
+                Mand, mand, mandombe_terminal(lari, mand_source)))
+            rp.addText("   ")
         rp.addElement(span(Lari, lari))
         # Mandombe -> Lari -> glose francaise -> glose anglaise. Jamais d'etiquette
         # de personne isolee au milieu de la ligne.
@@ -1039,6 +1042,26 @@ para(BodySmall, "Nzo Mikanda is a learning platform for Kikongo Lari and the Man
 para(BookMeta, "www.nzomikanda.com")
 
 doc.save(DST)
+
+# QA XML bloquante : aucun signe terminal ne doit suivre un span Mandombe en
+# texte brut. Il doit faire partie du span et heriter de HapaxMandombe.
+with zipfile.ZipFile(DST) as qa_zip:
+    qa_xml = qa_zip.read("content.xml").decode("utf-8")
+mand_style_names = ("MandT", "MandS")
+styled_terminals = 0
+unstyled_terminals = []
+for style_name in mand_style_names:
+    pattern = re.compile(
+        rf'<text:span text:style-name="{style_name}">([^<]*)</text:span>([.?!])?')
+    for match in pattern.finditer(qa_xml):
+        inside, outside = match.group(1), match.group(2)
+        if inside.endswith((".", "?")):
+            styled_terminals += 1
+        if outside:
+            unstyled_terminals.append((style_name, inside[-80:], outside))
+if unstyled_terminals:
+    details = "\n".join(f"{s}\t{t}\t{p}" for s, t, p in unstyled_terminals[:20])
+    raise RuntimeError("Ponctuation hors du span Mandombe :\n" + details)
 
 # ---------- embed the Mandombe font ----------
 tmp = DST + ".tmp"
@@ -1082,4 +1105,8 @@ with zipfile.ZipFile(tmp) as zin, zipfile.ZipFile(DST, "w", zipfile.ZIP_DEFLATED
         zout.writestr(item, data)
     zout.write(FONT_TTF, "Fonts/masono_mandombe.ttf")
 os.remove(tmp)
-print("OK", DST, len(clean), "entries")
+with open(qa_path, "a", encoding="utf-8") as fh:
+    fh.write(f"Signes terminaux dans un span Mandombe : {styled_terminals}\n")
+    fh.write("Signes terminaux hors span Mandombe : 0\n")
+    fh.write("Style de ponctuation : HapaxMandombe (hérité du span MandT/MandS)\n")
+print("OK", DST, len(clean), "entries", styled_terminals, "styled terminals")
