@@ -115,12 +115,27 @@ def cover_portrait(glyph_title, glyph_brand, volume_ko, volume_fr, out):
 
 
 # ------------------------------------------------------------------ textes ODT
+KO_FONT = "Noto Sans CJK KR"
+KO_EXTRA_STYLES = (
+    '<style:style style:name="KoHeadT" style:family="text">'
+    '<style:text-properties style:font-name="{f}" style:font-name-asian="{f}" '
+    'fo:font-size="16pt" style:font-size-asian="16pt" fo:font-weight="bold" '
+    'style:font-weight-asian="bold" fo:color="#5c421f"/></style:style>'
+    '<style:style style:name="KoBodyT" style:family="text">'
+    '<style:text-properties style:font-name="{f}" style:font-name-asian="{f}" '
+    'fo:font-size="10.5pt" style:font-size-asian="10.5pt" fo:color="#1a1a1a"/>'
+    "</style:style>"
+).format(f=KO_FONT)
+
+
 def P(style, content):
     return '<text:p text:style-name="%s">%s</text:p>' % (style, content)
 
 
-def KO(text):
-    return '<text:span text:style-name="KoT">%s</text:span>' % text
+def KO(text, style="KoBodyT"):
+    return '<text:span text:style-name="%s">%s</text:span>' % (style, text)
+
+
 
 
 KO_FOREWORD = [
