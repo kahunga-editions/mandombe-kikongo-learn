@@ -152,11 +152,15 @@ def strip_etymology(note: str) -> str:
     parts, seen = [], set()
     for seg in re.split(r"\s*;\s*", note):
         seg = seg.strip(" ;,-\u2014/")
-        seg = re.sub(r"^(FR|EN)\s*[\u2014-]\s*", "", seg).strip()
+        seg = re.sub(r"^(FR|EN)\b\s*[\u2014-]?\s*", "", seg).strip(" ;,-\u2014/")
         k = seg.lower()
-        if seg and k not in seen:
-            seen.add(k)
-            parts.append(seg)
+        if not seg or k in seen:
+            continue
+        if any(p.lower().startswith(k) for p in parts):
+            continue
+        parts = [p for p in parts if not k.startswith(p.lower())]
+        seen.add(k)
+        parts.append(seg)
     return " ; ".join(parts)
 
 
