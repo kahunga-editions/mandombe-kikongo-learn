@@ -1,60 +1,65 @@
-# Mandombe : ne corriger que ce qui n'est pas typable
+# Zéro lettre latine dans le Mandombe
 
 ## Test réalisé avant toute modification
 
-Les 13 entrées ont été rendues avec la vraie police Mandombe (moteur de rendu du site),
-graphie actuelle à gauche, graphie latine à droite. Résultat :
+Chaque groupe de lettres a été rendu avec la vraie police Mandombe (moteur du site,
+ligatures OpenType). Résultat mesuré :
 
 ```text
-nz  -> se tape entièrement en Mandombe        (Nzo, Bunkunzu : glyphes purs)
-nj  -> laisse un « n » latin parasite         (Njo, Bunkunju : n + jo)
-dz  -> laisse un « d » latin parasite         (Budzabu : d + zabu)
-dj  -> se tape entièrement en Mandombe        (Budjabu, Djuna : glyphes purs)
-z / j entre voyelles -> les deux se tapent    (kwiza / kwija : glyphes purs)
+Se tapent proprement (100 % glyphes) :
+  nz  dj  ns  nt  nk  ng  nd  mb  mp  mv  mf  sh  tsh  ki  ni  ny
+  bw  kw  mw  nw  sw  tw  zw  ch  b d f g h j k l m n p r s t v w y z
+
+Laissent une lettre latine visible :
+  nj -> n     dz -> d     ndz -> nd   ndj -> n    nsh -> n
+  ts -> t     ky -> k     kp -> k     nzw -> n    fy -> f
+  ph -> p     th -> t     c -> c      q -> q      x -> flèche
 ```
 
 ## Règle appliquée
 
-On change le Mandombe **uniquement** quand la graphie actuelle ne peut pas être tapée
-(lettre latine résiduelle). Quand elle se tape, on la garde telle quelle.
-
-### À corriger (le « nj » actuel laisse un n latin)
+Aucune lettre latine résiduelle nulle part. Chaque graphie non typable est remplacée par
+la graphie typable qui rend le même son :
 
 ```text
-Bunkunju            -> Bunkunzu
-Njo mikanda         -> Nzo mikanda
-Njo ja bilongo      -> Nzo za bilongo
-Njo mikanda makalaka yi dukisa -> Nzo mikanda makalaka yi dukisa
-Njeka wa djuna      -> Nzeka wa djuna   (seul le Nj initial change)
-Babonso ba kwija    -> Babonso ba kwiza (les deux se tapent, on suit le latin)
+nj  -> nz        (Njo -> Nzo, Bunkunju -> Bunkunzu)
+dz  -> dj        (Budzabu -> Budjabu, Dzuna -> Djuna)
+ndz -> ndj? non typable non plus -> nz ou dj selon le mot
+nsh -> nsh non typable -> ns + sh scindé, ou nk selon le mot
+ts  -> tsh       (tsa -> tsha)
+ky  -> ki        fy -> fi        kp -> k       c -> k
+ph  -> p         th -> t         q -> kw       x -> ks
 ```
 
-### À ne PAS toucher (dz intypable, dj correct)
+Les 13 entrées de l'audit initial se répartissent ainsi : les six formes en `Nj`
+(Bunkunju, Njo mikanda, Njo ja bilongo, Njo mikanda makalaka yi dukisa, Njeka, kwija)
+passent en `Nz` ; les formes en `dj` (Budjabu, Budjakata, Budjoki, Budjulu, Djuna,
+Djuneno, Kwa djuna) restent telles quelles car elles se tapent déjà proprement — c'est
+`dz` qui est intypable, pas `dj`.
 
-```text
-Budjabu  Budjakata  Budjoki  Budjulu  Djuna  Djuneno  Kwa djuna  wa djuna
-```
+## Ce que je fais
 
-## Ce que je fais ensuite
-
-1. Appliquer ces 6 corrections dans le corpus (leçons, dictionnaire en ligne, traducteur,
-   corpus Mbuta Matondo) et dans le XML de la v25.
-2. Ajouter la règle « nj initial -> nz » aux règles de variantes, en excluant
-   explicitement `dj`, qui reste la seule graphie typable pour le son /dz/.
-3. Ajouter un contrôle QA : signaler toute valeur Mandombe contenant une lettre latine
-   résiduelle après rendu (n, d, f isolés), au lieu de comparer bêtement au latin.
-4. Régénérer `dictionnaire-lari-v26.odt` (trilingue) puis
+1. Audit automatique de **tous** les champs Mandombe (leçons, dictionnaire, traducteur,
+   corpus Mbuta Matondo, et tous les spans Mandombe du document v25) : rendu headless
+   avec la police, détection pixel/glyphe de toute lettre latine restante.
+2. Correction de chaque cas détecté selon la table ci-dessus ; les cas ambigus
+   (`ndz`, `nsh`) me sont listés mot par mot pour validation avant application.
+3. Ajout d'un contrôle QA bloquant : toute valeur Mandombe contenant un groupe non
+   typable est refusée à l'écriture.
+4. Régénération de `dictionnaire-lari-v26.odt` (trilingue) puis
    `dictionnaire-lari-ko-vol1-v3.odt` / `-vol2-v3.odt`, sans reconstruction complète.
-5. Contrôle visuel des pages concernées avant livraison.
+5. Contrôle visuel final : zéro lettre latine dans les pages Mandombe.
 
 ## Détails techniques
 
-- Rendu de contrôle via Chromium + `public/fonts/masono_mandombe-webfont.ttf` (les
-  ligatures Mandombe passent par OpenType, un rendu PIL ne les déclenche pas).
-- Fichiers : `src/data/lessons.ts`, `supabase/functions/_shared/dictionary.json`,
+- Sonde de rendu : Chromium + `public/fonts/masono_mandombe-webfont.ttf` ; un groupe est
+  déclaré typable si aucun glyphe latin n'apparaît dans le rendu.
+- Fichiers corpus : `src/data/lessons.ts`,
+  `supabase/functions/_shared/dictionary.json`,
   `supabase/functions/_shared/lessons-corpus.ts`,
   `supabase/functions/_shared/mbuta-corpus-v2.json`,
   `supabase/functions/translate-lari/index.ts`.
-- Règles : `scripts/lari-variant-rules.json`, contrôle dans `scripts/qa-dictionary-core.ts`.
+- Règles et QA : `scripts/lari-variant-rules.json`, `scripts/qa-dictionary-core.ts`,
+  fonction `cleanMandombe` côté site.
 - Chaîne ODT : correction des spans `MandT` / `MandS` du `content.xml` v25, puis
   `scripts/rebuild-index-iv-en.py` et `scripts/build-dictionary-odt-v26-ko.py`.
