@@ -176,14 +176,15 @@ VOL2_INTRO_KO = ("\uc81c2\uad8c\uc5d0\ub294 \uc0c9\uc778 III(\uc601\uc5b4), \uc0
 
 
 def korean_foreword_block():
-    out = [P("Chapter", KO("\uba38\ub9ac\ub9d0"))]
+    out = [P("Chapter", KO("\uba38\ub9ac\ub9d0", "KoHeadT"))]
     for para in KO_FOREWORD:
         out.append(P("BodyTxt", KO(para)))
     return "".join(out)
 
 
 def volume_line(ko, fr):
-    return P("BookMeta", KO("%s \u00b7 %s" % (ko, fr)))
+    return P("BookMeta", KO("%s \u00b7 %s" % (ko, fr), "KoT"))
+
 
 
 def main():
