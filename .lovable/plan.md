@@ -16,15 +16,15 @@ Règles KDP pour un livre broché (paperback), encre noire :
 - `dictionnaire-lari-v25.odt` (trilingue) : **517 pages** → publiable tel quel.
 - `dictionnaire-lari-v25-ko.odt` (quadrilingue) : **839 pages** → **refusé par KDP** (11 pages de trop).
 
-### Solution retenue pour la version coréenne
+### Solution retenue : deux volumes, aucune compaction
 
-Compacter la mise en page pour repasser sous 828 pages, sans rien retirer du contenu :
+La mise en page reste **exactement** celle de la v25 coréenne (mêmes tailles, mêmes marges, même lisibilité). Le contenu est simplement scindé en deux tomes :
 
-1. Index IV (한국어 → Kikongo Lari → français) passé en interligne serré, même densité que les index II/III.
-2. Marges intérieures ajustées au minimum KDP autorisé pour cette pagination (19 mm de reliure).
-3. Corps des gloses coréennes à 8,5 pt (Noto Sans CJK KR reste parfaitement lisible à cette taille).
+- **Volume I** — pages de titre + avant-propos (FR · EN · 한국어) + Prononciation + **Index I** (Kikongo Lari → français → anglais → 한국어).
+- **Volume II** — page de titre + rappel court d'utilisation + **Index II** (français), **Index III** (anglais), **Index IV** (한국어) + annexe des conjugaisons.
 
-Objectif visé : ~790–810 pages. Si le compactage ne suffit pas, repli : passer la version coréenne au format 17,78 × 25,4 cm (7×10"), ce qui fait tomber la pagination d'environ 15 %.
+Chaque tome vise ~420–450 pages, largement sous la limite de 828. La coupure tombe sur une frontière d'index, donc aucun index n'est coupé en deux.
+
 
 ## 2. Couverture coréenne
 
