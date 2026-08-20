@@ -1,51 +1,60 @@
-# Bunkunzu : corriger le Mandombe qui ne suit pas la translittération
+# Mandombe : ne corriger que ce qui n'est pas typable
 
-## Ce qui se passe
+## Test réalisé avant toute modification
 
-Ce n'est pas un problème d'affichage de la police : dans la v25, l'entrée porte deux
-orthographes différentes.
-
-```text
-Mandombe : Bunkunju      <- écrit avec « ju »
-Lari     : Bunkunzu      <- écrit avec « zu »
-```
-
-La faute vient du corpus source (`src/data/lessons.ts`), où le champ `mandombe` a été
-saisi avec l'ancienne graphie en « j ». Le document ne fait que recopier ce champ, donc
-le glyphe rendu est bien celui de « ju » et non celui de « zu ».
-
-Un audit du document v25 montre 13 entrées touchées par ce même écart z / j :
+Les 13 entrées ont été rendues avec la vraie police Mandombe (moteur de rendu du site),
+graphie actuelle à gauche, graphie latine à droite. Résultat :
 
 ```text
-Bunkunju / Bunkunzu          Budjabu / Budzabu        Budjakata / Budzakata
-Budjoki / Budzoki            Budjulu / Budzulu        Djuna / Dzuna
-Djuneno / Dzuneno            Kwa djuna / Kwa dzuna    Nzeka wa djuna. / Njeka wa dzuna.
-Njo mikanda / Nzo mikanda    Njo mikanda makalaka yi dukisa.
-Njo ja bilongo. / Nzo za bilongo.                     Babonso ba kwija. / Babonso ba kwiza.
+nz  -> se tape entièrement en Mandombe        (Nzo, Bunkunzu : glyphes purs)
+nj  -> laisse un « n » latin parasite         (Njo, Bunkunju : n + jo)
+dz  -> laisse un « d » latin parasite         (Budzabu : d + zabu)
+dj  -> se tape entièrement en Mandombe        (Budjabu, Djuna : glyphes purs)
+z / j entre voyelles -> les deux se tapent    (kwiza / kwija : glyphes purs)
 ```
 
-## Ce que je propose
+## Règle appliquée
 
-1. Aligner le Mandombe sur la translittération latine pour ces 13 entrées, partout où
-   elles apparaissent (leçons, dictionnaire en ligne, traducteur, corpus Mbuta Matondo).
-2. Ajouter la règle correspondante au jeu de règles de variantes déjà existant, pour que
-   « nju / dju » ne puisse plus réapparaître face à un « nzu / dzu » latin.
-3. Ajouter un contrôle QA : toute nouvelle entrée dont le champ Mandombe diffère de la
-   translittération autrement que par les transformations autorisées (accents, y -> i,
-   ia -> iya, tshio -> kio, apostrophes) est signalée.
-4. Régénérer les documents à partir de la v25 corrigée :
-   - `dictionnaire-lari-v26.odt` (trilingue)
-   - `dictionnaire-lari-ko-vol1-v3.odt` et `-vol2-v3.odt` (version coréenne, deux tomes)
-5. Contrôle visuel des pages concernées en PDF avant livraison.
+On change le Mandombe **uniquement** quand la graphie actuelle ne peut pas être tapée
+(lettre latine résiduelle). Quand elle se tape, on la garde telle quelle.
+
+### À corriger (le « nj » actuel laisse un n latin)
+
+```text
+Bunkunju            -> Bunkunzu
+Njo mikanda         -> Nzo mikanda
+Njo ja bilongo      -> Nzo za bilongo
+Njo mikanda makalaka yi dukisa -> Nzo mikanda makalaka yi dukisa
+Njeka wa djuna      -> Nzeka wa djuna   (seul le Nj initial change)
+Babonso ba kwija    -> Babonso ba kwiza (les deux se tapent, on suit le latin)
+```
+
+### À ne PAS toucher (dz intypable, dj correct)
+
+```text
+Budjabu  Budjakata  Budjoki  Budjulu  Djuna  Djuneno  Kwa djuna  wa djuna
+```
+
+## Ce que je fais ensuite
+
+1. Appliquer ces 6 corrections dans le corpus (leçons, dictionnaire en ligne, traducteur,
+   corpus Mbuta Matondo) et dans le XML de la v25.
+2. Ajouter la règle « nj initial -> nz » aux règles de variantes, en excluant
+   explicitement `dj`, qui reste la seule graphie typable pour le son /dz/.
+3. Ajouter un contrôle QA : signaler toute valeur Mandombe contenant une lettre latine
+   résiduelle après rendu (n, d, f isolés), au lieu de comparer bêtement au latin.
+4. Régénérer `dictionnaire-lari-v26.odt` (trilingue) puis
+   `dictionnaire-lari-ko-vol1-v3.odt` / `-vol2-v3.odt`, sans reconstruction complète.
+5. Contrôle visuel des pages concernées avant livraison.
 
 ## Détails techniques
 
-- Correction directe dans le XML `content.xml` du v25 pour les spans `MandT` / `MandS`,
-  puis relance de `scripts/build-dictionary-odt-v26-ko.py` et de
-  `scripts/rebuild-index-iv-en.py` pour la chaîne coréenne — aucune reconstruction
-  complète, les acquis validés (ponctuation Mandombe, gloses EN, index) sont préservés.
-- Corpus : `src/data/lessons.ts`, `supabase/functions/_shared/dictionary.json`,
+- Rendu de contrôle via Chromium + `public/fonts/masono_mandombe-webfont.ttf` (les
+  ligatures Mandombe passent par OpenType, un rendu PIL ne les déclenche pas).
+- Fichiers : `src/data/lessons.ts`, `supabase/functions/_shared/dictionary.json`,
   `supabase/functions/_shared/lessons-corpus.ts`,
   `supabase/functions/_shared/mbuta-corpus-v2.json`,
   `supabase/functions/translate-lari/index.ts`.
-- Règles : `scripts/lari-variant-rules.json` + contrôle dans `scripts/qa-dictionary-core.ts`.
+- Règles : `scripts/lari-variant-rules.json`, contrôle dans `scripts/qa-dictionary-core.ts`.
+- Chaîne ODT : correction des spans `MandT` / `MandS` du `content.xml` v25, puis
+  `scripts/rebuild-index-iv-en.py` et `scripts/build-dictionary-odt-v26-ko.py`.
