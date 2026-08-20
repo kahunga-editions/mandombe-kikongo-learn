@@ -35,26 +35,31 @@ Nouvelle couverture dédiée, générée par `scripts/generate-letter-illustrati
 - Ligne des langues : `Français · English · 한국어`
 - Mention explicite : `4개 언어 사전 · Quatre index de recherche`
 - Marque : glyphe Mandombe **Nzo Mikanda** + `Nzo Mikanda` + `www.nzomikanda.com`
+- Mention du tome, en bas du titre : `제1권 · Volume I` et `제2권 · Volume II`
 
 ## 3. Avant-propos en coréen
 
 L'avant-propos actuel est bilingue (FR + EN). Pour l'édition coréenne, il sera **trilingue** : le bloc coréen est ajouté après le bloc anglais, section par section, dans le même ordre :
 
 - Présentation de l'ouvrage et du corpus Jacquot & Lumwamu
-- Comment utiliser les quatre index
+- Comment utiliser les quatre index (avec renvoi au tome où se trouve chaque index)
 - Écriture Mandombe et rôle du site nzomikanda.com
 - Prononciation (les exemples restent en Mandombe doré, seules les explications sont traduites)
+
+L'avant-propos complet figure dans le Volume I ; le Volume II reprend une version courte (présentation + mode d'emploi des index) pour qu'il reste utilisable seul.
 
 La traduction passe par le même pipeline que les gloses (`scripts/translate-book-korean.py`, cache réutilisé), puis relecture manuelle des titres de section.
 
 ## 4. Détails techniques
 
 - Nouveau script `scripts/build-dictionary-odt-v26-ko.py`, dérivé de `build-dictionary-odt-v25.py` : il part du **même v24 validé** (aucune régression sur les sens corrigés, la ponctuation Mandombe et la casse `EN —`).
-- Ajout de styles compacts `KoEntryTight` / `IndexTight` et d'un `<style:page-layout>` aux marges KDP.
-- Comptage de pages vérifié par conversion LibreOffice headless en interne (aucun PDF livré, conformément à votre demande).
+- Le script produit deux ODT en découpant le `content.xml` à la frontière du chapitre « Index II », styles et déclarations de polices (HapaxMandombe, Noto Sans CJK KR) dupliqués à l'identique dans les deux fichiers.
+- Aucune modification de style, de taille de police ou de marge.
+- Pagination de chaque tome vérifiée par conversion LibreOffice headless en interne (aucun PDF livré, conformément à votre demande).
 
 ## 5. Livrables
 
-- `dictionnaire-lari-v25-ko-v2.odt` — couverture coréenne, avant-propos coréen, pagination ≤ 828.
-- Un rapport court : pagination finale, conformité KDP, contrôles de non-régression (Bieri, Bele mpimpa, `EN —`, ponctuation Mandombe).
-- La version trilingue v25 reste inchangée (déjà conforme).
+- `dictionnaire-lari-ko-vol1.odt` — avant-propos trilingue, Prononciation, Index I.
+- `dictionnaire-lari-ko-vol2.odt` — Index II, III, IV et annexe des conjugaisons.
+- Un rapport court : pagination de chaque tome, conformité KDP, contrôles de non-régression (Bieri, Bele mpimpa, `EN —`, ponctuation Mandombe).
+- La version trilingue v25 reste inchangée (517 pages, déjà conforme).
