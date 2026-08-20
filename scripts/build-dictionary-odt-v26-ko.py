@@ -162,11 +162,11 @@ KO_FOREWORD = [
 ]
 
 VOL2_INTRO_FR = ("Ce second tome contient l'Index III (English \u2192 Fran\u00e7ais \u2192 Kikongo Lari), "
-                 "l'Index IV (\ud55c\uad6d\uc5b4 \u2192 Kikongo Lari \u2192 Fran\u00e7ais) et l'annexe des conjugaisons. "
+                 "l'Index IV (\ud55c\uad6d\uc5b4 \u2192 Kikongo Lari \u2192 Fran\u00e7ais \u00b7 English) et l'annexe des conjugaisons. "
                  "L'avant-propos, la prononciation, l'Index I (Kikongo Lari) et l'Index II (fran\u00e7ais) "
                  "se trouvent dans le tome I.")
 VOL2_INTRO_EN = ("This second volume contains Index III (English \u2192 French \u2192 Kikongo Lari), "
-                 "Index IV (Korean \u2192 Kikongo Lari \u2192 French) and the conjugation appendix. "
+                 "Index IV (Korean \u2192 Kikongo Lari \u2192 French \u00b7 English) and the conjugation appendix. "
                  "The foreword, pronunciation, Index I (Kikongo Lari) and Index II (French) "
                  "are in volume I.")
 VOL2_INTRO_KO = ("\uc81c2\uad8c\uc5d0\ub294 \uc0c9\uc778 III(\uc601\uc5b4), \uc0c9\uc778 IV(\ud55c\uad6d\uc5b4), "
