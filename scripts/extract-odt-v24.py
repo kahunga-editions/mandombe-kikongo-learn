@@ -154,6 +154,8 @@ def strip_etymology(note: str) -> str:
         seg = seg.strip(" ;,-\u2014/")
         seg = re.sub(r"^(FR|EN)\b\s*[\u2014-]?\s*", "", seg).strip(" ;,-\u2014/")
         k = seg.lower()
+        if k in ("fr", "en"):
+            continue
         if not seg or k in seen:
             continue
         if any(p.lower().startswith(k) for p in parts):
