@@ -112,6 +112,44 @@ def clean_mandombe_src(s: str) -> str:
     return s.strip()
 
 
+SHOUTY = re.compile(r"[a-z][A-Z]|[A-Z]{2,}")
+
+# Entrees cassees sur deux lignes dans la source manuelle : correction ciblee.
+FIXUPS = {
+    "Mfinda le fin fonds de": {
+        "lari": "Mfinda", "mandombe": "Mfinda",
+        "fr": "le fin fonds de la foret".replace("foret", "for\u00eat"),
+        "en": "the deepest part of the forest",
+    },
+}
+
+
+def fix_word_case(w: str) -> str:
+    return w[:1].upper() + w[1:].lower() if SHOUTY.search(w) else w
+
+
+def fix_case(mandombe: str, lari: str) -> str:
+    """Retablit la casse du Mandombe en la calquant sur la translitteration."""
+    if not SHOUTY.search(mandombe or ""):
+        return mandombe
+    mw, lw = mandombe.split(), lari.split()
+    if len(mw) == len(lw):
+        out = []
+        for m, l in zip(mw, lw):
+            out.append(m[:1].upper() + m[1:].lower() if l[:1].isupper()
+                       else fix_word_case(m).lower() if not SHOUTY.search(l)
+                       else fix_word_case(m))
+        return " ".join(out)
+    return " ".join(fix_word_case(w) for w in mw)
+
+
+def strip_etymology(note: str) -> str:
+    """Retire les renvois d'analyse (§x.y) et les gloses etymologiques."""
+    note = re.sub(r"\(?\s*\u00a7\s*[\d.]+\s*\)?", "", note or "")
+    note = re.sub(r"\b\w+-?\s*'[^']+'\s*\+\s*\w+\s*'[^']+'", "", note)
+    return re.sub(r"\s{2,}", " ", note).strip(" ;,")
+
+
 def is_entry(style):
     return style == "Entry" or (style or "").startswith("P")
 
@@ -158,6 +196,7 @@ def main():
             if style == "EntryNote":
                 if entries:
                     note = clean_gloss(para_fields(p)["note"] or flat)
+                    note = strip_etymology(note)
                     entries[-1]["note"] = (
                         (entries[-1].get("note", "") + " ; " + note).strip(" ;"))
                 continue
@@ -171,6 +210,11 @@ def main():
                 "en": clean_gloss(f["en"]),
                 "note": clean_gloss(f["note"]),
             }
+            fx = FIXUPS.get(entry["lari"])
+            if fx:
+                entry.update(fx)
+            entry["mandombe"] = fix_case(entry["mandombe"], entry["lari"])
+            entry["note"] = strip_etymology(entry["note"])
             entries.append(entry)
             if pending_images:
                 letter = (entry["lari"][:1] or "#").upper()
