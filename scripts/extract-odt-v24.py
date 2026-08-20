@@ -147,7 +147,17 @@ def strip_etymology(note: str) -> str:
     """Retire les renvois d'analyse (§x.y) et les gloses etymologiques."""
     note = re.sub(r"\(?\s*\u00a7\s*[\d.]+\s*\)?", "", note or "")
     note = re.sub(r"\b\w+-?\s*'[^']+'\s*\+\s*\w+\s*'[^']+'", "", note)
-    return re.sub(r"\s{2,}", " ", note).strip(" ;,")
+    note = re.sub(r"\s{2,}", " ", note).strip(" ;,")
+    # segments vides du type « FR — / EN — » et doublons de segments
+    parts, seen = [], set()
+    for seg in re.split(r"\s*;\s*", note):
+        seg = seg.strip(" ;,-\u2014/")
+        seg = re.sub(r"^(FR|EN)\s*[\u2014-]\s*", "", seg).strip()
+        k = seg.lower()
+        if seg and k not in seen:
+            seen.add(k)
+            parts.append(seg)
+    return " ; ".join(parts)
 
 
 def is_entry(style):
