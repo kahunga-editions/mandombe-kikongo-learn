@@ -49,6 +49,23 @@ TITLE_FONT = "Liberation Sans"
 en_cache = json.load(open(EN_SRC)) if EN_SRC and os.path.exists(EN_SRC) else {}
 notes_en = json.load(open(NOTES_EN_SRC)) if NOTES_EN_SRC and os.path.exists(NOTES_EN_SRC) else {}
 
+# le cache est indexe sur la glose brute ; on ajoute une cle insensible a la
+# casse et a la ponctuation finale pour retrouver la glose apres nettoyage
+_en_loose = {}
+
+
+def _loose(s: str) -> str:
+    return re.sub(r"[\s.;,]+$", "", (s or "").strip().lower())
+
+
+for _k, _v in list(en_cache.items()):
+    _en_loose.setdefault(_loose(_k), _v)
+
+
+def en_lookup(fr: str):
+    return en_cache.get(fr) or en_cache.get((fr or "").rstrip(".")) \
+        or _en_loose.get(_loose(fr))
+
 
 # --------------------------------------------------------------------------- utils
 def norm(s: str) -> str:
@@ -453,10 +470,8 @@ for r in clean:
         r[f] = fix_semicolon_case(normalize_sentence(dedupe_gloss(r[f]), r["lari"]))
     if not r["en"]:
         # gloses anglaises completees par traduction (cache /tmp/en-cache-v21.json)
-        whole = en_cache.get(r["fr"]) or en_cache.get(r["fr"].rstrip("."))
-        got = [whole] if whole else [
-            en_cache.get(sn) or en_cache.get(sn.rstrip("."))
-            for sn in split_senses(r["fr"])]
+        whole = en_lookup(r["fr"])
+        got = [whole] if whole else [en_lookup(sn) for sn in split_senses(r["fr"])]
         got = [g for g in got if g]
         if got:
             r["en"] = fix_semicolon_case(
