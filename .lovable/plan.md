@@ -15,8 +15,10 @@ Si un mot semble mal rendu, la cause est soit une faute de saisie dans le corpus
 - jamais deux voyelles identiques à la suite : `Iyaa` → `Iya`, `Laadi` → `Ladi`
 - `tshio` → `kio`, `tshie` → `kie` (ex. `Tshioni` → `Kioni`)
 - `ia` final de mot long → `iya` en Mandombe seulement (`tilapia` → `tilapiya`)
-- pas d'apostrophe : `n'lemvo` → `nlemvo`
-- exception : `N'kila` se tape tel quel avec un **N majuscule**, ce qui donne le bon glyphe. `Ntshila` n'est que la prononciation et ne doit jamais être saisi
+- l'apostrophe est conservée dans la translittération Lari, mais retirée pour taper le Mandombe dans le cas `nl` : `n'lemvo` → `nlemvo` (l'apostrophe y note la parenté avec `mulemvo` = le pardon)
+- **règle du N majuscule** : un mot en `N'` + consonne se tape tel quel avec un **N majuscule**, ce qui produit le bon glyphe. Ce n'est pas une exception isolée : `N'kila`, `N'kento`, `N'kumba` (le nombril), `N'kelo` (une source), `N'kalu` (le poisson séché), `N'kolo` (la fatigue), `N'kama`, `N'ti` (un arbre), `N'tima`, `N'tekolo` (le petit-fils). L'apostrophe note un son guttural très doux, produit à la jointure du cou et de la tête. `Ntshila` n'est que la prononciation et ne doit jamais être saisi.
+- le combo `N't` ne rend actuellement le bon glyphe qu'avec `i` (`N'ti`, `N'tima`). Le cas `N'te` (`N'tekolo`) est à coder dans `cleanMandombe`.
+
 - `y` après consonne → `i` (`fyu` → `fiu`, `kya` → `kia`) ; le `y` initial est conservé (`ya`, `yandi`)
 - noms propres avec majuscule ; `Paul` → `Paulo`
 - ponctuation : elle fait partie du bloc Mandombe et se compose avec la police Mandombe, jamais en latin noir
