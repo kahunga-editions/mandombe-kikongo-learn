@@ -1,20 +1,25 @@
-# Correction globale de `eN —` dans le dictionnaire
+# Correction de `eN —` + deux versions ODT (v25)
 
 ## Correction
 
-1. Modifier le nettoyage des notes bilingues pour préserver strictement les étiquettes `FR —` et `EN —` en majuscules.
-2. Empêcher la règle « pas de majuscule après un point-virgule » de modifier les sigles et étiquettes de langue.
-3. Régénérer l'ODT et le PDF depuis la source v20 corrigée et vérifiée par son empreinte, sans toucher aux sens ni à la ponctuation Mandombe validée.
+1. Préserver strictement les étiquettes bilingues `FR —` et `EN —` en majuscules : la règle « pas de majuscule après un point-virgule » ne doit jamais toucher un sigle de langue.
+2. Repartir de VOTRE ODT v20 corrigé (empreinte SHA-256 vérifiée), en gardant tout ce qui a été validé : sens corrigés (`Bieri`, `Bele mpimpa`…), ponctuation composée dans le Mandombe, index II/III reconstruits depuis l'index I.
+3. Aucune autre modification de sens.
 
-## Contrôles bloquants
+## Livrables (ODT uniquement, pas de PDF)
 
-- Rechercher `eN`, `fR` et toute autre casse mixte équivalente dans tout le document : résultat attendu, zéro occurrence.
-- Vérifier les 208 occurrences actuellement touchées, notamment la note de `Bala` : `Pluriel de muana ; EN — Plural of muana`.
-- Vérifier que les minuscules normales après un point-virgule restent inchangées.
-- Contrôler que `Bieri`, `Bele mpimpa` et la ponctuation Mandombe conservent les corrections validées.
-- Inspecter visuellement toutes les pages du PDF avant livraison.
+- `dictionnaire-lari-v25.odt` — trilingue Kikongo Lari / Français / Anglais.
+- `dictionnaire-lari-v25-ko.odt` — même contenu + coréen (4 index), généré à partir du même corpus corrigé pour qu'aucune divergence ne subsiste entre les deux.
 
-## Livrables
+## Contrôles bloquants avant livraison
 
-- Nouvelle version ODT et PDF corrigée.
-- Rapport indiquant le nombre d'occurrences avant/après et le résultat des contrôles de casse.
+- Zéro occurrence de casse mixte (`eN`, `fR`, etc.) dans les deux fichiers ; contrôle sur la note de `Bala` : `Pluriel de muana ; EN — Plural of muana`.
+- Ponctuation Mandombe intacte (`Abue tele?`).
+- Sens déjà corrigés vérifiés un par un : `Bieri`, `Bele mpimpa`, `Belesa`, `Mpua nani`, `Mbaji`, `Mfinda`, `Mulumba`, `Ngulu`, absence de `Bunutnu`.
+- Index II et III sans entrée absente de l'index I.
+- Contrôles identiques appliqués à la version coréenne.
+- Inspection visuelle du rendu avant remise, pour ne pas repartir sur une version supplémentaire.
+
+## Rapport
+
+Un rapport unique listant : source utilisée et empreinte, nombre d'occurrences `eN` avant/après, résultats de chaque contrôle, pour les deux fichiers.
