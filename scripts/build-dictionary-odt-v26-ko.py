@@ -196,7 +196,9 @@ def main():
     cover_name = re.search(r'xlink:href="(Pictures/[^"]+)"', xml).group(1)
 
     head_end = xml.index("<office:text>") + len("<office:text>")
-    head = xml[:head_end]
+    head = xml[:head_end].replace("</office:automatic-styles>",
+                                  KO_EXTRA_STYLES + "</office:automatic-styles>", 1)
+
     body = xml[head_end:]
     tail = "</office:text></office:body></office:document-content>"
     body = body[: body.rindex("</office:text>")]
