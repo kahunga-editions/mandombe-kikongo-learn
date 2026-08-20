@@ -1,46 +1,44 @@
-# Correction du Mandombe : aucune invention, aucune lettre latine
+# Skill « taper le Mandombe »
 
-## Principe
+Créer une skill permanente qui contient les règles de saisie du Mandombe, pour qu'aucune session future ne réinvente des graphies ni ne propose de substitutions phonétiques.
 
-Le Mandombe est **l'écriture du Kikongo Lari**, rien d'autre. Comme le hangeul pour le coréen : ce n'est pas une langue ni une variante, c'est le même mot, écrit avec l'autre écriture. Le champ `mandombe` contient donc exactement le mot Lari.
+## Principe que la skill grave en dur
 
-Les seuls ajustements admis servent à obtenir le bon glyphe avec la police, jamais à changer le mot :
+Le Mandombe est **l'écriture du Kikongo Lari**, comme le hangeul est l'écriture du coréen. Le champ `mandombe` contient le mot Lari lui-même, jamais un mot différent. Aucun remplacement de son n'est jamais autorisé : `nj` ≠ `nz`, `dz` ≠ `dj`, `z` ≠ `j`.
 
-- jamais deux voyelles identiques à la suite (`Iyaa` → `Iya`)
-- `tshio` → `kio`, `tshie` → `kie`
-- `ia` final long → `iya`
-- pas d'apostrophe, sauf `N'kila` : on tape `N'kila` avec un N majuscule, ce qui donne le bon glyphe (surtout pas `Ntshila`, qui n'est que la prononciation)
-- `y` de la translittération → `i` (`fyu` → `fiu`)
-- noms propres avec majuscule (`Paul` → `Paulo`)
+Si un mot semble mal rendu, la cause est soit une faute de saisie dans le corpus, soit une règle de frappe de la police — jamais une raison de changer le mot.
 
-Aucun remplacement de son n'est autorisé. `nj` ≠ `nz`, `dz` ≠ `dj`. La table de remappage phonétique proposée précédemment est abandonnée.
+## Contenu de la skill
 
-## Ce qui est corrigé
+**1. Règles de frappe validées** (ajustements de saisie uniquement, le mot reste identique)
 
-1. **Bunkunzu** — `Bunkunju` n'existe pas. La racine est `Nkunzu` (cru) et `Bunkunzu` (ce qui est cru). Les 2 occurrences fautives dans `src/data/lessons.ts` (dont un exercice) sont corrigées en `Bunkunzu`.
+- jamais deux voyelles identiques à la suite : `Iyaa` → `Iya`, `Laadi` → `Ladi`
+- `tshio` → `kio`, `tshie` → `kie` (ex. `Tshioni` → `Kioni`)
+- `ia` final de mot long → `iya` en Mandombe seulement (`tilapia` → `tilapiya`)
+- pas d'apostrophe : `n'lemvo` → `nlemvo`
+- exception : `N'kila` se tape tel quel avec un **N majuscule**, ce qui donne le bon glyphe. `Ntshila` n'est que la prononciation et ne doit jamais être saisi
+- `y` après consonne → `i` (`fyu` → `fiu`, `kya` → `kia`) ; le `y` initial est conservé (`ya`, `yandi`)
+- noms propres avec majuscule ; `Paul` → `Paulo`
+- ponctuation : elle fait partie du bloc Mandombe et se compose avec la police Mandombe, jamais en latin noir
 
-2. **Audit des divergences** — pour chaque entrée du corpus, le champ `mandombe` doit être le mot Lari lui-même. Toute lettre différente est une faute de saisie et est corrigée sur le mot réel (`Njo` → `Nzo`, etc.), pas par substitution phonétique.
+**2. Interdits explicites**
 
-3. **Lettres latines résiduelles** — pour les suites que la police ne ligature pas, je ne substitue rien et je n'invente rien. Je produis un rapport listant chaque mot concerné avec son rendu, et je te le soumets. Rien n'est modifié sans ta validation mot par mot.
+- ne jamais substituer une consonne pour contourner un défaut de ligature
+- ne jamais inventer une graphie : si une suite ne se tape pas, produire un rapport et demander, sans rien modifier
+- ne jamais laisser une lettre latine résiduelle dans un rendu Mandombe
+- ne jamais exporter en DOCX un document contenant du Mandombe (ODT et PDF uniquement)
 
-4. **N'kila mulemvo** — la graphie `N'kila` est rétablie là où elle a été remplacée par `Ntshila`.
+**3. Lexique de contrôle** (erreurs déjà commises, à ne pas reproduire)
 
-## Garde-fous
+`Bunkunju` n'existe pas — la racine est `Nkunzu` (cru), `Bunkunzu` (ce qui est cru). `Kue` = où. `Lowa` = les êtres du Soleil. `Lupungunzala` = libellule. `Tshioni` = grippe aviaire. `Bunutnu` et `Tueri` = quatre n'existent pas.
 
-- Règle ajoutée dans `scripts/lari-variant-rules.json` : interdiction de toute substitution de consonne entre le mot Lari et son écriture Mandombe.
-- Contrôle QA dans `scripts/qa-dictionary-core.ts` : échec si un champ `mandombe` diverge du mot Lari au-delà des ajustements de saisie listés plus haut.
+**4. Procédure de vérification**
 
-## Régénération
-
-Une fois le corpus corrigé et le rapport de résidus validé par toi :
-
-- `dictionnaire-lari-v26.odt` (trilingue)
-- volumes coréens v3 (Vol. I / Vol. II)
-
-Format ODT uniquement.
+Avant toute modification d'un champ `mandombe` : lancer `scripts/audit-mandombe-latin.ts`, puis rendre les mots suspects via une sonde Chromium avec `masono_mandombe-webfont.ttf`, et soumettre le rapport avant de changer quoi que ce soit.
 
 ## Détails techniques
 
-- Source des entrées : l'ODT v20 corrigé manuellement + `src/data/lessons.ts`.
-- `cleanMandombe` (`src/lib/mandombeText.ts`) reste la seule couche de transformation ; aucune règle phonétique n'y est ajoutée, et l'exception `N'kila` y est prise en compte.
-- Le rapport de résidus latins est généré par sonde de rendu Chromium sur la police `masono_mandombe-webfont.ttf`, en HTML + Markdown.
+- Skill écrite dans `.agents/skills/taper-le-mandombe/SKILL.md`, puis activée.
+- Description de déclenchement ciblée : champs `mandombe`, dictionnaire, leçons, traducteur, export du livre, illustrations de glyphes.
+- La skill référence `src/lib/mandombeText.ts` (`cleanMandombe`) comme unique couche de transformation, et `scripts/audit-mandombe-latin.ts` comme contrôle.
+- Aucune modification du corpus dans cette étape : la skill est purement de la connaissance.
