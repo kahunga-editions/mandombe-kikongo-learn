@@ -1,931 +1,97 @@
 source : /mnt/documents/dictionnaire-lari-v26.odt
 sortie : /mnt/documents/dictionnaire-lari-v27.odt
-entrees : 4622
+entrees : 4502
 
-lettre volee   A we : segment 'lequel' retire
 glose          Abe yandi ni na? : Qui est-il au juste? ; qui est-il vient-il au juste ? -> Qui est-il au juste?
-glose          Ama : maat ; ma chère -> Ma chere ; maat
-lettre volee   Ani : segment 'Mon' retire
-lettre volee   Awu : segment 'Leur' retire
-lettre volee   BA : segment 'Être' retire
-lettre volee   Ba · maba : segment 'Palmier' retire
-lettre volee   Baba : segment 'Muet' retire
-lettre volee   Babakala : segment 'Hommes' retire
-glose          Badi bari (l). : Égume). ; amarante. -> Amarante (un legume).
-lettre volee   Badika : segment 'Penser' retire
-lettre volee   Badisa : segment 'Durcir' retire
-lettre volee   Bagu · bahu : segment 'Capturé' retire
-lettre volee   Baka : segment 'Obtenir' retire
-lettre volee   Bakala : segment 'Homme' retire
-lettre volee   Bakengi : segment 'Sumériens' retire
-lettre volee   Bakisa : segment 'Aider' retire
-lettre volee   Bakisa · sadisa : segment 'aider' retire
-lettre volee   Bakitina · bakishina : segment 'Dominer' retire
-lettre volee   Bakuka : segment 'Élucider' retire
-lettre volee   Bakula : segment 'Expliquer' retire
-lettre volee   Balabala : segment 'Route' retire
-lettre volee   Baluka : segment 'Tourner' retire
-lettre volee   Balula : segment 'Traduire' retire
-lettre volee   Bamatasa : segment 'Coller' retire
-lettre volee   Bamba : segment 'Coudre' retire
-lettre volee   Bambalakana : segment 'Longer' retire
-lettre volee   Bambula : segment 'Rappeler' retire
-lettre volee   Bamika : segment 'Crépir' retire
-lettre volee   Bamina : segment 'Gronder' retire
-lettre volee   Bamuna : segment 'Décoller' retire
-lettre volee   Bamvusa : segment 'Éclater' retire
-lettre volee   Banda : segment 'sud' retire
-lettre volee   Banda mbata : segment 'Gifler' retire
-lettre volee   Bandamunwa : segment 'Étonnement' retire
-lettre volee   Bandidila : segment 'Dompter' retire
-lettre volee   Bandu : segment 'Origine' retire
-lettre volee   Bandumuka : segment 'Fuir' retire
-lettre volee   Bandumuna : segment 'Détaler' retire
-lettre volee   Banza : segment 'Penser' retire
-lettre volee   Basa : segment 'Fendre' retire
-lettre volee   Basu · bibasu : segment 'Fendre' retire
-lettre volee   Bataata : segment 'pères' retire
-lettre volee   Batisa : segment 'réunir' retire
-lettre volee   Bau : segment 'ils' retire
-lettre volee   Bawu : segment 'Eux' retire
-lettre volee   Bela : segment 'Haïr' retire
-lettre volee   Benga : segment 'mûrir' retire
-lettre volee   Beni · mabeni : segment 'Sein' retire
-lettre volee   Beta : segment 'Aplatir' retire
-lettre volee   Bia : segment 'Élu' retire
-lettre volee   Biadikila : segment 'Léguer' retire
-lettre volee   Biadila : segment 'Héritier' retire
-lettre volee   Biadisa : segment 'Couronner' retire
-lettre volee   Biakati : segment 'Entrailles' retire
-lettre volee   Biampamba : segment 'choses' retire
-lettre volee   Bianga : segment 'Appeler' retire
-lettre volee   Biangusu : segment 'Appeler' retire
-lettre volee   Biantwadi : segment 'Richesses' retire
-lettre volee   Bibanzulu : segment 'pensées' retire
-lettre volee   Bibutu : segment 'parents' retire
-lettre volee   Bidia : segment 'Aliment' retire
-lettre volee   Bididika : segment 'Entasser' retire
-lettre volee   Bidika : segment 'Accumuler' retire
-lettre volee   Bidila : segment 'Ourlet' retire
-lettre volee   Bidima : segment 'Flamber' retire
-lettre volee   Bidjimu : segment 'Image' retire
-lettre volee   Bidunga : segment 'Consternation' retire
-lettre volee   Bieka : segment 'Bénir' retire
-lettre volee   Bieko : segment 'Béni' retire
-lettre volee   Biemba : segment 'Tabasser' retire
-lettre volee   Biembeka : segment 'Charger' retire
-lettre volee   Bietana : segment 'Sonner' retire
-lettre volee   Bietasa : segment 'Entrechoquer' retire
-lettre volee   Bika : segment 'Abandonner' retire
-lettre volee   Bikala : segment 'Feu' retire
-lettre volee   Bikinda : segment 'Tombe' retire
-lettre volee   Bikinkita : segment 'Bravoure' retire
-lettre volee   Bikonko : segment 'coins' retire
-lettre volee   Bikoyi : segment 'Complaintes' retire
-lettre volee   Bikua : segment 'Combien' retire
-lettre volee   Bikula : segment 'Prophétiser' retire
-lettre volee   Bikululu : segment 'Quotidien' retire
-lettre volee   Bila : segment 'Bouillir' retire
-lettre volee   Bilongo : segment 'Médicaments' retire
-lettre volee   Bilusu : segment 'vomi' retire
-lettre volee   Bima : segment 'Choses' retire
-lettre volee   Bimba : segment 'Goûter' retire
-lettre volee   Bimuaka : segment 'semences' retire
-lettre volee   Binduzuka : segment 'Disparaître' retire
-lettre volee   Binga : segment 'Chasser' retire
-lettre volee   Bingula : segment 'appel' retire
-lettre volee   Binkuti : segment 'habits' retire
-lettre volee   Binsangu : segment 'Nouvelles' retire
-lettre volee   Binza : segment 'Rater' retire
-lettre volee   Binzu : segment 'Marmites' retire
-lettre volee   Bioka : segment 'Éructer' retire
-lettre volee   Bitshinda : segment 'Cimetière' retire
-lettre volee   Bola : segment 'Oignon' retire
-lettre volee   Boma : segment 'Crainte' retire
-lettre volee   Bomba : segment 'Adorer' retire
-lettre volee   Boria · maboria : segment 'tique' retire
-lettre volee   Bota : segment 'Cogner' retire
-lettre volee   Botana : segment 'Heurter' retire
-lettre volee   Botasa : segment 'Heurter' retire
-lettre volee   Bote : segment 'Beau' retire
-lettre volee   Boteka : segment 'Plonger' retire
-lettre volee   Bua : segment 'Tomber' retire
-lettre volee   Bubolo : segment 'fainéantise' retire
-lettre volee   Bubote : segment 'Bien' retire
-lettre volee   Budulu : segment 'Bêtise' retire
-lettre volee   Budzakata : segment 'Humidité' retire
-lettre volee   Budzia : segment 'Quiétude' retire
-lettre volee   Budzua : segment 'Découragement' retire
-lettre volee   Budzulu : segment 'Impatience' retire
-lettre volee   Buedi : segment 'cartouche' retire
-lettre volee   Buele : segment 'après' retire
-lettre volee   Buesa : segment 'parfaire' retire
-lettre volee   Bueso : segment 'bonheur' retire
-lettre volee   Bueta : segment 'écraser' retire
-lettre volee   Bueyesa : segment 'embellir' retire
-lettre volee   Buhulu : segment 'Bêtise' retire
-lettre volee   Buimi : segment 'avarice' retire
-lettre volee   Buishi : segment 'jour' retire
-lettre volee   Bujitu : segment 'Politesse' retire
-lettre volee   Buka : segment 'Soigner' retire
-lettre volee   Bukaka : segment 'Solitude' retire
-lettre volee   Buki · mbuki : segment 'médecin' retire
-lettre volee   Bukindi : segment 'courage' retire
-lettre volee   Buku · mabuku : segment 'livre' retire
-lettre volee   Bukulu : segment 'Ancien' retire
-lettre volee   Bukundi : segment 'Faveur' retire
-lettre volee   Bula : segment 'Casser' retire
-lettre volee   Bulebua : segment 'paresse' retire
-lettre volee   Buleke : segment 'Jeunesse' retire
-lettre volee   Bulembe : segment 'Lenteur' retire
-lettre volee   Bulemvo : segment 'Humilité' retire
-lettre volee   Bulenga : segment 'Paresse' retire
-lettre volee   Bulu : segment 'Trou' retire
-lettre volee   Bulumukina : segment 'tituber' retire
-lettre volee   Bulungi : segment 'Anniversaire' retire
-lettre volee   Buma : segment 'Argile' retire
-lettre volee   Bumba : segment 'Embrasser' retire
-lettre volee   Bumbaki : segment 'Fraude' retire
-lettre volee   Bumfunia : segment 'Méchanceté' retire
-lettre volee   Bumpala : segment 'Beauté' retire
-lettre volee   Bumpamba : segment 'Vain' retire
-lettre volee   Bumpofo : segment 'Lourdeur' retire
-lettre volee   Bumpoto : segment 'Oisiveté' retire
-lettre volee   Bumpula : segment 'Gourmandise' retire
-lettre volee   Bumpwana : segment 'Enfance' retire
-lettre volee   Bumuntu : segment 'Humanité' retire
-lettre volee   Bunda : segment 'Bomber' retire
-lettre volee   Bundi : segment 'Joue' retire
-lettre volee   Bundindele : segment 'Beauté' retire
-lettre volee   Bunene : segment 'Grandeur' retire
-lettre volee   Bungu · mabungu : segment 'Raison' retire
-lettre volee   Bungula : segment 'Abonder' retire
-lettre volee   Bunkunzu : segment 'Crudité' retire
-lettre volee   Bunkuta : segment 'Peur' retire
-lettre volee   Bunokena : segment 'faiblesse' retire
-lettre volee   Bunsana : segment 'Découragement' retire
-lettre volee   Bunsonga : segment 'Sagesse' retire
-lettre volee   Bunsuiki : segment 'Corruption' retire
-lettre volee   Bunsunga : segment 'Intelligence' retire
-lettre volee   Bunsuza : segment 'Adultère' retire
-lettre volee   Buntoko : segment 'Beauté' retire
-lettre volee   Buntuadi : segment 'Alliance' retire
-lettre volee   Bunzambi : segment 'Déité' retire
-lettre volee   Buotasa : segment 'joindre' retire
-lettre volee   Buta : segment 'fusil' retire
-lettre volee   Butisa : segment 'Fructifier' retire
-lettre volee   Buwayi : segment 'tristesse' retire
-lettre volee   Buyelele : segment 'Finesse' retire
-lettre volee   Buyumba : segment 'Bêtise' retire
-lettre volee   Buzoba : segment 'Bêtise' retire
-lettre volee   Damuka : segment 'rebondir' retire
-lettre volee   Dekesa : segment 'briser' retire
-lettre volee   Dema : segment 'Poids' retire
-lettre volee   Dia : segment 'Manger' retire
-lettre volee   Diama : segment 'enterrer' retire
-lettre volee   Diambu : segment 'Chose' retire
-lettre volee   Diata : segment 'Marcher' retire
-lettre volee   Dieka : segment 'alors' retire
-lettre volee   Diengela : segment 'rôder' retire
-lettre volee   Dika : segment 'Nourrir' retire
-lettre volee   Dimpa · mampa : segment 'pain' retire
-lettre volee   Dinu · meno : segment 'Dent' retire
-lettre volee   Djoka : segment 'Courir' retire
-lettre volee   Djuta : segment 'Tendre' retire
-lettre volee   Duka : segment 'Sortir' retire
-lettre volee   Fiantakana : segment 'Maigrir' retire
-lettre volee   Fidila : segment 'Mener' retire
-lettre volee   Fila : segment 'Conduire' retire
-lettre volee   Fina : segment 'pincer' retire
-lettre volee   Finkakasa : segment 'Rapprocher' retire
-lettre volee   Fiona : segment 'Effiler' retire
-lettre volee   Fiongonena : segment 'Questionner' retire
-lettre volee   Fioti : segment 'Petit' retire
-lettre volee   Fiotona : segment 'Injurier' retire
-lettre volee   Fisa : segment 'Déguster' retire
-lettre volee   Fitula : segment 'Décalotter' retire
-lettre volee   Fiyia : segment 'Sucer' retire
-lettre volee   Fua : segment 'Mourir' retire
-lettre volee   Fua · mafua : segment 'héritage' retire
-lettre volee   Fuambala : segment 'Crasseux' retire
-lettre volee   Fuana : segment 'Suffire' retire
-lettre volee   Fuasa : segment 'Gaspiller' retire
-lettre volee   Fuema : segment 'Ruminer' retire
-lettre volee   Fuetoso : segment 'Haine' retire
-lettre volee   Fuila : segment 'Désir' retire
-lettre volee   Fuki : segment 'Ténacité' retire
-lettre volee   Fulu : segment 'Lieu' retire
-lettre volee   Fuluka : segment 'Plein' retire
-lettre volee   Fulusa : segment 'remplir' retire
-lettre volee   Fumba : segment 'courber' retire
-lettre volee   Fumfukuta : segment 'Tâtonner' retire
-lettre volee   Fumfula : segment 'tituber' retire
-lettre volee   Fumfutu : segment 'Sale' retire
-lettre volee   Fumpisa : segment 'Jaillir' retire
-lettre volee   Funa : segment 'Augmenter' retire
-lettre volee   Funda (v.) : segment 'Accuser' retire
-lettre volee   Fungu : segment 'Avorté' retire
-lettre volee   Fungula : segment 'Avouer' retire
-lettre volee   Funisa : segment 'Agrandir' retire
-lettre volee   Fuofuokota : segment 'farfouiller' retire
-lettre volee   Fuombombo : segment 'Robuste' retire
-lettre volee   Fusuka : segment 'Jaillir' retire
-lettre volee   Futa : segment 'Payer' retire
-lettre volee   Futana : segment 'Bouder' retire
-lettre volee   Futika : segment 'Plier' retire
-lettre volee   Futikila : segment 'morve' retire
-lettre volee   Futukasa : segment 'Chiffonner' retire
-lettre volee   Futumuka : segment 'Germer' retire
-lettre volee   Fweti : segment 'Devoir' retire
-lettre volee   Ha : segment 'Ici' retire
-lettre volee   Hambula : segment 'Écarter' retire
-lettre volee   Hana : segment 'Donner' retire
-lettre volee   Hata : segment 'village' retire
-lettre volee   Haula : segment 'Écarter' retire
-lettre volee   Hehe, mulemvuaku. : segment 'Oui' retire
-lettre volee   Hema : segment 'Haleter' retire
-lettre volee   Hembo · mahembo : segment 'Épaule' retire
-lettre volee   Humbu : segment 'abcès' retire
-lettre volee   Hundu : segment 'Trou' retire
-lettre volee   Jibu : segment 'Ferment' retire
-lettre volee   Jibuku · bijibuku : segment 'Plèvre' retire
-lettre volee   Jika : segment 'Enterrer' retire
-lettre volee   Jiku : segment 'Frissonnant' retire
-lettre volee   Jimbakana : segment 'Oublier' retire
-lettre volee   Jimbakasa : segment 'Dissimuler' retire
-lettre volee   Jimi · majimi : segment 'grossesse' retire
-lettre volee   Jita · majita : segment 'Importance' retire
-lettre volee   Jitu : segment 'Respectant' retire
-lettre volee   Jula : segment 'Déterrer' retire
-lettre volee   Jundu : segment 'Écrasant' retire
-lettre volee   Kaba : segment 'Donner' retire
-lettre volee   Kabila : segment 'Offrir' retire
-lettre volee   Kabisa : segment 'Empêcher' retire
-lettre volee   Kabu : segment 'Don' retire
-lettre volee   Kaka : segment 'Seulement' retire
-lettre volee   Kakamasa : segment 'Agacer' retire
-lettre volee   Kakasi : segment 'Amer' retire
-lettre volee   Kakula : segment 'Sauver' retire
-lettre volee   Kala : segment 'Nier' retire
-lettre volee   Kalaka · makalaka : segment 'érudit' retire
-lettre volee   Kalanga : segment 'Frire' retire
-lettre volee   Kalu : segment 'Train' retire
-lettre volee   Kalu · bikalu : segment 'échelle' retire
-lettre volee   Kaluka : segment 'Devenir' retire
-lettre volee   Kamata : segment 'pincer' retire
-lettre volee   Kamba : segment 'parler' retire
-lettre volee   Kambila : segment 'Intercepter' retire
-lettre volee   Kamuna : segment 'Comprimer' retire
-lettre volee   Kana : segment 'Décider' retire
-lettre volee   Kanda (n.) : segment 'Famille' retire
-lettre volee   Kanda (v.) : segment 'Masser' retire
-lettre volee   Kanga : segment 'Fermer' retire
-lettre volee   Kangala : segment 'Voyager' retire
-lettre volee   Kangama : segment 'Colle' retire
-lettre volee   Kangu : segment 'Alliance' retire
-lettre volee   Kangula : segment 'Délier' retire
-lettre volee   Kanguzula : segment 'Ligoter' retire
-lettre volee   Karisa : segment 'Renvoyer' retire
-lettre volee   Kati : segment 'chambre' retire
-lettre volee   Katula : segment 'Enlever' retire
-lettre volee   Kebisa : segment 'avertir' retire
-lettre volee   Kebo : segment 'briquet' retire
-lettre volee   Kedima : segment 'briller' retire
-lettre volee   Kela : segment 'Protéger' retire
-lettre volee   Kiamvu · biamvu : segment 'pont' retire
-lettre volee   Kiari, tshiari : segment 'Pitié' retire
-lettre volee   Kibaka, tshibaka, baka. : segment 'Mur.' retire
-lettre volee   Kibakala : segment 'virilité' retire
-lettre volee   Kibanga · bibanga : segment 'menton' retire
-lettre volee   Kibula, tshibula, bula · bibula. : segment 'Écorce.' retire
-lettre volee   Kifua · bifua : segment 'Forme' retire
-lettre volee   Kikaku : segment 'enclos' retire
-lettre volee   Kikoba · bikoba : segment 'Lèvre' retire
-lettre volee   Kikola · bikola : segment 'légume' retire
-lettre volee   Kikuku : segment 'cuisine' retire
-lettre volee   Kikulu : segment 'culture' retire
-lettre volee   Kikulu, tshikulu : segment 'Culture' retire
-lettre volee   Kilenga : segment 'oisif' retire
-lettre volee   Kilenga · tshilenga · bilenga : segment 'Oisif' retire
-lettre volee   Kilobi · tshilobi · bilobi : segment 'Pêcheur' retire
-lettre volee   Kilongiki · tshilongiki · bilongiki : segment 'apprenant' retire
-lettre volee   Kimangu · tshimangu · bimangu : segment 'Merveille' retire
-lettre volee   Kimfitshimfi · bimfi : segment 'ganglion' retire
-lettre volee   Kimfumbi : segment 'Vengeance' retire
-lettre volee   Kimvuama : segment 'richesse' retire
-lettre volee   Kingandi : segment 'tel' retire
-lettre volee   Kiniemo : segment 'cachet' retire
-lettre volee   Kinimbi : segment 'tueur' retire
-lettre volee   Kinkenene : segment 'dégoût' retire
-lettre volee   Kinsamu : segment 'conte' retire
-lettre volee   Kinsangu : segment 'Réputation' retire
-lettre volee   Kisalu · tshisalu · salu · bisalu : segment 'Travail' retire
-lettre volee   Kisalulu : segment 'Outil' retire
-lettre volee   Kizengi · bizengi : segment 'imbécile' retire
-lettre volee   Kizidi, tshizidi · bizidi. : segment 'Image' retire
-lettre volee   Kobo : segment 'Lourd' retire
-lettre volee   Koka : segment 'Tirer' retire
-lettre volee   Koko : segment 'Main' retire
-lettre volee   Koma : segment 'Clouer' retire
-lettre volee   Komba : segment 'Balayer' retire
-lettre volee   Konka : segment 'Rassembler' retire
-lettre volee   Konko · makonko : segment 'Sauterelle' retire
-lettre volee   Kono : segment 'Entamé' retire
-lettre volee   Konta : segment 'Compter' retire
-lettre volee   Kopa : segment 'verre' retire
-lettre volee   Kosekesa : segment 'Broyer' retire
-lettre volee   Kota : segment 'Frapper' retire
-lettre volee   Koto · makoto : segment 'Genou' retire
-lettre volee   Kotolo : segment 'Ouverture' retire
-lettre volee   Ku : segment 'Au' retire
-lettre volee   Ku manima : segment 'Derrière' retire
-lettre volee   Ku mbazi kua kubi. : segment 'Dehors.' retire
-lettre volee   Ku nima : segment 'Derrière' retire
-lettre volee   Kuabula : segment 'Détacher' retire
-lettre volee   Kuaku : segment 'Ici' retire
-lettre volee   Kuanga : segment 'Abattre' retire
-lettre volee   Kubenda : segment 'magnétisme' retire
-lettre volee   Kubuka : segment 'Éclater' retire
-lettre volee   Kubula : segment 'Secouer' retire
-lettre volee   Kuelesa : segment 'Harmoniser' retire
-lettre volee   Kuenda : segment 'Aller' retire
-lettre volee   Kuika : segment 'Forcer' retire
-lettre volee   Kuku : segment 'Foyer' retire
-lettre volee   Kukuku : segment 'Sale' retire
-lettre volee   Kukuma : segment 'Tituber' retire
-lettre volee   Kulu · malu : segment 'pied' retire
-lettre volee   Kuma : segment 'Endroit' retire
-lettre volee   Kumbi · makumbi : segment 'Voiture' retire
-lettre volee   Kumu : segment 'bord' retire
-lettre volee   Kuna : segment 'Planter' retire
-lettre volee   Kunga : segment 'Gémir' retire
-lettre volee   Kutu · makutu : segment 'oreille' retire
-lettre volee   Kuwa : segment 'Entendre' retire
-lettre volee   Laba : segment 'Prendre' retire
-lettre volee   Laka : segment 'cou' retire
-lettre volee   Laka · malaka : segment 'gorge' retire
-lettre volee   Laki · malaki : segment 'Date' retire
-lettre volee   Lala : segment 'Dormir' retire
-lettre volee   Lala dia nsa · malala dia nsa. : segment 'Citron.' retire
-lettre volee   Lala · malala : segment 'orange' retire
-lettre volee   Lalakani : segment 'Ténébreux' retire
-lettre volee   Lamba : segment 'Cuisiner' retire
-lettre volee   Lambula : segment 'Allonger' retire
-lettre volee   Lami : segment 'téléphone' retire
-lettre volee   Lamu : segment 'Durer' retire
-lettre volee   Landi : segment 'Successeur' retire
-lettre volee   Langalakani : segment 'Obscur' retire
-lettre volee   Leba : segment 'Cajoler' retire
-lettre volee   Lebakasa : segment 'Séduire' retire
-lettre volee   Lebalakani : segment 'Affaibli' retire
-lettre volee   Lembana : segment 'Manquer' retire
-lettre volee   Lemvokela : segment 'Obéir' retire
-lettre volee   Lenga : segment 'Flatter' retire
-lettre volee   Lenzo : segment 'Éclat' retire
-lettre volee   Linzolo : segment 'Linzolo' retire
-lettre volee   Loba : segment 'Pécher' retire
-lettre volee   Loka : segment 'Nuire' retire
-lettre volee   Lomba : segment 'Demander' retire
-lettre volee   Londa : segment 'Raccommoder' retire
-lettre volee   Longa : segment 'Instruire' retire
-lettre volee   Longi : segment 'conseil' retire
-lettre volee   Longisa : segment 'Enseigner' retire
-lettre volee   Longo : segment 'mariage' retire
-lettre volee   Longoka : segment 'Apprendre' retire
-lettre volee   Losa : segment 'Jeter' retire
-lettre volee   Lota : segment 'Rêver' retire
-lettre volee   Luaza : segment 'bruit' retire
-lettre volee   Lubaku : segment 'Revenu' retire
-lettre volee   Lubamba : segment 'Baguette' retire
-lettre volee   Lubata : segment 'tape' retire
-lettre volee   Lubu · mbu : segment 'moustique' retire
-lettre volee   Ludiatulu, ndiatulu : segment 'Comportement' retire
-lettre volee   Ludimi · tudimi : segment 'langue' retire
-lettre volee   Lueka : segment 'moitié' retire
-lettre volee   Lueka · tueka : segment 'côté' retire
-lettre volee   Luekesa : segment 'Inciser' retire
-lettre volee   Lufua : segment 'mort' retire
-lettre volee   Lufuku : segment 'épidémie' retire
-lettre volee   Lufungulu : segment 'Confession' retire
-lettre volee   Lufunia : segment 'Endurance' retire
-lettre volee   Lufutu : segment 'paiement' retire
-lettre volee   Luhe · mahe : segment 'herbe' retire
-lettre volee   Luika : segment 'Équiper' retire
-lettre volee   Lukaya · makaya : segment 'feuille' retire
-lettre volee   Luketo : segment 'hanche' retire
-lettre volee   Lukokoto : segment 'avarice' retire
-lettre volee   Lulendo · tulendo : segment 'Fierté' retire
-lettre volee   Lumbembemba · tumbembemba : segment 'papillon' retire
-lettre volee   Lumbu : segment 'Jour' retire
-lettre volee   Lumbuetete · mbuetete : segment 'étoile' retire
-lettre volee   Lumfimfini · mfimfini : segment 'Gencive' retire
-lettre volee   Lumingu : segment 'Semaine' retire
-lettre volee   Lumoso : segment 'Gaucher' retire
-lettre volee   Lumungi : segment 'cécité' retire
-lettre volee   Lundala · mandala : segment 'Palme' retire
-lettre volee   Lunjungu : segment 'Labyrinthe' retire
-lettre volee   Lunomo : segment 'avarice' retire
-lettre volee   Lunwanu : segment 'combat' retire
-lettre volee   Lusalusu : segment 'aide' retire
-lettre volee   Lusampasampa · tusampasampa : segment 'Crinière' retire
-lettre volee   Lusembo · tusembo : segment 'bénédiction' retire
-lettre volee   Lutangu : segment 'nombre' retire
-lettre volee   Luwa · buwa : segment 'champignon' retire
-lettre volee   Luzonzo : segment 'Entretien' retire
-lettre volee   Lwonesa : segment 'Féliciter' retire
-lettre volee   Maama : segment 'mère' retire
-lettre volee   Mababa : segment 'Muets' retire
-lettre volee   Mabanda : segment 'Mares' retire
-lettre volee   Mabundi : segment 'joues' retire
-lettre volee   Maji : segment 'graisse' retire
-lettre volee   Maka : segment 'colle' retire
-lettre volee   Makangu : segment 'amant' retire
-lettre volee   Makaya : segment 'Feuilles' retire
-lettre volee   Makondi ma kalungu. : segment 'Alocos.' retire
-lettre volee   Mala : segment 'Loin' retire
-lettre volee   Malembe : segment 'Doucement' retire
-lettre volee   Malongi : segment 'leçons' retire
-lettre volee   Malu : segment 'vin' retire
-lettre volee   Mama : segment 'Maman' retire
-lettre volee   Mamba : segment 'Liquide' retire
-lettre volee   Mampangampanga : segment 'Habileté' retire
-lettre volee   Mana : segment 'Finir' retire
-lettre volee   Manga : segment 'mangue' retire
-lettre volee   Manisa : segment 'Terminer' retire
-lettre volee   Mante : segment 'bave' retire
-lettre volee   Masakila : segment 'Cadeau' retire
-lettre volee   Matanga : segment 'Banquet' retire
-lettre volee   Mawasu : segment 'énergie' retire
-lettre volee   Mayaya : segment 'aînés' retire
-lettre volee   Mayela : segment 'intelligence' retire
-lettre volee   Mayela me nandi. : segment 'Il.' retire
-lettre volee   Mazita : segment 'Syllables' retire
-lettre volee   Mazono : segment 'Hier' retire
-lettre volee   Mbaji mbo ni wuinda muntu mbata. : segment 'Demain.' retire
-lettre volee   Mbala : segment 'Patates' retire
-lettre volee   Mbambi : segment 'Iguane' retire
-lettre volee   Mbata : segment 'Paume' retire
-lettre volee   Mbazi : segment 'Dehors' retire
-lettre volee   Mbele : segment 'couteau' retire
-lettre volee   Mbidika : segment 'cafetière' retire
-lettre volee   Mboko : segment 'Ensuite' retire
-lettre volee   Mbote : segment 'Bonjour' retire
-lettre volee   Mbote · bote : segment 'Bon' retire
-lettre volee   Mbuaki : segment 'Rouge' retire
-lettre volee   Mbuka : segment 'Lieu' retire
-lettre volee   Mbulumbulu : segment 'soldat' retire
-lettre volee   Mbutu : segment 'Fruit' retire
-lettre volee   Me · meno : segment 'Je' retire
-lettre volee   Mekana : segment 'Bêler' retire
-lettre volee   Mekono : segment 'bêlement' retire
-lettre volee   Meno : segment 'Je' retire
-lettre volee   Mfietokoso : segment 'harcèlement' retire
-lettre volee   Mfietoso : segment 'interrogatoire' retire
-lettre volee   Mfumfula : segment 'poussière' retire
-lettre volee   Mfunda : segment 'Poussière' retire
-lettre volee   Mfuokoko : segment 'pli' retire
-lettre volee   Mfuri : segment 'Habitude' retire
-lettre volee   Mfutusulu : segment 'remboursement' retire
-lettre volee   Miamia : segment 'briller' retire
-lettre volee   Mielo : segment 'portes' retire
-lettre volee   Mika : segment 'Éprouver' retire
-lettre volee   Mikanda : segment 'lettres' retire
-lettre volee   Minu · kiminu · tshiminu : segment 'espérance' retire
-lettre volee   Minzanda : segment 'chiffons' retire
-lettre volee   Minzu : segment 'Envoûtant' retire
-lettre volee   Minzuna : segment 'Entrouvrir' retire
-lettre volee   Misisi : segment 'Artère' retire
-lettre volee   Moko : segment 'Mains' retire
-lettre volee   Mona : segment 'Voir' retire
-lettre volee   Mona mpashi : segment 'Souffrir' retire
-lettre volee   Monekena : segment 'Visiter' retire
-lettre volee   Moyo : segment 'ventre' retire
-lettre volee   Mpaka : segment 'poulailler' retire
-lettre volee   Mpaku : segment 'Taxe' retire
-lettre volee   Mpamba : segment 'Vide' retire
-lettre volee   Mpambu : segment 'intelligence' retire
-lettre volee   Mpana : segment 'Nouveau' retire
-lettre volee   Mpangu : segment 'Grenouille' retire
-lettre volee   Mpashi : segment 'difficulté' retire
-lettre volee   Mpasi : segment 'Difficile' retire
-lettre volee   Mpasi · mpashi : segment 'douleur' retire
-lettre volee   Mpatakasu : segment 'Confusion' retire
-lettre volee   Mpatanga : segment 'Gros' retire
-lettre volee   Mpe : segment 'Aussi' retire
-lettre volee   Mpeho : segment 'ombre' retire
-lettre volee   Mpese : segment 'Cafard' retire
-lettre volee   Mpiku : segment 'Miracle' retire
-lettre volee   Mpila : segment 'Manière' retire
-lettre volee   Mpindu : segment 'Prodige' retire
-lettre volee   Mpirikisi : segment 'menteur' retire
-lettre volee   Mpolo : segment 'poussière' retire
-lettre volee   Mponi : segment 'parfum' retire
-lettre volee   Mposa : segment 'épervier' retire
-lettre volee   Mpoza : segment 'admiration' retire
-lettre volee   Mpu : segment 'chapeau' retire
-lettre volee   Mpungi : segment 'klaxon' retire
-lettre volee   Mputa : segment 'Plaie' retire
-lettre volee   Mu : segment 'Dans' retire
-lettre volee   Mu kati : segment 'Dans' retire
-lettre volee   Mu pari : segment 'matin' retire
-lettre volee   Muafuta-miafuta : segment 'sueur' retire
-lettre volee   Muaka : segment 'Asperger' retire
-lettre volee   Muana · bala : segment 'enfant' retire
-lettre volee   Muanga : segment 'Ensemencer' retire
-lettre volee   Muangasa : segment 'Éparpiller' retire
-lettre volee   Muanzi : segment 'souche' retire
-lettre volee   Muasi : segment 'Ouvert' retire
-lettre volee   Muasu : segment 'gousse' retire
-lettre volee   Muaumu : segment 'dedans' retire
-lettre volee   Mubobela · mibobela : segment 'pourriture' retire
-lettre volee   Mue : segment 'éclairant' retire
-lettre volee   Muekese : segment 'piquant' retire
-lettre volee   Muela : segment 'respiration' retire
-lettre volee   Muelo : segment 'porte' retire
-lettre volee   Muendo : segment 'hâte' retire
-lettre volee   Mueni : segment 'alors' retire
-lettre volee   Mueta : segment 'illuminer' retire
-lettre volee   Muiku : segment 'spatule' retire
-lettre volee   Muina : segment 'lance' retire
-lettre volee   Muisunu : segment 'démonstration' retire
-lettre volee   Muizu : segment 'arrivée' retire
-lettre volee   Mukaka : segment 'Plein' retire
-lettre volee   Mukala · mikala : segment 'tombeau' retire
-lettre volee   Mukokoti · mikokoti : segment 'cocotier' retire
-lettre volee   Mukuluntu : segment 'aîné' retire
-lettre volee   Mukumba n’kumba· mikumba : segment 'Nombril' retire
-lettre volee   Mukuruntu : segment 'aîné' retire
-lettre volee   Mulala · milala : segment 'oranger' retire
-lettre volee   Mulele · milele : segment 'Pagne' retire
-lettre volee   Mulembo · milembo : segment 'Doigt' retire
-lettre volee   Mulendi · milendi : segment 'Dépouille' retire
-lettre volee   Mumanga · mimanga : segment 'manguier' retire
-lettre volee   Muna : segment 'Dedans' retire
-lettre volee   Mundele · mindele : segment 'Blanc' retire
-lettre volee   Mungongo : segment 'dos' retire
-lettre volee   Munkondi · minkondi : segment 'bananier' retire
-lettre volee   Muntu · bantu : segment 'Personne' retire
-lettre volee   Mupapaayi · mipapaayi : segment 'papayer' retire
-lettre volee   Musafu · misafu : segment 'safoutier' retire
-lettre volee   Musavoka · misavoka : segment 'avocatier' retire
-lettre volee   Musualu : segment 'Vite' retire
-lettre volee   Muteke : segment 'bestiole' retire
-lettre volee   Mutela : segment 'taille' retire
-lettre volee   Muti · miti : segment 'arbre' retire
-lettre volee   Mutoto : segment 'Terre' retire
-lettre volee   Mvindu : segment 'saleté' retire
-lettre volee   Mvinzingila : segment 'rond' retire
-lettre volee   Mvu : segment 'Saison' retire
-lettre volee   Mvuala : segment 'Consonnes' retire
-lettre volee   Mvuama : segment 'Riche' retire
-lettre volee   Mvuamvua : segment 'sale' retire
-lettre volee   Mvuemba : segment 'paresse' retire
-lettre volee   Mvuemvue : segment 'mou' retire
-lettre volee   Mvula : segment 'Année' retire
-lettre volee   Mvuo : segment 'spongieux' retire
-lettre volee   Mvuomvuo : segment 'doux' retire
-lettre volee   N’kento · bakento : segment 'femme' retire
-lettre volee   N’singa musginga mishinga. : segment 'Fil.' retire
-lettre volee   Na : segment 'Et' retire
-lettre volee   Naka : segment 'Monter' retire
-lettre volee   Nakisa : segment 'Augmenter' retire
-lettre volee   Nangama : segment 'Gravir' retire
-lettre volee   Nanguna : segment 'Porter' retire
-lettre volee   Nani, nkia, nki. : segment 'Lequel.' retire
-lettre volee   Nata : segment 'Apporter' retire
-lettre volee   Ndambu : segment 'peu' retire
-lettre volee   Ndandu : segment 'Bénédiction' retire
-lettre volee   Ndilu : segment 'limite' retire
-lettre volee   Ndongolo : segment 'Enseignement' retire
-lettre volee   Ndozi · ndoji : segment 'rêve' retire
-lettre volee   Ndundu : segment 'albinos' retire
-lettre volee   Nduri : segment 'Amère' retire
-lettre volee   Nene : segment 'Grand' retire
-lettre volee   Ngana : segment 'proverbe' retire
-lettre volee   Nge : segment 'Tu' retire
-lettre volee   Ngo : segment 'Léopard' retire
-lettre volee   Ngo nguani, ka nzololo a ko. : segment 'Non.' retire
-lettre volee   Ngolo : segment 'force' retire
-lettre volee   Ngombe : segment 'Boeuf' retire
-lettre volee   Ngonda : segment 'Mois' retire
-lettre volee   Ngunga : segment 'cloche' retire
-lettre volee   Ni me wo. : segment 'Oui.' retire
-lettre volee   Niense : segment 'joie' retire
-lettre volee   Nimba : segment 'Somnoler' retire
-lettre volee   Njila : segment 'Chemin' retire
-lettre volee   Njundu : segment 'Marteau' retire
-lettre volee   Nkafi : segment 'pagaie' retire
-lettre volee   Nkaka : segment 'Entier' retire
-lettre volee   Nkanda : segment 'peau' retire
-lettre volee   Nkatu : segment 'Rien' retire
-lettre volee   Nkeshi : segment 'colère' retire
-lettre volee   Nkiangu : segment 'alors' retire
-lettre volee   Nkondi : segment 'statuette' retire
-lettre volee   Nkuala : segment 'natte' retire
-lettre volee   Nkuizulu : segment 'arrivée' retire
-lettre volee   Nkunga : segment 'Chanter' retire
-lettre volee   Nkutu : segment 'plateau' retire
-lettre volee   Nlele : segment 'Étoffe' retire
-lettre volee   Nlele · milele : segment 'Pagne' retire
-lettre volee   Nlembo, mulembo · milembo. : segment 'Doigt' retire
-lettre volee   Nlonga : segment 'rangée' retire
-lettre volee   Nsabi : segment 'Serrure' retire
-lettre volee   Nsaka : segment 'amusement' retire
-lettre volee   Nsalulu : segment 'fonctionnement' retire
-lettre volee   Nsamba : segment 'Incisions' retire
-lettre volee   Nsambi : segment 'guitare' retire
-lettre volee   Nsamu : segment 'Sept' retire
-lettre volee   Nsatu : segment 'Faim' retire
-lettre volee   Nsayi : segment 'joie' retire
-lettre volee   Nsayi ye nani. : segment 'Oui.' retire
-lettre volee   Nsende : segment 'épine' retire
-lettre volee   Nsengo : segment 'pioche' retire
-lettre volee   Nsi : segment 'Pays' retire
-lettre volee   Nsieti : segment 'Comme' retire
-lettre volee   Nsika : segment 'inviter' retire
-lettre volee   Nsikulululu : segment 'invitation' retire
-lettre volee   Nsikumusu : segment 'transe' retire
-lettre volee   Nsoki : segment 'Jalousie' retire
-lettre volee   Nsualu : segment 'promptitude' retire
-lettre volee   Nsumbi : segment 'acheteur' retire
-lettre volee   Nsunga : segment 'odeur' retire
-lettre volee   Nsunia : segment 'chair' retire
-lettre volee   Nsusu : segment 'Poule' retire
-lettre volee   Ntangu : segment 'Midi' retire
-lettre volee   Ntangu za ka(ka). : segment 'Parfois.' retire
-lettre volee   Ntangu za zonso. : segment 'Toujours.' retire
-lettre volee   Ntatu : segment 'troisièmement' retire
-lettre volee   Ntete : segment 'premièrement' retire
-lettre volee   Ntindu : segment 'façon' retire
-lettre volee   Ntinu : segment 'vitesse' retire
-lettre volee   Ntongua : segment 'cerveau' retire
-lettre volee   Ntonto : segment 'répugnance' retire
-lettre volee   Nzalu : segment 'Cuillère' retire
-lettre volee   Nzanda : segment 'Beaucoup' retire
-lettre volee   Nzietolo : segment 'pèlerinage' retire
-lettre volee   Nzila : segment 'Route' retire
-lettre volee   Nzindu : segment 'sentiments' retire
-lettre volee   Nzitukulu : segment 'Ébahi' retire
-lettre volee   Palangasa : segment 'désorganiser' retire
-lettre volee   Palapala : segment 'Inquiet' retire
-lettre volee   Palipali : segment 'Inquiet' retire
-lettre volee   Palu : segment 'Écarquillant' retire
-lettre volee   Pamu : segment 'Effrayant' retire
-lettre volee   Panga : segment 'Habilement' retire
-lettre volee   Pasu : segment 'Déchiré' retire
-lettre volee   Pasuzuka : segment 'Éclater' retire
-lettre volee   Patapata : segment 'Barbotant' retire
-lettre volee   Patumuna : segment 'Jeter' retire
-lettre volee   Pena : segment 'Mépriser' retire
-lettre volee   Peno : segment 'Retroussant' retire
-lettre volee   Pete : segment 'Aplati' retire
-lettre volee   Pi : segment 'Silence' retire
-lettre volee   Pindi : segment 'Assombri' retire
-lettre volee   Pitakasa : segment 'déranger' retire
-lettre volee   Potopoto : segment 'Boue' retire
-lettre volee   Sa : segment 'Mettre' retire
-lettre volee   Sadisa : segment 'aider' retire
-lettre volee   Sadisi : segment 'Chef' retire
-lettre volee   Saku : segment 'Apaisant' retire
-lettre volee   Sala : segment 'Travailler' retire
-lettre volee   Saleno. : segment 'Restez' retire
-lettre volee   Salu : segment 'travail' retire
-lettre volee   Sambula : segment 'Aiguiser' retire
-lettre volee   Sana : segment 'Peigner' retire
-lettre volee   Sanduku : segment 'malle' retire
-lettre volee   Sangi masangi : segment 'forêt' retire
-lettre volee   Sansa : segment 'Nourrir' retire
-lettre volee   Sekesa : segment 'Étendre' retire
-lettre volee   Sekisa : segment 'Polir' retire
-lettre volee   Sekola : segment 'Verser' retire
-lettre volee   Sekozola : segment 'Brûler' retire
-lettre volee   Sekula : segment 'Verser' retire
-lettre volee   Semba : segment 'Réprimander' retire
-lettre volee   Sempo : segment 'Convenable' retire
-lettre volee   Senga : segment 'Visiter' retire
-lettre volee   Shima : segment 'Empêcher' retire
-lettre volee   Shimba : segment 'Retenir' retire
-lettre volee   Shimbilika : segment 'Étendre' retire
-lettre volee   Shimbu : segment 'Tenant' retire
-lettre volee   Shiri : segment 'Mettre' retire
-lettre volee   Shisa : segment 'Laisser' retire
-lettre volee   Sikulu · bisikulu : segment 'escabeau' retire
-lettre volee   Sima : segment 'Interdire' retire
-lettre volee   Singini : segment 'Vortex' retire
-lettre volee   Sioso : segment 'collet' retire
-lettre volee   Sita : segment 'tison' retire
-lettre volee   Sokola : segment 'Détacher' retire
-lettre volee   Sola : segment 'Choisir' retire
-lettre volee   Sompa : segment 'Emprunter' retire
-lettre volee   Suka : segment 'matin' retire
-lettre volee   Suku : segment 'Postérieur' retire
-lettre volee   Sulula : segment 'Déranger' retire
-lettre volee   Sumbuka : segment 'Enjamber' retire
-lettre volee   Sutula : segment 'Plier' retire
-lettre volee   Ta : segment 'Dire' retire
-lettre volee   Taata : segment 'père' retire
-lettre volee   Tabula · burika · zenga · butika : segment 'casser' retire
-lettre volee   Tala : segment 'Regarder' retire
-lettre volee   Tambala, tshitambala, kitambala · bitambala. : segment 'Foulard.' retire
-lettre volee   Tambula : segment 'Recevoir' retire
-lettre volee   Tamuna : segment 'Écarter' retire
-lettre volee   Tandu : segment 'haut' retire
-lettre volee   Tanga : segment 'Lire' retire
-lettre volee   Tela : segment 'goutte' retire
-lettre volee   Tibisa : segment 'Défier' retire
-lettre volee   Timbula : segment 'Rejeter' retire
-lettre volee   Tina : segment 'Éviter' retire
-lettre volee   Tinguna : segment 'Tromper' retire
-lettre volee   Tiri : segment 'artère' retire
-lettre volee   Tisama · kikuku : segment 'termitière' retire
-lettre volee   Tiya : segment 'feu' retire
-lettre volee   Tolola : segment 'Fracturer' retire
-lettre volee   Toma : segment 'Beau' retire
-lettre volee   Toto : segment 'sol' retire
-lettre volee   Tsaba : segment 'Nager' retire
-lettre volee   Tsala : segment 'Éparpiller' retire
-lettre volee   Tsamuna : segment 'Renverser' retire
-lettre volee   Tshibibu · bibibu : segment 'gorille' retire
-lettre volee   Tshibuka : segment 'endroit' retire
-lettre volee   Tshikoba · bikoba : segment 'Lèvre' retire
-lettre volee   Tshikonko : segment 'coin' retire
-lettre volee   Tshikumbi · bikumbi : segment 'Vierge' retire
-lettre volee   Tshima · bima : segment 'chose' retire
-lettre volee   Tshimbungu · bimbungu : segment 'hyène' retire
-lettre volee   Tshimoko : segment 'Causerie' retire
-lettre volee   Tshina · bina : segment 'Interdiction' retire
-lettre volee   Tshindongo · bindongo : segment 'mouton' retire
-lettre volee   Tshinkoso : segment 'Talon' retire
-lettre volee   Tshinkuti : segment 'Habit' retire
-lettre volee   Tshinkuti, kinkuti · binkuti. : segment 'Habit' retire
-lettre volee   Tshisama · kisama · sama · bisama : segment 'termitière' retire
-lettre volee   Tshitari : segment 'cascade' retire
-lettre volee   Tshivumu : segment 'ventre' retire
-lettre volee   Tshizingu · bizingu : segment 'vie' retire
-lettre volee   Tsika : segment 'Inviter' retire
-lettre volee   Tua : segment 'Taper' retire
-lettre volee   Tuala : segment 'Apporter' retire
-lettre volee   Tuba : segment 'Dire' retire
-lettre volee   Tufuna : segment 'Épiler' retire
-lettre volee   Tuka : segment 'Insulter' retire
-lettre volee   Tuma : segment 'Commander' retire
-lettre volee   Tumbu : segment 'Béni' retire
-lettre volee   Tumpa : segment 'Remuer' retire
-lettre volee   Tunga : segment 'Construire' retire
-lettre volee   Tuta : segment 'Écraser' retire
-lettre volee   Tutakasa : segment 'écraser' retire
-lettre volee   Vinza : segment 'Oindre' retire
-lettre volee   Vuanda : segment 'Demeure' retire
-lettre volee   Vuaza : segment 'Pétrir' retire
-lettre volee   Vuika : segment 'enfoncer' retire
-lettre volee   Vuka : segment 'Échapper' retire
-lettre volee   Vula : segment 'Défaire' retire
-lettre volee   Vumbuka : segment 'Réveiller' retire
-lettre volee   Vuna : segment 'Déraciner' retire
-lettre volee   Vunga · mavunga : segment 'couverture' retire
-lettre volee   Vungula : segment 'Ouvrir' retire
-lettre volee   Vuza : segment 'transplanter' retire
-lettre volee   Wa : segment 'Entendre' retire
-lettre volee   Waya : segment 'Vouloir' retire
-lettre volee   Widikila : segment 'Écouter' retire
-lettre volee   Wirikila : segment 'obéir' retire
-lettre volee   Wisa : segment 'Conseiller' retire
-lettre volee   Wuinda : segment 'Gifler' retire
-lettre volee   Wuna : segment 'Mentir' retire
-lettre volee   Wunga : segment 'Paître' retire
-lettre volee   Yaka : segment 'Manioc' retire
-lettre volee   Yakamba : segment 'Vagabonder' retire
-lettre volee   Yandi : segment 'Elle' retire
-lettre volee   Yaula : segment 'Gémir' retire
-lettre volee   Yebo : segment 'flâneur' retire
-lettre volee   Yela : segment 'Mûrir' retire
-lettre volee   Yele · mayele : segment 'intelligence' retire
-lettre volee   Yidika : segment 'Fabriquer' retire
-lettre volee   Yika : segment 'Ajouter' retire
-lettre volee   Yimina : segment 'Défendre' retire
-lettre volee   Yindula : segment 'Réfléchir' retire
-lettre volee   Yirika : segment 'Faire' retire
-lettre volee   Yititi : segment 'Obscur' retire
-lettre volee   Yiza : segment 'accomplir' retire
-lettre volee   Yoka : segment 'Brûler' retire
-lettre volee   Yokele : segment 'Surpasser' retire
-lettre volee   Yokesela : segment 'Passer' retire
-lettre volee   Yubulu : segment 'Écorcher' retire
-lettre volee   Yuki : segment 'carafe' retire
-lettre volee   Yuma : segment 'Sécher' retire
-lettre volee   Yundula : segment 'Nourrir' retire
-lettre volee   Yunga : segment 'Voyager' retire
-lettre volee   Zaba : segment 'Savoir' retire
-lettre volee   Zabikisa : segment 'Informer' retire
-lettre volee   Zabisa : segment 'Informer' retire
-lettre volee   Zanga · mazanga : segment 'Étang' retire
-lettre volee   Zangula : segment 'Élever' retire
-lettre volee   Zanza · mazanza : segment 'nid' retire
-lettre volee   Zaza : segment 'Trembloter' retire
-lettre volee   Zeba : segment 'Voyager' retire
-lettre volee   Zeka : segment 'Tourner' retire
-lettre volee   Zezesa : segment 'Desserrer' retire
-lettre volee   Zibika : segment 'Fermer' retire
-lettre volee   Zimbakana : segment 'Oublier' retire
-lettre volee   Zinga : segment 'Enrouler' retire
-lettre volee   Zingu : segment 'vie' retire
-lettre volee   Zita · mazita : segment 'Importance' retire
-lettre volee   Zitisa : segment 'Respecter' retire
-lettre volee   Zoba · mazoba · bizoba : segment 'idiot' retire
-lettre volee   Zola : segment 'Aimer' retire
-lettre volee   Zololo : segment 'Aimer' retire
-lettre volee   Zu · mazu : segment 'Langue' retire
-lettre volee   Zunga : segment 'Entourer' retire
+glose          Ama : maat ; ma chère -> Ma chère ; maat
+glose          Badi bari (l). : Égume). ; amarante. -> Amarante (un légume).
 suppression    entree A ma supprimee (doublon)
 fusion         Abe yandi ni na? + Abe yandi ni na? · ambo yandi ni na? -> Abe yandi ni na?, ambo yandi ni na?
-fusion ?       BA / Ba · maba : formes communes mais sens disjoints
-fusion ?       Babakala / Bakala · babakala : formes communes mais sens disjoints
+fusion         BA + Ba · maba -> BA, maba
+fusion         Babakala + Bakala · babakala -> Babakala, Bakala
 fusion ?       Baka / Baka · tshibaka · kibaka · bibaka : formes communes mais sens disjoints
 fusion         Baka · tshibaka · kibaka · bibaka + Kibaka · bibaka -> Baka, tshibaka, kibaka, bibaka
-fusion ?       Bakala / Bakala · babakala : formes communes mais sens disjoints
 fusion ?       Bakama / Baku · bakama : formes communes mais sens disjoints
 fusion         Bakento + N’kento · bakento -> Bakento, N’kento
-fusion ?       Bakisa / Bakisa · sadisa : formes communes mais sens disjoints
-fusion ?       Bakisa · sadisa / Sadisa : formes communes mais sens disjoints
+fusion         Bakisa + Bakisa · sadisa -> Bakisa, sadisa
+fusion         Bakisa + Sadisa -> Bakisa, sadisa
 fusion         Bakishina + Bakitina · bakishina -> Bakishina, Bakitina
-fusion ?       Baku / Baku · bakama : formes communes mais sens disjoints
-fusion ?       Bakuluntu / Mukulu · n'kuluntu · bakuluntu · mukuluntu : formes communes mais sens disjoints
+fusion         Baku + Baku · bakama -> Baku, bakama
+fusion         Bakuluntu + Mukulu · n'kuluntu · bakuluntu · mukuluntu -> Bakuluntu, Mukulu, n'kuluntu, mukuluntu
+fusion         Bakuluntu + Mukuluntu -> Bakuluntu, Mukulu, n'kuluntu, mukuluntu
 fusion         Bala + Muana · bala -> Bala, Muana
 fusion ?       Bamika / Batamasa · namika · bamika · namatasa : formes communes mais sens disjoints
-fusion ?       Banda / Banda · mabanda : formes communes mais sens disjoints
-fusion ?       Banda · mabanda / Mabanda : formes communes mais sens disjoints
+fusion         Banda + Banda · mabanda -> Banda, mabanda
+fusion         Banda + Mabanda -> Banda, mabanda
 fusion         Bantu + Muntu · bantu -> Bantu, Muntu
 fusion ?       Batamasa · namika · bamika · namatasa / Namika : formes communes mais sens disjoints
 fusion ?       Batila / Batila · vuaza · sangasa : formes communes mais sens disjoints
 fusion ?       Batila · vuaza · sangasa / Vuaza : formes communes mais sens disjoints
-fusion ?       Belesa · bukisa / Belesa : formes communes mais sens disjoints
-fusion ?       Beni / Beni · mabeni : formes communes mais sens disjoints
-fusion ?       Beni · mabeni / Mabeni : formes communes mais sens disjoints
+fusion         Belesa · bukisa + Belesa -> Belesa, bukisa
+fusion         Beni + Beni · mabeni -> Beni, mabeni
+fusion         Beni + Mabeni -> Beni, mabeni
 fusion         Biamvu + Kiamvu · biamvu -> Biamvu, Kiamvu
 fusion ?       Biba / Tshiba · biba : formes communes mais sens disjoints
 fusion         Bibanga + Kibanga · bibanga -> Bibanga, Kibanga
 fusion         Bibungu + Tshibungu · bibungu -> Bibungu, Tshibungu
-fusion ?       Bifu / Tshifu, kifu · bifu. : formes communes mais sens disjoints
-fusion ?       Bifulu / Kifulu · tshifulu · bifulu : formes communes mais sens disjoints
-fusion ?       Bifulu / Tshifulu, kifulu · bifulu. : formes communes mais sens disjoints
+fusion         Bifu + Tshifu, kifu · bifu. -> Bifu, Tshifu, kifu
+fusion         Bifulu + Kifulu · tshifulu · bifulu -> Bifulu, Kifulu, tshifulu
+fusion         Bifulu + Tshifulu -> Bifulu, Kifulu, tshifulu
 fusion ?       Bìkàká / Kaka · bikaka : formes communes mais sens disjoints
-fusion ?       Bikola / Kikola · bikola : formes communes mais sens disjoints
-fusion ?       Bikoyi / Tshikoyi · bikoyi : formes communes mais sens disjoints
-fusion ?       Bikua / Tshikua · bikua : formes communes mais sens disjoints
-fusion ?       Bikua / Tshikua, kikua · bikua. : formes communes mais sens disjoints
-fusion ?       Bima / Tshima · bima : formes communes mais sens disjoints
+fusion         Bikola + Kikola · bikola -> Bikola, Kikola
+fusion         Bikoyi + Tshikoyi · bikoyi -> Bikoyi, Tshikoyi
+fusion         Bikua + Tshikua · bikua -> Bikua, Tshikua
+fusion         Bima + Tshima · bima -> Bima, Tshima
 fusion         Bindongo + Tshindongo · bindongo -> Bindongo, Tshindongo
 fusion ?       Bingulu / Bingulu · bibingulu : formes communes mais sens disjoints
 fusion         Binkuti + Tshinkuti, kinkuti · binkuti. -> Binkuti, Tshinkuti, kinkuti
-fusion ?       Bintu / Kintu · bintu : formes communes mais sens disjoints
-fusion ?       Bintu / Tshintu · bintu : formes communes mais sens disjoints
-fusion ?       Binzu / Tshinzu, kinzu · binzu. : formes communes mais sens disjoints
+fusion         Bintu + Kintu · bintu -> Bintu, Kintu
+fusion         Binzu + Tshinzu, kinzu · binzu. -> Binzu, Tshinzu, kinzu
 fusion ?       Bisalu / Kisalu · tshisalu · salu · bisalu : formes communes mais sens disjoints
-fusion ?       Bishi / Musi · muishi · bis · bishi : formes communes mais sens disjoints
-fusion ?       Bisinzila / Sinzila · bisinzila : formes communes mais sens disjoints
-fusion ?       Bitini / Tshitini, kitini · bitini. : formes communes mais sens disjoints
-fusion ?       Bitunga / Kitunga · bitunga : formes communes mais sens disjoints
-fusion ?       Bitunga / Tshitunga · bitunga : formes communes mais sens disjoints
+fusion         Bishi + Musi · muishi · bis · bishi -> Bishi, Musi, muishi, bis
+fusion         Bisinzila + Sinzila · bisinzila -> Bisinzila, Sinzila
+fusion         Bitini + Tshitini, kitini · bitini. -> Bitini, Tshitini, kitini
+fusion         Bitunga + Kitunga · bitunga -> Bitunga, Kitunga
 fusion         Bote + Mbote · bote -> Bote, Mbote
 fusion ?       Buala · mala / Mala : formes communes mais sens disjoints
 fusion         Buatu + Buatu · matu -> Buatu, matu
-fusion ?       Buatu / Matu : formes communes mais sens disjoints
-fusion ?       Buki · mbuki / Mbuki : formes communes mais sens disjoints
-fusion ?       Buko / Buko · mako : formes communes mais sens disjoints
-fusion ?       Buku / Buku · mabuku : formes communes mais sens disjoints
-fusion         Buku · mabuku + Mabuku -> Buku, mabuku
-fusion ?       Bulombi / Mpindu · bulombi : formes communes mais sens disjoints
-fusion ?       Bumpula / Bumpula · bundiafu : formes communes mais sens disjoints
+fusion         Buatu + Matu -> Buatu, matu
+fusion         Buki · mbuki + Mbuki -> Buki, mbuki
+fusion         Buko + Buko · mako -> Buko, mako
+fusion         Buku + Buku · mabuku -> Buku, mabuku
+fusion         Buku + Mabuku -> Buku, mabuku
+fusion         Bulombi + Mpindu · bulombi -> Bulombi, Mpindu
+fusion         Bumpula + Bumpula · bundiafu -> Bumpula, bundiafu
 fusion ?       Bungu / Bungu · mabungu : formes communes mais sens disjoints
 fusion         Bununu + Butumu · bununu -> Bununu, Butumu
 fusion         Buotana + Buotana · batana · vukana · vukasa · luatana -> Buotana, batana, vukana, vukasa, luatana
-fusion ?       Buotana / Vukana : formes communes mais sens disjoints
-fusion ?       Burika / Tabula · burika · zenga · butika : formes communes mais sens disjoints
+fusion         Buotana + Vukana -> Buotana, batana, vukana, vukasa, luatana
+fusion         Burika + Tabula · burika · zenga · butika -> Burika, Tabula, zenga, butika
+fusion         Burika + Zenga -> Burika, Tabula, zenga, butika
 fusion         Buwa + Luwa · buwa -> Buwa, Luwa
-fusion ?       Dia dia? / Dia zololo? · Dia dia? : formes communes mais sens disjoints
-fusion         Diki · meki + Meki -> Diki, meki
-fusion ?       Dikila · yundula · tuila / Tuila : formes communes mais sens disjoints
+fusion         Dia dia? + Dia zololo? · Dia dia? -> Dia dia?, Dia zololo?
+fusion ?       Diki · meki / Meki : formes communes mais sens disjoints
+fusion         Dikila · yundula · tuila + Tuila -> Dikila, yundula, tuila
 fusion         Dikila · yundula · tuila + Yundula -> Dikila, yundula, tuila
-fusion ?       Dimpa / Dimpa · mampa : formes communes mais sens disjoints
-fusion ?       Dinkondi · mankondi / Mankondi : formes communes mais sens disjoints
-fusion ?       Dinu / Dinu · meno : formes communes mais sens disjoints
-fusion         Dinu · meno + Meno -> Dinu, meno
-fusion ?       Djoka / Djoka · bata : formes communes mais sens disjoints
-fusion         Djoka + Djoka · vikuna · yandula -> Djoka, vikuna, yandula
-fusion ?       Djoka / Vikuna : formes communes mais sens disjoints
-fusion ?       Djoka / Yandula : formes communes mais sens disjoints
-fusion ?       Fila / Fila · nata : formes communes mais sens disjoints
-fusion ?       Fila · nata / Nata : formes communes mais sens disjoints
-fusion ?       Fua / Fua · mafua : formes communes mais sens disjoints
-fusion ?       Fua · mafua / Mafua : formes communes mais sens disjoints
-fusion ?       Fuasa / Fuasa · buani : formes communes mais sens disjoints
+fusion         Dimpa + Dimpa · mampa -> Dimpa, mampa
+fusion         Dinkondi · mankondi + Mankondi -> Dinkondi, mankondi
+fusion         Dinu + Dinu · meno -> Dinu, meno
+fusion         Dinu + Meno -> Dinu, meno
+fusion         Djoka + Djoka · bata -> Djoka, bata
+fusion         Djoka · vikuna · yandula + Vikuna -> Djoka, vikuna, yandula
+fusion ?       Djoka · vikuna · yandula / Yandula : formes communes mais sens disjoints
+fusion         Fila + Fila · nata -> Fila, nata
+fusion ?       Fila / Nata : formes communes mais sens disjoints
+fusion         Fua + Fua · mafua -> Fua, mafua
+fusion         Fua + Mafua -> Fua, mafua
+fusion         Fuasa + Fuasa · buani -> Fuasa, buani
 fusion ?       Funda / Funda · fundana : formes communes mais sens disjoints
-fusion ?       Funda · fundana / Fundana : formes communes mais sens disjoints
+fusion         Funda · fundana + Fundana -> Funda, fundana
 fusion ?       Fungu / Fungu · mafungu : formes communes mais sens disjoints
-fusion ?       Hata / Hata · mahata : formes communes mais sens disjoints
-fusion ?       Hata · mahata / Mahata : formes communes mais sens disjoints
-fusion ?       Hembo / Hembo · mahembo : formes communes mais sens disjoints
-fusion ?       Jika / Zika · jika : formes communes mais sens disjoints
+fusion         Hata + Hata · mahata -> Hata, mahata
+fusion         Hata + Mahata -> Hata, mahata
+fusion         Hembo + Hembo · mahembo -> Hembo, mahembo
+fusion         Jika + Zika · jika -> Jika, Zika
 fusion ?       Jiku / Jiku · majiku : formes communes mais sens disjoints
 fusion         Jima + Jima · kanga -> Jima, kanga
 fusion ?       Jima / Kanga : formes communes mais sens disjoints
@@ -934,353 +100,284 @@ fusion ?       Kaka / Kaka · bikaka : formes communes mais sens disjoints
 fusion         Kakasi + Kakasi · bikakasi -> Kakasi, bikakasi
 fusion         Kala + Yimina · kala -> Kala, Yimina
 fusion ?       Kalu / Kalu · bikalu : formes communes mais sens disjoints
-fusion ?       Kaluka / Kaluka · kueka : formes communes mais sens disjoints
+fusion         Kaluka + Kaluka · kueka -> Kaluka, kueka
 fusion         Kamu + Kamu · makamu -> Kamu, makamu
-fusion ?       Kanda / Kanda · makanda : formes communes mais sens disjoints
-fusion ?       Kibakala / Kibakala · tshibakala : formes communes mais sens disjoints
+fusion         Kanda + Kanda · makanda -> Kanda, makanda
+fusion         Kibakala + Kibakala · tshibakala -> Kibakala, tshibakala
 fusion ?       Kiese kie naku. / Mbote ! mu kiese wena? · kiese kie naku? : formes communes mais sens disjoints
-fusion ?       Kifulu / Kifulu · tshifulu · bifulu : formes communes mais sens disjoints
-fusion ?       Kifulu · tshifulu · bifulu / Tshifulu : formes communes mais sens disjoints
 fusion         Kikuku + Kikuku · bikuku -> Kikuku, bikuku
 fusion         Kilenga + Kilenga · tshilenga · bilenga -> Kilenga, tshilenga, bilenga
 fusion         Kilo + Kilo · thsilo · bilo -> Kilo, thsilo, bilo
-fusion ?       Kisalu / Kisalu · tshisalu · salu · bisalu : formes communes mais sens disjoints
-fusion ?       Kisalu · tshisalu · salu · bisalu / Salu : formes communes mais sens disjoints
-fusion ?       Kisama / Tshisama · kisama · sama · bisama : formes communes mais sens disjoints
+fusion         Kisalu + Kisalu · tshisalu · salu · bisalu -> Kisalu, tshisalu, salu, bisalu
+fusion         Kisalu + Salu -> Kisalu, tshisalu, salu, bisalu
+fusion         Kisama + Tshisama · kisama · sama · bisama -> Kisama, Tshisama, sama, bisama
 fusion         Kisu + Kisu · su -> Kisu, su
-fusion ?       Kitunga / Kitunga · bitunga : formes communes mais sens disjoints
 fusion         Kizongo · bizongo + Tshizongo · kizongo · bizongo -> Kizongo, bizongo, Tshizongo
 fusion ?       Koka / Koka · makoka : formes communes mais sens disjoints
-fusion ?       Koka · makoka / Makoka : formes communes mais sens disjoints
+fusion         Koka · makoka + Makoka -> Koka, makoka
 fusion         Koko + Koko · moko -> Koko, moko
-fusion ?       Koko / Moko : formes communes mais sens disjoints
+fusion         Koko + Moko -> Koko, moko
 fusion ?       Kola / Kola · sakalala : formes communes mais sens disjoints
-fusion ?       Kola · sakalala / Sakalala : formes communes mais sens disjoints
+fusion         Kola · sakalala + Sakalala -> Kola, sakalala
 fusion ?       Koshi / Koshi · makoshi : formes communes mais sens disjoints
 fusion ?       Koto / Koto · bikoto : formes communes mais sens disjoints
-fusion ?       Koto / Koto · makoto : formes communes mais sens disjoints
-fusion         Koto · makoto + Makoto -> Koto, makoto
+fusion         Koto + Koto · makoto -> Koto, makoto
+fusion         Koto + Makoto -> Koto, makoto
 fusion         Ku mbaji + Ku mbaji · ha mbaji. -> Ku mbaji, ha mbaji.
 fusion ?       Kuaka / Ngansua · kuaka : formes communes mais sens disjoints
 fusion         Kuala + Kuala · makuala -> Kuala, makuala
-fusion ?       Kuala / Makuala : formes communes mais sens disjoints
-fusion ?       Kuku / Kuku · makuku : formes communes mais sens disjoints
-fusion ?       Kulu / Kulu · malu : formes communes mais sens disjoints
-fusion         Kulu · malu + Malu -> Kulu, malu
-fusion ?       Kumbi / Kumbi · makumbi : formes communes mais sens disjoints
-fusion ?       Kumu / Kumu · mundeko : formes communes mais sens disjoints
-fusion ?       Kutu / Kutu · makutu : formes communes mais sens disjoints
-fusion         Kutu · makutu + Makutu -> Kutu, makutu
-fusion ?       Laka / Laka · malaka : formes communes mais sens disjoints
+fusion         Kuala + Makuala -> Kuala, makuala
+fusion         Kuku + Kuku · makuku -> Kuku, makuku
+fusion         Kulu + Kulu · malu -> Kulu, malu
+fusion         Kulu + Malu -> Kulu, malu
+fusion         Kumbi + Kumbi · makumbi -> Kumbi, makumbi
+fusion         Kumu + Kumu · mundeko -> Kumu, mundeko
+fusion         Kutu + Kutu · makutu -> Kutu, makutu
+fusion         Kutu + Makutu -> Kutu, makutu
+fusion         Laka + Laka · malaka -> Laka, malaka
 fusion ?       Laki / Laki · malaki : formes communes mais sens disjoints
 fusion ?       Laki · malaki / Malaki : formes communes mais sens disjoints
-fusion ?       Lala / Lala · malala : formes communes mais sens disjoints
-fusion ?       Lala · malala / Malala : formes communes mais sens disjoints
-fusion ?       Lambalala / Lambalala · yala : formes communes mais sens disjoints
-fusion ?       Lambalala · yala / Yala : formes communes mais sens disjoints
+fusion         Lala + Lala · malala -> Lala, malala
+fusion         Lala + Malala -> Lala, malala
+fusion         Lambalala + Lambalala · yala -> Lambalala, yala
+fusion ?       Lambalala / Yala : formes communes mais sens disjoints
 fusion         Lami + Lami · malami -> Lami, malami
 fusion         Lapi + Lapi · nsonokono · nsonso -> Lapi, nsonokono, nsonso
-fusion ?       Lapi / Nsonokono : formes communes mais sens disjoints
-fusion ?       Lapi / Nsonso : formes communes mais sens disjoints
-fusion ?       Lembe / Lembe · malembe : formes communes mais sens disjoints
-fusion ?       Lembe · malembe / Malembe : formes communes mais sens disjoints
+fusion         Lapi + Nsonokono -> Lapi, nsonokono, nsonso
+fusion         Lapi + Nsonso -> Lapi, nsonokono, nsonso
+fusion         Lembe + Lembe · malembe -> Lembe, malembe
+fusion ?       Lembe / Malembe : formes communes mais sens disjoints
 fusion         Luala + Luekesa · luala -> Luala, Luekesa
-fusion ?       Lubamba / Lubamba · mbamba : formes communes mais sens disjoints
-fusion ?       Lubu / Lubu · mbu : formes communes mais sens disjoints
-fusion ?       Ludimi / Ludimi · tudimi : formes communes mais sens disjoints
-fusion ?       Lueka / Lueka · tueka : formes communes mais sens disjoints
-fusion ?       Lueka · tueka / Tueka : formes communes mais sens disjoints
+fusion         Lubamba + Lubamba · mbamba -> Lubamba, mbamba
+fusion         Lubu + Lubu · mbu -> Lubu, mbu
+fusion         Ludimi + Ludimi · tudimi -> Ludimi, tudimi
+fusion         Lueka + Lueka · tueka -> Lueka, tueka
+fusion         Lueka + Tueka -> Lueka, tueka
 fusion         Lufulu + Lufulu · tufulu -> Lufulu, tufulu
 fusion         Lufumba + Lufumba · tufumba -> Lufumba, tufumba
 fusion         Lufundusulu + Lufundusulu · tufundusulu -> Lufundusulu, tufundusulu
 fusion         Lufungusulu + Lufungusulu · tufungusulu -> Lufungusulu, tufungusulu
 fusion         Lufutu + Lufutu · tufutu -> Lufutu, tufutu
-fusion ?       Luila / Luila · tuila : formes communes mais sens disjoints
-fusion ?       Luila · tuila / Tuila : formes communes mais sens disjoints
+fusion         Luila + Luila · tuila -> Luila, tuila
 fusion         Lukami + Lukami · nkami -> Lukami, nkami
-fusion ?       Lukami / Nkami : formes communes mais sens disjoints
+fusion         Lukami + Nkami -> Lukami, nkami
 fusion         Lukandu + Lukandu · tukandu -> Lukandu, tukandu
-fusion ?       Lukaya / Lukaya · makaya : formes communes mais sens disjoints
-fusion ?       Lukaya · makaya / Makaya : formes communes mais sens disjoints
+fusion         Lukaya + Lukaya · makaya -> Lukaya, makaya
+fusion         Lukaya + Makaya -> Lukaya, makaya
 fusion ?       Luke / Luke · tuke : formes communes mais sens disjoints
-fusion ?       Lukuba / Lukuba · tukuba : formes communes mais sens disjoints
-fusion ?       Lukuba · tukuba / Tukuba : formes communes mais sens disjoints
+fusion         Lukuba + Lukuba · tukuba -> Lukuba, tukuba
+fusion         Lukuba + Tukuba -> Lukuba, tukuba
 fusion         Lukuikulu + Lukwikilu · lukuikulu -> Lukuikulu, Lukwikilu
 fusion         Lukuni + Lukuni · nkuni -> Lukuni, nkuni
-fusion ?       Lukuni / Nkuni : formes communes mais sens disjoints
+fusion         Lukuni + Nkuni -> Lukuni, nkuni
 fusion         Lulendo + Lulendo · tulendo -> Lulendo, tulendo
-fusion ?       Lumbembemba / Lumbembemba · tumbembemba : formes communes mais sens disjoints
-fusion ?       Lumbuetete · mbuetete / Mbuetete : formes communes mais sens disjoints
-fusion ?       Lumbumbu · mambumbu / Mambumbu : formes communes mais sens disjoints
+fusion         Lumbembemba + Lumbembemba · tumbembemba -> Lumbembemba, tumbembemba
+fusion         Lumbuetete · mbuetete + Mbuetete -> Lumbuetete, mbuetete
+fusion         Lumbumbu · mambumbu + Mambumbu -> Lumbumbu, mambumbu
 fusion         Lumfikini + Lumfikini · tumfikini -> Lumfikini, tumfikini
 fusion         Lumfimfini · mfimfini + Mfimfini -> Lumfimfini, mfimfini
 fusion         Lundindi + Lundindi · tundindi -> Lundindi, tundindi
-fusion ?       Lusafu · nsafu / Nsafu : formes communes mais sens disjoints
-fusion ?       Lusaki · nsaki / Nsaki : formes communes mais sens disjoints
+fusion         Lusafu · nsafu + Nsafu -> Lusafu, nsafu
+fusion         Lusaki · nsaki + Nsaki -> Lusaki, nsaki
 fusion ?       Lusampa · sampa / Sampa : formes communes mais sens disjoints
 fusion ?       Lusembo · masembo / Masembo : formes communes mais sens disjoints
-fusion ?       Lusonso / Lusonso · nsonso : formes communes mais sens disjoints
-fusion ?       Lusonso · nsonso / Nsonso : formes communes mais sens disjoints
-fusion ?       Luto / Luto · tuto : formes communes mais sens disjoints
-fusion ?       Lutundu · ntundu / Ntundu : formes communes mais sens disjoints
+fusion         Lusonso + Lusonso · nsonso -> Lusonso, nsonso
+fusion         Luto + Luto · tuto -> Luto, tuto
+fusion         Lutundu · ntundu + Ntundu -> Lutundu, ntundu
 fusion         Luvu + Luvu · mvu -> Luvu, mvu
 fusion ?       Luvu / Mvu : formes communes mais sens disjoints
-fusion ?       Luyi / Luyi · mayi : formes communes mais sens disjoints
-fusion ?       Luzala / Luzala · nzala : formes communes mais sens disjoints
-fusion ?       Luzala · nzala / Nzala : formes communes mais sens disjoints
+fusion         Luyi + Luyi · mayi -> Luyi, mayi
+fusion         Luzala + Luzala · nzala -> Luzala, nzala
+fusion         Luzala + Nzala -> Luzala, nzala
 fusion ?       Lwonesa / Lwonesa! · bubote shiri · mia mbote yirikiri. : formes communes mais sens disjoints
 fusion ?       Muvu / Muvu : formes communes mais sens disjoints
 fusion ?       Mamba / Mamba · ntinta : formes communes mais sens disjoints
 fusion         Mavunga + Vunga · mavunga -> Mavunga, Vunga
 fusion ?       Mazita / Zita · mazita : formes communes mais sens disjoints
 fusion         Mbevo + Mbevo · belo -> Mbevo, belo
-fusion ?       Mbuata / Mbuata · mbuata : formes communes mais sens disjoints
-fusion ?       Milele / Mulele · milele : formes communes mais sens disjoints
-fusion ?       Milele / Nlele · milele : formes communes mais sens disjoints
+fusion         Mbuata + Mbuata · mbuata -> Mbuata
+fusion         Milele + Mulele · milele -> Milele, Mulele
 fusion         Milembo + Mulembo · milembo -> Milembo, Mulembo
-fusion ?       Milumba / Mulumba · milumba : formes communes mais sens disjoints
-fusion ?       Mindele / Mundele · mindele : formes communes mais sens disjoints
-fusion ?       Mitima / Mutima · mitima : formes communes mais sens disjoints
-fusion ?       Mitima / Mutima, ntima · mitima. : formes communes mais sens disjoints
-fusion ?       Moyo / Moyo · mioyo : formes communes mais sens disjoints
-fusion ?       Mpashi / Mpasi · mpashi : formes communes mais sens disjoints
-fusion ?       Mpasi / Mpasi · mpashi : formes communes mais sens disjoints
-fusion ?       Mpeho / Tshini · mpeho : formes communes mais sens disjoints
-fusion         Mpindu + Mpindu · bulombi -> Mpindu, bulombi
-fusion ?       Mpomo / Nana · mpomo : formes communes mais sens disjoints
-fusion ?       Mpuana / Ndiku · nduku · mpuana · nguala : formes communes mais sens disjoints
+fusion         Milumba + Mulumba · milumba -> Milumba, Mulumba
+fusion         Mindele + Mundele · mindele -> Mindele, Mundele
+fusion         Mitima + Mutima · mitima -> Mitima, Mutima
+fusion         Moyo + Moyo · mioyo -> Moyo, mioyo
+fusion         Mpashi + Mpasi · mpashi -> Mpashi, Mpasi
+fusion         Mpeho + Tshini · mpeho -> Mpeho, Tshini
+fusion         Mpomo + Nana · mpomo -> Mpomo, Nana
+fusion         Mpuana + Ndiku · nduku · mpuana · nguala -> Mpuana, Ndiku, nduku, nguala
+fusion         Mpuana + Nduku -> Mpuana, Ndiku, nduku, nguala
+fusion         Mpuana + Nguala -> Mpuana, Ndiku, nduku, nguala
 fusion ?       Mu nkia bungu. / Nki · mu nki · mu nkia bungu. : formes communes mais sens disjoints
 fusion         Mua nto + Mua nto · muila. -> Mua nto, muila.
-fusion ?       Muela / Muela · miela : formes communes mais sens disjoints
+fusion         Muela + Muela · miela -> Muela, miela
 fusion         Muisi + Muisi · muishi -> Muisi, muishi
-fusion         Mukulu + Mukulu · n'kuluntu · bakuluntu · mukuluntu -> Mukulu, n'kuluntu, bakuluntu, mukuluntu
-fusion ?       Mukulu / Mukuluntu : formes communes mais sens disjoints
-fusion ?       Mulele / Mulele · milele : formes communes mais sens disjoints
-fusion ?       Mulumba / Mulumba · milumba : formes communes mais sens disjoints
-fusion ?       Mundele / Mundele · mindele : formes communes mais sens disjoints
-fusion ?       Munganga / Munganga · tunganga : formes communes mais sens disjoints
+fusion         Munganga + Munganga · tunganga -> Munganga, tunganga
 fusion         Munkiobo + Munkiobo · mungunda -> Munkiobo, mungunda
 fusion         Munturia + Munturia · minturia -> Munturia, minturia
-fusion ?       Mushikimbila / Mushikimbila · mishikimbila : formes communes mais sens disjoints
-fusion ?       Musi / Musi · muishi · bis · bishi : formes communes mais sens disjoints
+fusion         Mushikimbila + Mushikimbila · mishikimbila -> Mushikimbila, mishikimbila
 fusion ?       Muti / Muti · miti : formes communes mais sens disjoints
 fusion ?       Muti / Muti · nti : formes communes mais sens disjoints
 fusion ?       Muti / N'ti · muti : formes communes mais sens disjoints
 fusion ?       Muti / N'ti · muti · miti : formes communes mais sens disjoints
 fusion         Muti · miti + N'ti · muti · miti -> Muti, miti, N'ti
-fusion         Mutima + Mutima · mitima -> Mutima, mitima
 fusion ?       Na / Nani? · na? : formes communes mais sens disjoints
-fusion         Nana + Nana · mpomo -> Nana, mpomo
-fusion         Nani? + Nani? · na? -> Nani?, na?
-fusion ?       Ndala / Ndala · mandala : formes communes mais sens disjoints
-fusion ?       Ndiku / Ndiku · nduku · mpuana · nguala : formes communes mais sens disjoints
-fusion ?       Ndiku · nduku · mpuana · nguala / Nduku : formes communes mais sens disjoints
-fusion ?       Ndiku · nduku · mpuana · nguala / Nguala : formes communes mais sens disjoints
-fusion ?       Ngansua / Ngansua · kuaka : formes communes mais sens disjoints
+fusion ?       Nani? / Nani? · na? : formes communes mais sens disjoints
+fusion         Ndala + Ndala · mandala -> Ndala, mandala
+fusion         Ngansua + Ngansua · kuaka -> Ngansua, kuaka
 fusion ?       Ni ta mona. / Ni ta mona. · mbo ni mona. : formes communes mais sens disjoints
 fusion ?       Nkaji / Nkaji · n'kento wa kuela. : formes communes mais sens disjoints
 fusion         Nkaka + Nkaka · bankaka -> Nkaka, bankaka
 fusion ?       Nkama / Nkama · mikama : formes communes mais sens disjoints
-fusion ?       Nkeshi / Nkesi · nkeshi : formes communes mais sens disjoints
-fusion ?       Nki / Nki? · a nsi? : formes communes mais sens disjoints
-fusion ?       Nki / Nki · mu nki · mu nkia bungu. : formes communes mais sens disjoints
-fusion ?       Nki / Nki · nthsi : formes communes mais sens disjoints
-fusion ?       Nkia / Nkia · ntshia : formes communes mais sens disjoints
-fusion ?       Nlele / Nlele · milele : formes communes mais sens disjoints
+fusion         Nkeshi + Nkesi · nkeshi -> Nkeshi, Nkesi
+fusion         Nki + Nki? · a nsi? -> Nki, a nsi?
+fusion         Nkia + Nkia · ntshia -> Nkia, ntshia
+fusion         Nlele + Nlele · milele -> Nlele, milele
 fusion ?       Nlongi / Nlongi · milongi : formes communes mais sens disjoints
 fusion ?       Nsa / Nsa · musa : formes communes mais sens disjoints
-fusion ?       Nuni / Nuni · banuni : formes communes mais sens disjoints
-fusion ?       Nzari / Nzari · nzadi : formes communes mais sens disjoints
+fusion         Nuni + Nuni · banuni -> Nuni, banuni
+fusion         Nzari + Nzari · nzadi -> Nzari, nzadi
 fusion ?       Nzololo na suba. / Nzololo na suba. · suba nzololo suba. : formes communes mais sens disjoints
 fusion ?       Pamu / Pamu · bipamu : formes communes mais sens disjoints
 fusion ?       Saku / Saku · masaku : formes communes mais sens disjoints
 fusion ?       Sala / Sala · masala : formes communes mais sens disjoints
 fusion ?       Sekola / Tombola · sekola : formes communes mais sens disjoints
-fusion ?       Ta / Ta · tela : formes communes mais sens disjoints
-fusion ?       Ta · tela / Tela : formes communes mais sens disjoints
-fusion ?       Ta zonzeno / Ta zonzeno! · tua zonzeno. : formes communes mais sens disjoints
-fusion         Tabula · burika · zenga · butika + Zenga -> Tabula, burika, zenga, butika
-fusion ?       Tisama / Tisama · kikuku : formes communes mais sens disjoints
-fusion ?       Tshima / Tshima · bima : formes communes mais sens disjoints
-fusion ?       Tshitari / Tshitari · bitari : formes communes mais sens disjoints
-fusion ?       Tualakasa / Tualakasa · tualakana : formes communes mais sens disjoints
+fusion         Ta + Ta · tela -> Ta, tela
+fusion         Ta + Tela -> Ta, tela
+fusion         Ta zonzeno + Ta zonzeno! · tua zonzeno. -> Ta zonzeno, tua zonzeno.
+fusion         Tisama + Tisama · kikuku -> Tisama, kikuku
+fusion         Tshitari + Tshitari · bitari -> Tshitari, bitari
+fusion         Tualakasa + Tualakasa · tualakana -> Tualakasa, tualakana
 fusion         Tuema + Tuema · bebela -> Tuema, bebela
 fusion         Tutu + Tutu · matutu -> Tutu, matutu
-fusion ?       Vuku / Vuku : formes communes mais sens disjoints
-fusion ?       Ya me. / Ya meno · ya me. : formes communes mais sens disjoints
-fusion ?       Yamika · yumisa / Yumisa : formes communes mais sens disjoints
+fusion         Vuku + Vuku -> Vuku
+fusion         Ya me. + Ya meno · ya me. -> Ya me., Ya meno
+fusion         Yamika · yumisa + Yumisa -> Yamika, yumisa
 fusion         Yelo + Yevo · yelo -> Yelo, Yevo
 fusion ?       Yuma / Yuma · mayuma : formes communes mais sens disjoints
 fusion         Zandu + Zandu · mazandu -> Zandu, mazandu
-fusion ?       Zanza / Zanza · mazanza : formes communes mais sens disjoints
-fusion         Zika + Zika · jika -> Zika, jika
+fusion         Zanza + Zanza · mazanza -> Zanza, mazanza
 fusion ?       Zita / Zita · mazita : formes communes mais sens disjoints
-pluriel        Ba | maba : palmiers | Palm tree(s) ; palm trees
+pluriel        BA | maba : Être ; exister ; habiter ; palmier ; dard(s) ; palmiers | To be ; to exist ; to inhabit ; palm tree ; stinger(s) ; palm trees
 pluriel        Baka, tshibaka, kibaka | bibaka : mur(s) | wall(s)
-pluriel        Bakala | babakala : Mâle(s) ; homme(s) ; époux(s) ; garçon(s) ; mari(s) | Male(s) ; man men(s) ; husband(s) ; boy(s)
-pluriel        Muntu | bantu : personnes ; être humain | people(s) ; Person(s) ; human being(s)
+pluriel        Mukulu, n'kuluntu, mukuluntu | bakuluntu : anciens ; ancien ; aîné(s) ; celui qui vient avant | elders ; elder ; elder one
+pluriel        Banda | mabanda : sud(s) ; bas de ; mare d'eau, lac, étang (aussi : le sud, le bas de) ; bas ; Marigot(s) ; trou(s) d'eau stagnant ; Mares ; lacs (pluriel) | south(s) ; bottom of ; pond ; lake (also: south ; below(s) ; bottom(s) ; Pool(s) ; stagnant water hole ; Ponds ; lakes (plural)
+pluriel        Muntu | bantu : personnes ; Personne ; être humain | people ; Person(s) ; human being
 pluriel        Bavu | bibavu : herminette(s) | adze(s)
 pluriel        Belezi | babelezi : belge(s) | Belgian(s)
-pluriel        Beni | mabeni : seins | Breast(s) ; breasts
-pluriel        Kiamvu | biamvu : ponts | Bridges ; bridge(s)
-pluriel        Kibanga | bibanga : Petites lianes (pluriel) ; mentons | Small vines (plural) ; chins ; chin(s)
 pluriel        Bidiki | bibidiki : Brique(s) | Brick(s)
+pluriel        Kikola | bikola : Mélange de plantes (fumigation) ; légume(s) ; légumes à feuille ; plantes pour fumigation ; petite plante | Plant mixture (fumigation) ; vegetable ; leafy vegetables ; plants for fumigation ; vegetables ; small plant
+pluriel        Tshikoyi | bikoyi : Complaintes ; supplications ; plainte(s) | Complaints ; supplications ; complaint
+pluriel        Tshikua | bikua : Combien(s) ; ignames ; Igname(s) | How many ; yams ; Yam(s)
+pluriel        Tshima | bima : Choses ; outils ; nourriture ; chose | Things ; tools ; food(s) ; thing
 pluriel        Bimbu | bibimbu : dette(s) | Debt(s)
-pluriel        Tshindongo | bindongo : Moutons | Sheep(s)
-pluriel        Bingulu | bibingulu : Lieu de chasse ; instrument de chasse | Hunting ground(s) ; hunting instrument(s)
-pluriel        Boria | maboria : tiques | tick(s) ; ticks
-pluriel        Buko | mako : bru, gendre, beaux-parents, parenté par le mariage | daughter(s) ; son-in-law(s) ; in-laws ; kinship by marriage
-pluriel        Buku | mabuku : livres | book(s) ; books
-pluriel        Bungu | mabungu : motif(s) | Reason(s) ; motive(s)
-pluriel        Dimpa | mampa : pains | Bread (sing ; bread(s) ; breads)
-pluriel        Fua | mafua : patrimoine(s) ; bien(s) | inheritance(s) ; heritage(s) ; asset(s)
-pluriel        Hata | mahata : Village(s) | 
-pluriel        Hembo | mahembo : épaules | Shoulder(s) ; shoulders
+pluriel        Sinzila | bisinzila : petites souches ; Souche(s) | small stumps ; Stump(s)
+pluriel        Buko | mako : Belle-fille(s) ; gendre ; bru, gendre, beaux-parents, parenté par le mariage | Daughter /son-in-law ; daughter(s) ; son-in-law(s) ; in-laws ; kinship by marriage
+pluriel        Bungu | mabungu : Raison(s) ; motif(s) | Reason(s) ; motive(s)
+pluriel        Dimpa | mampa : Pain ; pains | Bread(s) ; Bread (sing ; breads)
+pluriel        Fua | mafua : Mourir ; héritage(s) ; être mort ; patrimoine(s) ; bien(s) ; héritages (pluriel) | To die ; inheritance(s) ; heritage(s) ; to be dead ; asset(s) ; Inheritances (plural)
+pluriel        Hata | mahata : village(s) ; ville(s) ; agglomération(s) ; Villages (pluriel) | village(s) ; town(s) ; settlement(s)
 pluriel        Hisi | bihisi : Os | Bone(s)
-pluriel        Jibuku | bijibuku : membrane entourant les poumons | Pleura(s) ; membrane surrounding the lungs
+pluriel        Jibuku | bijibuku : Plèvre ; membrane entourant les poumons | Pleura(s) ; membrane surrounding the lungs
 pluriel        Jiku | majiku : L'âtre, endroit où l'on fait le feu ; foyer | The hearth, place where fire is made ; home(s) ; a household
-pluriel        Jimi | majimi : enceinte(s) | pregnancy ; pregnant(s)
-pluriel        Jita | majita : poids | Importance(s) ; weight(s)
+pluriel        Jimi | majimi : grossesse(s) ; enceinte(s) | pregnancy ; pregnant(s)
+pluriel        Jita | majita : Importance(s) ; poids | Importance(s) ; weight(s)
 pluriel        Kaka | bikaka : chouette(s) | Owl(s)
-pluriel        Kakasi | bikakasi : amère ; amertume(s) | Bitter(s) ; bitterness
-pluriel        Kalaka | makalaka : érudits | scholar(s) ; scholars
-pluriel        Kalu | bikalu : escalier | Ladder(s) ; stairs
+pluriel        Kakasi | bikakasi : Amer ; amère ; amertume(s) | Bitter(s) ; bitterness
+pluriel        Kalu | bikalu : échelle(s) ; escalier | Ladder(s) ; stairs
 pluriel        Kamu | makamu : fièvre | fever(s)
-pluriel        Kanda | makanda : Famille(s) | Family
-pluriel        Kazu | makazu : Noix de cola | Kola nut(s)
+pluriel        Kanda | makanda : Étirer, masser, frotter / Le matrilignage, la famille ; Famille(s) | To stretch, massage / The matrilineage, family ; Family
 pluriel        Kidukia | bidukia : tourterelle(s) | turtledove(s)
-pluriel        Kieta | bieta : Défaut du corps | Physical defect(s)
-pluriel        Kifua | bifua : formes | Form(s) ; forms
 pluriel        Kihota | bihota : conjonctivite(s) | conjunctivitis
-pluriel        Kikoba | bikoba : lèvres | Lip(s) ; lips
-pluriel        Kikola | bikola : petite plante(s) | vegetable(s) ; small plant(s)
-pluriel        Kikuku | bikuku : termitière | Kitchen(s) ; termite mound(s)
-pluriel        Kikumbi | bikumbi : Rite de passage ; rites de passage | Coming-of-age ritual(s) ; coming-of-age rituals
-pluriel        Kilembo | bilembo : Une nasse pour la pêche | fishing trap(s)
-pluriel        Kilenga, tshilenga | bilenga : paresseux(s) ; fainéant(s) | idle(s) ; lazy
+pluriel        Kikuku | bikuku : cuisine(s) ; termitière | Kitchen(s) ; termite mound
+pluriel        Kilenga, tshilenga | bilenga : oisif(s) ; paresseux ; fainéant(s) | idle(s) ; lazy
 pluriel        Kilo, thsilo | bilo : groupement(s) | group(s) ; gathering(s)
-pluriel        Kilobi, tshilobi | bilobi : chercheur(s) | Fisherman(s) ; seeker(s)
-pluriel        Kilongiki, tshilongiki | bilongiki : élève(s) ; étudiant(e) | learner(s) ; student(s) ; pupil(s)
+pluriel        Kilobi, tshilobi | bilobi : Pêcheur(s) ; chercheur(s) | Fisherman(s) ; seeker(s)
+pluriel        Kilongiki, tshilongiki | bilongiki : apprenant(s) ; élève(s) ; étudiant(e) | learner(s) ; student(s) ; pupil(s)
 pluriel        Kilongisi, thsilongisi | bilongisi : Enseignant(e) ; professeur(s) ; initiateur(s) | Teacher(s) ; professor(s) ; initiator(s)
-pluriel        Kilongokelo, tshilongokelo | bilongokelo : Lieu d'apprentissage(s) | Place of learning
 pluriel        Kilue | bilue : poterie(s) | Pottery
-pluriel        Kimangu, tshimangu | bimangu : miracle(s) | Wonder(s) ; miracle(s)
+pluriel        Kimangu, tshimangu | bimangu : Merveille(s) ; miracle(s) | Wonder(s) ; miracle(s)
 pluriel        Kimfinia | bimfinia : pincement(s) | pinch(s)
 pluriel        Kimvinzingila | bimvinzingila : sphère | sphere(s) ; realm(s)
 pluriel        Kindiongoloko | bindiongoloko : tourbillon dans l'eau | whirlpool(s)
-pluriel        Kinionia | binionia : petite fourmi(s) | small ant(s)
-pluriel        Kinkuêlankuela | binkuêlankuela : personne volage(s) | fickle person(s)
 pluriel        Kintangulu | bintangulu : tableau(s) | board(s)
 pluriel        Kintinu | bintinu : royaume(s) | kingdom(s)
-pluriel        Kisalu, tshisalu, salu | bisalu : travaux(s) | Work(s) ; works
+pluriel        Kisalu, tshisalu, salu | bisalu : travail(s) ; travaux ; bureau(s) | work ; task(s) ; works ; labor(s) ; office(s)
 pluriel        Kitemo, tshitemo | bitemo : Tontine(s) | 
-pluriel        Kizengi | bizengi : imbéciles | fool(s) ; fools
-pluriel        Kizongo, tshizongo | bizongo : coup de fusil ; coups de fusil | gunshot(s) ; gunshots
-pluriel        Konko | makonko : sauterelles | Grasshopper(s) ; grasshoppers
+pluriel        Koto | makoto : Genou(s) ; genoux | Knee ; knees
 pluriel        Koto | bikoto : bec(s) | Beak(s)
-pluriel        Koto | makoto : genoux(s) | Knee(s) ; knees
-pluriel        Kuala | makuala : hareng(s) | herring(s)
+pluriel        Kuala | makuala : hareng(s) ; hareng fumé | herring(s) ; smoked herring
 pluriel        Kuele | makuele : Gilet(s) | Vest(s) ; waistcoat(s)
-pluriel        Kuku | makuku : pierre du foyer ; pierres du foyer | hearth stone(s) ; hearth stones
-pluriel        Kumbi | makumbi : voitures | Car(s) ; cars
-pluriel        Kutu | makutu : oreilles | ear(s) ; ears
-pluriel        Laka | malaka : gorges | throat(s) ; throats
-pluriel        Laki | malaki : jour(s) | Date(s) ; day
-pluriel        Lami | malami : fil de fer ; Fil(s) de fer | Phone(s) ; wire(s) ; Wire(s)
-pluriel        Ludimi | tudimi : langues (organe) | tongue(s) ; tongues (organ)
-pluriel        Lueka | tueka : environ(s) ; sens ; orientation(s) | One side(s) ; approximately ; direction(s) ; orientation(s)
+pluriel        Kuku | makuku : Foyer ; âtre ; cuisine(s) ; pierre du foyer ; pierres du foyer | Hearth(s) ; fireplace(s) ; kitchen(s) ; hearth stone ; hearth stones
+pluriel        Laka | malaka : cou(s) ; gorge ; gorges | neck(s) ; throat ; throats
+pluriel        Laki | malaki : Date(s) ; jour(s) | Date(s) ; day
+pluriel        Lala | malala : Dormir ; orange ; être couché ; se coucher ; passer la nuit ; oranges ; Oranges (pluriel) | To sleep ; an orange / To sleep, to lie down ; to sleep, to lie down, to spend the night ; orange(s)
+pluriel        Lami | malami : téléphone(s) ; fil de fer ; Fil(s) de fer | Phone(s) ; wire(s) ; Wire(s)
+pluriel        Lembe | malembe : cigogne(s) ; Cigogne(s) | stork(s) ; Stork(s)
+pluriel        Ludimi | tudimi : Langue(s) ; langues (organe) | Tongue(s) ; tongues (organ)
+pluriel        Lueka | tueka : moitié(s) ; flanc(s) ; morceau(s) ; vous êtes devenus ; côté(s) ; environ(s) ; sens ; orientation(s) ; nous sommes devenus | Half(s) ; side(s) ; piece(s) ; you have become ; One side ; approximately ; direction(s) ; orientation(s) ; We have become
 pluriel        Lufulu | tufulu : socle(s) | pedestal(s) ; base(s)
 pluriel        Lufumba | tufumba : habitation en demi-cercle avec un toit de chaume pour réguler la température, tente ; habitation en demi-cercle avec un toit de chaume, tente | semi-circular dwelling with thatched roof ; tent(s) ; Semi-circular dwelling with thatched roof for temperature regulation, tent
 pluriel        Lufundusulu | tufundusulu : tribunal, lieu de jugement et de confession | tribunal(s) ; place of judgment and confession ; place of judgement and confession
-pluriel        Lufutu | tufutu : salaire ; ambiance(s) ; animation intense(s) ; événement marquant(s) ; virulence, colère, complication, poussière soulevée par les pieds, agitation ; Virulence, colère, complication, poussière soulevée par les pieds, agitation / Difficulté à grandir, lenteur | Payment(s) ; salary ; intense atmosphere(s) ; striking event(s) ; virulence, anger, complication, dust raised by feet, agitation ; Virulence, anger, complication, dust raised by feet / Difficulty growing, slowness
-pluriel        Luhe | mahe : brin d'herbe(s) | grass ; blade of grass
-pluriel        Luila | tuila : lézard(s) | lizard(s)
+pluriel        Lufutu | tufutu : paiement(s) ; salaire ; ambiance(s) ; animation intense ; événement marquant ; virulence, colère, complication, poussière soulevée par les pieds, agitation ; Virulence, colère, complication, poussière soulevée par les pieds, agitation / Difficulté à grandir, lenteur | Payment(s) ; salary ; intense atmosphere ; striking event ; virulence, anger, complication, dust raised by feet, agitation ; Virulence, anger, complication, dust raised by feet / Difficulty growing, slowness
+pluriel        Luhe | mahe : herbe(s) ; brin d'herbe | grass ; blade of grass
+pluriel        Luila | tuila : Lézard de la forêt ; lézard(s) | Forest lizard ; lizard(s)
 pluriel        Lukaka | tukaka : Pangolin(s) | 
 pluriel        Lukandu | tukandu : arc-en-ciel(s) | rainbow(s)
-pluriel        Lukaya | makaya : billet de banque ; feuilles ; billets de banque | leaf(s) ; banknote(s) ; leaves ; banknotes
-pluriel        Luke | tuke : tissu écarlate(s) | scarlet cloth(s)
-pluriel        Lukilazi | tukilazi : queue d'un poisson | fish tail(s)
+pluriel        Lukaya | makaya : feuille ; billet de banque ; feuilles ; billets de banque ; maniocs | leaf(s) ; banknote ; leaves ; banknotes ; cassavas
 pluriel        Lukoka | tukoka : croûte(s) | crust(s) ; scab(s)
 pluriel        Lukombo | tukombo : balai(s) | broom(s)
 pluriel        Lulendo | tulendo : amour-propre ; fierté(s) ; pouvoir ; puissance(s) ; orgueil(s) ; possibilité(s) ; facilité d'exécuter | Self-esteem(s) ; pride(s) ; sense of power ; power, might, pride, possibility, ease of execution ; power(s)
 pluriel        Lumbumbuzi | tumbumbuzi : taupe(s) | mole (animal)
 pluriel        Lumfikini | tumfikini : Chauve-souris | Bat(s) ; Bat(s)
-pluriel        Lundala | mandala : rameau de palmier | Palm branch(s) ; palm frond(s)
+pluriel        Lundala | mandala : Palme(s) ; rameau de palmier | Palm branch ; palm frond
 pluriel        Luoni | tuoni : Moment avant le crépuscule ; aurore | Moment before twilight ; dawn(s)
-pluriel        Lusampasampa | tusampasampa : huppe(s) | Mane(s) ; crest(s)
+pluriel        Lusampasampa | tusampasampa : Crinière ; huppe(s) | Mane(s) ; crest(s)
 pluriel        Lusembo | masembo : Blâme(s) | Blame(s) ; reproach(s)
-pluriel        Lusembo | tusembo : bénédictions | blessing(s) ; blessings
 pluriel        Lusemo | tusemo : bénédiction(s) | blessing(s)
-pluriel        Luyi | mayi : petite gifle(s) | light slap(s)
+pluriel        Luto | tuto : Cuillère ; Cuillère(s) | Spoon(s) ; Spoon(s)
+pluriel        Luyi | mayi : Gifle(s) ; petite gifle | Slap(s) ; light slap
 pluriel        Luzabu | tuzabu : La connaissance, la culture, le savoir, la science | Knowledge(s) ; culture(s) ; learning(s) ; science(s)
 pluriel        Luzolanu | tuzolanu : Amitié(s) | Friendship(s)
-pluriel        Vunga | mavunga : couvertures | Blankets ; blanket(s)
-pluriel        Mulembo | milembo : doigts | Fingers ; Finger(s)
 pluriel        Mubasa | mibasa : flèche(s) | arrow(s)
 pluriel        Mubati | mibati : pantalon(s) | trousers
-pluriel        Mubobela | mibobela : fumier | Rot(s) ; manure(s)
+pluriel        Mubobela | mibobela : pourriture ; fumier | Rot(s) ; manure(s)
+pluriel        Muela | miela : respiration(s) ; souffle(s) ; L'âme, la matrice de l'âme, le souffle, haleine, l'air | breath(s) ; breathing(s) ; The soul, the soul matrix, breath, air
 pluriel        Mufide | mifide : mangue très mûre ; appétissante(s) | Very ripe mango ; appetizing(s)
-pluriel        Mukala | mikala : tombe(s) | Tomb(s) ; grave(s)
-pluriel        Mukambakani | mikambakani : Le croisement, angine, inflammation de la gorge | Crossroad(s) ; tonsillitis ; throat inflammation(s)
-pluriel        Mukokoti | mikokoti : cocotiers | coconut tree(s) ; coconut trees
-pluriel        Mukulu, n'kuluntu, mukuluntu | bakuluntu : ancien(s) | elder(s)
-pluriel        Mulala | milala : orangers | orange tree(s) ; orange trees
-pluriel        Muleke | baleke : Un(e) cadet(te) ; plus jeune(s) | younger one(s) ; junior(s)
-pluriel        Mulele | milele : pagnes ; habit(s) ; habits | Loincloth(s) ; wrap(s)
-pluriel        Mulendi | milendi : cadavre | Remains ; corpse(s)
-pluriel        Mumanga | mimanga : manguiers | mango tree(s) ; mango trees
-pluriel        Mundele | mindele : blancs | White person(s) ; white people(s)
-pluriel        Mundjula | mindjula : Profanateur de tombe | Grave desecrator(s)
-pluriel        Muniche | miniche : Canne à sucre ; cannes à sucre | Sugar cane(s) ; sugar canes
-pluriel        Munkondi | minkondi : bananiers | banana tree(s) ; banana trees
+pluriel        Mukala | mikala : tombeau(s) ; tombe(s) | Tomb(s) ; grave(s)
+pluriel        Mukambakani | mikambakani : Le croisement, angine, inflammation de la gorge | Crossroad(s) ; tonsillitis ; throat inflammation
+pluriel        Muleke | baleke : Un(e) cadet(te) ; plus jeune | younger one ; junior(s)
+pluriel        Mulendi | milendi : Dépouille(s) ; cadavre | Remains ; corpse(s)
 pluriel        Munkua | bankua : Possesseur(s) | Owner(s) ; possessor(s)
 pluriel        Munturia | minturia : sangsue(s) | leech(s)
-pluriel        Mupapaayi | mipapaayi : papayers | papaya tree(s) ; papaya trees
-pluriel        Musafu | misafu : safoutiers | safou tree(s) ; safou trees
-pluriel        Musavoka | misavoka : avocatiers | avocado tree(s) ; avocado trees
+pluriel        Mushikimbila | mishikimbila : requin(s) ; Requin(s) | shark(s) ; Shark(s)
 pluriel        Mutekolo | batekolo : petit-enfant(s) ; petits-enfants | grandchild(s) ; grandchildren(s)
-pluriel        Muti, n'ti | miti : arbres ; Arbre(s) | tree(s) ; trees ; Tree(s)
-pluriel        Mutima | mitima : Cœur | Heart(s)
 pluriel        Mutondia | mitondia : anguille(s) | eel(s)
-pluriel        Mutshila | mitshila : queue d'animal(s) ; queues | animal tail(s) ; tails
-pluriel        Nkaka | bankaka : grand-mère ; grand-père maternel(le) ; grand-parent(s) ; grands-parents | Whole(s) ; maternal grandparent(s) ; grandparent(s) ; grandparents
+pluriel        Nkaka | bankaka : Entier ; grand-mère ; grand-père maternel(le) ; grand-parent(s) ; grands-parents | Whole(s) ; maternal grandparent ; grandparent ; grandparents
 pluriel        Nzita, muzita | mizita : paquet(s) | package(s) ; parcel(s)
-pluriel        Saka | bisaka : Piège à rats | Rat trap(s)
-pluriel        Saku | masaku : Piqûre douloureuse(s) | Painful sting(s)
 pluriel        Salulu | bisalulu : récipient(s) | container(s) ; vessel(s)
 pluriel        Sanu | bisanu : Peigne(s) | Comb(s)
-pluriel        Sese | masese : Terrain sablonneux(s) | Sandy ground(s)
-pluriel        Sikulu | bisikulu : rondin(s) | stool(s) ; step stool(s) ; log(s)
-pluriel        Simu | masimu : Berge opposée(s) | Opposite bank (of a river)
-pluriel        Sinzila | bisinzila : Souche(s) | Stump(s)
+pluriel        Sikulu | bisikulu : escabeau(s) ; rondin(s) | stool(s) ; step stool ; log(s)
 pluriel        Titi | matiti : Herbe(s) | Grass
-pluriel        Tshiba | biba : Couvercle d'une casserole | Pot lid(s)
-pluriel        Tshibibu | bibibu : gorilles | gorilla(s)
+pluriel        Tshibibu | bibibu : gorille ; gorilles | gorilla(s)
 pluriel        Tshifundu | bifundu : Estomac(s) | Stomach(s)
 pluriel        Tshikaku | bikaku : enclos | pen(s) ; enclosure(s)
-pluriel        Tshikoba | bikoba : lèvres | Lip(s) ; lips
-pluriel        Tshikoyi | bikoyi : plainte(s) | complaint(s)
-pluriel        Tshikumbi | bikumbi : vierges | Virgin(s) ; virgins
-pluriel        Tshima | bima : choses | thing(s) ; things
-pluriel        Tshimbungu | bimbungu : hyènes | hyena(s)
+pluriel        Tshimbungu | bimbungu : hyène ; hyènes | hyena(s)
 pluriel        Tshimpala | bimpala : Jalousie(s) | Jealousy
-pluriel        Tshimpati | bimpati : Personne renfermée(s) ; nom d'un papillon psychide | Withdrawn person, name of a bagworm moth
 pluriel        Tshimpene | bimpene : Nudité(s) | Nudity
-pluriel        Tshina | bina : tabou(s) | Prohibition(s) ; taboo(s)
-pluriel        Tshisama, kisama, sama | bisama : termitières | termite mound(s)
-pluriel        Tshizingu | bizingu : existence(s) | Life(s) ; existence(s)
-pluriel        Tutu | matutu : souris | mouse(s) ; mice(s)
-pluriel        Yele | mayele : la maturité émotionnelle et mentale | Intelligence(s) ; emotional and mental maturity
+pluriel        Tshina | bina : Interdiction(s) ; tabou(s) | Prohibition(s) ; taboo(s)
+pluriel        Tshitari | bitari : cascade(s) ; miroir ; une cascade ; Miroir(s) | waterfall(s) ; mirror(s) ; a waterfall ; Mirror(s)
+pluriel        Tshizingu | bizingu : vie(s) ; existence(s) | Life(s) ; existence(s)
+pluriel        Yele | mayele : intelligence(s) ; la maturité émotionnelle et mentale | Intelligence(s) ; emotional and mental maturity
 pluriel        Yuma | mayuma : dispute(s) | dispute(s) ; quarrel(s)
 pluriel        Zandu | mazandu : marché(s) | market(s)
-pluriel        Zanga | mazanga : lac(s) ; marais ; marécage(s) | Pond(s) ; lake(s) ; swamp(s) ; marsh(s)
-pluriel        Zanza | mazanza : nids | nest(s) ; nests
+pluriel        Zanga | mazanga : Étang(s) ; lac(s) ; marais ; marécage(s) | Pond(s) ; lake(s) ; swamp(s) ; marsh(s)
 pluriel        Ziku | maziku : foyer | home(s) ; household(s)
 pluriel        Zimi | mazimi : grossesse(s) | pregnancy
-pluriel        Zita | mazita : poids | Importance(s) ; weight(s)
-pluriel        Zoba | mazoba, bizoba : quelqu'un de peu intelligent | fool(s) ; someone of low intelligence
+pluriel        Zita | mazita : Importance(s) ; poids | Importance(s) ; weight(s)
+pluriel        Zoba | mazoba, bizoba : idiot(s) ; quelqu'un de peu intelligent | fool(s) ; someone of low intelligence
 pluriel        Zongo | bizongo : coup de fusil | gunshot(s)
-pluriel        Zu | mazu : bruit(s) ; voix(s) ; bruits ; langues | language(s) ; noise(s) ; voices ; languages
+pluriel        Zu | mazu : Langue ; bruit ; voix ; bruits ; langues | language ; noise(s) ; voices ; languages
 notes          262 notes rendues bilingues
 lettrine       Pictures/DED8D0C9A11F4057A1B846DC2AAD11E0.png remplacee (glyphe seul)
 lettrine       Pictures/C3C200CDCD594DF6BC295EA3B3774075.png remplacee (glyphe seul)
