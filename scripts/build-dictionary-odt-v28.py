@@ -78,11 +78,23 @@ PREFIX_PAIRS = [
 ]
 
 SPLIT_RE = re.compile(r"\s*[·\u00b7]\s*")
+WORDISH = re.compile(r"^[A-Za-zÀ-ÿ'\u2019-]{2,24}[.?!]?$")
 
 
 def parse_forms(lari):
+    """Formes separees par le point median, ou par des virgules quand chaque
+    segment est un mot isole (une phrase a virgule reste une phrase)."""
     parts = [p.strip() for p in SPLIT_RE.split(lari or "") if p.strip()]
-    return parts
+    out = []
+    for p in parts:
+        if "," in p:
+            segs = [s.strip() for s in p.split(",") if s.strip()]
+            if len(segs) > 1 and all(WORDISH.match(s) for s in segs):
+                out.extend(segs)
+                continue
+        out.append(p)
+    return out
+
 
 
 def stem(form, prefix):
