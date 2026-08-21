@@ -41,7 +41,7 @@ def to_mandombe(lari: str) -> str:
     s = s.replace("\u2019", "'")            # apostrophe typographique -> droite
     s = re.sub(r"\([^)]*\)", " ", s)         # les parentheses ne se composent pas
     # separateurs de variantes et ponctuation interne : espace
-    s = re.sub(r"[\u00b7\u2013\u2014/|,;:\"\u00ab\u00bb]", " ", s)
+    s = re.sub(r"[\u00b7\u2013\u2014/|;:\"\u00ab\u00bb]", " ", s)
     # apostrophe conservee uniquement dans N' + consonne (ntentia)
     s = re.sub(r"([Nn])'(?=[A-Za-z])", "N'", s)
     s = re.sub(r"(?<![Nn])'", " ", s)
@@ -52,7 +52,7 @@ def to_mandombe(lari: str) -> str:
     s = re.sub(r"([A-Za-z]{3,})ia\b", r"\1iya", s)          # tilapia -> tilapiya
     s = re.sub(r"([BCDFGJKLMNPQRSTVWXZbcdfgjklmnpqrstvwxz])[yY]", r"\1i", s)
     s = re.sub(r"([AaEeIiOoUu])\1+", r"\1", s)              # jamais deux voyelles identiques
-    s = re.sub(r"[^A-Za-z'.?! ]+", " ", s)
-    s = re.sub(r"\s+([.?!])", r"\1", s)
+    s = re.sub(r"[^A-Za-z'.?!, ]+", " ", s)
+    s = re.sub(r"\s+([.?!,])", r"\1", s)
     s = re.sub(r"\s+", " ", s).strip()
     return s
