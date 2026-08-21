@@ -17,6 +17,8 @@ Si un rendu semble mal passé, la cause est une faute de saisie dans le corpus o
 - apostrophe retirée dans le cas `nl` : `n'lemvo` → `nlemvo` (l'apostrophe note la parenté avec `mulemvo`)
 - **règle du N majuscule** : un mot en `N'` + consonne se tape tel quel avec un **N majuscule** : `N'kila`, `N'kento`, `N'kumba`, `N'kelo`, `N'kalu`, `N'kolo`, `N'kama`, `N'ti`, `N'tima`, `N'tekolo`. L'apostrophe note un son guttural très doux. `Ntshila` est la prononciation, jamais la saisie.
 - `nua` se tape normalement en Mandombe et se rend correctement (ne pas le transformer)
+- `kua` se tape `k-u-a` : le glyphe existe. Ne jamais taper `kuwa`.
+
 - `y` après consonne → `i` (`fyu` → `fiu`, `kya` → `kia`) ; le `y` initial est conservé (`ya`, `yandi`)
 - noms propres avec majuscule : `Paul` → `Paulo`
 - ponctuation : elle fait partie du bloc Mandombe et se compose avec la police Mandombe, jamais en latin noir
