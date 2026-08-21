@@ -125,11 +125,11 @@ WORD_RE = re.compile(r"[A-Za-z\u00c0-\u017f'\u2019.]+")
 # --- reparations mecaniques du champ Mandombe (verifiees au shaping HarfBuzz)
 # 1. l'apostrophe de N'kento avait ete transformee en espace par un nettoyage
 #    precedent : « N kento » laissait un N latin isole.
-APOS_RE = re.compile(r"\b([NM]) (?=[bcdfgjklmnpqrstvwz])")
+APOS_RE = re.compile(r"\b([NnMm]) (?=[bcdfgjklmnpqrstvwz])")
 # 2. cadratins et espaces insecables : la police ne les compose pas
 SPACE_RE = re.compile(r"[\u2000-\u200a\u202f\u00a0]")
 # 3. « luaz a » : espace parasite avant la derniere lettre d'un mot
-ORPHAN_RE = re.compile(r"(?<=[a-z])(?<! ) (?=[a-z]\b)")
+ORPHAN_RE = re.compile(r"(?<=[a-z]) (?=[a-z](?:[.,;:!?]|$))")
 # 4. graphie « th » : coquille tranchee par l'auteur, le mot saute
 TH_WORD_RE = re.compile(r"\s*\bt[hH]s?\w*", re.I)
 
