@@ -35,6 +35,22 @@ mur(s) · wall(s)
 
 Le pluriel n'est marqué que lorsqu'il est déjà attesté dans l'entrée (champ pluriel, note « pluriel : … », ou couple de classes déjà enregistré). Aucune forme plurielle n'est déduite. Les entrées où le statut singulier/pluriel est indécidable sont listées dans le rapport et laissées en virgules simples, sans barre, en attente de ton arbitrage.
 
+### Une seule entrée par mot
+
+Plus jamais deux entrées séparées pour le singulier et le pluriel, ni une entrée « sens » et une entrée « formes ». Les doublons du type `Bakala` (mâle, homme, mari) + `Bakala, babakala` sont fusionnés en une entrée unique portant toutes les formes et tous les sens :
+
+```text
+Bakala | babakala
+Mâle(s) ; homme(s) ; époux ; garçon(s) ; mari(s) · Male(s) ; man/men ; husband(s) ; boy(s)
+```
+
+Même traitement pour `Baka, tshibaka, kibaka | bibaka` et l'entrée doublon `Kibaka | bibaka`. La fusion réunit les gloses des deux entrées sans en perdre aucune et sans en inventer ; chaque fusion est journalisée dans le rapport.
+
+## 3 bis. Lettrines : Mandombe seul
+
+Les pages de séparation de lettres (passage du A au B, etc.) ne montrent que le glyphe Mandombe, comme convenu. Ni translittération latine, ni glose française ou anglaise sous la lettre. Les cartes actuelles du type `Kua — Combien ? / Une igname` sont régénérées en glyphe doré seul sur fond marron.
+
+
 ## 4. Contrôles avant livraison
 
 - audit HarfBuzz : 0 résidu latin dans les champs Mandombe, virgule et barre comprises ;
