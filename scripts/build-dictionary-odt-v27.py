@@ -160,8 +160,15 @@ IRREG_PAIRS = {"men": "man", "women": "woman", "children": "child",
                "feet": "foot", "teeth": "tooth", "wives": "wife"}
 
 
+PAIR_EN = re.compile(
+    r"\b(man|woman|child|foot|tooth|wife) (men|women|children|feet|teeth|wives)\b",
+    re.I)
+
+
 def dedupe(gloss, lang="fr"):
     """Un sens n'apparait qu'une fois. Le doublet sing/pluriel devient x(s)."""
+    if lang == "en":
+        gloss = PAIR_EN.sub(lambda m: "%s/%s" % (m.group(1), m.group(2)), gloss)
     segs = [s.strip() for s in gloss.split(";") if s.strip()]
     order, keep = [], {}
     for seg in segs:
@@ -388,7 +395,13 @@ def main():
         elif kind == "para":
             out.append('<text:p text:style-name="%s">%s</text:p>' % payload)
         else:
-            out.append(ENTRY_TPL % (esc(payload["mand"]), esc(payload["lari"]),
+            mand = esc(payload["mand"])
+            if "St Pierre" in mand:
+                mand = mand.replace(
+                    "St Pierre",
+                    '</text:span><text:span text:style-name="FrT">St Pierre'
+                    '</text:span><text:span text:style-name="MandT">')
+            out.append(ENTRY_TPL % (mand, esc(payload["lari"]),
                                     esc(payload["fr"]), esc(payload["en"])))
     xml = head + "".join(out) + tail
 
