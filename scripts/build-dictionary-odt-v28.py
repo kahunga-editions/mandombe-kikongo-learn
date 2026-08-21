@@ -141,9 +141,14 @@ def join_forms(sing, plur):
 ONEWORD = re.compile(r"^[A-Za-zÀ-ÿ'-]{3,22}$")
 
 
+ART_RE = re.compile(r"^(le|la|les|l'|un|une|des|du|the|a|an)\s+|^l['\u2019]", re.I)
+
+
 def _key(seg, lang="fr"):
     k = strip_accents(seg.strip().lower().rstrip(".")).replace("(s)", "")
+    k = ART_RE.sub("", k).strip()
     k = re.sub(r"\s+", " ", k).strip()
+
     if lang == "en":
         k = " ".join(IRREG_PAIRS.get(w, w) for w in k.replace("/", " ").split())
         k = re.sub(r"\b(\w+)( \1)+\b", r"\1", k)
