@@ -258,126 +258,57 @@ fusion ?       Yuma / Yuma · mayuma : formes communes mais sens disjoints
 fusion         Zandu + Zandu · mazandu -> Zandu, mazandu
 fusion         Zanza + Zanza · mazanza -> Zanza, mazanza
 fusion ?       Zita / Zita · mazita : formes communes mais sens disjoints
-pluriel        BA | maba : Être ; exister ; habiter ; palmier ; dard(s) ; palmiers | To be ; to exist ; to inhabit ; palm tree ; stinger(s) ; palm trees
 pluriel        Baka, tshibaka, kibaka | bibaka : mur(s) | wall(s)
-pluriel        Mukulu, n'kuluntu, mukuluntu | bakuluntu : anciens ; ancien ; aîné(s) ; celui qui vient avant | elders ; elder ; elder one
-pluriel        Banda | mabanda : sud(s) ; bas de ; mare d'eau, lac, étang (aussi : le sud, le bas de) ; bas ; Marigot(s) ; trou(s) d'eau stagnant ; Mares ; lacs (pluriel) | south(s) ; bottom of ; pond ; lake (also: south ; below(s) ; bottom(s) ; Pool(s) ; stagnant water hole ; Ponds ; lakes (plural)
-pluriel        Muntu | bantu : personnes ; Personne ; être humain | people ; Person(s) ; human being
 pluriel        Bavu | bibavu : herminette(s) | adze(s)
 pluriel        Belezi | babelezi : belge(s) | Belgian(s)
 pluriel        Bidiki | bibidiki : Brique(s) | Brick(s)
-pluriel        Kikola | bikola : Mélange de plantes (fumigation) ; légume(s) ; légumes à feuille ; plantes pour fumigation ; petite plante | Plant mixture (fumigation) ; vegetable ; leafy vegetables ; plants for fumigation ; vegetables ; small plant
-pluriel        Tshikoyi | bikoyi : Complaintes ; supplications ; plainte(s) | Complaints ; supplications ; complaint
-pluriel        Tshikua | bikua : Combien(s) ; ignames ; Igname(s) | How many ; yams ; Yam(s)
-pluriel        Tshima | bima : Choses ; outils ; nourriture ; chose | Things ; tools ; food(s) ; thing
 pluriel        Bimbu | bibimbu : dette(s) | Debt(s)
-pluriel        Sinzila | bisinzila : petites souches ; Souche(s) | small stumps ; Stump(s)
-pluriel        Buko | mako : Belle-fille(s) ; gendre ; bru, gendre, beaux-parents, parenté par le mariage | Daughter /son-in-law ; daughter(s) ; son-in-law(s) ; in-laws ; kinship by marriage
-pluriel        Bungu | mabungu : Raison(s) ; motif(s) | Reason(s) ; motive(s)
-pluriel        Dimpa | mampa : Pain ; pains | Bread(s) ; Bread (sing ; breads)
-pluriel        Fua | mafua : Mourir ; héritage(s) ; être mort ; patrimoine(s) ; bien(s) ; héritages (pluriel) | To die ; inheritance(s) ; heritage(s) ; to be dead ; asset(s) ; Inheritances (plural)
-pluriel        Hata | mahata : village(s) ; ville(s) ; agglomération(s) ; Villages (pluriel) | village(s) ; town(s) ; settlement(s)
+pluriel        Tshindongo | bindongo : Moutons(s) | Sheep(s)
 pluriel        Hisi | bihisi : Os | Bone(s)
-pluriel        Jibuku | bijibuku : Plèvre ; membrane entourant les poumons | Pleura(s) ; membrane surrounding the lungs
-pluriel        Jiku | majiku : L'âtre, endroit où l'on fait le feu ; foyer | The hearth, place where fire is made ; home(s) ; a household
-pluriel        Jimi | majimi : grossesse(s) ; enceinte(s) | pregnancy ; pregnant(s)
-pluriel        Jita | majita : Importance(s) ; poids | Importance(s) ; weight(s)
 pluriel        Kaka | bikaka : chouette(s) | Owl(s)
-pluriel        Kakasi | bikakasi : Amer ; amère ; amertume(s) | Bitter(s) ; bitterness
-pluriel        Kalu | bikalu : échelle(s) ; escalier | Ladder(s) ; stairs
-pluriel        Kamu | makamu : fièvre | fever(s)
-pluriel        Kanda | makanda : Étirer, masser, frotter / Le matrilignage, la famille ; Famille(s) | To stretch, massage / The matrilineage, family ; Family
+pluriel        Kamu | makamu : fièvre(s) | fever(s)
 pluriel        Kidukia | bidukia : tourterelle(s) | turtledove(s)
 pluriel        Kihota | bihota : conjonctivite(s) | conjunctivitis
-pluriel        Kikuku | bikuku : cuisine(s) ; termitière | Kitchen(s) ; termite mound
-pluriel        Kilenga, tshilenga | bilenga : oisif(s) ; paresseux ; fainéant(s) | idle(s) ; lazy
-pluriel        Kilo, thsilo | bilo : groupement(s) | group(s) ; gathering(s)
-pluriel        Kilobi, tshilobi | bilobi : Pêcheur(s) ; chercheur(s) | Fisherman(s) ; seeker(s)
-pluriel        Kilongiki, tshilongiki | bilongiki : apprenant(s) ; élève(s) ; étudiant(e) | learner(s) ; student(s) ; pupil(s)
-pluriel        Kilongisi, thsilongisi | bilongisi : Enseignant(e) ; professeur(s) ; initiateur(s) | Teacher(s) ; professor(s) ; initiator(s)
-pluriel        Kilue | bilue : poterie(s) | Pottery
-pluriel        Kimangu, tshimangu | bimangu : Merveille(s) ; miracle(s) | Wonder(s) ; miracle(s)
+pluriel        Kilo, thsilo | bilo : groupement(s) | group ; gathering
+pluriel        Kilue | bilue : poterie(s) | Pottery(s)
 pluriel        Kimfinia | bimfinia : pincement(s) | pinch(s)
-pluriel        Kimvinzingila | bimvinzingila : sphère | sphere(s) ; realm(s)
+pluriel        Kimvinzingila | bimvinzingila : sphère(s) | sphere ; realm
 pluriel        Kindiongoloko | bindiongoloko : tourbillon dans l'eau | whirlpool(s)
 pluriel        Kintangulu | bintangulu : tableau(s) | board(s)
 pluriel        Kintinu | bintinu : royaume(s) | kingdom(s)
-pluriel        Kisalu, tshisalu, salu | bisalu : travail(s) ; travaux ; bureau(s) | work ; task(s) ; works ; labor(s) ; office(s)
 pluriel        Kitemo, tshitemo | bitemo : Tontine(s) | 
-pluriel        Koto | makoto : Genou(s) ; genoux | Knee ; knees
 pluriel        Koto | bikoto : bec(s) | Beak(s)
-pluriel        Kuala | makuala : hareng(s) ; hareng fumé | herring(s) ; smoked herring
-pluriel        Kuele | makuele : Gilet(s) | Vest(s) ; waistcoat(s)
-pluriel        Kuku | makuku : Foyer ; âtre ; cuisine(s) ; pierre du foyer ; pierres du foyer | Hearth(s) ; fireplace(s) ; kitchen(s) ; hearth stone ; hearth stones
-pluriel        Laka | malaka : cou(s) ; gorge ; gorges | neck(s) ; throat ; throats
-pluriel        Laki | malaki : Date(s) ; jour(s) | Date(s) ; day
-pluriel        Lala | malala : Dormir ; orange ; être couché ; se coucher ; passer la nuit ; oranges ; Oranges (pluriel) | To sleep ; an orange / To sleep, to lie down ; to sleep, to lie down, to spend the night ; orange(s)
-pluriel        Lami | malami : téléphone(s) ; fil de fer ; Fil(s) de fer | Phone(s) ; wire(s) ; Wire(s)
-pluriel        Lembe | malembe : cigogne(s) ; Cigogne(s) | stork(s) ; Stork(s)
-pluriel        Ludimi | tudimi : Langue(s) ; langues (organe) | Tongue(s) ; tongues (organ)
-pluriel        Lueka | tueka : moitié(s) ; flanc(s) ; morceau(s) ; vous êtes devenus ; côté(s) ; environ(s) ; sens ; orientation(s) ; nous sommes devenus | Half(s) ; side(s) ; piece(s) ; you have become ; One side ; approximately ; direction(s) ; orientation(s) ; We have become
-pluriel        Lufulu | tufulu : socle(s) | pedestal(s) ; base(s)
-pluriel        Lufumba | tufumba : habitation en demi-cercle avec un toit de chaume pour réguler la température, tente ; habitation en demi-cercle avec un toit de chaume, tente | semi-circular dwelling with thatched roof ; tent(s) ; Semi-circular dwelling with thatched roof for temperature regulation, tent
-pluriel        Lufundusulu | tufundusulu : tribunal, lieu de jugement et de confession | tribunal(s) ; place of judgment and confession ; place of judgement and confession
-pluriel        Lufutu | tufutu : paiement(s) ; salaire ; ambiance(s) ; animation intense ; événement marquant ; virulence, colère, complication, poussière soulevée par les pieds, agitation ; Virulence, colère, complication, poussière soulevée par les pieds, agitation / Difficulté à grandir, lenteur | Payment(s) ; salary ; intense atmosphere ; striking event ; virulence, anger, complication, dust raised by feet, agitation ; Virulence, anger, complication, dust raised by feet / Difficulty growing, slowness
-pluriel        Luhe | mahe : herbe(s) ; brin d'herbe | grass ; blade of grass
-pluriel        Luila | tuila : Lézard de la forêt ; lézard(s) | Forest lizard ; lizard(s)
+pluriel        Kuele | makuele : Gilet(s) | Vest ; waistcoat
+pluriel        Lufulu | tufulu : socle(s) | pedestal ; base
 pluriel        Lukaka | tukaka : Pangolin(s) | 
 pluriel        Lukandu | tukandu : arc-en-ciel(s) | rainbow(s)
-pluriel        Lukaya | makaya : feuille ; billet de banque ; feuilles ; billets de banque ; maniocs | leaf(s) ; banknote ; leaves ; banknotes ; cassavas
-pluriel        Lukoka | tukoka : croûte(s) | crust(s) ; scab(s)
+pluriel        Lukoka | tukoka : croûte(s) | crust ; scab
 pluriel        Lukombo | tukombo : balai(s) | broom(s)
-pluriel        Lulendo | tulendo : amour-propre ; fierté(s) ; pouvoir ; puissance(s) ; orgueil(s) ; possibilité(s) ; facilité d'exécuter | Self-esteem(s) ; pride(s) ; sense of power ; power, might, pride, possibility, ease of execution ; power(s)
 pluriel        Lumbumbuzi | tumbumbuzi : taupe(s) | mole (animal)
-pluriel        Lumfikini | tumfikini : Chauve-souris | Bat(s) ; Bat(s)
-pluriel        Lundala | mandala : Palme(s) ; rameau de palmier | Palm branch ; palm frond
-pluriel        Luoni | tuoni : Moment avant le crépuscule ; aurore | Moment before twilight ; dawn(s)
-pluriel        Lusampasampa | tusampasampa : Crinière ; huppe(s) | Mane(s) ; crest(s)
-pluriel        Lusembo | masembo : Blâme(s) | Blame(s) ; reproach(s)
+pluriel        Lusembo | masembo : Blâme(s) | Blame ; reproach
 pluriel        Lusemo | tusemo : bénédiction(s) | blessing(s)
-pluriel        Luto | tuto : Cuillère ; Cuillère(s) | Spoon(s) ; Spoon(s)
-pluriel        Luyi | mayi : Gifle(s) ; petite gifle | Slap(s) ; light slap
-pluriel        Luzabu | tuzabu : La connaissance, la culture, le savoir, la science | Knowledge(s) ; culture(s) ; learning(s) ; science(s)
 pluriel        Luzolanu | tuzolanu : Amitié(s) | Friendship(s)
 pluriel        Mubasa | mibasa : flèche(s) | arrow(s)
 pluriel        Mubati | mibati : pantalon(s) | trousers
-pluriel        Mubobela | mibobela : pourriture ; fumier | Rot(s) ; manure(s)
-pluriel        Muela | miela : respiration(s) ; souffle(s) ; L'âme, la matrice de l'âme, le souffle, haleine, l'air | breath(s) ; breathing(s) ; The soul, the soul matrix, breath, air
-pluriel        Mufide | mifide : mangue très mûre ; appétissante(s) | Very ripe mango ; appetizing(s)
-pluriel        Mukala | mikala : tombeau(s) ; tombe(s) | Tomb(s) ; grave(s)
-pluriel        Mukambakani | mikambakani : Le croisement, angine, inflammation de la gorge | Crossroad(s) ; tonsillitis ; throat inflammation
-pluriel        Muleke | baleke : Un(e) cadet(te) ; plus jeune | younger one ; junior(s)
-pluriel        Mulendi | milendi : Dépouille(s) ; cadavre | Remains ; corpse(s)
-pluriel        Munkua | bankua : Possesseur(s) | Owner(s) ; possessor(s)
+pluriel        Munkua | bankua : Possesseur(s) | Owner ; possessor
 pluriel        Munturia | minturia : sangsue(s) | leech(s)
-pluriel        Mushikimbila | mishikimbila : requin(s) ; Requin(s) | shark(s) ; Shark(s)
-pluriel        Mutekolo | batekolo : petit-enfant(s) ; petits-enfants | grandchild(s) ; grandchildren(s)
+pluriel        Musongi, n'songi | misongi : malafoutier(s) | palm wine tapper
 pluriel        Mutondia | mitondia : anguille(s) | eel(s)
-pluriel        Nkaka | bankaka : Entier ; grand-mère ; grand-père maternel(le) ; grand-parent(s) ; grands-parents | Whole(s) ; maternal grandparent ; grandparent ; grandparents
-pluriel        Nzita, muzita | mizita : paquet(s) | package(s) ; parcel(s)
-pluriel        Salulu | bisalulu : récipient(s) | container(s) ; vessel(s)
+pluriel        Nzita, muzita | mizita : paquet(s) | package ; parcel
+pluriel        Salulu | bisalulu : récipient(s) | container ; vessel
 pluriel        Sanu | bisanu : Peigne(s) | Comb(s)
-pluriel        Sikulu | bisikulu : escabeau(s) ; rondin(s) | stool(s) ; step stool ; log(s)
+pluriel        Sasala | bisasala : Nageoire(s) | Fin (of a fish)
 pluriel        Titi | matiti : Herbe(s) | Grass
-pluriel        Tshibibu | bibibu : gorille ; gorilles | gorilla(s)
+pluriel        Tshibibu | bibibu : gorille(s) | gorilla(s)
 pluriel        Tshifundu | bifundu : Estomac(s) | Stomach(s)
-pluriel        Tshikaku | bikaku : enclos | pen(s) ; enclosure(s)
-pluriel        Tshimbungu | bimbungu : hyène ; hyènes | hyena(s)
-pluriel        Tshimpala | bimpala : Jalousie(s) | Jealousy
-pluriel        Tshimpene | bimpene : Nudité(s) | Nudity
-pluriel        Tshina | bina : Interdiction(s) ; tabou(s) | Prohibition(s) ; taboo(s)
-pluriel        Tshitari | bitari : cascade(s) ; miroir ; une cascade ; Miroir(s) | waterfall(s) ; mirror(s) ; a waterfall ; Mirror(s)
-pluriel        Tshizingu | bizingu : vie(s) ; existence(s) | Life(s) ; existence(s)
-pluriel        Yele | mayele : intelligence(s) ; la maturité émotionnelle et mentale | Intelligence(s) ; emotional and mental maturity
-pluriel        Yuma | mayuma : dispute(s) | dispute(s) ; quarrel(s)
+pluriel        Tshimbungu | bimbungu : hyène(s) | hyena(s)
+pluriel        Tshimpala | bimpala : Jalousie(s) | Jealousy(s)
+pluriel        Tshimpene | bimpene : Nudité(s) | Nudity(s)
+pluriel        Yuma | mayuma : dispute(s) | dispute ; quarrel
 pluriel        Zandu | mazandu : marché(s) | market(s)
-pluriel        Zanga | mazanga : Étang(s) ; lac(s) ; marais ; marécage(s) | Pond(s) ; lake(s) ; swamp(s) ; marsh(s)
-pluriel        Ziku | maziku : foyer | home(s) ; household(s)
-pluriel        Zimi | mazimi : grossesse(s) | pregnancy
-pluriel        Zita | mazita : Importance(s) ; poids | Importance(s) ; weight(s)
-pluriel        Zoba | mazoba, bizoba : idiot(s) ; quelqu'un de peu intelligent | fool(s) ; someone of low intelligence
+pluriel        Ziku | maziku : foyer(s) | home ; household
+pluriel        Zimi | mazimi : grossesse(s) | pregnancy(s)
 pluriel        Zongo | bizongo : coup de fusil | gunshot(s)
-pluriel        Zu | mazu : Langue ; bruit ; voix ; bruits ; langues | language ; noise(s) ; voices ; languages
 notes          262 notes rendues bilingues
 lettrine       Pictures/DED8D0C9A11F4057A1B846DC2AAD11E0.png remplacee (glyphe seul)
 lettrine       Pictures/C3C200CDCD594DF6BC295EA3B3774075.png remplacee (glyphe seul)
