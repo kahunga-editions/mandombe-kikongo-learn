@@ -25,8 +25,8 @@ from mandombe_typing import to_mandombe, shape_names  # noqa: E402
 from mandombe_graphies import map_text  # noqa: E402
 
 SRC = sys.argv[1] if len(sys.argv) > 1 else "/mnt/documents/dictionnaire-lari-v26.odt"
-DST = sys.argv[2] if len(sys.argv) > 2 else "/mnt/documents/dictionnaire-lari-v27.odt"
-REPORT = sys.argv[3] if len(sys.argv) > 3 else "reports/dictionnaire-v27.txt"
+DST = sys.argv[2] if len(sys.argv) > 2 else "/mnt/documents/dictionnaire-lari-v28.odt"
+REPORT = sys.argv[3] if len(sys.argv) > 3 else "reports/dictionnaire-v28.txt"
 
 # ------------------------------------------------------------------ 1. gloses
 # cle = forme Lari exacte de la v26
