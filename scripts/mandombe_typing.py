@@ -52,7 +52,7 @@ def to_mandombe(lari: str) -> str:
     s = re.sub(r"([A-Za-z]{3,})ia\b", r"\1iya", s)          # tilapia -> tilapiya
     s = re.sub(r"([BCDFGJKLMNPQRSTVWXZbcdfgjklmnpqrstvwxz])[yY]", r"\1i", s)
     s = re.sub(r"([AaEeIiOoUu])\1+", r"\1", s)              # jamais deux voyelles identiques
-    s = re.sub(r"[^A-Za-z'.?! ]+", " ", s)
+    s = re.sub(r"[^A-Za-z'.?!, ]+", " ", s)
     s = re.sub(r"\s+([.?!,])", r"\1", s)
     s = re.sub(r"\s+", " ", s).strip()
     return s
