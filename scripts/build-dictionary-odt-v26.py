@@ -53,6 +53,12 @@ LARI_REPAIRS = {
     "Mulumba \u00b7 milumba lapin().": ("Mulumba \u00b7 milumba", "lapin(s)", "rabbit(s)"),
     "Vuku + verbe.": ("Vuku", None, None),
     "M'vu": ("Muvu", None, None),
+    "Ba ndongese. I.": ("Ba ndongese.", "Ils m'ont appris.", None),
+    "Bua ka bua. E.": ("Bua ka bua.", "Elle va tomber ; il va tomber.", None),
+    "Mulemvuaku. E": ("Mulemvuaku.", "Excusez-moi", None),
+    "Nkuikila. F": ("Nkuikila.", "Fais-moi confiance", None),
+    "Ta batika. O.": ("Ta batika.", "On va commencer.", None),
+    "Taridi. Elle \u00b7": ("Taridi.", "Elle \u00b7 il a regard\u00e9", None),
 }
 
 # gloses francaises amputees dans les paragraphes d'index (HeadS)
@@ -63,6 +69,10 @@ HEAD_REPAIRS = {
     "u'ils partent": "qu'ils partent",
     "r\u00eater": "pr\u00eater",
     "\u00e0 ton ventre": "fais attention \u00e0 ton ventre",
+    "ls m'ont appris": "ils m'ont appris",
+    "xcusez-moi": "excusez-moi",
+    "ais moi confiance": "fais-moi confiance",
+    "n va commencer": "on va commencer",
 }
 FR_REPAIRS = {
     "Es gens partent.": "Les gens partent.",
@@ -73,6 +83,11 @@ FR_REPAIRS = {
     "\u00c0 ton ventre.": "Fais attention \u00e0 ton ventre.",
     "E mange maintenant.": "Je mange maintenant.",
     "Dolisie (Loubomo).": "Lubomo, nom originel de Dolisie.",
+    "Ls m'ont appris.": "Ils m'ont appris.",
+    "Lle va tomber. ; il va tomber.": "Elle va tomber ; il va tomber.",
+    "xcusez-moi": "Excusez-moi",
+    "ais moi confiance": "Fais-moi confiance",
+    "N va commencer.": "On va commencer.",
 }
 
 # entree entierement retiree : graphie fautive, l'auteur a tranche
@@ -96,6 +111,14 @@ WORD_MAP = {
     "mzansi": "nzansi",
     "pfuka": "fuka",
     "n'zansi": "nzansi",
+    # « benji » / « bendji » : la police ne compose ni nj ni ndj apres voyelle.
+    # On applique la regle nj -> nz deja validee (njila -> nzila) ; la note dit /benji/.
+    "bendji": "benzi",
+    "benji": "benzi",
+    "mbendji": "mbenzi",
+    "mbenji": "mbenzi",
+    "bendji.": "benzi.",
+    "mbendji.": "mbenzi.",
 }
 
 # suites, appliquees dans cet ordre a l'interieur d'un mot
@@ -134,8 +157,36 @@ ORPHAN_RE = re.compile(r"(?<=[a-z]) (?=[a-z](?:[.,;:!?]|$))")
 TH_WORD_RE = re.compile(r"\s*\bt[hH]s?\w*", re.I)
 
 
+SEMI_RE = re.compile(r"([aeiou])[wy]([aeiou])", re.I)
+
+
+# seul cas nomme ou « ia » final s'ecrit « iya » (regle donnee par l'auteur)
+IYA_KEEP = {"tilapia"}
+
+
+def drop_added_semivowels(mand: str, lari: str) -> str:
+    """Retire la semi-voyelle de liaison absente du Lari (kuwa -> kua)."""
+
+    def norm(w):
+        return re.sub(r"[^a-z']", "", map_word(w.lower()))
+
+    pool = {norm(x) for x in re.split(r"[\s\u00b7\-]+", lari) if x}
+    if not pool:
+        return mand
+    out = []
+    for m in mand.split():
+        red = SEMI_RE.sub(r"\1\2", m)
+        if red != m and norm(red) in pool and norm(red) not in IYA_KEEP:
+            out.append(red)
+        else:
+            out.append(m)
+    return " ".join(out)
+
+
 def repair_mandombe(text: str) -> str:
     out = SPACE_RE.sub(" ", text)
+    # cas nomme : « m'samu » se tape N'samu (arbitrage de l'auteur)
+    out = re.sub(r"\b[Mm][' \u2019][Ss]amu", "N'samu", out)
     out = APOS_RE.sub(r"\1'", out)
     out = TH_WORD_RE.sub("", out)
     out = ORPHAN_RE.sub("", out)
@@ -191,7 +242,7 @@ ST_PIERRE_MAND = (
 
 stats = {k: 0 for k in (
     "lari_repare", "glose_reparee", "entree_retiree", "mandombe_corrige",
-    "note_ajoutee", "st_pierre")}
+    "note_ajoutee", "note_normalisee", "st_pierre")}
 samples = []
 
 
@@ -254,6 +305,8 @@ def process_para(style: str, body: str):
         raw = txt(val)
         fixed, changes = map_mandombe(raw)
         repaired = repair_mandombe(fixed)
+        if lari_vals:
+            repaired = drop_added_semivowels(repaired, " ".join(lari_vals))
         if repaired != fixed:
             changes.append((fixed, repaired))
             fixed = repaired
@@ -285,6 +338,44 @@ NOTE_PARA = ('<text:p text:style-name="EntryNote">'
              '<text:span text:style-name="NoteT">%s</text:span></text:p>')
 
 
+NOTE_REPAIRS = {
+    "Avec /o/ long = nouveau cycle ; court = il est temps de regarder ; with long ; = new cycle ; short ; = it is time to look":
+        "Avec /o/ long = nouveau cycle ; avec /o/ court = il est temps de regarder \u00b7 EN \u2014 With a long /o/ = new cycle ; with a short /o/ = it is time to look.",
+    "Prononc\u00e9 ; \u0283ama ; \u2014 sh = ch fran\u00e7ais (jamais ; t\u0283 ; anglais). Forme conjugu\u00e9e : Shemi ; \u0283\u025bmi ; = je vais. ; EN \u2014 Pronounced ; \u2014 sh = French ch (never English ; ). Conjugated form: Shemi ; = I am going.":
+        "Prononc\u00e9 /\u0283ama/ ; sh = ch fran\u00e7ais (jamais /t\u0283/ anglais). Forme conjugu\u00e9e : Shemi /\u0283\u025bmi/ = je vais. \u00b7 EN \u2014 Pronounced /\u0283ama/ ; sh = French ch (never English /t\u0283/). Conjugated form: Shemi /\u0283\u025bmi/ = I am going.",
+    "a ; court = cascade ; long = miroir ; EN \u2014 short ; = waterfall ; long ; = mirror ; prononc\u00e9 avec ; court ; pronounced with a short ; pronounced with a long":
+        "Avec /a/ court = cascade ; avec /a/ long = miroir \u00b7 EN \u2014 Short /a/ = waterfall ; long /a/ = mirror.",
+    "Prononcer 'nguri ya' en un seul bloc : ; nguria ; EN \u2014 Pronounce 'nguri ya' as a single unit:":
+        "Prononcer 'nguri ya' en un seul bloc : /nguria/ \u00b7 EN \u2014 Pronounce 'nguri ya' as a single unit: /nguria/.",
+}
+
+
+OLD_NOTE_RE = re.compile(
+    r"^Prononcer(?: en un seul bloc)?\s*[;:]\s*(?:pronoun[cv]e|prononce)?\s*:?\s*;?\s*(.*)$",
+    re.I)
+
+
+def normalize_old_note(text):
+    """Remet les notes de prononciation heritees au format bilingue."""
+    if text.strip() in NOTE_REPAIRS:
+        return NOTE_REPAIRS[text.strip()]
+    m = OLD_NOTE_RE.match(text.strip())
+    if not m:
+        return None
+    rest = m.group(1).strip()
+    rest = re.sub(r"\s*;\s*EN\s*\u2014.*$", "", rest, flags=re.I).strip()
+    tail = ""
+    mt = re.search(r"\s*;\s*\.?\s*((?:Nom|Verbe|Forme)\b.*)$", rest)
+    if mt:
+        tail = " " + mt.group(1).strip()
+        rest = rest[:mt.start()].strip()
+    word = rest.strip(" ;:.'\u2019").strip()
+    if not word:
+        return None
+    return ("Prononc\u00e9 /%s/ \u00b7 EN \u2014 Pronounced /%s/.%s"
+            % (word, word, tail))
+
+
 def build_note(words):
     forms = " ".join("/%s/" % w for w in words)
     return NOTE_PARA % esc("Prononc\u00e9 %s \u00b7 EN \u2014 Pronounced %s" % (forms, forms))
@@ -307,6 +398,16 @@ def main():
         elif style == "EntryNote" and pending_drop_next_note:
             pending_drop_next_note = False  # la note orpheline part avec l'entree
         else:
+            if style == "EntryNote":
+                for st, val in SPAN_RE.findall(new_body):
+                    fixedn = normalize_old_note(txt(val))
+                    if fixedn:
+                        new_body = new_body.replace(
+                            '<text:span text:style-name="%s">%s</text:span>'
+                            % (st, val),
+                            '<text:span text:style-name="%s">%s</text:span>'
+                            % (st, esc(fixedn)))
+                        stats["note_normalisee"] += 1
             pending_drop_next_note = False
             out.append('<text:p text:style-name="%s">%s</text:p>' % (style, new_body))
             if pron:
