@@ -135,7 +135,16 @@ def _key(seg):
     return k
 
 
-def dedupe(gloss):
+SKIP_FR = re.compile(r"(eau|al|s|x|z)$", re.I)
+SKIP_EN = re.compile(r"(y|ch|sh|o|s|x|z)$", re.I)
+
+
+def _pluralizable(w, lang):
+    return bool(ONEWORD.match(w) and "(s)" not in w
+                and not (SKIP_FR if lang == "fr" else SKIP_EN).search(w))
+
+
+def dedupe(gloss, lang="fr"):
     """Un sens n'apparait qu'une fois. Le doublet sing/pluriel devient x(s)."""
     segs = [s.strip() for s in gloss.split(";") if s.strip()]
     order, keep = [], {}
@@ -148,20 +157,20 @@ def dedupe(gloss):
             old = keep[k]
             # doublet singulier / pluriel atteste dans l'entree : on marque (s)
             if _key(old) == k and old.lower() != seg.lower():
-                base = old.rstrip(".")
-                if "(s)" not in base and ONEWORD.match(base):
-                    keep[k] = base + "(s)" + old[len(base):]
+                short = min([old, seg], key=len)
+                base = short.rstrip(".")
+                if _pluralizable(base, lang):
+                    keep[k] = base + "(s)" + short[len(base):]
     return " ; ".join(keep[k] for k in order)
 
 
-def mark_single(gloss):
+def mark_single(gloss, lang="fr"):
     """Glose d'un seul mot pour une entree qui porte un pluriel : mur -> mur(s)."""
     segs = [s.strip() for s in gloss.split(";") if s.strip()]
     if len(segs) != 1:
         return gloss
     w = segs[0].rstrip(".")
-    if (ONEWORD.match(w) and "(s)" not in w
-            and not w.lower().endswith(("s", "x", "z"))):
+    if _pluralizable(w, lang):
         return w + "(s)" + segs[0][len(w):]
     return gloss
 
@@ -315,9 +324,9 @@ def main():
         mand_sing = [m for m in mand_sing if m]
         mand_plur = [m for m in mand_plur if m]
         e["mand"] = join_forms(mand_sing, mand_plur)
-        e["fr"], e["en"] = dedupe(e["fr"]), dedupe(e["en"])
+        e["fr"], e["en"] = dedupe(e["fr"], "fr"), dedupe(e["en"], "en")
         if plur:
-            fr2, en2 = mark_single(e["fr"]), mark_single(e["en"])
+            fr2, en2 = mark_single(e["fr"], "fr"), mark_single(e["en"], "en")
             if fr2 != e["fr"] or en2 != e["en"]:
                 log("pluriel", "%s : %s | %s" % (e["lari"], fr2, en2))
             e["fr"], e["en"] = fr2, en2

@@ -263,18 +263,18 @@ pluriel        Bavu | bibavu : herminette(s) | adze(s)
 pluriel        Belezi | babelezi : belge(s) | Belgian(s)
 pluriel        Bidiki | bibidiki : Brique(s) | Brick(s)
 pluriel        Bimbu | bibimbu : dette(s) | Debt(s)
-pluriel        Tshindongo | bindongo : Moutons(s) | Sheep(s)
+pluriel        Tshindongo | bindongo : mouton(s) | Sheep(s)
 pluriel        Hisi | bihisi : Os | Bone(s)
 pluriel        Kaka | bikaka : chouette(s) | Owl(s)
 pluriel        Kamu | makamu : fièvre(s) | fever(s)
 pluriel        Kidukia | bidukia : tourterelle(s) | turtledove(s)
 pluriel        Kihota | bihota : conjonctivite(s) | conjunctivitis
 pluriel        Kilo, thsilo | bilo : groupement(s) | group ; gathering
-pluriel        Kilue | bilue : poterie(s) | Pottery(s)
-pluriel        Kimfinia | bimfinia : pincement(s) | pinch(s)
+pluriel        Kilue | bilue : poterie(s) | Pottery
+pluriel        Kimfinia | bimfinia : pincement(s) | pinch
 pluriel        Kimvinzingila | bimvinzingila : sphère(s) | sphere ; realm
 pluriel        Kindiongoloko | bindiongoloko : tourbillon dans l'eau | whirlpool(s)
-pluriel        Kintangulu | bintangulu : tableau(s) | board(s)
+pluriel        Kintangulu | bintangulu : tableau | board(s)
 pluriel        Kintinu | bintinu : royaume(s) | kingdom(s)
 pluriel        Kitemo, tshitemo | bitemo : Tontine(s) | 
 pluriel        Koto | bikoto : bec(s) | Beak(s)
@@ -291,7 +291,7 @@ pluriel        Luzolanu | tuzolanu : Amitié(s) | Friendship(s)
 pluriel        Mubasa | mibasa : flèche(s) | arrow(s)
 pluriel        Mubati | mibati : pantalon(s) | trousers
 pluriel        Munkua | bankua : Possesseur(s) | Owner ; possessor
-pluriel        Munturia | minturia : sangsue(s) | leech(s)
+pluriel        Munturia | minturia : sangsue(s) | leech
 pluriel        Musongi, n'songi | misongi : malafoutier(s) | palm wine tapper
 pluriel        Mutondia | mitondia : anguille(s) | eel(s)
 pluriel        Nzita, muzita | mizita : paquet(s) | package ; parcel
@@ -300,14 +300,14 @@ pluriel        Sanu | bisanu : Peigne(s) | Comb(s)
 pluriel        Sasala | bisasala : Nageoire(s) | Fin (of a fish)
 pluriel        Titi | matiti : Herbe(s) | Grass
 pluriel        Tshibibu | bibibu : gorille(s) | gorilla(s)
-pluriel        Tshifundu | bifundu : Estomac(s) | Stomach(s)
+pluriel        Tshifundu | bifundu : Estomac(s) | Stomach
 pluriel        Tshimbungu | bimbungu : hyène(s) | hyena(s)
-pluriel        Tshimpala | bimpala : Jalousie(s) | Jealousy(s)
-pluriel        Tshimpene | bimpene : Nudité(s) | Nudity(s)
+pluriel        Tshimpala | bimpala : Jalousie(s) | Jealousy
+pluriel        Tshimpene | bimpene : Nudité(s) | Nudity
 pluriel        Yuma | mayuma : dispute(s) | dispute ; quarrel
 pluriel        Zandu | mazandu : marché(s) | market(s)
 pluriel        Ziku | maziku : foyer(s) | home ; household
-pluriel        Zimi | mazimi : grossesse(s) | pregnancy(s)
+pluriel        Zimi | mazimi : grossesse(s) | pregnancy
 pluriel        Zongo | bizongo : coup de fusil | gunshot(s)
 notes          262 notes rendues bilingues
 lettrine       Pictures/DED8D0C9A11F4057A1B846DC2AAD11E0.png remplacee (glyphe seul)
