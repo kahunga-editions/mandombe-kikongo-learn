@@ -43,10 +43,11 @@ prononciation bilingue est ajoutée sous la forme `prononcé /njila/ · pronounc
 | `nj` (njila, njeka, njunini, lunjungu, njundu, mbanji…) | `nz` : `Nzila` | prononcé /njila/ |
 | `dz` (dzuna, budziya, budzakata, budzoki, budzua, budzulu, budzabu) | `dj` : `Djuna` | prononcé /dzuna/ |
 | `ts` (tseki, tsaba, tsala, tsamuna, tsika, ntsari, tsadila, tsaka) | `ns` : `Nseki` | prononcé /tseki/ |
-| `th` (nthsi, thiminu, thsilo, thsilongisi) | supprimé | graphie fautive, la ligne saute |
+| `th` (thiminu, thsilo, thsilongisi) | supprimé | graphie fautive, la ligne saute |
 | `lw` / `fw` (lwonesa, lwoni, bilwoni) | `lu` / `fu` : `Luonesa` | pas de `w` en Mandombe |
 | `n'lemvo` | `nlemvo` (ou `mulemvo`) | jamais d'apostrophe |
 | `n'mvu` | supprimé | n'existe pas |
+| `ntsh` → `nk` (règle nommée) | `ntsha` → `Nka`, `ntshi` → `Nki`, `nthsi` (coquille de `ntshi`) → `Nki` | prononcé /ntsha/, /ntshi/ |
 | `ntshiya` / `nkia` | `Nkiya` | prononcé /ntshia/ |
 | `bendji` | `Bendzi` | prononcé /benji/ |
 | `makonfo` | `Makomfo` | prononcé /makonfo/ |
@@ -56,20 +57,15 @@ prononciation bilingue est ajoutée sous la forme `prononcé /njila/ · pronounc
 | `pfuka` | `Fuka` | prononcé /pfuka/ |
 | `mzansi` | `Nzansi` | prononcé /mzansi/ |
 | `ntshangu` | `Nkangu` | prononcé /ntshangu/ |
-
-## Trois points à confirmer avant de lancer
-
-- `ndje` : tu m'as dit de taper `Ngie`, prononcé /nje/. Je confirme `N-G-I-E` ?
-- `ndjokele` : la correction validée plus tôt était `nzokele`, prononcé /ndjokele/.
-  Je garde `Nzokele` ?
-- `ntsha` / `ntshi` / `nthsi` restants : même traitement que `ts` (→ `ns`), ou ils
-  tombent aussi comme la ligne `th` ?
+| `ndje` | `Ngie` | prononcé /nje/ |
+| `ndjokele` | `Nzokele` | prononcé /ndjokele/ |
 
 ## Suite
 
-Dès que tu réponds à ces trois points, j'applique tout le tableau, puis je génère la
-version finale (Lari · français · anglais, ODT uniquement) avec l'audit HarfBuzz
-bloquant : zéro lettre latine résiduelle, ponctuation composée en Mandombe.
+Tout est arbitré. J'applique le tableau, puis je génère la version finale
+(Lari · français · anglais, ODT uniquement) avec l'audit HarfBuzz bloquant :
+zéro lettre latine résiduelle, ponctuation composée en Mandombe.
+
 
 ## Détail technique
 
