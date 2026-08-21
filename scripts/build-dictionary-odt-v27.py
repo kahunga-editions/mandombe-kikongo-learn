@@ -22,6 +22,7 @@ import zipfile
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from mandombe_typing import to_mandombe, shape_names  # noqa: E402
+from mandombe_graphies import map_text  # noqa: E402
 
 SRC = sys.argv[1] if len(sys.argv) > 1 else "/mnt/documents/dictionnaire-lari-v26.odt"
 DST = sys.argv[2] if len(sys.argv) > 2 else "/mnt/documents/dictionnaire-lari-v27.odt"
@@ -301,7 +302,8 @@ def main():
         e["forms"] = parse_forms(e["lari"])
         e["_norm"] = {strip_accents(f.lower().rstrip(".?!")) for f in e["forms"]}
     removed = set()
-    for i, a in enumerate(entries):
+    for _pass in range(3):
+      for i, a in enumerate(entries):
         if id(a) in removed:
             continue
         for b in entries[i + 1:]:
@@ -342,8 +344,8 @@ def main():
         sing = [cap(sing[0])] + [s.lower() for s in sing[1:]]
         plur = [p.lower() for p in plur]
         e["lari"] = join_forms(sing, plur)
-        mand_sing = [to_mandombe(s) for s in sing]
-        mand_plur = [to_mandombe(p) for p in plur]
+        mand_sing = [to_mandombe(map_text(s)) for s in sing]
+        mand_plur = [to_mandombe(map_text(p)) for p in plur]
         mand_sing = [m for m in mand_sing if m]
         mand_plur = [m for m in mand_plur if m]
         e["mand"] = join_forms(mand_sing, mand_plur)
