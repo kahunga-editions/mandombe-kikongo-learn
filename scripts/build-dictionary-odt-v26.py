@@ -95,6 +95,7 @@ WORD_MAP = {
     "b.awu": "bawu",
     "mzansi": "nzansi",
     "pfuka": "fuka",
+    "n'zansi": "nzansi",
 }
 
 # suites, appliquees dans cet ordre a l'interieur d'un mot
@@ -120,6 +121,26 @@ PRON_TRIGGER = re.compile(
     r"(nj|dz|ts|tsh|lw|fw|pf|mz|nf|ndj|th|n'|\u2019)", re.I)
 
 WORD_RE = re.compile(r"[A-Za-z\u00c0-\u017f'\u2019.]+")
+
+# --- reparations mecaniques du champ Mandombe (verifiees au shaping HarfBuzz)
+# 1. l'apostrophe de N'kento avait ete transformee en espace par un nettoyage
+#    precedent : « N kento » laissait un N latin isole.
+APOS_RE = re.compile(r"\b([NM]) (?=[bcdfgjklmnpqrstvwz])")
+# 2. cadratins et espaces insecables : la police ne les compose pas
+SPACE_RE = re.compile(r"[\u2000-\u200a\u202f\u00a0]")
+# 3. « luaz a » : espace parasite avant la derniere lettre d'un mot
+ORPHAN_RE = re.compile(r"(?<=[a-z])(?<! ) (?=[a-z]\b)")
+# 4. graphie « th » : coquille tranchee par l'auteur, le mot saute
+TH_WORD_RE = re.compile(r"\s*\bt[hH]s?\w*", re.I)
+
+
+def repair_mandombe(text: str) -> str:
+    out = SPACE_RE.sub(" ", text)
+    out = APOS_RE.sub(r"\1'", out)
+    out = TH_WORD_RE.sub("", out)
+    out = ORPHAN_RE.sub("", out)
+    out = re.sub(r"\s{2,}", " ", out).strip()
+    return out
 
 
 def map_word(w: str) -> str:
@@ -232,6 +253,10 @@ def process_para(style: str, body: str):
             continue
         raw = txt(val)
         fixed, changes = map_mandombe(raw)
+        repaired = repair_mandombe(fixed)
+        if repaired != fixed:
+            changes.append((fixed, repaired))
+            fixed = repaired
         if changes:
             new = new.replace(
                 '<text:span text:style-name="%s">%s</text:span>' % (st, val),
