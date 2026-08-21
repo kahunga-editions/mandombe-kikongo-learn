@@ -362,7 +362,10 @@ def main():
             if id(b) in removed or not a["_norm"] & b["_norm"]:
                 continue
             subset = b["_norm"] <= a["_norm"] or a["_norm"] <= b["_norm"]
-            if not subset:
+            same_sense = bool(
+                {_key(s, "fr") for s in a["fr"].split(";") if s.strip()}
+                & {_key(s, "fr") for s in b["fr"].split(";") if s.strip()})
+            if not (subset or same_sense):
                 continue
             ga = gloss_tokens(a["fr"]) | gloss_tokens(a["en"])
             gb = gloss_tokens(b["fr"]) | gloss_tokens(b["en"])
@@ -370,6 +373,7 @@ def main():
             if not (ga & gb or multi):
                 pending.add((a["lari"], b["lari"]))
                 continue
+
 
             # fusion dans a
             for f in b["forms"]:
