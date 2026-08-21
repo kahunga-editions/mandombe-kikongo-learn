@@ -5,6 +5,7 @@ entrees : 4502
 glose          Abe yandi ni na? : Qui est-il au juste? ; qui est-il vient-il au juste ? -> Qui est-il au juste?
 glose          Ama : maat ; ma chère -> Ma chère ; maat
 glose          Badi bari (l). : Égume). ; amarante. -> Amarante (un légume).
+gloses         69 gloses manquantes completees
 suppression    entree A ma supprimee (doublon)
 fusion         Abe yandi ni na? + Abe yandi ni na? · ambo yandi ni na? -> Abe yandi ni na?, ambo yandi ni na?
 fusion         BA + Ba · maba -> BA, maba
@@ -263,7 +264,6 @@ pluriel        Bavu | bibavu : herminette(s) | adze(s)
 pluriel        Belezi | babelezi : belge(s) | Belgian(s)
 pluriel        Bidiki | bibidiki : Brique(s) | Brick(s)
 pluriel        Bimbu | bibimbu : dette(s) | Debt(s)
-pluriel        Tshindongo | bindongo : mouton(s) | Sheep(s)
 pluriel        Hisi | bihisi : Os | Bone(s)
 pluriel        Kaka | bikaka : chouette(s) | Owl(s)
 pluriel        Kamu | makamu : fièvre(s) | fever(s)
@@ -276,11 +276,11 @@ pluriel        Kimvinzingila | bimvinzingila : sphère(s) | sphere ; realm
 pluriel        Kindiongoloko | bindiongoloko : tourbillon dans l'eau | whirlpool(s)
 pluriel        Kintangulu | bintangulu : tableau | board(s)
 pluriel        Kintinu | bintinu : royaume(s) | kingdom(s)
-pluriel        Kitemo, tshitemo | bitemo : Tontine(s) | 
+pluriel        Kitemo, tshitemo | bitemo : Tontine(s) | Tontine(s)
 pluriel        Koto | bikoto : bec(s) | Beak(s)
 pluriel        Kuele | makuele : Gilet(s) | Vest ; waistcoat
 pluriel        Lufulu | tufulu : socle(s) | pedestal ; base
-pluriel        Lukaka | tukaka : Pangolin(s) | 
+pluriel        Lukaka | tukaka : Pangolin(s) | Pangolin(s)
 pluriel        Lukandu | tukandu : arc-en-ciel(s) | rainbow(s)
 pluriel        Lukoka | tukoka : croûte(s) | crust ; scab
 pluriel        Lukombo | tukombo : balai(s) | broom(s)

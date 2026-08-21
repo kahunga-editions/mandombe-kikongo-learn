@@ -272,6 +272,23 @@ def main():
             if en_new:
                 e["en"] = en_new
 
+    # gloses manquantes completees par traduction stricte
+    gmap = {}
+    if os.path.exists("reports/glosses-v27.json"):
+        gmap = json.load(open("reports/glosses-v27.json"))
+    n_gl = 0
+    for e in entries:
+        g = gmap.get(e["lari"])
+        if not g:
+            continue
+        if g.get("en") and not e["en"].strip():
+            e["en"] = g["en"]
+            n_gl += 1
+        if g.get("fr") and not e["fr"].strip():
+            e["fr"] = g["fr"]
+            n_gl += 1
+    log("gloses", "%d gloses manquantes completees" % n_gl)
+
     entries = [e for e in entries if e["lari"] not in DROP_LARI]
     for it in list(items):
         if it[0] == "entry" and it[1]["lari"] in DROP_LARI:
