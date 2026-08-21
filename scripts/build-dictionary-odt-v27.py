@@ -124,40 +124,49 @@ def join_forms(sing, plur):
     return left + (" | " + ", ".join(plur) if plur else "")
 
 
-# -------------------------------------------------------- gloses au pluriel (s)
-# un seul mot, jamais un verbe, jamais une forme deja plurielle ou invariable
-VERBISH_FR = re.compile(r"(er|ir|re|oir)$", re.I)
-INVAR_FR = {"eux", "nous", "vous", "gens", "seins"}
-IRREG_EN = {"sheep", "fish", "men", "women", "people", "children", "feet",
-            "teeth", "mice", "geese", "deer", "man", "woman", "child", "foot",
-            "tooth", "mouse", "goose"}
+# ---------------------------------------------- gloses : doublons et pluriel (s)
 ONEWORD = re.compile(r"^[A-Za-zÀ-ÿ'-]{3,22}$")
 
 
-def _mark(gloss, lang):
-    out = []
-    segs = [s.strip() for s in gloss.split(";")]
-    low = {s.lower().rstrip(".") for s in segs}
+def _key(seg):
+    k = strip_accents(seg.strip().lower().rstrip(".")).replace("(s)", "")
+    if k.endswith("s") and len(k) > 4:
+        k = k[:-1]
+    return k
+
+
+def dedupe(gloss):
+    """Un sens n'apparait qu'une fois. Le doublet sing/pluriel devient x(s)."""
+    segs = [s.strip() for s in gloss.split(";") if s.strip()]
+    order, keep = [], {}
     for seg in segs:
-        w = seg.rstrip(".")
-        ok = (w and ONEWORD.match(w) and "(s)" not in w
-              and not w.lower().endswith(("s", "x", "z")))
-        if ok and lang == "fr":
-            ok = (not VERBISH_FR.search(w) and w.lower() not in INVAR_FR
-                  and (w.lower() + "s") not in low)
-        if ok and lang == "en":
-            ok = (w.lower() not in IRREG_EN and not w.lower().endswith("y")
-                  and (w.lower() + "s") not in low)
-        out.append(w + "(s)" + seg[len(w):] if ok else seg)
-    return " ; ".join(s for s in out if s)
+        k = _key(seg)
+        if k not in keep:
+            keep[k] = seg
+            order.append(k)
+        else:
+            old = keep[k]
+            # doublet singulier / pluriel atteste dans l'entree : on marque (s)
+            if _key(old) == k and old.lower() != seg.lower():
+                base = old.rstrip(".")
+                if "(s)" not in base and ONEWORD.match(base):
+                    keep[k] = base + "(s)" + old[len(base):]
+            if len(seg) > len(keep[k]) and "(s)" in keep[k] is False:
+                keep[k] = seg
+    return " ; ".join(keep[k] for k in order)
 
 
-def mark_plural_fr(gloss):
-    return _mark(gloss, "fr")
+def mark_single(gloss):
+    """Glose d'un seul mot pour une entree qui porte un pluriel : mur -> mur(s)."""
+    segs = [s.strip() for s in gloss.split(";") if s.strip()]
+    if len(segs) != 1:
+        return gloss
+    w = segs[0].rstrip(".")
+    if (ONEWORD.match(w) and "(s)" not in w
+            and not w.lower().endswith(("s", "x", "z"))):
+        return w + "(s)" + segs[0][len(w):]
+    return gloss
 
-
-def mark_plural_en(gloss):
-    return _mark(gloss, "en")
 
 
 
