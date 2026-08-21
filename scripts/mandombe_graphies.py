@@ -30,11 +30,11 @@ WORD_MAP = {
 SEQ_RULES = [
     (r"ntsh", "nk"),
     (r"nthsi", "nki"),
-    (r"thsi", "nki"),
     (r"nts(?!h)", "ns"),
-    (r"ndj", "ndz"),
+    (r"ndj", "nd\u0001"),      # protege le z de ndz avant la regle dz -> dj
     (r"nj", "nz"),
     (r"dz", "dj"),
+    (r"\u0001", "z"),
     (r"(?<!n)ts(?!h)", "ns"),
     (r"lw", "lu"),
     (r"fw", "fu"),
@@ -49,6 +49,10 @@ WORD_RE = re.compile(r"[A-Za-z\u00c0-\u017f'\u2019.]+")
 
 
 def map_word(w: str) -> str:
+    core_w = w.strip(".,;:!?")
+    tail = w[len(core_w):] if core_w else ""
+    if core_w != w:
+        return map_word(core_w) + tail
     low = w.lower()
     if low in WORD_MAP:
         out = WORD_MAP[low]
