@@ -129,8 +129,11 @@ def join_forms(sing, plur):
 ONEWORD = re.compile(r"^[A-Za-zÀ-ÿ'-]{3,22}$")
 
 
-def _key(seg):
-    k = strip_accents(seg.strip().lower().rstrip(".")).replace("(s)", "")
+def _key(seg, lang="fr"):
+    k = strip_accents(seg.strip().lower().rstrip("."))
+    if lang == "en":
+        k = " ".join(IRREG_PAIRS.get(w, w) for w in k.split())
+        k = k.replace("man/men", "man").replace("man men", "man").replace("(s)", "")
     if k.endswith("s") and len(k) > 4:
         k = k[:-1]
     return k
@@ -151,19 +154,28 @@ def _pluralizable(w, lang):
                 and not (SKIP_FR if lang == "fr" else SKIP_EN).search(w))
 
 
+IRREG_PAIRS = {"men": "man", "women": "woman", "children": "child",
+               "feet": "foot", "teeth": "tooth", "wives": "wife"}
+
+
 def dedupe(gloss, lang="fr"):
     """Un sens n'apparait qu'une fois. Le doublet sing/pluriel devient x(s)."""
     segs = [s.strip() for s in gloss.split(";") if s.strip()]
     order, keep = [], {}
     for seg in segs:
-        k = _key(seg)
+        k = _key(seg, lang)
         if k not in keep:
             keep[k] = seg
             order.append(k)
         else:
             old = keep[k]
             # doublet singulier / pluriel atteste dans l'entree : on marque (s)
-            if _key(old) == k and old.lower() != seg.lower():
+            if lang == "en" and {old.lower().rstrip("."), seg.lower().rstrip(".")} & set(IRREG_PAIRS):
+                sing = IRREG_PAIRS.get(seg.lower().rstrip("."), seg.lower().rstrip("."))
+                plur = [w for w, v in IRREG_PAIRS.items() if v == sing]
+                keep[k] = "%s/%s" % (sing, plur[0]) if plur else sing
+                continue
+            if _key(old, lang) == k and old.lower() != seg.lower():
                 short = min([old, seg], key=len)
                 base = short.rstrip(".")
                 if _pluralizable(base, lang):
@@ -295,6 +307,14 @@ def main():
         if it[0] == "entry" and it[1]["lari"] in DROP_LARI:
             items.remove(it)
             log("suppression", "entree %s supprimee (doublon)" % it[1]["lari"])
+
+    # coquilles de saisie du champ Lari (arbitrages deja rendus par l'auteur)
+    for e in entries:
+        fixed = re.sub(r"([Tt])hs", r"\1sh", e["lari"])
+        fixed = re.sub(r"\b[MmNn][' \u2019]?[Ss]amu\b", "N'samu", fixed)
+        if fixed != e["lari"]:
+            log("coquille", "%s -> %s" % (e["lari"], fixed))
+            e["lari"] = fixed
 
     # ---------------- 4. fusion des doublons
     by_key = {}

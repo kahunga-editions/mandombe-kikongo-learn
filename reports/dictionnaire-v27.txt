@@ -7,6 +7,17 @@ glose          Ama : maat ; ma chère -> Ma chère ; maat
 glose          Badi bari (l). : Égume). ; amarante. -> Amarante (un légume).
 gloses         69 gloses manquantes completees
 suppression    entree A ma supprimee (doublon)
+coquille       Kala nsamu -> Kala N'samu
+coquille       Kilo · thsilo · bilo -> Kilo · tshilo · bilo
+coquille       Kilongisi · thsilongisi · bilongisi -> Kilongisi · tshilongisi · bilongisi
+coquille       Mbua ka tiamukini kulu mu n'samu ntela. -> Mbua ka tiamukini kulu mu N'samu ntela.
+coquille       Muna muntu na m'samu miandi. -> Muna muntu na N'samu miandi.
+coquille       Nki · nthsi -> Nki · ntshi
+coquille       Nsamu -> N'samu
+coquille       Nsamu wa nuikila. -> N'samu wa nuikila.
+coquille       Ta nsamu -> Ta N'samu
+coquille       Yaka nsamu -> Yaka N'samu
+coquille       Yula n'samu -> Yula N'samu
 fusion         Abe yandi ni na? + Abe yandi ni na? · ambo yandi ni na? -> Abe yandi ni na?, ambo yandi ni na?
 fusion         BA + Ba · maba -> BA, maba
 fusion         Babakala + Bakala · babakala -> Babakala, Bakala
@@ -108,7 +119,7 @@ fusion         Kibakala + Kibakala · tshibakala -> Kibakala, tshibakala
 fusion ?       Kiese kie naku. / Mbote ! mu kiese wena? · kiese kie naku? : formes communes mais sens disjoints
 fusion         Kikuku + Kikuku · bikuku -> Kikuku, bikuku
 fusion         Kilenga + Kilenga · tshilenga · bilenga -> Kilenga, tshilenga, bilenga
-fusion         Kilo + Kilo · thsilo · bilo -> Kilo, thsilo, bilo
+fusion         Kilo + Kilo · tshilo · bilo -> Kilo, tshilo, bilo
 fusion         Kisalu + Kisalu · tshisalu · salu · bisalu -> Kisalu, tshisalu, salu, bisalu
 fusion         Kisalu + Salu -> Kisalu, tshisalu, salu, bisalu
 fusion         Kisama + Tshisama · kisama · sama · bisama -> Kisama, Tshisama, sama, bisama
@@ -407,7 +418,7 @@ pluriel        Kaka | bikaka : chouette(s) | Owl(s)
 pluriel        Kamu | makamu : fièvre(s) | fever(s)
 pluriel        Kidukia | bidukia : tourterelle(s) | turtledove(s)
 pluriel        Kihota | bihota : conjonctivite(s) | conjunctivitis
-pluriel        Kilo, thsilo | bilo : groupement(s) | group ; gathering
+pluriel        Kilo, tshilo | bilo : groupement(s) | group ; gathering
 pluriel        Kilue | bilue : poterie(s) | Pottery
 pluriel        Kimfinia | bimfinia : pincement(s) | pinch
 pluriel        Kimvinzingila | bimvinzingila : sphère(s) | sphere ; realm
