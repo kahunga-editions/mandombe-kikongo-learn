@@ -151,8 +151,6 @@ def dedupe(gloss):
                 base = old.rstrip(".")
                 if "(s)" not in base and ONEWORD.match(base):
                     keep[k] = base + "(s)" + old[len(base):]
-            if len(seg) > len(keep[k]) and "(s)" in keep[k] is False:
-                keep[k] = seg
     return " ; ".join(keep[k] for k in order)
 
 
@@ -317,8 +315,9 @@ def main():
         mand_sing = [m for m in mand_sing if m]
         mand_plur = [m for m in mand_plur if m]
         e["mand"] = join_forms(mand_sing, mand_plur)
+        e["fr"], e["en"] = dedupe(e["fr"]), dedupe(e["en"])
         if plur:
-            fr2, en2 = mark_plural_fr(e["fr"]), mark_plural_en(e["en"])
+            fr2, en2 = mark_single(e["fr"]), mark_single(e["en"])
             if fr2 != e["fr"] or en2 != e["en"]:
                 log("pluriel", "%s : %s | %s" % (e["lari"], fr2, en2))
             e["fr"], e["en"] = fr2, en2
