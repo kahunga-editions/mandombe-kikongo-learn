@@ -344,7 +344,12 @@ def main():
         e["forms"] = parse_forms(e["lari"])
         e["_norm"] = {strip_accents(f.lower().rstrip(".?!")) for f in e["forms"]}
     removed = set()
-    for _pass in range(3):
+    pending = set()
+    changed = True
+    n_pass = 0
+    while changed and n_pass < 12:
+      changed = False
+      n_pass += 1
       for i, a in enumerate(entries):
         if id(a) in removed:
             continue
@@ -358,8 +363,7 @@ def main():
             gb = gloss_tokens(b["fr"]) | gloss_tokens(b["en"])
             multi = len(a["_norm"]) > 1 and len(b["_norm"]) > 1
             if not (ga & gb or multi):
-                log("fusion ?", "%s / %s : formes communes mais sens disjoints"
-                    % (a["lari"], b["lari"]))
+                pending.add((a["lari"], b["lari"]))
                 continue
 
             # fusion dans a
@@ -374,8 +378,13 @@ def main():
                 if add:
                     a[dst] = (a[dst] + " ; " + " ; ".join(add)).strip(" ;")
             removed.add(id(b))
+            changed = True
             log("fusion", "%s + %s -> %s" % (a["lari"], b["lari"],
                                              ", ".join(a["forms"])))
+    log("fusion", "point fixe atteint en %d passes" % n_pass)
+    for x, y in sorted(pending):
+        log("fusion ?", "%s / %s : formes communes mais sens disjoints" % (x, y))
+
     items = [it for it in items
              if not (it[0] == "entry" and id(it[1]) in removed)]
     entries = [e for e in entries if id(e) not in removed]
