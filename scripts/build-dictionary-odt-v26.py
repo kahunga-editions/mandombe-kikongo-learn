@@ -98,20 +98,21 @@ WORD_MAP = {
 }
 
 # suites, appliquees dans cet ordre a l'interieur d'un mot
+# « tsh » se compose parfaitement : il est explicitement exclu des regles ts.
 SEQ_RULES = [
-    ("ntsh", "nk"),    # ntsha -> nka, ntshi -> nki
-    ("nthsi", "nki"),  # coquille de ntshi
-    ("nts", "ns"),     # ntsari -> nsari
-    ("ndj", "ndz"),    # mundjula -> mundzula, bendji -> bendzi
-    ("nj", "nz"),      # njila -> nzila
-    ("dz", "dj"),      # dzuna -> djuna
-    ("ts", "ns"),      # tseki -> nseki
-    ("lw", "lu"),
-    ("fw", "fu"),
-    ("nf", "mf"),      # makonfo -> makomfo, nfinini -> mfinini
-    ("pf", "f"),
-    ("mz", "nz"),
-    ("vv", "v"),
+    (r"ntsh", "nk"),       # ntsha -> nka, ntshi -> nki
+    (r"nthsi", "nki"),     # coquille de ntshi
+    (r"nts(?!h)", "ns"),   # ntsari -> nsari
+    (r"ndj", "ndz"),       # mundjula -> mundzula, bendji -> bendzi
+    (r"nj", "nz"),         # njila -> nzila
+    (r"dz", "dj"),         # dzuna -> djuna
+    (r"(?<!n)ts(?!h)", "ns"),  # tseki -> nseki
+    (r"lw", "lu"),
+    (r"fw", "fu"),
+    (r"nf", "mf"),         # makonfo -> makomfo, nfinini -> mfinini
+    (r"pf", "f"),
+    (r"mz", "nz"),
+    (r"vv", "v"),
 ]
 
 # sequences de la version precedente qui declenchent une note de prononciation
@@ -128,7 +129,7 @@ def map_word(w: str) -> str:
         return out if not w[:1].isupper() else out[0].upper() + out[1:]
     core = low
     for a, b in SEQ_RULES:
-        core = core.replace(a, b)
+        core = re.sub(a, b, core)
     if core == low:
         return w
     return core[0].upper() + core[1:] if w[:1].isupper() else core
