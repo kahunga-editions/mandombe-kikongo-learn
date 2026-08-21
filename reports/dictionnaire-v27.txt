@@ -1,6 +1,6 @@
 source : /mnt/documents/dictionnaire-lari-v26.odt
 sortie : /mnt/documents/dictionnaire-lari-v27.odt
-entrees : 4502
+entrees : 4479
 
 glose          Abe yandi ni na? : Qui est-il au juste? ; qui est-il vient-il au juste ? -> Qui est-il au juste?
 glose          Ama : maat ; ma chère -> Ma chère ; maat
@@ -258,6 +258,144 @@ fusion         Yelo + Yevo · yelo -> Yelo, Yevo
 fusion ?       Yuma / Yuma · mayuma : formes communes mais sens disjoints
 fusion         Zandu + Zandu · mazandu -> Zandu, mazandu
 fusion         Zanza + Zanza · mazanza -> Zanza, mazanza
+fusion ?       Zita / Zita · mazita : formes communes mais sens disjoints
+fusion         Babakala + Bakala -> Babakala, Bakala
+fusion ?       Baka / Baka · tshibaka · kibaka · bibaka : formes communes mais sens disjoints
+fusion ?       Bakama / Baku : formes communes mais sens disjoints
+fusion         Bakuluntu + Mukulu -> Bakuluntu, Mukulu, n'kuluntu, mukuluntu
+fusion         Bala + Muana -> Bala, Muana
+fusion ?       Bamika / Batamasa · namika · bamika · namatasa : formes communes mais sens disjoints
+fusion         Bantu + Muntu -> Bantu, Muntu
+fusion ?       Batamasa · namika · bamika · namatasa / Namika : formes communes mais sens disjoints
+fusion ?       Batila / Batila · vuaza · sangasa : formes communes mais sens disjoints
+fusion ?       Batila · vuaza · sangasa / Vuaza : formes communes mais sens disjoints
+fusion         Biamvu + Kiamvu -> Biamvu, Kiamvu
+fusion ?       Biba / Tshiba · biba : formes communes mais sens disjoints
+fusion         Bifulu + Kifulu -> Bifulu, Kifulu, tshifulu
+fusion ?       Bìkàká / Kaka · bikaka : formes communes mais sens disjoints
+fusion         Bima + Tshima -> Bima, Tshima
+fusion ?       Bingulu / Bingulu · bibingulu : formes communes mais sens disjoints
+fusion ?       Bisalu / Kisalu : formes communes mais sens disjoints
+fusion ?       Bishi / Musi : formes communes mais sens disjoints
+fusion         Bitunga + Kitunga -> Bitunga, Kitunga
+fusion         Bote + Mbote -> Bote, Mbote
+fusion ?       Buala · mala / Mala : formes communes mais sens disjoints
+fusion         Bulombi + Mpindu -> Bulombi, Mpindu
+fusion ?       Bungu / Bungu · mabungu : formes communes mais sens disjoints
+fusion         Buwa + Luwa -> Buwa, Luwa
+fusion ?       Diki · meki / Meki : formes communes mais sens disjoints
+fusion ?       Djoka · vikuna · yandula / Yandula : formes communes mais sens disjoints
+fusion ?       Fila / Nata : formes communes mais sens disjoints
+fusion ?       Funda / Funda · fundana : formes communes mais sens disjoints
+fusion ?       Fungu / Fungu · mafungu : formes communes mais sens disjoints
+fusion         Jika + Zika -> Jika, Zika
+fusion ?       Jiku / Jiku · majiku : formes communes mais sens disjoints
+fusion ?       Jima / Kanga : formes communes mais sens disjoints
+fusion ?       Ka nzololo a ko. / Ka nzololo a ko · ngo nguani. : formes communes mais sens disjoints
+fusion ?       Kaka / Kaka · bikaka : formes communes mais sens disjoints
+fusion         Kala + Yimina -> Kala, Yimina
+fusion ?       Kalu / Kalu · bikalu : formes communes mais sens disjoints
+fusion ?       Kiese kie naku. / Mbote ! mu kiese wena? · kiese kie naku? : formes communes mais sens disjoints
+fusion ?       Koka / Koka · makoka : formes communes mais sens disjoints
+fusion ?       Kola / Kola · sakalala : formes communes mais sens disjoints
+fusion ?       Koshi / Koshi · makoshi : formes communes mais sens disjoints
+fusion ?       Kuaka / Ngansua : formes communes mais sens disjoints
+fusion ?       Laki / Laki · malaki : formes communes mais sens disjoints
+fusion ?       Laki · malaki / Malaki : formes communes mais sens disjoints
+fusion ?       Lambalala / Yala : formes communes mais sens disjoints
+fusion ?       Lembe / Malembe : formes communes mais sens disjoints
+fusion         Luala + Luekesa -> Luala, Luekesa
+fusion ?       Luke / Luke · tuke : formes communes mais sens disjoints
+fusion ?       Lusampa · sampa / Sampa : formes communes mais sens disjoints
+fusion ?       Lusembo · masembo / Masembo : formes communes mais sens disjoints
+fusion ?       Luvu / Mvu : formes communes mais sens disjoints
+fusion ?       Lwonesa / Lwonesa! · bubote shiri · mia mbote yirikiri. : formes communes mais sens disjoints
+fusion ?       Muvu / Muvu : formes communes mais sens disjoints
+fusion ?       Mamba / Mamba · ntinta : formes communes mais sens disjoints
+fusion         Mavunga + Vunga -> Mavunga, Vunga
+fusion ?       Mazita / Zita · mazita : formes communes mais sens disjoints
+fusion         Milele + Mulele -> Milele, Mulele
+fusion         Milumba + Mulumba -> Milumba, Mulumba
+fusion         Mindele + Mundele -> Mindele, Mundele
+fusion         Mitima + Mutima -> Mitima, Mutima
+fusion         Mpashi + Mpasi -> Mpashi, Mpasi
+fusion         Mpomo + Nana -> Mpomo, Nana
+fusion         Mpuana + Ndiku -> Mpuana, Ndiku, nduku, nguala
+fusion ?       Mu nkia bungu. / Nki · mu nki · mu nkia bungu. : formes communes mais sens disjoints
+fusion ?       Muti / Muti · miti : formes communes mais sens disjoints
+fusion ?       Muti / Muti · nti : formes communes mais sens disjoints
+fusion ?       Muti / N'ti · muti : formes communes mais sens disjoints
+fusion         Muti · miti + N'ti · muti -> Muti, miti, N'ti
+fusion ?       Na / Nani? · na? : formes communes mais sens disjoints
+fusion ?       Nani? / Nani? · na? : formes communes mais sens disjoints
+fusion ?       Ni ta mona. / Ni ta mona. · mbo ni mona. : formes communes mais sens disjoints
+fusion ?       Nkaji / Nkaji · n'kento wa kuela. : formes communes mais sens disjoints
+fusion ?       Nkama / Nkama · mikama : formes communes mais sens disjoints
+fusion ?       Nlongi / Nlongi · milongi : formes communes mais sens disjoints
+fusion ?       Nsa / Nsa · musa : formes communes mais sens disjoints
+fusion ?       Nzololo na suba. / Nzololo na suba. · suba nzololo suba. : formes communes mais sens disjoints
+fusion ?       Pamu / Pamu · bipamu : formes communes mais sens disjoints
+fusion ?       Saku / Saku · masaku : formes communes mais sens disjoints
+fusion ?       Sala / Sala · masala : formes communes mais sens disjoints
+fusion ?       Sekola / Tombola · sekola : formes communes mais sens disjoints
+fusion ?       Yuma / Yuma · mayuma : formes communes mais sens disjoints
+fusion ?       Zita / Zita · mazita : formes communes mais sens disjoints
+fusion ?       Baka / Baka · tshibaka · kibaka · bibaka : formes communes mais sens disjoints
+fusion ?       Bakama / Baku : formes communes mais sens disjoints
+fusion ?       Bamika / Batamasa · namika · bamika · namatasa : formes communes mais sens disjoints
+fusion ?       Batamasa · namika · bamika · namatasa / Namika : formes communes mais sens disjoints
+fusion ?       Batila / Batila · vuaza · sangasa : formes communes mais sens disjoints
+fusion ?       Batila · vuaza · sangasa / Vuaza : formes communes mais sens disjoints
+fusion ?       Biba / Tshiba · biba : formes communes mais sens disjoints
+fusion ?       Bìkàká / Kaka · bikaka : formes communes mais sens disjoints
+fusion ?       Bingulu / Bingulu · bibingulu : formes communes mais sens disjoints
+fusion ?       Bisalu / Kisalu : formes communes mais sens disjoints
+fusion ?       Bishi / Musi : formes communes mais sens disjoints
+fusion ?       Buala · mala / Mala : formes communes mais sens disjoints
+fusion ?       Bungu / Bungu · mabungu : formes communes mais sens disjoints
+fusion ?       Diki · meki / Meki : formes communes mais sens disjoints
+fusion ?       Djoka · vikuna · yandula / Yandula : formes communes mais sens disjoints
+fusion ?       Fila / Nata : formes communes mais sens disjoints
+fusion ?       Funda / Funda · fundana : formes communes mais sens disjoints
+fusion ?       Fungu / Fungu · mafungu : formes communes mais sens disjoints
+fusion ?       Jiku / Jiku · majiku : formes communes mais sens disjoints
+fusion ?       Jima / Kanga : formes communes mais sens disjoints
+fusion ?       Ka nzololo a ko. / Ka nzololo a ko · ngo nguani. : formes communes mais sens disjoints
+fusion ?       Kaka / Kaka · bikaka : formes communes mais sens disjoints
+fusion ?       Kalu / Kalu · bikalu : formes communes mais sens disjoints
+fusion ?       Kiese kie naku. / Mbote ! mu kiese wena? · kiese kie naku? : formes communes mais sens disjoints
+fusion ?       Koka / Koka · makoka : formes communes mais sens disjoints
+fusion ?       Kola / Kola · sakalala : formes communes mais sens disjoints
+fusion ?       Koshi / Koshi · makoshi : formes communes mais sens disjoints
+fusion ?       Kuaka / Ngansua : formes communes mais sens disjoints
+fusion ?       Laki / Laki · malaki : formes communes mais sens disjoints
+fusion ?       Laki · malaki / Malaki : formes communes mais sens disjoints
+fusion ?       Lambalala / Yala : formes communes mais sens disjoints
+fusion ?       Lembe / Malembe : formes communes mais sens disjoints
+fusion ?       Luke / Luke · tuke : formes communes mais sens disjoints
+fusion ?       Lusampa · sampa / Sampa : formes communes mais sens disjoints
+fusion ?       Lusembo · masembo / Masembo : formes communes mais sens disjoints
+fusion ?       Luvu / Mvu : formes communes mais sens disjoints
+fusion ?       Lwonesa / Lwonesa! · bubote shiri · mia mbote yirikiri. : formes communes mais sens disjoints
+fusion ?       Muvu / Muvu : formes communes mais sens disjoints
+fusion ?       Mamba / Mamba · ntinta : formes communes mais sens disjoints
+fusion ?       Mazita / Zita · mazita : formes communes mais sens disjoints
+fusion ?       Mu nkia bungu. / Nki · mu nki · mu nkia bungu. : formes communes mais sens disjoints
+fusion ?       Muti / Muti · miti : formes communes mais sens disjoints
+fusion ?       Muti / Muti · nti : formes communes mais sens disjoints
+fusion ?       Na / Nani? · na? : formes communes mais sens disjoints
+fusion ?       Nani? / Nani? · na? : formes communes mais sens disjoints
+fusion ?       Ni ta mona. / Ni ta mona. · mbo ni mona. : formes communes mais sens disjoints
+fusion ?       Nkaji / Nkaji · n'kento wa kuela. : formes communes mais sens disjoints
+fusion ?       Nkama / Nkama · mikama : formes communes mais sens disjoints
+fusion ?       Nlongi / Nlongi · milongi : formes communes mais sens disjoints
+fusion ?       Nsa / Nsa · musa : formes communes mais sens disjoints
+fusion ?       Nzololo na suba. / Nzololo na suba. · suba nzololo suba. : formes communes mais sens disjoints
+fusion ?       Pamu / Pamu · bipamu : formes communes mais sens disjoints
+fusion ?       Saku / Saku · masaku : formes communes mais sens disjoints
+fusion ?       Sala / Sala · masala : formes communes mais sens disjoints
+fusion ?       Sekola / Tombola · sekola : formes communes mais sens disjoints
+fusion ?       Yuma / Yuma · mayuma : formes communes mais sens disjoints
 fusion ?       Zita / Zita · mazita : formes communes mais sens disjoints
 pluriel        Baka, tshibaka, kibaka | bibaka : mur(s) | wall(s)
 pluriel        Bavu | bibavu : herminette(s) | adze(s)
