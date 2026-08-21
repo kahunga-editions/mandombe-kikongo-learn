@@ -133,8 +133,8 @@ def _key(seg, lang="fr"):
     k = strip_accents(seg.strip().lower().rstrip(".")).replace("(s)", "")
     k = re.sub(r"\s+", " ", k).strip()
     if lang == "en":
-        k = " ".join(IRREG_PAIRS.get(w, w) for w in k.split())
-        k = re.sub(r"\b(\w+)( \1)+\b", r"\1", k.replace("/", " "))
+        k = " ".join(IRREG_PAIRS.get(w, w) for w in k.replace("/", " ").split())
+        k = re.sub(r"\b(\w+)( \1)+\b", r"\1", k)
     if k.endswith("s") and len(k) > 4:
         k = k[:-1]
     return k
@@ -157,7 +157,8 @@ def _pluralizable(w, lang):
 
 
 IRREG_PAIRS = {"men": "man", "women": "woman", "children": "child",
-               "feet": "foot", "teeth": "tooth", "wives": "wife"}
+               "feet": "foot", "teeth": "tooth", "wives": "wife",
+               "people": "person", "persons": "person"}
 
 
 PAIR_EN = re.compile(
