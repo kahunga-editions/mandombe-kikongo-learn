@@ -130,13 +130,15 @@ ONEWORD = re.compile(r"^[A-Za-zÀ-ÿ'-]{3,22}$")
 
 
 def _key(seg, lang="fr"):
-    k = strip_accents(seg.strip().lower().rstrip("."))
+    k = strip_accents(seg.strip().lower().rstrip(".")).replace("(s)", "")
+    k = re.sub(r"\s+", " ", k).strip()
     if lang == "en":
         k = " ".join(IRREG_PAIRS.get(w, w) for w in k.split())
-        k = k.replace("man/men", "man").replace("man men", "man").replace("(s)", "")
+        k = re.sub(r"\b(\w+)( \1)+\b", r"\1", k.replace("/", " "))
     if k.endswith("s") and len(k) > 4:
         k = k[:-1]
     return k
+
 
 
 SKIP_FR = re.compile(r"(eau|al|s|x|z)$", re.I)
