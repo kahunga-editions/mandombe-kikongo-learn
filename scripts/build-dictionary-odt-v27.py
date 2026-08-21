@@ -139,7 +139,13 @@ SKIP_FR = re.compile(r"(eau|al|s|x|z)$", re.I)
 SKIP_EN = re.compile(r"(y|ch|sh|o|s|x|z)$", re.I)
 
 
+IRREG_EN = {"sheep", "fish", "deer", "men", "women", "people", "children",
+            "feet", "teeth", "man", "woman", "child", "foot", "tooth"}
+
+
 def _pluralizable(w, lang):
+    if lang == "en" and w.lower() in IRREG_EN:
+        return False
     return bool(ONEWORD.match(w) and "(s)" not in w
                 and not (SKIP_FR if lang == "fr" else SKIP_EN).search(w))
 
