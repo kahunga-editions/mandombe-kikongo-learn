@@ -1,6 +1,6 @@
 source : /mnt/documents/dictionnaire-lari-v26.odt
 sortie : /mnt/documents/dictionnaire-lari-v28.odt
-entrees : 4460
+entrees : 4446
 
 glose          Abe yandi ni na? : Qui est-il au juste? ; qui est-il vient-il au juste ? -> Qui est-il au juste?
 glose          Ama : maat ; ma chère -> Ma chère ; maat
@@ -52,14 +52,17 @@ fusion         Bima + Tshima · bima -> Bima, Tshima
 fusion         Bindongo + Tshindongo · bindongo -> Bindongo, Tshindongo
 fusion         Binkuti + Tshinkuti, kinkuti · binkuti. -> Binkuti, Tshinkuti, kinkuti
 fusion         Bintu + Kintu · bintu -> Bintu, Kintu
+fusion         Bintu + Tshintu · bintu -> Bintu, Kintu, Tshintu
 fusion         Binzu + Tshinzu, kinzu · binzu. -> Binzu, Tshinzu, kinzu
 fusion         Bishi + Musi · muishi · bis · bishi -> Bishi, Musi, muishi, bis
 fusion         Bisinzila + Sinzila · bisinzila -> Bisinzila, Sinzila
 fusion         Bitini + Tshitini, kitini · bitini. -> Bitini, Tshitini, kitini
 fusion         Bitunga + Kitunga · bitunga -> Bitunga, Kitunga
+fusion         Bitunga + Tshitunga · bitunga -> Bitunga, Kitunga, Tshitunga
 fusion         Bote + Mbote · bote -> Bote, Mbote
 fusion         Buatu + Buatu · matu -> Buatu, matu
 fusion         Buatu + Matu -> Buatu, matu
+fusion         Bubu · tshibubu · kibubu + Tshibubu, kibubu · bibubu. -> Bubu, tshibubu, kibubu, bibubu.
 fusion         Buki · mbuki + Mbuki -> Buki, mbuki
 fusion         Buko + Buko · mako -> Buko, mako
 fusion         Buku + Buku · mabuku -> Buku, mabuku
@@ -80,7 +83,8 @@ fusion         Dinkondi · mankondi + Mankondi -> Dinkondi, mankondi
 fusion         Dinu + Dinu · meno -> Dinu, meno
 fusion         Dinu + Meno -> Dinu, meno
 fusion         Djoka + Djoka · bata -> Djoka, bata
-fusion         Djoka · vikuna · yandula + Vikuna -> Djoka, vikuna, yandula
+fusion         Djoka + Djoka · vikuna · yandula -> Djoka, bata, vikuna, yandula
+fusion         Djoka + Vikuna -> Djoka, bata, vikuna, yandula
 fusion         Fila + Fila · nata -> Fila, nata
 fusion         Fua + Fua · mafua -> Fua, mafua
 fusion         Fua + Mafua -> Fua, mafua
@@ -100,7 +104,9 @@ fusion         Kamu + Kamu · makamu -> Kamu, makamu
 fusion         Kanda + Kanda · makanda -> Kanda, makanda
 fusion         Kibakala + Kibakala · tshibakala -> Kibakala, tshibakala
 fusion         Kifuani + Kifuani, tshifuani · bifuani. -> Kifuani, tshifuani, bifuani.
+fusion         Kikoba · bikoba + Tshikoba · bikoba -> Kikoba, bikoba, Tshikoba
 fusion         Kikuku + Kikuku · bikuku -> Kikuku, bikuku
+fusion         Kikuku + Tisama · kikuku -> Kikuku, bikuku, Tisama
 fusion         Kikulu + Kikulu, tshikulu -> Kikulu, tshikulu
 fusion         Kilenga + Kilenga · tshilenga · bilenga -> Kilenga, tshilenga, bilenga
 fusion         Kilo + Kilo · tshilo · bilo -> Kilo, tshilo, bilo
@@ -165,6 +171,7 @@ fusion         Lumbuetete · mbuetete + Mbuetete -> Lumbuetete, mbuetete
 fusion         Lumbumbu · mambumbu + Mambumbu -> Lumbumbu, mambumbu
 fusion         Lumfikini + Lumfikini · tumfikini -> Lumfikini, tumfikini
 fusion         Lumfimfini · mfimfini + Mfimfini -> Lumfimfini, mfimfini
+fusion         Lundala · mandala + Ndala · mandala -> Lundala, mandala, Ndala
 fusion         Lundindi + Lundindi · tundindi -> Lundindi, tundindi
 fusion         Lusafu · nsafu + Nsafu -> Lusafu, nsafu
 fusion         Lusaki · nsaki + Nsaki -> Lusaki, nsaki
@@ -179,6 +186,7 @@ fusion         Mavunga + Vunga · mavunga -> Mavunga, Vunga
 fusion         Mbevo + Mbevo · belo -> Mbevo, belo
 fusion         Mbuata + Mbuata · mbuata -> Mbuata
 fusion         Milele + Mulele · milele -> Milele, Mulele
+fusion         Milele + Nlele · milele -> Milele, Mulele, Nlele
 fusion         Milembo + Mulembo · milembo -> Milembo, Mulembo
 fusion         Milembo + Nlembo, mulembo · milembo. -> Milembo, Mulembo, Nlembo
 fusion         Milumba + Mulumba · milumba -> Milumba, Mulumba
@@ -193,29 +201,31 @@ fusion         Mpomo + Nana · mpomo -> Mpomo, Nana
 fusion         Mpuana + Ndiku · nduku · mpuana · nguala -> Mpuana, Ndiku, nduku, nguala
 fusion         Mpuana + Nduku -> Mpuana, Ndiku, nduku, nguala
 fusion         Mpuana + Nguala -> Mpuana, Ndiku, nduku, nguala
+fusion         Mu nki · mu ntshi. + Nki · mu nki · mu nkia bungu. -> Mu nki, mu ntshi., Nki, mu nkia bungu.
 fusion         Mua nto + Mua nto · muila. -> Mua nto, muila.
 fusion         Muela + Muela · miela -> Muela, miela
 fusion         Muisi + Muisi · muishi -> Muisi, muishi
+fusion         Mukokoti · ba dia kokoti. + Mukokoti · mikokoti -> Mukokoti, ba dia kokoti., mikokoti
+fusion         Muleke · baleke + Nleke · baleke -> Muleke, baleke, Nleke
 fusion         Muleke · baleke + Nleke, muleke · baleke. -> Muleke, baleke, Nleke
 fusion         Munganga + Munganga · tunganga -> Munganga, tunganga
 fusion         Munkiobo + Munkiobo · mungunda -> Munkiobo, mungunda
 fusion         Munturia + Munturia · minturia -> Munturia, minturia
 fusion         Mushikimbila + Mushikimbila · mishikimbila -> Mushikimbila, mishikimbila
-fusion         Muti · miti + N'ti · muti · miti -> Muti, miti, N'ti
+fusion         Muti · miti + Muti · nti -> Muti, miti, nti
+fusion         Muti · miti + N'ti · muti -> Muti, miti, nti, N'ti
+fusion         Muti · miti + N'ti · muti · miti -> Muti, miti, nti, N'ti
 fusion         Nani? + Nani, nkia, nki. -> Nani?, nkia, nki.
 fusion         Nani? + Nkia -> Nani?, nkia, nki.
-fusion         Ndala + Ndala · mandala -> Ndala, mandala
 fusion         Ngansua + Ngansua · kuaka -> Ngansua, kuaka
 fusion         Nkaka + Nkaka · bankaka -> Nkaka, bankaka
 fusion         Nkeshi + Nkesi · nkeshi -> Nkeshi, Nkesi
 fusion         Nki + Nki? · a nsi? -> Nki, a nsi?
-fusion         Nlele + Nlele · milele -> Nlele, milele
 fusion         Nuni + Nuni · banuni -> Nuni, banuni
 fusion         Nzari + Nzari · nzadi -> Nzari, nzadi
 fusion         Ta + Ta · tela -> Ta, tela
 fusion         Ta + Tela -> Ta, tela
 fusion         Ta zonzeno + Ta zonzeno! · tua zonzeno. -> Ta zonzeno, tua zonzeno.
-fusion         Tisama + Tisama · kikuku -> Tisama, kikuku
 fusion         Tshitari + Tshitari · bitari -> Tshitari, bitari
 fusion         Tualakasa + Tualakasa · tualakana -> Tualakasa, tualakana
 fusion         Tuema + Tuema · bebela -> Tuema, bebela
@@ -235,24 +245,28 @@ fusion         Bifulu + Kifulu -> Bifulu, Kifulu, tshifulu
 fusion         Bima + Tshima -> Bima, Tshima
 fusion         Binkuti + Tshinkuti -> Binkuti, Tshinkuti, kinkuti
 fusion         Binzu + Kinzu -> Binzu, Tshinzu, kinzu
-fusion         Bitunga + Kitunga -> Bitunga, Kitunga
+fusion         Bitunga + Kitunga -> Bitunga, Kitunga, Tshitunga
 fusion         Bote + Mbote -> Bote, Mbote
 fusion         Bulombi + Mpindu -> Bulombi, Mpindu
 fusion         Buwa + Luwa -> Buwa, Luwa
+fusion         Dinu + Me · meno -> Dinu, meno, Me
 fusion         Jika + Zika -> Jika, Zika
 fusion         Kala + Yimina -> Kala, Yimina
+fusion         Kikuku + Tisama -> Kikuku, bikuku, Tisama
 fusion         Kina + Tshina · bina -> Kina, Tshina, bina.
+fusion         Lapi + Lusonso -> Lapi, nsonokono, nsonso, Lusonso
 fusion         Luala + Luekesa -> Luala, Luekesa
+fusion         Lundala · mandala + Ndala -> Lundala, mandala, Ndala
 fusion         Mavunga + Vunga -> Mavunga, Vunga
-fusion         Milele + Mulele -> Milele, Mulele
+fusion         Milele + Mulele -> Milele, Mulele, Nlele
+fusion         Milele + Nlele -> Milele, Mulele, Nlele
 fusion         Milumba + Mulumba -> Milumba, Mulumba
 fusion         Mindele + Mundele -> Mindele, Mundele
 fusion         Mitima + Mutima -> Mitima, Mutima, ntima
 fusion         Mpashi + Mpasi -> Mpashi, Mpasi
 fusion         Mpomo + Nana -> Mpomo, Nana
 fusion         Mpuana + Ndiku -> Mpuana, Ndiku, nduku, nguala
-fusion         Muleke · baleke + Nleke · baleke -> Muleke, baleke, Nleke
-fusion         Muti · miti + N'ti · muti -> Muti, miti, N'ti
+fusion         Nani? + Nani? · na? -> Nani?, nkia, nki., na?
 fusion         point fixe atteint en 3 passes
 fusion ?       Baka / Baka · tshibaka · kibaka · bibaka : formes communes mais sens disjoints
 fusion ?       Baka / Kibaka, tshibaka, baka. : formes communes mais sens disjoints
@@ -272,7 +286,7 @@ fusion ?       Bula / Kibula, tshibula, bula · bibula. : formes communes mais s
 fusion ?       Bungu / Bungu · mabungu : formes communes mais sens disjoints
 fusion ?       Bìkàká / Kaka · bikaka : formes communes mais sens disjoints
 fusion ?       Diki · meki / Meki : formes communes mais sens disjoints
-fusion ?       Djoka · vikuna · yandula / Yandula : formes communes mais sens disjoints
+fusion ?       Djoka / Yandula : formes communes mais sens disjoints
 fusion ?       Fila / Nata : formes communes mais sens disjoints
 fusion ?       Funda / Funda · fundana : formes communes mais sens disjoints
 fusion ?       Fungu / Fungu · mafungu : formes communes mais sens disjoints
@@ -303,12 +317,13 @@ fusion ?       Mamba / Mamba · ntinta : formes communes mais sens disjoints
 fusion ?       Mana / Tala, mana : formes communes mais sens disjoints
 fusion ?       Mazita / Zita · mazita : formes communes mais sens disjoints
 fusion ?       Mfumba / Mfumba , mufumba · mifumba. : formes communes mais sens disjoints
-fusion ?       Mu nkia bungu. / Nki · mu nki · mu nkia bungu. : formes communes mais sens disjoints
+fusion ?       Mu nki · mu ntshi. / Mu nkia bungu. : formes communes mais sens disjoints
 fusion ?       Muti / Muti · miti : formes communes mais sens disjoints
 fusion ?       Muti / Muti · nti : formes communes mais sens disjoints
 fusion ?       Muti / N'ti · muti : formes communes mais sens disjoints
 fusion ?       Muti / N'ti · muti · miti : formes communes mais sens disjoints
 fusion ?       Muvu / Muvu : formes communes mais sens disjoints
+fusion ?       Na / Nani? : formes communes mais sens disjoints
 fusion ?       Na / Nani? · na? : formes communes mais sens disjoints
 fusion ?       Nani? / Nani? · na? : formes communes mais sens disjoints
 fusion ?       Nani? / Nki : formes communes mais sens disjoints
