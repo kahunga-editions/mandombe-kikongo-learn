@@ -22,6 +22,8 @@ Si un rendu semble mal passé, la cause est une faute de saisie dans le corpus o
 - `y` après consonne → `i` (`fyu` → `fiu`, `kya` → `kia`) ; le `y` initial est conservé (`ya`, `yandi`)
 - noms propres avec majuscule : `Paul` → `Paulo`
 - ponctuation : elle fait partie du bloc Mandombe et se compose avec la police Mandombe, jamais en latin noir
+- cartes d'illustration de mots : uniquement le mot en Mandombe et sa translittération, aucune traduction
+
 
 ## Interdits explicites
 
