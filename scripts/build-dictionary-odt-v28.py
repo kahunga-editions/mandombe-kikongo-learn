@@ -45,6 +45,15 @@ GLOSS_FIX = {
 # entrees supprimees (doublons remplaces par une entree unique)
 DROP_LARI = {"A ma"}
 
+# notes de prononciation ajoutees (arbitrages de l'auteur), cle = 1re forme Lari
+NEW_NOTES = {
+    "mundzula": "Prononc\u00e9 /mundzula/ ; pluriel /mindzula/ \u00b7 "
+                "EN \u2014 Pronounced /mundzula/ ; plural /mindzula/.",
+}
+
+NOTE_PARA_NEW = ('<text:p text:style-name="EntryNote">'
+                 '<text:span text:style-name="NoteT">%s</text:span></text:p>')
+
 REPORT_LINES = []
 
 
@@ -434,6 +443,12 @@ def main():
                     '</text:span><text:span text:style-name="MandT">')
             out.append(ENTRY_TPL % (mand, esc(payload["lari"]),
                                     esc(payload["fr"]), esc(payload["en"])))
+            first = strip_accents(
+                (payload["forms"][0] if payload.get("forms") else payload["lari"]
+                 ).split(",")[0].split("|")[0].strip().lower())
+            if first in NEW_NOTES:
+                out.append(NOTE_PARA_NEW % esc(NEW_NOTES[first]))
+                log("note", "note de prononciation ajoutee : %s" % payload["lari"])
     xml = head + "".join(out) + tail
 
     # ---------------- 2. notes bilingues (traitees a part, cf. notes_v27.json)
