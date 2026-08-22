@@ -1,65 +1,76 @@
-# Annexe Kilolaka — deux livres distincts
+# Skill « comprendre-le-mandombe », puis annexe Kilolaka
 
-## Ce qui est acté
+## 1. Constituer la référence Mandombe sans rien inventer
 
-- **Livre 1 (v30)** : dictionnaire Kikongo Lari, en **français et anglais uniquement**. C'est celui qui reçoit l'annexe Kilolaka. Aucun coréen.
-- **Livre 2** : l'édition coréenne reste un ouvrage séparé. Elle recevra la même annexe, dans un second temps, une fois l'annexe du livre 1 validée.
+Créer et activer une skill de connaissance appelée **comprendre-le-mandombe**. Elle se déclenchera pour toute explication du Kilolaka, du Singini, des Bisimba, Mvuala, Zita/Mazita, Mahanza, directions énergétiques et significations profondes du Mandombe.
 
-## L'annexe s'écrit dans la langue du Mandombe
+La référence sera construite uniquement à partir de :
 
-L'annexe ne parle pas de « consonnes » ni de « voyelles ». Elle utilise les noms que le Mandombe donne lui-même à ses éléments, parce que ces noms portent la réalité cachée du système :
+- la grille Kilolaka déjà présente sur le site ;
+- le corpus, le dictionnaire et les leçons du projet ;
+- les explications et corrections données par l'auteur dans l'historique du projet ;
+- les sources Mandombe déjà validées dans le projet.
 
-- le **Singini** comme point de départ — dans la tradition Kongo, un vortex ;
-- les **directions énergétiques** : Pakù, Ndongù, Pelé, Kètè ;
-- les **Kisimba / Bisimba**, qui sont aussi des Simbi, des esprits ;
-- le **Zita**, union d'un Kisimba et de son support, et les **Mazita** qui en naissent.
+Chaque entrée conservera : l'orthographe exacte, le sens Mandombe, le sens initiatique Kongo attesté, les relations avec les autres éléments et sa source interne. Une occurrence sans définition ne sera jamais transformée en définition.
 
-Chaque terme est donné avec son sens ordinaire **et** son sens initiatique, puisque c'est là que réside le vrai contenu du Kilolaka.
+### Terminologie déjà confirmée
 
-### Ce dont j'ai besoin de vous avant d'écrire
+- **Singini** : souche, racine, vortex ; point d'entrée du tracé.
+- **Kisimba / Bisimba** : terme Mandombe employé pour la/les voyelles. Le rapprochement avec les **Simbi** — les esprits — sera expliqué comme un lien de sens, sans prétendre que « Kisimba » désigne directement un esprit.
+- **Mvuala** : terme Mandombe employé pour les consonnes ; également bâton de guérison confié à un nganga.
+- **Zita** : union d'une Mvuala et d'une Kisimba ; la forme prononçable complète.
+- **Mazita** : syllabes, caractères.
+- **Bisinsu** : signes de ponctuation.
+- **Mazita ma mazindinga** : caractères migratoires.
+- **Mahanza** et leurs positions attestées : Nkenge, Nsona, Konzo, Nkandu.
+- **Mvuala za mpamba, za piluka, za mpimpita, za lambuka, za kimbangu, za mazindinga**, ainsi que **Nkoma-nkoma**, **Kimpa**, **Vita** et **Ntalu**.
+- **Ndungi** s'écrit exactement `N-D-U-N-G-I`. La forme « Ndongo » est interdite dans ce contexte.
 
-Ces termes ne figurent nulle part dans le site ni dans le corpus : je ne les inventerai pas et je ne les déduirai pas. Il me faut de vous, en clair :
+Les autres directions énergétiques et leurs graphies exactes seront extraites des sources attestées avant rédaction. Aucune variante entendue ou déduite ne sera ajoutée.
 
-1. le nom exact et la définition du **Singini** ;
-2. les quatre **directions énergétiques** (Pakù, Ndongù, Pelé, Kètè) : à quoi chacune correspond dans le tracé et dans le sens ;
-3. **Kisimba / Bisimba** : ce qu'ils désignent, et le lien avec le Simbi ;
-4. **Zita / Mazita** : la définition de l'union que vous décrivez ;
-5. tout autre nom d'élément du Mandombe qui doit apparaître (le nom des sept formes, du support, du tracé, etc.).
+La skill renverra à la skill existante **taper-le-mandombe** pour les règles de saisie : connaissance du système et composition typographique restent deux responsabilités distinctes.
 
-Vous pouvez me les dicter comme vous venez de le faire : je les reprends mot pour mot, sans reformuler.
+## 2. Produire l'annexe Kilolaka du livre français-anglais
 
-## Le texte d'ouverture
+Reprendre le dictionnaire v29 pour produire la **v30 français-anglais**, sans aucun coréen.
 
-Court, en français et en anglais :
+### Introduction
 
-- Dans la tradition Kongo, la matière naît du son : ce sont les ondes qui la font apparaître et prendre forme.
-- Le Kilolaka est la description, par les anciens Kongo, de la manière dont la matière se manifeste — ce qui se passe au moment exact où elle prend forme.
-- Chaque son porte une étape de cette manifestation ; sous le sens courant d'un mot se tient donc toujours un sens profond.
-- Le Kilolaka est l'art de décoder ce sens. C'est une cymatique graphique : le glyphe donne à voir ce que l'onde fait à la matière.
+Présenter, en français puis en anglais :
 
-Le nom Kilolaka est décomposé en ouverture : Ki, Lo, La, Ka.
+- le Kilolaka comme description, par les anciens Kongo, de la manifestation de la matière ;
+- la matière créée par les ondes du son ;
+- chaque son comme porteur d'une étape de cette manifestation ;
+- le Kilolaka comme méthode de décodage et comme **cymatique graphique**, où le glyphe donne à voir l'action de l'onde sur la matière ;
+- le sens profond des noms Mandombe, notamment le Singini-vortex et le lien Kisimba/Simbi.
 
-## Le corps de l'annexe : jamais un élément seul
+Le texte emploiera la terminologie Mandombe de la skill, pas les catégories occidentales « consonne/voyelle », sauf éventuellement entre parenthèses lors de la toute première définition bilingue pour aider le lecteur.
 
-Aucune entrée ne présente un élément nu (pas de « MV », pas de « N »). Chaque glyphe est présenté **complet, avec son Kisimba**, c'est-à-dire prononcé et tapable : Mvi, Mvu, Mve, Mvo, Mva, Mvio, Mvue, Mvui, Mvua.
+### Présentation de tous les glyphes
 
-Pour chaque famille : la ligne d'en-tête donne le sens racine, puis chaque glyphe formé occupe sa propre ligne :
+Ne jamais expliquer un support seul. Chaque entrée montre une **Zita complète**, donc une Mvuala unie à une Kisimba : par exemple Mvi, Mvu, Mve, Mvo, Mva, etc.
 
 ```text
-[glyphe Mandombe doré]   Mvi   FR — multiplication de la possession intérieure   EN — inner multiplication of possession
+[Zita en Mandombe doré]   Mvi
+FR — multiplication de la possession intérieure
+EN — inner multiplication of possession
 ```
 
-Les familles couvertes sont celles de la page Kilolaka du site : B, D, F, G, MB, MF, ND, NG, N, S, V, T, NT, NS, MV, K, L, M, P, MP, NK, NL, N'K, W, R, Z, Y, NY, NZ, MW, SH, DJ, TSH, J — environ 370 glyphes. Seules les combinaisons réellement disponibles sont listées ; aucune n'est inventée.
+- Reprendre tous les glyphes réellement tapables de la grille Kilolaka.
+- Organiser les entrées selon les catégories et directions énergétiques Mandombe attestées, non comme une simple liste de consonnes.
+- Expliquer chaque Zita avec sa Kisimba et son orientation/état énergétique propre.
+- Reprendre les sens français validés de la grille et produire leur traduction anglaise cohérente.
+- Ne créer aucune combinaison absente de la grille.
 
-Les sens français sont repris tels quels de la page Kilolaka. L'anglais traduit ces mêmes sens avec un vocabulaire constant d'un bout à l'autre.
+L'annexe est placée après les conjugaisons et ajoutée à la table des matières.
 
-## Placement
+## 3. Livre coréen séparé
 
-Après l'annexe des conjugaisons, en fin d'ouvrage, avec son entrée dans la table des matières.
+Après validation de la v30 français-anglais, produire un **second livre distinct** avec la même annexe traduite en coréen. Le coréen ne figurera jamais dans le premier livre.
 
-## Détails techniques
+## Validation
 
-- Données extraites du tableau `GROUPS` de `public/kilolaka_grille.html` vers `scripts/kilolaka-annex.json`, avec la colonne anglaise ajoutée.
-- Nouveau script `scripts/build-dictionary-odt-v30.py`, dérivé de la v28/v29 : corpus v29 intégral + section annexe. Le coréen n'est pas touché à cette étape.
-- Les glyphes passent par `scripts/mandombe_typing.py` ; audit HarfBuzz bloquant, aucun résidu latin toléré. Toute suite non composable est signalée, jamais remplacée.
-- Sortie ODT + PDF LibreOffice, contrôle visuel des pages de l'annexe avant livraison.
+- Vérifier chaque terme de l'introduction contre la skill et sa source attestée.
+- Vérifier que chaque ligne présente une Zita complète, jamais une Mvuala isolée.
+- Contrôler tous les blocs Mandombe avec HarfBuzz : aucun résidu latin.
+- Générer ODT et PDF, puis inspecter visuellement toutes les pages de l'annexe dans les deux ouvrages.
