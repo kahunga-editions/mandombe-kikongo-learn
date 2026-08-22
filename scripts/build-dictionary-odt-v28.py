@@ -47,6 +47,8 @@ DROP_LARI = {"A ma"}
 
 # notes de prononciation ajoutees (arbitrages de l'auteur), cle = 1re forme Lari
 NEW_NOTES = {
+    "mundjula": "Prononc\u00e9 /mundzula/ ; pluriel /mindzula/ \u00b7 "
+                "EN \u2014 Pronounced /mundzula/ ; plural /mindzula/.",
     "mundzula": "Prononc\u00e9 /mundzula/ ; pluriel /mindzula/ \u00b7 "
                 "EN \u2014 Pronounced /mundzula/ ; plural /mindzula/.",
 }

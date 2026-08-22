@@ -28,6 +28,8 @@ WORD_MAP = {
     # arbitrage auteur : ndz de mundzula se tape nz (note de prononciation)
     "mundzula": "munzula",
     "mindzula": "minzula",
+    "mundjula": "munzula",
+    "mindjula": "minzula",
 }
 
 

@@ -390,6 +390,7 @@ pluriel        Yuma | mayuma : dispute(s) | dispute ; quarrel
 pluriel        Zandu | mazandu : marché(s) | market(s)
 pluriel        Ziku | maziku : foyer(s) | home ; household
 pluriel        Zimi | mazimi : grossesse(s) | pregnancy
+note           note de prononciation ajoutee : Mundjula | mindjula
 notes          288 notes rendues bilingues
 lettrine       Pictures/DED8D0C9A11F4057A1B846DC2AAD11E0.png remplacee (glyphe seul)
 lettrine       Pictures/C3C200CDCD594DF6BC295EA3B3774075.png remplacee (glyphe seul)
