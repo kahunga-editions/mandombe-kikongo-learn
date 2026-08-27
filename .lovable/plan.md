@@ -36,7 +36,7 @@ Ces deux noms viennent du chant initiatique Kongo « Ngiele, ngiele mu nzila Kon
 
 ## 3. Skill de connaissance
 
-Créer et activer **comprendre-le-mandombe**, déclenchée pour toute explication du Mandombe, du Kilolaka, des Mvuala, Bisimba, Nkoma-nkoma, Mazita, Bisin Su, Pakudungu, Pelekete et Kimbangu.
+Créer et activer **comprendre-le-mandombe**, déclenchée pour toute explication du Mandombe, du Kilolaka, des Mvuala, Bisimba, Nkoma-nkoma, Mazita, Bisinsu, Pakudungu, Pelekete et Kimbangu.
 
 Contenu : la nomenclature ci-dessus, ses sources internes, la distinction nette entre nomenclature Mandombe et tradition Kongo, l'interdiction d'inventer un terme, une graphie ou une direction, et le renvoi à la skill existante **taper-le-mandombe** pour la saisie.
 
