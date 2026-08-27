@@ -29,8 +29,8 @@ Ces deux noms viennent du chant initiatique Kongo « Nguele nguele mu ndila Kong
 - **Mvuala za piluka** — composées.
 - **Mvuala za mpimpita** — complexes, qui comprennent :
   - **Mvuala za lambuka**
-  - **Mvuala za Kimbangu**
-  - **Mvuala za mazindinga** — migratoires.
+  - **Mvuala za Kimbangu** — groupe consonantique
+  - **Mvuala za mazindinga** — groupe migratoire
 
 **Note Kimbangu.** Le nom renvoie à la figure titulaire de la tradition Kongo : une énergie qui s'incarne par moments sur Terre, dont la dernière venue est située en 1921, associée aux trois étoiles Ki, Mba, Ngu de la ceinture d'Orion, et dont l'action est décrite comme un changement de ligne de temps ayant permis la survie des peuples Kongo. Cette note sera présentée comme savoir de tradition Kongo, distincte de la lecture historique courante de Simon Kimbangu.
 
