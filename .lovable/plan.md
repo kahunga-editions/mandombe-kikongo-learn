@@ -13,7 +13,7 @@
 - **Pakudungu** : la forme qui ressemble à un 5.
 - **Pelekete** : la forme qui ressemble à un 2.
 
-Ces deux noms viennent du chant initiatique Kongo « Nguele nguele mu ndila Kongo », qui enseigne le chemin du retour vers le Kongo, au-delà de la onzième dimension.
+Ces deux noms viennent du chant initiatique Kongo « Ngiele, ngiele mu nzila Kongo », qui enseigne le chemin du retour vers le Kongo, au-delà du Nsi Ya Kumi na Moshi, la onzième dimension.
 
 **Composition de l'écriture.**
 
@@ -21,7 +21,7 @@ Ces deux noms viennent du chant initiatique Kongo « Nguele nguele mu ndila Kong
 - **Bisimba** : les voyelles.
 - **Nkoma-nkoma** : les voyelles complémentaires.
 - **Mazita** : syllabes ou caractères.
-- **Bisin Su** : signes de ponctuation. Orthographe canonique : `B-I-S-I-N S-U` (comme Nadine), sans M.
+- **Bisinsu** : signes de ponctuation. S'écrit en un seul mot.
 
 **Les trois sortes de Mvuala.**
 
@@ -36,7 +36,7 @@ Ces deux noms viennent du chant initiatique Kongo « Nguele nguele mu ndila Kong
 
 ## 3. Skill de connaissance
 
-Créer et activer **comprendre-le-mandombe**, déclenchée pour toute explication du Mandombe, du Kilolaka, des Mvuala, Bisimba, Nkoma-nkoma, Mazita, Bisin Su, Pakudungu, Pelekete et Kimbangu.
+Créer et activer **comprendre-le-mandombe**, déclenchée pour toute explication du Mandombe, du Kilolaka, des Mvuala, Bisimba, Nkoma-nkoma, Mazita, Bisinsu, Pakudungu, Pelekete et Kimbangu.
 
 Contenu : la nomenclature ci-dessus, ses sources internes, la distinction nette entre nomenclature Mandombe et tradition Kongo, l'interdiction d'inventer un terme, une graphie ou une direction, et le renvoi à la skill existante **taper-le-mandombe** pour la saisie.
 
@@ -59,7 +59,3 @@ Après validation de la v30 français-anglais, produire un **second livre distin
 - Chaque ligne de l'annexe porte un Mazita complet.
 - Audit HarfBuzz : aucun résidu latin dans les blocs Mandombe.
 - Inspection visuelle de toutes les pages de l'annexe, ODT et PDF.
-
-## Point à confirmer
-
-Position : le corpus écrit **konzo**, vous dites **nkonzo**. Laquelle garder pour la note de tradition Kongo ?
