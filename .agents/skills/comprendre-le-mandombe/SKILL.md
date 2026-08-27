@@ -1,6 +1,6 @@
 ---
 name: comprendre-le-mandombe
-description: Référence terminologique et cosmologique à utiliser pour expliquer le Mandombe, le Kilolaka, le Singini, les Bisimba, Mvuala, Zita/Mazita, Mahanza et directions énergétiques, ou créer des contenus pédagogiques sur ces sujets.
+description: Référence terminologique et cosmologique à utiliser pour expliquer le Mandombe, le Kilolaka, le Singini, les Bisimba, Mvuala, Zita/Mazita, Bisinsu, Pakudungu, Pelekete et Kimbangu, ou créer des contenus pédagogiques sur ces sujets.
 ---
 # Comprendre le Mandombe
 
@@ -13,25 +13,34 @@ Le Mandombe est l'écriture du Kikongo Lari. Pour composer ou contrôler un glyp
 ## Sources autorisées
 
 1. Le corpus et le dictionnaire Nzo Mikanda.
-2. La page Mandombe et la grille Kilolaka du projet.
+2. La page Mandombe et la grille Kilolaka du projet (`public/kilolaka_grille.html`).
 3. Les corrections explicites de l'auteur dans l'historique du projet.
 4. `references/terminologie-attestee.md` et `references/kilolaka-sens.md`.
 
-## Vocabulaire obligatoire
+## Nomenclature Mandombe exacte
 
-Emploie d'abord les termes internes au Mandombe. N'utilise « consonne », « voyelle » ou « syllabe » qu'une fois entre parenthèses pour accompagner un lecteur débutant, jamais comme structure principale de l'explication.
+- **Mvuala** : les consonnes.
+- **Bisimba** : les voyelles.
+- **Nkoma-nkoma** : les voyelles complémentaires.
+- **Mazita** : syllabes ou caractères.
+- **Bisinsu** : signes de ponctuation. S'écrit en un seul mot.
 
-- **Singini** : souche, racine, vortex ; point d'entrée du tracé.
-- **Kisimba**, pluriel **Bisimba** : élément vocalique du Mandombe. Le corpus rapproche ce nom des **Simbi**, les esprits ; présente cela comme un lien de sens, pas comme une identité lexicale.
-- **Mvuala** : support consonantique du Mandombe ; également bâton de guérison confié à un nganga.
-- **Zita**, pluriel **Mazita** : union d'une Mvuala et d'une Kisimba ; forme complète prononçable, syllabe ou caractère.
-- **Bisinsu** : signes de ponctuation.
-- **Mahanza** : positions relatives d'une Kisimba et d'une Mvuala. Noms attestés : Nkenge, Nsona, Konzo, Nkandu.
-- **Mazita ma mazindinga** : caractères migratoires.
+Les trois sortes de Mvuala :
+
+- **Mvuala za mpamba** : simples. Ce sont les deux éléments découverts sur le mur de briques et les deux familles principales : Mvuala Pakudungu et Mvuala Pelekete.
+- **Mvuala za piluka** : composées.
+- **Mvuala za mpimpita** : complexes, qui comprennent :
+  - **Mvuala za lambuka**
+  - **Mvuala za Kimbangu** — groupe consonantique
+  - **Mvuala za mazindinga** — groupe migratoire
 
 ## Orthographe protégée
 
-Écris **Ndungi**, exactement N-D-U-N-G-I. N'écris jamais « Ndongo » pour cette notion. Ne développe pas Paku, Ndungi, Pele ou Kete sans définition attestée dans les références.
+- **Ndungu** : `N-D-U-N-G-U`. « Ndungi » n'existe pas.
+- **Bisinsu** : `B-I-S-I-N-S-U`, un seul mot, sans M.
+- **Pakudungu** : `P-A-K-U-N-D-U-N-G-U`.
+- **Pelekete** : `P-E-L-E-K-E-T-E`.
+- **Konzo** : `K-O-N-Z-O` (pas « nkonzo » dans la nomenclature Mandombe).
 
 ## Expliquer une Zita
 
@@ -51,15 +60,11 @@ Dans les contenus validés par l'auteur, le Kilolaka décrit la manifestation de
 
 Présente ce cadre comme relevant de la tradition Kongo transmise avec le Mandombe, non comme une affirmation scientifique expérimentale contemporaine.
 
-## Catégories attestées
+## Éléments de tradition Kongo distincts de la nomenclature Mandombe
 
-- **Mvuala za mpamba** : Mvuala simples.
-- **Mvuala za piluka** : Mvuala composées.
-- **Mvuala za mpimpita** : Mvuala complexes.
-- **Mvuala za lambuka** : Mvuala prolongées.
-- **Mvuala za kimbangu** : groupes de Mvuala.
-- **Mvuala za mazindinga** : Mvuala migratoires.
-- **Nkoma-nkoma**, **Kimpa**, **Vita**, **Ntentia** et **Ntalu** : conserver leur périmètre attesté dans la référence, sans extrapolation.
+- **Mahanza** : positions relatives d'une Kisimba et d'une Mvuala. Noms attestés : Nkenge, Nsona, Konzo, Nkandu. Terme de tradition Kongo, pas de nomenclature Mandombe.
+- **Pakudungu / Pelekete** : viennent du chant initiatique Kongo « Ngiele, ngiele mu nzila Kongo », qui enseigne le chemin du retour au-delà du Nsi Ya Kumi na Moshi (onzième dimension).
+- **Kimbangu** : figure titulaire de la tradition Kongo, énergie qui s'incarne par moments sur Terre (dernière venue en 1921), associée aux trois étoiles Ki, Mba, Ngu de la ceinture d'Orion, et dont l'action est décrite comme un changement de ligne de temps ayant permis la survie des peuples Kongo. Présente cela comme savoir de tradition Kongo, distinct de la lecture historique courante de Simon Kimbangu.
 
 ## Contrôle avant publication
 
