@@ -180,12 +180,29 @@ CLOSING_EN = [
 ]
 
 
+EXTRA_STYLES = (
+    '<style:style style:name="KiloZita" style:family="paragraph"'
+    ' style:parent-style-name="None" style:display-name="KiloZita">'
+    '<style:paragraph-properties fo:line-height="0.95cm"'
+    ' fo:margin-left="0.5cm" fo:margin-bottom="0.12cm"'
+    ' fo:keep-together="always"/>'
+    '<style:text-properties style:font-name="Liberation Serif"'
+    ' fo:font-size="9.5pt"/></style:style>'
+    '<style:style style:name="MandK" style:family="text"'
+    ' style:display-name="MandK">'
+    '<style:text-properties style:font-name="HapaxMandombe"'
+    ' fo:font-size="22pt" fo:font-weight="bold" fo:color="#8a5a20"/>'
+    '</style:style>'
+)
+
+
 def p(style, runs):
     body = "".join(
         '<text:span text:style-name="%s">%s</text:span>' % (s, escape(t))
         for s, t in runs
     )
     return '<text:p text:style-name="%s">%s</text:p>' % (style, body)
+
 
 
 def plain(style, text):
