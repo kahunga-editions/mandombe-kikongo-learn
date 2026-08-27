@@ -27,38 +27,49 @@ Repartir du fichier ODT v29.
 
 Introduction bilingue : le son qui donne forme à la matière, le Kilolaka comme art de décoder cette manifestation, présenté comme une **cymatique graphique** dans la tradition Kongo.
 
-Organisation en sections, chacune affichant un **Mazita complet** : glyphe Mandombe doré + translittération + FR + EN. Jamais une Mvuala seule.
+Organisation en sections, chacune affichant un **Mazita complet** : glyphe Mandombe doré + translittération + FR + EN. **Jamais une Mvuala seule** : chaque Mvuala est toujours présentée avec ses Bisimba, dans l'**ordre canonique du Kilolaka — i, u, e, o, a** (ordre de l'incarnation de la conscience unique dans la matière), puis les Nkoma-nkoma quand la grille les atteste.
 
 ```text
 Bisimba (voyelles)
   i, u, e, o, a
 
-Masita du premier groupe (clés du premier temps)
-  B, D, G, F
+Mazita du premier groupe — clés du premier temps
+  bi bu be bo ba | di du de do da | gi gu ge go ga | fi fu fe fo fa
 
-Masita du deuxième groupe (clés du deuxième temps / 45°)
-  M, K, P, L
+Mazita du deuxième groupe — clés du deuxième temps, angle 45°
+  mi mu me mo ma | ki ku ke ko ka | pi pu pe po pa | li lu le lo la
 
-Masita du troisième groupe (clés du troisième temps / 90°)
-  V, N, T, S
+Mazita du troisième groupe — clés du troisième temps, angle 90°
+  vi vu ve vo va | ni nu ne no na | ti tu te to ta | si su se so sa
 
-Masita du quatrième groupe (clés du quatrième temps / 135°)
-  R, W, Z, Y
+Mazita du quatrième groupe — clés du quatrième temps, angle 135°
+  ri ru re ro ra | wi wu we wo wa | zi zu ze zo za | yi yu ye yo ya
 
-Masita du cinquième groupe / Nkoma-nkoma (voyelles complémentaires)
-  ie, io, ia, iu, ue, ui, ua
+Mazita du cinquième groupe — Mvuala diverses
+  hi hu he ho ha, et les Nkoma-nkoma attestés (ie, io, ia, iu, ue, ui, ua)
 
-Mazita ma Kimbangu — groupes consonantiques
-  MB, ND, NG, MF, MP, MV, NK, NL, NS, NT, NY, NZ, MW
+Mvuala za Kimbangu — groupes consonantiques
+  mbi mbu mbe mbo mba | ndi ndu nde ndo nda | ngi ngu nge ngo nga
+  mfi mfu mfe mfo mfa | mpi mpu mpe mpo mpa | mvi mvu mve mvo mva
+  nki nku nke nko nka | nli nlu nle nlo nla | nsi nsu nse nso nsa
+  nti ntu nte nto nta | nyi nyu nye nyo nya | nzi nzu nze nzo nza | mwi mwu mwe mwo mwa
 
-Mazita ma mazindinga — caractères migratoires
-  SH, TSH, J, DJ
+Mazita ma mazindinga — caractères migratoires (de Pelekete piluka à Ndungu)
+  shi shu she sho sha | tshi tshu tshe tsho tsha
+  ji ju je jo ja | dji dju dje djo dja
 
-Ntentia — apostrophes
-  N'K
+Ntentia — l'apostrophe (N majuscule) : N'ki N'ku N'ke N'ko N'ka
+  exemples attestés : N'sita, N'sele, N'kamba, N'samu
 
-Ntalu — chiffres (option, en note bilingue)
+Ntalu — chiffres, avec leur graphie : mpamvala (0, triangle),
+  puis 1 = i, 2 = u, 3 = e, 4 = o, 5 = a
 ```
+
+Notes accompagnant l'annexe :
+
+- **Mazita makibaba** (syllabes occlusives, type gba, pka, kto) : mentionnées comme existantes dans le Mandombe mais absentes du Kikongo, donc non listées.
+- **Nsakuameso** : les diminutifs manuscrits, forme abrégée employée à la main, distincte de la saisie typographique.
+
 
 ### 3.2 Données et saisie
 
