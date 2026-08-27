@@ -245,12 +245,13 @@ def build_annex(grid):
                     residues.append((lari, mand, res))
                 fr_gloss = meanings.get(v) or "%s %s" % (root_fr, MOD_FR[v])
                 en_gloss = "%s %s" % (ROOT_EN[cons], MOD_EN[v])
-                xml.append(p("EntryNote", [
-                    ("MandT", mand),
+                xml.append(p("KiloZita", [
+                    ("MandK", mand),
                     ("LariT", "  " + lari),
                     ("FrT", " \u2014 " + fr_gloss),
                     ("EnT", " \u00b7 EN \u2014 " + en_gloss),
                 ]))
+
                 count += 1
 
     xml.append(plain("HeadS",
