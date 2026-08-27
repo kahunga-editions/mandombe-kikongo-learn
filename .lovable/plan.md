@@ -13,7 +13,7 @@
 - **Pakudungu** : la forme qui ressemble à un 5.
 - **Pelekete** : la forme qui ressemble à un 2.
 
-Ces deux noms viennent du chant initiatique Kongo « Nguele nguele mu ndila Kongo », qui enseigne le chemin du retour vers le Kongo, au-delà de la onzième dimension.
+Ces deux noms viennent du chant initiatique Kongo « Ngiele, ngiele mu nzila Kongo », qui enseigne le chemin du retour vers le Kongo, au-delà du Nsi Ya Kumi na Moshi, la onzième dimension.
 
 **Composition de l'écriture.**
 
