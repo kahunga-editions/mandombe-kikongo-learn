@@ -278,6 +278,12 @@ def main():
     assert content.count(marker) == 1
     content = content.replace(marker, annex + marker)
 
+    styles = zin.read("styles.xml").decode("utf-8")
+    smark = "</office:styles>"
+    assert styles.count(smark) == 1
+    styles = styles.replace(smark, EXTRA_STYLES + smark)
+
+
     shutil.copy(SRC, OUT)
     with zipfile.ZipFile(OUT, "w", zipfile.ZIP_DEFLATED) as zout:
         for item in zin.infolist():
