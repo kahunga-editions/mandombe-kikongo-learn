@@ -290,6 +290,9 @@ def main():
             data = zin.read(item.filename)
             if item.filename == "content.xml":
                 data = content.encode("utf-8")
+            if item.filename == "styles.xml":
+                data = styles.encode("utf-8")
+
             if item.filename == "mimetype":
                 zout.writestr(item, data, zipfile.ZIP_STORED)
             else:
