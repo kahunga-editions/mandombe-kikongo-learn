@@ -21,7 +21,7 @@ Ces deux noms viennent du chant initiatique Kongo « Nguele nguele mu ndila Kong
 - **Bisimba** : les voyelles.
 - **Nkoma-nkoma** : les voyelles complémentaires.
 - **Mazita** : syllabes ou caractères.
-- **Bisimsu** : signes de ponctuation.
+- **Bisin Su** : signes de ponctuation. Orthographe canonique : `B-I-S-I-N S-U` (comme Nadine), sans M.
 
 **Les trois sortes de Mvuala.**
 
