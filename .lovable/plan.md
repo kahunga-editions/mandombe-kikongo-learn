@@ -60,7 +60,6 @@ Après validation de la v30 français-anglais, produire un **second livre distin
 - Audit HarfBuzz : aucun résidu latin dans les blocs Mandombe.
 - Inspection visuelle de toutes les pages de l'annexe, ODT et PDF.
 
-## Deux points à confirmer
+## Point à confirmer
 
-1. Ponctuation : vous dites **bisimsu**, le corpus du site porte **bisinsu**. Quelle graphie fait foi ?
-2. Position : le corpus écrit **konzo**, vous dites **nkonzo**. Laquelle garder pour la note de tradition Kongo ?
+Position : le corpus écrit **konzo**, vous dites **nkonzo**. Laquelle garder pour la note de tradition Kongo ?
