@@ -59,7 +59,3 @@ Après validation de la v30 français-anglais, produire un **second livre distin
 - Chaque ligne de l'annexe porte un Mazita complet.
 - Audit HarfBuzz : aucun résidu latin dans les blocs Mandombe.
 - Inspection visuelle de toutes les pages de l'annexe, ODT et PDF.
-
-## Point à confirmer
-
-Position : le corpus écrit **konzo**, vous dites **nkonzo**. Laquelle garder pour la note de tradition Kongo ?
