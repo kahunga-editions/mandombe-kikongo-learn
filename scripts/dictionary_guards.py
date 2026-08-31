@@ -1,0 +1,111 @@
+#!/usr/bin/env python3
+"""Controles bloquants du dictionnaire papier.
+
+Si un controle echoue, aucun document n'est produit : l'auteur recoit un
+rapport, pas une version de plus.
+"""
+import os
+import re
+import sys
+import unicodedata
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, HERE)
+
+from mandombe_typing import to_mandombe, latin_residue  # noqa: E402
+from mandombe_graphies import map_text  # noqa: E402
+
+# consignes de saisie qui ne doivent jamais s'imprimer
+EDITORIAL = re.compile(
+    r"\((?:en\s+)?(?:deux|2)\s+mots\)"
+    r"|\(en\s+un\s+seul\s+mot\)"
+    r"|\((?:sans|avec)\s+espace\)",
+    re.I)
+
+# mot latin porteur d'un point interne : Bawu ecrit B.awu
+INNER_DOT = re.compile(r"\b[A-Za-zÀ-ÿ]\.[A-Za-zÀ-ÿ]{2,}")
+
+# couples que l'auteur a explicitement separes : ils ne doivent jamais fusionner
+SEPARATE_SENSES = [
+    ("Ba", ("être", "exister"), ("palmier", "palm tree")),
+    ("Mbote", ("bonjour", "hello"), ()),
+]
+
+
+def strip_accents(s):
+    return "".join(c for c in unicodedata.normalize("NFD", s)
+                   if unicodedata.category(c) != "Mn")
+
+
+def forms_of(lari):
+    parts = []
+    for chunk in re.split(r"[\u00b7|]", lari or ""):
+        chunk = chunk.strip()
+        if chunk:
+            parts.extend(p.strip() for p in chunk.split(",") if p.strip())
+    return parts
+
+
+def check(entries):
+    """Renvoie la liste des erreurs bloquantes."""
+    errors = []
+
+    for e in entries:
+        lari, mand = e.get("lari", ""), e.get("mand", "")
+
+        # 1. aucune consigne de travail dans le texte publie
+        for field in ("fr", "en", "note"):
+            if EDITORIAL.search(e.get(field) or ""):
+                errors.append("note de travail imprimee : %s -> %s"
+                              % (lari, e[field]))
+
+        # 2. aucun mot latin avec point interne
+        if INNER_DOT.search(lari):
+            errors.append("point interne dans le Lari : %s" % lari)
+
+        # 3. le Mandombe doit transcrire exactement le Lari
+        expected = " \u00b7 ".join(
+            to_mandombe(map_text(f)) for f in forms_of(lari))
+        got = " \u00b7 ".join(
+            m.strip() for m in re.split(r"[\u00b7|]", mand or "") if m.strip())
+        if expected and got and expected != got:
+            errors.append("Lari et Mandombe divergents : %s / %s (attendu %s)"
+                          % (lari, got, expected))
+
+        # 4. aucun residu latin dans le Mandombe
+        res = latin_residue(mand or "")
+        if res:
+            errors.append("residu latin dans le Mandombe : %s (%s)" % (lari, res))
+
+        # 5. une entree doit porter un sens
+        if not (e.get("fr") or "").strip():
+            errors.append("entree sans sens francais : %s" % lari)
+
+    # 6. les sens que l'auteur a separes ne se retrouvent pas ensemble
+    for head, must_have, must_not in SEPARATE_SENSES:
+        for e in entries:
+            if strip_accents(e.get("lari", "").lower()) != strip_accents(head.lower()):
+                continue
+            glosses = strip_accents(
+                ((e.get("fr") or "") + " " + (e.get("en") or "")).lower())
+            if must_have and not any(strip_accents(w) in glosses for w in must_have):
+                continue
+            for bad in must_not:
+                if strip_accents(bad) in glosses:
+                    errors.append(
+                        "sens d'un homographe distinct dans %s : '%s' "
+                        "(entree separee attendue)" % (head, bad))
+
+    return errors
+
+
+def report(errors, path):
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    with open(path, "w", encoding="utf-8") as f:
+        if not errors:
+            f.write("Tous les controles passent.\n")
+        else:
+            f.write("%d controle(s) en echec \u2014 aucun document produit.\n\n"
+                    % len(errors))
+            f.write("\n".join(errors) + "\n")
+    return path
