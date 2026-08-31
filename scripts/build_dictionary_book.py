@@ -180,13 +180,17 @@ def build_small_index(entries, head_lang, other_lang):
 
     xml = []
     current = None
-    for key in sorted(buckets, key=sort_key):
+    ordered = sorted(buckets, key=lambda k: (letter_of(buckets[k]["head"]) == "#",
+                                             sort_key(k)))
+    for key in ordered:
         bucket = buckets[key]
         letter = letter_of(bucket["head"])
         if letter != current:
             current = letter
+            label = "Autres \u00b7 Other" if letter == "#" else letter
             xml.append('<text:p text:style-name="LetterHeadSmall">%s</text:p>'
-                       % esc(letter))
+                       % esc(label))
+
         others, seen = [], set()
         for e in bucket["items"]:
             for seg in segments(e.get(other_lang)):
