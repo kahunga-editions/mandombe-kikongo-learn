@@ -191,6 +191,9 @@ def main():
     xml = replace_section(xml, "IndexLari", build_index_i(live))
     xml = replace_section(xml, "IndexFR", build_small_index(live, "fr", "en"))
     xml = replace_section(xml, "IndexEN", build_small_index(live, "en", "fr"))
+    xml = re.sub(r"\d{4} (entr\u00e9es|entries)",
+                 lambda m: "%d %s" % (len(live), m.group(1)), xml)
+
     marker = "</office:text>"
     assert xml.count(marker) == 1
     xml = xml.replace(marker, annex + marker)
