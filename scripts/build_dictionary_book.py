@@ -91,20 +91,69 @@ def letter_of(text):
     return c if c.isalpha() else "#"
 
 
+# lettrines illustrees du gabarit : glyphe Mandombe dore sur fond marron
+LETTER_IMAGES = {
+    "A": "DED8D0C9A11F4057A1B846DC2AAD11E0.png",
+    "B": "C3C200CDCD594DF6BC295EA3B3774075.png",
+    "C": "A8CF2CFBC75E4983B7FE6439BD8C7381.png",
+    "D": "CA0FEC3A47B14B7D98B1ACE1370D9697.png",
+    "E": "1B049CEDB9484C62A851457DFE206AF6.png",
+    "F": "6565F195AD444B1DB81733421B6016F1.png",
+    "G": "1E671BB45653409AAEA7A7CCEEDAB3B2.png",
+    "H": "98252D9E9A9848E287D487AC7FFF9BAF.png",
+    "I": "91E0B848441A4E159D0E7BDC8F3E1A6C.png",
+    "J": "27EAFDD128F4495B88D2DCFA2B2B5F66.png",
+    "K": "9A0EC6AC9E5C48B8BC570147C3DC8C19.png",
+    "L": "990396FA983B493596E7A173B52F795A.png",
+    "M": "30F33E723AA1424E826EF1A6645BCCC7.png",
+    "N": "2A55F48FDB2F426CA1F3262F75861FEC.png",
+    "P": "575BE95DE57C48BBAD9F76BC8E46F00A.png",
+    "R": "6355BB892CF24154AACB6EE5616EA6B6.png",
+    "S": "599FE44B67E34339ADCBF4484FBBCF40.png",
+    "T": "AE53055DDCAC404FBD7A595563A9CA9F.png",
+    "V": "06555804A9E9470C9A1EB5804296BF80.png",
+    "W": "B94BB04BD83948248BEF7E010688B355.png",
+    "Y": "613C1343D22945409B57BBEC3A1A786C.png",
+    "Z": "800F6D6C018E4CBAA212FF5508977661.png",
+}
+
+ILLUS_TPL = ('<text:p text:style-name="IllusImg">'
+             '<draw:frame draw:style-name="ImgFrame" svg:width="5.2cm"'
+             ' svg:height="3.9cm" text:anchor-type="as-char">'
+             '<draw:image xlink:href="Pictures/%s"/></draw:frame></text:p>')
+
+
+def letter_open(letter):
+    """Ouverture de lettre de l'Index I : illustration Mandombe, sinon lettrine."""
+    img = LETTER_IMAGES.get(letter)
+    if img:
+        return ILLUS_TPL % img
+    label = "Autres \u00b7 Other" if letter == "#" else letter
+    return '<text:p text:style-name="LetterHead">%s</text:p>' % esc(label)
+
+
+def index_letters(entries):
+    """Lettres de l'index, '#' (Autres) toujours en dernier, comme en v26."""
+    letters = sorted({letter_of(e["lari"]) for e in entries} - {"#"})
+    if any(letter_of(e["lari"]) == "#" for e in entries):
+        letters.append("#")
+    return letters
+
+
 def build_index_i(entries):
     xml = []
-    current = None
-    for e in sorted(entries, key=lambda x: sort_key(x["lari"])):
-        letter = letter_of(e["lari"])
-        if letter != current:
-            current = letter
-            xml.append('<text:p text:style-name="LetterHeadSmall">%s</text:p>'
-                       % esc(letter))
-        xml.append(ENTRY_TPL % (mand_span(e["lari"]), esc(e["lari"]),
-                                esc(e.get("fr", "")), esc(e.get("en", ""))))
-        if e.get("note"):
-            xml.append(NOTE_TPL % esc(e["note"]))
+    by_letter = {}
+    for e in entries:
+        by_letter.setdefault(letter_of(e["lari"]), []).append(e)
+    for letter in index_letters(entries):
+        xml.append(letter_open(letter))
+        for e in sorted(by_letter[letter], key=lambda x: sort_key(x["lari"])):
+            xml.append(ENTRY_TPL % (mand_span(e["lari"]), esc(e["lari"]),
+                                    esc(e.get("fr", "")), esc(e.get("en", ""))))
+            if e.get("note"):
+                xml.append(NOTE_TPL % esc(e["note"]))
     return "".join(xml)
+
 
 
 def short_enough(lari):
