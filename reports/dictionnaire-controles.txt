@@ -1,6 +1,6 @@
 Tous les controles passent.
 
-4673 entrees publiees.
+4672 entrees publiees.
 
 23 entree(s) en attente de votre arbitrage :
   - Belesa : sens incomplet dans la source : arbitrage auteur

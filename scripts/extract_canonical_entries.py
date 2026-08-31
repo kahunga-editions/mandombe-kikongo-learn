@@ -237,6 +237,17 @@ def main():
     for line in TO_ARBITRATE:
         log("a arbitrer", line)
 
+    # -- doublons stricts : meme forme ET memes sens, jamais une fusion de sens
+    dedup, seen_exact = [], set()
+    for e in entries:
+        key = (e["lari"], e["fr"], e["en"], e["note"])
+        if key in seen_exact:
+            log("doublon strict", "%s : entree identique retiree" % e["lari"])
+            continue
+        seen_exact.add(key)
+        dedup.append(e)
+    entries = dedup
+
     # -- entrees sans sens complet : mises en attente, jamais devinees
     out = []
     for e in entries:
