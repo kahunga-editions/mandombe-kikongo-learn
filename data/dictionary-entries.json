@@ -182,17 +182,17 @@
   "note": "Pluriel de Andi. · EN — Plural of Andi."
  },
  {
-  "lari": "Bawu diela ye nawu. · · Bau mayela me nawu.",
+  "lari": "Bawu diela ye nawu. · Bau mayela me nawu.",
   "mand": "Bau diela ye nawu Bau mayela me nawu.",
   "fr": "Eux, ils sont intelligents.",
   "en": "They are intelligent.",
   "note": ""
  },
  {
-  "lari": "BA",
+  "lari": "Ba",
   "mand": "Ba",
-  "fr": "Être ; exister ; habiter ; palmier ; dard",
-  "en": "To be ; to exist ; to inhabit ; palm tree ; stinger",
+  "fr": "Être ; exister ; habiter",
+  "en": "To be ; to exist ; to inhabit",
   "note": ""
  },
  {
@@ -714,7 +714,7 @@
   "note": ""
  },
  {
-  "lari": "Baku nkuta · · bela luaka.",
+  "lari": "Baku nkuta · bela luaka.",
   "mand": "Baku nkuta bela luaka.",
   "fr": "avoir peur",
   "en": "to be afraid",
@@ -749,7 +749,7 @@
   "note": ""
  },
  {
-  "lari": "Bakulu beto · · bankaka zeto.",
+  "lari": "Bakulu beto · bankaka zeto.",
   "mand": "Bakulu beto bankaka zeto.",
   "fr": "nos ancêtres",
   "en": "our ancestors",
@@ -973,7 +973,7 @@
   "note": ""
  },
  {
-  "lari": "Bambangi ba makuela · · mbangi za makuela.",
+  "lari": "Bambangi ba makuela · mbangi za makuela.",
   "mand": "Bambangi ba makuela mbangi za makuela.",
   "fr": "Témoins de mariage.",
   "en": "Wedding witnesses.",
@@ -1218,7 +1218,7 @@
   "note": ""
  },
  {
-  "lari": "Bantu ba kitemo · · bala ba temo.",
+  "lari": "Bantu ba kitemo · bala ba temo.",
   "mand": "Bantu ba kitemo bala ba temo.",
   "fr": "Membres d'une tontine.",
   "en": "Tontine members.",
@@ -1232,7 +1232,7 @@
   "note": ""
  },
  {
-  "lari": "Bantu ba tuila ngulu · · Ba tuila ngulu.",
+  "lari": "Bantu ba tuila ngulu · Ba tuila ngulu.",
   "mand": "Bantu ba tuila ngulu ba tuila ngulu.",
   "fr": "Ceux qui élèvent les cochons.",
   "en": "Those who raise pigs.",
@@ -16459,8 +16459,8 @@
  {
   "lari": "Mbote",
   "mand": "Mbote",
-  "fr": "Bonjour ; bon ; bien",
-  "en": "Hello ; good ; well",
+  "fr": "Bonjour",
+  "en": "Hello",
   "note": ""
  },
  {
@@ -16485,10 +16485,10 @@
   "note": ""
  },
  {
-  "lari": "Mbote · bote",
+  "lari": "Mbote",
   "mand": "Mbote",
-  "fr": "Bon ; bonne",
-  "en": "Good",
+  "fr": "Bonjour",
+  "en": "Hello",
   "note": ""
  },
  {

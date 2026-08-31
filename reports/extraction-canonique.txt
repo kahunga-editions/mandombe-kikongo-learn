@@ -1,5 +1,7 @@
 lecture          4696 entrees lues dans l'index I de la v26
+arbitrage        BA -> Ba
 arbitrage        Badi bari (l). -> Badi · bari
+arbitrage        Mbote · bote -> Mbote
 gloses           69 gloses manquantes completees
 notes            282 notes rendues bilingues
 note             prononciation ajoutee : Mundjula · mindjula
@@ -22,6 +24,15 @@ coquille         mand : Yaka nsamu -> Yaka N'samu
 coquille         lari : Yula n'samu -> Yula N'samu
 coquille         mand : Yula nsamu -> Yula N'samu
 note interne     Ba mindele : Les choses qui appartiennent aux Blancs (deux mots). -> Les choses qui appartiennent aux Blancs.
+forme vide       Bawu diela ye nawu. · · Bau mayela me nawu. -> Bawu diela ye nawu. · Bau mayela me nawu.
+forme vide       Baku nkuta · · bela luaka. -> Baku nkuta · bela luaka.
+forme vide       Bakulu beto · · bankaka zeto. -> Bakulu beto · bankaka zeto.
+forme vide       Bambangi ba makuela · · mbangi za makuela. -> Bambangi ba makuela · mbangi za makuela.
+forme vide       Bantu ba kitemo · · bala ba temo. -> Bantu ba kitemo · bala ba temo.
+forme vide       Bantu ba tuila ngulu · · Ba tuila ngulu. -> Bantu ba tuila ngulu · Ba tuila ngulu.
+homographe       Mbote : 2 entrees distinctes conservees
 homographe       Muvu : 2 entrees distinctes conservees
 homographe       Vuku : 2 entrees distinctes conservees
+a arbitrer       Ba (etre) portait aussi le sens 'dard / stinger' : sens retire de l'entree 'etre', a rattacher a une entree propre si l'auteur l'atteste.
+a arbitrer       Mbote portait aussi 'bon ; bien' : conserve uniquement 'bonjour'. 'Bote' = bon / bonne reste une entree distincte.
 ecriture         /dev-server/data/dictionary-entries.json : 4696 entrees
