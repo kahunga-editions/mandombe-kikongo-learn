@@ -36,6 +36,11 @@ OUT = sys.argv[1] if len(sys.argv) > 1 else \
     "/mnt/documents/Buku-dia-Binsono-dictionnaire-Lari.odt"
 REPORT = os.path.join(ROOT, "reports", "dictionnaire-controles.txt")
 
+# couverture corrigee (accents) : remplace l'image du gabarit
+COVER_PIC = "Pictures/4921AD65F4BC4B7BB5A469C357D964EE.png"
+COVER_SRC = "/mnt/documents/book-assets/cover_page.png"
+
+
 PARA_RE = re.compile(r'<text:p text:style-name="(\w+)">(.*?)</text:p>', re.S)
 
 ENTRY_TPL = ('<text:p text:style-name="Entry">'
