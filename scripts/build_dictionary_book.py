@@ -262,6 +262,10 @@ def main():
         assert styles.count(smark) == 1
         styles = styles.replace(smark, kilolaka_annex.EXTRA_STYLES + smark)
 
+    cover = None
+    if os.path.exists(COVER_SRC):
+        cover = open(COVER_SRC, "rb").read()
+
     with zipfile.ZipFile(OUT, "w", zipfile.ZIP_DEFLATED) as zout:
         for item in zin.infolist():
             data = zin.read(item.filename)
@@ -269,11 +273,14 @@ def main():
                 data = xml.encode("utf-8")
             if item.filename == "styles.xml":
                 data = styles.encode("utf-8")
+            if cover and item.filename == COVER_PIC:
+                data = cover
             if item.filename == "mimetype":
                 zout.writestr(item, data, zipfile.ZIP_STORED)
             else:
                 zout.writestr(item, data)
     zin.close()
+
 
     with open(REPORT, "a", encoding="utf-8") as f:
         f.write("\n%d entrees publiees.\n" % len(live))
