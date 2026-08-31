@@ -38,7 +38,19 @@ GLOSS_FIX = {
     "Ama": (None, "Ma chère ; maat", "My dear ; maat"),
     "Badi bari (l).": ("Badi · bari", "Amarante (un légume).",
                        "Amaranth (a vegetable)."),
+    # homographes separes sur instruction expresse de l'auteur
+    "BA": ("Ba", "Être ; exister ; habiter", "To be ; to exist ; to inhabit"),
+    "Mbote": (None, "Bonjour", "Hello"),
+    "Mbote · bote": ("Mbote", "Bonjour", "Hello"),
+    "Bawu diela ye nawu. · · Bau mayela me nawu.":
+        ("Bawu diela ye nawu. · Bau mayela me nawu.", None, None),
 }
+
+# sens retires d'une entree parce qu'ils appartiennent a un homographe distinct
+SENSE_MOVED_OUT = {
+    "BA": ["palmier", "palm tree", "dard", "stinger", "stinge"],
+}
+
 
 NEW_NOTES = {
     "mundjula": "Prononc\u00e9 /mundzula/ ; pluriel /mindzula/ \u00b7 "
