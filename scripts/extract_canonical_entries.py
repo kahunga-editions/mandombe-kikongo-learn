@@ -234,6 +234,10 @@ def main():
         log("homographe", "%s : %d entrees distinctes conservees"
             % (group[0]["lari"], len(group)))
 
+    for line in TO_ARBITRATE:
+        log("a arbitrer", line)
+
+
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     os.makedirs(os.path.dirname(REPORT), exist_ok=True)
     with open(OUT, "w", encoding="utf-8") as f:
