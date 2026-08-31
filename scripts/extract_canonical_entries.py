@@ -46,10 +46,14 @@ GLOSS_FIX = {
         ("Bawu diela ye nawu. · Bau mayela me nawu.", None, None),
 }
 
-# sens retires d'une entree parce qu'ils appartiennent a un homographe distinct
-SENSE_MOVED_OUT = {
-    "BA": ["palmier", "palm tree", "dard", "stinger", "stinge"],
-}
+# points laisses a l'arbitrage de l'auteur : signales, jamais tranches
+TO_ARBITRATE = [
+    "Ba (etre) portait aussi le sens 'dard / stinger' : sens retire de "
+    "l'entree 'etre', a rattacher a une entree propre si l'auteur l'atteste.",
+    "Mbote portait aussi 'bon ; bien' : conserve uniquement 'bonjour'. "
+    "'Bote' = bon / bonne reste une entree distincte.",
+]
+
 
 
 NEW_NOTES = {
