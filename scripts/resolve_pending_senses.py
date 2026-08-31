@@ -115,6 +115,13 @@ def main():
         en = (e.get("en") or "").strip()
         sources = []
 
+        # sens deja arbitre a partir des sources : il prime sur une glose
+        # partielle heritee du corpus.
+        tfr, ten = TRANSLATED.get(key, ("", ""))
+        if tfr:
+            fr, en = tfr, ten
+            sources.append("sens atteste (sources du site), traduit")
+
         if not fr or not en:
             if key in site:
                 sfr, sen = site[key]
@@ -127,14 +134,6 @@ def main():
             if not fr and key in translator:
                 fr = translator[key]
                 sources.append("corpus du traducteur")
-
-        tfr, ten = TRANSLATED.get(key, ("", ""))
-        if not fr and tfr:
-            fr = tfr
-            sources.append("traduction du sens atteste")
-        if not en and ten:
-            en = ten
-            sources.append("traduction du sens atteste")
 
         if fr and en:
             out = {"lari": e["lari"], "fr": fr, "en": en}
