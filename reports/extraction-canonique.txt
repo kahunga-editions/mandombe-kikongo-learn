@@ -1,0 +1,27 @@
+lecture          4696 entrees lues dans l'index I de la v26
+arbitrage        Badi bari (l). -> Badi · bari
+gloses           69 gloses manquantes completees
+notes            282 notes rendues bilingues
+note             prononciation ajoutee : Mundjula · mindjula
+coquille         lari : B.awu diela ye nawu. · · Bau mayela me nawu. -> Bawu diela ye nawu. · · Bau mayela me nawu.
+coquille         lari : Kala nsamu -> Kala N'samu
+coquille         mand : Kala nsamu -> Kala N'samu
+coquille         lari : Kilo · thsilo · bilo -> Kilo · tshilo · bilo
+coquille         lari : Kilongisi · thsilongisi · bilongisi -> Kilongisi · tshilongisi · bilongisi
+coquille         lari : Mbua ka tiamukini kulu mu n'samu ntela. -> Mbua ka tiamukini kulu mu N'samu ntela.
+coquille         lari : Muna muntu na m'samu miandi. -> Muna muntu na N'samu miandi.
+coquille         lari : Nki · nthsi -> Nki · ntshi
+coquille         lari : Nsamu -> N'samu
+coquille         mand : Nsamu -> N'samu
+coquille         lari : Nsamu wa nuikila. -> N'samu wa nuikila.
+coquille         mand : Nsamu wa nuikila. -> N'samu wa nuikila.
+coquille         lari : Ta nsamu -> Ta N'samu
+coquille         mand : Ta nsamu -> Ta N'samu
+coquille         lari : Yaka nsamu -> Yaka N'samu
+coquille         mand : Yaka nsamu -> Yaka N'samu
+coquille         lari : Yula n'samu -> Yula N'samu
+coquille         mand : Yula nsamu -> Yula N'samu
+note interne     Ba mindele : Les choses qui appartiennent aux Blancs (deux mots). -> Les choses qui appartiennent aux Blancs.
+homographe       Muvu : 2 entrees distinctes conservees
+homographe       Vuku : 2 entrees distinctes conservees
+ecriture         /dev-server/data/dictionary-entries.json : 4696 entrees
