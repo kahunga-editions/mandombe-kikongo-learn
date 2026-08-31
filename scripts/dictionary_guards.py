@@ -77,6 +77,11 @@ def check(entries):
         if INNER_DOT.search(lari):
             errors.append("point interne dans le Lari : %s" % lari)
 
+        # 2 bis. aucune entree ne commence par un signe de ponctuation
+        if lari[:1] and not (lari[:1].isalpha() or lari[:1] in "'\u2019"):
+            errors.append("ponctuation initiale dans le Lari : %s" % lari)
+
+
         # 3. chaque forme se compose entierement en Mandombe
         for form in forms_of(lari):
             probe = form
