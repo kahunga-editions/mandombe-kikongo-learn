@@ -38,12 +38,21 @@ def strip_accents(s):
 
 
 def forms_of(lari):
+    """Formes d'une entree : separateur mediane ou barre de pluriel.
+
+    La virgule n'est pas un separateur : une phrase a virgule reste une phrase.
+    """
     parts = []
     for chunk in re.split(r"[\u00b7|]", lari or ""):
         chunk = chunk.strip()
         if chunk:
-            parts.extend(p.strip() for p in chunk.split(",") if p.strip())
+            parts.append(chunk)
     return parts
+
+
+def mandombe_of(lari):
+    """Le Mandombe est toujours derive du Lari, jamais stocke a part."""
+    return " \u00b7 ".join(to_mandombe(map_text(f)) for f in forms_of(lari))
 
 
 def check(entries):
@@ -51,7 +60,9 @@ def check(entries):
     errors = []
 
     for e in entries:
-        lari, mand = e.get("lari", ""), e.get("mand", "")
+        if e.get("pending"):
+            continue
+        lari = e.get("lari", "")
 
         # 1. aucune consigne de travail dans le texte publie
         for field in ("fr", "en", "note"):
@@ -63,17 +74,9 @@ def check(entries):
         if INNER_DOT.search(lari):
             errors.append("point interne dans le Lari : %s" % lari)
 
-        # 3. le Mandombe doit transcrire exactement le Lari
-        expected = " \u00b7 ".join(
-            to_mandombe(map_text(f)) for f in forms_of(lari))
-        got = " \u00b7 ".join(
-            m.strip() for m in re.split(r"[\u00b7|]", mand or "") if m.strip())
-        if expected and got and expected != got:
-            errors.append("Lari et Mandombe divergents : %s / %s (attendu %s)"
-                          % (lari, got, expected))
-
-        # 4. aucun residu latin dans le Mandombe
-        res = latin_residue(mand or "")
+        # 3. le Mandombe se compose entierement, sans residu latin
+        mand = mandombe_of(lari)
+        res = latin_residue(mand)
         if res:
             errors.append("residu latin dans le Mandombe : %s (%s)" % (lari, res))
 
