@@ -213,6 +213,17 @@ def main():
                 log("note interne", "%s : %s -> %s" % (e["lari"], e[field], cleaned))
                 e[field] = cleaned
 
+    # -- formes vides laissees par les decoupes successives
+    for e in entries:
+        forms = [f.strip() for f in e["lari"].split("\u00b7")]
+        keep = [f for f in forms if f]
+        if len(keep) != len(forms):
+            new = " \u00b7 ".join(keep)
+            log("forme vide", "%s -> %s" % (e["lari"], new))
+            e["lari"] = new
+
+
+
     # -- controle : aucune fusion d'homographes n'a ete heritee
     seen = {}
     for e in entries:
