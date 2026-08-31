@@ -1,28 +1,3 @@
 Tous les controles passent.
 
-4672 entrees publiees.
-
-23 entree(s) en attente de votre arbitrage :
-  - Belesa : sens incomplet dans la source : arbitrage auteur
-  - Bembe · mabembe : sens incomplet dans la source : arbitrage auteur
-  - Bikonko bitatu : sens incomplet dans la source : arbitrage auteur
-  - Bimoko : sens incomplet dans la source : arbitrage auteur
-  - Bisambanu : sens incomplet dans la source : arbitrage auteur
-  - Buaku-maku : sens incomplet dans la source : arbitrage auteur
-  - Bupipilipi : sens incomplet dans la source : arbitrage auteur
-  - Busumbu : sens incomplet dans la source : arbitrage auteur
-  - Buyele : sens incomplet dans la source : arbitrage auteur
-  - Buzitu : sens incomplet dans la source : arbitrage auteur
-  - Diambu dia kambakana. : sens incomplet dans la source : arbitrage auteur
-  - Diambu dia shilalala. : sens incomplet dans la source : arbitrage auteur
-  - Diela : sens incomplet dans la source : arbitrage auteur
-  - Funda na nkama nsambuadi na nsambuadi. : sens incomplet dans la source : arbitrage auteur
-  - Funi : sens incomplet dans la source : arbitrage auteur
-  - Hata · mahata : sens incomplet dans la source : arbitrage auteur
-  - Kalu : sens incomplet dans la source : arbitrage auteur
-  - Kimvuka : sens incomplet dans la source : arbitrage auteur
-  - Kinkala : sens incomplet dans la source : arbitrage auteur
-  - Kinkuezi : sens incomplet dans la source : arbitrage auteur
-  - Ni ta mona. : sens incomplet dans la source : arbitrage auteur
-  - Nzololo na suba. : sens incomplet dans la source : arbitrage auteur
-  - Sakalale? : sens incomplet dans la source : arbitrage auteur
+4693 entrees publiees.
