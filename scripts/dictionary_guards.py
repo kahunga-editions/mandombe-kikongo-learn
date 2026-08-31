@@ -25,6 +25,9 @@ EDITORIAL = re.compile(
 # mot latin porteur d'un point interne : Bawu ecrit B.awu
 INNER_DOT = re.compile(r"\b[A-Za-zÀ-ÿ]\.[A-Za-zÀ-ÿ]{2,}")
 
+# noms propres etrangers composes en latin, arbitrage deja rendu par l'auteur
+FOREIGN_NAMES = ["St Pierre"]
+
 # couples que l'auteur a explicitement separes : ils ne doivent jamais fusionner
 SEPARATE_SENSES = [
     ("Ba", ("être", "exister"), ("palmier", "palm tree")),
@@ -76,7 +79,10 @@ def check(entries):
 
         # 3. chaque forme se compose entierement en Mandombe
         for form in forms_of(lari):
-            res = latin_residue(to_mandombe(map_text(form)))
+            probe = form
+            for name in FOREIGN_NAMES:
+                probe = probe.replace(name, "")
+            res = latin_residue(to_mandombe(map_text(probe)))
             if res:
                 errors.append("residu latin dans le Mandombe : %s -> %s (%s)"
                               % (lari, form, res))
