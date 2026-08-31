@@ -35,4 +35,27 @@ homographe       Muvu : 2 entrees distinctes conservees
 homographe       Vuku : 2 entrees distinctes conservees
 a arbitrer       Ba (etre) portait aussi le sens 'dard / stinger' : sens retire de l'entree 'etre', a rattacher a une entree propre si l'auteur l'atteste.
 a arbitrer       Mbote portait aussi 'bon ; bien' : conserve uniquement 'bonjour'. 'Bote' = bon / bonne reste une entree distincte.
-ecriture         /dev-server/data/dictionary-entries.json : 4696 entrees
+a arbitrer       Belesa : sens incomplet, entree mise en attente
+a arbitrer       Bembe · mabembe : sens incomplet, entree mise en attente
+a arbitrer       Bikonko bitatu : sens incomplet, entree mise en attente
+a arbitrer       Bimoko : sens incomplet, entree mise en attente
+a arbitrer       Bisambanu : sens incomplet, entree mise en attente
+a arbitrer       Buaku-maku : sens incomplet, entree mise en attente
+a arbitrer       Bupipilipi : sens incomplet, entree mise en attente
+a arbitrer       Busumbu : sens incomplet, entree mise en attente
+a arbitrer       Buyele : sens incomplet, entree mise en attente
+a arbitrer       Buzitu : sens incomplet, entree mise en attente
+a arbitrer       Diambu dia kambakana. : sens incomplet, entree mise en attente
+a arbitrer       Diambu dia shilalala. : sens incomplet, entree mise en attente
+a arbitrer       Diela : sens incomplet, entree mise en attente
+a arbitrer       Funda na nkama nsambuadi na nsambuadi. : sens incomplet, entree mise en attente
+a arbitrer       Funi : sens incomplet, entree mise en attente
+a arbitrer       Hata · mahata : sens incomplet, entree mise en attente
+a arbitrer       Kalu : sens incomplet, entree mise en attente
+a arbitrer       Kimvuka : sens incomplet, entree mise en attente
+a arbitrer       Kinkala : sens incomplet, entree mise en attente
+a arbitrer       Kinkuezi : sens incomplet, entree mise en attente
+a arbitrer       Ni ta mona. : sens incomplet, entree mise en attente
+a arbitrer       Nzololo na suba. : sens incomplet, entree mise en attente
+a arbitrer       Sakalale? : sens incomplet, entree mise en attente
+ecriture         /dev-server/data/dictionary-entries.json : 4696 entrees, dont 23 en attente d'arbitrage

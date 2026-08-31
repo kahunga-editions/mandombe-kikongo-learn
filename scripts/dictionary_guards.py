@@ -80,11 +80,11 @@ def check(entries):
         if res:
             errors.append("residu latin dans le Mandombe : %s (%s)" % (lari, res))
 
-        # 5. une entree doit porter un sens
+        # 4. une entree doit porter un sens
         if not (e.get("fr") or "").strip():
             errors.append("entree sans sens francais : %s" % lari)
 
-    # 6. les sens que l'auteur a separes ne se retrouvent pas ensemble
+    # 5. les sens que l'auteur a separes ne se retrouvent pas ensemble
     for head, must_have, must_not in SEPARATE_SENSES:
         for e in entries:
             if strip_accents(e.get("lari", "").lower()) != strip_accents(head.lower()):
