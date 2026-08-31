@@ -74,11 +74,12 @@ def check(entries):
         if INNER_DOT.search(lari):
             errors.append("point interne dans le Lari : %s" % lari)
 
-        # 3. le Mandombe se compose entierement, sans residu latin
-        mand = mandombe_of(lari)
-        res = latin_residue(mand)
-        if res:
-            errors.append("residu latin dans le Mandombe : %s (%s)" % (lari, res))
+        # 3. chaque forme se compose entierement en Mandombe
+        for form in forms_of(lari):
+            res = latin_residue(to_mandombe(map_text(form)))
+            if res:
+                errors.append("residu latin dans le Mandombe : %s -> %s (%s)"
+                              % (lari, form, res))
 
         # 4. une entree doit porter un sens
         if not (e.get("fr") or "").strip():
