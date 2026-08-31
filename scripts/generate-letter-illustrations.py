@@ -117,8 +117,9 @@ def cover_portrait(glyph_title, glyph_brand, out):
 
     paste(glyph_title, 210, 380)
     ctr("Buku dia Binsono", ImageFont.truetype(SERIF, 68), 700, (224, 178, 86))
-    ctr("Dictionnaire Kikongo Lari - Mandombe", ImageFont.truetype(SANS, 30), 800, (192, 160, 117))
-    ctr("Francais · English · Kikongo Lari", ImageFont.truetype(SANS, 28), 850, (192, 160, 117))
+    ctr("Dictionnaire Kikongo Lari \u2013 Mandombe", ImageFont.truetype(SANS, 30), 800, (192, 160, 117))
+    ctr("Kikongo Lari \u00b7 Fran\u00e7ais \u00b7 English", ImageFont.truetype(SANS, 28), 850, (192, 160, 117))
+
     d.line([(CW / 2 - 90, 940), (CW / 2 + 90, 940)], fill=(138, 106, 46), width=1)
     paste(glyph_brand, 1010, 140, maxw=520)
     ctr("Nzo Mikanda", ImageFont.truetype(SERIF, 44), 1240, (224, 178, 86))
