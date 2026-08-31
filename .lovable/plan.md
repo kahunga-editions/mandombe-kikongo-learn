@@ -1,40 +1,41 @@
-# Fiabiliser le dictionnaire sans nouvelle série de versions
+# Arrêter la dérive du dictionnaire : source unique et fin des retouches en chaîne
 
-## Cause confirmée
+## Les deux causes, vérifiées dans le code
 
-Le corpus distingue bien **Bote = bon/bonne** et **Mbote = bonjour**. L'erreur n'a pas été trouvée dans le corpus : elle a été créée par le générateur du livre.
+**1. Les erreurs sont masquées, pas corrigées.**
+`scripts/mandombe_graphies.py` contient déjà `"b.awu" → "bawu"`. Cette table ne répare que le champ **Mandombe**. Le champ Lari n'est jamais nettoyé. Résultat dans la v29 : Mandombe `Bawu diela ye nawu` à côté du Lari `B.awu diela ye nawu`. La faute était connue et laissée visible.
 
-La fusion automatique rapproche des entrées selon des ressemblances orthographiques ou des mots communs dans les gloses, puis répète ces rapprochements jusqu'à un « point fixe ». Elle a fusionné **Bote** avec une entrée contenant **Mbote**, puis propagé l'association dans les index. La v30, construite depuis la v29, en hérite.
+**2. Chaque version repart de la version précédente.**
+`v30` est construite depuis l'ODT `v29`, `v28` depuis `v26`. Le script relit un document déjà transformé, puis réapplique fusions, nettoyage de gloses et mises en majuscule sur du texte déjà traité. Chaque passage peut abîmer des entrées correctes : c'est pourquoi de nouvelles erreurs apparaissent à chaque version au lieu de disparaître.
 
-## Changement de méthode
+## Correction de fond
 
-1. **Gel immédiat des versions automatiques**
-   - Aucune v31, v32, etc. ne sera produite par succession de corrections ponctuelles.
-   - L'export du livre reste bloqué tant que les fusions automatiques peuvent inventer une relation.
-   - L'auteur n'aura qu'un lot consolidé à relire, plus une série interminable d'artefacts.
+1. **Une seule source de vérité**
+   - Le livre est reconstruit depuis les données validées du corpus, plus la liste des arbitrages de l'auteur.
+   - Interdire définitivement de prendre un ODT généré comme source d'une version suivante.
+   - Les corrections de l'auteur sont enregistrées comme entrées de données, jamais comme retouches de document.
 
-2. **Retirer l'inférence linguistique du générateur**
-   - Supprimer les fusions fondées sur ressemblance, préfixe, mot commun ou transitivité.
-   - N'autoriser qu'une relation explicitement attestée dans les données validées par l'auteur.
-   - En cas de doute : conserver les entrées séparées et les lister dans un rapport ; ne jamais trancher automatiquement.
+2. **Corriger le texte, pas seulement l'affichage**
+   - Toute graphie corrigée s'applique au Lari **et** au Mandombe, jamais à un seul des deux.
+   - Réparer `B.awu` → `bawu` dans le champ Lari et rechercher tous les cas de même forme (lettre isolée suivie d'un point à l'intérieur d'un mot).
+   - Une correction connue ne doit plus pouvoir rester visible dans une colonne.
 
-3. **Audit intégral hors livre**
-   - Rejouer toutes les fusions v27–v29 contre les entrées sources du corpus Nzo Mikanda.
-   - Produire un rapport trié en trois catégories : relation attestée, conflit à arbitrer, relation non attestée à supprimer.
-   - Corriger en particulier **Bote — bon/bonne** et **Mbote — bonjour** comme deux entrées indépendantes.
-   - Ne pas modifier les phrases attestées où *bote* signifie « bon/bien » ni celles où *Mbote* est une salutation.
+3. **Supprimer l'inférence linguistique**
+   - Retirer les fusions fondées sur ressemblance, préfixe, mot commun dans les gloses ou transitivité — la cause de `Bote` fusionné avec `Mbote`.
+   - Rétablir **Bote = bon/bonne** et **Mbote = bonjour** comme deux entrées indépendantes.
+   - Un doute produit un signalement, jamais une décision.
 
-4. **QA bloquante anti-invention**
-   - Refuser toute entrée dont le couple exact `forme Lari ↔ sens` a changé sans relation attestée.
-   - Refuser l'utilisation d'une traduction générée comme preuve d'une fusion.
-   - Ajouter un test permanent : **Bote ≠ Mbote** et **Mbote seul ne signifie pas bon/bonne**.
-   - Faire échouer l'export complet si une fusion automatique ou une glose non sourcée demeure.
+4. **Contrôles bloquants avant toute génération**
+   - Refuser un mot latin contenant un point interne, une lettre orpheline ou un résidu de découpe.
+   - Refuser toute divergence entre le Lari et le Mandombe d'une même entrée.
+   - Refuser tout couple `forme ↔ sens` modifié sans arbitrage attesté ; test permanent `Bote ≠ Mbote`.
+   - Si un contrôle échoue, aucun document n'est produit : un rapport est remis à la place.
 
-5. **Une seule reconstruction finale**
-   - Reconstruire le livre FR/EN depuis les entrées attestées, sans reprendre les fusions corrompues de la v29.
-   - Contrôler **Bote** et **Mbote** dans l'entrée principale et dans les trois index, en ODT et PDF.
-   - Livrer un unique document corrigé accompagné du rapport d'audit et de la courte liste des cas nécessitant l'arbitrage de l'auteur.
+5. **Une seule reconstruction, contrôlée avant livraison**
+   - Reconstruire le livre FR/EN depuis la source propre, sans réutiliser la v29.
+   - Vérifier page par page l'ODT et le PDF avant de vous les remettre.
+   - Livrer un document unique, le rapport d'audit, et la courte liste des cas qui exigent réellement votre arbitrage.
 
-## Règle définitive
+## Engagement
 
-Le système reste un **lecteur de corpus sans compétence linguistique propre** : absence de preuve = absence de relation. Il peut signaler un rapprochement suspect, mais jamais le publier comme équivalence.
+Fin des versions successives : plus aucun document n'est publié tant que les contrôles ne passent pas. Le système reste un lecteur de corpus — absence de preuve = absence de relation — et il ne vous soumet plus la relecture d'erreurs qu'il pouvait détecter lui-même.
