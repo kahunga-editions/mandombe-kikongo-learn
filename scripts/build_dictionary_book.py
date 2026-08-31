@@ -28,6 +28,7 @@ sys.path.insert(0, HERE)
 from mandombe_typing import to_mandombe  # noqa: E402
 from mandombe_graphies import map_text  # noqa: E402
 import dictionary_guards as guards  # noqa: E402
+import kilolaka_annex  # noqa: E402
 
 TEMPLATE = "/mnt/documents/dictionnaire-lari-v26.odt"
 ENTRIES = os.path.join(ROOT, "data", "dictionary-entries.json")
@@ -175,17 +176,38 @@ def main():
     live = [e for e in entries if not e.get("pending")]
     held = [e for e in entries if e.get("pending")]
 
+    grid_path = kilolaka_annex.GRID
+    if not os.path.exists(grid_path):
+        sys.exit("grille Kilolaka absente : lancer scripts/extract_kilolaka_grid.py")
+    annex, n_mazita, residues = kilolaka_annex.build_annex(
+        json.load(open(grid_path, encoding="utf-8")))
+    if residues:
+        guards.report(["residu latin dans l'annexe Kilolaka : %s" % lari
+                       for lari, _, _ in residues], REPORT)
+        sys.exit("annexe Kilolaka : residus latins, aucun document produit.")
+
     zin = zipfile.ZipFile(TEMPLATE)
     xml = zin.read("content.xml").decode("utf-8")
     xml = replace_section(xml, "IndexLari", build_index_i(live))
     xml = replace_section(xml, "IndexFR", build_small_index(live, "fr", "en"))
     xml = replace_section(xml, "IndexEN", build_small_index(live, "en", "fr"))
+    marker = "</office:text>"
+    assert xml.count(marker) == 1
+    xml = xml.replace(marker, annex + marker)
+
+    styles = zin.read("styles.xml").decode("utf-8")
+    if "KiloZita" not in styles:
+        smark = "</office:styles>"
+        assert styles.count(smark) == 1
+        styles = styles.replace(smark, kilolaka_annex.EXTRA_STYLES + smark)
 
     with zipfile.ZipFile(OUT, "w", zipfile.ZIP_DEFLATED) as zout:
         for item in zin.infolist():
             data = zin.read(item.filename)
             if item.filename == "content.xml":
                 data = xml.encode("utf-8")
+            if item.filename == "styles.xml":
+                data = styles.encode("utf-8")
             if item.filename == "mimetype":
                 zout.writestr(item, data, zipfile.ZIP_STORED)
             else:
@@ -200,6 +222,7 @@ def main():
                 f.write("  - %s : %s\n" % (e["lari"], e["pending"]))
     print("livre ecrit : %s" % OUT)
     print("%d entrees publiees, %d en attente d'arbitrage" % (len(live), len(held)))
+    print("annexe Kilolaka : %d Mazita" % n_mazita)
 
 
 if __name__ == "__main__":
