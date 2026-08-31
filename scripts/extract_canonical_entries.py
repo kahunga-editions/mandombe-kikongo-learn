@@ -237,16 +237,31 @@ def main():
     for line in TO_ARBITRATE:
         log("a arbitrer", line)
 
+    # -- entrees sans sens complet : mises en attente, jamais devinees
+    out = []
+    for e in entries:
+        rec = {"lari": e["lari"], "fr": e["fr"], "en": e["en"]}
+        if e["note"]:
+            rec["note"] = e["note"]
+        if not e["fr"].strip() or not e["en"].strip():
+            rec["pending"] = "sens incomplet dans la source : arbitrage auteur"
+            log("a arbitrer", "%s : sens incomplet, entree mise en attente"
+                % e["lari"])
+        out.append(rec)
+    held = sum(1 for r in out if r.get("pending"))
 
+    # le Mandombe n'est plus stocke : il est toujours derive du Lari
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     os.makedirs(os.path.dirname(REPORT), exist_ok=True)
     with open(OUT, "w", encoding="utf-8") as f:
-        json.dump(entries, f, ensure_ascii=False, indent=1)
-    log("ecriture", "%s : %d entrees" % (OUT, len(entries)))
+        json.dump(out, f, ensure_ascii=False, indent=1)
+    log("ecriture", "%s : %d entrees, dont %d en attente d'arbitrage"
+        % (OUT, len(out), held))
     with open(REPORT, "w", encoding="utf-8") as f:
         f.write("\n".join(REPORT_LINES) + "\n")
-    print("\n".join(REPORT_LINES[-12:]))
-    print("source canonique ecrite : %s (%d entrees)" % (OUT, len(entries)))
+    print("\n".join(REPORT_LINES[-10:]))
+    print("source canonique : %d entrees, %d en attente" % (len(out), held))
+
 
 
 if __name__ == "__main__":
