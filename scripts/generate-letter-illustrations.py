@@ -85,7 +85,7 @@ def cover(glyph_title,glyph_brand,out):
         b=d.textbbox((0,0),text,font=font)
         d.text(((W-(b[2]-b[0]))/2-b[0],y),text,font=font,fill=fill)
     ctr("Buku dia Binsono",ImageFont.truetype(SERIF,62),520,(224,178,86))
-    ctr("Dictionnaire Kikongo Lari - Mandombe",ImageFont.truetype(SANS,30),605,(192,160,117))
+    ctr("Dictionnaire Kikongo Lari \u2013 Mandombe",ImageFont.truetype(SANS,30),605,(192,160,117))
     d.line([(W/2-90,680),(W/2+90,680)],fill=(138,106,46),width=1)
     paste_glyph(img,glyph_brand,720,130,maxw=520)
     ctr("Nzo Mikanda",ImageFont.truetype(SERIF,40),880,(224,178,86))
