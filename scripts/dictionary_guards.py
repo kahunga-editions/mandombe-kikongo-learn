@@ -17,9 +17,11 @@ from mandombe_graphies import map_text  # noqa: E402
 
 # consignes de saisie qui ne doivent jamais s'imprimer
 EDITORIAL = re.compile(
-    r"\((?:en\s+)?(?:deux|2)\s+mots\)"
-    r"|\(en\s+un\s+seul\s+mot\)"
-    r"|\((?:sans|avec)\s+espace\)",
+    r"\(?\b(?:en\s+)?(?:deux|2)\s+mots\b\.?"
+    r"|\(?\ben\s+un\s+seul\s+mot\b\.?"
+    r"|\(?\b(?:sans|avec)\s+espace\b\.?"
+    r"|\btwo\s+words\b\.?"
+    r"|\bone\s+word\b\.?",
     re.I)
 
 # mot latin porteur d'un point interne : Bawu ecrit B.awu
