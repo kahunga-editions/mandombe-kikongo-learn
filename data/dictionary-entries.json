@@ -131,11 +131,6 @@
     "note": "Pluriel de Andi. · EN — Plural of Andi."
   },
   {
-    "lari": "Bawu diela ye nawu. · Bau mayela me nawu.",
-    "fr": "Eux, ils sont intelligents.",
-    "en": "They are intelligent."
-  },
-  {
     "lari": "Ba",
     "fr": "Être ; exister ; habiter",
     "en": "To be ; to exist ; to inhabit"
@@ -190,11 +185,6 @@
     "lari": "Ba kubama luena ?",
     "fr": "Etes-vous prêts ?",
     "en": "Are you ready? (plural)."
-  },
-  {
-    "lari": "Ba · maba",
-    "fr": "Palmier ; palmiers",
-    "en": "Palm tree ; palm trees"
   },
   {
     "lari": "Ba mindele",
@@ -260,6 +250,11 @@
     "lari": "Ba zololo.",
     "fr": "Ils/elles aiment / veulent.",
     "en": "They love / they want."
+  },
+  {
+    "lari": "Ba · maba",
+    "fr": "Palmier ; palmiers",
+    "en": "Palm tree ; palm trees"
   },
   {
     "lari": "Baba",
@@ -398,11 +393,6 @@
     "en": "Man ; male ; husband"
   },
   {
-    "lari": "Bakala · babakala",
-    "fr": "Mâle(s) ; homme(s) ; époux ; garçon(s) ; mari(s)",
-    "en": "Male(s) ; man men ; husband(s) ; boy(s)"
-  },
-  {
     "lari": "Bakala di moshi.",
     "fr": "Un homme (un seul).",
     "en": "One man."
@@ -411,6 +401,11 @@
     "lari": "Bakala dia zitama · bakala dia jitama.",
     "fr": "Un homme respectable.",
     "en": "A respectable man."
+  },
+  {
+    "lari": "Bakala · babakala",
+    "fr": "Mâle(s) ; homme(s) ; époux ; garçon(s) ; mari(s)",
+    "en": "Male(s) ; man men ; husband(s) ; boy(s)"
   },
   {
     "lari": "Bakama",
@@ -499,11 +494,6 @@
     "note": "Voix passive. · EN — Passive voice."
   },
   {
-    "lari": "Baku · bakama",
-    "fr": "être pris",
-    "en": "to be caught"
-  },
-  {
     "lari": "Baku malavu",
     "fr": "Se saoûler",
     "en": "To get drunk"
@@ -527,6 +517,11 @@
     "lari": "Baku nsonsi",
     "fr": "Avoir honte",
     "en": "To be ashamed"
+  },
+  {
+    "lari": "Baku · bakama",
+    "fr": "être pris",
+    "en": "to be caught"
   },
   {
     "lari": "Bakuka",
@@ -765,11 +760,6 @@
     "en": "south ; bottom of ; pond ; lake (also: south ; below ; bottom"
   },
   {
-    "lari": "Banda · mabanda",
-    "fr": "Marigot(s) ; trou(s) d'eau stagnant",
-    "en": "Pool(s) ; stagnant water hole"
-  },
-  {
     "lari": "Banda mbata",
     "fr": "Gifler ; frapper",
     "en": "To slap ; to hit"
@@ -778,6 +768,11 @@
     "lari": "Banda moyo",
     "fr": "Bas-ventre",
     "en": "Lower belly"
+  },
+  {
+    "lari": "Banda · mabanda",
+    "fr": "Marigot(s) ; trou(s) d'eau stagnant",
+    "en": "Pool(s) ; stagnant water hole"
   },
   {
     "lari": "Bandakana",
@@ -1043,6 +1038,11 @@
     "en": "They ; them"
   },
   {
+    "lari": "Bawu diela ye nawu. · Bau mayela me nawu.",
+    "fr": "Eux, ils sont intelligents.",
+    "en": "They are intelligent."
+  },
+  {
     "lari": "Bawu mayela me nawu.",
     "fr": "Eux sont intelligents.",
     "en": "They are intelligent."
@@ -1068,14 +1068,14 @@
     "en": "Last night"
   },
   {
-    "lari": "Belesa · bukisa",
-    "fr": "être au chevet d'un malade",
-    "en": "to be at a sick person's bedside"
-  },
-  {
     "lari": "Belesa",
     "fr": "Ce qui rend malade",
     "en": "What makes you sick"
+  },
+  {
+    "lari": "Belesa · bukisa",
+    "fr": "être au chevet d'un malade",
+    "en": "to be at a sick person's bedside"
   },
   {
     "lari": "Belezi · babelezi",
@@ -1250,14 +1250,14 @@
     "en": "To lower"
   },
   {
-    "lari": "Bi bingiri ya.",
-    "fr": "C'est déjà cuit.",
-    "en": "It's already cooked."
-  },
-  {
     "lari": "Bi",
     "fr": "/bi/ signifie la multiplication de l'être intérieur, in the Kongo tradition.",
     "en": "/bi/ means the multiplication of the inner being, in the Kongo tradition."
+  },
+  {
+    "lari": "Bi bingiri ya.",
+    "fr": "C'est déjà cuit.",
+    "en": "It's already cooked."
   },
   {
     "lari": "Bia",
@@ -1614,12 +1614,6 @@
     "lari": "Bikabinga",
     "fr": "saluer régulièrement",
     "en": "to greet regularly"
-  },
-  {
-    "lari": "Bìkàká",
-    "fr": "saluer habituellement",
-    "en": "to greet habitually",
-    "note": "Habituel -ak-. · EN — Habitual -ak."
   },
   {
     "lari": "Bikakudi",
@@ -2197,11 +2191,6 @@
     "en": "Cemetery ; necropolis ; cemeteries"
   },
   {
-    "lari": "Bìtú",
-    "fr": "têtes",
-    "en": "heads"
-  },
-  {
     "lari": "Bituizi",
     "fr": "animaux domestiques ; animaux d'élevage",
     "en": "domestic animals"
@@ -2464,15 +2453,15 @@
     "en": "I eat a lot."
   },
   {
+    "lari": "Bua ka bua pisumuka.",
+    "fr": "Il · elle est sur le point de tomber.",
+    "en": "He/ she is about to fall. ; to be about to fall."
+  },
+  {
     "lari": "Bua ka bua.",
     "fr": "Elle va tomber ; il va tomber.",
     "en": "He /she is going to fall.",
     "note": "En parlant de soi — les anciens savaient qu'ils n'étaient pas leurs corps. · EN — Speaking of oneself — the elders knew they were not their bodies."
-  },
-  {
-    "lari": "Bua ka bua pisumuka.",
-    "fr": "Il · elle est sur le point de tomber.",
-    "en": "He/ she is about to fall. ; to be about to fall."
   },
   {
     "lari": "Bua ni bua.",
@@ -2694,11 +2683,6 @@
     "en": "How did you do?"
   },
   {
-    "lari": "Bue ta?",
-    "fr": "Que dis-vous ? ; très bien ! le repas est terminé.",
-    "en": "What do you say? ; very well! The meal is finished."
-  },
-  {
     "lari": "Bue ta bu kota ?.",
     "fr": "Que dites-vous en entrant ?",
     "en": "What do you say when entering?"
@@ -2727,6 +2711,11 @@
     "lari": "Bue ta tangila mazita ma?",
     "fr": "Comment dis-tu ces syllables ?",
     "en": "How do you say these syllables?"
+  },
+  {
+    "lari": "Bue ta?",
+    "fr": "Que dis-vous ? ; très bien ! le repas est terminé.",
+    "en": "What do you say? ; very well! The meal is finished."
   },
   {
     "lari": "Bue tele?",
@@ -3138,11 +3127,6 @@
     "lari": "Bulungi",
     "fr": "Anniversaire ; fête en mémoire",
     "en": "Anniversary ; memorial feast"
-  },
-  {
-    "lari": "Bùlwèzì",
-    "fr": "maladie",
-    "en": "illness"
   },
   {
     "lari": "Buma",
@@ -3703,6 +3687,22 @@
     "en": "Stupidity ; foolishness"
   },
   {
+    "lari": "Bìkàká",
+    "fr": "saluer habituellement",
+    "en": "to greet habitually",
+    "note": "Habituel -ak-. · EN — Habitual -ak."
+  },
+  {
+    "lari": "Bìtú",
+    "fr": "têtes",
+    "en": "heads"
+  },
+  {
+    "lari": "Bùlwèzì",
+    "fr": "maladie",
+    "en": "illness"
+  },
+  {
     "lari": "Chemi?",
     "fr": "Ça va ?",
     "en": "How are you?"
@@ -4034,11 +4034,6 @@
     "en": "to raise"
   },
   {
-    "lari": "Dìkúngù",
-    "fr": "réunion",
-    "en": "meeting"
-  },
-  {
     "lari": "Dila",
     "fr": "Pleurer",
     "en": "To cry"
@@ -4135,15 +4130,15 @@
     "en": "Tooth"
   },
   {
-    "lari": "Dinu · meno",
-    "fr": "Dent ; dents",
-    "en": "Tooth ; teeth"
-  },
-  {
     "lari": "Dinu yaya di ta yaya.",
     "fr": "La dent me fait mal.",
     "en": "The tooth hurts me.",
     "note": "Dans la tradition Kongo, le présent est un passé — les êtres d'ici sont déjà morts, à l'instar des étoiles, d'où l'emploi du passé pour exprimer le présent. · EN — In Kongo tradition, the present is a past — beings here are already dead, like stars, hence the use of the past tense to express the present."
+  },
+  {
+    "lari": "Dinu · meno",
+    "fr": "Dent ; dents",
+    "en": "Tooth ; teeth"
   },
   {
     "lari": "Dio",
@@ -4199,11 +4194,6 @@
     "en": "To run ; to escape ; to run away"
   },
   {
-    "lari": "Djoka · bata",
-    "fr": "courir",
-    "en": "to run"
-  },
-  {
     "lari": "Djoka Milou!",
     "fr": "Cours Milou !",
     "en": "Run Milou!"
@@ -4212,6 +4202,11 @@
     "lari": "Djoka ntinu",
     "fr": "Courir vite",
     "en": "Run fast"
+  },
+  {
+    "lari": "Djoka · bata",
+    "fr": "courir",
+    "en": "to run"
   },
   {
     "lari": "Djoka · vikuna · yandula",
@@ -4291,11 +4286,6 @@
     "en": "To make someone come out of somewhere"
   },
   {
-    "lari": "Dûkisa mênga",
-    "fr": "saigner",
-    "en": "to bleed"
-  },
-  {
     "lari": "Dukisa muela",
     "fr": "expirez",
     "en": "exhale"
@@ -4316,6 +4306,16 @@
     "fr": "calmez-vous",
     "en": "calm down (plural)",
     "note": "Prononcé /dzuneno/ · EN — Pronounced /dzuneno/"
+  },
+  {
+    "lari": "Dìkúngù",
+    "fr": "réunion",
+    "en": "meeting"
+  },
+  {
+    "lari": "Dûkisa mênga",
+    "fr": "saigner",
+    "en": "to bleed"
   },
   {
     "lari": "Ehe",
@@ -4859,14 +4859,15 @@
     "en": "One thousand (1 ; 000) ; package ; parcel ; thousand"
   },
   {
+    "lari": "Funda (v.)",
+    "fr": "Accuser ; comparaître en justice",
+    "en": "To accuse ; to appear in court.",
+    "note": "Homographe : 'Funda' (nom) = un paquet ; 'Funda' (verbe) = accuser. · EN — Homograph: 'Funda' (noun) = a bundle ; 'Funda' (verb) = to accuse."
+  },
+  {
     "lari": "Funda dia biaji.",
     "fr": "Un milliard (1 000 000 000).",
     "en": "One billion (1. ; 000.)."
-  },
-  {
-    "lari": "Funda · fundana",
-    "fr": "dénoncer",
-    "en": "to denounce"
   },
   {
     "lari": "Funda na nkama nsambuadi na nsambuadi.",
@@ -4879,10 +4880,9 @@
     "en": "To sit cross-legged"
   },
   {
-    "lari": "Funda (v.)",
-    "fr": "Accuser ; comparaître en justice",
-    "en": "To accuse ; to appear in court.",
-    "note": "Homographe : 'Funda' (nom) = un paquet ; 'Funda' (verbe) = accuser. · EN — Homograph: 'Funda' (noun) = a bundle ; 'Funda' (verb) = to accuse."
+    "lari": "Funda · fundana",
+    "fr": "dénoncer",
+    "en": "to denounce"
   },
   {
     "lari": "Fundana",
@@ -5195,15 +5195,15 @@
     "en": "A boar does not let itself be pushed around."
   },
   {
-    "lari": "Ha ma hambu.",
-    "fr": "À l'intersection.",
-    "en": "At the intersection."
-  },
-  {
     "lari": "Ha ma hambu ma njila · hambu nzila.",
     "fr": "Carrefour.",
     "en": "Crossroads.",
     "note": "Prononcé /njila/ · EN — Pronounced /njila/"
+  },
+  {
+    "lari": "Ha ma hambu.",
+    "fr": "À l'intersection.",
+    "en": "At the intersection."
   },
   {
     "lari": "Ha manima",
@@ -5612,8 +5612,8 @@
   },
   {
     "lari": "Jimbakane",
-    "fr": "perdu (chemin)",
-    "en": "lost (path)"
+    "fr": "perdu (chemin) ; tu es perdu",
+    "en": "lost (path) ; you are lost"
   },
   {
     "lari": "Jimbakasa",
@@ -5711,17 +5711,6 @@
     "en": "They're not hungry."
   },
   {
-    "lari": "Kà kábá ko.",
-    "fr": "Il ne partage pas.",
-    "en": "He does not share."
-  },
-  {
-    "lari": "Ka...ko",
-    "fr": "Négation (ne.pas) ; ne.pas (négation discontinue)",
-    "en": "Negation (not) ; not (discontinuous negation)",
-    "note": "Les deux parties encadrent le verbe. · EN — Both parts frame the verb."
-  },
-  {
     "lari": "Ka ku mbakisa ka ko.",
     "fr": "Il ne m'aide pas.",
     "en": "He doesn't help me."
@@ -5752,24 +5741,19 @@
     "en": "You didn't know."
   },
   {
-    "lari": "Kà lùbúlá ándi.",
-    "fr": "Ne cassez pas !",
-    "en": "Do not break!"
-  },
-  {
     "lari": "Ka luena na nsatu ko.",
     "fr": "Vous n'avez pas faim.",
     "en": "You're not hungry (plural)."
   },
   {
-    "lari": "Ka meno a ko.",
-    "fr": "Ce n'est pas moi.",
-    "en": "It is not me."
-  },
-  {
     "lari": "Ka meno a ko na bele.",
     "fr": "Ce n'était pas moi.",
     "en": "It was not me."
+  },
+  {
+    "lari": "Ka meno a ko.",
+    "fr": "Ce n'est pas moi.",
+    "en": "It is not me."
   },
   {
     "lari": "Ka na didi eti ko.",
@@ -5879,17 +5863,6 @@
     "note": "Prononcé /njena/ · EN — Pronounced /njena/"
   },
   {
-    "lari": "Ká nkàbìlí ko.",
-    "fr": "Je ne partageais pas (éloigné).",
-    "en": "I was not sharing (remote).",
-    "note": "ká avec ton haut devant verbe sans more préradicale ; kó avec ton haut final opposé au registre du verbe. · EN — ká with a high tone preceding the verb, without a pre-radical element ; kó with a high final tone contrasting with the verb's register."
-  },
-  {
-    "lari": "Ka nzebi a ko.",
-    "fr": "Je ne sais pas.",
-    "en": "I do not know. ; i don't know."
-  },
-  {
     "lari": "Ka nzebi a ko bu ba ta.",
     "fr": "Je ne sais pas comment dire.",
     "en": "I don't know how to say."
@@ -5917,19 +5890,24 @@
     "en": "I don't know if you love me."
   },
   {
+    "lari": "Ka nzebi a ko.",
+    "fr": "Je ne sais pas.",
+    "en": "I do not know. ; i don't know."
+  },
+  {
     "lari": "Ka nzeri a na tshari ko.",
     "fr": "Je n'étais pas triste.",
     "en": "I was not sad."
   },
   {
-    "lari": "Ka nzololo a ko.",
-    "fr": "Je n'aime pas.",
-    "en": "I don't like."
-  },
-  {
     "lari": "Ka nzololo a ko · ngo nguani.",
     "fr": "Je ne veux pas.",
     "en": "I do not want to."
+  },
+  {
+    "lari": "Ka nzololo a ko.",
+    "fr": "Je n'aime pas.",
+    "en": "I don't like."
   },
   {
     "lari": "Ka tu bakishinandi baleke.",
@@ -5967,14 +5945,15 @@
     "en": "We're not hungry."
   },
   {
-    "lari": "Kà tùkábá ko.",
-    "fr": "Nous ne partageons pas.",
-    "en": "We do not share."
-  },
-  {
     "lari": "Ka wiri a ko.",
     "fr": "Il/elle ne comprend pas.",
     "en": "He/she doesn't understand."
+  },
+  {
+    "lari": "Ka...ko",
+    "fr": "Négation (ne.pas) ; ne.pas (négation discontinue)",
+    "en": "Negation (not) ; not (discontinuous negation)",
+    "note": "Les deux parties encadrent le verbe. · EN — Both parts frame the verb."
   },
   {
     "lari": "Kaba",
@@ -5985,11 +5964,6 @@
     "lari": "Kaba biloko na bantu.",
     "fr": "Partager les choses avec les gens.",
     "en": "Share things with the people."
-  },
-  {
-    "lari": "Kàbàká",
-    "fr": "partager habituellement",
-    "en": "to share habitually"
   },
   {
     "lari": "Kabakana",
@@ -6135,14 +6109,14 @@
     "en": "Train ; bus"
   },
   {
-    "lari": "Kalu · bikalu",
-    "fr": "échelle ; escalier",
-    "en": "Ladder ; stairs"
-  },
-  {
     "lari": "Kalu ka dia turiri ko.",
     "fr": "Le train a du retard.",
     "en": "The train is late."
+  },
+  {
+    "lari": "Kalu · bikalu",
+    "fr": "échelle ; escalier",
+    "en": "Ladder ; stairs"
   },
   {
     "lari": "Kaluka",
@@ -6150,14 +6124,14 @@
     "en": "To become ; to transform ; to change"
   },
   {
-    "lari": "Kaluka · kueka",
-    "fr": "devenir",
-    "en": "to become"
-  },
-  {
     "lari": "Kaluka zoba",
     "fr": "S'abêtir",
     "en": "To become foolish"
+  },
+  {
+    "lari": "Kaluka · kueka",
+    "fr": "devenir",
+    "en": "to become"
   },
   {
     "lari": "Kalula",
@@ -6263,20 +6237,10 @@
     "en": "To stretch, massage / The matrilineage, family"
   },
   {
-    "lari": "Kanda · makanda",
-    "fr": "Famille",
-    "en": "Family"
-  },
-  {
     "lari": "Kanda (n.)",
     "fr": "Famille ; matrilignage",
     "en": "Family ; matrilineage",
     "note": "Homographe: 'Kanda' (verbe) = masser, frotter; 'Kanda' (nom) = famille, matrilignage · EN — Homograph: 'Kanda' (verb) = to massage, rub; 'Kanda' (noun) = family, matrilineage"
-  },
-  {
-    "lari": "Kanda na bandiku.",
-    "fr": "Famille et relations.",
-    "en": "Family and relationships."
   },
   {
     "lari": "Kanda (v.)",
@@ -6284,10 +6248,20 @@
     "en": "To massage ; to stretch ; to rub"
   },
   {
+    "lari": "Kanda na bandiku.",
+    "fr": "Famille et relations.",
+    "en": "Family and relationships."
+  },
+  {
     "lari": "Kanda ya bakulu.",
     "fr": "La famille des ancêtres.",
     "en": "The ancestral family.",
     "note": "Kanda est le clan matrilinéaire — l'unité sociale fondamentale de la société Kongo · EN — Kanda is the matrilineal clan — the core social unit of Kongo society"
+  },
+  {
+    "lari": "Kanda · makanda",
+    "fr": "Famille",
+    "en": "Family"
   },
   {
     "lari": "Kanga",
@@ -6375,11 +6349,6 @@
     "en": "Not ; no ; if (conditional) ; certainly not"
   },
   {
-    "lari": "Kani, ka meno a ko na bele.",
-    "fr": "Non, ce n'était pas moi.",
-    "en": "No, it was not me."
-  },
-  {
     "lari": "Kani kabue",
     "fr": "jamais",
     "en": "never"
@@ -6388,6 +6357,11 @@
     "lari": "Kani muntu",
     "fr": "Personne",
     "en": "Nobody"
+  },
+  {
+    "lari": "Kani, ka meno a ko na bele.",
+    "fr": "Non, ce n'était pas moi.",
+    "en": "No, it was not me."
   },
   {
     "lari": "Kanku",
@@ -7104,14 +7078,14 @@
     "en": "season"
   },
   {
-    "lari": "Kinati kia madia.",
-    "fr": "Serveur.",
-    "en": "Waiter."
-  },
-  {
     "lari": "Kinati kia madia ni yandi wo .",
     "fr": "Le serveur arrive.",
     "en": "The waiter is coming."
+  },
+  {
+    "lari": "Kinati kia madia.",
+    "fr": "Serveur.",
+    "en": "Waiter."
   },
   {
     "lari": "Kindiongoloko · bindiongoloko",
@@ -7149,14 +7123,14 @@
     "en": "seal ; stamp"
   },
   {
-    "lari": "Kinienia · tshinienia",
-    "fr": "Fourmi",
-    "en": "Ant"
-  },
-  {
     "lari": "Kinienia wa zolo bia fua.",
     "fr": "La fourmi qui aime ce qui est mort.",
     "en": "The ant that loves dead things."
+  },
+  {
+    "lari": "Kinienia · tshinienia",
+    "fr": "Fourmi",
+    "en": "Ant"
   },
   {
     "lari": "Kinimbi",
@@ -7212,14 +7186,14 @@
     "en": "Pickaxe"
   },
   {
-    "lari": "Kinkuêlankuela · binkuêlankuela",
-    "fr": "personne volage",
-    "en": "fickle person"
-  },
-  {
     "lari": "Kinkuezi",
     "fr": "Alliance",
     "en": "Alliance"
+  },
+  {
+    "lari": "Kinkuêlankuela · binkuêlankuela",
+    "fr": "personne volage",
+    "en": "fickle person"
   },
   {
     "lari": "Kinsamu",
@@ -7276,14 +7250,14 @@
     "en": "board"
   },
   {
-    "lari": "Kintinu · bintinu",
-    "fr": "royaume",
-    "en": "kingdom"
-  },
-  {
     "lari": "Kintinu kia buidi · kintinu kia bua.",
     "fr": "Le royaume est tombé.",
     "en": "The kingdom has fallen."
+  },
+  {
+    "lari": "Kintinu · bintinu",
+    "fr": "royaume",
+    "en": "kingdom"
   },
   {
     "lari": "Kintombo",
@@ -7291,14 +7265,14 @@
     "en": "Kingfisher ; april to May"
   },
   {
-    "lari": "Kintu · bintu",
-    "fr": "ananas",
-    "en": "pineapple(s)"
-  },
-  {
     "lari": "Kintu kieka kia yuma.",
     "fr": "L'ananas est desséché.",
     "en": "The pineapple is dried out."
+  },
+  {
+    "lari": "Kintu · bintu",
+    "fr": "ananas",
+    "en": "pineapple(s)"
   },
   {
     "lari": "Kintuani",
@@ -7439,11 +7413,6 @@
     "lari": "Kitoko",
     "fr": "élégance",
     "en": "elegance"
-  },
-  {
-    "lari": "Kìtú",
-    "fr": "tête",
-    "en": "head"
   },
   {
     "lari": "Kituiji",
@@ -7917,14 +7886,14 @@
     "en": "Outside"
   },
   {
-    "lari": "Ku mbaji · ha mbaji.",
-    "fr": "dehors",
-    "en": "outside"
-  },
-  {
     "lari": "Ku mbaji ya mipepe ngiele.",
     "fr": "Je vais à l'aéroport.",
     "en": "I am going to the airport."
+  },
+  {
+    "lari": "Ku mbaji · ha mbaji.",
+    "fr": "dehors",
+    "en": "outside"
   },
   {
     "lari": "Ku mbazi kua kubi.",
@@ -7947,14 +7916,14 @@
     "en": "I work in France."
   },
   {
-    "lari": "Ku munua ti.",
-    "fr": "Il paraît que.",
-    "en": "It seems that."
-  },
-  {
     "lari": "Ku munua ti mbaji ka tula.",
     "fr": "Il paraît qu'il arrive demain.",
     "en": "It seems he arrives tomorrow."
+  },
+  {
+    "lari": "Ku munua ti.",
+    "fr": "Il paraît que.",
+    "en": "It seems that."
   },
   {
     "lari": "Ku ndemvokela",
@@ -8202,11 +8171,6 @@
     "en": "Where?"
   },
   {
-    "lari": "Kue ba?",
-    "fr": "Où vont-elles à l'école ?",
-    "en": "Where do they go to school?"
-  },
-  {
     "lari": "Kue ba ka?",
     "fr": "Où habites-tu ?",
     "en": "Where do you live?"
@@ -8215,6 +8179,11 @@
     "lari": "Kue ba lendi sobesa ngela?",
     "fr": "Où peut-on changer de l'argent ?",
     "en": "Where can one change money?"
+  },
+  {
+    "lari": "Kue ba?",
+    "fr": "Où vont-elles à l'école ?",
+    "en": "Where do they go to school?"
   },
   {
     "lari": "Kue ka?",
@@ -8395,14 +8364,14 @@
     "en": "This foot"
   },
   {
-    "lari": "Kulu · malu",
-    "fr": "pied ; pieds",
-    "en": "foot ; feet"
-  },
-  {
     "lari": "Kulu yaya ku ta yaya.",
     "fr": "Mon pied me fait mal.",
     "en": "My foot hurts me."
+  },
+  {
+    "lari": "Kulu · malu",
+    "fr": "pied ; pieds",
+    "en": "foot ; feet"
   },
   {
     "lari": "Kuluku",
@@ -8635,6 +8604,37 @@
     "en": "Come here"
   },
   {
+    "lari": "Kà kábá ko.",
+    "fr": "Il ne partage pas.",
+    "en": "He does not share."
+  },
+  {
+    "lari": "Kà lùbúlá ándi.",
+    "fr": "Ne cassez pas !",
+    "en": "Do not break!"
+  },
+  {
+    "lari": "Kà tùkábá ko.",
+    "fr": "Nous ne partageons pas.",
+    "en": "We do not share."
+  },
+  {
+    "lari": "Kàbàká",
+    "fr": "partager habituellement",
+    "en": "to share habitually"
+  },
+  {
+    "lari": "Ká nkàbìlí ko.",
+    "fr": "Je ne partageais pas (éloigné).",
+    "en": "I was not sharing (remote).",
+    "note": "ká avec ton haut devant verbe sans more préradicale ; kó avec ton haut final opposé au registre du verbe. · EN — ká with a high tone preceding the verb, without a pre-radical element ; kó with a high final tone contrasting with the verb's register."
+  },
+  {
+    "lari": "Kìtú",
+    "fr": "tête",
+    "en": "head"
+  },
+  {
     "lari": "Laadi",
     "fr": "langue laadi",
     "en": "Laadi language"
@@ -8690,14 +8690,14 @@
     "en": "Today. ; it is raining."
   },
   {
-    "lari": "Laki · malaki",
-    "fr": "Date ; jour",
-    "en": "Date ; day"
-  },
-  {
     "lari": "Laki ni laki.",
     "fr": "À tout moment, n'importe quand (variante : Ntangu ni ntangu).",
     "en": "At any time, whenever (variant: Ntangu ni ntangu)."
+  },
+  {
+    "lari": "Laki · malaki",
+    "fr": "Date ; jour",
+    "en": "Date ; day"
   },
   {
     "lari": "Lala",
@@ -9165,14 +9165,14 @@
     "en": "Today"
   },
   {
-    "lari": "Lolo, mbo tu longoka...",
-    "fr": "Aujourd’hui, nous allons étudier…",
-    "en": "Today, we are going to study…"
-  },
-  {
     "lari": "Lolo muini we ku.",
     "fr": "Aujourd'hui, il y a du soleil.",
     "en": "Today, it is sunny."
+  },
+  {
+    "lari": "Lolo, mbo tu longoka...",
+    "fr": "Aujourd’hui, nous allons étudier…",
+    "en": "Today, we are going to study…"
   },
   {
     "lari": "Lomba",
@@ -9719,14 +9719,14 @@
     "en": "leaf"
   },
   {
-    "lari": "Lukaya · makaya",
-    "fr": "feuille ; billet de banque ; feuilles ; billets de banque",
-    "en": "leaf ; banknote ; leaves ; banknotes"
-  },
-  {
     "lari": "Lukaya ya nti.",
     "fr": "Une feuille d'arbre.",
     "en": "A leaf of a tree."
+  },
+  {
+    "lari": "Lukaya · makaya",
+    "fr": "feuille ; billet de banque ; feuilles ; billets de banque",
+    "en": "leaf ; banknote ; leaves ; banknotes"
   },
   {
     "lari": "Luke",
@@ -9841,15 +9841,15 @@
     "en": "Self-esteem ; pride ; sense of power ; power, might, pride, possibility, ease of execution"
   },
   {
-    "lari": "Lulendo · tulendo",
-    "fr": "Fierté ; orgueil ; pouvoir",
-    "en": "Pride ; power"
-  },
-  {
     "lari": "Lulendo ya kanda.",
     "fr": "La fierté du clan.",
     "en": "The pride of the clan.",
     "note": "Le Lulendo est un concept profond de dignité et d'honneur ancestral. · EN — Lulendo is a deep concept of dignity and ancestral honour."
+  },
+  {
+    "lari": "Lulendo · tulendo",
+    "fr": "Fierté ; orgueil ; pouvoir",
+    "en": "Pride ; power"
   },
   {
     "lari": "Lumanda",
@@ -9917,11 +9917,6 @@
     "en": "Today I went shopping."
   },
   {
-    "lari": "Lumbu tshi, lumbu tshi ba sa bakento n'sangu.",
-    "fr": "Aujourd'hui, c'est la journée des femmes.",
-    "en": "Today is women's day."
-  },
-  {
     "lari": "Lumbu tshi mbizi ya mamba ndembi.",
     "fr": "Aujourd'hui j'ai cuisiné du poisson d'eau douce.",
     "en": "Today I cooked freshwater fish."
@@ -9940,6 +9935,11 @@
     "lari": "Lumbu tshi nki tu longoka?",
     "fr": "C'est quoi la leçon du jour ?",
     "en": "What is today's lesson?"
+  },
+  {
+    "lari": "Lumbu tshi, lumbu tshi ba sa bakento n'sangu.",
+    "fr": "Aujourd'hui, c'est la journée des femmes.",
+    "en": "Today is women's day."
   },
   {
     "lari": "Lumbu tshi, nsuki zani ni sukula.",
@@ -10439,11 +10439,6 @@
     "note": "Prononcé /lwoni/ /bilwoni/ · EN — Pronounced /lwoni/ /bilwoni/"
   },
   {
-    "lari": "Muvu",
-    "fr": "cheveux blancs",
-    "en": "White ; grey hair"
-  },
-  {
     "lari": "Ma ka(ka)",
     "fr": "D'autres (accord nominal)",
     "en": "Others (noun class agreement).",
@@ -10458,11 +10453,6 @@
     "lari": "Ma landila",
     "fr": "En arrière ; en retard",
     "en": "behind ; late"
-  },
-  {
-    "lari": "Má Malonga",
-    "fr": "Oncle Malonga",
-    "en": "Uncle Malonga"
   },
   {
     "lari": "Maama",
@@ -10861,11 +10851,6 @@
     "en": "These oranges are well ripe."
   },
   {
-    "lari": "Malala ma nsa.",
-    "fr": "Citrons.",
-    "en": "Lemons."
-  },
-  {
     "lari": "Malala ma nsa ma ma wiri yoya.",
     "fr": "Ces citrons sont bien mûrs.",
     "en": "These lemons are well ripe."
@@ -10874,6 +10859,11 @@
     "lari": "Malala ma nsa ma wiri yoya.",
     "fr": "Les citrons sont bien mûrs.",
     "en": "The lemons are well ripe."
+  },
+  {
+    "lari": "Malala ma nsa.",
+    "fr": "Citrons.",
+    "en": "Lemons."
   },
   {
     "lari": "Malala ma wiri yoya.",
@@ -10959,11 +10949,6 @@
     "en": "Mom ; mother"
   },
   {
-    "lari": "Mama ho ti shemi.",
-    "fr": "Maman dit comment ça va.",
-    "en": "Mom says how are you."
-  },
-  {
     "lari": "Mama : lendi kuiza?",
     "fr": "Mama : tu peux venir?",
     "en": "Mom: can you come?"
@@ -10972,6 +10957,11 @@
     "lari": "Mama : ni ku bakisi.",
     "fr": "Maman : voilà, je t’ai aidé.",
     "en": "Mom: there, I helped you."
+  },
+  {
+    "lari": "Mama ho ti shemi.",
+    "fr": "Maman dit comment ça va.",
+    "en": "Mom says how are you."
   },
   {
     "lari": "Mama nsuki ka ta ba yumisa.",
@@ -11019,11 +11009,6 @@
     "en": "I'm going to scoop water with a container."
   },
   {
-    "lari": "Mamba · ntinta",
-    "fr": "encre",
-    "en": "ink"
-  },
-  {
     "lari": "Mamba nzololo.",
     "fr": "Je voudrais de l'eau.",
     "en": "I would like some water."
@@ -11032,6 +11017,11 @@
     "lari": "Mamba tioji me. · mamba mujija me.",
     "fr": "L’eau est froide.",
     "en": "The water is cold."
+  },
+  {
+    "lari": "Mamba · ntinta",
+    "fr": "encre",
+    "en": "ink"
   },
   {
     "lari": "Mambu",
@@ -11130,19 +11120,14 @@
     "en": "Large wasps"
   },
   {
-    "lari": "Manga ya mbuaki.",
-    "fr": "La mangue est mûre.",
-    "en": "The mango is ripe."
-  },
-  {
     "lari": "Manga ya mbuaki yena.",
     "fr": "La mangue est rouge.",
     "en": "The mango is red."
   },
   {
-    "lari": "Manga yi ndidi ya mbote.",
-    "fr": "La mangue que j’ai mangé est bonne.",
-    "en": "The mango that I ate is good."
+    "lari": "Manga ya mbuaki.",
+    "fr": "La mangue est mûre.",
+    "en": "The mango is ripe."
   },
   {
     "lari": "Manga yi ndidi ya mbote yi bele.",
@@ -11150,9 +11135,9 @@
     "en": "The mango I ate was good."
   },
   {
-    "lari": "Manga za jingi ze.",
-    "fr": "Il y a beaucoup de mangues.",
-    "en": "There are many mangos."
+    "lari": "Manga yi ndidi ya mbote.",
+    "fr": "La mangue que j’ai mangé est bonne.",
+    "en": "The mango that I ate is good."
   },
   {
     "lari": "Manga za jingi ze naku.",
@@ -11183,6 +11168,11 @@
     "lari": "Manga za jingi ze neto.",
     "fr": "Nous avons beaucoup de mangues.",
     "en": "We have many mangos."
+  },
+  {
+    "lari": "Manga za jingi ze.",
+    "fr": "Il y a beaucoup de mangues.",
+    "en": "There are many mangos."
   },
   {
     "lari": "Manga za mbuaki zena.",
@@ -11843,6 +11833,11 @@
     "en": "act of hunting"
   },
   {
+    "lari": "Mbira",
+    "fr": "lamellophone du Zimbabwe",
+    "en": "Zimbabwean lamellophone (thumb piano)"
+  },
+  {
     "lari": "Mbo",
     "fr": "Particule du futur",
     "en": "Future tense particle",
@@ -11936,29 +11931,9 @@
     "en": "Hello"
   },
   {
-    "lari": "Mbote aku.",
-    "fr": "Bonjour à toi",
-    "en": "Hello to you"
-  },
-  {
-    "lari": "Mbote aku mpangi.",
-    "fr": "Bonjour à toi petit frère. ; petite soeur.",
-    "en": "Hello to you younger sibling."
-  },
-  {
-    "lari": "Mbote banguala -mbote bakundi.",
-    "fr": "Bonjour les amis.",
-    "en": "Hello friends."
-  },
-  {
     "lari": "Mbote ! bueni muntu.",
     "fr": "Bonjour ! tu rencontres quelqu’un.",
     "en": "Hello! You meet someone."
-  },
-  {
-    "lari": "Mbote mpangi, nkumbu aku nani?",
-    "fr": "Bonjour petit frère/petite soeur, quel est ton nom ?",
-    "en": "Hello younger sibling, what is your name?"
   },
   {
     "lari": "Mbote ! mu kiese wena? · kiese kie naku?",
@@ -11969,6 +11944,26 @@
     "lari": "Mbote ! wijidi ku ku nzo mbuanunu nzenza.",
     "fr": "Bonjour ! tu arrives à l’hôtel.",
     "en": "Hello! You arrive at the hotel."
+  },
+  {
+    "lari": "Mbote aku mpangi.",
+    "fr": "Bonjour à toi petit frère. ; petite soeur.",
+    "en": "Hello to you younger sibling."
+  },
+  {
+    "lari": "Mbote aku.",
+    "fr": "Bonjour à toi",
+    "en": "Hello to you"
+  },
+  {
+    "lari": "Mbote banguala -mbote bakundi.",
+    "fr": "Bonjour les amis.",
+    "en": "Hello friends."
+  },
+  {
+    "lari": "Mbote mpangi, nkumbu aku nani?",
+    "fr": "Bonjour petit frère/petite soeur, quel est ton nom ?",
+    "en": "Hello younger sibling, what is your name?"
   },
   {
     "lari": "Mbote yandi.",
@@ -12001,12 +11996,12 @@
     "en": "The dog broke its leg because of what it heard."
   },
   {
-    "lari": "Mbua kue ye?",
+    "lari": "Mbua kue ye(na)?",
     "fr": "Où est le chien ?",
     "en": "Where is the dog?"
   },
   {
-    "lari": "Mbua kue ye(na)?",
+    "lari": "Mbua kue ye?",
     "fr": "Où est le chien ?",
     "en": "Where is the dog?"
   },
@@ -12056,14 +12051,14 @@
     "en": "bottle"
   },
   {
-    "lari": "Mbuata · mbuata",
-    "fr": "Bouteille(s)",
-    "en": "Bottle(s)"
-  },
-  {
     "lari": "Mbuata zole.",
     "fr": "2 bouteilles",
     "en": "2 bottles"
+  },
+  {
+    "lari": "Mbuata · mbuata",
+    "fr": "Bouteille(s)",
+    "en": "Bottle(s)"
   },
   {
     "lari": "Mbudi",
@@ -12181,16 +12176,16 @@
     "en": "Birth"
   },
   {
-    "lari": "Me · meno",
-    "fr": "Je ; moi",
-    "en": "I ; me",
-    "note": "Forme indépendante, rarement utilisée à l'oral. On dit plutôt NA (passé) ou NI (futur ; présent). ; EN — Independent form, rarely used orally. NA (past) or NI (future ; present) are used instead."
-  },
-  {
     "lari": "Me nke wu.",
     "fr": "Je suis là (en réponse à un appel).",
     "en": "I'm here (answering a call).",
     "note": "Prononcé /ntshe/ · EN — Pronounced /ntshe/."
+  },
+  {
+    "lari": "Me · meno",
+    "fr": "Je ; moi",
+    "en": "I ; me",
+    "note": "Forme indépendante, rarement utilisée à l'oral. On dit plutôt NA (passé) ou NI (futur ; présent). ; EN — Independent form, rarely used orally. NA (past) or NI (future ; present) are used instead."
   },
   {
     "lari": "Meka",
@@ -12238,11 +12233,6 @@
     "en": "Have you brushed your teeth?"
   },
   {
-    "lari": "Meno, mpe nkolele.",
-    "fr": "Moi aussi. ; je vais bien.",
-    "en": "I'm also fine."
-  },
-  {
     "lari": "Meno ni ta mona ti nge ku sidi a wa sungama ko.",
     "fr": "J'ai l'impression que tu n'es plus normal.",
     "en": "I feel like you're no longer normal."
@@ -12251,6 +12241,11 @@
     "lari": "Meno ni ta sukula.",
     "fr": "Je me lave les dents.",
     "en": "I brush my teeth."
+  },
+  {
+    "lari": "Meno, mpe nkolele.",
+    "fr": "Moi aussi. ; je vais bien.",
+    "en": "I'm also fine."
   },
   {
     "lari": "Meso",
@@ -12871,9 +12866,9 @@
     "en": "belly ; heart"
   },
   {
-    "lari": "Moyo · mioyo",
-    "fr": "Ventre",
-    "en": "Belly ; stomach"
+    "lari": "Moyo tatika wu ta ku ntatika.",
+    "fr": "J'ai mal au ventre (adultes).",
+    "en": "My belly hurts (adults)."
   },
   {
     "lari": "Moyo tatika.",
@@ -12881,14 +12876,14 @@
     "en": "My belly hurts (children)."
   },
   {
-    "lari": "Moyo tatika wu ta ku ntatika.",
-    "fr": "J'ai mal au ventre (adultes).",
-    "en": "My belly hurts (adults)."
-  },
-  {
     "lari": "Moyo yoka",
     "fr": "Avoir la diarrhée",
     "en": "To have diarrhea"
+  },
+  {
+    "lari": "Moyo · mioyo",
+    "fr": "Ventre",
+    "en": "Belly ; stomach"
   },
   {
     "lari": "Mpaka",
@@ -13583,11 +13578,6 @@
     "en": "My child has grown up. ; my son has grown up."
   },
   {
-    "lari": "Muana · bala",
-    "fr": "enfant ; enfants",
-    "en": "child ; children"
-  },
-  {
     "lari": "Muana fioti",
     "fr": "petit enfant",
     "en": "small child"
@@ -13694,6 +13684,11 @@
     "en": "The child is breastfeeding."
   },
   {
+    "lari": "Muana · bala",
+    "fr": "enfant ; enfants",
+    "en": "child ; children"
+  },
+  {
     "lari": "Muandala",
     "fr": "Scolopendre",
     "en": "Centipede"
@@ -13760,11 +13755,6 @@
     "en": "yawn"
   },
   {
-    "lari": "Mubaku · mibaku",
-    "fr": "Espèce de chat sauvage ; sorte de renard",
-    "en": "wild cat species ; type of fox"
-  },
-  {
     "lari": "Mubaku wa kotele ku hata.",
     "fr": "Le renard est entré dans le village.",
     "en": "The fox entered the village."
@@ -13773,6 +13763,11 @@
     "lari": "Mubaku wu dia nsusu.",
     "fr": "Le renard qui mange les poules.",
     "en": "The fox that eats the hens."
+  },
+  {
+    "lari": "Mubaku · mibaku",
+    "fr": "Espèce de chat sauvage ; sorte de renard",
+    "en": "wild cat species ; type of fox"
   },
   {
     "lari": "Mubasa · mibasa",
@@ -14185,19 +14180,9 @@
     "en": "Where is the loincloth?"
   },
   {
-    "lari": "Mulele · milele",
-    "fr": "Pagne ; pagnes ; habit ; habits",
-    "en": "Loincloth(s) ; wrap(s)"
-  },
-  {
     "lari": "Mulele mu moshi wa mbaki.",
     "fr": "Le pagne est rouge.",
     "en": "The loincloth is red."
-  },
-  {
-    "lari": "Mulele wa mfulu.",
-    "fr": "Un drap.",
-    "en": "A bed sheet."
   },
   {
     "lari": "Mulele wa mfulu wa mbudi.",
@@ -14210,19 +14195,29 @@
     "en": "A white bed sheet."
   },
   {
+    "lari": "Mulele wa mfulu.",
+    "fr": "Un drap.",
+    "en": "A bed sheet."
+  },
+  {
     "lari": "Mulele wa ntundu wena.",
     "fr": "Le pagne est jaune.",
     "en": "The loincloth is yellow."
   },
   {
-    "lari": "Mulembo · milembo",
-    "fr": "Doigt ; doigts",
-    "en": "Finger ; fingers"
+    "lari": "Mulele · milele",
+    "fr": "Pagne ; pagnes ; habit ; habits",
+    "en": "Loincloth(s) ; wrap(s)"
   },
   {
     "lari": "Mulembo wa kulu.",
     "fr": "Un orteil.",
     "en": "A toe."
+  },
+  {
+    "lari": "Mulembo · milembo",
+    "fr": "Doigt ; doigts",
+    "en": "Finger ; fingers"
   },
   {
     "lari": "Mulemvo",
@@ -14285,11 +14280,6 @@
     "en": "You (pl.) skinned a rabbit."
   },
   {
-    "lari": "Mulumba · milumba",
-    "fr": "lapin(s)",
-    "en": "rabbit(s)"
-  },
-  {
     "lari": "Mulumba njunini.",
     "fr": "J'ai écorché un lapin.",
     "en": "I skinned a rabbit."
@@ -14303,6 +14293,11 @@
     "lari": "Mulumba yunini.",
     "fr": "Tu as écorché un lapin.",
     "en": "You skinned a rabbit."
+  },
+  {
+    "lari": "Mulumba · milumba",
+    "fr": "lapin(s)",
+    "en": "rabbit(s)"
   },
   {
     "lari": "Mulunga",
@@ -14481,11 +14476,6 @@
     "en": "Punch"
   },
   {
-    "lari": "Munkua · bankua",
-    "fr": "Possesseur",
-    "en": "Owner ; possessor"
-  },
-  {
     "lari": "Munkua kumbi",
     "fr": "Celui à qui appartient la voiture.",
     "en": "The one to whom the car belongs."
@@ -14505,6 +14495,11 @@
     "lari": "Munkua nzo ka mi mu tala ka ko.",
     "fr": "Le propriétaire ne répare rien.",
     "en": "The landlord repairs nothing."
+  },
+  {
+    "lari": "Munkua · bankua",
+    "fr": "Possesseur",
+    "en": "Owner ; possessor"
   },
   {
     "lari": "Munkuanga",
@@ -14542,16 +14537,6 @@
     "en": "They slapped someone."
   },
   {
-    "lari": "Muntu · bantu",
-    "fr": "Personne ; personnes ; être humain",
-    "en": "Person ; people ; human being"
-  },
-  {
-    "lari": "Muntu: landa kua mo.",
-    "fr": "Personne : c’est tout droit.",
-    "en": "Person: it's straight ahead."
-  },
-  {
     "lari": "Muntu wa jitama · muntu wa zitama.",
     "fr": "Une personne respectable.",
     "en": "A respectable person."
@@ -14575,6 +14560,16 @@
     "lari": "Muntu wu ku bakishi. luaka luaku lu wiri.",
     "fr": "La personne t’aide. tu es soulagé.",
     "en": "The person helps you. You are relieved."
+  },
+  {
+    "lari": "Muntu · bantu",
+    "fr": "Personne ; personnes ; être humain",
+    "en": "Person ; people ; human being"
+  },
+  {
+    "lari": "Muntu: landa kua mo.",
+    "fr": "Personne : c’est tout droit.",
+    "en": "Person: it's straight ahead."
   },
   {
     "lari": "Muntuboloko",
@@ -14810,6 +14805,11 @@
     "lari": "Mutu beni",
     "fr": "téton",
     "en": "nipple"
+  },
+  {
+    "lari": "Muvu",
+    "fr": "cheveux blancs",
+    "en": "White ; grey hair"
   },
   {
     "lari": "Muvu",
@@ -15147,6 +15147,11 @@
     "note": "Prononcé /mzansi/ · EN — Pronounced /mzansi/"
   },
   {
+    "lari": "Má Malonga",
+    "fr": "Oncle Malonga",
+    "en": "Uncle Malonga"
+  },
+  {
     "lari": "N'kaka",
     "fr": "Grand-mère ; grand-père",
     "en": "Grandmother ; grandfather"
@@ -15182,29 +15187,9 @@
     "en": "His fourth wife."
   },
   {
-    "lari": "N’kento andi wa bole.",
-    "fr": "Sa deuxième femme.",
-    "en": "His second wife."
-  },
-  {
-    "lari": "N’kento andi wa kaka.",
-    "fr": "Une de ses femmes.",
-    "en": "One of his wives."
-  },
-  {
-    "lari": "N’kento · bakento",
-    "fr": "femme ; femmes",
-    "en": "woman ; women"
-  },
-  {
     "lari": "N'kento wa wu wo.",
     "fr": "Cette femme-ci.",
     "en": "This woman."
-  },
-  {
-    "lari": "N'kolo · mukolo",
-    "fr": "fatigue",
-    "en": "Fatigue ; tiredness"
   },
   {
     "lari": "N'kolo we naku.",
@@ -15237,6 +15222,11 @@
     "en": "We are tired."
   },
   {
+    "lari": "N'kolo · mukolo",
+    "fr": "fatigue",
+    "en": "Fatigue ; tiredness"
+  },
+  {
     "lari": "N'kumbu",
     "fr": "nom",
     "en": "name"
@@ -15245,6 +15235,17 @@
     "lari": "N'kunga moshi",
     "fr": "chanson",
     "en": "song"
+  },
+  {
+    "lari": "N'samu",
+    "fr": "Sept ; affaire ; histoire (avec un ; a ; court)",
+    "en": "Seven ; the matter, the story (with short /a/)",
+    "note": "Homonyme de 'sept' mais avec un /a/ court. · EN — Homonym of 'seven' but with a short /a/."
+  },
+  {
+    "lari": "N'samu wa nuikila.",
+    "fr": "La calomnie.",
+    "en": "Slander. ; calumny."
   },
   {
     "lari": "N'samu we nani ni ku tela.",
@@ -15257,34 +15258,9 @@
     "en": "This matter will take place."
   },
   {
-    "lari": "N’sanga",
-    "fr": "Collier de perles",
-    "en": "Pearl necklace"
-  },
-  {
-    "lari": "N’sangu",
-    "fr": "nouvelles",
-    "en": "News"
-  },
-  {
-    "lari": "N’siku mitshiku",
-    "fr": "lois",
-    "en": "laws"
-  },
-  {
-    "lari": "N’singa musginga mishinga.",
-    "fr": "Fil. ; fils.",
-    "en": "Thread(s)."
-  },
-  {
     "lari": "N'songi maba ka ta baka.",
     "fr": "Le malafoutier taille les palmiers.",
     "en": "The palm wine tapper prunes the palm trees."
-  },
-  {
-    "lari": "N’ti ma yaka.",
-    "fr": "La plante de manioc.",
-    "en": "The cassava plant."
   },
   {
     "lari": "N'ti · muti",
@@ -15295,11 +15271,6 @@
     "lari": "N'ti · muti · miti",
     "fr": "Arbre(s)",
     "en": "Tree(s)"
-  },
-  {
-    "lari": "N’ti ntoba",
-    "fr": "La plante de manioc.",
-    "en": "cassava plant"
   },
   {
     "lari": "N'zansi",
@@ -15387,15 +15358,15 @@
     "en": "I had gone"
   },
   {
-    "lari": "Na yikidi.",
-    "fr": "Je suis heureux/heureuse",
-    "en": "I am happy"
-  },
-  {
     "lari": "Na yikidi ntshana muana nsusu.",
     "fr": "Je suis devenu comme un poussin.",
     "en": "I became like a chick.",
     "note": "Prononcé /ntshana/ · EN — Pronounced /ntshana/"
+  },
+  {
+    "lari": "Na yikidi.",
+    "fr": "Je suis heureux/heureuse",
+    "en": "I am happy"
   },
   {
     "lari": "Na yizidi",
@@ -15468,6 +15439,11 @@
     "en": "To carry ; to lift ; to raise"
   },
   {
+    "lari": "Nani, nkia, nki.",
+    "fr": "Lequel. ; laquelle.",
+    "en": "Which one."
+  },
+  {
     "lari": "Nani?",
     "fr": "Qui ? ; lequel",
     "en": "Who? ; which"
@@ -15476,11 +15452,6 @@
     "lari": "Nani? · na?",
     "fr": "Qui ?",
     "en": "Who?"
-  },
-  {
-    "lari": "Nani, nkia, nki.",
-    "fr": "Lequel. ; laquelle.",
-    "en": "Which one."
   },
   {
     "lari": "Nanu",
@@ -15797,14 +15768,14 @@
     "en": "Who to him/her it has."
   },
   {
-    "lari": "Ngana nki lembi?",
-    "fr": "Qu'as-tu cuisiné ?",
-    "en": "What have you cooked? ; what did you cook?"
-  },
-  {
     "lari": "Ngana nki lembi lumbu tshi ?",
     "fr": "Qu'as-tu cuisiné aujourd'hui ?",
     "en": "What have you cooked today?"
+  },
+  {
+    "lari": "Ngana nki lembi?",
+    "fr": "Qu'as-tu cuisiné ?",
+    "en": "What have you cooked? ; what did you cook?"
   },
   {
     "lari": "Ngana nki lembu lumbu tshi?",
@@ -15848,15 +15819,15 @@
     "note": "Variante : nganti · EN — Variant: nganti."
   },
   {
+    "lari": "Ngati tshi djokele.",
+    "fr": "De peur que ça s'échappe.",
+    "en": "Lest it escapes."
+  },
+  {
     "lari": "Ngati · ngatu",
     "fr": "Pour que",
     "en": "So that ; in order to",
     "note": "Ngati peut se contracter en 'nga' · EN — Ngati can contract to 'nga'."
-  },
-  {
-    "lari": "Ngati tshi djokele.",
-    "fr": "De peur que ça s'échappe.",
-    "en": "Lest it escapes."
   },
   {
     "lari": "Ngatu na baka ngangu.",
@@ -15880,14 +15851,14 @@
     "en": "You must know that."
   },
   {
-    "lari": "Nge kaka.",
-    "fr": "Toi tout(e) seul(e)",
-    "en": "You alone"
-  },
-  {
     "lari": "Nge kaka longoka?",
     "fr": "Est-ce que tu étudies seule ?",
     "en": "Are you studying alone?"
+  },
+  {
+    "lari": "Nge kaka.",
+    "fr": "Toi tout(e) seul(e)",
+    "en": "You alone"
   },
   {
     "lari": "Nge ku nikuki.",
@@ -15898,11 +15869,6 @@
     "lari": "Nge kua we na wo.",
     "fr": "C'est à toi de voir.",
     "en": "It's up to you."
-  },
-  {
-    "lari": "Nge, nani wena?",
-    "fr": "Toi, qui es-tu ?",
-    "en": "You, who are you?"
   },
   {
     "lari": "Nge shidi kuaku?",
@@ -15918,6 +15884,11 @@
     "lari": "Nge yobele",
     "fr": "T'es-tu lavé ?",
     "en": "Have you washed?"
+  },
+  {
+    "lari": "Nge, nani wena?",
+    "fr": "Toi, qui es-tu ?",
+    "en": "You, who are you?"
   },
   {
     "lari": "Ngela",
@@ -16281,9 +16252,19 @@
     "en": "They were no longer dating."
   },
   {
+    "lari": "Ni buna ! ntangu kua ba ku.",
+    "fr": "Très bien ! tu veux préciser la durée.",
+    "en": "Very good! You want to specify the duration."
+  },
+  {
     "lari": "Ni buna Bonga nzeka bonga.",
     "fr": "Très bien ! tu veux d'accords, je prends.",
     "en": "Very good! You agree, 'Okay, I'll take it'."
+  },
+  {
+    "lari": "Ni buna Nki lu zololo nua.",
+    "fr": "Parfait ! vous voulez une boisson.",
+    "en": "Perfect! You want a drink."
   },
   {
     "lari": "Ni buna! buaubu lomba tshibuka.",
@@ -16311,19 +16292,9 @@
     "en": "Very good! You want to talk to the teacher."
   },
   {
-    "lari": "Ni buna Nki lu zololo nua.",
-    "fr": "Parfait ! vous voulez une boisson.",
-    "en": "Perfect! You want a drink."
-  },
-  {
     "lari": "Ni buna! nkumbu aku ta zolo ta.",
     "fr": "Très bien ! tu veux dire ton nom.",
     "en": "Very good! You want to say your name."
-  },
-  {
-    "lari": "Ni buna ! ntangu kua ba ku.",
-    "fr": "Très bien ! tu veux préciser la durée.",
-    "en": "Very good! You want to specify the duration."
   },
   {
     "lari": "Ni buna! tshima tsha ka ta zolo sa.",
@@ -16366,15 +16337,15 @@
     "en": "I'm here."
   },
   {
+    "lari": "Ni mu bungu dio, tuele zeba.",
+    "fr": "Il fait beau donc nous sommes allées nous promener.",
+    "en": "The weather is nice so we went for a walk."
+  },
+  {
     "lari": "Ni mu bungu.",
     "fr": "Donc.",
     "en": "Therefore.",
     "note": "Expression complète signifiant 'donc' · EN — Full expression meaning 'so'."
-  },
-  {
-    "lari": "Ni mu bungu dio, tuele zeba.",
-    "fr": "Il fait beau donc nous sommes allées nous promener.",
-    "en": "The weather is nice so we went for a walk."
   },
   {
     "lari": "Ni ta mona. · mbo ni mona.",
@@ -16644,14 +16615,14 @@
     "en": "Your grandmother, she used to smoke a pipe."
   },
   {
-    "lari": "Nkaka · bankaka",
-    "fr": "grand-parent ; grands-parents",
-    "en": "grandparent ; grandparents"
-  },
-  {
     "lari": "Nkaka muhangu we nandi.",
     "fr": "Grand-père a une canne.",
     "en": "Grandfather has a walking stick."
+  },
+  {
+    "lari": "Nkaka · bankaka",
+    "fr": "grand-parent ; grands-parents",
+    "en": "grandparent ; grandparents"
   },
   {
     "lari": "Nkakama",
@@ -16674,14 +16645,14 @@
     "en": "Crab"
   },
   {
-    "lari": "Nkala-nseke",
-    "fr": "scorpion",
-    "en": "scorpion"
-  },
-  {
     "lari": "Nkala yi yikele mu mamba.",
     "fr": "Le crabe est dans l'eau.",
     "en": "The crab is in the water."
+  },
+  {
+    "lari": "Nkala-nseke",
+    "fr": "scorpion",
+    "en": "scorpion"
   },
   {
     "lari": "Nkalala",
@@ -16699,11 +16670,6 @@
     "en": "One hundred (100)"
   },
   {
-    "lari": "Nkama · mikama",
-    "fr": "digue",
-    "en": "dam ; dike"
-  },
-  {
     "lari": "Nkama na moshi.",
     "fr": "Cent un (101).",
     "en": "One hundred and one (101)."
@@ -16713,6 +16679,11 @@
     "fr": "Deux cents (200)",
     "en": "Two hundred (200)",
     "note": "Pattern: nkama + multiplier · EN — Pattern: nkama + multiplier."
+  },
+  {
+    "lari": "Nkama · mikama",
+    "fr": "digue",
+    "en": "dam ; dike"
   },
   {
     "lari": "Nkamatanu",
@@ -16907,16 +16878,6 @@
     "note": "Le sens de NKI change selon la forme du verbe qui le suit. · EN — The meaning of NKI changes depending on the form of the verb that follows it."
   },
   {
-    "lari": "Nki, a nki?",
-    "fr": "Quoi?",
-    "en": "What?"
-  },
-  {
-    "lari": "Nki? · a nsi?",
-    "fr": "Quoi ?",
-    "en": "What?"
-  },
-  {
     "lari": "Nki ba ta dia?",
     "fr": "Qu'est-ce qu'ils mangent ?",
     "en": "What are they eating?"
@@ -16982,11 +16943,6 @@
     "en": "You want to drink something."
   },
   {
-    "lari": "Nki · mu nki · mu nkia bungu.",
-    "fr": "Pourquoi.",
-    "en": "Why."
-  },
-  {
     "lari": "Nki ni ta dia?",
     "fr": "Qu'est-ce que je mange ?",
     "en": "What am I eating?"
@@ -17001,12 +16957,6 @@
     "lari": "Nki ni ta dirila?",
     "fr": "Pourquoi je pleure ?",
     "en": "Why am I crying?"
-  },
-  {
-    "lari": "Nki · ntshi",
-    "fr": "Quoi",
-    "en": "What",
-    "note": "Prononcé /nthsi/ · EN — Pronounced /nthsi/"
   },
   {
     "lari": "Nki ta dia?",
@@ -17062,6 +17012,27 @@
     "lari": "Nki zololo longoka?",
     "fr": "Que veux-tu étudier ?",
     "en": "What do you want to study?"
+  },
+  {
+    "lari": "Nki · mu nki · mu nkia bungu.",
+    "fr": "Pourquoi.",
+    "en": "Why."
+  },
+  {
+    "lari": "Nki · ntshi",
+    "fr": "Quoi",
+    "en": "What",
+    "note": "Prononcé /nthsi/ · EN — Pronounced /nthsi/"
+  },
+  {
+    "lari": "Nki, a nki?",
+    "fr": "Quoi?",
+    "en": "What?"
+  },
+  {
+    "lari": "Nki? · a nsi?",
+    "fr": "Quoi ?",
+    "en": "What?"
   },
   {
     "lari": "Nkia",
@@ -17176,12 +17147,12 @@
     "en": "Goat"
   },
   {
-    "lari": "Nkombo kue ye?",
+    "lari": "Nkombo kue ye(na)?",
     "fr": "Où est la chèvre ?",
     "en": "Where is the goat?"
   },
   {
-    "lari": "Nkombo kue ye(na)?",
+    "lari": "Nkombo kue ye?",
     "fr": "Où est la chèvre ?",
     "en": "Where is the goat?"
   },
@@ -17362,14 +17333,14 @@
     "en": "Loincloth ; loincloths"
   },
   {
-    "lari": "Nlembo, mulembo · milembo.",
-    "fr": "Doigt ; doigts",
-    "en": "Finger ; fingers"
-  },
-  {
     "lari": "Nlembo wa nguri.",
     "fr": "Le pouce (la maman des doigts).",
     "en": "The thumb (the mother of the fingers). ; thumb (lit. mother of fingers)."
+  },
+  {
+    "lari": "Nlembo, mulembo · milembo.",
+    "fr": "Doigt ; doigts",
+    "en": "Finger ; fingers"
   },
   {
     "lari": "Nlembonguri",
@@ -17594,17 +17565,6 @@
     "en": "seven (7)"
   },
   {
-    "lari": "N'samu",
-    "fr": "Sept ; affaire ; histoire (avec un ; a ; court)",
-    "en": "Seven ; the matter, the story (with short /a/)",
-    "note": "Homonyme de 'sept' mais avec un /a/ court. · EN — Homonym of 'seven' but with a short /a/."
-  },
-  {
-    "lari": "N'samu wa nuikila.",
-    "fr": "La calomnie.",
-    "en": "Slander. ; calumny."
-  },
-  {
     "lari": "Nsana",
     "fr": "L'orphelin (avec un /a: /long)",
     "en": "orphan (with long / a:/)"
@@ -17715,14 +17675,14 @@
     "en": "Nsayi is taller than you."
   },
   {
-    "lari": "Nsayi ya yingi.",
-    "fr": "Grande joie.",
-    "en": "Great joy."
-  },
-  {
     "lari": "Nsayi ya yingi ye nani.",
     "fr": "Je suis très content.",
     "en": "I am very happy."
+  },
+  {
+    "lari": "Nsayi ya yingi.",
+    "fr": "Grande joie.",
+    "en": "Great joy."
   },
   {
     "lari": "Nsayi ye nani.",
@@ -18227,25 +18187,20 @@
     "note": "Avec /o/ long = nouveau cycle ; avec /o/ court = il est temps de regarder. · EN — With a long /o/ = new cycle; with a short /o/ = it is time to look."
   },
   {
-    "lari": "Ntangu ya yingi beri yokesa.",
-    "fr": "Elles passaient beaucoup de temps.",
-    "en": "They spent a lot of time."
-  },
-  {
     "lari": "Ntangu ya yingi beri yokesa ha kimoshi.",
     "fr": "Elles passaient beaucoup de temps ensemble.",
     "en": "They spent a lot of time together."
+  },
+  {
+    "lari": "Ntangu ya yingi beri yokesa.",
+    "fr": "Elles passaient beaucoup de temps.",
+    "en": "They spent a lot of time."
   },
   {
     "lari": "Ntangu za ka dimpa dia nzololo.",
     "fr": "Parfois j'aime le pain.",
     "en": "Sometimes I like bread.",
     "note": "dia = particule nominale pour dimpa. · EN — dia = nominal particle for dimpa."
-  },
-  {
-    "lari": "Ntangu za ka(ka).",
-    "fr": "Parfois. ; quelquefois.",
-    "en": "Sometimes."
   },
   {
     "lari": "Ntangu za ka lamba kua nzololo.",
@@ -18256,6 +18211,11 @@
     "lari": "Ntangu za ka matshinu ma nzololo.",
     "fr": "Parfois j'aime bien la danse.",
     "en": "Sometimes I like dancing."
+  },
+  {
+    "lari": "Ntangu za ka(ka).",
+    "fr": "Parfois. ; quelquefois.",
+    "en": "Sometimes."
   },
   {
     "lari": "Ntangu za zonso.",
@@ -18572,11 +18532,6 @@
     "en": "Birds"
   },
   {
-    "lari": "Nuni · banuni",
-    "fr": "Oiseau(x)",
-    "en": "Bird(s)"
-  },
-  {
     "lari": "Nuni zi nunini.",
     "fr": "Les oiseaux sont devenus vieux.",
     "en": "The birds grew old."
@@ -18590,6 +18545,11 @@
     "lari": "Nuni zole.",
     "fr": "Deux oiseaux",
     "en": "Two birds"
+  },
+  {
+    "lari": "Nuni · banuni",
+    "fr": "Oiseau(x)",
+    "en": "Bird(s)"
   },
   {
     "lari": "Nunini.",
@@ -18988,6 +18948,51 @@
     "lari": "Nzuzi",
     "fr": "Chat tigre (aussi diminutif de Banzuzi, nom d'un jumeau) ; chat tigre, diminutif de Banzuzi (nom donné à l'un des jumeaux)",
     "en": "Tiger cat (also diminutive of Banzuzi, twin's name) ; tiger cat, diminutive of Banzuzi (name given to one of the twins)"
+  },
+  {
+    "lari": "N’kento andi wa bole.",
+    "fr": "Sa deuxième femme.",
+    "en": "His second wife."
+  },
+  {
+    "lari": "N’kento andi wa kaka.",
+    "fr": "Une de ses femmes.",
+    "en": "One of his wives."
+  },
+  {
+    "lari": "N’kento · bakento",
+    "fr": "femme ; femmes",
+    "en": "woman ; women"
+  },
+  {
+    "lari": "N’sanga",
+    "fr": "Collier de perles",
+    "en": "Pearl necklace"
+  },
+  {
+    "lari": "N’sangu",
+    "fr": "nouvelles",
+    "en": "News"
+  },
+  {
+    "lari": "N’siku mitshiku",
+    "fr": "lois",
+    "en": "laws"
+  },
+  {
+    "lari": "N’singa musginga mishinga.",
+    "fr": "Fil. ; fils.",
+    "en": "Thread(s)."
+  },
+  {
+    "lari": "N’ti ma yaka.",
+    "fr": "La plante de manioc.",
+    "en": "The cassava plant."
+  },
+  {
+    "lari": "N’ti ntoba",
+    "fr": "La plante de manioc.",
+    "en": "cassava plant"
   },
   {
     "lari": "Pakama",
@@ -19550,15 +19555,15 @@
     "en": "Only work is difficult (growing up is not difficult, nature does it)."
   },
   {
+    "lari": "Sala ni ta sala.",
+    "fr": "Je suis en train de travailler. ; je travaille.",
+    "en": "I am working."
+  },
+  {
     "lari": "Sala · masala",
     "fr": "Rejet d'ananas ; bouquet terminal d'une plante",
     "en": "Pineapple shoot, terminal cluster of a plant",
     "note": "Distinct de sala = rester. · EN — Distinct from sala = to stay."
-  },
-  {
-    "lari": "Sala ni ta sala.",
-    "fr": "Je suis en train de travailler. ; je travaille.",
-    "en": "I am working."
   },
   {
     "lari": "Salaka",
@@ -19576,14 +19581,14 @@
     "en": "To help each other, to give mutual support ; to help each other"
   },
   {
-    "lari": "Saleno.",
-    "fr": "Restez ; au revoir",
-    "en": "Stay (plural) ; goodbye"
-  },
-  {
     "lari": "Saleno mbote.",
     "fr": "Au revoir à vous.",
     "en": "Goodbye to you all."
+  },
+  {
+    "lari": "Saleno.",
+    "fr": "Restez ; au revoir",
+    "en": "Stay (plural) ; goodbye"
   },
   {
     "lari": "Salu",
@@ -20333,14 +20338,14 @@
     "en": "To wash"
   },
   {
-    "lari": "Sukula luse.",
-    "fr": "Lave le visage",
-    "en": "Wash the face"
-  },
-  {
     "lari": "Sukula luse luaku.",
     "fr": "Lave ton visage.",
     "en": "Wash your face."
+  },
+  {
+    "lari": "Sukula luse.",
+    "fr": "Lave le visage",
+    "en": "Wash the face"
   },
   {
     "lari": "Sukula mulele andi.",
@@ -20450,14 +20455,14 @@
     "en": "To say, to sting, to bite, to throw, to strike ; disorder ; complication ; setback ; to say"
   },
   {
-    "lari": "Ta batika.",
-    "fr": "On va commencer.",
-    "en": "We are going to start."
-  },
-  {
     "lari": "Ta batika, tala zololo · .",
     "fr": "On peut commencer si tu veux.",
     "en": "We can start if you want."
+  },
+  {
+    "lari": "Ta batika.",
+    "fr": "On va commencer.",
+    "en": "We are going to start."
   },
   {
     "lari": "Ta beno, tua beno!",
@@ -20510,12 +20515,6 @@
     "en": "We are going to learn together!"
   },
   {
-    "lari": "Tá malonga",
-    "fr": "Père Malonga ; monsieur Malonga",
-    "en": "Father Malonga ; mr. Malonga",
-    "note": "Malonga est un nom d'homme. Forme courte dans les appellatifs composés. · EN — Malonga is a man's name. Short form in compound terms of address."
-  },
-  {
     "lari": "Ta mbila",
     "fr": "Appeler",
     "en": "To call"
@@ -20551,11 +20550,6 @@
     "en": "let's do"
   },
   {
-    "lari": "Ta · tela",
-    "fr": "dire",
-    "en": "to say"
-  },
-  {
     "lari": "Ta telama.",
     "fr": "Levons-nous",
     "en": "Let's stand up"
@@ -20579,6 +20573,11 @@
     "lari": "Ta zonzeno! · tua zonzeno.",
     "fr": "Parlons !",
     "en": "Let's talk!"
+  },
+  {
+    "lari": "Ta · tela",
+    "fr": "dire",
+    "en": "to say"
   },
   {
     "lari": "Taata",
@@ -20659,20 +20658,15 @@
     "en": "If one day"
   },
   {
-    "lari": "Tala lumbu, ndendi tanga kinitu kiaku, mbo ni ba mu nsayi.",
-    "fr": "Si un jour je peux lire ton aura, je serai content.",
-    "en": "If one day I can read your aura, I will be happy."
-  },
-  {
     "lari": "Tala lumbu ndendi tanga kinitu kiaku, nsayi mbo yi ku mbaka.",
     "fr": "Si un jour je peux lire ton aura, la joie m'attrapera.",
     "en": "If one day I can read your aura, joy will catch me.",
     "note": "Yi renvoie à nsayi (la joie), sujet de mbaka (attraper). · EN — Yi refers to nsayi (joy), subject of mbaka (to catch)."
   },
   {
-    "lari": "Tala, mana",
-    "fr": "si",
-    "en": "If"
+    "lari": "Tala lumbu, ndendi tanga kinitu kiaku, mbo ni ba mu nsayi.",
+    "fr": "Si un jour je peux lire ton aura, je serai content.",
+    "en": "If one day I can read your aura, I will be happy."
   },
   {
     "lari": "Tala mu kiari we. · tala tshari tshe naku.",
@@ -20696,19 +20690,9 @@
     "en": "What do you say if you know the answer?"
   },
   {
-    "lari": "Tala, na finkakasa.",
-    "fr": "Reconnais et associe.",
-    "en": "Recognize and match."
-  },
-  {
     "lari": "Tala nsayi na naku, shika nsaki.",
     "fr": "Si tu es heureux, tape des mains.",
     "en": "If you are happy, clap your hands."
-  },
-  {
-    "lari": "Tala, ntebe ye ho.",
-    "fr": "Regarde, il y a de la boue là.",
-    "en": "Look. ; there's mud there."
   },
   {
     "lari": "Tala ti zololo.",
@@ -20719,6 +20703,21 @@
     "lari": "Tala zololo.",
     "fr": "Si tu veux",
     "en": "If you want"
+  },
+  {
+    "lari": "Tala, mana",
+    "fr": "si",
+    "en": "If"
+  },
+  {
+    "lari": "Tala, na finkakasa.",
+    "fr": "Reconnais et associe.",
+    "en": "Recognize and match."
+  },
+  {
+    "lari": "Tala, ntebe ye ho.",
+    "fr": "Regarde, il y a de la boue là.",
+    "en": "Look. ; there's mud there."
   },
   {
     "lari": "Talulu tsha ntangu.",
@@ -21282,15 +21281,15 @@
     "en": "other"
   },
   {
+    "lari": "Tshiba tsha nioshi.",
+    "fr": "Rayon de miel, ensemble d'alvéoles contenant le miel que l'on va récolter. ; rayon de miel, ensemble d'alvéoles contenant le miel.",
+    "en": "Honeycomb, set of cells containing honey to be harvested. ; honeycomb."
+  },
+  {
     "lari": "Tshiba · biba",
     "fr": "Couvercle d'une casserole",
     "en": "Pot lid",
     "note": "Avec un /i/ court. · EN — With a short /i/."
-  },
-  {
-    "lari": "Tshiba tsha nioshi.",
-    "fr": "Rayon de miel, ensemble d'alvéoles contenant le miel que l'on va récolter. ; rayon de miel, ensemble d'alvéoles contenant le miel.",
-    "en": "Honeycomb, set of cells containing honey to be harvested. ; honeycomb."
   },
   {
     "lari": "Tshibanga",
@@ -21371,14 +21370,14 @@
     "en": "Flower"
   },
   {
-    "lari": "Tshifulu, kifulu · bifulu.",
-    "fr": "fleur",
-    "en": "flower"
-  },
-  {
     "lari": "Tshifulu tshi tshia toma.",
     "fr": "Cette fleur est belle.",
     "en": "This flower is beautiful."
+  },
+  {
+    "lari": "Tshifulu, kifulu · bifulu.",
+    "fr": "fleur",
+    "en": "flower"
   },
   {
     "lari": "Tshifundu · bifundu",
@@ -21473,14 +21472,14 @@
     "en": "Chat ; discussion"
   },
   {
-    "lari": "Tshimoko tshi na zolo yika, ka tsha wa ko.",
-    "fr": "La discussion que je voulais ajouter, ce n'est pas celle-là.",
-    "en": "The discussion I wanted to add, it is not that one."
-  },
-  {
     "lari": "Tshimoko tshi na zolo yika ni tsha we tshi.",
     "fr": "La discussion que je voulais ajouter, ce n'est pas celle-ci.",
     "en": "The discussion I wanted to add is not this one."
+  },
+  {
+    "lari": "Tshimoko tshi na zolo yika, ka tsha wa ko.",
+    "fr": "La discussion que je voulais ajouter, ce n'est pas celle-là.",
+    "en": "The discussion I wanted to add, it is not that one."
   },
   {
     "lari": "Tshimpala · bimpala",
@@ -21498,6 +21497,11 @@
     "en": "Nudity"
   },
   {
+    "lari": "Tshina tsha mvula.",
+    "fr": "La saison des pluies.",
+    "en": "The rainy season."
+  },
+  {
     "lari": "Tshina · bina",
     "fr": "Interdiction ; tabou",
     "en": "Prohibition ; taboo",
@@ -21509,20 +21513,10 @@
     "en": "Season"
   },
   {
-    "lari": "Tshina tsha mvula.",
-    "fr": "La saison des pluies.",
-    "en": "The rainy season."
-  },
-  {
     "lari": "Tshindiku",
     "fr": "amitié",
     "en": "friendship",
     "note": "Variante: tshinduku. · EN — Variant: tshinduku."
-  },
-  {
-    "lari": "Tshindongo · bindongo",
-    "fr": "mouton ; moutons",
-    "en": "sheep"
   },
   {
     "lari": "Tshindongo tshati nkento.",
@@ -21533,6 +21527,11 @@
     "lari": "Tshindongo tshia mbakala.",
     "fr": "Mouton.",
     "en": "Sheep."
+  },
+  {
+    "lari": "Tshindongo · bindongo",
+    "fr": "mouton ; moutons",
+    "en": "sheep"
   },
   {
     "lari": "Tshindongo, tshindongo tsha bakala.",
@@ -21571,14 +21570,14 @@
     "en": "Clothing ; garment ; shirt"
   },
   {
-    "lari": "Tshinkuti, kinkuti · binkuti.",
-    "fr": "Habit ; vêtement ; habits ; vêtements",
-    "en": "Garment ; garments"
-  },
-  {
     "lari": "Tshinkuti tshi zezele.",
     "fr": "L'habit est desserré.",
     "en": "The garment is loosened."
+  },
+  {
+    "lari": "Tshinkuti, kinkuti · binkuti.",
+    "fr": "Habit ; vêtement ; habits ; vêtements",
+    "en": "Garment ; garments"
   },
   {
     "lari": "Tshinsunsu",
@@ -21794,14 +21793,14 @@
     "en": "to be out of breath"
   },
   {
-    "lari": "Tuendi.",
-    "fr": "Allons-y / on y va",
-    "en": "Let us go / let's go"
-  },
-  {
     "lari": "Tuendi eno",
     "fr": "Allons-y (à plusieurs) ; on y va",
     "en": "Let us go (to several people). ; let's go"
+  },
+  {
+    "lari": "Tuendi.",
+    "fr": "Allons-y / on y va",
+    "en": "Let us go / let's go"
   },
   {
     "lari": "Tufinia",
@@ -21824,14 +21823,14 @@
     "en": "To raise an animal ; to raise (animals) ; livestock farm ; to raise animals"
   },
   {
-    "lari": "Tuila dia bindongo.",
-    "fr": "Un élevage de moutons.",
-    "en": "A sheep farm."
-  },
-  {
     "lari": "Tuila dia bindongo die nandi.",
     "fr": "Il a un élevage de moutons.",
     "en": "He has a sheep farm."
+  },
+  {
+    "lari": "Tuila dia bindongo.",
+    "fr": "Un élevage de moutons.",
+    "en": "A sheep farm."
   },
   {
     "lari": "Tuila dia dingi die nani.",
@@ -21997,14 +21996,20 @@
     "en": "mortar (for pounding)"
   },
   {
+    "lari": "Tuvi tua mbiji.",
+    "fr": "Le caca d'un animal.",
+    "en": "Animal droppings."
+  },
+  {
     "lari": "Tuvi · matuvi",
     "fr": "Selles",
     "en": "Feces"
   },
   {
-    "lari": "Tuvi tua mbiji.",
-    "fr": "Le caca d'un animal.",
-    "en": "Animal droppings."
+    "lari": "Tá malonga",
+    "fr": "Père Malonga ; monsieur Malonga",
+    "en": "Father Malonga ; mr. Malonga",
+    "note": "Malonga est un nom d'homme. Forme courte dans les appellatifs composés. · EN — Malonga is a man's name. Short form in compound terms of address."
   },
   {
     "lari": "Vikuna",
@@ -22451,14 +22456,14 @@
     "en": "Inhale"
   },
   {
-    "lari": "Wele.",
-    "fr": "Tu pars",
-    "en": "You are leaving"
-  },
-  {
     "lari": "Wele ku na nzo andi.",
     "fr": "Il est rentré chez lui.",
     "en": "He went back home."
+  },
+  {
+    "lari": "Wele.",
+    "fr": "Tu pars",
+    "en": "You are leaving"
   },
   {
     "lari": "Wena makutu ka wa.",
@@ -22627,12 +22632,6 @@
     "en": "Ours"
   },
   {
-    "lari": "Yá malonga",
-    "fr": "Grand-Parent Malonga ; aîné Malonga",
-    "en": "Elder Malonga ; grandparent Malonga",
-    "note": "Malonga est un nom d'homme. · EN — Malonga is a man's name."
-  },
-  {
     "lari": "Ya me.",
     "fr": "Le mien, la mienne.",
     "en": "Mine"
@@ -22694,6 +22693,12 @@
     "note": "Homographe : ne pas confondre avec « Yaka » (attraper au vol), dont la deuxième syllabe est accentuée. · EN — Homograph: do not confuse with \"Yaka\" (catch in mid-air), which has the stress on the 2nd syllable."
   },
   {
+    "lari": "Yaka (yaKA)",
+    "fr": "Attraper au vol",
+    "en": "To catch mid-air",
+    "note": "⚠️ Prononciation : la deuxième syllabe est accentuée (ya-KA). C'est ainsi qu'on le distingue de l'homographe « Yaka » (manioc). · EN — ⚠️ Pronunciation: the 2nd syllable is stressed (ya-KA). This is how it is distinguished from the homograph \"Yaka\" (cassava)."
+  },
+  {
     "lari": "Yaka kue die(na)?",
     "fr": "Où est le manioc ?",
     "en": "Where is the cassava?"
@@ -22702,12 +22707,6 @@
     "lari": "Yaka N'samu",
     "fr": "Se mêler d'une affaire.",
     "en": "To meddle in an affair, to get involved."
-  },
-  {
-    "lari": "Yaka (yaKA)",
-    "fr": "Attraper au vol",
-    "en": "To catch mid-air",
-    "note": "⚠️ Prononciation : la deuxième syllabe est accentuée (ya-KA). C'est ainsi qu'on le distingue de l'homographe « Yaka » (manioc). · EN — ⚠️ Pronunciation: the 2nd syllable is stressed (ya-KA). This is how it is distinguished from the homograph \"Yaka\" (cassava)."
   },
   {
     "lari": "Yakamba",
@@ -23167,15 +23166,15 @@
     "en": "to accomplish ; to come ; to arrive"
   },
   {
-    "lari": "Yiza ku.",
-    "fr": "Viens ici",
-    "en": "Come here"
-  },
-  {
     "lari": "Yiza ku mbakisa sa malu.",
     "fr": "Viens m'aider rapidement.",
     "en": "Come help me quickly.",
     "note": "sa malu = vite (littéralement : fais marcher tes pieds). · EN — sa malu = quickly (literally: make your feet walk)."
+  },
+  {
+    "lari": "Yiza ku.",
+    "fr": "Viens ici",
+    "en": "Come here"
   },
   {
     "lari": "Yiza kuaku.",
@@ -23335,6 +23334,12 @@
     "lari": "Yuza",
     "fr": "Arracher avec les racines",
     "en": "To uproot"
+  },
+  {
+    "lari": "Yá malonga",
+    "fr": "Grand-Parent Malonga ; aîné Malonga",
+    "en": "Elder Malonga ; grandparent Malonga",
+    "note": "Malonga est un nom d'homme. · EN — Malonga is a man's name."
   },
   {
     "lari": "Zaba",
