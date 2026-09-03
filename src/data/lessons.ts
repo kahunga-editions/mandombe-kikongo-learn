@@ -19783,7 +19783,7 @@ export const lessons: Lesson[] = [
       { lari: "ntientie", mandombe: "ntientie", french: "roitelet", english: "wren" },
       { lari: "tufinia", mandombe: "tufiniya", french: "le pus", english: "pus" },
       { lari: "kinionia | binionia", mandombe: "kinioniya | binioniya", french: "petite fourmi", english: "small ant" },
-      { lari: "kimfinia | bimfinia", mandombe: "kimfiniya | bimfiniya", french: "un pincement", english: "a pinch", note: "Prononcer /kimpfinia/" },
+      { lari: "kimfinia | bimfinia", mandombe: "kimfinia | bimfinia", french: "un pincement", english: "a pinch", note: "Prononcer /kimpfinia/" },
       { lari: "lubanji | mbanji", mandombe: "lubanji | mbanji", french: "les côtes (anatomie humaine)", english: "ribs (human anatomy)" },
       { lari: "nzindu", mandombe: "nzindu", french: "sentiments, pensées profondes, réflexions profondes", english: "deep feelings, deep thoughts, profound reflections", note: "Prononcer /njindu/" },
       { lari: "mutima | mitima", mandombe: "mutima | mitima", french: "cœur", english: "heart", note: "Variantes: ntima" },
