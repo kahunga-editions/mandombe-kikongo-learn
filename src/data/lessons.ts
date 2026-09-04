@@ -13217,7 +13217,6 @@ export const lessons: Lesson[] = [
         titlePt: "Decifrar o Mandombe – Palavras interrogativas — Bue, Nki, Kue",
         items: [
             { mandombe: "Nkia bungu lembolo kuijila?", lari: "Nkia bungu lembolo kuijila?", distractors: ["ntemo", "Mua nzievo", "Vumbula"], french: "Pour quelle raison n'es-tu pas venu ?", english: "For what reason didn't you come?", portuguese: "Por que razão não vieste?", mode: "glyph-to-latin" as const },
-            { mandombe: "Kue ka?", lari: "Kue ka?", distractors: ["Ntondele", "Lukami", "Mufimpi"], french: "Où va-t-elle ?", english: "Where is she going?", portuguese: "Onde vai ela?", mode: "latin-to-glyph" as const },
             { mandombe: "Nzo mikanda eno kue ye(na)?", lari: "Nzo mikanda eno kue ye(na)?", distractors: ["Bumuntu", "Bima", "Yetana ka ta yetana."], french: "Où allez-vous à l'école ?", english: "Where do you (pl.) go to school?", portuguese: "Onde ides à escola?", mode: "glyph-to-latin" as const },
             { mandombe: "Nkia bungu lembolo kuijila?", lari: "Nkia bungu lembolo kuijila?", distractors: ["nkunzu", "Nki ka ta dirila?", "nkuizulu"], french: "Pour quelle raison n'es-tu pas venu ?", english: "For what reason didn't you come?", portuguese: "Por que razão não vieste?", mode: "latin-to-glyph" as const },
             { mandombe: "Dila", lari: "Dila", distractors: ["Ba mana sa bubolo", "Mpalala", "Munkua kumbi"], french: "Pleurer", english: "To cry", portuguese: "Chorar", mode: "glyph-to-latin" as const },
@@ -18337,7 +18336,7 @@ export const lessons: Lesson[] = [
             { mandombe: "Kieta", lari: "Kieta", distractors: ["Nkalala", "Kiyombe", "Sikulu"], french: "Défaut du corps", english: "Physical defect", mode: "glyph-to-latin" as const },
             { mandombe: "Bimbu", lari: "Bimbu", distractors: ["Zongo", "Kikamba", "Bumpula"], french: "La dette", english: "Debt", mode: "latin-to-glyph" as const },
             { mandombe: "Bishi nsi", lari: "Bishi nsi", distractors: ["Pari tshi", "Habuka", "Madia ma bele mpimpa."], french: "Les autochtones", english: "The natives, indigenous people", mode: "glyph-to-latin" as const },
-            { mandombe: "Biamvu", lari: "Biamvu", distractors: ["Lembamba", "Kue ka?", "Luanza"], french: "Les ponts", english: "Bridges", mode: "latin-to-glyph" as const },
+            { mandombe: "Biamvu", lari: "Biamvu", distractors: ["Lembamba", "Luanza", "Bunsuiki"], french: "Les ponts", english: "Bridges", mode: "latin-to-glyph" as const },
         ],
       },
   ],
