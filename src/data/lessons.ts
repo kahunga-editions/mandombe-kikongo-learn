@@ -18566,7 +18566,7 @@ export const lessons: Lesson[] = [
     { lari: "Luke", mandombe: "Luke", french: "L'écharpe rouge", english: "Red scarf" },
     { lari: "Kiari, tshiari", mandombe: "Kiari", french: "Pitié, compassion, tristesse", english: "Pity, compassion, sadness" },
     { lari: "Kiazi kia ngazi", mandombe: "Kiazi kia ngazi", french: "Le régime de noix de palme", english: "Bunch of palm nuts" },
-    { lari: "Kozia", mandombe: "Koziya", french: "Tige d'une fleur, tige d'une feuille", english: "Flower/leaf stem" },
+    { lari: "Kozia", mandombe: "Kozia", french: "Tige d'une fleur, tige d'une feuille", english: "Flower/leaf stem" },
   ],
   exercises: [
     { type: "matching" as const, instruction: "Match the Lari word with its meaning", instructionFr: "Associez le mot lari à sa signification", pairs: [
