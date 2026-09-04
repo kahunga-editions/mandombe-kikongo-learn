@@ -465,12 +465,12 @@ const Dictionary = () => {
                   <div className="flex flex-col sm:flex-row sm:items-start gap-3">
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-2 flex-wrap">
-                        <span className="font-mandombe text-4xl md:text-5xl text-gold leading-[1.5]">
+                        <span className="font-mandombe text-4xl md:text-5xl text-gold">
                           {cleanMandombe(entry.mandombe)}
                         </span>
                         <MandombeSpeaker lariText={entry.lari} />
                       </div>
-                      <h3 className="mt-1 text-lg font-bold text-foreground/80">{entry.lari}</h3>
+                      <h3 className="mt-3 text-lg font-bold text-foreground/80">{entry.lari}</h3>
 
                       <LingalaMandombe frenchText={entry.french} className="mt-1" />
                       <p className="mt-1 text-base text-muted-foreground flex items-center gap-1">
