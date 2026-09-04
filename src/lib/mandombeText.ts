@@ -16,8 +16,8 @@ const STRIP_ACCENTS = (s: string) =>
  * Nettoie un bloc Mandombe : lettres et espaces uniquement.
  * - "tshio" s'ecrit "kio" et "tshie" s'ecrit "kie" (sinon un "e" ou une lettre
  *   latine se balade a la fin du bloc).
- * - Un "ia" final de mot long s'ecrit "iya" (tilapia -> tilapiya) ; la version
- *   latine, elle, garde "tilapia".
+ * - Un « ia » final se tape tel quel (kozia, kimfinia, bimfinia) ; seul
+ *   « tilapia » s'ecrit « tilapiya » (cas nomme, suite non composable).
  * - Le nom propre "Paul" s'ecrit "Paulo".
  * - Apres une consonne, le "y" de la translitteration s'ecrit "i" (fyu -> fiu,
  *   kya -> kia). Le "y" initial de mot est conserve (ya, yandi) : la police
@@ -33,7 +33,7 @@ export const cleanMandombe = (text: string): string =>
     .replace(/([Tt])shio/g, (_m, t) => (t === "T" ? "Kio" : "kio"))
     .replace(/([Tt])shie/g, (_m, t) => (t === "T" ? "Kie" : "kie"))
     .replace(/\bPaul\b/g, "Paulo")
-    .replace(/\b(?!(?:kim|bim)finia\b)([A-Za-z]{3,})ia\b/gi, "$1iya")
+    .replace(/\btilapia\b/gi, (m) => m.slice(0, -1) + "ya")
     .replace(/([BCDFGJKLMNPQRSTVWXZbcdfgjklmnpqrstvwxz])[yY]/g, "$1i")
     .replace(/([AaEeIiOoUu])\1+/g, "$1")
     .replace(/\s+/g, " ")

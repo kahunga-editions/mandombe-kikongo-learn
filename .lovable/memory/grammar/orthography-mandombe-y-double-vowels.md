@@ -9,8 +9,9 @@ Dans tout champ `mandombe` (dictionnaire, lecons, traducteur, illustrations, liv
   Laadi -> "Ladi". Sinon la police affiche une lettre latine parasite.
 - "tshio" s'ecrit "kio" et "tshie" s'ecrit "kie" (sinon un "e" latin se balade).
   Ex : Tshioni -> "Kioni".
-- "ia" final de mot long s'ecrit "iya" en mandombe seulement : tilapia ->
-  mandombe "tilapiya", latin "tilapia".
+- Un "ia" final se tape TEL QUEL (kozia, kimfinia, bimfinia). On ne passe par
+  "iya" que lorsque la suite est impossible a taper : tilapia -> "tilapiya"
+  (latin : tilapia). Aucune autre generalisation.
 - Pas d'apostrophe : n'lemvo -> "nlemvo" (sinon le "n" initial reste visible).
 - "nje" peut s'ecrire "nze" en mandombe, mais PAS systematiquement (au cas par cas).
 - Les noms propres prennent une majuscule ; "Paul" s'ecrit "Paulo" en mandombe.

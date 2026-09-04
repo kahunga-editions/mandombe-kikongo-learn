@@ -49,8 +49,9 @@ def to_mandombe(lari: str) -> str:
     s = re.sub(r"([Tt])shio", lambda m: ("K" if m.group(1) == "T" else "k") + "io", s)
     s = re.sub(r"([Tt])shie", lambda m: ("K" if m.group(1) == "T" else "k") + "ie", s)
     s = re.sub(r"\bPaul\b", "Paulo", s)
-    # exceptions validees : kimfinia / bimfinia se tapent tels quels, le "ia" final passe
-    s = re.sub(r"(?i)\b(?!(?:kim|bim)finia\b)([a-z]{3,})ia\b", lambda m: m.group(1) + "iya", s)  # tilapia -> tilapiya
+    # « ia » final se tape tel quel : seul « tilapia » recoit la graphie « iya »
+    # (cas nomme donne par l'auteur, car la suite ne se compose pas)
+    s = re.sub(r"(?i)\btilapia\b", lambda m: m.group(0)[:-1] + "ya", s)
     s = re.sub(r"([BCDFGJKLMNPQRSTVWXZbcdfgjklmnpqrstvwxz])[yY]", r"\1i", s)
     s = re.sub(r"([AaEeIiOoUu])\1+", r"\1", s)              # jamais deux voyelles identiques
     s = re.sub(r"[^A-Za-z'.?!, ]+", " ", s)
