@@ -130,9 +130,11 @@
   }
 
   .font-mandombe {
-    line-height: 1.8;
+    /* Les glyphes Mandombe debordent largement sous la ligne de base :
+       hauteur de ligne genereuse pour qu'ils ne chevauchent jamais la ligne suivante. */
+    line-height: 2.1;
     overflow: visible;
-    padding-top: 0.25em;
-    padding-bottom: 0.25em;
+    padding-top: 0.35em;
+    padding-bottom: 0.35em;
   }
 }
