@@ -14,22 +14,16 @@ Correction :
 - `src/pages/Translator.tsx` : même traitement sur le bloc de sortie Mandombe, et passage par `cleanMandombe` pour qu'aucune ponctuation latine ne reste au milieu des glyphes.
 - Vérification par captures (dictionnaire entrée courte et longue, traducteur), en desktop et en largeur mobile.
 
-## 2. Revue de la règle « ia » — ce que je retiens
+## 2. Règle du « ia » — ce que je retiens (validé par l'auteur)
 
-**Règle unique : si le glyphe existe en Mandombe, on le tape tel quel. On ne passe jamais par `iya`.**
+**Règle : si le glyphe existe en Mandombe, on le tape tel quel.** Le `ia` final se tape donc tel quel : `nkia` (« qui »), `kozia`, `kimfinia`, `bimfinia`. Jamais `nkiya`.
 
-`iya` n'est pas une graphie de repli à appliquer « au cas où ». C'est une invention à supprimer partout où elle n'est pas la frappe réelle du mot.
+**Les seuls cas où on tape IYA** : les glyphes JIA, WIA, PIA, RIA et HIA n'existent pas dans la police. Dans ces cinq cas **uniquement**, on tape `iya` pour ne pas laisser de lettres latines au milieu du Mandombe (ex. `tilapia` → `tilapiya`, car PIA n'existe pas). Aucune autre suite ne reçoit `iya`.
 
-Cas concrets :
-- `nkia` (« qui ») se tape **nkia**, avec ses glyphes. Jamais `nkiya`.
-- `kozia`, `kimfinia`, `bimfinia` se tapent tels quels (déjà corrigé).
-- `Ntshia` / `ntshiya` ne sont pas des saisies : la saisie est `nkia`.
-
-Défaut encore présent dans le code : `scripts/mandombe_graphies.py` mappe `nkia → nkiya`, `ntshia → nkiya`, `ntshiya → nkiya`. Ces trois lignes deviennent `nkia`.
-
-`tilapia → tilapiya` est le seul cas où l'auteur a nommé une graphie différente ; je vérifie cette suite au shaper (HarfBuzz sur `masono_mandombe-webfont.ttf`) avant de la garder, et je te soumets le résultat au lieu de trancher seul.
-
-Contrôle systématique : passer au shaper toutes les occurrences de `iya` restantes dans les couches de saisie et le corpus, lister celles où la suite sans `y` se compose correctement, et les remettre à leur graphie réelle.
+Corrections :
+- `scripts/mandombe_graphies.py` : les lignes `nkia → nkiya`, `ntshia → nkiya`, `ntshiya → nkiya` deviennent `nkia` (la saisie est `nkia` ; `Ntshia`/`ntshiya` ne sont pas des saisies).
+- `scripts/mandombe_typing.py` et `src/lib/mandombeText.ts` : remplacer l'exception « tilapia » par la règle exacte des cinq suites non tapables `(jia|wia|pia|ria|hia) → iya`, minuscules et majuscules.
+- Contrôle : passer au shaper (HarfBuzz sur la police du site) toutes les occurrences de `iya` restantes dans le corpus et les couches de saisie ; remettre à leur graphie réelle celles qui ne relèvent pas des cinq cas, et te soumettre la liste avant modification.
 
 ## 3. Ama en un seul mot
 
@@ -37,8 +31,9 @@ L'entrée du dictionnaire est `A ma` (fr « ma chère »). Elle devient **`Ama`*
 
 ## 4. Mémoire
 
-Ajout de la règle dans la base d'apprentissage Mandombe (`.lovable/memory/grammar/orthography-mandombe-y-double-vowels.md` et la skill de saisie) :
+Ajout de la règle dans la base d'apprentissage Mandombe (`.lovable/memory/grammar/orthography-mandombe-y-double-vowels.md`) :
 - si le glyphe existe, on le tape — `iya` n'est jamais un repli ;
+- `iya` uniquement pour JIA, WIA, PIA, RIA, HIA, glyphes absents de la police ;
 - `nkia` se tape `nkia` ;
 - `Ama` s'écrit en un seul mot.
 
