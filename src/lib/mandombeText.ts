@@ -16,8 +16,8 @@ const STRIP_ACCENTS = (s: string) =>
  * Nettoie un bloc Mandombe : lettres et espaces uniquement.
  * - "tshio" s'ecrit "kio" et "tshie" s'ecrit "kie" (sinon un "e" ou une lettre
  *   latine se balade a la fin du bloc).
- * - Un "ia" final de mot long s'ecrit "iya" (tilapia -> tilapiya) ; la version
- *   latine, elle, garde "tilapia".
+ * - Un « ia » final se tape tel quel (kozia, kimfinia, bimfinia) ; seul
+ *   « tilapia » s'ecrit « tilapiya » (cas nomme, suite non composable).
  * - Le nom propre "Paul" s'ecrit "Paulo".
  * - Apres une consonne, le "y" de la translitteration s'ecrit "i" (fyu -> fiu,
  *   kya -> kia). Le "y" initial de mot est conserve (ya, yandi) : la police
