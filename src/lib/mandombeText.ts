@@ -33,7 +33,7 @@ export const cleanMandombe = (text: string): string =>
     .replace(/([Tt])shio/g, (_m, t) => (t === "T" ? "Kio" : "kio"))
     .replace(/([Tt])shie/g, (_m, t) => (t === "T" ? "Kie" : "kie"))
     .replace(/\bPaul\b/g, "Paulo")
-    .replace(/\b(?!(?:kim|bim)finia\b)([A-Za-z]{3,})ia\b/gi, "$1iya")
+    .replace(/\btilapia\b/gi, (m) => m.slice(0, -1) + "ya")
     .replace(/([BCDFGJKLMNPQRSTVWXZbcdfgjklmnpqrstvwxz])[yY]/g, "$1i")
     .replace(/([AaEeIiOoUu])\1+/g, "$1")
     .replace(/\s+/g, " ")
