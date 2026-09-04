@@ -1,654 +1,1526 @@
-# Formes a arbitrer — series construites par analogie
-
-Chaque bloc regroupe des formes identiques a un seul marqueur pres (personne, possessif, classe). C'est la signature d'une conjugaison faite par analogie : dans une serie, en general une seule forme vient du corpus, les autres ont ete derivees.
-
-Rien n'est supprime : indiquez pour chaque forme si elle est juste ou a retirer.
-
-86 series detectees.
-
-## … bele  (8 formes)
-
-- **Ba bele** — Ils/elles étaient  · lessons.ts:27463
-- **Ka bele** — Il/elle était  · lessons.ts:27460
-- **Lu bele** — Vous étiez  · lessons.ts:27462
-- **Tu bele** — Nous étions  · lessons.ts:27461
-- **ba bele** — (sans sens)  · lessons.ts:541
-- **ka bele** — (sans sens)  · lessons.ts:538
-- **lu bele** — (sans sens)  · lessons.ts:540
-- **tu bele** — (sans sens)  · lessons.ts:539
-
-## … lendi  (7 formes)
-
-- **Ba lendi** — (sans sens)  · lessons.ts:8771
-- **Lu lendi** — (sans sens)  · lessons.ts:8770
-- **Tu lendi** — (sans sens)  · lessons.ts:8769
-- **ba lendi** — (sans sens)  · lessons.ts:497, lessons.ts:661
-- **lu lendi** — (sans sens)  · lessons.ts:496
-- **tu lendi** — (sans sens)  · lessons.ts:495
-- **wa lendi** — (sans sens)  · lessons.ts:657, lessons.ts:658
-
-## … zololo  (7 formes)
-
-- **Ba zololo** — (sans sens)  · lessons.ts:11073, lessons.ts:9285
-- **Lu zololo** — (sans sens)  · lessons.ts:11072, lessons.ts:9284
-- **Tu zololo** — (sans sens)  · lessons.ts:11071, lessons.ts:9283
-- **ba zololo** — (sans sens)  · lessons.ts:21509
-- **ka zololo** — (sans sens)  · lessons.ts:21506
-- **lu zololo** — (sans sens)  · lessons.ts:21508
-- **tu zololo** — (sans sens)  · lessons.ts:21507
-
-## … ta banza  (5 formes)
-
-- **ba ta banza** — (sans sens)  · lessons.ts:21276
-- **ka ta banza** — (sans sens)  · lessons.ts:21273
-- **lu ta banza** — (sans sens)  · lessons.ts:21275
-- **ni ta banza** — (sans sens)  · lessons.ts:21271
-- **tu ta banza** — (sans sens)  · lessons.ts:21274
-
-## … ta bonga  (5 formes)
-
-- **ba ta bonga** — (sans sens)  · lessons.ts:691
-- **ka ta bonga** — (sans sens)  · lessons.ts:688
-- **lu ta bonga** — (sans sens)  · lessons.ts:690
-- **ni ta bonga** — (sans sens)  · lessons.ts:686
-- **tu ta bonga** — (sans sens)  · lessons.ts:689
-
-## … ta dia  (5 formes)
-
-- **ba ta dia** — (sans sens)  · lessons.ts:469
-- **ka ta dia** — (sans sens)  · lessons.ts:466
-- **lu ta dia** — (sans sens)  · lessons.ts:468
-- **ni ta dia** — (sans sens)  · lessons.ts:464
-- **tu ta dia** — (sans sens)  · lessons.ts:467
-
-## … ta futa  (5 formes)
-
-- **ba ta futa** — (sans sens)  · lessons.ts:21321
-- **ka ta futa** — (sans sens)  · lessons.ts:21318
-- **lu ta futa** — (sans sens)  · lessons.ts:21320
-- **ni ta futa** — (sans sens)  · lessons.ts:21316
-- **tu ta futa** — (sans sens)  · lessons.ts:21319
-
-## … ta longoka  (5 formes)
-
-- **ba ta longoka** — (sans sens)  · lessons.ts:22242
-- **ka ta longoka** — (sans sens)  · lessons.ts:22239
-- **lu ta longoka** — (sans sens)  · lessons.ts:22241
-- **ni ta longoka** — (sans sens)  · lessons.ts:22237
-- **tu ta longoka** — (sans sens)  · lessons.ts:22240
-
-## … ta mona  (5 formes)
-
-- **ba ta mona** — (sans sens)  · lessons.ts:21464
-- **ka ta mona** — (sans sens)  · lessons.ts:21461
-- **lu ta mona** — (sans sens)  · lessons.ts:21463
-- **ni ta mona** — (sans sens)  · lessons.ts:21459
-- **tu ta mona** — (sans sens)  · lessons.ts:21462
-
-## … ta nimba  (5 formes)
-
-- **ba ta nimba** — (sans sens)  · lessons.ts:22258
-- **ka ta nimba** — (sans sens)  · lessons.ts:22255
-- **lu ta nimba** — (sans sens)  · lessons.ts:22257
-- **ni ta nimba** — (sans sens)  · lessons.ts:22253
-- **tu ta nimba** — (sans sens)  · lessons.ts:22256
-
-## … ta nua  (5 formes)
-
-- **ba ta nua** — (sans sens)  · lessons.ts:483
-- **ka ta nua** — (sans sens)  · lessons.ts:480
-- **lu ta nua** — (sans sens)  · lessons.ts:482
-- **ni ta nua** — (sans sens)  · lessons.ts:478
-- **tu ta nua** — (sans sens)  · lessons.ts:481
-
-## … ta sa  (5 formes)
-
-- **ba ta sa** — (sans sens)  · lessons.ts:455
-- **ka ta sa** — (sans sens)  · lessons.ts:452
-- **lu ta sa** — (sans sens)  · lessons.ts:454
-- **ni ta sa** — (sans sens)  · lessons.ts:450
-- **tu ta sa** — (sans sens)  · lessons.ts:453
-
-## … ta sala  (5 formes)
-
-- **ba ta sala** — (sans sens)  · lessons.ts:21735
-- **ka ta sala** — (sans sens)  · lessons.ts:21732
-- **lu ta sala** — (sans sens)  · lessons.ts:21734
-- **ni ta sala** — (sans sens)  · lessons.ts:21730, lessons.ts:21820
-- **tu ta sala** — (sans sens)  · lessons.ts:21733
-
-## bilongo … kue nue  (5 formes)
-
-- **bilongo ba kue nue** — (sans sens)  · lessons.ts:27680
-- **bilongo ka kue nue** — (sans sens)  · lessons.ts:27677
-- **bilongo lu kue nue** — (sans sens)  · lessons.ts:27679
-- **bilongo ni kue nue** — (sans sens)  · lessons.ts:27675
-- **bilongo tu kue nue** — (sans sens)  · lessons.ts:27678
-
-## dia … dia.  (5 formes)
-
-- **Dia ba dia.** — Ils vont manger.  · dictionnaire
-- **Dia ka dia.** — Il/elle va manger.  · dictionnaire
-- **Dia lu dia.** — Vous allez manger.  · dictionnaire
-- **Dia ni dia.** — Je vais manger.  · dictionnaire
-- **Dia tu dia.** — Nous allons manger.  · dictionnaire
-
-## dila … ta dila  (5 formes)
-
-- **Dila ba ta dila** — Ils sont en train de pleurer  · lessons.ts:12840, lessons.ts:12970
-- **Dila ka ta dila** — Il/elle est en train de pleurer  · lessons.ts:12837, lessons.ts:12967
-- **Dila lu ta dila** — Vous êtes en train de pleurer  · lessons.ts:12839, lessons.ts:12969
-- **Dila ni ta dila** — Je suis en train de pleurer  · lessons.ts:12835, lessons.ts:12965, lessons.ts:13224
-- **Dila tu ta dila** — Nous sommes en train de pleurer  · lessons.ts:12838, lessons.ts:12968
-
-## dila … ta dila.  (5 formes)
-
-- **Dila ba ta dila.** — Ils sont en train de pleurer.  · dictionnaire
-- **Dila ka ta dila.** — Il/elle est en train de pleurer.  · dictionnaire
-- **Dila lu ta dila.** — Vous êtes en train de pleurer.  · dictionnaire
-- **Dila ni ta dila.** — Je suis en train de pleurer.  · dictionnaire
-- **Dila tu ta dila.** — Nous sommes en train de pleurer.  · dictionnaire
-
-## ku hata … ta kota.  (5 formes)
-
-- **Ku hata ba ta kota.** — Ils sont en train d'entrer dans le village.  · lessons.ts:17409
-- **Ku hata ka ta kota.** — Elle est en train d'entrer dans le village.  · lessons.ts:17406
-- **Ku hata lu ta kota.** — Vous êtes en train d'entrer dans le village.  · lessons.ts:17408
-- **Ku hata ni ta kota.** — Je suis en train d'entrer dans le village.  · lessons.ts:17404
-- **Ku hata tu ta kota.** — Nous sommes en train d'entrer dans le village.  · lessons.ts:17407
-
-## maba … ta baka.  (5 formes)
-
-- **Maba ba ta baka.** — Ils/elles taillent les palmiers.  · lessons.ts:13476, lessons.ts:13524
-- **Maba ka ta baka.** — Elle/il taille les palmiers.  · lessons.ts:13473
-- **Maba lu ta baka.** — Vous taillez les palmiers.  · lessons.ts:13475
-- **Maba ni ta baka.** — Je taille les palmiers.  · lessons.ts:13471, lessons.ts:13527
-- **Maba tu ta baka.** — Nous taillons les palmiers.  · lessons.ts:13474
-
-## mbata … mu wuindiri  (5 formes)
-
-- **Mbata ba mu wuindiri** — (sans sens)  · lessons.ts:13883
-- **Mbata ka mu wuindiri** — (sans sens)  · lessons.ts:13865, lessons.ts:13880
-- **Mbata lu mu wuindiri** — (sans sens)  · lessons.ts:13882
-- **Mbata ni mu wuindiri** — (sans sens)  · lessons.ts:13878
-- **Mbata tu mu wuindiri** — (sans sens)  · lessons.ts:13881
-
-## mbo … banza  (5 formes)
-
-- **mbo ba banza** — (sans sens)  · lessons.ts:21306
-- **mbo ka banza** — (sans sens)  · lessons.ts:21303
-- **mbo lu banza** — (sans sens)  · lessons.ts:21305
-- **mbo ni banza** — (sans sens)  · lessons.ts:21301
-- **mbo tu banza** — (sans sens)  · lessons.ts:21304
-
-## mbo … bonga  (5 formes)
-
-- **mbo ba bonga** — (sans sens)  · lessons.ts:706
-- **mbo ka bonga** — (sans sens)  · lessons.ts:703
-- **mbo lu bonga** — (sans sens)  · lessons.ts:705
-- **mbo ni bonga** — (sans sens)  · lessons.ts:701
-- **mbo tu bonga** — (sans sens)  · lessons.ts:704
-
-## mbo … dia  (5 formes)
-
-- **mbo ba dia** — (sans sens)  · lessons.ts:616
-- **mbo ka dia** — (sans sens)  · lessons.ts:613
-- **mbo lu dia** — (sans sens)  · lessons.ts:615
-- **mbo ni dia** — (sans sens)  · lessons.ts:611
-- **mbo tu dia** — (sans sens)  · lessons.ts:614
-
-## mbo … futa  (5 formes)
-
-- **mbo ba futa** — (sans sens)  · lessons.ts:21351
-- **mbo ka futa** — (sans sens)  · lessons.ts:21348
-- **mbo lu futa** — (sans sens)  · lessons.ts:21350
-- **mbo ni futa** — (sans sens)  · lessons.ts:21346
-- **mbo tu futa** — (sans sens)  · lessons.ts:21349
-
-## mbo … hana musua  (5 formes)
-
-- **mbo ba hana musua** — (sans sens)  · lessons.ts:21720
-- **mbo ka hana musua** — (sans sens)  · lessons.ts:21717
-- **mbo lu hana musua** — (sans sens)  · lessons.ts:21719
-- **mbo ni hana musua** — (sans sens)  · lessons.ts:21715
-- **mbo tu hana musua** — (sans sens)  · lessons.ts:21718
-
-## mbo … kuiza  (5 formes)
-
-- **mbo ba kuiza** — (sans sens)  · lessons.ts:21261
-- **mbo ka kuiza** — (sans sens)  · lessons.ts:21258
-- **mbo lu kuiza** — (sans sens)  · lessons.ts:21260
-- **mbo ni kuiza** — (sans sens)  · lessons.ts:21256
-- **mbo tu kuiza** — (sans sens)  · lessons.ts:21259
-
-## mbo … kuna mumanga ku nima nzo.  (5 formes)
-
-- **Mbo ba kuna mumanga ku nima nzo.** — (sans sens)  · lessons.ts:14211
-- **Mbo ka kuna mumanga ku nima nzo.** — (sans sens)  · lessons.ts:14208
-- **Mbo lu kuna mumanga ku nima nzo.** — (sans sens)  · lessons.ts:14210
-- **Mbo ni kuna mumanga ku nima nzo.** — (sans sens)  · lessons.ts:14206
-- **Mbo tu kuna mumanga ku nima nzo.** — (sans sens)  · lessons.ts:14209
-
-## mbo … lenda  (5 formes)
-
-- **mbo ba lenda** — (sans sens)  · lessons.ts:676
-- **mbo ka lenda** — (sans sens)  · lessons.ts:673
-- **mbo lu lenda** — (sans sens)  · lessons.ts:675
-- **mbo ni lenda** — (sans sens)  · lessons.ts:671
-- **mbo tu lenda** — (sans sens)  · lessons.ts:674
-
-## mbo … mona  (5 formes)
-
-- **mbo ba mona** — (sans sens)  · lessons.ts:21494
-- **mbo ka mona** — (sans sens)  · lessons.ts:21491
-- **mbo lu mona** — (sans sens)  · lessons.ts:21493
-- **mbo ni mona** — (sans sens)  · lessons.ts:21489
-- **mbo tu mona** — (sans sens)  · lessons.ts:21492
-
-## mbo … nua  (5 formes)
-
-- **mbo ba nua** — (sans sens)  · lessons.ts:646
-- **mbo ka nua** — (sans sens)  · lessons.ts:643
-- **mbo lu nua** — (sans sens)  · lessons.ts:645
-- **mbo ni nua** — (sans sens)  · lessons.ts:641
-- **mbo tu nua** — (sans sens)  · lessons.ts:644
-
-## mbo … sa  (5 formes)
-
-- **mbo ba sa** — (sans sens)  · lessons.ts:586
-- **mbo ka sa** — (sans sens)  · lessons.ts:583
-- **mbo lu sa** — (sans sens)  · lessons.ts:585
-- **mbo ni sa** — (sans sens)  · lessons.ts:581
-- **mbo tu sa** — (sans sens)  · lessons.ts:584
-
-## mbo … sala  (5 formes)
-
-- **mbo ba sala** — (sans sens)  · lessons.ts:27282
-- **mbo ka sala** — (sans sens)  · lessons.ts:27279
-- **mbo lu sala** — (sans sens)  · lessons.ts:27281
-- **mbo ni sala** — (sans sens)  · lessons.ts:27277
-- **mbo tu sala** — (sans sens)  · lessons.ts:27280
-
-## mbo … tonda  (5 formes)
-
-- **mbo ba tonda** — (sans sens)  · lessons.ts:352
-- **mbo ka tonda** — (sans sens)  · lessons.ts:349
-- **mbo lu tonda** — (sans sens)  · lessons.ts:351
-- **mbo ni tonda** — (sans sens)  · lessons.ts:347
-- **mbo tu tonda** — (sans sens)  · lessons.ts:350
-
-## mbo … wuinda muntu mbata  (5 formes)
-
-- **Mbo ba wuinda muntu mbata** — (sans sens)  · lessons.ts:13913
-- **Mbo ka wuinda muntu mbata** — (sans sens)  · lessons.ts:13910
-- **Mbo lu wuinda muntu mbata** — (sans sens)  · lessons.ts:13912
-- **Mbo ni wuinda muntu mbata** — (sans sens)  · lessons.ts:13908
-- **Mbo tu wuinda muntu mbata** — (sans sens)  · lessons.ts:13911
-
-## mbo … zaba  (5 formes)
-
-- **mbo ba zaba** — (sans sens)  · lessons.ts:736
-- **mbo ka zaba** — (sans sens)  · lessons.ts:733
-- **mbo lu zaba** — (sans sens)  · lessons.ts:735
-- **mbo ni zaba** — (sans sens)  · lessons.ts:731
-- **mbo tu zaba** — (sans sens)  · lessons.ts:734
-
-## mbo … zola  (5 formes)
-
-- **mbo ba zola** — (sans sens)  · lessons.ts:21539
-- **mbo ka zola** — (sans sens)  · lessons.ts:21536
-- **mbo lu zola** — (sans sens)  · lessons.ts:21538
-- **mbo ni zola** — (sans sens)  · lessons.ts:21534
-- **mbo tu zola** — (sans sens)  · lessons.ts:21537
-
-## moko … ta sukula  (5 formes)
-
-- **Moko ba ta sukula** — (sans sens)  · lessons.ts:26606
-- **Moko ka ta sukula** — (sans sens)  · lessons.ts:26603
-- **Moko lu ta sukula** — (sans sens)  · lessons.ts:26605
-- **Moko ni ta sukula** — (sans sens)  · lessons.ts:26601, lessons.ts:26617
-- **Moko tu ta sukula** — (sans sens)  · lessons.ts:26604
-
-## mudjiri … lamba  (5 formes)
-
-- **Mudjiri ba lamba** — (sans sens)  · lessons.ts:8590
-- **Mudjiri ka lamba** — (sans sens)  · lessons.ts:8587
-- **Mudjiri lu lamba** — (sans sens)  · lessons.ts:8589
-- **Mudjiri ni lamba** — (sans sens)  · lessons.ts:8585, lessons.ts:8595, lessons.ts:8709
-- **Mudjiri tu lamba** — (sans sens)  · lessons.ts:8588
-
-## musua … ta hana  (5 formes)
-
-- **musua ba ta hana** — (sans sens)  · lessons.ts:21690
-- **musua ka ta hana** — (sans sens)  · lessons.ts:21687
-- **musua lu ta hana** — (sans sens)  · lessons.ts:21689
-- **musua ni ta hana** — (sans sens)  · lessons.ts:21685
-- **musua tu ta hana** — (sans sens)  · lessons.ts:21688
-
-## ndambu loso … ta dia  (5 formes)
-
-- **Ndambu loso ba ta dia** — Ils mangent un peu de riz.  · lessons.ts:26393
-- **Ndambu loso ka ta dia** — Il mange un peu de riz.  · lessons.ts:26388, lessons.ts:26460
-- **Ndambu loso lu ta dia** — Vous mangez un peu de riz.  · lessons.ts:26392
-- **Ndambu loso ni ta dia** — Je mange un peu de riz.  · lessons.ts:26389, lessons.ts:26458
-- **Ndambu loso tu ta dia** — Nous mangeons un peu de riz.  · lessons.ts:26391
-
-## ndambu loso … ta dia.  (5 formes)
-
-- **Ndambu loso ba ta dia.** — Ils mangent un peu de riz.  · dictionnaire
-- **Ndambu loso ka ta dia.** — Il mange un peu de riz.  · dictionnaire
-- **Ndambu loso lu ta dia.** — Vous mangez un peu de riz.  · dictionnaire
-- **Ndambu loso ni ta dia.** — Je mange un peu de riz.  · dictionnaire
-- **Ndambu loso tu ta dia.** — Nous mangeons un peu de riz.  · dictionnaire
-
-## nki … ta dia?  (5 formes)
-
-- **Nki ba ta dia?** — Qu'est-ce qu'ils mangent ?  · dictionnaire, lessons.ts:12847, lessons.ts:12937
-- **Nki ka ta dia?** — Qu'est-ce qu'elle mange ?  · dictionnaire, lessons.ts:12844, lessons.ts:12934
-- **Nki lu ta dia?** — Qu'est-ce que vous mangez ?  · dictionnaire, lessons.ts:12846, lessons.ts:12936
-- **Nki ni ta dia?** — Qu'est-ce que je mange ?  · dictionnaire, lessons.ts:12843, lessons.ts:12933
-- **Nki tu ta dia?** — Qu'est-ce que nous mangeons ?  · dictionnaire, lessons.ts:12845, lessons.ts:12935, lessons.ts:13223
-
-## nki … ta dila?  (5 formes)
-
-- **Nki ba ta dila?** — Pourquoi ils mangent ?  · dictionnaire, lessons.ts:12854
-- **Nki ka ta dila?** — Pourquoi il/elle mange ?  · dictionnaire, lessons.ts:12851
-- **Nki lu ta dila?** — Pourquoi vous mangez ?  · dictionnaire, lessons.ts:12853
-- **Nki ni ta dila?** — Pourquoi je mange ?  · dictionnaire, lessons.ts:12849, lessons.ts:13225
-- **Nki tu ta dila?** — Pourquoi nous mangeons ?  · dictionnaire, lessons.ts:12852
-
-## nki … ta dirila?  (5 formes)
-
-- **Nki ba ta dirila?** — Pourquoi pleurent-elles ?  · dictionnaire, lessons.ts:12833, lessons.ts:12913
-- **Nki ka ta dirila?** — Pourquoi elle pleure ?  · dictionnaire, lessons.ts:12830, lessons.ts:12910
-- **Nki lu ta dirila?** — Pourquoi pleurez-vous ?  · dictionnaire, lessons.ts:12832, lessons.ts:12912
-- **Nki ni ta dirila?** — Pourquoi je pleure ?  · dictionnaire, lessons.ts:12828, lessons.ts:12908
-- **Nki tu ta dirila?** — Pourquoi pleurons-nous ?  · dictionnaire, lessons.ts:12831, lessons.ts:12911
-
-## nkuala … ta yala.  (5 formes)
-
-- **Nkuala ba ta yala.** — Ils/elles sont en train d'étendre une natte.  · lessons.ts:11877
-- **Nkuala ka ta yala.** — Il/elle est en train d'étendre une natte.  · lessons.ts:11874, lessons.ts:12080
-- **Nkuala lu ta yala.** — Vous êtes en train d'étendre une natte.  · lessons.ts:11876, lessons.ts:12083
-- **Nkuala ni ta yala.** — Je suis en train d'étendre une natte.  · lessons.ts:11872, lessons.ts:12077
-- **Nkuala tu ta yala.** — Nous sommes en train d'étendre une natte.  · lessons.ts:11875
-
-## nua … ta nua  (5 formes)
-
-- **Nua ba ta nua** — (sans sens)  · lessons.ts:18888
-- **Nua ka ta nua** — (sans sens)  · lessons.ts:18885
-- **Nua lu ta nua** — (sans sens)  · lessons.ts:18887
-- **Nua ni ta nua** — (sans sens)  · lessons.ts:18883
-- **Nua tu ta nua** — (sans sens)  · lessons.ts:18886
-
-## wuna … ta wuna.  (5 formes)
-
-- **Wuna ba ta wuna.** — Ils/elles sont en train de mentir.  · lessons.ts:13589, lessons.ts:13619
-- **Wuna ka ta wuna.** — Il/elle est en train de mentir.  · lessons.ts:13586
-- **Wuna lu ta wuna.** — Vous êtes en train de mentir.  · lessons.ts:13588
-- **Wuna ni ta wuna.** — Je suis en train de mentir.  · lessons.ts:13584
-- **Wuna tu ta wuna.** — Nous sommes en train de mentir.  · lessons.ts:13587
-
-## yebela … ta yebela.  (5 formes)
-
-- **Yebela ba ta yebela.** — Ils se lavent.  · lessons.ts:7020
-- **Yebela ka ta yebela.** — Elle se lave.  · lessons.ts:7017, lessons.ts:7411
-- **Yebela lu ta yebela.** — Vous vous lavez.  · lessons.ts:7019
-- **Yebela ni ta yebela.** — Je me lave.  · lessons.ts:7015
-- **Yebela tu ta yebela.** — Nous nous lavons.  · lessons.ts:7018
-
-## yetela … ta yetela  (5 formes)
-
-- **Yetela ba ta yetela** — (sans sens)  · lessons.ts:17606
-- **Yetela ka ta yetela** — (sans sens)  · lessons.ts:17603
-- **Yetela lu ta yetela** — (sans sens)  · lessons.ts:17605
-- **Yetela ni ta yetela** — (sans sens)  · lessons.ts:17601
-- **Yetela tu ta yetela** — (sans sens)  · lessons.ts:17604
-
-## yetela … ta yetela.  (5 formes)
-
-- **Yetela ba ta yetela.** — Ils se mettent près du feu.  · lessons.ts:17539, lessons.ts:17675
-- **Yetela ka ta yetela.** — Elle se met près du feu.  · lessons.ts:17536
-- **Yetela lu ta yetela.** — Vous vous mettez près du feu.  · lessons.ts:17538
-- **Yetela ni ta yetela.** — Je me mets près du feu.  · lessons.ts:17534
-- **Yetela tu ta yetela.** — Nous nous mettons près du feu.  · lessons.ts:17537, lessons.ts:17674
-
-## zaza … ta zaza  (5 formes)
-
-- **Zaza ba ta zaza** — (sans sens)  · lessons.ts:11633
-- **Zaza ka ta zaza** — (sans sens)  · lessons.ts:11630
-- **Zaza lu ta zaza** — (sans sens)  · lessons.ts:11632
-- **Zaza ni ta zaza** — (sans sens)  · lessons.ts:11628
-- **Zaza tu ta zaza** — (sans sens)  · lessons.ts:11631
-
-## zaza … ta zaza mu bungu dia madia.  (5 formes)
-
-- **Zaza ba ta zaza mu bungu dia madia.** — Ils/elles sont en train de trembler à cause de la nourriture.  · dictionnaire, lessons.ts:11593, lessons.ts:11643, lessons.ts:11830
-- **Zaza ka ta zaza mu bungu dia madia.** — Il/elle est en train de trembloter à cause de la nourriture.  · dictionnaire, lessons.ts:11590, lessons.ts:11640
-- **Zaza lu ta zaza mu bungu dia madia.** — Vous êtes en train de trembloter à cause de la nourriture.  · dictionnaire, lessons.ts:11592, lessons.ts:11642
-- **Zaza ni ta zaza mu bungu dia madia.** — Je suis en train de trembloter à cause de la nourriture.  · dictionnaire, lessons.ts:11588, lessons.ts:11638, lessons.ts:11823
-- **Zaza tu ta zaza mu bungu dia madia.** — Nous sommes en train de trembloter à cause de la nourriture.  · dictionnaire, lessons.ts:11591, lessons.ts:11641, lessons.ts:11828
-
-## … saridi  (4 formes)
-
-- **ba saridi** — (sans sens)  · lessons.ts:21750, lessons.ts:27218
-- **lu saridi** — (sans sens)  · lessons.ts:21749
-- **tu saridi** — (sans sens)  · lessons.ts:21748
-- **wa saridi** — (sans sens)  · lessons.ts:27214, lessons.ts:27215
-
-## … ta kwiza  (4 formes)
-
-- **ba ta kwiza** — (sans sens)  · lessons.ts:21231
-- **ka ta kwiza** — (sans sens)  · lessons.ts:21228
-- **lu ta kwiza** — (sans sens)  · lessons.ts:21230
-- **tu ta kwiza** — (sans sens)  · lessons.ts:21229
-
-## … tondele  (4 formes)
-
-- **ba tondele** — (sans sens)  · lessons.ts:324, lessons.ts:338
-- **lu tondele** — (sans sens)  · lessons.ts:323
-- **tu tondele** — (sans sens)  · lessons.ts:322
-- **wa tondele** — (sans sens)  · lessons.ts:334, lessons.ts:335
-
-## … weyi  (4 formes)
-
-- **ba weyi** — (sans sens)  · lessons.ts:26590
-- **ka weyi** — (sans sens)  · lessons.ts:26587
-- **lu weyi** — (sans sens)  · lessons.ts:26589
-- **tu weyi** — (sans sens)  · lessons.ts:26588
-
-## … zebi  (4 formes)
-
-- **ba zebi** — (sans sens)  · lessons.ts:525, lessons.ts:721
-- **lu zebi** — (sans sens)  · lessons.ts:524
-- **tu zebi** — (sans sens)  · lessons.ts:523
-- **wa zebi** — (sans sens)  · lessons.ts:717, lessons.ts:718
-
-## bue … tele?  (4 formes)
-
-- **Bue ba tele?** — Qu'ont-ils dit ?  · dictionnaire, lessons.ts:12826, lessons.ts:12889, lessons.ts:19996
-- **Bue ka tele?** — Qu'a-t-elle dit ?  · dictionnaire, lessons.ts:12823, lessons.ts:12886
-- **Bue lu tele?** — Qu'avez-vous dit ?  · dictionnaire, lessons.ts:12825, lessons.ts:12888
-- **Bue tu tele?** — Qu'avons-nous dit ?  · dictionnaire, lessons.ts:12824, lessons.ts:12887
-
-## dimpa … didi  (4 formes)
-
-- **Dimpa ba didi** — Ils/elles ont mangé du pain  · lessons.ts:28230
-- **Dimpa ka didi** — Il/elle a mangé du pain  · lessons.ts:28227
-- **Dimpa lu didi** — Vous avez mangé du pain  · lessons.ts:28229
-- **Dimpa tu didi** — Nous avons mangé du pain  · lessons.ts:28228
-
-## ku mputu … tukidi  (4 formes)
-
-- **Ku Mputu ba tukidi** — (sans sens)  · lessons.ts:20476
-- **Ku Mputu ka tukidi** — (sans sens)  · lessons.ts:20473
-- **Ku Mputu lu tukidi** — (sans sens)  · lessons.ts:20475
-- **Ku Mputu tu tukidi** — (sans sens)  · lessons.ts:20474
-
-## mamba … losele  (4 formes)
-
-- **Mamba ba losele** — (sans sens)  · lessons.ts:7993, lessons.ts:8041
-- **Mamba ka losele** — (sans sens)  · lessons.ts:7990, lessons.ts:8038
-- **Mamba lu losele** — (sans sens)  · lessons.ts:7992, lessons.ts:8040
-- **Mamba tu losele** — (sans sens)  · lessons.ts:7991, lessons.ts:8039
-
-## mi … fueni shimba  (4 formes)
-
-- **Mi ba fueni shimba** — (sans sens)  · lessons.ts:9742
-- **Mi ka fueni shimba** — (sans sens)  · lessons.ts:9739
-- **Mi lu fueni shimba** — (sans sens)  · lessons.ts:9741
-- **Mi tu fueni shimba** — (sans sens)  · lessons.ts:9740
-
-## mi … fueti bambuka  (4 formes)
-
-- **Mi ba fueti bambuka** — (sans sens)  · lessons.ts:9726
-- **Mi ka fueti bambuka** — (sans sens)  · lessons.ts:9723, lessons.ts:9768
-- **Mi lu fueti bambuka** — (sans sens)  · lessons.ts:9725
-- **Mi tu fueti bambuka** — (sans sens)  · lessons.ts:9724
-
-## mia mingi … longokele  (4 formes)
-
-- **Mia mingi ba longokele** — (sans sens)  · lessons.ts:23315, lessons.ts:23341
-- **Mia mingi ka longokele** — (sans sens)  · lessons.ts:23312, lessons.ts:23338
-- **Mia mingi lu longokele** — (sans sens)  · lessons.ts:23314, lessons.ts:23340
-- **Mia mingi tu longokele** — (sans sens)  · lessons.ts:23313, lessons.ts:23339
-
-## muana … shiri ku nima  (4 formes)
-
-- **Muana ba shiri ku nima** — (sans sens)  · lessons.ts:20255
-- **Muana ka shiri ku nima** — (sans sens)  · lessons.ts:20252
-- **Muana lu shiri ku nima** — (sans sens)  · lessons.ts:20254
-- **Muana tu shiri ku nima** — (sans sens)  · lessons.ts:20253
-
-## mulumba … yunini  (4 formes)
-
-- **Mulumba ba yunini** — (sans sens)  · lessons.ts:11057
-- **Mulumba ka yunini** — (sans sens)  · lessons.ts:11054
-- **Mulumba lu yunini** — (sans sens)  · lessons.ts:11056
-- **Mulumba tu yunini** — (sans sens)  · lessons.ts:11055
-
-## mulumba … yunini.  (4 formes)
-
-- **Mulumba ba yunini.** — Ils/elles ont écorché un lapin.  · dictionnaire, lessons.ts:11091
-- **Mulumba ka yunini.** — Il/elle a écorché un lapin.  · dictionnaire, lessons.ts:11088
-- **Mulumba lu yunini.** — Vous avez écorché un lapin.  · dictionnaire, lessons.ts:11090
-- **Mulumba tu yunini.** — Nous avons écorché un lapin.  · dictionnaire, lessons.ts:11089
-
-## muntu … wuindiri mbata  (4 formes)
-
-- **Muntu ba wuindiri mbata** — (sans sens)  · lessons.ts:13898, lessons.ts:13919
-- **Muntu ka wuindiri mbata** — (sans sens)  · lessons.ts:13895
-- **Muntu lu wuindiri mbata** — (sans sens)  · lessons.ts:13897
-- **Muntu tu wuindiri mbata** — (sans sens)  · lessons.ts:13896
-
-## ndambu loso … didi  (4 formes)
-
-- **Ndambu loso ba didi** — (sans sens)  · lessons.ts:26372
-- **Ndambu loso ka didi** — (sans sens)  · lessons.ts:26369, lessons.ts:26386
-- **Ndambu loso lu didi** — (sans sens)  · lessons.ts:26371
-- **Ndambu loso tu didi** — (sans sens)  · lessons.ts:26370
-
-## nzo mikanda … kue ye(na)?  (4 formes)
-
-- **Nzo mikanda aku kue ye(na)?** — Où est ton école ?  · dictionnaire, lessons.ts:12864, lessons.ts:13001
-- **Nzo mikanda andi kue ye(na)?** — Où est son école ? = Où va-t-elle à l'école ?  · dictionnaire, lessons.ts:12865, lessons.ts:13002
-- **Nzo mikanda awu kue ye(na)?** — Où vont-elles à l'école ? (mot à mot : leur école, où est-elle ?)  · dictionnaire, lessons.ts:12867, lessons.ts:13004
-- **Nzo mikanda eno kue ye(na)?** — Où est votre école ?  · dictionnaire, lessons.ts:12866, lessons.ts:13003, lessons.ts:13220
-
-## tolo tua … bakiri?  (4 formes)
-
-- **Tolo tua ba bakiri?** — Ont-ils/elles bien dormi ?  · lessons.ts:25784
-- **Tolo tua ka bakiri?** — A-t-il/elle bien dormi ?  · lessons.ts:25781
-- **Tolo tua lu bakiri?** — Avez-vous bien dormi ?  · lessons.ts:25783
-- **Tolo tua tu bakiri?** — Avons-nous bien dormi ?  · lessons.ts:25782
-
-## tshihala … muini mu kibaka kia bibiriki.  (4 formes)
-
-- **Tshihala ba muini mu kibaka kia bibiriki.** — Ils/elles ont vu un lézard sur un mur de briques.  · lessons.ts:13497
-- **Tshihala ka muini mu kibaka kia bibiriki.** — Elle/il a vu un lézard sur un mur de briques.  · lessons.ts:13494
-- **Tshihala lu muini mu kibaka kia bibiriki.** — Vous avez vu un lézard sur un mur de briques.  · lessons.ts:13496
-- **Tshihala tu muini mu kibaka kia bibiriki.** — Nous avons vu un lézard sur un mur de briques.  · lessons.ts:13495
-
-## … bendji  (3 formes)
-
-- **ba bendji** — (sans sens)  · lessons.ts:21291
-- **lu bendji** — (sans sens)  · lessons.ts:21290
-- **tu bendji** — (sans sens)  · lessons.ts:21289
-
-## … bongele  (3 formes)
-
-- **ba bongele** — (sans sens)  · lessons.ts:511
-- **lu bongele** — (sans sens)  · lessons.ts:510
-- **tu bongele** — (sans sens)  · lessons.ts:509
-
-## … didi  (3 formes)
-
-- **ba didi** — (sans sens)  · lessons.ts:601
-- **lu didi** — (sans sens)  · lessons.ts:600
-- **tu didi** — (sans sens)  · lessons.ts:599
-
-## … fuidi  (3 formes)
-
-- **Ba fuidi** — (sans sens)  · lessons.ts:7453
-- **Lu fuidi** — (sans sens)  · lessons.ts:7452
-- **Tu fuidi** — (sans sens)  · lessons.ts:7451
-
-## … futiri  (3 formes)
-
-- **ba futiri** — (sans sens)  · lessons.ts:21336
-- **lu futiri** — (sans sens)  · lessons.ts:21335
-- **tu futiri** — (sans sens)  · lessons.ts:21334
-
-## … luele  (3 formes)
-
-- **Ba luele** — Ils/elles sont blessés  · lessons.ts:26121
-- **Lu luele** — Vous êtes blessés  · lessons.ts:26120
-- **Tu luele** — Nous sommes blessés  · lessons.ts:26119
-
-## … muini  (3 formes)
-
-- **ba muini** — (sans sens)  · lessons.ts:21479
-- **lu muini** — (sans sens)  · lessons.ts:21478
-- **tu muini** — (sans sens)  · lessons.ts:21477
-
-## … nuini  (3 formes)
-
-- **ba nuini** — (sans sens)  · lessons.ts:631
-- **lu nuini** — (sans sens)  · lessons.ts:630
-- **tu nuini** — (sans sens)  · lessons.ts:629
-
-## … sakalale  (3 formes)
-
-- **Ba sakalale** — (sans sens)  · lessons.ts:20239
-- **Lu sakalale** — (sans sens)  · lessons.ts:20238
-- **Tu sakalale** — (sans sens)  · lessons.ts:20237
-
-## … shiri  (3 formes)
-
-- **ba shiri** — (sans sens)  · lessons.ts:571
-- **lu shiri** — (sans sens)  · lessons.ts:570
-- **tu shiri** — (sans sens)  · lessons.ts:569
-
-## … vumbukiri  (3 formes)
-
-- **Ba vumbukiri** — Ils/elles vont bien  · lessons.ts:25660
-- **Lu vumbukiri** — Vous allez bien  · lessons.ts:25659
-- **Tu vumbukiri** — Nous allons bien  · lessons.ts:25658
-
-## … zololo.  (3 formes)
-
-- **Ba zololo.** — Ils/elles aiment / veulent.  · dictionnaire, lessons.ts:11037, lessons.ts:11102
-- **Lu zololo.** — Vous aimez / vous voulez.  · lessons.ts:11036
-- **Tu zololo.** — Nous aimons / nous voulons.  · dictionnaire, lessons.ts:11035, lessons.ts:11101, lessons.ts:11290
-
-## musua … heni  (3 formes)
-
-- **musua ba heni** — (sans sens)  · lessons.ts:21705
-- **musua lu heni** — (sans sens)  · lessons.ts:21704
-- **musua tu heni** — (sans sens)  · lessons.ts:21703
-
-## ya …  (3 formes)
-
-- **Ya bawu.** — Le leur, la leur.  · dictionnaire, lessons.ts:21026, lessons.ts:21104
-- **Ya beto** — le nôtre  · lessons.ts:21194
-- **Ya beto.** — Le nôtre, la nôtre.  · dictionnaire, lessons.ts:21024, lessons.ts:21102
+# Formes a arbitrer (provenance : a-confirmer)
+
+Formes du dictionnaire non rattachees a la reference de l'autrice.
+Rien n'est supprime sans arbitrage explicite : valider ou supprimer.
+
+## Series (2)
+
+### zaza * ta zaza mu bungu dia madia (5 formes)
+- Zaza ba ta zaza mu bungu dia madia. — Ils/elles sont en train de trembler à cause de la nourriture.
+- Zaza ka ta zaza mu bungu dia madia. — Il/elle est en train de trembloter à cause de la nourriture.
+- Zaza lu ta zaza mu bungu dia madia. — Vous êtes en train de trembloter à cause de la nourriture.
+- Zaza ni ta zaza mu bungu dia madia. — Je suis en train de trembloter à cause de la nourriture.
+- Zaza tu ta zaza mu bungu dia madia. — Nous sommes en train de trembloter à cause de la nourriture.
+
+### nzangu * ta bula (2 formes)
+- Nzangu lu ta bula? — Vous jouez au nzangu ?
+- Nzangu tu ta bula. — Nous sommes en train de jouer au nzangu.
+
+## Formes isolees (1506)
+
+- Abe yandi ni na? — Qui est-il au juste?
+- Abe yandi ni na? · ambo yandi ni na? — Qui est-il au juste?
+- Abu piya — Ainsi se conclut l'affaire.
+- Abue tele? — Qu'as-tu dit?
+- Akunde — Janvier à février
+- Andasa — Langue kongo parlée par les Bandasa
+- Babusa — faire tomber par une tape brusque
+- Bafu · mabafu — Petite hache (pirogues ; sculpture)
+- Bakadia mpemba — Êtres qui se nourrissent de l'énergie vitale de l'humain.
+- Bakengi — Sumériens ; elémites
+- Bakishina — Harceler
+- Balaadi — membres du peuple laadi
+- Bambangi — témoins
+- Bambangi ba makuela · mbangi za makuela. — Témoins de mariage.
+- Bambukila — en mémoire de
+- Banzayi — les initiés de la tradition Kongo, les savants
+- Banzuzula · dimbitila · banzakasa — méditer longuement
+- Bashimba — Nom du deuxième jumeau
+- Bataata — pères ; parents paternels
+- Batamasa · namika · bamika · namatasa — appliquer
+- Batoka — S'abaisser
+- Batu kuiza. — Viens vite.
+- Belezi · babelezi — belge
+- Bembabemba — tendance à la cleptomanie
+- Bembakasa · simbakasa — faire toucher à maintes reprises
+- Bengesa · buakisa — faire mûrir
+- Biaji biole — Deux millions (2 000 000).
+- Biarila — Hériter
+- Bibiengele — Menottes
+- Bibiriki — briques
+- Bideki — Plante (famille Luminaceae)
+- Bihakani — poils des aisselles
+- Bihala — lézards
+- Bikabinga — saluer régulièrement
+- Bimenina — végétaux
+- Bimoko — Discussions (pluriel)
+- Bimoko bi na zolo ni bia we bi. — Les discussions que je voulais ajouter, ce ne sont pas celles-ci.
+- Bimpotompoto — Remèdes donnés à l'essai
+- Bimuaka — semences ; graines
+- Binjindumunka bia kua wa tshiri sa? — Tu continues de faire du sport ?
+- Binkambula — Plante (famille Tiliaceae) dont l'écorce sert à faire des ficelles ; plante de la famille des Tiliaceae dont l'écorce sert à faire des ficelles
+- Binkoso — Talons
+- Binzaluka — disparition automatique
+- Bisari — travailleurs
+- Bisinsu — Signes de ponctuation ; signe de ponctuation
+- Bisinzila — petites souches
+- Bisudia — Coquilles de noix de palme
+- Bitambi — empreintes de pas
+- Bitenda — Bouts de tissu
+- Bitenda kue biena? — Où sont les bouts de tissu ?
+- Bitini — totems
+- Bitshinda — Cimetière ; nécropole ; cimetières
+- Bituizi — animaux domestiques ; animaux d'élevage
+- Bitunga — Paniers
+- Bitunga kue bie(na)? — Où sont les paniers ?
+- Bitunga makumatatu na bi tanu. — Trente-cinq paniers.
+- Biula — crapauds
+- Bivuadangu — Canards
+- Biyelo — Barbes
+- Biyisi — Os (pluriel)
+- Biyumba — idiots
+- Boungobuongo — sans résistance ; en ruines ; génocide
+- Budjua — découragement
+- Buele — après ; ensuite
+- Buenzalala — être complètement ouvert(e)
+- Buhulu — Bêtise ; idiotie
+- Buiri · buidi — il est tombé
+- Buirila — attraper pour, chuter, écraser, fondre sur, se reproduire sur
+- Bukongo — sagesse kongo
+- Bulawuka — folie
+- Bumpirikisi — hypocrisie
+- Bundakada — rapprocher
+- Bunsunga — Intelligence ; valeur humaine
+- Buolokoto — bruit de la chute
+- Buotoka — se laisser tomber comme une masse, tomber malade
+- Bupalipali — Inquiétude
+- Bupipilipi — Silence
+- Buramu — aîné
+- Burisa — Faire casser
+- Burisa matari — Faire casser des cailloux.
+- Butshindi bua buingi. — Bon courage.
+- Butumu · bununu — vieillesse
+- Bùlwèzì — maladie
+- Chikama · sungana — se stabiliser
+- Dadinga — palpiter (pour le cœur)
+- Dakuka — être épuré(e)
+- Dakula — épurer
+- Damuka — rebondir ; sauter comme une grenouille
+- Defisa — Prêter
+- Derikisa — égaliser
+- Diatulu — comportement
+- Diatulu aku. — Ton comportement
+- Dieno. — Mangez
+- Dikenga — cosmogramme Kongo
+- Dikila · yundula · tuila — élever
+- Dinteketa · manteketa — Fourmis rouges comestibles acidulées
+- Dirila — Forme progressive interrogative de Dila (pleurer)
+- Djieta — Voyager
+- Djomoka — rebondir avec légèreté
+- Dukeno. — Sortez
+- Dìkúngù — réunion
+- Enjyunjyu — Langue kongo parlée par les Anjyunjyu
+- Eumelanine — eumélanine (mélanine qui absorbe les UV et permet le lien avec le Ngo)
+- Eumélanine ni yandi hana n'kanda wa mbudi. — L'eumélanine donne des pygments bleus.
+- Eumélanine ni yandi tu nata ku ngo. — L'eumélanine permet la connection avec le ngo.
+- Filila — conduire à
+- Fomba — avoir bonne mine, avoir un bon teint, être pleine d'énergie
+- Fuakama — Bouillir en débordant
+- Fuambala — Crasseux ; sale ; dégoûtant
+- Fuanana — Convenir à ; ressembler à ; être égal à ; convenir avec
+- Fuanikisa — Rendre semblable
+- Fuanisa — Faire ressembler ; comparer ; faire le plein
+- Fuasa · buani — gaspiller
+- Fuasakani — Malpropre
+- Fuema — Ruminer ; être en colère ; se fâcher
+- Fuembisa — Faire dégager les narines bouchées, moucher quelqu'un (un bébé)
+- Fuemena — Se fâcher contre quelqu'un
+- Fuemesa — Mettre en colère ; fâcher
+- Fuenga — Se moucher ; pleurnicher
+- Fuesa — Bruit de pet étouffé, péter en essayant d'étouffer le pet
+- Fuetesa — S'énerver ; mettre en colère
+- Fuetoka — Respirer péniblement
+- Fuetola — Faire respirer avec peine
+- Fuetoso — Haine ; mépris ; envie
+- Fukila — Mourir en grand nombre
+- Fulamana — dormir sur le ventre ; se prostrer
+- Fulamasa — faire coucher sur le ventre
+- Fuluka — Plein ; être plein
+- Fuma — coin d'une chambre ; angle des murs
+- Fumbama — ployer, se plier, se courber, céder sous le poids, se pencher ; être courbé (statif)
+- Fumfukuta — Tâtonner ; chercher à l'aveuglette
+- Fumfula — tituber ; chanceler ; vaciller sur ses jambes
+- Fumfumuka — Tomber en poussière ; s'effriter
+- Fumfutu — Sale ; poussiéreux
+- Fumpisa — Jaillir ; laisser déborder ; fournir mais gaspiller
+- Fumuna — Venir en grand nombre ; en foule
+- Fundana — Se dénoncer ; s'accuser
+- Fundasana — Se dénoncer l'un l'autre ; s'accuser réciproquement
+- Fundisa — Juger
+- Fundumuna — Labourer, retourner la terre, mettre à nu, déballer, exhumer
+- Fungila — Manquer de ; être raté
+- Fungisa — Faire avorter, faire rater (une cuisson, une réunion)
+- Fungu · mafungu — Le rhume, la morve, sorte de hibou
+- Fungula — Avouer ; s'accuser ; accoucher
+- Fungumuna — Mettre bas
+- Funisa — Agrandir ; augmenter ; faire prospérer
+- Funtila — Mévente
+- Funtisa — Chômer
+- Funtulu — Mévente
+- Funzuka — Délabré
+- Fuomba — Bien se porter ; être à point
+- Fuombombo — Robuste ; fertile
+- Fusakana — se mettre en désordre ; s'embrouiller
+- Fusuka — Jaillir ; sourdre ; être rongé ; soudre ; abîmer ; dégrader ; périmer
+- Fusumuka — Jaillir d'un trou ; abonder
+- Futakana — Être froissé ; chiffonné
+- Futama — Être plié ; recroquevillé
+- Futikisa — Faire plier ; faire emballer
+- Futila — Louer
+- Futisa — Faire payer ; mettre en location
+- Futisila — Payer un loyer pour un tiers
+- Futuka — S'enfler ; se gonfler ; bouder
+- Futukasa — Chiffonner ; plier ; froisser
+- Futumuka — Germer ; pousser ; sortir de terre
+- Futumuka na ntoto. — Germer de la terre.
+- Futumuna — Ouvrir un couteau ou un poing, déplier
+- Futusulu — Remboursement
+- Fuzuka — Changer de couleur
+- Fweti — Devoir ; falloir ; mépris ; haine ; envie
+- Hakimosi — Ensemble
+- Halaadi — membre des Bishi Laadi
+- Hambula — Écarter ; isoler ; mettre à part ; séparer
+- Handana — s'initier réciproquement
+- Haula — Écarter ; entrebâiller
+- Hehi — Il y avait
+- Heka — Effleurer du bassin pendant la danse du Wala ; alors ; contrairement à
+- Hekayi — Langue kongo parlée par les Bakayi
+- Hembisa — Moucher quelqu'un (souvent un bébé)
+- Hisi · bihisi — Os
+- Ibuisi — Langue kongo parlée par les Buisi
+- Ifumu — Langue kongo parlée par les Fumu
+- Ikota — Langue kongo parlée par les Bishi Ikota
+- Impala · mimpala — Jeune homme
+- Iwunu — Langue kongo parlée par les Owumu
+- Jibama — Être fermé ; se fermer
+- Jibika — Fermer
+- Jibuka — Être ouvert ; s'ouvrir
+- Jibuku · bijibuku — Plèvre ; membrane entourant les poumons
+- Jikumuka — Avoir la fièvre ; frissonner
+- Jikumuna — Enfièvrer
+- Jima · kanga — Éteindre
+- Jimbakana — Oublier ; perdre ; omettre
+- Jimbakasa — Dissimuler ; perdre
+- Jimbakne. mua luaka we naku. — Tu es perdu. tu es un peu inquiet.
+- Jimi · majimi — grossesse ; enceinte
+- Jingila — durer
+- Jita · majita — Importance ; poids
+- Jundama — Se rassembler ; être rassemblé
+- Jundika — Amonceler
+- Kabakana — Être empêché ; annihilé
+- Kabakasa — Empêcher (qu'un projet se concrétise) ; empêcher de
+- Kabana — Partager avec quelqu'un ; se séparer ; divorcer
+- Kabasana — Se répartir les tâches ; se séparer
+- Kabinda — région du Kongo dia Ngola
+- Kabisa — Empêcher ; faire partager
+- Kabukila — Convoiter
+- Kadia bakadia — Ordre de prostitués consacrés à la déité Innana.
+- Kakasi — Amer ; amère ; amertume
+- Kakasi · bikakasi — Amertume
+- Kalaka · makalaka — érudit ; érudits
+- Kalu ka dia turiri ko. — Le train a du retard.
+- Kalu · bikalu — échelle ; escalier
+- Kaluka — Devenir ; se transformer ; changer
+- Kaluka zoba — S'abêtir
+- Kaluka · kueka — devenir
+- Kalula — Retourner à plusieurs reprises, mettre sens dessus-dessous
+- Kalunga — Point de passage énergétique entre le monde visible et invisible ; océan
+- Kamata — pincer ; serrer ; saisir ; toucher
+- Kambakana — Se mettre en travers
+- Kambakasa — Croiser
+- Kambika — Mettre en travers
+- Kambila — Intercepter ; couper la route ; couper la route à
+- Kambo me wa keti ta mbila. — Il paraît que tu allais m'appeler.
+- Kamika — Barrer un ruisseau
+- Kamisa — Faire frissonner de peur
+- Kamisi · bikamisi — Celui qui fait frissonner
+- Kampe — Peut-être
+- Kampisa — faire semblant
+- Kamuna — Comprimer ; presser pour extraire un liquide
+- Kangala — Voyager ; se promener
+- Kangameno. — Arrêtez-vous
+- Kangeno vungula. — Fermez à clef .
+- Kanguzula — Ligoter ; fagoter ; attacher fortement
+- Kanku — Ciseau large pour tailler les palmiers
+- Karila — Recommencer, refaire un acte, revenir sur ses pas
+- Karisa — Renvoyer ; venger ; rendre ; rapporter ; remettre ; restituer
+- Kazuna — Arracher avec les dents
+- Kebisa — avertir ; prévenir ; alerter
+- Kebo — briquet ; pierre à feu ; silex
+- Kedima — briller ; étinceler
+- Kekete — sorte de toute petite fourmi termitière
+- Kema — Pousser pour accoucher ; déféquer ; pousser
+- Kemba — s'étonner ; être surpris(e) ; s'émerveiller
+- Kenga — être beau ; belle ; briller
+- Kesesa — faire circoncire
+- Keso die nandi. — Il a été circoncis.
+- Kesoka — être circoncis
+- Kiakuka — Se déchirer
+- Kiari ke nani. — Je suis triste.
+- Kiari kie naku. — Tu es triste.
+- Kiari kieri neto. — On était triste.
+- Kiari, tshiari — Pitié ; compassion ; tristesse
+- Kibabala · bibabala — de tout petits enfants
+- Kibakala — virilité ; énergie masculine intérieure
+- Kibakala · tshibakala — virilité
+- Kibalabala · bibalabala — de tout petit enfant
+- Kibelo, tshibelo · bibelo. — quartier
+- Kibula, tshibula, bula · bibula. — Écorce. ; enveloppe.
+- Kibunda — vieille femme
+- Kibutisi — sage-femme
+- Kibutu — Parent de sang
+- Kidjodjo — mèche de cheveux
+- Kidjunu · djunu · yenge — paix
+- Kidukia · bidukia — tourterelle
+- Kieta · bieta — Défaut du corps
+- Kifua · bifua — Forme ; formes
+- Kifuiti — éléments où on met les morts pour qu'ils puissent continuer leur existence
+- Kihangala — Langue parlée par les Hangala
+- Kikaku — enclos ; clôture
+- Kikamba — Langue kongo parlée par les Kamba
+- Kikata — paralytique
+- Kikenge — Langue kongo parlée par les Kenge
+- Kikuasulu — brosse
+- Kikuku — cuisine ; termitière
+- Kikuku · bikuku — Termitière
+- Kikukua — Langue kongo parlée par les Akukua
+- Kikulu — culture ; ancestralité
+- Kikulu, tshikulu — Culture ; ancestralité
+- Kikuni — Langue kongo parlée par les Kuni
+- Kikuyu — Langue parlée par les Kikuyu
+- Kilandi · tshilandi — suivant
+- Kilansi, tshilansi — province
+- Kilema — dans la tradition Kongo, temple de l'esprit, de l'être intérieur
+- Kilembo · bilembo — Une nasse pour la pêche
+- Kilenga — oisif ; paresseux ; fainéant
+- Kilenga · tshilenga · bilenga — Oisif ; paresseux ; fainéant
+- Kilo · tshilo · bilo — Groupement
+- Kilobi · tshilobi · bilobi — Pêcheur ; chercheur
+- Kilongiki · tshilongiki · bilongiki — apprenant ; élève ; étudiant(e)
+- Kilongokelo · tshilongokelo · bilongokelo — Lieu d'apprentissage
+- Kilue · bilue — poterie
+- Kilunzi — âme
+- Kimangu · tshimangu · bimangu — Merveille ; miracle
+- Kimayala — science politique
+- Kimbevo — maladie
+- Kimbuani — rencontre
+- Kimburika-malenge — luciole
+- Kimfitshimfi · bimfi — ganglion ; gésier
+- Kimfumbi — Vengeance ; représailles ; carnage ; hécatombe
+- Kimunia — Grain de beauté
+- Kimvinzingila · bimvinzingila — sphère
+- Kimvuka — Association
+- Kindiongoloko · bindiongoloko — tourbillon dans l'eau
+- Kindoki — Science, énergie intérieure utilisant la vitesse de la lumière ascensionnelle pour contrôler les particules intérieures (tradition Kongo)
+- Kindongo kia mbakala. — Mouton.
+- Kingana, tshingana · bingana. — proverbe
+- Kingandi — tel ; telle
+- Kingunza — Ordre initiatique Kongo visant à maîtriser le ki (énergie intérieure) en se connectant à l'énergie féminine (ngu) du cosmos (nza)
+- Kiniemo — cachet ; tampon
+- Kinimbi — tueur ; assassin
+- Kinkasa — bouger, mettre en désordre, perturber, désorganiser, bousculer
+- Kinkeko — particule qui permet de comprendre la structure énergétique du mbi (feu intérieur)
+- Kinkenene — dégoût ; répulsion
+- Kinkento — féminité
+- Kinkodia — nouvelle structure économique
+- Kinkuba — pioche
+- Kinkuezi — Alliance
+- Kinsamu — conte ; fable ; parodie
+- Kinsangu — Réputation ; notoriété
+- Kinsasa — Institut supérieur
+- Kinsekua — Punaise de lit ; punaise
+- Kinselia — cellule du corps humain
+- Kinsunsu — Punaise des bois
+- Kinsunu — ordre
+- Kintala — Branche
+- Kintamina — espace
+- Kintangulu · bintangulu — tableau
+- Kintinu kia buidi · kintinu kia bua. — Le royaume est tombé.
+- Kintinu · bintinu — royaume
+- Kintombo — Martin-pêcheur ; avril à mai
+- Kintuani — entraide
+- Kintuni — astrologie kongo
+- Kinzembele · binzembele — Boucle(s) d'oreille
+- Kinzo — art d'organiser et d'aménager l'espace domestique pour préserver l'énergie vitale ; feng shui kongo
+- Kipo kia tatu. — Partie 3.
+- Kisalulu — Outil ; instrument
+- Kisama — Termitière du sol argileux
+- Kisari — travailleur
+- Kisasala — nageoire
+- Kiseliya, tshiseliya · biseliya. — Cellule
+- Kisemba — ergot
+- Kisu · su — pipe
+- Kitari tsha binsinsia ni ta tala. — Je regarde la télévision.
+- Kiteke — Langue Kongo parlée par les Teke ; statuette où l'essence d'un ancien est conservée en attendant sa prochaine réincarnation
+- Kitemo · tshitemo · bitemo — Tontine
+- Kitoko — élégance
+- Kituiji — animal domestique ; animal d'élevage
+- Kituizi — Animal domestique ; animal d'élevage
+- Kitunga — panier
+- Kitunga · bitunga — Panier(s)
+- Kivangala — Langue kongo parlée par les Vangala
+- Kivimba — enflure
+- Kivuadangu · tshivuadangu — Canard
+- Kiwa — cicatrice
+- Kiwele — Le jonc pour la natte
+- Kiwono — épidémie
+- Kiyelo · tshiyelo — Barbe
+- Kiyungila · biyungila — Insecte(s)
+- Kizidi, tshizidi · bizidi. — Image ; égregore ; vidéo
+- Kizongo · bizongo — coup de fusil ; coups de fusil
+- Kokesa tshio fioti. — Abaisse ça un tout petit peu.
+- Kondama — S'incliner profondément ; se courber
+- Kongobololo — vernonie
+- Konkota — Frapper à la porte
+- Konta — Compter ; peser ; calculer
+- Kosakasa — Écraser (avec le pied)
+- Kosama — se recroqueviller
+- Koseka — raccourcir
+- Kosekesa — Broyer ; écraser
+- Koso koso — Onomatopée de la toux.
+- Koso koso die nani. — Je tousse.
+- Kotana — Marcher fièrement ; être orgueilleux ; vantard
+- Koteka — couteau de poche
+- Kotelela — Entrer par effraction ; violation de domicile
+- Kotesa — Faire entrer ; enfourner
+- Kotisa — Faire entrer ; introduire ; importer
+- Kuabuka — Se déclencher
+- Kuabula — Détacher ; défaire ; décrocher
+- Kuaka — Scier
+- Kuakasi — Frotter
+- Kuakua ? — Combien ?
+- Kuakwa · jua kuonso. — partout
+- Kuala · makuala — Hareng
+- Kualula — Faire glisser ; écorcher légèrement ; blesser
+- Kuamina — Tenir ferme ; persévérer
+- Kuanza — nom d'une province du Kongo dia Ngola
+- Kuasa — Marquer en faisant un trait
+- Kuayila — Pleurer après quelque chose
+- Kubama — Se préparer
+- Kubamane? — Es-tu prêt ?
+- Kubenda — magnétisme ; dans la Tradition Kongo
+- Kubisa — Durcir le cœur ; endurcir
+- Kubuka — Éclater ; désamorcer, un piège qui se désamorce tout seul
+- Kubula — Secouer ; battre pour nettoyer
+- Kuele · makuele — Gilet
+- Kuelesa — Harmoniser ; faire marier
+- Kueta — Grincer des dents pour exprimer le mécontentement
+- Kuetesa — Faire grincer
+- Kuilu — nom d'une région du Kongo Mfua
+- Kukuku — Sale ; poussiéreux ; crasseux
+- Kukuma — Tituber ; vaciller ; chanceler
+- Kukusa — Se frotter contre quelque chose
+- Kuluku — Plante comestible au goût acidulé, appréciée par les anciens
+- Kulumbisa — Conduire très vite
+- Kumbalasa — Faire se sauver
+- Kumpua — Novembre à décembre
+- Kumu · mundeko — bord
+- Kundi kianene — Mars à avril
+- Kundila — Supplier
+- Kunzi — poteau
+- Kurika — Ajouter
+- Kurisa — Faire grandir ; faire pousser
+- Kutika — Ranger
+- Kuwa — Entendre ; suivre des conseils
+- Kuwa malongi — Écouter les leçons
+- Labasana — Se voler
+- Lakala — Crier
+- Lakama — Manger goulûment ; s'empiffrer
+- Laki di mvula ye ku. — Aujourd'hui. ; il pleut.
+- Laki ni laki. — À tout moment, n'importe quand (variante : Ntangu ni ntangu).
+- Laki · malaki — Date ; jour
+- Lalakani — Ténébreux ; tout noir
+- Lalama — S'étendre ; se coucher
+- Lalumuka — S'allonger ; s'étirer
+- Lambalala — Se coucher ; faire la sieste
+- Lambalala · yala — s'étendre ; s'allonger
+- Lambirika — Mettre en position couchée ; étendre ; coucher
+- Lambula — Allonger ; étendre (la main ; jambes)
+- Lami · malami — Fil(s) de fer ; fil de fer
+- Lamina — Durer longtemps ; vivre
+- Lamu — Durer ; vie
+- Lamuna — Trancher une discussion
+- Langalakani — Obscur ; ténébreux
+- Lanzakana — Être faible ; s'affaiblir
+- Lanzakani — Sans force
+- Lanzakasa — Affaiblir
+- Latuka — Courir vite
+- Latula — Faire courir
+- Latuzuka — Enjamber, galoper, sauter d'un endroit à l'autre
+- Latuzula — Faire galoper
+- Lebakana — Être trompé ; induit en erreur
+- Lebakasa — Séduire ; induire en erreur
+- Lebalakani — Affaibli ; faible ; mou
+- Lebalala — S'affaiblir
+- Lebeka — Tendre (un piège)
+- Lebika — Armer un fusil ; tendre un piège
+- Leboka — Se faner
+- Leho — dispute
+- Lehodi — Insolent
+- Lembama — Se calmer ; s'apaiser
+- Lembamba — Langue kongo parlée par les Ambamba
+- Lembana — Manquer ; échouer ; abandonner ; râter
+- Lemesa — Attiser
+- Lemina — Soif
+- Lemina die naku. — Tu as soif.
+- Lemina die nandi. — Il/elle a soif.
+- Lemina die nani. — J'ai soif.
+- Lemina die nawu. — Ils/elles ont soif.
+- Lemina die neno. — Vous avez soif.
+- Lemina die neto. — Nous avons soif.
+- Lemvoka — pardonner
+- Lemvokela — Obéir ; pardonner
+- Lenzo — Éclat ; rayon de lumière
+- Letoka — rebondir avec légèreté
+- Likuala — Langue kongo parlée par les Likuala
+- Lipata · mapata — Sorte de jeu d'enfants
+- Lobila — parler à ; dire à
+- Lobisa — faire parler ; faire dire
+- Lobola — Cracher, rejeter quelque chose qu'on a dans la bouche
+- Lobola mante — Cracher
+- Lokana — S'entre-maudire
+- Longisa — Enseigner ; apprendre ; initier
+- Losela — Pondre
+- Losoka — Se perdre
+- Lualuna — Plus loin ; celui ; celle-là ; là-bas
+- Luandu · tuandu — Natte faite de papyrus, l'univers, le globe terrestre
+- Luanga — Nom de la période de grande chaleur allant de septembre à mi-mai
+- Luanza — Juin à juillet
+- Luatisa — Faire habiller ; couvrir
+- Luayi — Morceau d'étoffe ; serviette ; mouchoir
+- Lubambu — souvenir
+- Lubanji · mbanji — côtes (anatomie humaine)
+- Ludiatulu, ndiatulu — Comportement ; façon d'être ; manière d'agir
+- Luekesa — Inciser ; blesser (moralement)
+- Luekesa · luala — blesser
+- Luekesana — Se blesser
+- Luenda — autel en pierre
+- Luengana — Se faire entendre ; retentir
+- Luengasa — Faire entendre, comprendre, instruire, prévenir, informer, être attentif
+- Luengisa — Rendre prudent(e), rendre intelligent(e), conseiller, faire comprendre
+- Lufita · tufita — Clitoris
+- Lufuku — épidémie ; transpiration
+- Lufulu — socle
+- Lufulu · tufulu — Socle
+- Lufumba — habitation en demi-cercle avec un toit de chaume pour réguler la température, tente
+- Lufumba · tufumba — Habitation en demi-cercle avec un toit de chaume pour réguler la température, tente ; habitation en demi-cercle avec un toit de chaume, tente
+- Lufumbu — Grain de beauté
+- Lufundusulu — tribunal, lieu de jugement et de confession
+- Lufundusulu · tufundusulu — Tribunal, lieu de jugement et de confession
+- Lufunia — Endurance ; force physique ; effort
+- Lufunia lwa mpamba · ngolo buani. — Un effort vain.
+- Luhambu — chaîne
+- Luhe · mahe — herbe ; brin d'herbe
+- Luika — Équiper ; habiller ; lever le deuil ; pilosité fournie
+- Luikisa — Prendre soin de quelqu'un, faire habiller, vêtir quelqu'un
+- Lukaka · tukaka — Pangolin
+- Lukalafuanda — Force physique ; effort
+- Lukanda — Arc-en-ciel
+- Luketo — hanche ; reins
+- Lukombo · tukombo — balai
+- Lukubi — odeur
+- Lukuikulu — confiance
+- Lukula — Arracher complètement
+- Lukuni — bois de chauffage ; morceau de bois
+- Lukuni · nkuni — Bois de chauffage
+- Lukwikilu · lukuikulu — confiance
+- Lulembeso — abolition
+- Lumanda — amende
+- Lumbumbu · mambumbu — Termites ailées comestibles qui vivent sous terre
+- Lumfimfini · mfimfini — Gencive ; gencives
+- Lumoni — La clairvoyance, le don de double vue ; vision
+- Lumpimpila — crépuscule
+- Lumpungunzala — libellule
+- Lundiezi — Surnom donné à un enfant qui pleurniche et fait des caprices ; surnom donné à un enfant qui pleurniche et fait des caprices pour avoir ce qu'il veut
+- Lundindi — clitoris
+- Lundindi · tundindi — Clitoris
+- Lungila — chaleur tiède ; atmosphère lourde
+- Lungolobi — sens non défini
+- Lungueri — médisance
+- Lungusu — harcèlement
+- Lunjungu — Labyrinthe ; chemin tortueux
+- Lunkiesa — Août à septembre
+- Lunkukuma — bégaiement
+- Lunomo — avarice ; égoïsme ; égocentrisme
+- Lunwanu — combat ; lutte
+- Luoni · tuoni — Moment avant le crépuscule ; aurore
+- Lupangu · tupangu — Parcelle(s)
+- Lusaki · nsaki — Battement de mains
+- Lusala — plume
+- Lusalusu — aide ; secours
+- Lusambuadi — Soixante-dix (70)
+- Lusambuari — Soixante-dix
+- Lusampa · sampa — crinière
+- Lusampasampa · tusampasampa — Crinière ; huppe
+- Lusansu — L'éducation, les soins prodigués à un enfant ; éducation ; culture
+- Lusanu — Exigence
+- Lusasala — Nageoire caudale
+- Lusembo · masembo — Blâme
+- Lusembo · tusembo — bénédiction ; bénédictions
+- Lusemo · tusemo — bénédiction
+- Lusinga · nsinga — Fibre de palmier
+- Lusoga — Langue kongo parlée en Ouganda
+- Lusonso — pointe pour écrire ; clou
+- Lusonso · nsonso — Clou(s)
+- Lutambi — pied
+- Lutangu — nombre ; énumération ; compte
+- Lutundu · ntundu — Ntundu (fruit sauvage jaune orangé) sg
+- Luvu · mvu — Cheveu blanc
+- Luwilukulu — foi
+- Luyi — Gifle
+- Luyi · mayi — petite gifle
+- Luzabu · tuzabu — La connaissance, la culture, le savoir, la science
+- Luzala — Ongle
+- Luzala kue lue? — Où est l'ongle ?
+- Luzala kue luena? — Où est l'ongle ?
+- Luzala · nzala — Ongle(s)
+- Luziolo · tuziolo — Ciseau(x)
+- Luzolanu · tuzolanu — Amitié
+- Luzonzo — Entretien ; parole ; conversation
+- Lwonesa — Féliciter ; faire célébrer
+- Lwonesa! · bubote shiri · mia mbote yirikiri. — Félicitations!
+- Lwoni · kiluoni · tshiluoni · bilwoni — Celui qui loue, moment avant le crépuscule
+- Mabanga — Mâchoire (pl.)
+- Mafua — héritages (pluriel)
+- Magansengo — sorte de guêpes dont la piqûre peut faire doubler de volume
+- Mahasimbi — grands esprits
+- Mahazanza — méta-univers
+- Makangu — amant ; maîtresse
+- Makekete — petites fourmis termitières
+- Makenko — entailles
+- Makoka — Sorte de termites comestibles
+- Makondo — bananes
+- Makondo ma bueki. — Les bananes sont mûres.
+- Makonfo — sauterelle
+- Makonko ma tatu. — Trois sauterelles.
+- Makonko ma ya. — Quatre sauterelles.
+- Makonko makumatatu na ma tanu. — Trente-cinq sauterelles.
+- Makonko mole — deux sauterelles
+- Makuala — hareng fumé
+- Makumaya — Quarante (40)
+- Makungu — Battements de mains (3 fois) pour exprimer la gratitude ; réunions
+- Mambumbu — Sorte de termites comestibles
+- Mampangampanga — Habileté ; débrouillardise
+- Mampata — Petites croûtes aux commissures des lèvres
+- Mansukina — fin
+- Manteka — beurre
+- Mapaki — Taches du pelage
+- Mapapayi — papayes
+- Mapasa — jumeaux
+- Masakila — Cadeau ; remerciement
+- Masembo — réprimande
+- Mashika — Louanges
+- Mataba — chiffons
+- Mataku — Fesses
+- Matidi — Tendons
+- Matoko — jeunes gens
+- Matompa — maladie du sommeil
+- Matshinu — danse
+- Mavunga — couvertures
+- Mavunga kue mena? — Où sont les couvertures ?
+- Mavunga ma mbudi. — Des couvertures bleues.
+- Mawasu — énergie ; activité
+- Mayaka — Maniocs
+- Mayaka kue mena? — Où sont les maniocs ?
+- Mayindu — réflexion
+- Mazimba ya Mbudi. — Nom d'une ancienne école initiatique.
+- Mbakoko — Grand serpent noir du Kongo
+- Mbambukiri — Je me souviens
+- Mbamina — tonnerre
+- Mbandakani — rapprochement
+- Mbawu — la conscience du feu dans la tradition Kongo
+- Mbekele — nain
+- Mbevo · belo — malade
+- Mbidika — cafetière ; théière
+- Mbikuri — voyante
+- Mbingi · bibingi — Personne en train de chasser ; chasseur
+- Mbingulu — Fait de chasser
+- Mboka ngana nani kua wa bele? — C'était qui alors ?
+- Mbulumbulu — soldat ; défenseur
+- Mbumbungu — sable fin blanc
+- Mekana — Bêler ; crier longtemps
+- Mekono — bêlement ; cri ; manière de crier
+- Mfiela — Sorte de safou que les gens font cuire en gardant dans leur joue ; plongeon
+- Mfietokoso — harcèlement ; embêtement ; tracasserie
+- Mfietoso — interrogatoire ; harcèlement
+- Mfimfi — Fourmis noires dont la piqûre provoque des maux de tête
+- Mfimfiki — guili-guili ; chatouillement
+- Mfimfini — Gencives
+- Mfivi — gencives
+- Mfuekene — Glouton (invariable)
+- Mfuekene zaza ka ta zaza mu bungu dia madia. — Le glouton est en train de trembler à cause de la nourriture.
+- Mfuenge — renard
+- Mfula — sens du vent ; orientation
+- Mfumba — cercle
+- Mfumba , mufumba · mifumba. — Roue.
+- Mfumbi — Albinos
+- Mfumfula — poussière ; débris ; miettes
+- Mfumfula za mabaya. — La sciure.
+- Mfumfungu — nourrisson
+- Mfumfutila — croissance
+- Mfunda — Poussière ; saleté ; moisissure ; crasse
+- Mfundu — secret
+- Mfuokoko — pli ; repli
+- Mfuokoko koko — Le repli du coude.
+- Mfuokoko kulu — arrière du genou
+- Mfuomboso — Action de mûrir ; de grossir
+- Mfuri — Habitude ; manière ; comportement
+- Mfuri za mbi. — Les mauvaises habitudes.
+- Mfuri za mbote. — Les bons comportements.
+- Mfutulu — paiement
+- Mfutununu — Bouder
+- Mfutusulu — remboursement ; fait de faire payer
+- Miansi — Racine
+- Mielo — portes ; chakras
+- Miene — Langue du Gabon (contenant des codes géo-mathématiques de guérison)
+- Mikuri mumvuka weri. — Mikouri etait un grand village.
+- Minda — lampes
+- Mindele — Les Blancs, les personnes blanches
+- Minduli — Localité du Pool
+- Minga mia fofolo. — Des tiges d'allumettes.
+- Mingiri — noyaux
+- Miniala — Grenouilles
+- Minjioka — Brûler
+- Minkiela — aurore
+- Minkiobo — vers de terre
+- Minsala — crevettes
+- Minu · kiminu · tshiminu — espérance ; espoir ; confiance
+- Minza — Faire la grimace ; moue
+- Minzanda — chiffons ; lambeaux
+- Minzu — Envoûtant ; entrouvert ; faisant la moue
+- Minzuna — Entrouvrir ; retrousser les lèvres
+- Misila — Mardi
+- Misisi — Artère ; veine
+- Mitanga — Mollets
+- Mitima — Cœurs
+- Mitindu — façons
+- Mitu mia mabeni. — Les tétons.
+- Monekena — Visiter ; apparaître à quelqu'un ; voir quelqu'un
+- Mpakani — aisselles
+- Mpakanu — Fait de lacérer ; déchirer
+- Mpaku — Taxe ; impôt
+- Mpalala — Selle presque liquide (pour les oiseaux)
+- Mpambu — intelligence ; savoir-faire ; capacité
+- Mpana — Nouveau ; récent
+- Mpandu — Miracle
+- Mpatakani — Trou inaccessible ; ennui ; complication
+- Mpatakasu — Confusion ; échec ; fait de contrecarrer
+- Mpatanga — Gros ; grossier ; lourd ; très large
+- Mpavala — Zéro (0)
+- Mpayilu — anus
+- Mpeho — ombre ; vent
+- Mpeho ya nene ye. — Le vent est fort.
+- Mpele — boutons d'allergie
+- Mpempo — drapeau
+- Mpena — mépris
+- Mpese — Cafard ; blatte ; personne hypocrite
+- Mpika — Mercredi
+- Mpiku — Miracle ; merveille ; phénomène
+- Mpilu — Violet
+- Mpimpingi — biceps
+- Mpinanza — planète
+- Mpindu — Prodige ; merveille ; noirceur
+- Mpindu · bulombi — noirceur
+- Mpingimpingi — biceps
+- Mpini — Invisibilité
+- Mpinu — Force musculaire
+- Mpirikisi — menteur ; imposteur ; trompeur
+- Mpoka, mampoka. — Corne d'un animal
+- Mpoli — Poivre de katiopa, poivre éthiopien, xylopia, plante à fleurs utilisée pour traiter l'infertilité et les fibromes utérins, favorise la montée de lait
+- Mpolo — poussière ; cendre
+- Mpolomfumfu — albinos
+- Mpomo — Huit
+- Mponi — parfum ; poudre
+- Mpoteka — Pâte résiduelle de la distillation du mélange manioc-maïs
+- Mpoza — admiration ; étonnement ; séduction ; nostalgie ; extase
+- Mpuana — Ami(e) ; camarade ; chéri(e) ; copain ; copine
+- Mpueko · mpemba mpueko · mfumfutu. — gris
+- Mpuina — Grande soif ; passion ; envie
+- Mpuina ye naku. — Tu as soif.
+- Mpuina ye nandi. — Il/elle a soif.
+- Mpuina ye nani. — J'ai soif.
+- Mpuina ye nawu. — Ils/elles ont soif.
+- Mpuina ye neno. — Vous avez soif.
+- Mpuina ye neto. — Nous avons soif.
+- Mputa — Plaie ; blessure ; lésion ; coupure
+- Mputa yaya yi ta yaya. — La plaie me fait mal.
+- Muadi — petit commerce
+- Muafuta-miafuta — sueur ; transpiration
+- Muaka — Asperger ; répandre ; ensemencer ; démangeaison
+- Muaki — celui qui asperge
+- Muakila — odeur de la fermentation
+- Muakina — la façon de répandre, la façon d'ensemencer
+- Muakisa — faire asperger ; jeter sur ; projeter
+- Mualu — grande piste ; limite ; ligne de démarcation
+- Muandala — Scolopendre
+- Muanguka — se disperser
+- Muanzi — souche ; racine ; fibre ; filament
+- Muasu — gousse ; part de nourriture ; quartier
+- Muaumu — dedans ; ici ; là-dedans
+- Muaumu muawumu — Là-dedans ; ici ; dedans
+- Mubaku wa kotele ku hata. — Le renard est entré dans le village.
+- Mubaku wu dia nsusu. — Le renard qui mange les poules.
+- Mubaku · mibaku — Espèce de chat sauvage ; sorte de renard
+- Mubasa · mibasa — flèche
+- Mubati · mibati — pantalon
+- Muboba · miboba — L'habitude de brader, de casser les prix
+- Mubobela · mibobela — pourriture ; fumier
+- Mubolo — paresseux
+- Mudjoki · midjoki — mèche de cheveux
+- Muekese — piquant ; épine du porc-épic ; dard ; épine
+- Muemuenge — sel végétal utilisé pour faire la cuisine
+- Muendololo — fait de partir définitivement
+- Muesa — montrer
+- Mueta — illuminer ; clignoter
+- Mufide · mifide — mangue très mûre ; appétissante
+- Mufimpi · mifimpi — Personne qui a du flair
+- Mufuta — sueur
+- Muidila — bras de rivière ; affluent
+- Muifi — voleur
+- Muindu — tam-tam tout en bois
+- Muinga — Tige d'herbe sèche ; brin de paille ; tige ; tige d'allumette
+- Muinga fofolo — tige d'allumette
+- Muingidi — pépin d'un fruit ; noyau
+- Muingiri — noyau
+- Muisa — Faire voir ; faire sentir ; infliger ; faire subir
+- Muisi — fumée
+- Muisi · muishi — fumée
+- Muisisa — en faire voir à quelqu'un
+- Muisu — fait d'en faire voir à quelqu'un
+- Muisu mpashi — être maltraité
+- Muisunu — démonstration ; présentation ; prétexte pour faire souffrir
+- Muisusu — fait de souffrir
+- Muivi — voleur
+- Muizu — arrivée ; venue
+- Muizulu — arrivée
+- Mukala · mikala — tombeau ; tombe
+- Mukalu — poisson séché
+- Mukambakani · mikambakani — Le croisement, angine, inflammation de la gorge
+- Mukazu — colatier
+- Mukento na bakala ba ba. — Ils sortaient ensemble / c'était un couple.
+- Mukento wu moshi. — Une femme (une seule).
+- Mukokoti · ba dia kokoti. — Le cocotier.
+- Mukokoti · mikokoti — cocotier ; cocotiers
+- Mukolo we naku bu keri ku nzo mikanda. — Tu es fatigué après l’école.
+- Mukono — Entamé
+- Mukulu — ancien
+- Mukulu · n'kuluntu · bakuluntu · mukuluntu — ancien
+- Mukuluntu — aîné ; celui qui vient avant
+- Mukumba n’kumba· mikumba — Nombril ; nombrils
+- Mukuruntu — aîné ; celui qui vient avant
+- Mukuyu — revenant
+- Mulala · milala — oranger ; orangers
+- Muleke · baleke — Un(e) cadet(te) ; plus jeune
+- Mulendi · milendi — Dépouille ; cadavre
+- Mulengi · milengi — Cheveu(x)
+- Muloki · miloki — Ensorcelleur(s)
+- Mululu — Saignement du nez ; épistaxis
+- Mumanga · mimanga — manguier ; manguiers
+- Mumpesi · mimpesi — Nom d'une plante médicinale
+- Munana — corbeau
+- Munanga — Homme à tout faire ; assistant personnel
+- Mundengué · minengue — corossol(s)
+- Mundjula · mindjula — Profanateur de tombe
+- Munganga — corbeau
+- Munganga · tunganga — Corbeau(x)
+- Mungongo — dos ; colonne vertébrale
+- Munguanvula — cigale
+- Muniche · miniche — Canne à sucre ; cannes à sucre
+- Muniungutinunu · miniungutinunu — murmure de mécontentement
+- Munjanda · minjanda — franges des habits
+- Munkiobo — ver de terre
+- Munkiobo · mungunda — ver de terre
+- Munkondi · minkondi — bananier ; bananiers
+- Munkono — coup de poing
+- Munkua kumbi — Celui à qui appartient la voiture.
+- Munkua ntshi — Celui à qui appartient la chose.
+- Munkua nzo — Celui à qui appartient la maison.
+- Munkua nzo ka mi mu tala ka ko. — Le propriétaire ne répare rien.
+- Munkua · bankua — Possesseur
+- Munsala — Crevette
+- Munsomono — fourchette
+- Munturia — sangsue
+- Munturia · minturia — Sangsue
+- Muonso — partout
+- Mupapaayi · mipapaayi — papayer ; papayers
+- Mupepe — avion
+- Mupepe wu nketi bonga ba katuri wo. — Mon vol a été annulé.
+- Mupupuku — Sorte de palétuvier Kongo
+- Musafu · misafu — safoutier ; safoutiers
+- Musanga — Collier de perles
+- Musavoka · misavoka — avocatier ; avocatiers
+- Mushi mputu , muishi mputu. — Le français (habitant).
+- Mushikimbila — requin
+- Mushikimbila · mishikimbila — Requin(s)
+- Musonia — Plante herbacée dont les jeunes pousses peuvent provoquer de petites blessures au contact
+- Musualu — Vite ; vitesse ; rapidité
+- Muteke — bestiole ; bébête (parler enfantin)
+- Mutela — taille ; être debout
+- Mutindu — façon
+- Mutindu wa karila. — La façon de dire non.
+- Mutondia · mitondia — anguille
+- Mutu beni — téton
+- Muvumba — Papillote cuite sous la cendre
+- Muwakila — écho
+- Muyibi — voleur
+- Mvia — Pénis
+- Mvila — Lignée de parenté ; clan
+- Mvilu — suie
+- Mvimbi mbukidi — varicelle
+- Mvinda — ourlet
+- Mvinzulu — onction
+- Mvivi — Éruption cutanée
+- Mvuamvua — sale ; mal attaché ; désaccordé ; cacophonique
+- Mvuaza — tabac de piètre qualité, mélange raté, confusion
+- Mvuemba — paresse ; fatigue ; lassitude
+- Mvuemvue — mou ; soyeux ; doux ; ramolli
+- Mvukulu bua. — J'ai failli tomber
+- Mvumbi — Cadavre
+- Mvumbukiri — Je vais bien
+- Mvundulu — vacances
+- Mvunga — toge
+- Mvungila — suie
+- Mvungula — clef
+- Mvuomvuo — doux ; mou ; humide ; mouillé ; évidé
+- Mzansi — Nom kikongo de l'Afrique du Sud
+- N'kaka — Grand-mère ; grand-père
+- N'kaka nge zololo. — Je t'aime mamie.
+- N'kumbu — nom
+- N'kunga moshi — chanson
+- N'samu — Sept ; affaire ; histoire (avec un ; a ; court)
+- N'samu wa nuikila. — La calomnie.
+- N'samu we nani ni ku tela. — J'ai quelque chose à te dire.
+- N'samu wu mbo wu ba. — Cette affaire va avoir lieu.
+- N'zansi — afrique du sud
+- Nakisa — Augmenter ; faire monter
+- Namika — Coller dessus
+- Namisa — Allumer
+- Namisa muinda — Éclairer
+- Namubu — Pas encore
+- Nana · mpomo — Huit (8)
+- Nangama — Gravir ; monter
+- Nanguka — S'envoler ; se soulever
+- Ndandu — Bénédiction ; bénéfice ; profit
+- Ndasukiri — je suis hors de moi
+- Ndekela — Étincelle
+- Ndekela tiya — Une étincelle de feu.
+- Ndembolo kuani — J'abandonne
+- Ndiangidi — rose
+- Ndilu — limite ; ligne ; coupe-feu ; délimitation
+- Ndimi — j'ai enfoui
+- Ndongolo — Enseignement ; ma manière d'enseigner
+- Ndosele wo ku mbaji. — Je l'ai jeté dehors.
+- Ndozi · ndoji — rêve ; songe
+- Ndunda — Légumes
+- Nduya — noyau
+- Nfinini — gencives
+- Ngabaka — Langue kongo parlée par les Bishi Ngabaka
+- Ngandu — Crocodile
+- Ngangu — intelligence
+- Ngansua — chenille rousse comestible
+- Ngansua · kuaka — chenille
+- Ngieka — je suis devenue
+- Ngieka wa munene. · bunene wa bakiri. — J'ai pris du poids.
+- Ngombulu — lion
+- Ngori — ceinture du malafoutier
+- Ngoto — sac
+- Ngozi — ronflements
+- Nguala — Ami(e) ; camarade ; copain ; copine ; chéri(e)
+- Nguankaji — oncle maternel
+- Nguankaji weri kue mia yiriki wa fua. — L'oncle maternel qui réglait les conflits est mort.
+- Nguara — perdrix des bois
+- Ngumba — porc-épic
+- Ngumbi — Perdrix
+- Ngumbudi — Indigo
+- Ngundu-nua — rossignol
+- Ngunia — lunettes
+- Nguya — sanglier
+- Nguya za meso. — Les lunettes.
+- Niaka — Accoucher
+- Niansi ya nitu. — La puce.
+- Niansi ya ntu. — Le pou.
+- Nieka — Se ramollir ; moelleux ; ramolli
+- Niekona — abandonner
+- Nienga — Se fondre
+- Niense — joie ; volupté
+- Nikuna — Essayer de faire bouger quelque chose
+- Ningisa — Ébranler
+- Nionga — Murmurer
+- Nioshi — abeille
+- Njeka wa dzuna. — Je suis devenu(e) calme.
+- Njeka wa munene. — J'ai pris du poids.
+- Njeka wa nuna. — Je suis devenu(e) vieux/vieille.
+- Njevo · manjevo — Moustache(s)
+- Njundu — Marteau ; massue
+- Njunini. — Je me suis calmé(e)
+- Njuridi — demandé
+- Nkaba — Racine de manioc ; antilope ordinaire ; tubercules de manioc
+- Nkabi — Antilope
+- Nkabulu — fait de partager
+- Nkafi — pagaie ; rame
+- Nkalala — amande palmiste
+- Nkalu — grande calebasse
+- Nkamatanu — 500
+- Nkamatatu — 300
+- Nkampa — tissu pourpre
+- Nkana mfuenge — Il ressemble à un renard.
+- Nkanka — pas agréable à regarder
+- Nkari — commerce
+- Nkati ka — Très (synonyme de nguri ya).
+- Nkatu — Rien ; pas… de
+- Nkatukiri ku nzo. · ndukiri ku nzo. — Je quitte la maison.
+- Nkekoso — Oiseaux tisserands
+- Nkela — caisse
+- Nkenke — lièvre
+- Nkenke mayela — L'intelligence du lièvre (personne très intelligente).
+- Nkeri — je reviens
+- Nkeri ku salu. — Je reviens du travail.
+- Nkeshi — colère ; douleur
+- Nkeshi mbakiri. — Je me suis mis(e) en colère.
+- Nkeshi sa nitu. — La douleur.
+- Nkezo — arbre à caoutchouc
+- Nkiangu — alors ; aussi ; pourquoi
+- Nkiela — Mai à juin
+- Nkima — singe
+- Nkobo — Brousse avec de grandes herbes
+- Nkoka — descente(s)
+- Nkokila — soir
+- Nkokila ya mbote. — Bonsoir.
+- Nkoko tuvi — Le bousier (insecte nettoyeur de la savane). ; un bousier
+- Nkoma-nkoma — voyelle complémentaire dans la nomenclature mandombe (ia, ue, io)
+- Nkome — poing
+- Nkomfi — chou
+- Nkoyi — Jeudi
+- Nkuezii — Parent par alliance
+- Nkuikila. — Fais-moi confiance
+- Nkuizulu — arrivée ; venue
+- Nkuku — ronce
+- Nkuma — proverbe
+- Nkunda-nkunda — gui
+- Nkunga — Chanter ; chanson
+- Nkuni — Bois de chauffe ; bois de chauffage / bois de cuisson ; morceaux de bois
+- Nkuni ni kue tomba. — Je vais chercher du bois de cuisson.
+- Nkunku — morceau
+- Nkunzi — Cru
+- Nlaku — flamme
+- Nlambula — cadeau
+- Nlandu · milandu — Enfant né après les jumeaux, enfants nés après les jumeaux
+- Nleke · baleke — Un(e) cadet(te) ; plus jeune
+- Nleke, muleke · baleke. — Un enfant, un cadet / une cadette, des cadets / cadettes.
+- Nlembo wa nguri. — Le pouce (la maman des doigts).
+- Nlembo, mulembo · milembo. — Doigt ; doigts
+- Nlembonguri — pouce
+- Nlemvu — s'il vous plaît ; pardon
+- Nlendi — cadavre
+- Nlolo — corossolier sauvage
+- Nlonga — rangée ; rang
+- Nlongokele kaka. · meno kaka na longokele. — J'ai appris toute seule.
+- Nludi — toit
+- Nludi wakulu wu meni ya. — Tout le toit a brûlé.
+- Nluku — moelle
+- Nlumba — lapin
+- Nlumi — mari
+- Nlumi na nkaji. — Le mari et la femme.
+- Nsabila — Panier tressé en feuilles de palme fraîches
+- Nsadisi — j'écris
+- Nsadisi nkanda — J'écris une lettre
+- Nsaki — musique du battement de main
+- Nsakusu — Soufflet de forge
+- Nsalulu — fonctionnement ; manière de travailler
+- Nsambuari — Sept
+- Nsambwadi — sept (7)
+- Nsania — éponge
+- Nseho — sourire
+- Nsekeni — Sorte de plante médicinale
+- Nsekoso — oiseaux tisserands qui aiment nicher sur les bambous
+- Nsela — dame-jeanne
+- Nselele — termites
+- Nselomo — éclair
+- Nsemona — être beau ; être belle
+- Nsendo — récompense, bien donné ou reçu pour une bonne action, un service rendu, des mérites
+- Nsenga — Palétuvier
+- Nsiana — Comme
+- Nsiantika — aligner
+- Nsibidi. — J'ai acheté
+- Nsidi — j'ai fait
+- Nsiesie — sorte de gazelle
+- Nsiete — Vers intestinaux
+- Nsieti — Comme ; même que
+- Nsika — inviter ; avertir ; convoquer ; informer
+- Nsikulululu — invitation ; convocation
+- Nsikumusu — transe ; état modifié de conscience
+- Nsila — Lundi
+- Nsimu — mémoire
+- Nsingu a koko. — Le poignet.
+- Nsinsa — Identique
+- Nsinzi — petite civette
+- Nsitu — Grande plantation
+- Nsiya — éternuement
+- Nsoneki · nsoniki — écrivain
+- Nsongela — montre-moi
+- Nsonokono — Stylo, instrument pour écrire, crayon à papier
+- Nsonokono ku kua ze? · Nsonso kua zena? — Ça coûte combien les stylos ?
+- Nsonsa — vexer
+- Nsonso — pointes pour écrire ; clous ; larve du palmier
+- Nsonsola — bouger
+- Nsualu — promptitude ; rapidité ; vitesse
+- Nsualumuna — faire passer vite ; introduire vite
+- Nsuenga — Se rétrécir ; aller en diminuant
+- Nsuika — se fixer définitivement ; s'arranger
+- Nsuiri — serpent cracheur
+- Nsululu — personne pâle par manque de vitalité ; pâle
+- Nsumba — poisson-chat
+- Nsundinga — boiter
+- Nsungutila — marcher sur la pointe des pieds
+- Nsunia — chair ; viande
+- Ntambu — piège
+- Ntambu mia nkangabumi. — Une toile d'araignée.
+- Ntanga — Mollet
+- Ntantu — ennemi
+- Ntelama — arrêt
+- Ntemo — la lumière du nza (cosmos manifesté), une conscience dans la tradition Kongo
+- Ntemo wa zulu. — La lumière du ciel.
+- Ntientie — roitelet
+- Ntindu — façon ; couleur
+- Ntindu mia bikila. — Les manières de saluer.
+- Ntomono dia — J'ai bien mangé
+- Ntondia — anguille
+- Ntondolo — Gratitude
+- Ntsamina — Clarté sidérale
+- Ntsari — mépris
+- Ntsha — donc
+- Ntshangu — donc
+- Ntuari — Communauté de bénéfice et d'entraide
+- Ntumbi — mulot
+- Ntumpa — Fontanelle
+- Ntundu — Jaune
+- Ntunga — tique
+- Ntuni — voûte céleste
+- Ntuntubila — colline
+- Nturila — plant
+- Nuana — Lutter
+- Nuandu, muwandu · miwandu. — Pois d'angole
+- Nuisu — fil
+- Nukuta — Sentir (une odeur)
+- Nunini. — J'ai vieilli
+- Nunungu — grain de piment
+- Nuokela — écho
+- Nzabakani — Ami(e) ; camarade ; copain ; copine
+- Nzaji — foudre
+- Nzalu — Cuillère ; fourchette
+- Nzamini — j'ai crié
+- Nzanda — Beaucoup ; grande quantité ; abondance
+- Nzangu — nzangu (jeu traditionnel)
+- Nzaya — connaissance
+- Nzayilu — Connaissance
+- Nzeki nzeki — Sucré (fruits & plantes).
+- Nzenge wola — mauve
+- Nzezesa nsuki. — Desserre-moi les cheveux
+- Nzieka manisa — Je finis bientôt
+- Nzieta — vertige
+- Nzietolo — pèlerinage ; voyage
+- Nzina — Le neuvième corps du muntu dans la tradition Kongo
+- Nzindu — sentiments ; pensées profondes ; réflexions profondes ; émotions ; jugeotte
+- Nzita · muzita · mizita — paquet
+- Nzitu — Personne respectable
+- Nzitukulu — Ébahi ; émerveillé
+- Nzobo — civette
+- Nzole — deuxième
+- Nzombe — Des lianes du couvreur pour faire la toiture
+- Nzongi — brun
+- Nzonzolo — façon de parler
+- Nzuengi — Fil de fer
+- Nzundu — marteau
+- N’sanga — Collier de perles
+- N’sangu — nouvelles
+- N’siku mitshiku — lois
+- N’singa musginga mishinga. — Fil. ; fils.
+- Pakama — Avoir la fièvre ; bouillir
+- Pakapaka — Tremblant
+- Paki, tshipali · bipaki. — Une auge en bois, un pétrin à manioc.
+- Palangasa — désorganiser ; bouger ; bousculer ; perturber ; activer
+- Palapala — Inquiet ; inquiète
+- Palipali — Inquiet ; inquiète ; inquiétude
+- Palukila — Trouver par hasard
+- Palumuna — Écarquiller les yeux, faire sursauter, réveiller en sursaut
+- Pamu — Effrayant ; effrayé
+- Pamu · bipamu — Crainte inspirée à quelqu'un, personne qui inspire la crainte
+- Pamuka — Craindre, éprouver un étonnement mêlé de crainte
+- Pamuna — Inspirer la crainte
+- Papumuka — Être surpris
+- Papumuka! bika buyumba. — Secoue-toi ! Laisse ta bêtise !
+- Pasuzuka — Éclater ; s'éclater ; être déchiré ; se déchirer en morceaux
+- Pasuzula — Déchirer en morceaux
+- Patakana — Être embrouillé
+- Patakasa — Empêcher (la concrétisation d'un projet) ; embrouiller
+- Patana — Parler avec arrogance
+- Patanga — Barboter
+- Patapata — Barbotant ; pataugeant
+- Patasa — Faire parler avec arrogance
+- Patipati — Tout noir ; très noir
+- Patumuka — Patauger, s'éclater au sol, s'écraser en tombant
+- Patumuna — Jeter ; laisser tomber
+- Pema — Flamber fort ; faire activement
+- Pena — Mépriser ; retrousser un vêtement
+- Penepene — Proximité immédiate
+- Pesepese — Aplati
+- Pesipesi — Complètement nettoyé
+- Petakasa — Aplatir
+- Petalala — Être bas ; être enfoncé
+- Petoma — S'étendre sur le sol
+- Pfuka — pleuvoir finement
+- Pindi — Assombri ; noirci ; obscur
+- Pipana — Être en désordre
+- Pipasa — Mettre en désordre
+- Pipilipi — Silencieusement
+- Polo · mampolo — Nouvelles échangées pendant les salutations
+- Poteka — Enduire d'un produit pâteux
+- Potesa — faire voir ; faire sentir ; en faire voir à quelqu'un
+- Potopoto — Boue ; substance pâteuse
+- Rutoro — Langue kongo parlée en Ouganda
+- Sabala — Samedi
+- Sabukulu — bouchon
+- Sadisi — Chef ; patron(ne) ; celui ; celle qui fait travailler ; chef, patronne, patron, celui ou celle qui fait travailler
+- Safula — Offenser
+- Saka · bisaka — Piège à rats
+- Sakafulu — Poumon
+- Sakalala — Être agréable ; se rétablir tout doucement après une maladie ; aller mieux ; se rétablir
+- Sakalale? — Tu vas mieux ?
+- Sakalasa — Rendre bien portant
+- Sakanana — se jouer de quelqu'un, le prendre pour un idiot
+- Sakasa — Amuser quelqu'un
+- Sakata — S'agiter de joie
+- Sakilika — Rendre agréable
+- Saku · masaku — Piqûre douloureuse
+- Sakuka — Être fatigué ; être apaisé
+- Sakula — Apaiser une douleur ; fatiguer par monotonie
+- Sakuluka — Être présenté en public 2 mois après la naissance, être rétabli
+- Sakumuna — Rendre prospère ; bénir ; présenter un enfant pour la première fois en public deux mois après sa naissance
+- Sakusa — Souffler à l'aide d'un soufflet
+- Salulu · bisalulu — récipient
+- Sambila — Activer le mbi (tradition Kongo), prier (tradition abrahamique)
+- Sambilila — Intercéder
+- Sambula — Aiguiser ; réaffûter
+- Sambulika — Se répandre par contagion
+- Sambulila — Contaminer
+- Sananana — Être écarté
+- Saninika — Écarter les lèvres
+- Sansalakani — Désordonné
+- Sansamana — Avoir peur ; être surpris
+- Sansamasa — Faire peur ; surprendre
+- Sanu · bisanu — Peigne
+- Sanza — nid de rats, de rongeurs en général
+- Sasala · bisasala — Nageoire
+- Sasala · masasala — Touffe terminale de l'ananas
+- Sehela — Se moquer
+- Sehesela — Se moquer de
+- Sekesa — Étendre ; coucher ; affûter ; limer
+- Sekisa — Polir ; affûter ; aiguiser
+- Sekola — Verser ; verser à boire ; transvaser
+- Sekozola — Brûler ; changer complètement d'opinion ; s'évanouir
+- Sekula — Verser ; transvaser
+- Semba — Réprimander ; blâmer ; punir
+- Sembe · bisembe — Ergot, pointe recourbée du tarse servant d'arme offensive chez les oiseaux
+- Sempama — Être découvert (pour un terrain)
+- Sempami — Convenable
+- Sempo — Convenable ; soulevant ; soulevé
+- Sempoka — Être soulevé
+- Sempola — Soulever
+- Senda — Échanger des cadeaux ; récompenser
+- Senga — Visiter ; rendre visite
+- Sengoka — Coucher sur le dos
+- Sengola — Mettre à l'envers ; renverser ; tourner (les yeux) vers le haut
+- Sengomuna — Mettre sens dessus dessous ; dévouer
+- Senza Kiamasanza — Septembre à octobre
+- Sesa — Tamiser
+- Sesolo — tamis
+- Seti bo. — Attends un peu
+- Shekema — Abattre un arbre ; médire en groupe
+- Shiama — équilibre
+- Shidi — Est-ce que tu restes ?
+- Shihu — Juillet à août
+- Shikila — Faire un effort
+- Shimba — Retenir ; tenir
+- Shimbalala — Être lisse
+- Shimbalali — Lisse
+- Shimbika — lisser
+- Shimbila — Tenir bon ; retenir
+- Shimbilika — Étendre ; laisser tranquille
+- Shimbu — Tenant ; tenu
+- Shingama — S'appuyer ; être appuyé
+- Shingika — Appuyer contre
+- Shingu — S'accordant ; accordé ; critiqué ; critiquant
+- Shisa — Laisser ; abandonner
+- Sikulu · bisikulu — escabeau ; rondin
+- Silalala — Devenir droit
+- Simu · masimu — Berge opposée
+- Sindika — Lancer des malédictions
+- Singasa — Approuver
+- Sinika — Bénir
+- Sinuna — Enfreindre
+- Sinzila · bisinzila — Souche
+- Sioso — collet ; lacet
+- Siridika — Redresser
+- Siumuka — S'échapper
+- Siyu — saison sèche
+- Sokoka — Se détacher ; se déverser
+- Sokotona — se curer les dents
+- Sompesa — Prêter
+- Sondo — Clitoris
+- Sukari — sucre
+- Sukia — Grande queue de certains oiseaux
+- Sukisa — aller jusqu'au bout de
+- Sulalala — Être debout ; se dresser
+- Sulangana — Être bien malaxé ; être complètement délayé
+- Sulangasa — Délayer complètement ; bien malaxer
+- Suluka — Avorter
+- Sulula — Déranger ; faire avorter
+- Sumbuka — Enjamber ; saigner de nouveau
+- Sungamana — Regarder avec étonnement
+- Sungua dia nzobo. — Le musc.
+- Susumba — Sursauter
+- Susumuka — Être surpris
+- Sutu die nandi. — Il n'est pas circoncis.
+- Sutuka — Être détaché ; se détacher ; se passionner
+- Taata — père ; parent paternel ; monsieur
+- Tabi wa nata bio. — Il faut que tu les apportes.
+- Tabika — Coûter
+- Tafunu — être éloquent ; parler bien
+- Tambala, tshitambala, kitambala · bitambala. — Foulard. ; mouchoir de tête. ; foulards.
+- Tamuna — Écarter ; étendre
+- Tangisa — Faire lire, faire compter, apprendre à lire, apprendre à compter
+- Tantamana. — Persévère
+- Tatika — Mordre
+- Tatiri — Avoir brûlé
+- Teketa — Trembler
+- Telameno. — Levez-vous
+- Temposa — Mettre au monde en grand nombre
+- Tentsakasa — empiler, entasser, mettre les uns sur les autres
+- Tiafuta — Sueur
+- Tibisa — Défier ; mettre quelqu'un au défi
+- Tieri — sorte de guêpe dont les larves sont comestibles
+- Timba — Avoir une érection ; être en érection
+- Timbula — Rejeter ; repousser
+- Timina — désir ardent
+- Tinguka — Boîter
+- Tisama — termitière
+- Tisama · kikuku — termitière ; termitère
+- Titi · matiti — Herbe
+- Tolasana — se critiquer
+- Toloka — Se rompre
+- Tombola · sekola — prendre (d'une casserole vers l'assiette)
+- Tsaka — Tondre
+- Tsamuna — Renverser ; verser
+- Tseki tseki — Blanc brillant
+- Tsheleka keti bungungu. — Vrai ou faux ?
+- Tshiba tsha nioshi. — Rayon de miel, ensemble d'alvéoles contenant le miel que l'on va récolter. ; rayon de miel, ensemble d'alvéoles contenant le miel.
+- Tshiba · biba — Couvercle d'une casserole
+- Tshibanga — Menton
+- Tshibete · bibete — Graines de courges écrasées et cuites
+- Tshibibu · bibibu — gorille ; gorilles
+- Tshibubu, kibubu · bibubu. — Gorille(s)
+- Tshibuki — guérisseur
+- Tshibula tsha dinkondi. — Peau de banane.
+- Tshibula tsha lala. — Écorce d'orange.
+- Tshibulu · kibulu — animal
+- Tshibungu · bibungu — mottes de terre
+- Tshifu, kifu · bifu. — habitude
+- Tshifundu · bifundu — Estomac
+- Tshihala — lézard
+- Tshijinga · bijinga — Étang artificiel (sg)
+- Tshikaku · bikaku — enclos
+- Tshikeri — Galettes traditionnelles
+- Tshikeri tsha bamvuama. — Galettes fourrées avec des pistaches grillées et des légumes frais.
+- Tshikoba · bikoba — Lèvre ; lèvres
+- Tshikonko — coin ; angle des murs
+- Tshikoyi · bikoyi — plainte
+- Tshikumbi · bikumbi — Vierge ; vierges
+- Tshimbungu · bimbungu — hyène ; hyènes
+- Tshimoko — Causerie ; discussion
+- Tshimoko tshi na zolo yika ni tsha we tshi. — La discussion que je voulais ajouter, ce n'est pas celle-ci.
+- Tshimoko tshi na zolo yika, ka tsha wa ko. — La discussion que je voulais ajouter, ce n'est pas celle-là.
+- Tshimpala · bimpala — Jalousie
+- Tshimpati · bimpati — Personne renfermée ; nom d'un papillon psychide
+- Tshimpene · bimpene — Nudité
+- Tshindiku — amitié
+- Tshinkoso — Talon ; coude
+- Tshinkoso nkeshi tshi ta sa. — Mon coude me fait mal.
+- Tshinkoso tia koko. — Le coude.
+- Tshinsunsu — Punaise
+- Tshintshintshia — ombre d'une personne
+- Tshinzingu tsho. — Cette vie
+- Tshipo tsha ntete · kipo kia ntete. — Partie 1.
+- Tshisalu tshi, ngolo tshie. — Ce travail est dur.
+- Tshisama · kisama · sama · bisama — termitière ; termitières
+- Tshisari — travailleur
+- Tshisari ni ki die. — Celui qui travaille c'est celui qui mange.
+- Tshitari — cascade ; miroir ; une cascade
+- Tshitari · bitari — Miroir(s)
+- Tshitini, kitini · bitini. — totem
+- Tshitunga · bitunga — Panier(s)
+- Tshivianguviangu, kivianguviangu — vélo
+- Tshivvuadangu — Canard
+- Tshiyimba, kiyimba, yimba · biyimba. — Morve.
+- Tshiyumba — idiot
+- Tshizongo · kizongo · bizongo — coup de fusil
+- Tshizongo, kizongo, zongo · bizongo. — La détonation. ; coup de fusil.
+- Tshula — crapaud
+- Tsilonda · bilonda — Sorte de criquet
+- Tualakasa — Entraîner
+- Tualakasa · tualakana — se laisser entraîner
+- Tuasi — abcès
+- Tuayi — serviette
+- Tuela — produire
+- Tuema — Être essoufflé ; respirer fortement
+- Tuema · bebela — être essoufflé
+- Tufuna — Épiler ; retirer des plumes
+- Tuika — Faire passer un message ; expédier ; charger sur la tête de quelqu'un
+- Tuiri — Bien salé (participe passé de Tua)
+- Tukuba — Coussins
+- Tukuba kue tue? — Où sont les coussins ?
+- Tukuba kue tuena? — Où sont les coussins ?
+- Tumbua na tumbua bananga. — J'ai été consacré Bula Mananga.
+- Tumbula — Exprimer une idée
+- Tumpa — Remuer ; bouger
+- Tumueno — couleurs
+- Tunda — Éplucher un fruit
+- Tupungunzala — libellules
+- Tuseho — rire
+- Tuti · matuti — Nuage(s)
+- Tuto kue tue(na)? — Où sont les cuillères ?
+- Tutulu — mortier (pour piler)
+- Vingana — Être échangé
+- Vuadangu — canard
+- Vumbukila — Se réveiller pour une action précise
+- Vunduka — Gonfler
+- Vuotona — s'accaparer
+- Wadunka — S'écouler contre le mur (pour la pluie en temps de vent)
+- Walesa — Dieu humain : c’est une personne qui a pu passer le Nsi Ya Kumi na moshi (la 11 dimension) et qui revient dans le Nsi Ya Tatu (la 3ème dimension) pour aider les Bantu à sortir des dimensions gérées par Ya Kimbenza
+- Wamisa — Fortifier
+- Wawana — se donner rendez-vous
+- Wela muela. — Inspirez
+- Weno — Avoir besoin
+- Widikila — Écouter ; croire
+- Windana — Se taper mutuellement
+- Wisana — S'entendre mutuellement
+- Wolo — Or
+- Wuinda — Gifler ; donner une gifle
+- Wuinda mbata — Donner une gifle
+- Wukula — Bercer
+- Wumba — Rite de protection contre les fausses couches
+- Wumuka — Se perdre
+- Wumvu — Langue kongo parlée par les Bishi Wumvu
+- Wunga — Paître ; garder
+- Wunisa · kalakasa — faire mentir ; corrompre
+- Wusu — raphia
+- Wutuna — douleur lancinante
+- Yabala — bavard
+- Yakamba — Vagabonder ; rôder ; errer
+- Yakisa — Offrir à la vente
+- Yalama — Être étendu ; couché
+- Yalavunga ka mala ko na tshinkala, mu njila ya Mfua. — Yalavunga n'est pas loin de Kinkala, sur la route de Mfua.
+- Yaluka — le fait de s'en aller ; disparaître
+- Yalumuka — S'épanouir
+- Yambirika — abandonner
+- Yambuka — S'échapper
+- Yamika · yumisa — faire sécher
+- Yamuna — Réchauffer (pour la nourriture)
+- Yangalala — Se réjouir ; exulter
+- Yangasa — Étendre
+- Yangasa nsangu — Annoncer un événement, populariser quelqu'un, rendre quelqu'un populaire par ce qu'on dit de lui.
+- Yangi — pagaille
+- Yanika — Faire chauffer au soleil ; exposer ; sécher au soleil
+- Yarika — Vendre
+- Yavula — Marcher à quatre pattes (pour un bébé)
+- Yayana — Se tromper
+- Yayi — celui-là ; celle-là (loin)
+- Yelesa — Faire pousser ; grandir
+- Yelo — Barbe
+- Yemeka — Allaiter
+- Yengi, kiyengi · biyengi. — Amitié
+- Yengisa — Faire revenir ; blanchir
+- Yengiza — Chouchouter (un enfant), dorloter (un être aimé)
+- Yestela · yetela — Se chauffer, se mettre près du feu, se réchauffer
+- Yetana — Errer sans but ; errer ; se promener sans but
+- Yetana ka ta yetana. — Elle se promène sans but.
+- Yetasa — Poser un lapin
+- Yetila — Se chauffer au soleil
+- Yiba · djuana — Avoir des rapports sexuels
+- Yidika — Fabriquer ; créer ; arranger
+- Yikama — Augmenter
+- Yilama — Être en ordre ; être préparé
+- Yilulu — Rester longtemps dans un état, dans un endroit
+- Yimba — Chanter
+- Yimbila — Chanter
+- Yimina — Défendre ; empêcher ; refuser quelque chose
+- Yimina · kala — refuser
+- Yinamana — Se pencher sur
+- Yingana — Succéder
+- Yingasa — Remplacer quelque chose
+- Yinika — Rouir du manioc pour en extraire la fécule, incliner pour mieux voir
+- Yiriri — est couché
+- Yititi — Obscur ; ténébreux
+- Yobila — Se baigner, prendre un bain, s'inonder, s'enduire d'huile ou de crème
+- Yokakana — passer sans s'arrêter
+- Yokesela — Passer ; vivre (du temps)
+- Yolongo — Obscur
+- Yoya — Être bien mûr ; jaunir
+- Yubulu — Écorcher ; peler
+- Yuki — carafe ; cruche
+- Yuluka — Grimper
+- Yuluma — Être réuni ; être entassé ; amoncelé
+- Yumana — Se disputer
+- Yumisa — se faire sécher, déshydrater (par le soleil)
+- Yundula — Nourrir ; élever
+- Yunuka — S'écorcher (le genou)
+- Zabakana — Être connu
+- Zabasana — Se connaître mutuellement
+- Zabikisa — Informer ; tenir au courant
+- Zabisa — Informer ; faire savoir
+- Zakaleno. — Asseyez-vous
+- Zakaleti. — Assieds-toi (politesse)
+- Zangama — Être élancé ; être grand(e) ; être de grande taille, se tenir au-dessus de quelque chose ; être de grande taille
+- Zangula — Élever ; rehausser
+- Zanza — nid (d'oiseau)
+- Zanza · mazanza — nid ; nids
+- Zaza — Trembloter ; être en émoi ; trembler d'excitation
+- Zaza ta zaza mu bungu dia madia. — Tu es en train de trembloter à cause de la nourriture.
+- Zeloka — Rouiller, être rouillé, être indisposée (pour une femme), avoir ses règles
+- Zelokele — Avoir eu ses règles (passé)
+- Zengozoka — S'émietter
+- Zengozola — Couper en petits morceaux
+- Zeza — Être relâché ; être desserré ; desserrer ; relâcher
+- Zezele — Est desserré ; sont desserrés
+- Zezesa — Desserrer ; desserrer quelque chose (trop serré)
+- Ziba — fermer
+- Zibama — être fermé ; se fermer
+- Ziku · maziku — foyer
+- Zimbakana — Oublier ; disparaître ; être perdu
+- Zimi · mazimi — grossesse
+- Zingalakana — S'entortiller ; s'enrouler ; s'emmêler
+- Zitama — Avoir de l'importance ; être respecté
+- Zitisana — Se respecter
+- Zitusu — respect
+- Ziula — Déterrer
+- Zokozona — Froisser, chiffonner, écraser (des feuilles dans ses mains pour en extraire le jus)
+- Zolana — S'aimer
+- Zonga — Faire un tas pour une vente dans un marché
+- Zonzeka — Ranger en entassant ; ranger ; regrouper ; réunir ; entasser
+- Zonzeka mabuku maku. — Range tes livres.
+- Zukumuna — Lancer quelque chose pour faire tomber quelque chose
+- Zunga — Entourer ; faire un cercle ; encercler
+- Zunga mvutu ya mbote. — Entoure la bonne réponse.
+- Zungana — Tourner, faire une ronde, tourner autour de ; se promener
+- Zungasa — Faire tourner ; faire découvrir
+- Zungisa — Faire tourner
+- Zunguluka — Tourner autour en étant désorienté ; perturber

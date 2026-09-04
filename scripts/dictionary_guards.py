@@ -98,6 +98,11 @@ def check(entries):
         if not (e.get("fr") or "").strip():
             errors.append("entree sans sens francais : %s" % lari)
 
+        # 6. chaque entree porte une provenance connue ; toute nouvelle
+        # entree doit etre rattachee a l'autrice (scripts/mark-provenance.py)
+        if e.get("provenance") not in ("autrice", "a-confirmer"):
+            errors.append("provenance manquante : %s" % lari)
+
     # 5. les sens que l'auteur a separes ne se retrouvent pas ensemble
     for head, must_have, must_not in SEPARATE_SENSES:
         for e in entries:
