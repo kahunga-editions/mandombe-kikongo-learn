@@ -5,11 +5,6 @@
     "en": "Him and me."
   },
   {
-    "lari": "Ama",
-    "fr": "ma chère",
-    "en": "my dear"
-  },
-  {
     "lari": "A we",
     "fr": "lequel ; laquelle",
     "en": "which one"
@@ -58,6 +53,11 @@
     "lari": "Akunde",
     "fr": "Janvier à février",
     "en": "January to February"
+  },
+  {
+    "lari": "Ama",
+    "fr": "ma chère",
+    "en": "my dear"
   },
   {
     "lari": "Ama",
@@ -8176,19 +8176,19 @@
     "en": "Where do you live?"
   },
   {
+    "lari": "Kue ba kotela ka?",
+    "fr": "Mot à mot : où entrent-elles ? ; sous-entendu, selon le contexte : où vont-elles à l'école ?",
+    "en": "Word for word: where do they enter?; implied, depending on context: where do they go to school?"
+  },
+  {
     "lari": "Kue ba lendi sobesa ngela?",
     "fr": "Où peut-on changer de l'argent ?",
     "en": "Where can one change money?"
   },
   {
     "lari": "Kue ba?",
-    "fr": "Où vont-elles à l'école ?",
-    "en": "Where do they go to school?"
-  },
-  {
-    "lari": "Kue ka?",
-    "fr": "Où va-t-elle à l'école ?",
-    "en": "Where does she go to school?"
+    "fr": "Où habites-tu ?",
+    "en": "Where do you live?"
   },
   {
     "lari": "Kue ke(na)?",
@@ -8200,11 +8200,6 @@
     "fr": "Où vas-tu à l'école ?",
     "en": "Where do you go to school?",
     "note": "\"À l'école\" est sous-entendu. Le contexte permet de réduire la phrase au maximum en Kikongo Lari. · EN — \"At school\" is implied. Context allows the sentence to be shortened as much as possible in Kikongo Lari."
-  },
-  {
-    "lari": "Kue lu?",
-    "fr": "Où allez-vous à l'école ?",
-    "en": "Where do you (pl.) go to school?"
   },
   {
     "lari": "Kue na dingi.",
@@ -18800,23 +18795,23 @@
   },
   {
     "lari": "Nzo mikanda aku kue ye(na)?",
-    "fr": "Où vas-tu à l'école ?",
-    "en": "Where do you go to school?"
+    "fr": "Où est ton école ?",
+    "en": "Where is your school?"
   },
   {
     "lari": "Nzo mikanda andi kue ye(na)?",
-    "fr": "Où va-t-elle à l'école ?",
-    "en": "Where does she go to school?"
+    "fr": "Où est son école ? = Où va-t-elle à l'école ?",
+    "en": "Where is her/his school? = Where does she go to school?"
   },
   {
     "lari": "Nzo mikanda awu kue ye(na)?",
-    "fr": "Où vont-ils à l'école ?",
-    "en": "Where do they go to school?"
+    "fr": "Où vont-elles à l'école ? (mot à mot : leur école, où est-elle ?)",
+    "en": "Where do they go to school? (word for word: their school, where is it?)"
   },
   {
     "lari": "Nzo mikanda eno kue ye(na)?",
-    "fr": "Où allez-vous à l'école ?",
-    "en": "Where do you (pl.) go to school?"
+    "fr": "Où est votre école ?",
+    "en": "Where is your (pl.) school?"
   },
   {
     "lari": "Nzo mikanda makalaka yi dukisa.",

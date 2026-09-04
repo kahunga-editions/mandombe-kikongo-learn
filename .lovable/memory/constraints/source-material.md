@@ -1,6 +1,6 @@
 ---
 name: Source Material Constraint
-description: Nzo Mikanda corpus is the exclusive source. AI is a CORPUS READER with zero linguistic agency. French voice R89ZQJowZAEgiPNyC3dQ globally.
+description: Nzo Mikanda corpus is the exclusive source. AI is a CORPUS READER with zero linguistic agency. Never derive a paradigm by analogy. French voice R89ZQJowZAEgiPNyC3dQ globally.
 type: constraint
 ---
 L'Agent est un LECTEUR DE CORPUS — zero competence linguistique propre.
@@ -9,12 +9,20 @@ Regles :
 - Source exclusive : corpus Nzo Mikanda (contenu reel des lecons dans src/data/lessons.ts)
 - Ne JAMAIS inventer de mots, formes ou salutations non attestes
 - Ne JAMAIS conjuguer par analogie ou construire de phrases par regles grammaticales
+- Ne JAMAIS completer une serie (personnes, pluriels, temps, possessifs, classes) a partir d'une seule forme attestee. Exemple de faute : "Kue kotela (ka)?" atteste -> "Kue ka?", "Kue lu?" fabriques.
+- Ne JAMAIS inventer un sens ni deriver les autres langues d'une forme non attestee
+- Le dictionnaire est PUBLIC : une forme inventee est une faute grave, pas un brouillon. En cas de doute, demander a l'autrice.
 - Ne JAMAIS utiliser de Kituba, Munukutuba ou Lingala
 - Ne JAMAIS ecrire de doubles lettres (aa, ee, ii, oo, uu)
 - "zonza" = parler (PAS "vova" qui est du Kituba)
 - "mbote na nge" N'EXISTE PAS — utiliser "Mbote aku mpangi" ou "Mbote nlongoki"
 - "nkumbu ani" = forme vernaculaire correcte pour "mon nom"
 - Emojis medium-dark dans <theo> uniquement
+
+Sens arbitres par l'autrice :
+- Kue ba? = Ou habites-tu ? ; Kue ba ka? = Ou habites-tu ? (les deux formes sont bonnes)
+- Kue ba kotela ka? = mot a mot "ou entrent-elles ?" ; sous-entendu selon le contexte "ou vont-elles a l'ecole ?"
+- Nzo mikanda aku kue ye(na)? = Ou est ton ecole ? ; andi = Ou est son ecole ? ; eno = Ou est votre ecole ? ; awu = Ou vont-elles a l'ecole ? (mot a mot : leur ecole, ou est-elle ?)
 
 Voix :
 - Voix francaise globale : R89ZQJowZAEgiPNyC3dQ (remplace Sarah qui a un accent anglais)
