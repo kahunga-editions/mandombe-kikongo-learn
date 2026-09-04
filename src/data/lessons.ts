@@ -31086,7 +31086,7 @@ lessons.push({
       { lari: "wawa", mandombe: "Wawa", french: "un rendez-vous", english: "an appointment" },
       { lari: "wawana", mandombe: "Wawana", french: "se donner rendez-vous", english: "to arrange to meet" },
       { lari: "Mbaji mbo ta buabana", mandombe: "Mbaji Mbo Ta Buabana", french: "Demain on va se rencontrer", english: "Tomorrow we will meet" },
-      { lari: "a ma", mandombe: "A Ma", french: "ma chère", english: "my dear" },
+      { lari: "Ama", mandombe: "Ama", french: "ma chère", english: "my dear" },
       { lari: "ehe", mandombe: "Ehe", french: "oui", english: "yes" },
       { lari: "ni mbote", mandombe: "Ni Mbote", french: "bonjour (c'est moi qui dis bonjour à plusieurs personnes)", english: "hello (I am the one greeting several people)" },
       { lari: "nsamba ya ntuku", mandombe: "Nsamba Ya Ntuku", french: "vin de palme frais", english: "fresh palm wine" },
