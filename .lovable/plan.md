@@ -31,8 +31,9 @@ L'entrée du dictionnaire est `A ma` (fr « ma chère »). Elle devient **`Ama`*
 
 ## 4. Mémoire
 
-Ajout de la règle dans la base d'apprentissage Mandombe (`.lovable/memory/grammar/orthography-mandombe-y-double-vowels.md` et la skill de saisie) :
+Ajout de la règle dans la base d'apprentissage Mandombe (`.lovable/memory/grammar/orthography-mandombe-y-double-vowels.md`) :
 - si le glyphe existe, on le tape — `iya` n'est jamais un repli ;
+- `iya` uniquement pour JIA, WIA, PIA, RIA, HIA, glyphes absents de la police ;
 - `nkia` se tape `nkia` ;
 - `Ama` s'écrit en un seul mot.
 
