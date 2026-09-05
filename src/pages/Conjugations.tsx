@@ -71,9 +71,8 @@ function HighlightedMandombe({
   return (
     <span className={className}>
       {lastMatch.prefix}
-      <span className="relative inline-block px-1">
-        <span className="absolute inset-0 bg-verb rounded opacity-80 blur-[1px]" />
-        <span className="relative font-bold text-verb-foreground">{lastMatch.match}</span>
+      <span className="inline-flex items-end justify-center rounded bg-verb px-2 pb-[0.75em] pt-[0.1em] align-baseline">
+        <span className="font-bold leading-none text-verb-foreground">{lastMatch.match}</span>
       </span>
       {lastMatch.suffix}
     </span>
