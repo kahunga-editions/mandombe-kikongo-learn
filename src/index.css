@@ -63,6 +63,8 @@
     --cream: 35 40% 96%;
     --cream-dark: 33 25% 88%;
     --terracotta-light: 16 55% 65%;
+    --verb-highlight: 42 70% 85%;
+    --verb-highlight-foreground: 35 70% 25%;
 
     --font-display: 'Playfair Display', serif;
     --font-body: 'Source Sans 3', sans-serif;
@@ -103,6 +105,8 @@
     --cream: 35 30% 12%;
     --cream-dark: 33 20% 18%;
     --terracotta-light: 16 50% 55%;
+    --verb-highlight: 42 60% 30%;
+    --verb-highlight-foreground: 42 70% 85%;
   }
 }
 
