@@ -4740,7 +4740,7 @@ export const lessons: Lesson[] = [
     ],
     phrases: [
       { lari: "Longa bana", mandombe: "Longa bana", french: "Enseigner aux enfants", english: "Teach the children" },
-      { lari: "Ndanda", mandombe: "Ndanda", french: "Suis-moi", english: "Follow me", note: "Prononce avec des /a/ longs. On ne note pas les accents dans la graphie." },
+      { lari: "Ndanda", mandombe: "Ndanda", french: "Suis-moi", english: "Follow me", note: "Prononcé avec des /a/ longs. On ne note pas les accents dans la graphie." },
       { lari: "Londa biloko", mandombe: "Londa biloko", french: "Réparer les choses", english: "Mend things" },
       { lari: "Lemba dia Bakulu", mandombe: "Lemba dia Bakulu", french: "L'école initiatique des ancêtres", english: "The initiation school of the ancestors", note: "Lemba was a prestigious Kongo secret society for healing and social governance." },
     ],
@@ -30700,9 +30700,9 @@ export const lessons: Lesson[] = [
     level: "beginner" as const,
     icon: "👨🏿‍👩🏿‍👧🏿‍👦🏿",
     credit: "Nzo Mikanda",
-    culturalNoteFr: "Dans la tradition Kongo, il n'y a pas de patriarches, car les peres ne font pas partie de la famille. Le pouvoir n'appartient pas aux peres : il appartient au clan (kanda), pas aux individus. Taata designe bien le pere et maama la mere, mais l'autorite se transmet par le matrilignage.",
+    culturalNoteFr: "Dans la tradition Kongo, il n'y a pas de patriarches, car les pères ne font pas partie de la famille. Le pouvoir n'appartient pas aux pères : il appartient au clan (kanda), pas aux individus. Taata désigne bien le père et maama la mère, mais l'autorité se transmet par le matrilignage.",
     culturalNote: "In the Kongo tradition there are no patriarchs, because fathers are not part of the family. Power does not belong to fathers: it belongs to the clan (kanda), not to individuals. Taata does mean father and maama mother, but authority passes through the matrilineage.",
-    culturalNotePt: "Na tradicao Kongo nao ha patriarcas, porque os pais nao fazem parte da familia. O poder nao pertence aos pais: pertence ao cla (kanda), nao aos individuos. Taata significa pai e maama mae, mas a autoridade transmite-se pela matrilinhagem.",
+    culturalNotePt: "Na tradição Kongo não há patriarcas, porque os pais não fazem parte da família. O poder não pertence aos pais: pertence ao clã (kanda), não aos indivíduos. Taata significa pai e maama mãe, mas a autoridade transmite-se pela matrilinhagem.",
 
     vocabulary: [
       { lari: "taata", mandombe: "Tata", french: "père, parent paternel, monsieur", english: "father, paternal parent, sir", note: "Forme pleine (Nzo Mikanda §4.5.2.2)" },
