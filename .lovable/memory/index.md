@@ -88,6 +88,7 @@
 - [Page Conjugaisons](mem://features/conjugations-page) — Glose par ligne, Mandombe sur sa propre ligne, verbe être par classe
 - [Time Vocabulary](mem://vocabulary/time) — Time markers and seasons
 - [Spirituality & Sacred](mem://vocabulary/spirituality-and-sacred) — Cosmology, entities, and concepts
+- [Mikishi](mem://vocabulary/mikishi) — Rituel de soin communautaire, mukishi/N'kishi/N'kisi, kisalu énergétique
 - [General Culture Concepts](mem://culture/general-concepts) — Mbuta, Malaki, Matanga definitions
 - [Audio Button Placements](mem://audio/emplacements-boutons) — MandombeSpeaker and TranslationSpeaker
 - [Lari Pronunciation & Orthography](mem://langue/orthographe-prononciation) — G hard, u=ou, nasal distinctions
