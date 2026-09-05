@@ -147,18 +147,13 @@ const Conjugations = () => {
                 <ul className="mt-4 divide-y divide-border/60">
                   {(["c", "f", "p"] as const).map((t) => (
                     <li key={t} className="py-4">
-                      <div className="flex items-center gap-2 flex-wrap">
-                        <span className="text-xs uppercase tracking-wide text-muted-foreground">
-                          {t === "c"
-                            ? isFr ? "Contracté" : "Contracted"
-                            : t === "f"
-                              ? isFr ? "Présent" : "Present"
-                              : isFr ? "Passé" : "Past"}
-                        </span>
-                        <span className="text-xs px-2 py-0.5 rounded-full bg-muted text-foreground/80">
-                          {e[t]} — {e[`${t}_tr`]}
-                        </span>
-                      </div>
+                      <span className="text-xs uppercase tracking-wide text-muted-foreground">
+                        {t === "c"
+                          ? isFr ? "Présent (forme courte)" : "Present (short form)"
+                          : t === "f"
+                            ? isFr ? "Présent" : "Present"
+                            : isFr ? "Passé" : "Past"}
+                      </span>
                       <div className="font-mandombe block w-full mt-2 mb-3 text-2xl md:text-3xl text-gold break-words">
                         {cleanMandombe(e[`${t}_kil`])}
                       </div>
