@@ -1,46 +1,47 @@
-# Intégrer la note culturelle Kongo sur la parenté
+# Deux corrections : note culturelle parenté + « suis-moi » = Ndanda
 
-## Objectif
-Ajouter dans la leçon existante **« Les termes de parenté »** une note culturelle qui rappelle que, dans la tradition Kongo, le pouvoir appartient au clan (matrilignage) et non aux pères individuellement, sans modifier les traductions de `tata` / `mama`.
+## 1. Note culturelle Kongo dans la leçon « Les termes de parenté »
 
-## Contenu exact à intégrer
-- Formulation demandée : « Dans la tradition Kongo, il n'y a pas de patriarches, car les pères ne font pas partie de la famille. »
-- Précision fournie : le pouvoir n'appartient pas aux pères, il appartient au clan, pas aux individus.
-- Conséquence : les traductions `tata = père` et `mama = mère` restent inchangées ; on ajoute seulement un encadré culturel.
+### Objectif
+Ajouter un encadré culturel dans la leçon existante `termes-de-parente`, sans modifier les traductions de `taata` (père) et `maama` (mère).
 
-## Implémentation
+### Contenu exact
+- « Dans la tradition Kongo, il n'y a pas de patriarches, car les pères ne font pas partie de la famille. »
+- Précision : le pouvoir n'appartient pas aux pères — il appartient au clan (kanda), pas aux individus.
+- Les traductions `taata = père`, `maama = mère` restent inchangées.
 
-### 1. Extension du schéma de leçon
-Dans `src/data/lessons.ts`, ajouter au type `Lesson` les champs optionnels :
-- `culturalNote?: string`
-- `culturalNoteFr?: string`
-- `culturalNoteEn?: string`
-- `culturalNotePt?: string`
+### Implémentation
+1. Dans `src/data/lessons.ts`, ajouter au type `Lesson` les champs optionnels `culturalNote?`, `culturalNoteFr?`, `culturalNotePt?`.
+2. Remplir ces champs sur la leçon `id: "termes-de-parente"` (FR = formulation exacte ci-dessus ; EN et PT = traductions fidèles).
+3. Dans `src/pages/LessonDetail.tsx`, afficher la note dans un encart distinct (bordure latérale, fond accentué) sous la description de la leçon, avant le vocabulaire, en respectant la langue active.
 
-### 2. Remplissage dans la leçon « termes-de-parente »
-Ajouter la note culturelle dans la leçon `id: "termes-de-parente"` :
-- `culturalNoteFr` : formulation exacte ci-dessus, plus la précision sur le clan.
-- `culturalNoteEn` : traduction fidèle pour les autres langues.
-- `culturalNotePt` : traduction portugaise.
+## 2. « Suis-moi » : Landa mono → Ndanda
 
-### 3. Affichage dans la page de leçon
-Dans `src/pages/LessonDetail.tsx` :
-- Afficher `culturalNote*` sous le titre/description de la leçon, avant le vocabulaire.
-- Utiliser un encart visuel distinct (bordure latérale, fond accentué) pour le différencier du contenu linguistique.
-- Respecter la langue active via `useLanguage`.
+### Décision arbitrée
+- `Landa mono` n'est pas du Lari : la forme est **Ndanda**.
+- Les /a/ sont longs à l'oral, mais on ne note pas les accents pour l'instant : la graphie reste `Ndanda`, avec une **note** indiquant la prononciation à /a/ longs.
+- `Landa` (suivre) et `Landana` (se suivre) sont conservés tels quels.
 
-### 4. Mémoire projet
-Créer ou mettre à jour `mem://culture/parente-kongo` avec la règle :
-- La famille kongo se pense par le matrilignage (`kanda`).
-- `tata` et `mama` désignent bien le père et la mère comme parents, mais l'autorité/pouvoir clanique ne passe pas par la figure paternelle individuelle.
-- Ne jamais présenter la société Kongo comme patriarcale.
+### Emplacements à corriger
+- `data/dictionary-entries.json` — entrée `Landa mono` (ligne ~8804) → `Ndanda`, avec la note de prononciation.
+- `src/data/lessons.ts` — vocabulaire/phrase (ligne ~4740), indice d'exercice (ligne ~4802), item de reconnaissance Mandombe (ligne ~4813), distracteur (ligne ~4330).
+- `supabase/functions/_shared/lessons-corpus.ts` — copie du corpus (ligne ~3996).
+- `supabase/functions/translate-lari/index.ts` — lexique du traducteur (ligne ~3171).
 
-### 5. Vérification
+### Mandombe
+`Ndanda` se tape tel quel — aucun glyphe problématique, aucune substitution.
+
+## 3. Mémoire projet
+- `mem://culture/parente-kongo` : la parenté kongo se pense par le matrilignage (`kanda`) ; ne jamais présenter la société Kongo comme patriarcale ; le pouvoir appartient au clan, pas aux individus ; `taata` / `maama` gardent leur sens de père / mère.
+- `mem://vocabulary/ndanda` : « suis-moi » = `Ndanda` (a longs à l'oral, non notés) ; `Landa mono` est une forme rejetée.
+
+## 4. Vérification
 - `bunx tsgo --noEmit -p tsconfig.app.json`
+- Gardes du dictionnaire (`scripts/dictionary_guards.py`)
+- Recherche finale : plus aucune occurrence de `Landa mono`
 - Aperçu visuel de la leçon « Les termes de parenté »
-- Vérifier que la note apparaît correctement en FR, EN, PT et qu'elle ne perturbe pas les exercices.
 
 ## Hors scope
-- Aucune modification des traductions `tata`, `mama`, `bataata`, etc.
-- Aucune création de nouvelle leçon.
+- Aucune nouvelle leçon.
 - Aucune régénération de document ODT/PDF.
+- Aucun changement sur `Landa` / `Landana`.
