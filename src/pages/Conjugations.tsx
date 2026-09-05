@@ -82,6 +82,7 @@ const Conjugations = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
+        path="/conjugations"
         title={isFr ? "Conjugaisons du kikongo lari | Nzo Mikanda" : "Kikongo Lari conjugations | Nzo Mikanda"}
         description={
           isFr
