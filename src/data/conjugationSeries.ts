@@ -81,6 +81,14 @@ export const conjugationSeries: ConjugationSeries[] = [
     ],
   },
   {
+    pattern: "Landa · impératif",
+    rows: [
+      { person: "Tu (singulier)", marker: "—", lari: "Ndanda.", fr: "Suis-moi.", en: "Follow me." },
+      { person: "Vous → nous", marker: "tu", lari: "Tu landeno.", fr: "Suivez-nous.", en: "Follow us." },
+      { person: "Vous → eux/elles", marker: "ba", lari: "Ba landeno.", fr: "Suivez-les.", en: "Follow them." },
+    ],
+  },
+  {
     pattern: "Zaza · ta zaza mu bungu dia madia.",
     rows: [
       { person: "Je", marker: "ni", lari: "Zaza ni ta zaza mu bungu dia madia.", fr: "Je suis en train de trembloter à cause de la nourriture.", en: "I am trembling because of the food." },
