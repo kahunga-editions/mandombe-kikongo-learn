@@ -122,16 +122,72 @@ const Conjugations = () => {
           />
         </div>
 
-        <section className="max-w-5xl mx-auto mt-12 space-y-10">
+        <section className="max-w-5xl mx-auto mt-16">
+          <div className="flex items-center gap-2">
+            <Layers className="w-5 h-5 text-primary" />
+            <h2 className="font-display text-2xl font-bold text-foreground">
+              {isFr ? "Le verbe être dans tous ses états" : "The verb to be in all its states"}
+            </h2>
+          </div>
+          <p className="mt-2 text-muted-foreground">
+            {isFr
+              ? "Le verbe être ne se conjugue pas par personne : il s'accorde avec la classe du nom. Forme contractée, forme pleine, passé."
+              : "The verb to be is not conjugated by person: it agrees with the noun class. Contracted form, full form, past."}
+          </p>
+
+          <div className="mt-6 grid gap-4 md:grid-cols-2">
+            {verbeBaData.map((e, i) => (
+              <article key={`${e.classe}-${i}`} className="bg-card border border-border rounded-2xl p-5">
+                <div className="font-mandombe block w-full text-3xl md:text-4xl text-gold break-words">
+                  {cleanMandombe(e.classe)}
+                </div>
+                <div className="mt-1 text-sm text-foreground/80">
+                  {e.classe} — <span className="text-muted-foreground">{e.classe_fr}</span>
+                </div>
+                <ul className="mt-4 divide-y divide-border/60">
+                  {(["c", "f", "p"] as const).map((t) => (
+                    <li key={t} className="py-3">
+                      <div className="text-xs uppercase tracking-wide text-muted-foreground">
+                        {t === "c"
+                          ? isFr ? "Contracté" : "Contracted"
+                          : t === "f"
+                            ? isFr ? "Présent" : "Present"
+                            : isFr ? "Passé" : "Past"}
+                      </div>
+                      <div className="font-mandombe block w-full text-3xl md:text-4xl text-gold break-words">
+                        {cleanMandombe(e[t])}
+                      </div>
+                      <div className="mt-1 flex items-center gap-2 flex-wrap">
+                        <span className="text-sm text-foreground/80">{e[t]}</span>
+                        <MandombeSpeaker lariText={e[t]} />
+                      </div>
+                      <div className="text-sm text-muted-foreground">{e[`${t}_tr`]}</div>
+                      <div className="mt-1 text-xs text-foreground/70 italic">
+                        {e[`${t}_lat`]} — {e[`${t}_fr`]}
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="max-w-5xl mx-auto mt-16 space-y-10">
           {grouped.map(([key, group]) => (
             <article key={key} className="bg-card border border-border rounded-2xl p-6">
-              <div className="flex flex-wrap items-center gap-3">
-                <span className="font-mandombe text-4xl md:text-5xl text-gold">
-                  {cleanMandombe(group[0].verbMandombe)}
-                </span>
-                <MandombeSpeaker lariText={group[0].verb} />
+              <div className="font-mandombe block w-full text-4xl md:text-5xl text-gold break-words">
+                {cleanMandombe(group[0].verbMandombe)}
               </div>
-              <h2 className="mt-3 text-xl font-bold text-foreground/80">{group[0].verb}</h2>
+              <div className="mt-2 flex flex-wrap items-center gap-3">
+                <h2 className="text-xl font-bold text-foreground/80">{group[0].verb}</h2>
+                <MandombeSpeaker lariText={group[0].verb} />
+                {group[0].isExpression && (
+                  <span className="text-[10px] uppercase tracking-wide px-2 py-1 rounded-full bg-muted text-muted-foreground">
+                    {isFr ? "Expression" : "Expression"}
+                  </span>
+                )}
+              </div>
               <p className="text-muted-foreground">{group[0].meaning}</p>
 
               <div className="mt-6 grid gap-6 md:grid-cols-2">
@@ -142,13 +198,14 @@ const Conjugations = () => {
                       {table.rows.map((row, ri) => (
                         <li key={ri} className="py-3">
                           <div className="text-xs uppercase tracking-wide text-muted-foreground">{row.person}</div>
-                          <div className="flex items-center gap-2 flex-wrap">
-                            <span className="font-mandombe text-3xl md:text-4xl text-gold">
-                              {cleanMandombe(row.mandombe)}
-                            </span>
+                          <div className="font-mandombe block w-full text-3xl md:text-4xl text-gold break-words">
+                            {cleanMandombe(row.mandombe)}
+                          </div>
+                          <div className="mt-1 flex items-center gap-2 flex-wrap">
+                            <span className="text-sm text-foreground/80">{row.lari}</span>
                             <MandombeSpeaker lariText={row.lari} />
                           </div>
-                          <div className="mt-2 text-sm text-foreground/80">{row.lari}</div>
+                          {row.gloss && <div className="mt-1 text-sm text-muted-foreground">{row.gloss}</div>}
                           {row.note && <div className="text-xs text-muted-foreground italic">{row.note}</div>}
                         </li>
                       ))}
@@ -159,6 +216,7 @@ const Conjugations = () => {
             </article>
           ))}
         </section>
+
 
         {series.length > 0 && (
           <section className="max-w-5xl mx-auto mt-16">
