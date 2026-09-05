@@ -9,6 +9,7 @@ import { cleanMandombe } from "@/lib/mandombeText";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { lessons } from "@/data/lessons";
 import { conjugationSeries } from "@/data/conjugationSeries";
+import { verbeBaData } from "@/data/verbeBa";
 
 interface FlatTable {
   lessonId: string;
@@ -17,7 +18,8 @@ interface FlatTable {
   verbMandombe: string;
   meaning: string;
   tense: string;
-  rows: { person: string; lari: string; mandombe: string; note?: string }[];
+  isExpression: boolean;
+  rows: { person: string; lari: string; mandombe: string; gloss?: string; note?: string }[];
 }
 
 const Conjugations = () => {
@@ -30,6 +32,8 @@ const Conjugations = () => {
     for (const lesson of lessons) {
       if (!lesson?.conjugations) continue;
       for (const table of lesson.conjugations) {
+        // Le verbe etre ne se conjugue pas par personne : il a sa propre section.
+        if (table.verb === "Ba" && /Être|To be/i.test(table.meaning?.fr || table.meaning?.en || "")) continue;
         out.push({
           lessonId: lesson.id,
           lessonTitle: (isFr ? lesson.titleFr : lesson.title) || lesson.title,
@@ -37,10 +41,12 @@ const Conjugations = () => {
           verbMandombe: table.verbMandombe || table.verb,
           meaning: (isFr ? table.meaning?.fr : table.meaning?.en) || table.meaning?.fr || "",
           tense: (isFr ? table.tenseFr : table.tense) || table.tense,
+          isExpression: table.kind === "expression",
           rows: (table.rows || []).map((r) => ({
             person: r.person,
             lari: r.lari,
             mandombe: r.mandombe || r.lari,
+            gloss: (isFr ? r.fr : r.en) || r.fr,
             note: (r as { note?: string }).note,
           })),
         });
@@ -48,6 +54,7 @@ const Conjugations = () => {
     }
     return out;
   }, [isFr]);
+
 
   const grouped = useMemo(() => {
     const q = query.trim().toLowerCase();
