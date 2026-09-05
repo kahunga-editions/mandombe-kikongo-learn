@@ -11,5 +11,6 @@
 ## Regles permanentes
 - Aucun document ODT/PDF regenere sans demande explicite.
 - `data/dictionary-entries.json` est la seule source de verite ; `scripts/dictionary_guards.py` doit rester vert.
-- [x] Audit de provenance : reference = documents et validations de l'autrice (Jacquot rejete) ; 3180 attestees / 1513 a-confirmer ; garde-fou provenance ajoute
-- [ ] Arbitrage par l'autrice du nouveau `reports/formes-a-arbitrer.md` (2 series + 1506 formes isolees)
+- [x] Etiquetage de provenance abandonne (2026-09-05) : champ `provenance` retire, garde-fou supprime, artefacts effaces.
+- [ ] Arbitrage par l'autrice des 12 series de `reports/dictionnaire-formes-a-arbitrer.md` (formes derivees par analogie)
+
