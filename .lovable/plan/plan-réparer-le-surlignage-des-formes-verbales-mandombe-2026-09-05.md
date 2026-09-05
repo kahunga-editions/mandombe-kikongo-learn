@@ -3,9 +3,6 @@
 ## Problème constaté
 Sur `/conjugations`, le surlignage doré des formes verbales s'affiche comme un rectangle vide au-dessus des glyphes : la police Mandombe dessine ses glyphes plus bas que la ligne de texte, donc le fond doré (calé sur la ligne) ne recouvre pas les glyphes, qui débordent en dessous. Visible sur toutes les cartes (ex. « Passé composé » : mbendji, bendji, tu bendji…).
 
-## Point vérifié : le glyphe « n »
-La police `masono_mandombe-webfont.ttf` contient bien un glyphe pour « n » (ainsi que m, b, e, d, j, i) : le « n » de mbendji est donc rendu en Mandombe, pas en latin de secours. Aucune correction nécessaire de ce côté.
-
 ## Cause technique vérifiée
 Dans `src/pages/Conjugations.tsx`, `HighlightedMandombe` pose le fond via un `<span absolute inset-0 bg-verb>` dimensionné sur la boîte de ligne du texte. Les glyphes de `font-mandombe` débordent visuellement sous cette boîte (métriques de la police), d'où le décalage.
 
