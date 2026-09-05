@@ -240,13 +240,13 @@ const Conjugations = () => {
                     {s.rows.map((row, ri) => (
                       <li key={ri} className="rounded-xl border border-border/70 p-4">
                         <div className="text-xs uppercase tracking-wide text-muted-foreground">{row.person}</div>
-                        <div className="flex items-center gap-2 flex-wrap">
-                          <span className="font-mandombe text-3xl md:text-4xl text-gold">
-                            {cleanMandombe(row.lari)}
-                          </span>
+                        <div className="font-mandombe block w-full text-3xl md:text-4xl text-gold break-words">
+                          {cleanMandombe(row.lari)}
+                        </div>
+                        <div className="mt-1 flex items-center gap-2 flex-wrap">
+                          <span className="text-sm text-foreground/80">{row.lari}</span>
                           <MandombeSpeaker lariText={row.lari} />
                         </div>
-                        <div className="mt-2 text-sm text-foreground/80">{row.lari}</div>
                         <div className="text-sm text-muted-foreground">{isFr ? row.fr : row.en || row.fr}</div>
                       </li>
                     ))}
