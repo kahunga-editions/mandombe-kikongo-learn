@@ -138,10 +138,10 @@ const Conjugations = () => {
           <div className="mt-6 grid gap-4 md:grid-cols-2">
             {verbeBaData.map((e, i) => (
               <article key={`${e.classe}-${i}`} className="bg-card border border-border rounded-2xl p-5">
-                <div className="font-mandombe block w-full text-3xl md:text-4xl text-gold break-words">
+                <div className="font-mandombe block w-full mb-4 text-3xl md:text-4xl text-gold break-words">
                   {cleanMandombe(e.classe)}
                 </div>
-                <div className="mt-1 text-sm text-foreground/80">
+                <div className="mt-2 text-sm text-foreground/80">
                   {e.classe} — <span className="text-muted-foreground">{e.classe_fr}</span>
                 </div>
                 <ul className="mt-4 divide-y divide-border/60">
