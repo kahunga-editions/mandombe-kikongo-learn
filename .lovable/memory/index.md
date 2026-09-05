@@ -11,6 +11,8 @@
 - Lesson titles must be derived strictly from provided user content to prevent syntax errors.
 - Never use terms like 'dialecte' or 'bantou'; use 'langue'. Avoid invented ideophones like 'gbaa'/'kpoo'.
 - IMMUABLE: "sh" + voyelle se prononce TOUJOURS /ʃ/ comme "shoes" (anglais) / "chat" (fr). Jamais /tʃ/ ni /s/. Cluster "tsh" préservé. Géré dans lari-phonetic-engine.ts + elevenlabs-tts-lari.
+- Société Kongo jamais présentée comme patriarcale : le pouvoir appartient au clan (kanda), pas aux pères. tata/mama gardent leur sens.
+
 
 ## Memories
 - [TTS Liaisons & Overrides](mem://audio/tts-liaisons-overrides) — Liaisons nkumbu ani/andi/aku, mungua, ngie
