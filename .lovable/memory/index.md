@@ -85,6 +85,7 @@
 - [Admin Access Logic](mem://auth/admin-access-logic) — Admin role bypassing PremiumGate
 - [Proverbs & Wisdom](mem://culture/proverbs-and-wisdom) — Lari proverbs
 - [Kilolaka Interactive Grid](mem://features/kilolaka-interactive-grid) — Mandombe syllables encyclopedia with audio
+- [Page Conjugaisons](mem://features/conjugations-page) — Glose par ligne, Mandombe sur sa propre ligne, verbe être par classe
 - [Time Vocabulary](mem://vocabulary/time) — Time markers and seasons
 - [Spirituality & Sacred](mem://vocabulary/spirituality-and-sacred) — Cosmology, entities, and concepts
 - [General Culture Concepts](mem://culture/general-concepts) — Mbuta, Malaki, Matanga definitions
