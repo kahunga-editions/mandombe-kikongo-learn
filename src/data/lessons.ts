@@ -173,6 +173,9 @@ export interface Lesson {
   syntax?: SyntaxBlock[];
   conjugations?: ConjugationTable[];
   phrases?: { lari: string; mandombe: string; french: string; english: string; portuguese?: string; note?: string }[];
+  culturalNote?: string;
+  culturalNoteFr?: string;
+  culturalNotePt?: string;
   exercises: Exercise[];
 }
 
@@ -4327,7 +4330,7 @@ export const lessons: Lesson[] = [
             { mandombe: "Fuwila", lari: "Fuila", distractors: ["Makumole", "Bibanga", "Zongo"], french: "Désir, soif de, besoin", english: "Desire, thirst for, need", mode: "glyph-to-latin" as const },
             { mandombe: "Finkakasa", lari: "Finkakasa", distractors: ["Madezo", "Biala kimfumu", "Sondo"], french: "Rapprocher, serrer, compresser", english: "To bring closer, tighten, compress", mode: "latin-to-glyph" as const },
             { mandombe: "Fioti fioti", lari: "Fioti fioti", distractors: ["Nleke", "lulembeso", "Beto bifulu bia bingi bie neto."], french: "Petit à petit", english: "Little by little", mode: "glyph-to-latin" as const },
-            { mandombe: "Fofolo", lari: "Fofolo", distractors: ["Ku mbaji biyungila bia bingi bieri ko.", "Nsatu mamba ye nani", "Landa mono"], french: "Allumettes, boîte d'allumettes", english: "Matches, matchbox", mode: "latin-to-glyph" as const },
+            { mandombe: "Fofolo", lari: "Fofolo", distractors: ["Ku mbaji biyungila bia bingi bieri ko.", "Nsatu mamba ye nani", "Ndanda"], french: "Allumettes, boîte d'allumettes", english: "Matches, matchbox", mode: "latin-to-glyph" as const },
             { mandombe: "Fisa", lari: "Fisa", distractors: ["Mulumba tu yunini.", "Bala", "lemvokela"], french: "Déguster, exploiter, siroter", english: "To taste, to exploit, to sip", mode: "glyph-to-latin" as const },
             { mandombe: "Futila", lari: "Futila", distractors: ["Mputa", "Makumole na tanu", "Mvuka"], french: "Louer", english: "To rent", mode: "latin-to-glyph" as const },
         ],
@@ -4737,7 +4740,7 @@ export const lessons: Lesson[] = [
     ],
     phrases: [
       { lari: "Longa bana", mandombe: "Longa bana", french: "Enseigner aux enfants", english: "Teach the children" },
-      { lari: "Landa mono", mandombe: "Landa mono", french: "Suis-moi", english: "Follow me" },
+      { lari: "Ndanda", mandombe: "Ndanda", french: "Suis-moi", english: "Follow me", note: "Prononce avec des /a/ longs. On ne note pas les accents dans la graphie." },
       { lari: "Londa biloko", mandombe: "Londa biloko", french: "Réparer les choses", english: "Mend things" },
       { lari: "Lemba dia Bakulu", mandombe: "Lemba dia Bakulu", french: "L'école initiatique des ancêtres", english: "The initiation school of the ancestors", note: "Lemba was a prestigious Kongo secret society for healing and social governance." },
     ],
@@ -4799,7 +4802,7 @@ export const lessons: Lesson[] = [
         type: "fill-in-blank",
         sentence: "___ means 'to follow' in Kikongo Lari",
         blank: "landa",
-        hint: "'Landa mono' = Follow me",
+        hint: "'Landa' = to follow. 'Ndanda' = Follow me.",
       },
       {
         type: "mandombe-recognition" as const,
@@ -4810,7 +4813,7 @@ export const lessons: Lesson[] = [
             { mandombe: "Lulendo", lari: "Lulendo", distractors: ["Meso", "Fuki", "Ku nima"], french: "Fierté, orgueil, pouvoir", english: "Pride, power", mode: "glyph-to-latin" as const },
             { mandombe: "Landana", lari: "Landana", distractors: ["Milunga", "Zibika", "Dia dia?"], french: "Se suivre l'un l'autre", english: "To follow one another", mode: "latin-to-glyph" as const },
             { mandombe: "Malu", lari: "Malu", distractors: ["lumingu", "Mfumfu", "Lumbu kia kibote"], french: "Le vin", english: "Wine", mode: "glyph-to-latin" as const },
-            { mandombe: "Landa mono", lari: "Landa mono", distractors: ["Lalu", "Seti bo", "N'ti"], french: "Suis-moi", english: "Follow me", mode: "latin-to-glyph" as const },
+            { mandombe: "Ndanda", lari: "Ndanda", distractors: ["Lalu", "Seti bo", "N'ti"], french: "Suis-moi", english: "Follow me", mode: "latin-to-glyph" as const },
             { mandombe: "Londa", lari: "Londa", distractors: ["Mvalu", "Mfumfuta", "Nsinsa"], french: "Raccommoder, rapiécer, restaurer", english: "To mend, to patch, to restore", mode: "glyph-to-latin" as const },
             { mandombe: "Lebalala", lari: "Lebalala", distractors: ["Yeta", "Tshihala muini mu kibaka kia bibiriki.", "Kikamba"], french: "S'affaiblir", english: "To weaken, to become weak", portuguese: "Enfraquecer, ficar fraco", mode: "latin-to-glyph" as const },
             { mandombe: "Losa", lari: "Losa", distractors: ["bimpete", "Nge zebi longesa.", "Sensa"], french: "Jeter, rejeter, lancer, abandonner", english: "To throw, to reject, to abandon", mode: "glyph-to-latin" as const },
@@ -30697,6 +30700,9 @@ export const lessons: Lesson[] = [
     level: "beginner" as const,
     icon: "👨🏿‍👩🏿‍👧🏿‍👦🏿",
     credit: "Nzo Mikanda",
+    culturalNoteFr: "Dans la tradition Kongo, il n'y a pas de patriarches, car les peres ne font pas partie de la famille. Le pouvoir n'appartient pas aux peres : il appartient au clan (kanda), pas aux individus. Taata designe bien le pere et maama la mere, mais l'autorite se transmet par le matrilignage.",
+    culturalNote: "In the Kongo tradition there are no patriarchs, because fathers are not part of the family. Power does not belong to fathers: it belongs to the clan (kanda), not to individuals. Taata does mean father and maama mother, but authority passes through the matrilineage.",
+    culturalNotePt: "Na tradicao Kongo nao ha patriarcas, porque os pais nao fazem parte da familia. O poder nao pertence aos pais: pertence ao cla (kanda), nao aos individuos. Taata significa pai e maama mae, mas a autoridade transmite-se pela matrilinhagem.",
 
     vocabulary: [
       { lari: "taata", mandombe: "Tata", french: "père, parent paternel, monsieur", english: "father, paternal parent, sir", note: "Forme pleine (Nzo Mikanda §4.5.2.2)" },
