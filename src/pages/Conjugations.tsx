@@ -138,33 +138,35 @@ const Conjugations = () => {
           <div className="mt-6 grid gap-4 md:grid-cols-2">
             {verbeBaData.map((e, i) => (
               <article key={`${e.classe}-${i}`} className="bg-card border border-border rounded-2xl p-5">
-                <div className="font-mandombe block w-full text-3xl md:text-4xl text-gold break-words">
+                <div className="font-mandombe block w-full mb-4 text-3xl md:text-4xl text-gold break-words">
                   {cleanMandombe(e.classe)}
                 </div>
-                <div className="mt-1 text-sm text-foreground/80">
+                <div className="mt-2 text-sm text-foreground/80">
                   {e.classe} — <span className="text-muted-foreground">{e.classe_fr}</span>
                 </div>
                 <ul className="mt-4 divide-y divide-border/60">
                   {(["c", "f", "p"] as const).map((t) => (
-                    <li key={t} className="py-3">
-                      <div className="text-xs uppercase tracking-wide text-muted-foreground">
-                        {t === "c"
-                          ? isFr ? "Contracté" : "Contracted"
-                          : t === "f"
-                            ? isFr ? "Présent" : "Present"
-                            : isFr ? "Passé" : "Past"}
+                    <li key={t} className="py-4">
+                      <div className="flex items-center gap-2 flex-wrap">
+                        <span className="text-xs uppercase tracking-wide text-muted-foreground">
+                          {t === "c"
+                            ? isFr ? "Contracté" : "Contracted"
+                            : t === "f"
+                              ? isFr ? "Présent" : "Present"
+                              : isFr ? "Passé" : "Past"}
+                        </span>
+                        <span className="text-xs px-2 py-0.5 rounded-full bg-muted text-foreground/80">
+                          {e[t]} — {e[`${t}_tr`]}
+                        </span>
                       </div>
-                      <div className="font-mandombe block w-full text-3xl md:text-4xl text-gold break-words">
-                        {cleanMandombe(e[t])}
+                      <div className="font-mandombe block w-full mt-2 mb-3 text-2xl md:text-3xl text-gold break-words">
+                        {cleanMandombe(e[`${t}_kil`])}
                       </div>
-                      <div className="mt-1 flex items-center gap-2 flex-wrap">
-                        <span className="text-sm text-foreground/80">{e[t]}</span>
-                        <MandombeSpeaker lariText={e[t]} />
+                      <div className="flex items-center gap-2 flex-wrap">
+                        <span className="text-sm text-foreground/80">{e[`${t}_lat`]}</span>
+                        <MandombeSpeaker lariText={e[`${t}_lat`]} />
                       </div>
-                      <div className="text-sm text-muted-foreground">{e[`${t}_tr`]}</div>
-                      <div className="mt-1 text-xs text-foreground/70 italic">
-                        {e[`${t}_lat`]} — {e[`${t}_fr`]}
-                      </div>
+                      <div className="mt-1 text-sm text-muted-foreground italic">{e[`${t}_fr`]}</div>
                     </li>
                   ))}
                 </ul>
