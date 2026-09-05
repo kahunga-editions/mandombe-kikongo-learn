@@ -1,6 +1,6 @@
 // Généré depuis data/dictionary-entries.json — séries conjuguées attestées.
-export interface SeriesRow { person: string; marker: string; lari: string; fr: string; en: string; }
-export interface ConjugationSeries { pattern: string; rows: SeriesRow[]; }
+export interface SeriesRow { person: string; marker: string; lari: string; fr: string; en: string; verbForm?: string; }
+export interface ConjugationSeries { pattern: string; verb?: string; rows: SeriesRow[]; }
 export const conjugationSeries: ConjugationSeries[] = [
   {
     pattern: "Bue · tele?",
