@@ -4022,6 +4022,7 @@ export const lessons: Lesson[] = [
       { lari: "Bukuluntu", mandombe: "Bukuluntu", french: "Ancienneté, droit d'aînesse, maturité", english: "Seniority, birthright, maturity" },
       { lari: "Bukungolo", mandombe: "Bukungolo", french: "Espèce de champignon comestible", english: "Edible mushroom species" },
       { lari: "Bunzadi", mandombe: "Bunjadi", french: "Parenté par alliance", english: "Kinship by marriage" },
+      { lari: "Mikishi", mandombe: "Mikishi", french: "Rituel de soin pour la communauté et la famille", english: "Healing ritual for the community and the family", note: "Singulier : mukishi ; on dit aussi N'kishi ou N'kisi. Dans certains mikishi, on crée de petits villages pour les femmes de la communauté, où elles restent pour faire le kisalu (travail énergétique)." },
     ],
     phrases: [
       { lari: "Bunsonga bua muntu", mandombe: "Bunsonga buwa muntu", french: "La sagesse de l'être humain", english: "The wisdom of a human being" },
