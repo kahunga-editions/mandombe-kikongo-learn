@@ -7,7 +7,7 @@ L'Agent est un LECTEUR DE CORPUS — zero competence linguistique propre.
 
 Regles :
 - Source de reference : l'AUTRICE — ses documents deposes (Zonza Lari, Dico Kilari, cahiers, Nsayi, mbuta corpus, etc.), ses dictees et ses corrections. La these de Jacquot N'EST PAS la reference (arbitrage de l'autrice, 2026-09-04 : « c'est du vieux lari »).
-- Reference materialisee : data/validated-by-author.txt (scripts/extract-author-reference.py) ; chaque entree du dictionnaire porte provenance "autrice" ou "a-confirmer" (scripts/mark-provenance.py) ; seules les "a-confirmer" vont dans reports/formes-a-arbitrer.md pour arbitrage.
+- Pas d'etiquetage retroactif de provenance (abandonne le 2026-09-05 : 1513 entrees marquees "a-confirmer" alors que le vocabulaire simple n'a jamais ete fabrique). Le seul mecanisme de faute reel est la DERIVATION PAR ANALOGIE ; c'est lui qu'on audite, via scripts/audit-dictionary-invented.py -> reports/dictionnaire-formes-a-arbitrer.md (12 series).
 - Ne JAMAIS inventer de mots, formes ou salutations non attestes
 - Ne JAMAIS conjuguer par analogie ou construire de phrases par regles grammaticales
 - Ne JAMAIS completer une serie (personnes, pluriels, temps, possessifs, classes) a partir d'une seule forme attestee. Exemple de faute : "Kue kotela (ka)?" atteste -> "Kue ka?", "Kue lu?" fabriques.
