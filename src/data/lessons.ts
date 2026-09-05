@@ -15,7 +15,8 @@ export interface ConjugationTable {
   tense: string;
   tenseFr?: string;
   tensePt?: string;
-  rows: { person: string; lari: string; mandombe: string }[];
+  kind?: "verb" | "expression";
+  rows: { person: string; lari: string; mandombe: string; fr?: string; en?: string }[];
 }
 
 export interface MultipleChoiceQuestion {
@@ -17743,6 +17744,7 @@ export const lessons: Lesson[] = [
   conjugations: [
     {
       verb: "Luika lue",
+      kind: "expression",
       verbMandombe: "Luika lue",
       meaning: { fr: "Être velu(e)/poilu(e)", en: "To be hairy", pt: "Ser peludo(a)" },
       tense: "Present",
@@ -17759,6 +17761,7 @@ export const lessons: Lesson[] = [
     },
     {
       verb: "Luika lueri",
+      kind: "expression",
       verbMandombe: "Luika lueri",
       meaning: { fr: "Était velu(e)/poilu(e)", en: "Was hairy", pt: "Era peludo(a)" },
       tense: "Past tense",
@@ -20240,7 +20243,7 @@ export const lessons: Lesson[] = [
         ],
       },
       {
-        verb: "Shiri ku nima (mettre l'enfant au dos)",
+        verb: "Shiri ku nima",
         verbMandombe: "Shiri ku nima",
         meaning: { fr: "Mettre l'enfant au dos", en: "To put the child on one's back", pt: "Pôr a criança nas costas" },
         tense: "Past",
@@ -20461,7 +20464,7 @@ export const lessons: Lesson[] = [
     ],
     conjugations: [
       {
-        verb: "Tuka (venir de)",
+        verb: "Tuka",
         verbMandombe: "Tuka",
         meaning: { fr: "Venir de", en: "To come from", pt: "Vir de" },
         tense: "Past",
@@ -20845,7 +20848,8 @@ export const lessons: Lesson[] = [
     ],
     conjugations: [
       {
-        verb: "Nsayi (joie)",
+        verb: "Nsayi",
+        kind: "expression",
         verbMandombe: "Nsayi",
         meaning: { fr: "Être content(e)", en: "To be happy", pt: "Estar contente" },
         tense: "Present",
@@ -26326,6 +26330,7 @@ export const lessons: Lesson[] = [
     conjugations: [
       {
         verb: "Manga za jingi ze...",
+        kind: "expression",
         verbMandombe: "Manga za jingi ze...",
         meaning: { fr: "Avoir beaucoup de mangues", en: "To have many mangos", pt: "Ter muitas mangas" },
         tense: "Possession with ze + pronouns",
@@ -26342,6 +26347,7 @@ export const lessons: Lesson[] = [
       },
       {
         verb: "Ka...na nduku za zingi ko",
+        kind: "expression",
         verbMandombe: "Ka...na nduku za zingi ko",
         meaning: { fr: "Ne pas avoir beaucoup d'amis", en: "Not to have many friends", pt: "Não ter muitos amigos" },
         tense: "Negation ka...ko",
@@ -26358,6 +26364,7 @@ export const lessons: Lesson[] = [
       },
       {
         verb: "Ndambu loso...didi",
+        kind: "expression",
         verbMandombe: "Ndambu loso...didi",
         meaning: { fr: "Avoir mangé un peu de riz", en: "To have eaten a bit of rice", pt: "Ter comido um pouco de arroz" },
         tense: "Past tense (dia — manger)",
@@ -26575,7 +26582,7 @@ export const lessons: Lesson[] = [
     ],
     conjugations: [
       {
-        verb: "waya",
+        verb: "Waya",
         verbMandombe: "Waya",
         meaning: { fr: "Vouloir", en: "To want", pt: "Querer" },
         tense: "Past tense (imparfait)",
@@ -26591,7 +26598,7 @@ export const lessons: Lesson[] = [
         ],
       },
       {
-        verb: "sukula moko",
+        verb: "Sukula moko",
         verbMandombe: "Sukula moko",
         meaning: { fr: "Se laver les mains", en: "To wash hands", pt: "Lavar as mãos" },
         tense: "Present tense",
@@ -27621,7 +27628,8 @@ export const lessons: Lesson[] = [
     ],
     conjugations: [
       {
-        verb: "Mululu (nosebleed)",
+        verb: "Mululu",
+        kind: "expression",
         verbMandombe: "Mululu",
         meaning: { fr: "Saigner du nez", en: "To have a nosebleed", pt: "Sangrar do nariz" },
         tense: "Present — affirmative",
@@ -27636,7 +27644,8 @@ export const lessons: Lesson[] = [
         ],
       },
       {
-        verb: "Mululu (nosebleed)",
+        verb: "Mululu",
+        kind: "expression",
         verbMandombe: "Mululu",
         meaning: { fr: "Saigner du nez — négatif", en: "Not having a nosebleed", pt: "Não sangrar do nariz" },
         tense: "Present — negative",
@@ -27651,7 +27660,8 @@ export const lessons: Lesson[] = [
         ],
       },
       {
-        verb: "Mululu (nosebleed)",
+        verb: "Mululu",
+        kind: "expression",
         verbMandombe: "Mululu",
         meaning: { fr: "Saigner du nez — imparfait négatif", en: "Not having a nosebleed (past)", pt: "Não sangrar do nariz (passado)" },
         tense: "Imperfect — negative",
@@ -27666,9 +27676,9 @@ export const lessons: Lesson[] = [
         ],
       },
       {
-        verb: "Bilongo (medicine)",
-        verbMandombe: "Bilongo",
-        meaning: { fr: "Prendre des médicaments", en: "To take medicine", pt: "Tomar medicamentos" },
+        verb: "Nua",
+        verbMandombe: "Nuwa",
+        meaning: { fr: "Boire (des médicaments) — bilongo = les médicaments", en: "To drink (medicine) — bilongo = the medicines", pt: "Beber (medicamentos)" },
         tense: "Present",
         tenseFr: "Présent",
         rows: [
@@ -27879,7 +27889,7 @@ export const lessons: Lesson[] = [
     ],
     conjugations: [
       {
-        verb: "Tuka (to come from)",
+        verb: "Tuka",
         verbMandombe: "Tuka",
         meaning: { fr: "Venir de", en: "To come from", pt: "Vir de" },
         tense: "Present",
