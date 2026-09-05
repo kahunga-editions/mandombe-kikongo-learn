@@ -67,6 +67,10 @@ export default {
         terracotta: {
           light: "hsl(var(--terracotta-light))",
         },
+        verb: {
+          DEFAULT: "hsl(var(--verb-highlight))",
+          foreground: "hsl(var(--verb-highlight-foreground))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
