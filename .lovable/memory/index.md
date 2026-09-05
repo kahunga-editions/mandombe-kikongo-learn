@@ -11,6 +11,8 @@
 - Lesson titles must be derived strictly from provided user content to prevent syntax errors.
 - Never use terms like 'dialecte' or 'bantou'; use 'langue'. Avoid invented ideophones like 'gbaa'/'kpoo'.
 - IMMUABLE: "sh" + voyelle se prononce TOUJOURS /ʃ/ comme "shoes" (anglais) / "chat" (fr). Jamais /tʃ/ ni /s/. Cluster "tsh" préservé. Géré dans lari-phonetic-engine.ts + elevenlabs-tts-lari.
+- Société Kongo jamais présentée comme patriarcale : le pouvoir appartient au clan (kanda), pas aux pères. tata/mama gardent leur sens.
+
 
 ## Memories
 - [TTS Liaisons & Overrides](mem://audio/tts-liaisons-overrides) — Liaisons nkumbu ani/andi/aku, mungua, ngie
@@ -113,6 +115,8 @@
 - [Smart Quotes Constraint](mem://constraints/smart-quotes) — Straight apostrophes only in TS files
 - [Book Export Format](mem://technical/book-export-format) — ODT + PDF only, never DOCX (Mandombe unsupported)
 - [Kinship Terms](mem://grammar/kinship-terms) — Full vs short forms (tata vs ta), yaya for grandparent
+- [Parenté Kongo](mem://culture/parente-kongo) — Pas de patriarches ; le pouvoir appartient au clan (kanda), pas aux pères
+- [Ndanda](mem://vocabulary/ndanda) — « Suis-moi » = Ndanda ; « Landa mono » rejeté
 - [AI Teacher](mem://features/ai-teacher) — Mbuta Matondo Gemini SSE implementation
 - [Verb Zonza Future](mem://grammar/verb-zonza-future) — Futur affirmatif (mbo+préfixe) et négatif (ka...ko) de zonza
 - [TTS Djuna Rule](mem://audio/tts-djuna-rule) — djuna → /dzuna/ override

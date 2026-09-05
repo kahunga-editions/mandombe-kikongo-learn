@@ -51,6 +51,16 @@ const LessonDetail = () => {
     return lesson.description;
   };
 
+  const getCulturalNote = () => {
+    if (!lesson?.culturalNote && !lesson?.culturalNoteFr) return "";
+    const fr = lesson.culturalNoteFr || lesson.culturalNote || "";
+    const en = lesson.culturalNote || fr;
+    if (isDynamic) return getTranslation(fr, en);
+    if (language === "fr") return fr;
+    if (language === "pt") return lesson.culturalNotePt || fr;
+    return en;
+  };
+
   const getConjMeaning = (meaning: { fr: string; en: string; pt?: string }) => {
     if (isDynamic) return getTranslation(meaning.fr);
     if (language === "fr") return meaning.fr;
@@ -107,6 +117,17 @@ const LessonDetail = () => {
             </div>
             <p className="text-primary font-body text-sm italic">{lesson.titleLari}</p>
             <p className="text-muted-foreground mt-2">{getLessonDescription()}</p>
+
+            {getCulturalNote() && (
+              <aside className="mt-5 rounded-lg border-l-4 border-gold bg-accent/10 px-5 py-4">
+                <p className="text-xs uppercase tracking-[0.18em] text-gold font-semibold mb-2">
+                  {language === "fr" ? "Note culturelle" : language === "pt" ? "Nota cultural" : "Cultural note"}
+                </p>
+                <p className="text-sm md:text-base text-foreground/90 leading-relaxed">
+                  {getCulturalNote()}
+                </p>
+              </aside>
+            )}
           </div>
 
           {/* Tabs */}
