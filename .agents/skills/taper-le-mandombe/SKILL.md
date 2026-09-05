@@ -28,6 +28,7 @@ Ce sont des cas nommés, pas des règles générales. Ne rien en extrapoler.
 - jamais deux voyelles identiques à la suite : `Iyaa` → `Iya`, `Laadi` → `Ladi`
 - `tshio` → `kio`, `tshie` → `kie` (ex. `Tshioni` → `Kioni`)
 - `ia` final de mot long → `iya` en Mandombe seulement (`tilapia` → `tilapiya`)
+- `bendji` se tape `benji` en Mandombe (`mbendji` → `mbenji`, `tu bendji` → `tu benji`, etc.) ; la translittération latine reste `bendji` / `mbendji`. Cas nommé, non généralisable au groupe `ndj`.
 - apostrophe retirée dans le cas `nl` : `n'lemvo` → `nlemvo`
 - **règle du N majuscule** : un mot en `N'` + consonne se tape tel quel avec un **N majuscule** : `N'kila`, `N'kento`, `N'kumba`, `N'kelo`, `N'kalu`, `N'kolo`, `N'kama`, `N'ti`, `N'tima`, `N'tekolo`. `Ntshila` est la prononciation, jamais la saisie.
 - `nua` se tape tel quel
