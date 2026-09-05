@@ -36,7 +36,7 @@ const Conjugations = () => {
           verb: table.verb,
           verbMandombe: table.verbMandombe || table.verb,
           meaning: (isFr ? table.meaning?.fr : table.meaning?.en) || table.meaning?.fr || "",
-          tense: table.tense,
+          tense: (isFr ? table.tenseFr : table.tense) || table.tense,
           rows: (table.rows || []).map((r) => ({
             person: r.person,
             lari: r.lari,

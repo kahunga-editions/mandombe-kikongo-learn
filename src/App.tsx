@@ -44,6 +44,7 @@ const AdminIllustrations = lazyWithRetry(() => import("./pages/AdminIllustration
 const MbutaMatondo = lazyWithRetry(() => import("./pages/MbutaMatondo"));
 const Privacy = lazyWithRetry(() => import("./pages/Privacy"));
 const Mvita = lazyWithRetry(() => import("./pages/Mvita"));
+const Conjugations = lazyWithRetry(() => import("./pages/Conjugations"));
 
 const NotFound = lazyWithRetry(() => import("./pages/NotFound"));
 
@@ -71,6 +72,7 @@ const App = () => (
                 <Route path="/lessons" element={<Lessons />} />
                 <Route path="/lessons/:lessonId" element={<LessonDetail />} />
                 <Route path="/dictionary" element={<Dictionary />} />
+                <Route path="/conjugations" element={<Conjugations />} />
                 <Route path="/flashcards" element={<Flashcards />} />
                 <Route path="/mandombe" element={<MandombeScript />} />
                 <Route path="/translator" element={<Translator />} />
