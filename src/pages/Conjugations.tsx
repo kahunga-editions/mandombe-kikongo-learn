@@ -100,12 +100,13 @@ const Conjugations = () => {
           tense: (isFr ? table.tenseFr : table.tense) || table.tense,
           isExpression: table.kind === "expression",
           rows: (table.rows || []).map((r) => {
-            const lariClean = cleanMandombe(r.lari);
-            const words = lariClean.split(" ").filter(Boolean);
+            const mandombeText = r.mandombe || r.lari;
+            const mandombeClean = cleanMandombe(mandombeText);
+            const words = mandombeClean.split(" ").filter(Boolean);
             return {
               person: r.person,
               lari: r.lari,
-              mandombe: r.mandombe || r.lari,
+              mandombe: mandombeText,
               gloss: (isFr ? r.fr : r.en) || r.fr,
               note: (r as { note?: string }).note,
               verbForm: words.length ? words[words.length - 1] : undefined,
