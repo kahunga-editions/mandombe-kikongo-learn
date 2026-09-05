@@ -4,6 +4,7 @@ export interface ConjugationSeries { pattern: string; verb?: string; rows: Serie
 export const conjugationSeries: ConjugationSeries[] = [
   {
     pattern: "Bue · tele?",
+    verb: "tele",
     rows: [
       { person: "Nous", marker: "tu", lari: "Bue tu tele?", fr: "Qu'avons-nous dit ?", en: "What did we say?" },
       { person: "Il/Elle", marker: "ka", lari: "Bue ka tele?", fr: "Qu'a-t-elle dit ?", en: "What did she say?" },
@@ -13,6 +14,7 @@ export const conjugationSeries: ConjugationSeries[] = [
   },
   {
     pattern: "Dia · dia.",
+    verb: "dia",
     rows: [
       { person: "Je", marker: "ni", lari: "Dia ni dia.", fr: "Je vais manger.", en: "I am going to eat." },
       { person: "Nous", marker: "tu", lari: "Dia tu dia.", fr: "Nous allons manger.", en: "We are going to eat." },
@@ -23,6 +25,7 @@ export const conjugationSeries: ConjugationSeries[] = [
   },
   {
     pattern: "Dila · ta dila.",
+    verb: "ta dila",
     rows: [
       { person: "Je", marker: "ni", lari: "Dila ni ta dila.", fr: "Je suis en train de pleurer.", en: "I am crying." },
       { person: "Nous", marker: "tu", lari: "Dila tu ta dila.", fr: "Nous sommes en train de pleurer.", en: "We are crying." },
@@ -33,6 +36,7 @@ export const conjugationSeries: ConjugationSeries[] = [
   },
   {
     pattern: "Mulumba · yunini.",
+    verb: "yunini",
     rows: [
       { person: "Nous", marker: "tu", lari: "Mulumba tu yunini.", fr: "Nous avons écorché un lapin.", en: "We skinned a rabbit." },
       { person: "Il/Elle", marker: "ka", lari: "Mulumba ka yunini.", fr: "Il/elle a écorché un lapin.", en: "He/she skinned a rabbit." },
@@ -42,6 +46,7 @@ export const conjugationSeries: ConjugationSeries[] = [
   },
   {
     pattern: "Ndambu loso · ta dia.",
+    verb: "ta dia",
     rows: [
       { person: "Je", marker: "ni", lari: "Ndambu loso ni ta dia.", fr: "Je mange un peu de riz.", en: "I eat a little rice." },
       { person: "Nous", marker: "tu", lari: "Ndambu loso tu ta dia.", fr: "Nous mangeons un peu de riz.", en: "We eat a little rice." },
@@ -52,6 +57,7 @@ export const conjugationSeries: ConjugationSeries[] = [
   },
   {
     pattern: "Nki · ta dia?",
+    verb: "ta dia",
     rows: [
       { person: "Je", marker: "ni", lari: "Nki ni ta dia?", fr: "Qu'est-ce que je mange ?", en: "What am I eating?" },
       { person: "Nous", marker: "tu", lari: "Nki tu ta dia?", fr: "Qu'est-ce que nous mangeons ?", en: "What are we eating?" },
@@ -62,6 +68,7 @@ export const conjugationSeries: ConjugationSeries[] = [
   },
   {
     pattern: "Nki · ta dila?",
+    verb: "ta dila",
     rows: [
       { person: "Je", marker: "ni", lari: "Nki ni ta dila?", fr: "Pourquoi je mange ?", en: "Why am I eating?" },
       { person: "Nous", marker: "tu", lari: "Nki tu ta dila?", fr: "Pourquoi nous mangeons ?", en: "Why are we eating?" },
@@ -72,6 +79,7 @@ export const conjugationSeries: ConjugationSeries[] = [
   },
   {
     pattern: "Nki · ta dirila?",
+    verb: "ta dirila",
     rows: [
       { person: "Je", marker: "ni", lari: "Nki ni ta dirila?", fr: "Pourquoi je pleure ?", en: "Why am I crying?" },
       { person: "Nous", marker: "tu", lari: "Nki tu ta dirila?", fr: "Pourquoi pleurons-nous ?", en: "Why are we crying?" },
@@ -90,6 +98,7 @@ export const conjugationSeries: ConjugationSeries[] = [
   },
   {
     pattern: "Zaza · ta zaza mu bungu dia madia.",
+    verb: "ta zaza",
     rows: [
       { person: "Je", marker: "ni", lari: "Zaza ni ta zaza mu bungu dia madia.", fr: "Je suis en train de trembloter à cause de la nourriture.", en: "I am trembling because of the food." },
       { person: "Nous", marker: "tu", lari: "Zaza tu ta zaza mu bungu dia madia.", fr: "Nous sommes en train de trembloter à cause de la nourriture.", en: "We are trembling because of the food." },
