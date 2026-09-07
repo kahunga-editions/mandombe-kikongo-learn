@@ -22,7 +22,25 @@ interface FlatTable {
   rows: { person: string; lari: string; mandombe: string; gloss?: string; note?: string; verbForm?: string }[];
 }
 
+/** Pronoms possessifs / personnels qui terminent souvent une phrase : jamais la forme verbale. */
+const PRONOUN_ENDINGS = new Set([
+  "nani",
+  "naku",
+  "nandi",
+  "neto",
+  "neno",
+  "nau",
+  "mono",
+  "ngeye",
+  "iandi",
+  "yandi",
+  "beto",
+  "beno",
+  "bau",
+]);
+
 /** Met en évidence la forme verbale au sein d'une phrase Mandombe. */
+
 function HighlightedMandombe({
   text,
   verb,
@@ -103,15 +121,21 @@ const Conjugations = () => {
             const mandombeText = r.mandombe || r.lari;
             const mandombeClean = cleanMandombe(mandombeText);
             const words = mandombeClean.split(" ").filter(Boolean);
+            const explicit = (r as { verbForm?: string }).verbForm;
+            const last = words.length ? words[words.length - 1] : undefined;
+            // Les expressions se terminent souvent par un pronom (nani, naku, nandi...) :
+            // on ne devine pas la forme verbale dans ce cas.
+            const guessed = last && !PRONOUN_ENDINGS.has(last.toLowerCase()) ? last : undefined;
             return {
               person: r.person,
               lari: r.lari,
               mandombe: mandombeText,
               gloss: (isFr ? r.fr : r.en) || r.fr,
               note: (r as { note?: string }).note,
-              verbForm: words.length ? words[words.length - 1] : undefined,
+              verbForm: explicit || (table.kind === "expression" ? undefined : guessed),
             };
           }),
+
         });
       }
     }
@@ -323,7 +347,8 @@ const Conjugations = () => {
                       let verbForm = row.verbForm;
                       if (!verbForm && !s.verb) {
                         const words = cleanMandombe(row.lari).split(" ").filter(Boolean);
-                        verbForm = words[words.length - 1];
+                        const last = words[words.length - 1];
+                        verbForm = last && !PRONOUN_ENDINGS.has(last.toLowerCase()) ? last : undefined;
                       }
                       return (
                         <li key={ri} className="rounded-xl border border-border/70 p-4">
