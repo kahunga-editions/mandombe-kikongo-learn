@@ -39,7 +39,17 @@ const PRONOUN_ENDINGS = new Set([
   "bau",
 ]);
 
+/** Comparaison souple : minuscules, sans accents, espaces compactés. */
+const norm = (s: string) =>
+  (s || "")
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+
 /** Met en évidence la forme verbale au sein d'une phrase Mandombe. */
+
 
 function HighlightedMandombe({
   text,
