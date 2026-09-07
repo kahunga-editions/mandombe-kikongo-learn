@@ -39,7 +39,17 @@ const PRONOUN_ENDINGS = new Set([
   "bau",
 ]);
 
+/** Comparaison souple : minuscules, sans accents, espaces compactés. */
+const norm = (s: string) =>
+  (s || "")
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+
 /** Met en évidence la forme verbale au sein d'une phrase Mandombe. */
+
 
 function HighlightedMandombe({
   text,
@@ -144,13 +154,19 @@ const Conjugations = () => {
 
 
   const grouped = useMemo(() => {
-    const q = query.trim().toLowerCase();
+    const q = norm(query);
     const match = (t: FlatTable) =>
       !q ||
-      t.verb.toLowerCase().includes(q) ||
-      t.meaning.toLowerCase().includes(q) ||
-      t.tense.toLowerCase().includes(q) ||
-      t.rows.some((r) => r.lari.toLowerCase().includes(q));
+      norm(t.verb).includes(q) ||
+      norm(t.meaning).includes(q) ||
+      norm(t.tense).includes(q) ||
+      t.rows.some(
+        (r) =>
+          norm(r.lari).includes(q) ||
+          norm(r.person).includes(q) ||
+          norm(r.gloss || "").includes(q) ||
+          norm(r.note || "").includes(q),
+      );
 
     const map = new Map<string, FlatTable[]>();
     for (const t of tables) {
@@ -164,14 +180,22 @@ const Conjugations = () => {
   }, [tables, query]);
 
   const series = useMemo(() => {
-    const q = query.trim().toLowerCase();
+    const q = norm(query);
     if (!q) return conjugationSeries;
     return conjugationSeries.filter(
       (s) =>
-        s.pattern.toLowerCase().includes(q) ||
-        s.rows.some((r) => r.lari.toLowerCase().includes(q) || r.fr.toLowerCase().includes(q)),
+        norm(s.pattern).includes(q) ||
+        s.rows.some(
+          (r) =>
+            norm(r.lari).includes(q) ||
+            norm(r.person).includes(q) ||
+            norm(r.fr).includes(q) ||
+            norm(r.en || "").includes(q),
+        ),
     );
   }, [query]);
+
+
 
   return (
     <div className="min-h-screen bg-background">
