@@ -347,7 +347,8 @@ const Conjugations = () => {
                       let verbForm = row.verbForm;
                       if (!verbForm && !s.verb) {
                         const words = cleanMandombe(row.lari).split(" ").filter(Boolean);
-                        verbForm = words[words.length - 1];
+                        const last = words[words.length - 1];
+                        verbForm = last && !PRONOUN_ENDINGS.has(last.toLowerCase()) ? last : undefined;
                       }
                       return (
                         <li key={ri} className="rounded-xl border border-border/70 p-4">
