@@ -117,8 +117,9 @@ const Conjugations = () => {
     for (const lesson of lessons) {
       if (!lesson?.conjugations) continue;
       for (const table of lesson.conjugations) {
-        // Le verbe etre ne se conjugue pas par personne : il a sa propre section.
-        if (table.verb === "Ba" && /Être|To be/i.test(table.meaning?.fr || table.meaning?.en || "")) continue;
+        // Le verbe etre se conjugue par personne : ses tables sont affichees comme les autres.
+        // C'est aux 3es personnes que la forme s'accorde avec la classe du nom.
+
         out.push({
           lessonId: lesson.id,
           lessonTitle: (isFr ? lesson.titleFr : lesson.title) || lesson.title,
@@ -242,8 +243,8 @@ const Conjugations = () => {
           </div>
           <p className="mt-2 text-muted-foreground">
             {isFr
-              ? "Le verbe être ne se conjugue pas par personne : il s'accorde avec la classe du nom. Forme contractée, forme pleine, passé."
-              : "The verb to be is not conjugated by person: it agrees with the noun class. Contracted form, full form, past."}
+              ? "Le verbe être se conjugue par personne. Aux troisièmes personnes, du singulier comme du pluriel, la forme s'accorde avec la classe du nom : voici ces formes, contractée, pleine et au passé."
+              : "The verb to be is conjugated by person. In the third person, singular and plural alike, the form agrees with the noun class: here are those forms, contracted, full and past."}
           </p>
 
           <div className="mt-6 grid gap-4 md:grid-cols-2">
