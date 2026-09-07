@@ -117,8 +117,9 @@ const Conjugations = () => {
     for (const lesson of lessons) {
       if (!lesson?.conjugations) continue;
       for (const table of lesson.conjugations) {
-        // Le verbe etre ne se conjugue pas par personne : il a sa propre section.
-        if (table.verb === "Ba" && /Être|To be/i.test(table.meaning?.fr || table.meaning?.en || "")) continue;
+        // Le verbe etre se conjugue par personne : ses tables sont affichees comme les autres.
+        // C'est aux 3es personnes que la forme s'accorde avec la classe du nom.
+
         out.push({
           lessonId: lesson.id,
           lessonTitle: (isFr ? lesson.titleFr : lesson.title) || lesson.title,
