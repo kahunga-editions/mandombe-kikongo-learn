@@ -1,28 +1,46 @@
-# Plan : intégrer la présentation de conjugaisons
+# Plan : intégrer « Zonza Lari – Verbes de survie » aux conjugaisons
 
-## En attente
-Le fichier exporté de la présentation (PDF ou PPTX) doit être déposé dans le chat. Sans lui, aucune forme ne sera ajoutée : rien ne sera inventé ni complété par analogie.
+## Ce que contient le document (vérifié)
+117 pages, structurées en fiches de six personnes (je, tu, il, nous, vous, ils), généralement trois temps par verbe : présent, passé, futur.
 
-## Ce qui sera fait, une fois le fichier reçu
+Verbes relevés : **ba** (être), **sa** (faire), **dia** (manger), **nua** (boire), **hana musua** (permettre), **lenda** (pouvoir), **bonga** (prendre), **zaba** (savoir), **kuiza** (venir), **banza** (penser), **futa** (payer), **wa** (sentir une odeur), **mona** (voir / sentir le froid, la chaleur), **baka** (avoir, obtenir), **zola** (aimer, vouloir), **sala** (travailler, fabriquer), **sa:la** (rester), **sukula** (laver), **soba** (changer), **teka** (vendre, trahir), **tanga** (lire, chanter), **sola** (choisir), **yela** (essayer), **bakisa** (aider), **lamba** (préparer, cuire), **landa** (suivre), **seha** (rire), **bua** (tomber), **fua** (mourir), **butuka** (naître), **djoka** (courir), **noka** (pleuvoir), **zakasa** (asseoir), **nanguna** (lever), **vutula** (rendre).
 
-### 1. Lecture et extraction
-- Lire le document diapositive par diapositive et relever chaque forme conjuguée : verbe, temps, personne, phrase complète, traduction française (et anglaise si présente).
-- Établir la liste des formes déjà présentes et des formes nouvelles, pour éviter les doublons avec les séries existantes.
-- Vous soumettre les cas ambigus (formes incomplètes, traductions absentes, variantes) plutôt que de trancher seul.
+Règles générales confirmées par le document, à afficher sur la page :
+- Futur = **mbo** + particule du pronom + infinitif (mbo ni ba, mbo ba, mbo ka ba…).
+- Présent progressif = thème + particule + **ta** + verbe (dia ni ta dia).
+- Verbe être : formes courtes/pleines nje(na), we(na), ke(na), tue(na), lue(na), be(na) ; passé mbele, bele, tu bele…
 
-### 2. Écriture en Mandombe
-- Transcrire chaque phrase en Mandombe selon les règles en vigueur : `ia` tel quel sauf JIA, WIA, PIA, RIA, HIA (→ IYA), pas de lettres latines résiduelles, pas d'accents, pas de voyelles doublées.
-- Les translittérations latines restent telles quelles (ex. mbendji reste mbendji même si le Mandombe s'écrit mbenji).
+## Ce qui sera fait
+
+### 1. Données de conjugaison
+- Créer une série par verbe et par temps, avec les six personnes, la phrase telle qu'elle figure dans le document, la traduction française et sa version anglaise.
+- Reprendre strictement les formes écrites : rien ne sera complété par analogie. Les cases laissées vides dans le document (« je confie », « je vis ») seront simplement omises.
+- Conserver les variantes données (ndidi / ndiri, tu didi / tu diri, suaka pour laver, peu usité) comme variantes sur la même ligne.
+- Les notations de longueur avec deux-points (ta:, sa:ridi, ba:nza) et les accents du document ne sont pas de l'orthographe : ils deviendront des notes de prononciation, la forme écrite restant sans allongement ni accent.
+
+### 2. Écriture Mandombe
+- Chaque phrase reçoit sa version Mandombe, avec la mise en valeur dorée de la forme verbale déjà en place.
+- Règles appliquées : `ia` tel quel sauf JIA, WIA, PIA, RIA, HIA (→ iya) ; mbendji s'écrit **mbenji** en Mandombe, translittération latine inchangée ; pas d'accents, pas de voyelles doublées, pas de lettres latines résiduelles.
 
 ### 3. Page Conjugaisons
-- Ajouter les nouvelles séries verbales : phrase complète en Mandombe, translittération, traduction, audio, avec la forme verbale mise en valeur par le surlignage doré déjà en place.
-- Les nouvelles formes deviennent recherchables en français comme en kikongo (comme « tu seras »).
+- Les nouvelles séries sont groupées par verbe, avec les onglets présent / passé / futur.
+- Recherche par verbe, par temps, par forme kikongo et par traduction française (« tu seras », « j'ai mangé »…), avec affichage immédiat de la ligne en grand Mandombe, latin et traduction, comme pour « tu seras ».
+- Un encart rappelle la formation du futur avec **mbo** et celle du présent progressif avec **ta**.
 
 ### 4. Dictionnaire
-- Ajouter les verbes et formes manquants comme entrées propres, sans fusionner d'homographes ni de sens distincts.
-- Passer les contrôles automatiques avant validation.
+- Ajouter les verbes absents comme entrées propres (infinitif, sens, exemples), sans fusionner d'homographes ni de sens distincts.
+- Signaler les sens polysémiques séparément : teka = vendre / trahir ; tanga = lire / chanter ; sala = travailler, fabriquer / rester ; wa = entendre, comprendre, sentir.
+- Les contrôles automatiques du dictionnaire devront rester au vert.
+
+## Points à arbitrer avec vous (aucune décision prise seule)
+1. « j'ai suivi = ndendi / lendi » est identique à « je peux = ndendi / lendi » (lenda). Coïncidence réelle ou coquille du document ?
+2. « je suis resté = ntshiri / shiri » est identique à « j'ai fait » (sa). Même question.
+3. « mbele » signifie aussi couteau, comme le note le document ; la remarque sera reprise comme note de prononciation.
+4. « j'ai assis = nzakase » a une finale en -e là où les autres passés de ce type font -ele. À confirmer.
+
+Ces quatre points seront listés dans le rapport d'arbitrage et intégrés seulement après votre validation ; en attendant, les formes sont reprises telles quelles, sans harmonisation.
 
 ## Détails techniques
-- Extraction via l'outil de lecture de document ; sources modifiées : `src/data/conjugationSeries.ts`, `src/data/verbeBa.ts` (si le verbe être est concerné), `src/pages/Conjugations.tsx` (uniquement si une nouvelle catégorie de temps l'exige), `data/dictionary-entries.json`.
-- `scripts/dictionary_guards.py` doit rester vert ; vérification par compilation puis contrôle visuel de `/conjugations`.
+- Fichiers touchés : `src/data/conjugationSeries.ts` (nouvelles séries), `src/data/verbeBa.ts` (compléments être), `src/pages/Conjugations.tsx` (regroupement par verbe et par temps, encart des règles), `data/dictionary-entries.json` (entrées verbales).
+- Vérification : compilation, contrôle du journal de build, contrôle visuel de `/conjugations`, `scripts/dictionary_guards.py` au vert.
 - Aucun document ODT/PDF ne sera généré.
