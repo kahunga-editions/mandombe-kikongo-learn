@@ -117,7 +117,7 @@ verb(
               frv("ai été", "as été", "a été", "avons été", "avez été", "ont été"),
               env("was", "were", "was", "were", "were", "were"),
               "bele",
-              {0: "Se prononce /mbe-le/. Mbele veut aussi dire couteau."}),
+              {0: "Homographe : mbele veut aussi dire couteau."}),
         tense(*FUTURE, fut("ba"),
               frv("serai", "seras", "sera", "serons", "serez", "seront"),
               en_will("be"), "ba", None, FUT_RULE),
