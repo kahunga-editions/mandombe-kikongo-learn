@@ -32,13 +32,13 @@ Règles générales confirmées par le document, à afficher sur la page :
 - Signaler les sens polysémiques séparément : teka = vendre / trahir ; tanga = lire / chanter ; sala = travailler, fabriquer / rester ; wa = entendre, comprendre, sentir.
 - Les contrôles automatiques du dictionnaire devront rester au vert.
 
-## Points à arbitrer avec vous (aucune décision prise seule)
-1. « j'ai suivi = ndendi / lendi » est identique à « je peux = ndendi / lendi » (lenda). Coïncidence réelle ou coquille du document ?
-2. « je suis resté = ntshiri / shiri » est identique à « j'ai fait » (sa). Même question.
-3. « mbele » signifie aussi couteau, comme le note le document ; la remarque sera reprise comme note de prononciation.
-4. « j'ai assis = nzakase » a une finale en -e là où les autres passés de ce type font -ele. À confirmer.
+## Points à arbitrer — résolus le 2026-09-08
+1. **« j'ai suivi = ndendi / lendi »** identique à **« je peux = ndendi / lendi »** (*lenda*) : ce sont des **homographes**, validés tels quels.
+2. **« je suis resté = ntshiri / shiri »** identique à **« j'ai fait »** (*sa*) : ce sont des **homographes**, validés tels quels.
+3. **« mbele »** signifie aussi couteau : **homographe** validé.
+4. **« j'ai assis = nzakase »** et **« vous avez assis = tu zakase / touzacassé »** : validés. Exemple culturel attesté : **Biba touzacassé** = « Vous avez assis les ancêtres » (installer un petit autel dans une nouvelle maison).
 
-Ces quatre points seront listés dans le rapport d'arbitrage et intégrés seulement après votre validation ; en attendant, les formes sont reprises telles quelles, sans harmonisation.
+Résultat : aucune harmonisation appliquée, les formes du document sont conservées. Les notes d'homographes ont été ajoutées dans `scripts/build_survival_verbs.py`, `src/data/survivalVerbs.ts` et `data/dictionary-entries.json`. Le rapport d'arbitrage est disponible dans `reports/arbitrage-zonza-lari.md`.
 
 ## Détails techniques
 - Fichiers touchés : `src/data/conjugationSeries.ts` (nouvelles séries), `src/data/verbeBa.ts` (compléments être), `src/pages/Conjugations.tsx` (regroupement par verbe et par temps, encart des règles), `data/dictionary-entries.json` (entrées verbales).
