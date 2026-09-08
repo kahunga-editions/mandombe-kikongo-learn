@@ -4905,15 +4905,15 @@ export const survivalVerbs: SurvivalVerb[] = [
             "lari": "tu zakase",
             "fr": "Nous avons assis.",
             "en": "We seated.",
-            "verbForm": "zakase"
+            "verbForm": "zakase",
+            "note": "Le document écrit touzacassé pour le pluriel : Biba tu zakase = nous avons assis les ancêtres."
           },
           {
             "person": "Vous",
             "lari": "tu zakase",
             "fr": "Vous avez assis.",
             "en": "You (pl.) seated.",
-            "verbForm": "zakase",
-            "note": "Le document écrit touzacassé pour le pluriel : Biba touzacassé = vous avez assis les ancêtres."
+            "verbForm": "zakase"
           },
           {
             "person": "Ils/Elles",
@@ -4974,7 +4974,7 @@ export const survivalVerbs: SurvivalVerb[] = [
         "rule": "mbo + particule du pronom + infinitif"
       }
     ],
-    "note": "Asseoir les ancêtres (Biba touzacassé) : installer un petit autel dans une nouvelle maison pour que les ancêtres s'y asseyent."
+    "note": "Asseoir les ancêtres (Biba tu zakase) : nous avons assis les ancêtres en installant un petit autel dans une nouvelle maison pour qu'ils s'y asseyent."
   },
   {
     "verb": "Nanguna",
