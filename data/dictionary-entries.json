@@ -1355,11 +1355,16 @@
   "fr": "Hériter",
   "en": "To inherit"
  },
- {
-  "lari": "Biba",
-  "fr": "Esprits des morts",
-  "en": "Spirits of the dead"
- },
+  {
+   "lari": "Biba",
+   "fr": "Esprits des morts ; ancêtres",
+   "en": "Spirits of the dead ; ancestors"
+  },
+  {
+   "lari": "Biba touzacassé",
+   "fr": "Vous avez assis les ancêtres (dans une nouvelle maison, en installant un petit autel).",
+   "en": "You seated the ancestors (in a new house, by setting up a small altar)."
+  },
  {
   "lari": "Bibanga",
   "fr": "Petites lianes (pluriel) ; mentons",
