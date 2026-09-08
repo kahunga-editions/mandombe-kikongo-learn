@@ -208,6 +208,7 @@ verb(
               frv("pourrai", "pourras", "pourra", "pourrons", "pourrez", "pourront"),
               en_will("be able to"), "lenda", None, FUT_RULE),
     ],
+    note="Le passé na lendi / wa lendi… est homographe avec le passé de landa (suivre).",
 )
 
 # ---------------------------------------------------------------- BONGA
