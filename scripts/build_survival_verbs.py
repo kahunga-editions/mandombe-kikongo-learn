@@ -668,12 +668,12 @@ verb(
         tense(*PAST, ["nzakase", "zakase", "zakase", "tu zakase", "tu zakase", "ba zakase"],
               frv("ai assis", "as assis", "a assis", "avons assis", "avez assis", "ont assis"),
               en_same("seated"), "zakase",
-              {4: "Le document écrit touzacassé pour le pluriel : Biba touzacassé = vous avez assis les ancêtres."}),
+              {3: "Le document écrit touzacassé pour le pluriel : Biba tu zakase = nous avons assis les ancêtres."}),
         tense(*FUTURE, fut("zakasa"),
               frv("assoirai", "assoiras", "assoira", "assoirons", "assoirez", "assoiront"),
               en_will("seat"), "zakasa", None, FUT_RULE),
     ],
-    note="Asseoir les ancêtres (Biba touzacassé) : installer un petit autel dans une nouvelle maison pour que les ancêtres s'y asseyent.",
+    note="Asseoir les ancêtres (Biba tu zakase) : nous avons assis les ancêtres en installant un petit autel dans une nouvelle maison pour qu'ils s'y asseyent.",
 )
 
 # ---------------------------------------------------------------- NANGUNA
