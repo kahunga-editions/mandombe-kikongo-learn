@@ -10,6 +10,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { lessons } from "@/data/lessons";
 import { conjugationSeries } from "@/data/conjugationSeries";
 import { verbeBaData } from "@/data/verbeBa";
+import { survivalVerbs } from "@/data/survivalVerbs";
 
 interface FlatTable {
   lessonId: string;
@@ -112,8 +113,12 @@ function HighlightedMandombe({
   return (
     <span className={className}>
       {lastMatch.prefix}
-      <span className="inline-flex items-end justify-center rounded bg-verb px-2 pb-[0.75em] pt-[0.1em] align-baseline">
-        <span className="font-bold leading-none text-verb-foreground">{lastMatch.match}</span>
+      <span className="relative">
+        <span
+          aria-hidden
+          className="pointer-events-none absolute -left-[0.06em] -right-[0.06em] top-[0.35em] h-[1.05em] rounded bg-verb"
+        />
+        <span className="relative font-bold text-verb-foreground">{lastMatch.match}</span>
       </span>
       {lastMatch.suffix}
     </span>
@@ -160,6 +165,34 @@ const Conjugations = () => {
             };
           }),
 
+        });
+      }
+    }
+
+    // Corpus « Zonza Lari — verbes de survie » : six personnes, trois temps.
+    // On ne re-affiche pas une forme deja presente dans une lecon.
+    const seen = new Set<string>();
+    for (const t of out) for (const r of t.rows) seen.add(norm(r.lari));
+    for (const v of survivalVerbs) {
+      for (const t of v.tenses) {
+        const rows = t.rows.filter((r) => !seen.has(norm(r.lari)));
+        if (!rows.length) continue;
+        out.push({
+          lessonId: "zonza-lari",
+          lessonTitle: isFr ? "Zonza Lari — verbes de survie" : "Zonza Lari — survival verbs",
+          verb: v.verb,
+          verbMandombe: v.verb.replace(/dj/g, "j").replace(/Dj/g, "J"),
+          meaning: isFr && v.note ? `${v.meaning} — ${v.note}` : isFr ? v.meaning : v.meaningEn,
+          tense: isFr && t.rule ? `${t.tense} · ${t.rule}` : isFr ? t.tense : t.tenseEn,
+          isExpression: false,
+          rows: rows.map((r) => ({
+            person: r.person,
+            lari: r.lari,
+            mandombe: r.mandombe || r.lari,
+            gloss: (isFr ? r.fr : r.en) || r.fr,
+            note: r.note,
+            verbForm: r.verbForm,
+          })),
         });
       }
     }
@@ -393,6 +426,32 @@ const Conjugations = () => {
             ))}
           </div>
         </section>}
+
+        {!query.trim() && (
+          <section className="max-w-5xl mx-auto mt-16">
+            <div className="bg-card border border-border rounded-2xl p-6">
+              <h2 className="font-display text-xl font-bold text-foreground">
+                {isFr ? "Deux règles qui ouvrent tout" : "Two rules that unlock everything"}
+              </h2>
+              <ul className="mt-4 space-y-3 text-muted-foreground">
+                <li>
+                  <span className="font-semibold text-foreground">
+                    {isFr ? "Le futur" : "The future"}
+                  </span>{" "}
+                  : mbo + {isFr ? "particule du pronom" : "pronoun particle"} + {isFr ? "infinitif" : "infinitive"} —
+                  <span className="text-foreground/80"> mbo ni dia, mbo dia, mbo ka dia, mbo tu dia, mbo lu dia, mbo ba dia.</span>
+                </li>
+                <li>
+                  <span className="font-semibold text-foreground">
+                    {isFr ? "Le présent en cours" : "The ongoing present"}
+                  </span>{" "}
+                  : {isFr ? "thème" : "theme"} + {isFr ? "particule du pronom" : "pronoun particle"} + ta + {isFr ? "verbe" : "verb"} —
+                  <span className="text-foreground/80"> dia ni ta dia, dia ta dia, dia ka ta dia, dia tu ta dia, dia lu ta dia, dia ba ta dia.</span>
+                </li>
+              </ul>
+            </div>
+          </section>
+        )}
 
         {!query.trim() && <section className="max-w-5xl mx-auto mt-16 space-y-10">
           {grouped.map(([key, group]) => (
