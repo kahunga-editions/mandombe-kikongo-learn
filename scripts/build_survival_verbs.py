@@ -117,7 +117,7 @@ verb(
               frv("ai été", "as été", "a été", "avons été", "avez été", "ont été"),
               env("was", "were", "was", "were", "were", "were"),
               "bele",
-              {0: "Se prononce /mbe-le/. Mbele veut aussi dire couteau."}),
+              {0: "Homographe : mbele veut aussi dire couteau."}),
         tense(*FUTURE, fut("ba"),
               frv("serai", "seras", "sera", "serons", "serez", "seront"),
               en_will("be"), "ba", None, FUT_RULE),
@@ -133,7 +133,8 @@ verb(
               en_same("do", "does"), "sa", None, PROG_RULE),
         tense(*PAST, ["ntshiri", "shiri", "shiri", "tu shiri", "lu shiri", "ba shiri"],
               frv("ai fait", "as fait", "a fait", "avons fait", "avez fait", "ont fait"),
-              en_same("did"), "shiri"),
+              en_same("did"), "shiri",
+              {0: "Homographe : shiri est aussi le passé de sa:la (rester)."}),
         tense(*FUTURE, fut("sa"),
               frv("ferai", "feras", "fera", "ferons", "ferez", "feront"),
               en_will("do"), "sa", None, FUT_RULE),
@@ -207,6 +208,7 @@ verb(
               frv("pourrai", "pourras", "pourra", "pourrons", "pourrez", "pourront"),
               en_will("be able to"), "lenda", None, FUT_RULE),
     ],
+    note="Le passé na lendi / wa lendi… est homographe avec le passé de landa (suivre).",
 )
 
 # ---------------------------------------------------------------- BONGA
@@ -400,7 +402,9 @@ verb(
               en_same("stay", "stays"), "sala", None, PROG_RULE),
         tense(*PAST, ["ntshiri", "shiri", "shiri", "tu shiri", "lu shiri", "ba shiri"],
               frv("suis resté", "es resté", "est resté", "sommes restés", "êtes restés", "sont restés"),
-              en_same("stayed"), "shiri", {2: "Le i est long à l'oral : /shi:ri/."}),
+              en_same("stayed"), "shiri",
+              {0: "Homographe : ntshiri / shiri est aussi le passé de sa (faire).",
+               2: "Le i est long à l'oral : /shi:ri/."}),
         tense(*FUTURE, fut("sala"),
               frv("resterai", "resteras", "restera", "resterons", "resterez", "resteront"),
               en_will("stay"), "sala", None, FUT_RULE),
@@ -548,7 +552,7 @@ verb(
         tense(*PAST, ["ndendi", "lendi", "lendi", "tu lendi", "lu lendi", "ba lendi"],
               frv("ai suivi", "as suivi", "a suivi", "avons suivi", "avez suivi", "ont suivi"),
               en_same("followed"), "lendi",
-              {0: "Le document donne la même forme que lenda (pouvoir) : à confirmer."}),
+              {0: "Homographe : ndendi / lendi est aussi le passé de lenda (pouvoir)."}),
         tense(*FUTURE, fut("landa"),
               frv("suivrai", "suivras", "suivra", "suivrons", "suivrez", "suivront"),
               en_will("follow"), "landa", None, FUT_RULE),
@@ -664,11 +668,12 @@ verb(
         tense(*PAST, ["nzakase", "zakase", "zakase", "tu zakase", "tu zakase", "ba zakase"],
               frv("ai assis", "as assis", "a assis", "avons assis", "avez assis", "ont assis"),
               en_same("seated"), "zakase",
-              {4: "Le document répète tu zakase pour la deuxième personne du pluriel : à confirmer."}),
+              {4: "Le document écrit touzacassé pour le pluriel : Biba touzacassé = vous avez assis les ancêtres."}),
         tense(*FUTURE, fut("zakasa"),
               frv("assoirai", "assoiras", "assoira", "assoirons", "assoirez", "assoiront"),
               en_will("seat"), "zakasa", None, FUT_RULE),
     ],
+    note="Asseoir les ancêtres (Biba touzacassé) : installer un petit autel dans une nouvelle maison pour que les ancêtres s'y asseyent.",
 )
 
 # ---------------------------------------------------------------- NANGUNA

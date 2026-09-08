@@ -93,7 +93,7 @@ export const survivalVerbs: SurvivalVerb[] = [
             "fr": "J'ai été.",
             "en": "I was.",
             "verbForm": "bele",
-            "note": "Se prononce /mbe-le/. Mbele veut aussi dire couteau."
+            "note": "Homographe : mbele veut aussi dire couteau."
           },
           {
             "person": "Tu",
@@ -246,7 +246,8 @@ export const survivalVerbs: SurvivalVerb[] = [
             "lari": "ntshiri",
             "fr": "J'ai fait.",
             "en": "I did.",
-            "verbForm": "shiri"
+            "verbForm": "shiri",
+            "note": "Homographe : shiri est aussi le passé de sa:la (rester)."
           },
           {
             "person": "Tu",
@@ -952,7 +953,8 @@ export const survivalVerbs: SurvivalVerb[] = [
         ],
         "rule": "mbo + particule du pronom + infinitif"
       }
-    ]
+    ],
+    "note": "Le passé na lendi / wa lendi… est homographe avec le passé de landa (suivre)."
   },
   {
     "verb": "Bonga",
@@ -2525,7 +2527,8 @@ export const survivalVerbs: SurvivalVerb[] = [
             "lari": "ntshiri",
             "fr": "Je suis resté.",
             "en": "I stayed.",
-            "verbForm": "shiri"
+            "verbForm": "shiri",
+            "note": "Homographe : ntshiri / shiri est aussi le passé de sa (faire)."
           },
           {
             "person": "Tu",
@@ -3908,7 +3911,7 @@ export const survivalVerbs: SurvivalVerb[] = [
             "fr": "J'ai suivi.",
             "en": "I followed.",
             "verbForm": "lendi",
-            "note": "Le document donne la même forme que lenda (pouvoir) : à confirmer."
+            "note": "Homographe : ndendi / lendi est aussi le passé de lenda (pouvoir)."
           },
           {
             "person": "Tu",
@@ -4910,7 +4913,7 @@ export const survivalVerbs: SurvivalVerb[] = [
             "fr": "Vous avez assis.",
             "en": "You (pl.) seated.",
             "verbForm": "zakase",
-            "note": "Le document répète tu zakase pour la deuxième personne du pluriel : à confirmer."
+            "note": "Le document écrit touzacassé pour le pluriel : Biba touzacassé = vous avez assis les ancêtres."
           },
           {
             "person": "Ils/Elles",
@@ -4970,7 +4973,8 @@ export const survivalVerbs: SurvivalVerb[] = [
         ],
         "rule": "mbo + particule du pronom + infinitif"
       }
-    ]
+    ],
+    "note": "Asseoir les ancêtres (Biba touzacassé) : installer un petit autel dans une nouvelle maison pour que les ancêtres s'y asseyent."
   },
   {
     "verb": "Nanguna",
