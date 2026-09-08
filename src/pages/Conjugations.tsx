@@ -113,12 +113,9 @@ function HighlightedMandombe({
   return (
     <span className={className}>
       {lastMatch.prefix}
-      <span className="relative">
-        <span
-          aria-hidden
-          className="pointer-events-none absolute -left-[0.06em] -right-[0.06em] top-[0.35em] h-[1.05em] rounded bg-verb"
-        />
-        <span className="relative font-bold text-verb-foreground">{lastMatch.match}</span>
+      <span className="relative inline-flex items-end justify-center px-2 pb-[0.75em] pt-[0.1em] align-baseline">
+        <span aria-hidden className="pointer-events-none absolute inset-x-0 bottom-0 h-[1.2em] rounded bg-verb" />
+        <span className="relative font-bold leading-none text-verb-foreground">{lastMatch.match}</span>
       </span>
       {lastMatch.suffix}
     </span>
