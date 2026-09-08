@@ -22,6 +22,19 @@ interface FlatTable {
   rows: { person: string; lari: string; mandombe: string; gloss?: string; note?: string; verbForm?: string }[];
 }
 
+interface SearchResult {
+  id: string;
+  verb: string;
+  meaning: string;
+  tense: string;
+  person: string;
+  lari: string;
+  mandombe: string;
+  gloss?: string;
+  note?: string;
+  verbForm?: string;
+}
+
 /** Pronoms possessifs / personnels qui terminent souvent une phrase : jamais la forme verbale. */
 const PRONOUN_ENDINGS = new Set([
   "nani",
@@ -180,6 +193,45 @@ const Conjugations = () => {
     return Array.from(map.entries()).sort((a, b) => a[0].localeCompare(b[0]));
   }, [tables, query]);
 
+  const searchResults = useMemo<SearchResult[]>(() => {
+    const q = norm(query);
+    if (!q) return [];
+
+    const results: SearchResult[] = [];
+    tables.forEach((table, tableIndex) => {
+      table.rows.forEach((row, rowIndex) => {
+        const rowText = [
+          table.verb,
+          table.meaning,
+          table.tense,
+          row.person,
+          row.lari,
+          row.gloss,
+          row.note,
+        ]
+          .filter(Boolean)
+          .map((value) => norm(value || ""));
+
+        if (!rowText.some((value) => value.includes(q))) return;
+
+        results.push({
+          id: `${table.lessonId}-${tableIndex}-${rowIndex}`,
+          verb: table.verb,
+          meaning: table.meaning,
+          tense: table.tense,
+          person: row.person,
+          lari: row.lari,
+          mandombe: row.mandombe,
+          gloss: row.gloss,
+          note: row.note,
+          verbForm: row.verbForm,
+        });
+      });
+    });
+
+    return results;
+  }, [tables, query]);
+
   const series = useMemo(() => {
     const q = norm(query);
     if (!q) return conjugationSeries;
@@ -234,7 +286,45 @@ const Conjugations = () => {
           />
         </div>
 
-        <section className="max-w-5xl mx-auto mt-16">
+        {query.trim() && (
+          <section aria-live="polite" className="max-w-3xl mx-auto mt-8">
+            {searchResults.length > 0 ? (
+              <>
+                <p className="text-sm text-muted-foreground">
+                  {isFr
+                    ? `${searchResults.length} résultat${searchResults.length > 1 ? "s" : ""} pour « ${query.trim()} »`
+                    : `${searchResults.length} result${searchResults.length > 1 ? "s" : ""} for “${query.trim()}”`}
+                </p>
+                <ul className="mt-3 space-y-3">
+                  {searchResults.map((result) => (
+                    <li key={result.id} className="border border-border bg-card rounded-lg px-5 py-4">
+                      <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs uppercase tracking-wide text-muted-foreground">
+                        <span className="font-semibold text-primary">{result.verb}</span>
+                        <span>{result.tense}</span>
+                        <span>{result.person}</span>
+                      </div>
+                      <div className="font-mandombe block w-full mt-3 text-4xl md:text-5xl leading-[2.2] text-gold break-words">
+                        <HighlightedMandombe text={result.mandombe} verb={result.verbForm} />
+                      </div>
+                      <div className="mt-2 flex items-center gap-2 flex-wrap">
+                        <span className="text-base font-medium text-foreground">{result.lari}</span>
+                        <MandombeSpeaker lariText={result.lari} />
+                      </div>
+                      {result.gloss && <div className="mt-1 text-base text-muted-foreground">{result.gloss}</div>}
+                      {result.note && <div className="mt-1 text-xs italic text-muted-foreground">{result.note}</div>}
+                    </li>
+                  ))}
+                </ul>
+              </>
+            ) : (
+              <p className="text-center text-muted-foreground py-6">
+                {isFr ? "Aucune conjugaison trouvée." : "No conjugation found."}
+              </p>
+            )}
+          </section>
+        )}
+
+        {!query.trim() && <section className="max-w-5xl mx-auto mt-16">
           <div className="flex items-center gap-2">
             <Layers className="w-5 h-5 text-primary" />
             <h2 className="font-display text-2xl font-bold text-foreground">
@@ -302,9 +392,9 @@ const Conjugations = () => {
               </article>
             ))}
           </div>
-        </section>
+        </section>}
 
-        <section className="max-w-5xl mx-auto mt-16 space-y-10">
+        {!query.trim() && <section className="max-w-5xl mx-auto mt-16 space-y-10">
           {grouped.map(([key, group]) => (
             <article key={key} className="bg-card border border-border rounded-2xl p-6">
               <div className="font-mandombe block w-full text-4xl md:text-5xl text-gold break-words">
@@ -346,10 +436,10 @@ const Conjugations = () => {
               </div>
             </article>
           ))}
-        </section>
+        </section>}
 
 
-        {series.length > 0 && (
+        {!query.trim() && series.length > 0 && (
           <section className="max-w-5xl mx-auto mt-16">
             <div className="flex items-center gap-2">
               <Layers className="w-5 h-5 text-primary" />
@@ -396,7 +486,7 @@ const Conjugations = () => {
           </section>
         )}
 
-        {grouped.length === 0 && series.length === 0 && (
+        {!query.trim() && grouped.length === 0 && series.length === 0 && (
           <p className="text-center text-muted-foreground mt-16">
             {isFr ? "Aucune conjugaison trouvée." : "No conjugation found."}
           </p>

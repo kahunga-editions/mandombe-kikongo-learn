@@ -1,6 +1,7 @@
 # Roadmap
 
 ## En cours
+- [ ] Afficher immédiatement les lignes de conjugaison correspondant à la recherche, avec Mandombe, latin et traduction
 - [x] Retirer les formes fabriquees `Kue ka?` et `Kue lu?` (dictionnaire, lecons, traducteur)
 - [x] Corriger les sens de `Kue ba?`, `Kue ba ka?`, `Kue ba kotela ka?` et de la serie `Nzo mikanda … kue ye(na)?`
 - [x] Produire `reports/formes-a-arbitrer.md` : liste des formes susceptibles d'avoir ete derivees par analogie
