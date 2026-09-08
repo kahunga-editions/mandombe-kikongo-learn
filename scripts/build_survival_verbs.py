@@ -550,7 +550,7 @@ verb(
         tense(*PAST, ["ndendi", "lendi", "lendi", "tu lendi", "lu lendi", "ba lendi"],
               frv("ai suivi", "as suivi", "a suivi", "avons suivi", "avez suivi", "ont suivi"),
               en_same("followed"), "lendi",
-              {0: "Le document donne la même forme que lenda (pouvoir) : à confirmer."}),
+              {0: "Homographe : ndendi / lendi est aussi le passé de lenda (pouvoir)."}),
         tense(*FUTURE, fut("landa"),
               frv("suivrai", "suivras", "suivra", "suivrons", "suivrez", "suivront"),
               en_will("follow"), "landa", None, FUT_RULE),
