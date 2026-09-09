@@ -44,6 +44,8 @@ const MandombeSpeaker = ({ lariText, className = "" }: MandombeSpeakerProps) => 
     }
 
     setIsLoading(true);
+    setHasError(false);
+
 
     try {
       const response = await fetch(
@@ -85,6 +87,7 @@ const MandombeSpeaker = ({ lariText, className = "" }: MandombeSpeakerProps) => 
     } catch (err) {
       console.error("TTS error:", err);
       setIsPlaying(false);
+      setHasError(true);
     } finally {
       setIsLoading(false);
     }
@@ -98,17 +101,24 @@ const MandombeSpeaker = ({ lariText, className = "" }: MandombeSpeakerProps) => 
             onClick={playAudio}
             disabled={isLoading}
             className={`inline-flex items-center justify-center w-8 h-8 rounded-full transition-colors hover:bg-primary/10 disabled:opacity-50 ${
-              isPlaying ? "text-primary animate-pulse" : "text-muted-foreground hover:text-primary"
+              hasError
+                ? "text-destructive"
+                : isPlaying
+                ? "text-primary animate-pulse"
+                : "text-muted-foreground hover:text-primary"
             } ${className}`}
             aria-label={`Écouter "${lariText}"`}
           >
             {isLoading ? (
               <Loader2 className="w-4 h-4 animate-spin" />
+            ) : hasError ? (
+              <VolumeX className="w-4 h-4" />
             ) : (
               <Volume2 className="w-4 h-4" />
             )}
           </button>
         </TooltipTrigger>
+
         <TooltipContent side="top">
           <p className="text-xs font-mono">/{ipa}/</p>
           <p className="text-xs text-muted-foreground">{syllableDisplay}</p>
