@@ -1,5 +1,5 @@
 import { useState, useRef, useCallback, useMemo } from "react";
-import { Volume2, Loader2 } from "lucide-react";
+import { Volume2, VolumeX, Loader2 } from "lucide-react";
 import { lariToIpa } from "@/lib/g2p";
 import { processLariText } from "@/lib/lari-phonetic-engine";
 import {
