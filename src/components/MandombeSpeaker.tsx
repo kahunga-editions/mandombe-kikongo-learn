@@ -20,7 +20,9 @@ interface MandombeSpeakerProps {
 const MandombeSpeaker = ({ lariText, className = "" }: MandombeSpeakerProps) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [hasError, setHasError] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
+
 
   const ipa = lariToIpa(lariText);
   const { syllables } = useMemo(() => processLariText(lariText), [lariText]);
