@@ -47,3 +47,6 @@ verify_jwt = true
 
 [functions.export-corrections]
 verify_jwt = false
+
+[functions.tts-lari-cached]
+verify_jwt = false
