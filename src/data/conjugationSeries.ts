@@ -97,6 +97,12 @@ export const conjugationSeries: ConjugationSeries[] = [
     ],
   },
   {
+    pattern: "Songa · impératif",
+    rows: [
+      { person: "Tu (singulier)", marker: "—", lari: "Nsongela.", fr: "Montre-moi.", en: "Show me." },
+    ],
+  },
+  {
     pattern: "Zaza · ta zaza mu bungu dia madia.",
     verb: "ta zaza",
     rows: [
