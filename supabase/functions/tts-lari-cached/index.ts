@@ -7,7 +7,7 @@
 
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.0";
 import { decode as base64Decode } from "https://deno.land/std@0.168.0/encoding/base64.ts";
-import { requireAuth, unauthorizedResponse } from "../_shared/auth.ts";
+
 
 const BUCKET = "public-assets";
 const PREFIX = "tts-cache/lari";
@@ -76,15 +76,9 @@ async function lovableAiFallback(text: string): Promise<Uint8Array | null> {
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response("ok", { headers: corsHeaders });
 
-  // Allow either signed-in user OR cross-project service token
-  const serviceToken = req.headers.get("x-service-token");
-  const expectedServiceToken = Deno.env.get("TTS_SERVICE_TOKEN");
-  const isServiceCall = !!serviceToken && !!expectedServiceToken && serviceToken === expectedServiceToken;
+  // Audio de prononciation public : accessible sans compte (le cache limite le coût).
+  // Le token de service reste accepté pour les appels inter-projets.
 
-  if (!isServiceCall) {
-    const auth = await requireAuth(req);
-    if (!auth.ok) return unauthorizedResponse(auth, corsHeaders);
-  }
 
   try {
     const SUPABASE_URL = Deno.env.get("SUPABASE_URL")!;
