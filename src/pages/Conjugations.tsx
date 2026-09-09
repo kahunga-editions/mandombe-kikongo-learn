@@ -421,7 +421,7 @@ const Conjugations = () => {
                     <div className="mt-3 space-y-4">
                       {/* forme courte */}
                       <div>
-                        <div className="font-mandombe block w-full text-2xl md:text-3xl text-gold break-words">
+                        <div className="font-mandombe block w-full leading-[2.2] pb-2 text-2xl md:text-3xl text-gold break-words">
                           <HighlightedMandombe text={e.c_kil} verb={e.c} />
                         </div>
                         <div className="mt-2 flex items-center gap-2 flex-wrap">
@@ -436,7 +436,7 @@ const Conjugations = () => {
                         <span className="text-xs uppercase tracking-wide text-muted-foreground">
                           {isFr ? "Forme pleine" : "Full form"}
                         </span>
-                        <div className="font-mandombe block w-full mt-2 text-2xl md:text-3xl text-gold break-words">
+                        <div className="font-mandombe block w-full leading-[2.2] pb-2 mt-2 text-2xl md:text-3xl text-gold break-words">
                           <HighlightedMandombe text={e.f_kil} verb={e.f} />
                         </div>
                         <div className="mt-2 flex items-center gap-2 flex-wrap">
@@ -452,7 +452,7 @@ const Conjugations = () => {
                     <span className="text-xs uppercase tracking-wide text-muted-foreground">
                       {isFr ? "Passé" : "Past"}
                     </span>
-                    <div className="font-mandombe block w-full mt-3 text-2xl md:text-3xl text-gold break-words">
+                    <div className="font-mandombe block w-full leading-[2.2] pb-2 mt-3 text-2xl md:text-3xl text-gold break-words">
                       <HighlightedMandombe text={e.p_kil} verb={e.p} />
                     </div>
                     <div className="mt-2 flex items-center gap-2 flex-wrap">
@@ -496,7 +496,7 @@ const Conjugations = () => {
         {!query.trim() && <section className="max-w-5xl mx-auto mt-16 space-y-10">
           {grouped.map(([key, group]) => (
             <article key={key} className="bg-card border border-border rounded-2xl p-6">
-              <div className="font-mandombe block w-full text-4xl md:text-5xl text-gold break-words">
+              <div className="font-mandombe block w-full leading-[2.2] pb-2 text-4xl md:text-5xl text-gold break-words">
                 <HighlightedMandombe text={group[0].verbMandombe} verb={group[0].verb} />
               </div>
               <div className="mt-2 flex flex-wrap items-center gap-3">
@@ -518,7 +518,7 @@ const Conjugations = () => {
                       {table.rows.map((row, ri) => (
                         <li key={ri} className="py-3">
                           <div className="text-xs uppercase tracking-wide text-muted-foreground">{row.person}</div>
-                          <div className="font-mandombe block w-full text-3xl md:text-4xl text-gold break-words">
+                          <div className="font-mandombe block w-full leading-[2.2] pb-2 text-3xl md:text-4xl text-gold break-words">
                             <HighlightedMandombe text={row.mandombe} verb={row.verbForm} />
                           </div>
                           <div className="mt-2 flex items-center gap-2 flex-wrap">
@@ -567,7 +567,7 @@ const Conjugations = () => {
                       return (
                         <li key={ri} className="rounded-xl border border-border/70 p-4">
                           <div className="text-xs uppercase tracking-wide text-muted-foreground">{row.person}</div>
-                          <div className="font-mandombe block w-full text-3xl md:text-4xl text-gold break-words">
+                          <div className="font-mandombe block w-full leading-[2.2] pb-2 text-3xl md:text-4xl text-gold break-words">
                             <HighlightedMandombe text={row.lari} verb={s.verb || verbForm} />
                           </div>
                           <div className="mt-2 flex items-center gap-2 flex-wrap">
