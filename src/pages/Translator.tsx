@@ -381,8 +381,8 @@ const Translator = () => {
                 <div className="flex-1 min-h-[180px]">
                   {/* Mandombe rendering (mis en avant) */}
                   {result.mandombe && (
-                    <div className="flex items-center gap-2 mb-4 rounded-xl border border-gold/30 bg-gold/5 p-4">
-                      <p ref={mandombeRef} className="font-mandombe text-4xl md:text-5xl text-gold flex-1 text-center w-full leading-[2.2] pb-2">
+                    <div className="flex min-h-[9rem] items-center gap-2 mb-4 rounded-xl border border-gold/30 bg-gold/5 px-4 py-3">
+                      <p ref={mandombeRef} className="font-mandombe text-4xl md:text-5xl text-gold flex flex-1 -translate-y-10 items-center justify-center self-stretch text-center w-full leading-[1.8]">
                         {cleanMandombe(result.mandombe)}
                       </p>
                       {lariText && <MandombeSpeaker lariText={lariText} />}
