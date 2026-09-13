@@ -61,12 +61,9 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
         return;
       }
 
-      const { data: hasAdminRole, error: roleError } = await supabase.rpc("has_role", {
-        _user_id: session.user.id,
-        _role: "admin",
-      });
-      if (roleError) console.error("Admin role check error:", roleError);
-      const adminRole = Boolean(hasAdminRole);
+      // Admin status is derived server-side by check-subscription; the client
+      // cannot execute public.has_role (revoked for authenticated role).
+      const adminRole = false;
 
       const { data, error } = await supabase.functions.invoke("check-subscription", {
         headers: { Authorization: `Bearer ${session.access_token}` },
