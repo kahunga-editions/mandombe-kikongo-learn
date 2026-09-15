@@ -4085,6 +4085,7 @@ Mazono tua yetele. = Hier nous nous étions mis près du feu.
 Mazona lua yetele. = Hier vous vous étiez mis près du feu.
 Mazono ba yetele. = Hier ils s
 Ngiele yilulu ku mamba. = J
+Njele yilulu ku mamba. = J'ai mis du temps à la rivière.
 Wele yilulu ku mamba. = Il a mis du temps à la rivière.
 Tuele yilulu ku mamba. = Nous avons mis du temps à la rivière.
 Luele yilulu ku mamba. = Vous avez mis du temps à la rivière.
