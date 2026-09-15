@@ -28,3 +28,11 @@ Points a arbitrer (repris tels quels, jamais harmonises) :
 - sa (faire) et sa:la (rester) ont le meme passe : ntshiri / shiri.
 - zakasa : le document ecrit « tu zakase » pour la 2e personne du pluriel.
 - Les « : » du document notent l'allongement a l'oral, pas l'orthographe : ils deviennent des notes.
+
+Serie attestee « pouvoir commencer » au passe (ajoutee par l'autrice) :
+- na lendi batika / wa lendi batika (tu) / wa lendi batika (il) / ta lendi batika (variante tua lendi batika) / lua lendi batika / ba lendi batika.
+- Demain je pourrai commencer = `mbaji ndendi batika`.
+
+Verbe Batika (commencer), formes attestees uniquement :
+- Mbo ni batika = je commencerai.
+- Nkokela mbo ni batika = je commencerai ce soir.

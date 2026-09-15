@@ -210,7 +210,24 @@ verb(
                "You (pl.) can start.", "They can start."],
               ["Ndendi", "Lendi", "lendi", "lendi", "lendi", "lendi"],
               persons=["Je", "Tu", "On", "Nous", "Vous", "Ils"]),
+        tense("Pouvoir commencer — passé", "To be able to start — past",
+              ["na lendi batika", "wa lendi batika", "wa lendi batika",
+               "ta lendi batika", "lua lendi batika", "ba lendi batika"],
+              ["Je pouvais commencer.", "Tu pouvais commencer.", "Il pouvait commencer.",
+               "Nous pouvions commencer.", "Vous pouviez commencer.",
+               "Ils/Elles pouvaient commencer."],
+              ["I could start.", "You could start.", "He could start.", "We could start.",
+               "You (pl.) could start.", "They could start."],
+              ["lendi", "lendi", "lendi", "lendi", "lendi", "lendi"],
+              {3: "Variante : tua lendi batika."}),
+        tense("Pouvoir commencer — demain", "To be able to start — tomorrow",
+              ["mbaji ndendi batika"],
+              ["Demain je pourrai commencer."],
+              ["Tomorrow I will be able to start."],
+              ["ndendi"],
+              persons=["Je"]),
         tense(*PAST, ["na lendi", "wa lendi", "wa lendi", "tua lendi", "lua lendi", "ba lendi"],
+
               frv("ai pu", "as pu", "a pu", "avons pu", "avez pu", "ont pu"),
               en_same("could"), "lendi"),
         tense(*FUTURE, fut("lenda"),
@@ -219,6 +236,20 @@ verb(
     ],
     note="Le passé na lendi / wa lendi… est homographe avec le passé de landa (suivre).",
 )
+
+# ---------------------------------------------------------------- BATIKA
+verb(
+    "Batika", "commencer", "to start",
+    [
+        tense(*FUTURE, ["Mbo ni batika"], ["Je commencerai."], ["I will start."],
+              ["batika"], persons=["Je"], rule=FUT_RULE),
+        tense("Futur — ce soir", "Future — this evening",
+              ["Nkokela mbo ni batika"], ["Je commencerai ce soir."],
+              ["I will start this evening."], ["batika"], persons=["Je"]),
+    ],
+)
+
+
 
 # ---------------------------------------------------------------- BONGA
 verb(
