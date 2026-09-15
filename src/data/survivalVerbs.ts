@@ -905,6 +905,68 @@ export const survivalVerbs: SurvivalVerb[] = [
         ]
       },
       {
+        "tense": "Pouvoir commencer — passé",
+        "tenseEn": "To be able to start — past",
+        "rows": [
+          {
+            "person": "Je",
+            "lari": "na lendi batika",
+            "fr": "Je pouvais commencer.",
+            "en": "I could start.",
+            "verbForm": "lendi"
+          },
+          {
+            "person": "Tu",
+            "lari": "wa lendi batika",
+            "fr": "Tu pouvais commencer.",
+            "en": "You could start.",
+            "verbForm": "lendi"
+          },
+          {
+            "person": "Il/Elle",
+            "lari": "wa lendi batika",
+            "fr": "Il pouvait commencer.",
+            "en": "He could start.",
+            "verbForm": "lendi"
+          },
+          {
+            "person": "Nous",
+            "lari": "ta lendi batika",
+            "fr": "Nous pouvions commencer.",
+            "en": "We could start.",
+            "verbForm": "lendi",
+            "note": "Variante : tua lendi batika."
+          },
+          {
+            "person": "Vous",
+            "lari": "lua lendi batika",
+            "fr": "Vous pouviez commencer.",
+            "en": "You (pl.) could start.",
+            "verbForm": "lendi"
+          },
+          {
+            "person": "Ils/Elles",
+            "lari": "ba lendi batika",
+            "fr": "Ils/Elles pouvaient commencer.",
+            "en": "They could start.",
+            "verbForm": "lendi"
+          }
+        ]
+      },
+      {
+        "tense": "Pouvoir commencer — demain",
+        "tenseEn": "To be able to start — tomorrow",
+        "rows": [
+          {
+            "person": "Je",
+            "lari": "mbaji ndendi batika",
+            "fr": "Demain je pourrai commencer.",
+            "en": "Tomorrow I will be able to start.",
+            "verbForm": "ndendi"
+          }
+        ]
+      },
+      {
         "tense": "Passé",
         "tenseEn": "Past",
         "rows": [
@@ -1003,6 +1065,40 @@ export const survivalVerbs: SurvivalVerb[] = [
       }
     ],
     "note": "Le passé na lendi / wa lendi… est homographe avec le passé de landa (suivre)."
+  },
+  {
+    "verb": "Batika",
+    "meaning": "commencer",
+    "meaningEn": "to start",
+    "tenses": [
+      {
+        "tense": "Futur",
+        "tenseEn": "Future",
+        "rows": [
+          {
+            "person": "Je",
+            "lari": "Mbo ni batika",
+            "fr": "Je commencerai.",
+            "en": "I will start.",
+            "verbForm": "batika"
+          }
+        ],
+        "rule": "mbo + particule du pronom + infinitif"
+      },
+      {
+        "tense": "Futur — ce soir",
+        "tenseEn": "Future — this evening",
+        "rows": [
+          {
+            "person": "Je",
+            "lari": "Nkokela mbo ni batika",
+            "fr": "Je commencerai ce soir.",
+            "en": "I will start this evening.",
+            "verbForm": "batika"
+          }
+        ]
+      }
+    ]
   },
   {
     "verb": "Bonga",
