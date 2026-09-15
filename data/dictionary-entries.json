@@ -2009,6 +2009,16 @@
   "en": "35 pieces of clothing."
  },
  {
+  "lari": "Binkuti ni ta sala.",
+  "fr": "Je fabrique des habits.",
+  "en": "I make clothes."
+ },
+ {
+  "lari": "Binkuti ni ta sukula.",
+  "fr": "Je lave des habits.",
+  "en": "I wash clothes."
+ },
+ {
   "lari": "Binkuti ni ta sumba.",
   "fr": "Je suis en train d'acheter des vêtements.",
   "en": "I'm buying clothes."
