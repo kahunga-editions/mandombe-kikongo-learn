@@ -107,11 +107,21 @@ for (const e of verbeBaData as any[]) {
   }
 }
 
+const header = [
+  "",
+  "## Conjugaisons validées (AUTORITÉ MAXIMALE — même statut que les corrections expert)",
+  "Ces formes proviennent des tableaux de conjugaison validés de l'application.",
+  "Si la phrase à traduire correspond à l'une d'elles (ou en contient une), tu DOIS reprendre la forme lari VERBATIM.",
+  "N'invente jamais une autre forme conjuguée que celles listées ici ou attestées dans le corpus.",
+];
+
 const lines = forms.map((f) => {
   const meta = [f.verb, f.tense, f.person].filter(Boolean).join(" · ");
   const note = f.note ? ` [note : ${f.note}]` : "";
   return `- "${f.lari}" = "${f.fr}"${f.en ? ` / EN: "${f.en}"` : ""}${meta ? ` (${meta})` : ""}${note}`;
 });
+
+const blockText = [...header, ...lines].join("\n");
 
 const out = `// Généré par scripts/build_translator_conjugations.ts — ne pas éditer à la main.
 export interface ConjugationForm {
@@ -126,14 +136,7 @@ export interface ConjugationForm {
 
 export const CONJUGATION_FORMS: ConjugationForm[] = ${JSON.stringify(forms, null, 2)};
 
-export const CONJUGATION_CORPUS_BLOCK = [
-  "",
-  "## Conjugaisons validées (AUTORITÉ MAXIMALE — même statut que les corrections expert)",
-  "Ces formes proviennent des tableaux de conjugaison validés de l'application.",
-  "Si la phrase à traduire correspond à l'une d'elles (ou en contient une), tu DOIS reprendre la forme lari VERBATIM.",
-  "N'invente jamais une autre forme conjuguée que celles listées ici ou attestées dans le corpus.",
-  ${JSON.stringify(lines).slice(1, -1) ? "..." + JSON.stringify(lines) : "[]"},
-].flat().join("\\n");
+export const CONJUGATION_CORPUS_BLOCK = ${JSON.stringify(blockText)};
 
 const normalizeKey = (s: string): string =>
   (s || "")
