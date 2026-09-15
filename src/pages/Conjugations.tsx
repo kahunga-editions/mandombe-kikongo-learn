@@ -1,12 +1,14 @@
 import { useMemo, useState } from "react";
 import { Search, Layers } from "lucide-react";
 import { Input } from "@/components/ui/input";
+import { Switch } from "@/components/ui/switch";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { SEO } from "@/components/SEO";
 import MandombeSpeaker from "@/components/MandombeSpeaker";
 import { cleanMandombe } from "@/lib/mandombeText";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useTranslatedContent } from "@/hooks/useTranslatedContent";
 import { lessons } from "@/data/lessons";
 import { conjugationSeries } from "@/data/conjugationSeries";
 import { verbeBaData } from "@/data/verbeBa";
@@ -20,7 +22,7 @@ interface FlatTable {
   meaning: string;
   tense: string;
   isExpression: boolean;
-  rows: { person: string; lari: string; mandombe: string; gloss?: string; note?: string; verbForm?: string }[];
+  rows: { person: string; lari: string; mandombe: string; fr?: string; en?: string; note?: string; verbForm?: string }[];
 }
 
 interface SearchResult {
@@ -31,7 +33,8 @@ interface SearchResult {
   person: string;
   lari: string;
   mandombe: string;
-  gloss?: string;
+  fr?: string;
+  en?: string;
   note?: string;
   verbForm?: string;
 }
@@ -62,6 +65,18 @@ const norm = (s: string) =>
     .replace(/[-_'’.,;:!?]/g, " ")
     .replace(/\s+/g, " ")
     .trim();
+
+const languageNames = {
+  fr: "français",
+  en: "English",
+  pt: "português",
+  es: "español",
+  it: "italiano",
+  ln: "Lingála",
+  el: "ελληνικά",
+  ko: "한국어",
+  de: "Deutsch",
+};
 
 /** Met en évidence la forme verbale au sein d'une phrase Mandombe. */
 
@@ -125,8 +140,17 @@ function HighlightedMandombe({
 
 const Conjugations = () => {
   const { language } = useLanguage();
+  const { getTranslation, isTranslating } = useTranslatedContent({ alwaysDynamic: true });
   const isFr = language === "fr";
   const [query, setQuery] = useState("");
+  const [showSelectedTranslation, setShowSelectedTranslation] = useState(false);
+
+  const translatedGloss = (fr?: string, en?: string) => {
+    if (!fr) return en || "";
+    if (!showSelectedTranslation || language === "fr") return fr;
+    if (language === "en" && en) return en;
+    return getTranslation(fr);
+  };
 
   const tables = useMemo<FlatTable[]>(() => {
     const out: FlatTable[] = [];
@@ -157,7 +181,8 @@ const Conjugations = () => {
               person: r.person,
               lari: r.lari,
               mandombe: mandombeText,
-              gloss: (isFr ? r.fr : r.en) || r.fr,
+              fr: r.fr,
+              en: r.en,
               note: (r as { note?: string }).note,
               verbForm: explicit || (table.kind === "expression" ? undefined : guessed),
             };
@@ -187,7 +212,8 @@ const Conjugations = () => {
             person: r.person,
             lari: r.lari,
             mandombe: r.mandombe || r.lari,
-            gloss: (isFr ? r.fr : r.en) || r.fr,
+            fr: r.fr,
+            en: r.en,
             note: r.note,
             verbForm: r.verbForm,
           })),
@@ -209,7 +235,8 @@ const Conjugations = () => {
         (r) =>
           norm(r.lari).includes(q) ||
           norm(r.person).includes(q) ||
-          norm(r.gloss || "").includes(q) ||
+          norm(r.fr || "").includes(q) ||
+          norm(r.en || "").includes(q) ||
           norm(r.note || "").includes(q),
       );
 
@@ -237,7 +264,8 @@ const Conjugations = () => {
           table.tense,
           row.person,
           row.lari,
-          row.gloss,
+          row.fr,
+          row.en,
           row.note,
         ]
           .filter(Boolean)
@@ -253,7 +281,8 @@ const Conjugations = () => {
           person: row.person,
           lari: row.lari,
           mandombe: row.mandombe,
-          gloss: row.gloss,
+          fr: row.fr,
+          en: row.en,
           note: row.note,
           verbForm: row.verbForm,
         });
@@ -274,7 +303,8 @@ const Conjugations = () => {
           person: row.person,
           lari: row.lari,
           mandombe: row.lari,
-          gloss: isFr ? row.fr : row.en || row.fr,
+          fr: row.fr,
+          en: row.en,
           verbForm: row.verbForm || s.verb,
         });
       });
@@ -297,7 +327,7 @@ const Conjugations = () => {
           person: e.classe,
           lari: lat,
           mandombe: kil,
-          gloss: fr,
+          fr,
         });
       });
     });
@@ -359,6 +389,22 @@ const Conjugations = () => {
           />
         </div>
 
+        <div className="max-w-xl mx-auto mt-4 flex items-center justify-center gap-3">
+          <Switch
+            id="conjugation-translation"
+            checked={showSelectedTranslation}
+            onCheckedChange={setShowSelectedTranslation}
+            disabled={language === "fr"}
+            aria-label={`Afficher la traduction en ${languageNames[language]}`}
+          />
+          <label htmlFor="conjugation-translation" className="text-sm text-muted-foreground">
+            {language === "fr"
+              ? "Traduction française"
+              : `${showSelectedTranslation ? "Traduction" : "Traduire"} · ${languageNames[language]}`}
+            {showSelectedTranslation && isTranslating ? "…" : ""}
+          </label>
+        </div>
+
         {query.trim() && (
           <section aria-live="polite" className="max-w-3xl mx-auto mt-8">
             {searchResults.length > 0 ? (
@@ -374,7 +420,6 @@ const Conjugations = () => {
                       <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs uppercase tracking-wide text-muted-foreground">
                         <span className="font-semibold text-primary">{result.verb}</span>
                         <span>{result.tense}</span>
-                        <span>{result.person}</span>
                       </div>
                       <div className="font-mandombe block w-full mt-3 text-4xl md:text-5xl leading-[2.2] text-gold break-words">
                         <HighlightedMandombe text={result.mandombe} verb={result.verbForm} />
@@ -383,7 +428,9 @@ const Conjugations = () => {
                         <span className="text-base font-medium text-foreground">{result.lari}</span>
                         <MandombeSpeaker lariText={result.lari} />
                       </div>
-                      {result.gloss && <div className="mt-1 text-base text-muted-foreground">{result.gloss}</div>}
+                      {(result.fr || result.en) && (
+                        <div className="mt-1 text-base text-muted-foreground">{translatedGloss(result.fr, result.en)}</div>
+                      )}
                       {result.note && <div className="mt-1 text-xs italic text-muted-foreground">{result.note}</div>}
                     </li>
                   ))}
@@ -428,7 +475,7 @@ const Conjugations = () => {
                           <span className="text-sm text-foreground/80">{e.c_lat}</span>
                           <MandombeSpeaker lariText={e.c_lat} />
                         </div>
-                        <div className="mt-1 text-sm text-muted-foreground italic">{e.c_fr}</div>
+                        <div className="mt-1 text-sm text-muted-foreground italic">{translatedGloss(e.c_fr)}</div>
                       </div>
 
                       {/* forme pleine */}
@@ -443,7 +490,7 @@ const Conjugations = () => {
                           <span className="text-sm text-foreground/80">{e.f_lat}</span>
                           <MandombeSpeaker lariText={e.f_lat} />
                         </div>
-                        <div className="mt-1 text-sm text-muted-foreground italic">{e.f_fr}</div>
+                        <div className="mt-1 text-sm text-muted-foreground italic">{translatedGloss(e.f_fr)}</div>
                       </div>
                     </div>
                   </li>
@@ -459,7 +506,7 @@ const Conjugations = () => {
                       <span className="text-sm text-foreground/80">{e.p_lat}</span>
                       <MandombeSpeaker lariText={e.p_lat} />
                     </div>
-                    <div className="mt-1 text-sm text-muted-foreground italic">{e.p_fr}</div>
+                    <div className="mt-1 text-sm text-muted-foreground italic">{translatedGloss(e.p_fr)}</div>
                   </li>
                 </ul>
               </article>
@@ -517,7 +564,6 @@ const Conjugations = () => {
                     <ul className="mt-3 divide-y divide-border/60">
                       {table.rows.map((row, ri) => (
                         <li key={ri} className="py-3">
-                          <div className="text-xs uppercase tracking-wide text-muted-foreground">{row.person}</div>
                           <div className="font-mandombe block w-full leading-[2.2] pb-2 text-3xl md:text-4xl text-gold break-words">
                             <HighlightedMandombe text={row.mandombe} verb={row.verbForm} />
                           </div>
@@ -525,7 +571,9 @@ const Conjugations = () => {
                             <span className="text-sm text-foreground/80">{row.lari}</span>
                             <MandombeSpeaker lariText={row.lari} />
                           </div>
-                          {row.gloss && <div className="mt-1 text-sm text-muted-foreground">{row.gloss}</div>}
+                          {(row.fr || row.en) && (
+                            <div className="mt-1 text-sm text-muted-foreground">{translatedGloss(row.fr, row.en)}</div>
+                          )}
                           {row.note && <div className="text-xs text-muted-foreground italic">{row.note}</div>}
                         </li>
                       ))}
@@ -566,7 +614,6 @@ const Conjugations = () => {
                       }
                       return (
                         <li key={ri} className="rounded-xl border border-border/70 p-4">
-                          <div className="text-xs uppercase tracking-wide text-muted-foreground">{row.person}</div>
                           <div className="font-mandombe block w-full leading-[2.2] pb-2 text-3xl md:text-4xl text-gold break-words">
                             <HighlightedMandombe text={row.lari} verb={s.verb || verbForm} />
                           </div>
@@ -574,7 +621,7 @@ const Conjugations = () => {
                             <span className="text-sm text-foreground/80">{row.lari}</span>
                             <MandombeSpeaker lariText={row.lari} />
                           </div>
-                          <div className="text-sm text-muted-foreground">{isFr ? row.fr : row.en || row.fr}</div>
+                          <div className="text-sm text-muted-foreground">{translatedGloss(row.fr, row.en)}</div>
                         </li>
                       );
                     })}
