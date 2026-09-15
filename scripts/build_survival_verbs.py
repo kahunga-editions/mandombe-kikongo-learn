@@ -841,7 +841,7 @@ verb(
 
 # ---------------------------------------------------------------- TULA
 verb(
-    "Tula", "mettre", "to put",
+    "Tula", "mettre, poser, déposer, arriver", "to put, to set down, to arrive",
     [
         tense(*PAST, ["nturidi", "turidi", "turidi", "tu turidi", "lu turidi", "ba turidi"],
               frv("ai mis", "as mis", "a mis", "avons mis", "avez mis", "ont mis"),
