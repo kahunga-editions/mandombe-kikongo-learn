@@ -5042,6 +5042,35 @@ serve(async (req) => {
       });
     }
 
+    // --- Conjugaisons validées : correspondance exacte (les corrections expert priment) ---
+    if (sourceLang === "lari" || targetLang === "lari") {
+      const conjDirection = targetLang === "lari" ? "to-lari" : "from-lari";
+      const match = findConjugationMatch(text, conjDirection);
+      if (match) {
+        const gloss = targetLang === "en" && match.en ? match.en : match.fr;
+        const isGlossTarget = targetLang === "fr" || (targetLang === "en" && !!match.en);
+        if (conjDirection === "to-lari" ? sourceLang === "fr" : isGlossTarget) {
+          const noteParts = [
+            [match.verb, match.tense, match.person].filter(Boolean).join(" · "),
+            match.note || "",
+            "Forme issue des conjugaisons validées de l'application.",
+          ].filter(Boolean);
+          return new Response(JSON.stringify({
+            translation: conjDirection === "to-lari" ? match.lari : gloss,
+            mandombe: conjDirection === "to-lari" ? match.lari : "",
+            ipa: "",
+            notes: noteParts.join(" — "),
+          }), {
+            headers: { ...corsHeaders, "Content-Type": "application/json" },
+          });
+        }
+      }
+    }
+
+    const conjugationsBlock = buildConjugationsBlock(text);
+
+
+
     // --- Load corrections as few-shot examples ---
     // 1) Tokens-overlap query: find corrections that share lexical tokens with the input
     const tokens = text
