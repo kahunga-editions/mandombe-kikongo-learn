@@ -21724,7 +21724,7 @@ export const lessons: Lesson[] = [
           { person: "Tu", lari: "mbo hana musua", mandombe: "mbo hana musuwa", fr: "Tu permettras.", en: "You will permit." },
           { person: "Il/Elle", lari: "mbo ka hana musua", mandombe: "mbo ka hana musuwa", fr: "Il/Elle permettra.", en: "He/She will permit." },
           { person: "Nous", lari: "mbo tu hana musua", mandombe: "mbo tu hana musuwa", fr: "Nous permettrons.", en: "We will permit." },
-          { person: "Vous", lari: "mbo lu hana musua", mandombe: "mbo lu hana musuwa", fr: "Vous meMettrez.", en: "You will permit." },
+          { person: "Vous", lari: "mbo lu hana musua", mandombe: "mbo lu hana musuwa", fr: "Vous permettrez.", en: "You will permit." },
           { person: "Ils/Elles", lari: "mbo ba hana musua", mandombe: "mbo ba hana musuwa", fr: "Ils/Elles permettront.", en: "They will permit." },
         ],
       },
