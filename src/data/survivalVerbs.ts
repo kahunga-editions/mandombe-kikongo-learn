@@ -5736,8 +5736,8 @@ export const survivalVerbs: SurvivalVerb[] = [
   },
   {
     "verb": "Tula",
-    "meaning": "mettre, poser, déposer, arriver",
-    "meaningEn": "to put, to set down, to arrive",
+    "meaning": "mettre, poser, déposer, arriver, être arrivé",
+    "meaningEn": "to put, to set down, to arrive, to have arrived",
     "tenses": [
       {
         "tense": "Passé",
@@ -5886,6 +5886,55 @@ export const survivalVerbs: SurvivalVerb[] = [
           }
         ],
         "rule": "mbo + particule du pronom + infinitif"
+      },
+      {
+        "tense": "Futur négatif",
+        "tenseEn": "Future negative",
+        "rows": [
+          {
+            "person": "Je",
+            "lari": "ka ni tula ko",
+            "fr": "Je ne mettrai pas / n'arriverai pas.",
+            "en": "I will not put / arrive.",
+            "verbForm": "tula"
+          },
+          {
+            "person": "Tu",
+            "lari": "ku tula ko",
+            "fr": "Tu ne mettras pas / n'arriveras pas.",
+            "en": "You will not put / arrive.",
+            "verbForm": "tula"
+          },
+          {
+            "person": "Il/Elle",
+            "lari": "ka tula ko",
+            "fr": "Il/Elle ne mettra pas / n'arrivera pas.",
+            "en": "He/She will not put / arrive.",
+            "verbForm": "tula"
+          },
+          {
+            "person": "Nous",
+            "lari": "ka tu tula ko",
+            "fr": "Nous ne mettrons pas / n'arriverons pas.",
+            "en": "We will not put / arrive.",
+            "verbForm": "tula"
+          },
+          {
+            "person": "Vous",
+            "lari": "ka lu tula ko",
+            "fr": "Vous ne mettrez pas / n'arriverez pas.",
+            "en": "You (pl.) will not put / arrive.",
+            "verbForm": "tula"
+          },
+          {
+            "person": "Ils/Elles",
+            "lari": "ka ba tula ko",
+            "fr": "Ils/Elles ne mettront pas / n'arriveront pas.",
+            "en": "They will not put / arrive.",
+            "verbForm": "tula"
+          }
+        ],
+        "rule": "ka / ku + particule du pronom + verbe + ko"
       }
     ]
   },
