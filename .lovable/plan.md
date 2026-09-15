@@ -1,42 +1,48 @@
-# Ajouter « pouvoir se battre » aux conjugaisons
+# Conjugaisons : « pouvoir se battre » + correction du présent progressif
 
-## Ce qui sera ajouté
+## 1. Ajouter « pouvoir se battre » (nuana)
 
-Deux séries sous le verbe **Lenda** (pouvoir), reprises exactement telles que vous les avez données, sans rien compléter ni harmoniser :
+Deux séries sous le verbe **Lenda** (pouvoir), reprises exactement telles que fournies :
 
-**Présent — pouvoir se battre**
-- Ndendi nuana = Je peux me battre.
-- Lendi nuana = Tu peux te battre.
-- Lendi nuana = Il peut se battre.
-- tu lendi nuana = Nous pouvons nous battre.
-- lu lendi nuana = Vous pouvez vous battre.
-- ba lendi nuana = Ils peuvent se battre.
+Présent — Ndendi nuana / Lendi nuana / Lendi nuana / tu lendi nuana / lu lendi nuana / ba lendi nuana.
 
-**Passé — pouvoir se battre**
-- na lendi nuana = Je pouvais me battre.
-- wa lendi nuana = Tu pouvais te battre.
-- wa lendi nuana = Il pouvait se battre.
-- ta lendi nuana = Nous pouvions nous battre. (variante notée : tua lendi nuana)
-- lua lendi nuana = Vous pouviez vous battre.
-- ba lendi nuana = Ils/Elles pouvaient se battre.
+Passé — na lendi nuana / wa lendi nuana / wa lendi nuana / ta lendi nuana (variante notée : tua lendi nuana) / lua lendi nuana / ba lendi nuana.
 
-Chaque ligne aura sa phrase complète en Mandombe avec la forme verbale (**Ndendi**, **Lendi**, **lendi**) mise en valeur, sa translittération latine avec le bouton audio, et sa traduction française puis anglaise.
+Chaque ligne : phrase complète en Mandombe avec la forme verbale (Ndendi, Lendi, lendi) mise en valeur, translittération latine avec bouton audio, traduction française puis anglaise. Recherchable par « se battre », « nuana », « je peux me battre », « Ndendi nuana », « pouvais me battre ».
 
-## Recherche
+## 2. Corriger le présent progressif dans les tableaux de leçons
 
-Les lignes seront trouvables en tapant « se battre », « nuana », « je peux me battre », « Ndendi nuana », « pouvais me battre », etc.
+Aujourd'hui, une partie des tableaux affiche la forme nue « ni ta sa », « ka ta dia », « tu ta bonga »… sans thème devant, ce qui est faux. La règle est : **thème + particule du pronom + ta + verbe**.
+
+Correction de toutes les lignes concernées (55 lignes, 11 verbes : sa, dia, nua, bonga, banza, futa, mona, sala, longoka, nimba, kwiza) en rétablissant le thème devant, comme dans les séries déjà correctes :
+
+- sa ni ta sa, sa ta sa, sa ka ta sa, sa tu ta sa, sa lu ta sa, sa ba ta sa
+- dia ni ta dia, nua ni ta nua, bonga ni ta bonga, banza ni ta banza, futa ni ta futa, mona ni ta mona, sala ni ta sala, longoka ni ta longoka, nimba ni ta nimba
+- pour « venir », le thème attesté est **mwizu** : mwizu ni ta kwiza, mwizu ka ta kwiza…
+
+Le Mandombe de chaque ligne est régénéré en conséquence. Les deux exercices qui proposent « ni ta sa » et « ni ta zenga » comme réponses sont corrigés de la même manière.
+
+## 3. Deux phrases attestées ajoutées
+
+- **Binkuti ni ta sala** = Je fabrique des habits. / I make clothes.
+- **Binkuti ni ta sukula** = Je lave des habits. / I wash clothes.
+
+Ajoutées au dictionnaire en ligne et comme exemples du présent progressif dans les conjugaisons.
 
 ## Vérification
 
-- Recherches ci-dessus testées sur ordinateur et sur mobile.
-- Contrôle visuel : pas de chevauchement entre Mandombe et translittération, audio fonctionnel.
+- Recherche des nouvelles formes sur ordinateur et mobile.
+- Plus aucune forme progressive sans thème dans les tableaux.
+- Mandombe, translittération, audio et traductions correctement espacés.
 
 ## Hors périmètre
 
-- Aucune forme ajoutée par analogie, aucune autre conjugaison modifiée.
+- Aucune forme ajoutée par analogie, aucun autre verbe modifié.
 - Aucun document ODT/PDF généré.
 
 ## Détails techniques
 
-- Ajout des deux blocs `tense(...)` dans le verbe Lenda de `scripts/build_survival_verbs.py`, puis régénération de `src/data/survivalVerbs.ts`.
-- Mise à jour de `.lovable/memory/grammar/zonza-verbes-de-survie.md` avec les formes attestées.
+- `scripts/build_survival_verbs.py` : deux blocs `tense(...)` pour nuana, puis régénération de `src/data/survivalVerbs.ts`.
+- `src/data/lessons.ts` : correction des lignes de conjugaison progressive (lari + mandombe) et des deux options d'exercice.
+- `data/dictionary-entries.json` : deux nouvelles entrées d'exemple.
+- Mise à jour de `.lovable/memory/grammar/zonza-verbes-de-survie.md` (règle « jamais de progressif sans thème »).
