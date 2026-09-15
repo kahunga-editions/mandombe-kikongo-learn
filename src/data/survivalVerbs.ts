@@ -1099,6 +1099,54 @@ export const survivalVerbs: SurvivalVerb[] = [
         ]
       },
       {
+        "tense": "Pouvoir manger",
+        "tenseEn": "To be able to eat",
+        "rows": [
+          {
+            "person": "Je",
+            "lari": "ndendi dia",
+            "fr": "Je peux manger.",
+            "en": "I can eat.",
+            "verbForm": "ndendi"
+          },
+          {
+            "person": "Tu",
+            "lari": "lendi dia",
+            "fr": "Tu peux manger.",
+            "en": "You can eat.",
+            "verbForm": "lendi"
+          },
+          {
+            "person": "Il/Elle",
+            "lari": "lendi dia",
+            "fr": "Il/Elle peut manger.",
+            "en": "He/She can eat.",
+            "verbForm": "lendi"
+          },
+          {
+            "person": "Nous",
+            "lari": "tu lendi dia",
+            "fr": "Nous pouvons manger.",
+            "en": "We can eat.",
+            "verbForm": "lendi"
+          },
+          {
+            "person": "Vous",
+            "lari": "lu lendi dia",
+            "fr": "Vous pouvez manger.",
+            "en": "You (pl.) can eat.",
+            "verbForm": "lendi"
+          },
+          {
+            "person": "Ils/Elles",
+            "lari": "ba lendi dia",
+            "fr": "Ils/Elles peuvent manger.",
+            "en": "They can eat.",
+            "verbForm": "lendi"
+          }
+        ]
+      },
+      {
         "tense": "Pouvoir commencer — demain",
         "tenseEn": "To be able to start — tomorrow",
         "rows": [
@@ -1315,6 +1363,19 @@ export const survivalVerbs: SurvivalVerb[] = [
             "fr": "Ils/Elles doivent travailler.",
             "en": "They must work.",
             "verbForm": "fueti"
+          }
+        ]
+      },
+      {
+        "tense": "Devoir manger",
+        "tenseEn": "To have to eat",
+        "rows": [
+          {
+            "person": "Je",
+            "lari": "mfueti dia",
+            "fr": "Je dois manger.",
+            "en": "I must eat.",
+            "verbForm": "mfueti"
           }
         ]
       }
