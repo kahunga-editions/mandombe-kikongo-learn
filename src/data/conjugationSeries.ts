@@ -103,6 +103,14 @@ export const conjugationSeries: ConjugationSeries[] = [
     ],
   },
   {
+    pattern: "Binkuti · présent en cours",
+    verb: "ta sala",
+    rows: [
+      { person: "Je", marker: "ni", lari: "Binkuti ni ta sala.", fr: "Je fabrique des habits.", en: "I make clothes.", verbForm: "sala" },
+      { person: "Je", marker: "ni", lari: "Binkuti ni ta sukula.", fr: "Je lave des habits.", en: "I wash clothes.", verbForm: "sukula" },
+    ],
+  },
+  {
     pattern: "Zaza · ta zaza mu bungu dia madia.",
     verb: "ta zaza",
     rows: [
