@@ -1,4 +1,4 @@
-# Corriger le N latin dans « Njena » (verbe être)
+# Corriger le N latin des mots en « nje- »
 
 ## Le problème
 
@@ -6,18 +6,19 @@ Sur la carte du verbe être, le mandombe de « Njena » affiche un **N latin** c
 
 ## Correction
 
-- Pour les formes du verbe être **Njena** et sa forme courte **Nje**, écrire en mandombe **Ngiena** / **Ngie**.
-- La translittération latine affichée reste **Njena** / **Nje**, ainsi que la traduction et l'audio.
-- Aucune autre forme en `nje-` (Njeka, Njevo, njele, njelele…) n'est touchée : la correction ne vaut que pour le verbe être.
+- Verbe être : **Njena** et sa forme courte **Nje** s'écrivent en mandombe **Ngiena** / **Ngie**.
+- Les suites **Njeka**, **Njevo**, **njele**, **njelele** s'écrivent en mandombe avec **nz** : **Nzeka**, **Nzevo**, **nzele**, **nzelele**.
+- Dans tous les cas, la translittération latine affichée reste inchangée (Njena, Nje, Njeka, Njevo, njele, njelele), ainsi que les traductions et l'audio.
 
 ## Vérification
 
-- La carte « Njena — Je suis. » ne contient plus aucune lettre latine dans le bloc mandombe.
-- La ligne latine indique toujours « Njena » et « Forme courte : Nje. ».
+- Plus aucune lettre latine dans les blocs mandombe de ces mots (conjugaisons, leçons, dictionnaire en ligne).
+- Les lignes latines affichent toujours l'orthographe d'origine, dont « Forme courte : Nje. ».
 - Contrôle visuel sur ordinateur et mobile.
 
 ## Détails techniques
 
-- Ajout d'un champ `mandombe` sur la ligne concernée du verbe **Ba** dans `scripts/build_survival_verbs.py`, puis régénération de `src/data/survivalVerbs.ts` (la page utilise `r.mandombe || r.lari`).
-- Vérifier que la note « Forme courte » du verbe être est rendue en mandombe sans lettre latine dans `src/pages/Conjugations.tsx`.
-- Aucun document ODT/PDF, aucune entrée du dictionnaire modifiés.
+- Champ `mandombe` renseigné pour la ligne du verbe **Ba** dans `scripts/build_survival_verbs.py`, puis régénération de `src/data/survivalVerbs.ts` (la page utilise `r.mandombe || r.lari`).
+- Champ `mandombe` renseigné pour les occurrences de Njeka / Njevo / njele / njelele dans `src/data/survivalVerbs.ts`, `src/data/lessons.ts` et `data/dictionary-entries.json`, sans toucher au champ `lari`.
+- Mémorisation de ces cas nommés dans la base de saisie du mandombe (pas de règle générale sur `nj`).
+- Aucun document ODT/PDF régénéré.
