@@ -5735,6 +5735,112 @@ export const survivalVerbs: SurvivalVerb[] = [
     ]
   },
   {
+    "verb": "Tula",
+    "meaning": "mettre",
+    "meaningEn": "to put",
+    "tenses": [
+      {
+        "tense": "Passé",
+        "tenseEn": "Past",
+        "rows": [
+          {
+            "person": "Je",
+            "lari": "nturidi",
+            "fr": "J'ai mis.",
+            "en": "I put.",
+            "verbForm": "turidi"
+          },
+          {
+            "person": "Tu",
+            "lari": "turidi",
+            "fr": "Tu as mis.",
+            "en": "You put.",
+            "verbForm": "turidi"
+          },
+          {
+            "person": "Il/Elle",
+            "lari": "turidi",
+            "fr": "Il/Elle a mis.",
+            "en": "He/She put.",
+            "verbForm": "turidi",
+            "note": "Accentuation sur le /ri/ : on entend que c'est la 3e personne."
+          },
+          {
+            "person": "Nous",
+            "lari": "tu turidi",
+            "fr": "Nous avons mis.",
+            "en": "We put.",
+            "verbForm": "turidi"
+          },
+          {
+            "person": "Vous",
+            "lari": "lu turidi",
+            "fr": "Vous avez mis.",
+            "en": "You (pl.) put.",
+            "verbForm": "turidi"
+          },
+          {
+            "person": "Ils/Elles",
+            "lari": "ba turidi",
+            "fr": "Ils/Elles ont mis.",
+            "en": "They put.",
+            "verbForm": "turidi"
+          }
+        ]
+      },
+      {
+        "tense": "Passé négatif",
+        "tenseEn": "Past negative",
+        "rows": [
+          {
+            "person": "Je",
+            "lari": "ka nturidi a ko",
+            "fr": "Je n'ai pas mis.",
+            "en": "I did not put.",
+            "verbForm": "turidi"
+          },
+          {
+            "person": "Tu",
+            "lari": "ku turidi a ko",
+            "fr": "Tu n'as pas mis.",
+            "en": "You did not put.",
+            "verbForm": "turidi"
+          },
+          {
+            "person": "Il/Elle",
+            "lari": "ka turidi a ko",
+            "fr": "Il/Elle n'a pas mis.",
+            "en": "He/She did not put.",
+            "verbForm": "turidi",
+            "note": "Accentuation sur le /ri/ : on entend que c'est la 3e personne."
+          },
+          {
+            "person": "Nous",
+            "lari": "ka tu turidi a ko",
+            "fr": "Nous n'avons pas mis.",
+            "en": "We did not put.",
+            "verbForm": "turidi"
+          },
+          {
+            "person": "Vous",
+            "lari": "ka lu turidi a ko",
+            "fr": "Vous n'avez pas mis.",
+            "en": "You (pl.) did not put.",
+            "verbForm": "turidi"
+          },
+          {
+            "person": "Ils/Elles",
+            "lari": "ka ba turidi a ko",
+            "fr": "Ils/Elles n'ont pas mis.",
+            "en": "They did not put.",
+            "verbForm": "turidi"
+          }
+        ],
+        "rule": "ka / ku + particule du pronom + verbe + a ko"
+      }
+    ]
+  },
+  {
     "verb": "Vutula",
     "meaning": "rendre",
     "meaningEn": "to give back",
