@@ -348,7 +348,7 @@ const Conjugations = () => {
         person: "",
         lari: f.lari,
         mandombe: f.mandombe || f.lari,
-        fr: f.lang === "fr" ? f.gloss : undefined,
+        fr: f.gloss,
         en: f.lang === "en" ? f.gloss : undefined,
         note: f.notes,
       });
@@ -463,6 +463,40 @@ const Conjugations = () => {
                 {isFr ? "Aucune conjugaison trouvée." : "No conjugation found."}
               </p>
             )}
+          </section>
+        )}
+
+        {!query.trim() && validatedForms.length > 0 && (
+          <section className="max-w-3xl mx-auto mt-16">
+            <div className="flex items-center gap-2">
+              <Layers className="w-5 h-5 text-primary" />
+              <h2 className="font-display text-2xl font-bold text-foreground">
+                {isFr ? "Formes validées dans le traducteur" : "Forms validated in the translator"}
+              </h2>
+            </div>
+            <p className="mt-2 text-muted-foreground">
+              {isFr
+                ? "Ces formes ont été validées lors de traductions. Elles complètent les tableaux et sont réutilisées par le traducteur."
+                : "These forms were validated while translating. They complete the tables and are reused by the translator."}
+            </p>
+            <ul className="mt-6 space-y-3">
+              {validatedForms.slice(0, 30).map((f, i) => (
+                <li key={`vf-${i}`} className="border border-border bg-card rounded-lg px-5 py-4">
+                  <span className="text-xs uppercase tracking-wide text-primary font-semibold">
+                    {isFr ? "Validé par l'expert" : "Expert validated"}
+                  </span>
+                  <div className="font-mandombe block w-full mt-3 text-4xl md:text-5xl leading-[2.2] text-gold break-words">
+                    {cleanMandombe(f.mandombe || f.lari)}
+                  </div>
+                  <div className="mt-2 flex items-center gap-2 flex-wrap">
+                    <span className="text-base font-medium text-foreground">{f.lari}</span>
+                    <MandombeSpeaker lariText={f.lari} />
+                  </div>
+                  <div className="mt-1 text-base text-muted-foreground">{f.gloss}</div>
+                  {f.notes && <div className="mt-1 text-xs italic text-muted-foreground">{f.notes}</div>}
+                </li>
+              ))}
+            </ul>
           </section>
         )}
 
