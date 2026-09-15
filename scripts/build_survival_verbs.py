@@ -71,7 +71,7 @@ def tense(label, label_en, lari, fr, en, verb_form, notes=None, rule=None, perso
             "lari": lari[i],
             "fr": fr[i],
             "en": en[i],
-            "verbForm": verb_form,
+            "verbForm": verb_form[i] if isinstance(verb_form, list) else verb_form,
         }
         m = mandombe_of(lari[i])
         if m != lari[i]:
@@ -208,7 +208,8 @@ verb(
                "Nous pouvons commencer.", "Vous pouvez commencer.", "Ils peuvent commencer."],
               ["I can start.", "You can start.", "One can start.", "We can start.",
                "You (pl.) can start.", "They can start."],
-              "lendi", persons=["Je", "Tu", "On", "Nous", "Vous", "Ils"]),
+              ["Ndendi", "Lendi", "lendi", "lendi", "lendi", "lendi"],
+              persons=["Je", "Tu", "On", "Nous", "Vous", "Ils"]),
         tense(*PAST, ["na lendi", "wa lendi", "wa lendi", "tua lendi", "lua lendi", "ba lendi"],
               frv("ai pu", "as pu", "a pu", "avons pu", "avez pu", "ont pu"),
               en_same("could"), "lendi"),
