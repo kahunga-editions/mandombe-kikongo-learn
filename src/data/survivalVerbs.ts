@@ -1051,6 +1051,54 @@ export const survivalVerbs: SurvivalVerb[] = [
         ]
       },
       {
+        "tense": "Pouvoir travailler",
+        "tenseEn": "To be able to work",
+        "rows": [
+          {
+            "person": "Je",
+            "lari": "ndendi sala",
+            "fr": "Je peux travailler.",
+            "en": "I can work.",
+            "verbForm": "ndendi"
+          },
+          {
+            "person": "Tu",
+            "lari": "lendi sala",
+            "fr": "Tu peux travailler.",
+            "en": "You can work.",
+            "verbForm": "lendi"
+          },
+          {
+            "person": "Il/Elle",
+            "lari": "lendi sala",
+            "fr": "Il/Elle peut travailler.",
+            "en": "He/She can work.",
+            "verbForm": "lendi"
+          },
+          {
+            "person": "Nous",
+            "lari": "tu lendi sala",
+            "fr": "Nous pouvons travailler.",
+            "en": "We can work.",
+            "verbForm": "lendi"
+          },
+          {
+            "person": "Vous",
+            "lari": "lu lendi sala",
+            "fr": "Vous pouvez travailler.",
+            "en": "You (pl.) can work.",
+            "verbForm": "lendi"
+          },
+          {
+            "person": "Ils/Elles",
+            "lari": "ba lendi sala",
+            "fr": "Ils/Elles peuvent travailler.",
+            "en": "They can work.",
+            "verbForm": "lendi"
+          }
+        ]
+      },
+      {
         "tense": "Pouvoir commencer — demain",
         "tenseEn": "To be able to start — tomorrow",
         "rows": [
@@ -1162,6 +1210,115 @@ export const survivalVerbs: SurvivalVerb[] = [
       }
     ],
     "note": "Le passé na lendi / wa lendi… est homographe avec le passé de landa (suivre)."
+  },
+  {
+    "verb": "Fueti",
+    "meaning": "devoir",
+    "meaningEn": "must, to have to",
+    "tenses": [
+      {
+        "tense": "Devoir travailler",
+        "tenseEn": "To have to work",
+        "rows": [
+          {
+            "person": "Je",
+            "lari": "Mfueti sala",
+            "fr": "Je dois travailler.",
+            "en": "I must work.",
+            "verbForm": "Mfueti",
+            "note": "Autre forme : sala mfueti sala."
+          },
+          {
+            "person": "Tu",
+            "lari": "Fueti sala",
+            "fr": "Tu dois travailler.",
+            "en": "You must work.",
+            "verbForm": "Fueti",
+            "note": "Autre forme : sala fueti sala."
+          },
+          {
+            "person": "Il/Elle",
+            "lari": "fueti sala",
+            "fr": "Il/Elle doit travailler.",
+            "en": "He/She must work.",
+            "verbForm": "fueti",
+            "note": "Autre forme : sala ka fueti sala."
+          },
+          {
+            "person": "Nous",
+            "lari": "tu fueti sala",
+            "fr": "Nous devons travailler.",
+            "en": "We must work.",
+            "verbForm": "fueti",
+            "note": "Autre forme : sala tu fueti sala."
+          },
+          {
+            "person": "Vous",
+            "lari": "lu fueti sala",
+            "fr": "Vous devez travailler.",
+            "en": "You (pl.) must work.",
+            "verbForm": "fueti",
+            "note": "Autre forme : sala lu fueti sala."
+          },
+          {
+            "person": "Ils/Elles",
+            "lari": "ba fueti sala",
+            "fr": "Ils/Elles doivent travailler.",
+            "en": "They must work.",
+            "verbForm": "fueti",
+            "note": "Autre forme : sala ba fueti sala."
+          }
+        ]
+      },
+      {
+        "tense": "Devoir travailler — forme avec thème",
+        "tenseEn": "To have to work — with theme",
+        "rows": [
+          {
+            "person": "Je",
+            "lari": "sala mfueti sala",
+            "fr": "Je dois travailler.",
+            "en": "I must work.",
+            "verbForm": "mfueti"
+          },
+          {
+            "person": "Tu",
+            "lari": "sala fueti sala",
+            "fr": "Tu dois travailler.",
+            "en": "You must work.",
+            "verbForm": "fueti"
+          },
+          {
+            "person": "Il/Elle",
+            "lari": "sala ka fueti sala",
+            "fr": "Il/Elle doit travailler.",
+            "en": "He/She must work.",
+            "verbForm": "fueti"
+          },
+          {
+            "person": "Nous",
+            "lari": "sala tu fueti sala",
+            "fr": "Nous devons travailler.",
+            "en": "We must work.",
+            "verbForm": "fueti"
+          },
+          {
+            "person": "Vous",
+            "lari": "sala lu fueti sala",
+            "fr": "Vous devez travailler.",
+            "en": "You (pl.) must work.",
+            "verbForm": "fueti"
+          },
+          {
+            "person": "Ils/Elles",
+            "lari": "sala ba fueti sala",
+            "fr": "Ils/Elles doivent travailler.",
+            "en": "They must work.",
+            "verbForm": "fueti"
+          }
+        ]
+      }
+    ]
   },
   {
     "verb": "Batika",

@@ -44,3 +44,10 @@ Serie attestee « pouvoir commencer » au passe (ajoutee par l'autrice) :
 Verbe Batika (commencer), formes attestees uniquement :
 - Mbo ni batika = je commencerai.
 - Nkokela mbo ni batika = je commencerai ce soir.
+
+Serie attestee « devoir travailler » (fueti), ajoutee par l'autrice, deux formes equivalentes :
+- Mfueti sala / sala mfueti sala ; Fueti sala / sala fueti sala ; fueti sala / sala ka fueti sala ;
+  tu fueti sala / sala tu fueti sala ; lu fueti sala / sala lu fueti sala ; ba fueti sala / sala ba fueti sala.
+
+Serie attestee « pouvoir travailler » : ndendi sala / lendi sala / lendi sala / tu lendi sala /
+lu lendi sala / ba lendi sala.
