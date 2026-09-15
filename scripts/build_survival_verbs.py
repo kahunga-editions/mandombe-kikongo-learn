@@ -63,15 +63,15 @@ def mandombe_of(lari):
     return lari.replace("dj", "j").replace("Dj", "J")
 
 
-def tense(label, label_en, lari, fr, en, verb_form, notes=None, rule=None):
+def tense(label, label_en, lari, fr, en, verb_form, notes=None, rule=None, persons=None):
     rows = []
     for i in range(len(lari)):
         row = {
-            "person": PERSONS[i] if len(lari) == 6 else PERSONS[i],
+            "person": (persons or PERSONS)[i],
             "lari": lari[i],
             "fr": fr[i],
             "en": en[i],
-            "verbForm": verb_form,
+            "verbForm": verb_form[i] if isinstance(verb_form, list) else verb_form,
         }
         m = mandombe_of(lari[i])
         if m != lari[i]:
@@ -201,6 +201,15 @@ verb(
         tense(*PRESENT, ["ndendi", "lendi", "lendi", "tu lendi", "lu lendi", "ba lendi"],
               frv("peux", "peux", "peut", "pouvons", "pouvez", "peuvent"),
               env("can", "can", "can", "can", "can", "can"), "lendi"),
+        tense("Pouvoir commencer", "To be able to start",
+              ["Ndendi batika", "Lendi batika", "tu lendi batika", "tu lendi batika",
+               "lu lendi batika", "ba lendi batika"],
+              ["Je peux commencer.", "Tu peux commencer.", "On peut commencer.",
+               "Nous pouvons commencer.", "Vous pouvez commencer.", "Ils peuvent commencer."],
+              ["I can start.", "You can start.", "One can start.", "We can start.",
+               "You (pl.) can start.", "They can start."],
+              ["Ndendi", "Lendi", "lendi", "lendi", "lendi", "lendi"],
+              persons=["Je", "Tu", "On", "Nous", "Vous", "Ils"]),
         tense(*PAST, ["na lendi", "wa lendi", "wa lendi", "tua lendi", "lua lendi", "ba lendi"],
               frv("ai pu", "as pu", "a pu", "avons pu", "avez pu", "ont pu"),
               en_same("could"), "lendi"),

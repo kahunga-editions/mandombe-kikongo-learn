@@ -857,6 +857,54 @@ export const survivalVerbs: SurvivalVerb[] = [
         ]
       },
       {
+        "tense": "Pouvoir commencer",
+        "tenseEn": "To be able to start",
+        "rows": [
+          {
+            "person": "Je",
+            "lari": "Ndendi batika",
+            "fr": "Je peux commencer.",
+            "en": "I can start.",
+            "verbForm": "Ndendi"
+          },
+          {
+            "person": "Tu",
+            "lari": "Lendi batika",
+            "fr": "Tu peux commencer.",
+            "en": "You can start.",
+            "verbForm": "Lendi"
+          },
+          {
+            "person": "On",
+            "lari": "tu lendi batika",
+            "fr": "On peut commencer.",
+            "en": "One can start.",
+            "verbForm": "lendi"
+          },
+          {
+            "person": "Nous",
+            "lari": "tu lendi batika",
+            "fr": "Nous pouvons commencer.",
+            "en": "We can start.",
+            "verbForm": "lendi"
+          },
+          {
+            "person": "Vous",
+            "lari": "lu lendi batika",
+            "fr": "Vous pouvez commencer.",
+            "en": "You (pl.) can start.",
+            "verbForm": "lendi"
+          },
+          {
+            "person": "Ils",
+            "lari": "ba lendi batika",
+            "fr": "Ils peuvent commencer.",
+            "en": "They can start.",
+            "verbForm": "lendi"
+          }
+        ]
+      },
+      {
         "tense": "Passé",
         "tenseEn": "Past",
         "rows": [
