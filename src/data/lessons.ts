@@ -752,7 +752,7 @@ export const lessons: Lesson[] = [
       {
         type: "multiple-choice",
         question: "How do you say 'I can' (I am able) in Kikongo Lari?",
-        options: ["nzebi", "ndendi", "nje", "ni ta sa"],
+        options: ["nzebi", "ndendi", "nje", "sa ni ta sa"],
         correctIndex: 1,
       },
       {
@@ -1465,11 +1465,11 @@ export const lessons: Lesson[] = [
         question: "How do you express the present progressive in 'I'm cutting'?",
         questionFr: "Comment exprimer le présent progressif dans 'Je coupe' ?",
         questionPt: "Como se expressa o presente progressivo em 'Estou a cortar'?",
-        options: ["ni zenga", "ni ta zenga", "mbo ni zenga", "na zenga"],
+        options: ["ni zenga", "zenga ni ta zenga", "mbo ni zenga", "na zenga"],
         correctIndex: 1,
-        explanation: "The progressive uses 'ta' marker: ni ta zenga.",
-        explanationFr: "Le progressif utilise le marqueur 'ta' : ni ta zenga.",
-        explanationPt: "O progressivo usa o marcador 'ta': ni ta zenga.",
+        explanation: "The progressive uses the theme + 'ta': zenga ni ta zenga.",
+        explanationFr: "Le progressif utilise le thème + 'ta' : zenga ni ta zenga.",
+        explanationPt: "O progressivo usa o tema + 'ta': zenga ni ta zenga.",
       },
       {
         type: "multiple-choice",
@@ -21825,7 +21825,7 @@ export const lessons: Lesson[] = [
           { mandombe: "saridi", lari: "saridi", distractors: ["futiri", "bendji", "wijiri"], french: "tu as travaillé", mode: "glyph-to-latin" as const },
           { mandombe: "ngeni", lari: "ngeni", distractors: ["heni", "nsaridi", "mfutiri"], french: "j'ai donné (permis)", mode: "glyph-to-latin" as const },
           { mandombe: "heni", lari: "heni", distractors: ["ngeni", "saridi", "bendji"], french: "tu as donné (permis)", mode: "glyph-to-latin" as const },
-          { mandombe: "ni ta sala", lari: "ni ta sala", distractors: ["ni ta hana", "ni ta mona", "ni ta futa"], french: "je travaille", mode: "glyph-to-latin" as const },
+          { mandombe: "sala ni ta sala", lari: "sala ni ta sala", distractors: ["musua ni ta hana", "mona ni ta mona", "futa ni ta futa"], french: "je travaille", mode: "glyph-to-latin" as const },
         ],
       },
     ],
