@@ -13,8 +13,9 @@ Verbal negation is discontinuous: **negative marker + (subject particle) + verb 
 
 - **Past**: `ka wa ... a ko`
   - `ka wa zaba a ko` = tu ne savais pas / tu ne connaissais pas
-- **Future**: `ku ... a ko`
-  - `mbaji ku nzaba a ko` = demain tu ne sauras pas
+- **Future**: `ku ... a ko` — verb stays in its BASE form, no initial consonant mutation:
+  - `mbaji ku zaba a ko` = demain tu ne sauras pas
+  - ⚠️ `mbaji ku nzaba a ko` = demain tu ne ME connaîtras pas — the `n-` is the 1SG object prefix (me), a different sentence. Do not confuse the two.
 - **Modal (pouvoir)**: `ku lendi ... ko`
   - `ku lendi a dia ko` = tu ne peux pas manger
 
