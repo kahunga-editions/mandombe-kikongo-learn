@@ -1,5 +1,6 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { translateOffline, type OfflineCorrection } from "../_shared/offline-fallback.ts";
+import { buildConjugationsBlock, findConjugationMatch } from "../_shared/conjugations-corpus.ts";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -5206,7 +5207,7 @@ serve(async (req) => {
         body: JSON.stringify({
           model: "google/gemini-2.5-flash",
           messages: [
-            { role: "system", content: SYSTEM_PROMPT + fewShotBlock },
+            { role: "system", content: SYSTEM_PROMPT + conjugationsBlock + fewShotBlock },
             {
               role: "user",
               content: `Traduis ${dirLabel} le texte suivant :\n\n"${text}"\n\nRédige le champ "notes" en ${notesInLang}.\n\nRéponds en JSON uniquement.`,
