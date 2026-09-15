@@ -13,6 +13,14 @@ Deux regles productives :
 
 Particules : je = ni, tu = (aucune), il/elle = ka, nous = tu, vous = lu, ils/elles = ba.
 
+Serie attestee ajoutee par l'autrice pour « pouvoir commencer » :
+- Je peux commencer = `Ndendi batika`
+- Tu peux commencer = `Lendi batika`
+- On peut commencer = `tu lendi batika`
+- Nous pouvons commencer = `tu lendi batika`
+- Vous pouvez commencer = `lu lendi batika`
+- Ils peuvent commencer = `ba lendi batika`
+
 Verbe etre : nje(na), we(na), ke(na), tue(na), lue(na), be(na) ; passe mbele, bele, ka bele, tu bele, lu bele, ba bele.
 
 Points a arbitrer (repris tels quels, jamais harmonises) :
