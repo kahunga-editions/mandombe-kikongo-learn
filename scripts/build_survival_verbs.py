@@ -841,7 +841,7 @@ verb(
 
 # ---------------------------------------------------------------- TULA
 verb(
-    "Tula", "mettre, poser, déposer, arriver", "to put, to set down, to arrive",
+    "Tula", "mettre, poser, déposer, arriver, être arrivé", "to put, to set down, to arrive, to have arrived",
     [
         tense(*PAST, ["nturidi", "turidi", "turidi", "tu turidi", "lu turidi", "ba turidi"],
               frv("ai mis", "as mis", "a mis", "avons mis", "avez mis", "ont mis"),
@@ -861,6 +861,16 @@ verb(
               ["mettrai / arriverai", "mettras / arriveras", "mettra / arrivera",
                "mettrons / arriverons", "mettrez / arriverez", "mettront / arriveront"],
               en_will("put / arrive"), "tula", None, FUT_RULE),
+        tense("Futur négatif", "Future negative",
+              ["ka ni tula ko", "ku tula ko", "ka tula ko",
+               "ka tu tula ko", "ka lu tula ko", "ka ba tula ko"],
+              frv("ne mettrai pas / n'arriverai pas", "ne mettras pas / n'arriveras pas",
+                  "ne mettra pas / n'arrivera pas", "ne mettrons pas / n'arriverons pas",
+                  "ne mettrez pas / n'arriverez pas", "ne mettront pas / n'arriveront pas"),
+              env("will not put / arrive", "will not put / arrive", "will not put / arrive",
+                  "will not put / arrive", "will not put / arrive", "will not put / arrive"),
+              "tula", None,
+              "ka / ku + particule du pronom + verbe + ko"),
     ],
 )
 
