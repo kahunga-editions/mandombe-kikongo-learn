@@ -865,14 +865,14 @@ export const survivalVerbs: SurvivalVerb[] = [
             "lari": "Ndendi batika",
             "fr": "Je peux commencer.",
             "en": "I can start.",
-            "verbForm": "lendi"
+            "verbForm": "Ndendi"
           },
           {
             "person": "Tu",
             "lari": "Lendi batika",
             "fr": "Tu peux commencer.",
             "en": "You can start.",
-            "verbForm": "lendi"
+            "verbForm": "Lendi"
           },
           {
             "person": "On",
