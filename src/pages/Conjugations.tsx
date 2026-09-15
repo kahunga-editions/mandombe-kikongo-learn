@@ -13,6 +13,7 @@ import { lessons } from "@/data/lessons";
 import { conjugationSeries } from "@/data/conjugationSeries";
 import { verbeBaData } from "@/data/verbeBa";
 import { survivalVerbs } from "@/data/survivalVerbs";
+import { useValidatedForms } from "@/hooks/useValidatedForms";
 
 interface FlatTable {
   lessonId: string;
@@ -144,6 +145,7 @@ const Conjugations = () => {
   const isFr = language === "fr";
   const [query, setQuery] = useState("");
   const [showSelectedTranslation, setShowSelectedTranslation] = useState(false);
+  const { data: validatedForms = [] } = useValidatedForms();
 
   const translatedGloss = (fr?: string, en?: string) => {
     if (!fr) return en || "";
@@ -332,8 +334,28 @@ const Conjugations = () => {
       });
     });
 
+    // Formes validées par l'expert dans le traducteur (mémoire partagée).
+    const known = new Set(results.map((r) => norm(r.lari)));
+    validatedForms.forEach((f, fIndex) => {
+      const rowText = [f.lari, f.gloss, f.notes].filter(Boolean).map((v) => norm(v || ""));
+      if (!rowText.some((value) => value.includes(q))) return;
+      if (known.has(norm(f.lari))) return;
+      results.push({
+        id: `validated-${fIndex}`,
+        verb: isFr ? "Traducteur — forme validée" : "Translator — validated form",
+        meaning: f.gloss,
+        tense: isFr ? "Validé par l'expert" : "Expert validated",
+        person: "",
+        lari: f.lari,
+        mandombe: f.mandombe || f.lari,
+        fr: f.lang === "fr" ? f.gloss : undefined,
+        en: f.lang === "en" ? f.gloss : undefined,
+        note: f.notes,
+      });
+    });
+
     return results;
-  }, [tables, query, isFr]);
+  }, [tables, query, isFr, validatedForms]);
 
   const series = useMemo(() => {
     const q = norm(query);
