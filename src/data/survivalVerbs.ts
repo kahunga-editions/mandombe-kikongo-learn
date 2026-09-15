@@ -4047,6 +4047,54 @@ export const survivalVerbs: SurvivalVerb[] = [
         ]
       },
       {
+        "tense": "Essayer d'appeler",
+        "tenseEn": "To try to call",
+        "rows": [
+          {
+            "person": "Je",
+            "lari": "Njelele mu ta mbila",
+            "fr": "J'essaie d'appeler.",
+            "en": "I try to call.",
+            "verbForm": "Njelele"
+          },
+          {
+            "person": "Tu",
+            "lari": "yelele mu ta mbila",
+            "fr": "Tu essaies d'appeler.",
+            "en": "You try to call.",
+            "verbForm": "yelele"
+          },
+          {
+            "person": "Il/Elle",
+            "lari": "yelele mu ta mbila",
+            "fr": "Il/Elle essaie d'appeler.",
+            "en": "He/She tries to call.",
+            "verbForm": "yelele"
+          },
+          {
+            "person": "Nous",
+            "lari": "tu yelele mu ta mbila",
+            "fr": "Nous essayons d'appeler.",
+            "en": "We try to call.",
+            "verbForm": "yelele"
+          },
+          {
+            "person": "Vous",
+            "lari": "lu yelele mu ta mbila",
+            "fr": "Vous essayez d'appeler.",
+            "en": "You (pl.) try to call.",
+            "verbForm": "yelele"
+          },
+          {
+            "person": "Ils/Elles",
+            "lari": "ba yelele mu ta mbila",
+            "fr": "Ils/Elles essaient d'appeler.",
+            "en": "They try to call.",
+            "verbForm": "yelele"
+          }
+        ]
+      },
+      {
         "tense": "Futur",
         "tenseEn": "Future",
         "rows": [
