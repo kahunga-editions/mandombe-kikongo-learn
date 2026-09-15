@@ -266,6 +266,38 @@ verb(
     note="Le passé na lendi / wa lendi… est homographe avec le passé de landa (suivre).",
 )
 
+# ---------------------------------------------------------------- FUETI = devoir
+verb(
+    "Fueti", "devoir", "must, to have to",
+    [
+        tense("Devoir travailler", "To have to work",
+              ["Mfueti sala", "Fueti sala", "fueti sala", "tu fueti sala",
+               "lu fueti sala", "ba fueti sala"],
+              ["Je dois travailler.", "Tu dois travailler.", "Il/Elle doit travailler.",
+               "Nous devons travailler.", "Vous devez travailler.",
+               "Ils/Elles doivent travailler."],
+              ["I must work.", "You must work.", "He/She must work.", "We must work.",
+               "You (pl.) must work.", "They must work."],
+              ["Mfueti", "Fueti", "fueti", "fueti", "fueti", "fueti"],
+              {0: "Autre forme : sala mfueti sala.",
+               1: "Autre forme : sala fueti sala.",
+               2: "Autre forme : sala ka fueti sala.",
+               3: "Autre forme : sala tu fueti sala.",
+               4: "Autre forme : sala lu fueti sala.",
+               5: "Autre forme : sala ba fueti sala."}),
+        tense("Devoir travailler — forme avec thème", "To have to work — with theme",
+              ["sala mfueti sala", "sala fueti sala", "sala ka fueti sala",
+               "sala tu fueti sala", "sala lu fueti sala", "sala ba fueti sala"],
+              ["Je dois travailler.", "Tu dois travailler.", "Il/Elle doit travailler.",
+               "Nous devons travailler.", "Vous devez travailler.",
+               "Ils/Elles doivent travailler."],
+              ["I must work.", "You must work.", "He/She must work.", "We must work.",
+               "You (pl.) must work.", "They must work."],
+              ["mfueti", "fueti", "fueti", "fueti", "fueti", "fueti"]),
+    ],
+)
+
+
 # ---------------------------------------------------------------- BATIKA
 verb(
     "Batika", "commencer", "to start",
