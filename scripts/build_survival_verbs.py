@@ -237,6 +237,20 @@ verb(
     note="Le passé na lendi / wa lendi… est homographe avec le passé de landa (suivre).",
 )
 
+# ---------------------------------------------------------------- BATIKA
+verb(
+    "Batika", "commencer", "to start",
+    [
+        tense(*FUTURE, ["Mbo ni batika"], ["Je commencerai."], ["I will start."],
+              ["batika"], persons=["Je"], rule=FUT_RULE),
+        tense("Futur — ce soir", "Future — this evening",
+              ["Nkokela mbo ni batika"], ["Je commencerai ce soir."],
+              ["I will start this evening."], ["batika"], persons=["Je"]),
+    ],
+)
+
+
+
 # ---------------------------------------------------------------- BONGA
 verb(
     "Bonga", "prendre", "to take",
