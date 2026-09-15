@@ -5736,8 +5736,8 @@ export const survivalVerbs: SurvivalVerb[] = [
   },
   {
     "verb": "Tula",
-    "meaning": "mettre",
-    "meaningEn": "to put",
+    "meaning": "mettre, poser, déposer, arriver",
+    "meaningEn": "to put, to set down, to arrive",
     "tenses": [
       {
         "tense": "Passé",
@@ -5837,6 +5837,55 @@ export const survivalVerbs: SurvivalVerb[] = [
           }
         ],
         "rule": "ka / ku + particule du pronom + verbe + a ko"
+      },
+      {
+        "tense": "Futur",
+        "tenseEn": "Future",
+        "rows": [
+          {
+            "person": "Je",
+            "lari": "mbo ni tula",
+            "fr": "mettrai / arriverai",
+            "en": "I will put / arrive.",
+            "verbForm": "tula"
+          },
+          {
+            "person": "Tu",
+            "lari": "mbo tula",
+            "fr": "mettras / arriveras",
+            "en": "You will put / arrive.",
+            "verbForm": "tula"
+          },
+          {
+            "person": "Il/Elle",
+            "lari": "mbo ka tula",
+            "fr": "mettra / arrivera",
+            "en": "He/She will put / arrive.",
+            "verbForm": "tula"
+          },
+          {
+            "person": "Nous",
+            "lari": "mbo tu tula",
+            "fr": "mettrons / arriverons",
+            "en": "We will put / arrive.",
+            "verbForm": "tula"
+          },
+          {
+            "person": "Vous",
+            "lari": "mbo lu tula",
+            "fr": "mettrez / arriverez",
+            "en": "You (pl.) will put / arrive.",
+            "verbForm": "tula"
+          },
+          {
+            "person": "Ils/Elles",
+            "lari": "mbo ba tula",
+            "fr": "mettront / arriveront",
+            "en": "They will put / arrive.",
+            "verbForm": "tula"
+          }
+        ],
+        "rule": "mbo + particule du pronom + infinitif"
       }
     ]
   },
