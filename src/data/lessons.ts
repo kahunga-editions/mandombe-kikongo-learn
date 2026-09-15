@@ -19521,7 +19521,7 @@ export const lessons: Lesson[] = [
       { lari: "nsuika", mandombe: "nsuika", french: "se fixer définitivement, s'arranger", english: "to settle permanently, to sort out", note: "Prononcer /tsuika/" },
       { lari: "kadinga", mandombe: "kadinga", french: "rôtir", english: "to roast" },
       { lari: "bindama", mandombe: "bindama", french: "désirer ardemment", english: "to desire ardently" },
-      { lari: "djakuna", mandombe: "djakuna", french: "mâcher", english: "to chew", note: "Prononcer /dzakuna/" },
+      { lari: "dzakuna", mandombe: "djakuna", french: "mâcher", english: "to chew", note: "Prononcer /dzakuna/" },
       { lari: "nsonsola", mandombe: "nsonsola", french: "bouger", english: "to move", note: "Prononcer /tsotsola/" },
       { lari: "nsundinga", mandombe: "nsundinga", french: "boiter", english: "to limp", note: "Prononcer /tsundinga/" },
       { lari: "diamisa", mandombe: "diamisa", french: "immerger, plonger dans la mer, dans un fleuve, dans de l'eau", english: "to immerse, to plunge into the sea, river, or water" },
