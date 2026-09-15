@@ -106,6 +106,7 @@
 - [Conjunctions](mem://grammar/conjunctions) — Use NA for 'et', avoid YE
 - [Lari Phonetic Engine](mem://audio/moteur-phonetique-lari) — G2P rules for clusters and ideophones
 - [Script Rendering Ligatures](mem://technical/script-rendering-ligatures) — ZWJ logic for Mandombe ligatures
+- [Graphie Mandombe des mots en nje-](mem://grammar/orthography-nje-cases) — nje/njena → ngie/ngiena, njeka/njevo/njele/njelele → nz
 - [Phonetic Liaisons](mem://grammar/phonetic-liaisons) — Mandatory merges in speech (e.g., tatani)
 - [Security Hardening](mem://security/hardening) — RLS policies, trigger to prevent self role escalation
 - [Translator Persistence](mem://features/translator-persistence) — Few-shot prompting from manual corrections

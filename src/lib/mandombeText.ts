@@ -27,18 +27,49 @@ const STRIP_ACCENTS = (s: string) =>
  *   la police generait une lettre latine parasite.
  * - L'apostrophe disparait (n'lemvo -> nlemvo) pour ne pas laisser le "n" seul.
  */
+/**
+ * Cas nommes de la suite « nje » (jamais generalises au groupe nj) :
+ * - verbe etre : nje -> ngie, njena -> ngiena
+ * - njeka, njevo, manjevo, njele, njelele s'ecrivent avec nz
+ * La translitteration latine, elle, reste inchangee.
+ */
+const NJE_CASES: Record<string, string> = {
+  nje: "ngie",
+  njena: "ngiena",
+  njeka: "nzeka",
+  njevo: "nzevo",
+  manjevo: "manzevo",
+  njele: "nzele",
+  njelele: "nzelele",
+};
+
+const applyNjeCases = (text: string): string =>
+  text
+    .split(" ")
+    .map((w) => {
+      const mapped = NJE_CASES[w.toLowerCase()];
+      if (!mapped) return w;
+      return w[0] === w[0].toUpperCase()
+        ? mapped[0].toUpperCase() + mapped.slice(1)
+        : mapped;
+    })
+    .join(" ");
+
 export const cleanMandombe = (text: string): string =>
-  STRIP_ACCENTS(text ?? "")
-    .replace(/[()]/g, "")
-    .replace(/[^A-Za-z ]+/g, " ")
-    .replace(/([Tt])shio/g, (_m, t) => (t === "T" ? "Kio" : "kio"))
-    .replace(/([Tt])shie/g, (_m, t) => (t === "T" ? "Kie" : "kie"))
-    .replace(/\bPaul\b/g, "Paulo")
-    .replace(/([jwprh])ia\b/gi, "$1iya")
-    .replace(/([BCDFGJKLMNPQRSTVWXZbcdfgjklmnpqrstvwxz])[yY]/g, "$1i")
-    .replace(/([AaEeIiOoUu])\1+/g, "$1")
-    .replace(/\s+/g, " ")
-    .trim();
+  applyNjeCases(
+    STRIP_ACCENTS(text ?? "")
+      .replace(/[()]/g, "")
+      .replace(/[^A-Za-z ]+/g, " ")
+      .replace(/([Tt])shio/g, (_m, t) => (t === "T" ? "Kio" : "kio"))
+      .replace(/([Tt])shie/g, (_m, t) => (t === "T" ? "Kie" : "kie"))
+      .replace(/\bPaul\b/g, "Paulo")
+      .replace(/([jwprh])ia\b/gi, "$1iya")
+      .replace(/([BCDFGJKLMNPQRSTVWXZbcdfgjklmnpqrstvwxz])[yY]/g, "$1i")
+      .replace(/([AaEeIiOoUu])\1+/g, "$1")
+      .replace(/\s+/g, " ")
+      .trim(),
+  );
+
 
 
 /** Decoupe un champ Mandombe en blocs (variantes separees par | ou /). */
