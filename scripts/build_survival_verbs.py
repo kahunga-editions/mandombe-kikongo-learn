@@ -839,6 +839,27 @@ verb(
     ],
 )
 
+# ---------------------------------------------------------------- TULA
+verb(
+    "Tula", "mettre", "to put",
+    [
+        tense(*PAST, ["nturidi", "turidi", "turidi", "tu turidi", "lu turidi", "ba turidi"],
+              frv("ai mis", "as mis", "a mis", "avons mis", "avez mis", "ont mis"),
+              en_same("put"), "turidi",
+              {2: "Accentuation sur le /ri/ : on entend que c'est la 3e personne."}),
+        tense("Passé négatif", "Past negative",
+              ["ka nturidi a ko", "ku turidi a ko", "ka turidi a ko",
+               "ka tu turidi a ko", "ka lu turidi a ko", "ka ba turidi a ko"],
+              frv("n'ai pas mis", "n'as pas mis", "n'a pas mis",
+                  "n'avons pas mis", "n'avez pas mis", "n'ont pas mis"),
+              env("did not put", "did not put", "did not put",
+                  "did not put", "did not put", "did not put"),
+              "turidi",
+              {2: "Accentuation sur le /ri/ : on entend que c'est la 3e personne."},
+              "ka / ku + particule du pronom + verbe + a ko"),
+    ],
+)
+
 # ---------------------------------------------------------------- VUTULA
 verb(
     "Vutula", "rendre", "to give back",
