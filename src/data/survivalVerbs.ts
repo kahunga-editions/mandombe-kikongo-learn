@@ -1671,6 +1671,55 @@ export const survivalVerbs: SurvivalVerb[] = [
         ]
       },
       {
+        "tense": "Passé négatif",
+        "tenseEn": "Past negative",
+        "rows": [
+          {
+            "person": "Je",
+            "lari": "ka na zaba a ko",
+            "fr": "Je ne connaissais pas.",
+            "en": "I did not know.",
+            "verbForm": "zaba"
+          },
+          {
+            "person": "Tu",
+            "lari": "ka wa zaba a ko",
+            "fr": "Tu ne connaissais pas.",
+            "en": "You did not know.",
+            "verbForm": "zaba"
+          },
+          {
+            "person": "Il/Elle",
+            "lari": "ka zaba a ko",
+            "fr": "Il/Elle ne connaissait pas.",
+            "en": "He/She did not know.",
+            "verbForm": "zaba"
+          },
+          {
+            "person": "Nous",
+            "lari": "ka ta zaba a ko",
+            "fr": "Nous ne connaissions pas.",
+            "en": "We did not know.",
+            "verbForm": "zaba"
+          },
+          {
+            "person": "Vous",
+            "lari": "ka lua zaba a ko",
+            "fr": "Vous ne connaissiez pas.",
+            "en": "You (pl.) did not know.",
+            "verbForm": "zaba"
+          },
+          {
+            "person": "Ils/Elles",
+            "lari": "ka ba zaba a ko",
+            "fr": "Ils/Elles ne connaissaient pas.",
+            "en": "They did not know.",
+            "verbForm": "zaba"
+          }
+        ],
+        "rule": "ka + particule du pronom + verbe + a ko"
+      },
+      {
         "tense": "Futur",
         "tenseEn": "Future",
         "rows": [
