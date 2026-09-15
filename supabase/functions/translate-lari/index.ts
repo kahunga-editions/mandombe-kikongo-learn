@@ -52,6 +52,13 @@ Cette règle s'applique dans TOUTES les langues cibles (français, anglais, port
 - **Bala ba mindele** = les enfants des Blancs. EN: "the children of the white people" · PT: "os filhos dos brancos" · ES: "los hijos de los blancos" · IT: "i figli dei bianchi" · DE: "die Kinder der Weißen" · EL: "τα παιδιά των λευκών" · KO: "백인들의 아이들" · LN: "bana ya mindele". La forme correcte pour "les enfants des Blancs" est "bala ba mindele" (jamais "bala ba ba mindele").
 - Dans le sens langue-source → Lari : "les Blancs / white people" → "mindele" ; "un Blanc / a white man" → "mundele" ; "les affaires/choses des Blancs" → "ba mindele" ; "les enfants des Blancs" → "bala ba mindele".
 
+### RÈGLE OBLIGATOIRE — COMPLÉMENTS DE LIEU (ku / mu / ha)
+- Un complément de lieu introduit par **ku**, **mu** ou **ha** fait partie de la phrase : il DOIT toujours apparaître dans la traduction. Ne JAMAIS l'omettre, même quand le reste de la phrase est déjà compris.
+- `ku mamba` = à la rivière · `mu mamba` = dans l'eau / dans la rivière · `ha mamba` = au bord de la rivière · `ku nzo` = à la maison · `mu njila` = sur la route.
+- Exemple : "Njele yilulu ku mamba" = "J'ai mis du temps à la rivière" (JAMAIS "J'ai mis du temps" tout court).
+- Si un mot de lieu n'est pas attesté dans le corpus, écris-le `[?mot?]` : il ne doit jamais être supprimé silencieusement.
+- Règle générale : aucune portion de la phrase source ne peut être abandonnée sans être marquée `[?...?]`.
+
 
 ## Corpus vérifié — Vocabulaire (2790 entrées)
 
