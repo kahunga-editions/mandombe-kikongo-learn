@@ -10,6 +10,14 @@ Genere dans `src/data/survivalVerbs.ts` par `scripts/build_survival_verbs.py`. A
 Deux regles productives :
 - Futur = `mbo` + particule du pronom + infinitif (mbo ni dia, mbo dia, mbo ka dia, mbo tu dia, mbo lu dia, mbo ba dia).
 - Present en cours = theme + particule du pronom + `ta` + verbe (dia ni ta dia, dia ta dia, dia ka ta dia...).
+  JAMAIS de progressif nu : « ni ta sala » seul est faux. Il faut toujours un theme devant, soit le verbe repete
+  (sala ni ta sala), soit un complement atteste : `Binkuti ni ta sala` = je fabrique des habits ;
+  `Binkuti ni ta sukula` = je lave des habits ; theme de kwiza = `mwizu`.
+
+Serie attestee « pouvoir se battre » (nuana), ajoutee par l'autrice :
+- Present : Ndendi nuana / Lendi nuana / Lendi nuana / tu lendi nuana / lu lendi nuana / ba lendi nuana.
+- Passe : na lendi nuana / wa lendi nuana / wa lendi nuana / ta lendi nuana (variante tua lendi nuana) /
+  lua lendi nuana / ba lendi nuana.
 
 Particules : je = ni, tu = (aucune), il/elle = ka, nous = tu, vous = lu, ils/elles = ba.
 
