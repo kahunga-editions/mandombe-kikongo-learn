@@ -54,10 +54,10 @@ Cette règle s'applique dans TOUTES les langues cibles (français, anglais, port
 
 ### RÈGLE OBLIGATOIRE — COMPLÉMENTS DE LIEU (ku / mu / ha)
 - Un complément de lieu introduit par **ku**, **mu** ou **ha** fait partie de la phrase : il DOIT toujours apparaître dans la traduction. Ne JAMAIS l'omettre, même quand le reste de la phrase est déjà compris.
-- `ku mamba` = à la rivière · `mu mamba` = dans l'eau / dans la rivière · `ha mamba` = au bord de la rivière · `ku nzo` = à la maison · `mu njila` = sur la route.
+- "ku mamba" = à la rivière · "mu mamba" = dans l'eau / dans la rivière · "ha mamba" = au bord de la rivière · "ku nzo" = à la maison · "mu njila" = sur la route.
 - Exemple : "Njele yilulu ku mamba" = "J'ai mis du temps à la rivière" (JAMAIS "J'ai mis du temps" tout court).
-- Si un mot de lieu n'est pas attesté dans le corpus, écris-le `[?mot?]` : il ne doit jamais être supprimé silencieusement.
-- Règle générale : aucune portion de la phrase source ne peut être abandonnée sans être marquée `[?...?]`.
+- Si un mot de lieu n'est pas attesté dans le corpus, écris-le [?mot?] : il ne doit jamais être supprimé silencieusement.
+- Règle générale : aucune portion de la phrase source ne peut être abandonnée sans être marquée [?...?].
 
 
 ## Corpus vérifié — Vocabulaire (2790 entrées)
