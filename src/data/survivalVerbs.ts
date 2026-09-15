@@ -954,6 +954,103 @@ export const survivalVerbs: SurvivalVerb[] = [
         ]
       },
       {
+        "tense": "Pouvoir se battre",
+        "tenseEn": "To be able to fight",
+        "rows": [
+          {
+            "person": "Je",
+            "lari": "Ndendi nuana",
+            "fr": "Je peux me battre.",
+            "en": "I can fight.",
+            "verbForm": "Ndendi"
+          },
+          {
+            "person": "Tu",
+            "lari": "Lendi nuana",
+            "fr": "Tu peux te battre.",
+            "en": "You can fight.",
+            "verbForm": "Lendi"
+          },
+          {
+            "person": "Il/Elle",
+            "lari": "Lendi nuana",
+            "fr": "Il peut se battre.",
+            "en": "He can fight.",
+            "verbForm": "Lendi"
+          },
+          {
+            "person": "Nous",
+            "lari": "tu lendi nuana",
+            "fr": "Nous pouvons nous battre.",
+            "en": "We can fight.",
+            "verbForm": "lendi"
+          },
+          {
+            "person": "Vous",
+            "lari": "lu lendi nuana",
+            "fr": "Vous pouvez vous battre.",
+            "en": "You (pl.) can fight.",
+            "verbForm": "lendi"
+          },
+          {
+            "person": "Ils/Elles",
+            "lari": "ba lendi nuana",
+            "fr": "Ils peuvent se battre.",
+            "en": "They can fight.",
+            "verbForm": "lendi"
+          }
+        ]
+      },
+      {
+        "tense": "Pouvoir se battre — passé",
+        "tenseEn": "To be able to fight — past",
+        "rows": [
+          {
+            "person": "Je",
+            "lari": "na lendi nuana",
+            "fr": "Je pouvais me battre.",
+            "en": "I could fight.",
+            "verbForm": "lendi"
+          },
+          {
+            "person": "Tu",
+            "lari": "wa lendi nuana",
+            "fr": "Tu pouvais te battre.",
+            "en": "You could fight.",
+            "verbForm": "lendi"
+          },
+          {
+            "person": "Il/Elle",
+            "lari": "wa lendi nuana",
+            "fr": "Il pouvait se battre.",
+            "en": "He could fight.",
+            "verbForm": "lendi"
+          },
+          {
+            "person": "Nous",
+            "lari": "ta lendi nuana",
+            "fr": "Nous pouvions nous battre.",
+            "en": "We could fight.",
+            "verbForm": "lendi",
+            "note": "Variante : tua lendi nuana."
+          },
+          {
+            "person": "Vous",
+            "lari": "lua lendi nuana",
+            "fr": "Vous pouviez vous battre.",
+            "en": "You (pl.) could fight.",
+            "verbForm": "lendi"
+          },
+          {
+            "person": "Ils/Elles",
+            "lari": "ba lendi nuana",
+            "fr": "Ils/Elles pouvaient se battre.",
+            "en": "They could fight.",
+            "verbForm": "lendi"
+          }
+        ]
+      },
+      {
         "tense": "Pouvoir commencer — demain",
         "tenseEn": "To be able to start — tomorrow",
         "rows": [
