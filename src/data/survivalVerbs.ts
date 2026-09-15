@@ -1147,6 +1147,55 @@ export const survivalVerbs: SurvivalVerb[] = [
         ]
       },
       {
+        "tense": "Pouvoir manger — négatif",
+        "tenseEn": "To be able to eat — negative",
+        "rows": [
+          {
+            "person": "Je",
+            "lari": "ka ndendi a dia ko",
+            "fr": "Je ne peux pas manger.",
+            "en": "I cannot eat.",
+            "verbForm": "ndendi"
+          },
+          {
+            "person": "Tu",
+            "lari": "ku lendi a dia ko",
+            "fr": "Tu ne peux pas manger.",
+            "en": "You cannot eat.",
+            "verbForm": "lendi"
+          },
+          {
+            "person": "Il/Elle",
+            "lari": "ka lendi a dia ko",
+            "fr": "Il/Elle ne peut pas manger.",
+            "en": "He/She cannot eat.",
+            "verbForm": "lendi"
+          },
+          {
+            "person": "Nous",
+            "lari": "ka tu lendi a dia ko",
+            "fr": "Nous ne pouvons pas manger.",
+            "en": "We cannot eat.",
+            "verbForm": "lendi"
+          },
+          {
+            "person": "Vous",
+            "lari": "ka lu lendi a dia ko",
+            "fr": "Vous ne pouvez pas manger.",
+            "en": "You (pl.) cannot eat.",
+            "verbForm": "lendi"
+          },
+          {
+            "person": "Ils/Elles",
+            "lari": "ka ba lendi a dia ko",
+            "fr": "Ils/Elles ne peuvent pas manger.",
+            "en": "They cannot eat.",
+            "verbForm": "lendi"
+          }
+        ],
+        "rule": "ka + lendi + a + verbe + ko"
+      },
+      {
         "tense": "Pouvoir commencer — demain",
         "tenseEn": "To be able to start — tomorrow",
         "rows": [
