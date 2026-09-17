@@ -15,6 +15,7 @@
 
 
 ## Memories
+- [No validation mentions](mem://preferences/no-validation-mentions) — Pas de badges « validé par l'expert/utilisateur » dans l'UI apprenant
 - [TTS Liaisons & Overrides](mem://audio/tts-liaisons-overrides) — Liaisons nkumbu ani/andi/aku, mungua, ngie
 - [TTS sh rule](mem://audio/tts-sh-rule) — sh→ch (/ʃ/, jamais /tʃ/), shama=aller, shemi=je vais
 - [TTS moshi rule](mem://audio/tts-moshi-rule) — moshi/mosi → /ʃ/ (chat), override → mochi
