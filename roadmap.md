@@ -1,6 +1,9 @@
 # Roadmap
 
 ## En cours
+- [x] Simplifier l'accueil de Conjugaisons : recherche seule avant saisie
+- [x] Retirer de Conjugaisons les phrases et mentions provenant du traducteur
+- [x] Stabiliser la taille et l'espacement Mandombe dans les résultats de conjugaison
 - [x] Ajouter les six formes attestees de « pouvoir commencer » aux conjugaisons
 - [x] Afficher immédiatement les lignes de conjugaison correspondant à la recherche, avec Mandombe, latin et traduction
 - [x] Retirer les formes fabriquees `Kue ka?` et `Kue lu?` (dictionnaire, lecons, traducteur)
