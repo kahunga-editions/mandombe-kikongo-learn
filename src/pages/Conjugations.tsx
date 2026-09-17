@@ -342,9 +342,9 @@ const Conjugations = () => {
       if (known.has(norm(f.lari))) return;
       results.push({
         id: `validated-${fIndex}`,
-        verb: isFr ? "Traducteur — forme validée" : "Translator — validated form",
+        verb: isFr ? "Traducteur" : "Translator",
         meaning: f.gloss,
-        tense: isFr ? "Validé par l'expert" : "Expert validated",
+        tense: "",
         person: "",
         lari: f.lari,
         mandombe: f.mandombe || f.lari,
@@ -471,21 +471,18 @@ const Conjugations = () => {
             <div className="flex items-center gap-2">
               <Layers className="w-5 h-5 text-primary" />
               <h2 className="font-display text-2xl font-bold text-foreground">
-                {isFr ? "Formes validées dans le traducteur" : "Forms validated in the translator"}
+                {isFr ? "Formes du traducteur" : "Forms from the translator"}
               </h2>
             </div>
             <p className="mt-2 text-muted-foreground">
               {isFr
-                ? "Ces formes ont été validées lors de traductions. Elles complètent les tableaux et sont réutilisées par le traducteur."
-                : "These forms were validated while translating. They complete the tables and are reused by the translator."}
+                ? "Ces formes complètent les tableaux et sont réutilisées par le traducteur."
+                : "These forms complete the tables and are reused by the translator."}
             </p>
             <ul className="mt-6 space-y-3">
               {validatedForms.slice(0, 30).map((f, i) => (
                 <li key={`vf-${i}`} className="border border-border bg-card rounded-lg px-5 py-4">
-                  <span className="text-xs uppercase tracking-wide text-primary font-semibold">
-                    {isFr ? "Validé par l'expert" : "Expert validated"}
-                  </span>
-                  <div className="font-mandombe block w-full mt-3 text-4xl md:text-5xl leading-[2.2] text-gold break-words">
+                  <div className="font-mandombe block w-full text-4xl md:text-5xl leading-[2.2] text-gold break-words">
                     {cleanMandombe(f.mandombe || f.lari)}
                   </div>
                   <div className="mt-2 flex items-center gap-2 flex-wrap">
