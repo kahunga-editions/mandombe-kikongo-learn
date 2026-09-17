@@ -194,7 +194,8 @@ function MandombeBubble({ block, isPlaying, audioDurationMs, onAdminCorrect, isA
   const [typed, setTyped] = useState(0);
   const [showLari, setShowLari] = useState(false);
   const [showFr, setShowFr] = useState(false);
-  const total = block.lari.length;
+  const mandombe = cleanMandombe(block.lari);
+  const total = mandombe.length;
 
   useEffect(() => {
     setTyped(0);
@@ -242,7 +243,7 @@ function MandombeBubble({ block, isPlaying, audioDurationMs, onAdminCorrect, isA
         className="font-mandombe text-3xl text-gold leading-loose"
         style={{ minHeight: "1.5em" }}
       >
-        {cleanMandombe(block.lari.slice(0, typed))}
+        {mandombe.slice(0, typed)}
       </div>
 
       {/* Layer 2 — Kikongo Lari (latin) */}
