@@ -5289,7 +5289,7 @@ export const survivalVerbs: SurvivalVerb[] = [
             "fr": "J'ai couru.",
             "en": "I ran.",
             "verbForm": "djokele",
-            "mandombe": "njokele"
+            "mandombe": "nzokele"
           },
           {
             "person": "Tu",
@@ -5389,7 +5389,7 @@ export const survivalVerbs: SurvivalVerb[] = [
         "rule": "mbo + particule du pronom + infinitif"
       }
     ],
-    "note": "En Mandombe le dj s'écrit j : joka, njokele. La translittération latine garde dj."
+    "note": "En Mandombe, djoka se tape joka. Cas nommé : ndjokele se tape nzokele ; la transcription et la prononciation restent ndjokele."
   },
   {
     "verb": "Noka",
