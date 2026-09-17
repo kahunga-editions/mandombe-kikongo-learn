@@ -60,6 +60,8 @@ def fut(verb, comp=""):
 
 
 MANDOMBE_NAMED_WORDS = {
+    "djoka": "joka",
+    "djokele": "jokele",
     # Cas valide par l'autrice : la transcription et la prononciation restent
     # « ndjokele », mais la saisie Mandombe est « nzokele ».
     "ndjokele": "nzokele",
@@ -73,7 +75,7 @@ def mandombe_of(lari):
         named = MANDOMBE_NAMED_WORDS.get(word.lower())
         if named:
             return named[0].upper() + named[1:] if word[0].isupper() else named
-        return word.replace("dj", "j").replace("Dj", "J")
+        return word
 
     return re.sub(r"[A-Za-z]+", map_word, lari)
 
