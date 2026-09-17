@@ -6,6 +6,7 @@ du document. Les allongements notes avec « : » et les accents du document sont
 des indications de prononciation, pas de l'orthographe : ils deviennent des notes.
 """
 import json
+import re
 
 PERSONS = ["Je", "Tu", "Il/Elle", "Nous", "Vous", "Ils/Elles"]
 
@@ -58,9 +59,25 @@ def fut(verb, comp=""):
     ]
 
 
+MANDOMBE_NAMED_WORDS = {
+    "djoka": "joka",
+    "djokele": "jokele",
+    # Cas valide par l'autrice : la transcription et la prononciation restent
+    # « ndjokele », mais la saisie Mandombe est « nzokele ».
+    "ndjokele": "nzokele",
+}
+
+
 def mandombe_of(lari):
-    """Le digramme « dj » de la translittération s'ecrit « j » en Mandombe."""
-    return lari.replace("dj", "j").replace("Dj", "J")
+    """Applique uniquement les graphies Mandombe attestees pour ce corpus."""
+    def map_word(match):
+        word = match.group(0)
+        named = MANDOMBE_NAMED_WORDS.get(word.lower())
+        if named:
+            return named[0].upper() + named[1:] if word[0].isupper() else named
+        return word
+
+    return re.sub(r"[A-Za-z]+", map_word, lari)
 
 
 def tense(label, label_en, lari, fr, en, verb_form, notes=None, rule=None, persons=None):
@@ -785,7 +802,7 @@ verb(
               frv("courrai", "courras", "courra", "courrons", "courrez", "courront"),
               en_will("run"), "djoka", None, FUT_RULE),
     ],
-    note="En Mandombe le dj s'écrit j : joka, njokele. La translittération latine garde dj.",
+    note="En Mandombe, djoka se tape joka. Cas nommé : ndjokele se tape nzokele ; la transcription et la prononciation restent ndjokele.",
 )
 
 # ---------------------------------------------------------------- NOKA

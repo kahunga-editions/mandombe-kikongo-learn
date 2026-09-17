@@ -4,6 +4,7 @@ import { LESSONS_CORPUS, filterLessons, getExercisesByLesson } from "../_shared/
 import { MBUTA_CORPUS_V2 } from "../_shared/mbuta-corpus-v2.ts";
 import { MBUTA_LECONS } from "../_shared/mbuta-lecons.ts";
 import { mbutaOfflineReply } from "../_shared/offline-fallback.ts";
+import { findConjugations } from "../_shared/conjugations-corpus.ts";
 import DICTIONARY from "../_shared/dictionary.json" with { type: "json" };
 
 type DictEntry = { lari: string; fr: string; mandombe?: string };
@@ -28,6 +29,7 @@ Le contenu de <lari>...</lari> est la SEULE chose qui sera lue à voix haute par
 
 RÈGLE ABSOLUE N°2 — CORPUS UNIQUEMENT :
 Tu ne PRODUIS JAMAIS une phrase en Kikongo Lari qui ne soit pas attestée dans le CORPUS DE BASE ci-dessous, dans le CORPUS VALIDÉ NZO MIKANDA, ou dans les CORRECTIONS ADMIN injectées dynamiquement. Tu PIOCHES, tu ASSEMBLES et tu ADAPTES uniquement depuis ce corpus. Tu ne génères PAS librement. Si une formulation ne se trouve pas littéralement dans le corpus, elle n'existe pas pour toi.
+Les CONJUGAISONS MÉMORISÉES sont une source autorisée distincte. Pour conjuguer ou enseigner un verbe, appelle toujours get_conjugations et reprends uniquement les lignes retournées, mot pour mot. Ne complète jamais un tableau par analogie.
 
 COMPORTEMENT FACE AUX RÉPONSES :
 - Bonne réponse → encouragement bref en Lari (corpus) + question suivante.
@@ -105,6 +107,7 @@ Tu ne fabriques PAS de phrases en assemblant des mots. Tu reproduis LITTÉRALEME
 UTILISATION DES OUTILS (silencieuse, en arrière-plan) :
 - search_dictionary : avant tout mot dont tu n'es pas certain.
 - translate : fallback si search_dictionary ne renvoie rien (corpus admin + dynamique).
+- get_conjugations : obligatoire pour toute question ou leçon portant sur un verbe, un temps ou une personne. Cette source contient uniquement les conjugaisons mémorisées.
 - get_lessons / get_exercises : pour enrichir ta leçon, jamais pour rediriger l'élève.
 
 CORPUS DE BASE — PHRASES ATTESTÉES EN KIKONGO LARI
@@ -579,6 +582,23 @@ const TOOLS = [
   {
     type: "function",
     function: {
+      name: "get_conjugations",
+      description:
+        "Recherche uniquement les conjugaisons attestées de l'application. À appeler avant de conjuguer un verbe ou d'enseigner un temps. Retourne les formes exactes avec personne, temps, lari, Mandombe et traductions. Ne jamais inventer les lignes absentes.",
+      parameters: {
+        type: "object",
+        properties: {
+          query: { type: "string", description: "Recherche libre dans les conjugaisons" },
+          verb: { type: "string", description: "Verbe ou sens recherché" },
+          tense: { type: "string", description: "Temps recherché" },
+          person: { type: "string", description: "Personne recherchée" },
+        },
+      },
+    },
+  },
+  {
+    type: "function",
+    function: {
       name: "search_dictionary",
       description:
         "Cherche un mot ou une expression dans TOUTES les sources Lari du site : (1) corrections admin du traducteur, (2) corpus des leçons, (3) dictionnaire complet Buku dia Binsono (~3900 entrées), et en dernier recours (4) appel automatique au traducteur officiel. Retourne admin_corrections, corpus_entries, dictionary_entries, et translator_fallback. À utiliser systématiquement avant de dire 'Ka nzebi a ko.'",
@@ -719,6 +739,22 @@ ${lines.join("\n")}`;
 
 async function handleToolCall(name: string, args: Record<string, unknown>): Promise<unknown> {
   try {
+    if (name === "get_conjugations") {
+      const forms = findConjugations({
+        query: String(args.query ?? ""),
+        verb: String(args.verb ?? ""),
+        tense: String(args.tense ?? ""),
+        person: String(args.person ?? ""),
+      });
+      return {
+        forms,
+        found: forms.length > 0,
+        instruction: forms.length > 0
+          ? "Reprendre ces formes mot pour mot. Ne rien compléter par analogie."
+          : "Aucune conjugaison attestée trouvée. Ne pas inventer de forme.",
+      };
+    }
+
     if (name === "search_dictionary") {
       const query = String(args.query ?? "").trim();
       if (!query) return { results: [], note: "empty query" };

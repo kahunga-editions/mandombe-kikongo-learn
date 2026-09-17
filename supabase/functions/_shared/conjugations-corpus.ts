@@ -1,6 +1,7 @@
 // Généré par scripts/build_translator_conjugations.ts — ne pas éditer à la main.
 export interface ConjugationForm {
   lari: string;
+  mandombe?: string;
   fr: string;
   en?: string;
   verb?: string;
@@ -12,6 +13,7 @@ export interface ConjugationForm {
 export const CONJUGATION_FORMS: ConjugationForm[] = [
   {
     "lari": "ntondele",
+    "mandombe": "ntondele",
     "fr": "Je remercie.",
     "en": "I thank.",
     "verb": "Tonda",
@@ -20,6 +22,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "tondele",
+    "mandombe": "tondele",
     "fr": "Tu remercies.",
     "en": "You thank.",
     "verb": "Tonda",
@@ -28,6 +31,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "tondele",
+    "mandombe": "tondele",
     "fr": "Il/Elle remercie.",
     "en": "He/She thanks.",
     "verb": "Tonda",
@@ -36,6 +40,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "tu tondele",
+    "mandombe": "tu tondele",
     "fr": "Nous remercions.",
     "en": "We thank.",
     "verb": "Tonda",
@@ -44,6 +49,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "lu tondele",
+    "mandombe": "lu tondele",
     "fr": "Vous remerciez.",
     "en": "You thank.",
     "verb": "Tonda",
@@ -52,6 +58,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ba tondele",
+    "mandombe": "ba tondele",
     "fr": "Ils/Elles remercient.",
     "en": "They thank.",
     "verb": "Tonda",
@@ -60,6 +67,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "na tondele",
+    "mandombe": "na tondele",
     "fr": "J'ai remercié.",
     "en": "I thanked.",
     "verb": "Tonda",
@@ -68,6 +76,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "wa tondele",
+    "mandombe": "wa tondele",
     "fr": "Tu as remercié.",
     "en": "You thanked.",
     "verb": "Tonda",
@@ -76,6 +85,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "wa tondele",
+    "mandombe": "wa tondele",
     "fr": "Il/Elle a remercié.",
     "en": "He/She thanked.",
     "verb": "Tonda",
@@ -84,6 +94,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "tua tondele",
+    "mandombe": "tuwa tondele",
     "fr": "Nous avons remercié.",
     "en": "We thanked.",
     "verb": "Tonda",
@@ -92,6 +103,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "lua tondele",
+    "mandombe": "luwa tondele",
     "fr": "Vous avez remercié.",
     "en": "You thanked.",
     "verb": "Tonda",
@@ -100,6 +112,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ba tondele",
+    "mandombe": "ba tondele",
     "fr": "Ils/Elles ont remercié.",
     "en": "They thanked.",
     "verb": "Tonda",
@@ -108,6 +121,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo ni tonda",
+    "mandombe": "mbo ni tonda",
     "fr": "Je remercierai.",
     "en": "I will thank.",
     "verb": "Tonda",
@@ -116,6 +130,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo tonda",
+    "mandombe": "mbo tonda",
     "fr": "Tu remercieras.",
     "en": "You will thank.",
     "verb": "Tonda",
@@ -124,6 +139,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo ka tonda",
+    "mandombe": "mbo ka tonda",
     "fr": "Il/Elle remerciera.",
     "en": "He/She will thank.",
     "verb": "Tonda",
@@ -132,6 +148,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo tu tonda",
+    "mandombe": "mbo tu tonda",
     "fr": "Nous remercierons.",
     "en": "We will thank.",
     "verb": "Tonda",
@@ -140,6 +157,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo lu tonda",
+    "mandombe": "mbo lu tonda",
     "fr": "Vous remercierez.",
     "en": "You will thank.",
     "verb": "Tonda",
@@ -148,6 +166,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo ba tonda",
+    "mandombe": "mbo ba tonda",
     "fr": "Ils/Elles remercieront.",
     "en": "They will thank.",
     "verb": "Tonda",
@@ -156,6 +175,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "nje(na)",
+    "mandombe": "ngiena",
     "fr": "Je suis.",
     "en": "I am.",
     "verb": "Ba",
@@ -164,6 +184,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "we(na)",
+    "mandombe": "we(na)",
     "fr": "Tu es.",
     "en": "You are.",
     "verb": "Ba",
@@ -172,6 +193,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ke(na)",
+    "mandombe": "ke(na)",
     "fr": "Il/Elle est.",
     "en": "He/She is.",
     "verb": "Ba",
@@ -180,6 +202,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "tue(na)",
+    "mandombe": "tuwe(na)",
     "fr": "Nous sommes.",
     "en": "We are.",
     "verb": "Ba",
@@ -188,6 +211,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "lue(na)",
+    "mandombe": "luwe(na)",
     "fr": "Vous êtes.",
     "en": "You are.",
     "verb": "Ba",
@@ -196,6 +220,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "be(na)",
+    "mandombe": "be(na)",
     "fr": "Ils/Elles sont.",
     "en": "They are.",
     "verb": "Ba",
@@ -204,6 +229,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "sa ni ta sa",
+    "mandombe": "sa ni ta sa",
     "fr": "Je fais.",
     "en": "I do.",
     "verb": "Sa",
@@ -212,6 +238,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "sa ta sa",
+    "mandombe": "sa ta sa",
     "fr": "Tu fais.",
     "en": "You do.",
     "verb": "Sa",
@@ -220,6 +247,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "sa ka ta sa",
+    "mandombe": "sa ka ta sa",
     "fr": "Il/Elle fait.",
     "en": "He/She does.",
     "verb": "Sa",
@@ -228,6 +256,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "sa tu ta sa",
+    "mandombe": "sa tu ta sa",
     "fr": "Nous faisons.",
     "en": "We do.",
     "verb": "Sa",
@@ -236,6 +265,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "sa lu ta sa",
+    "mandombe": "sa lu ta sa",
     "fr": "Vous faites.",
     "en": "You do.",
     "verb": "Sa",
@@ -244,6 +274,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "sa ba ta sa",
+    "mandombe": "sa ba ta sa",
     "fr": "Ils/Elles font.",
     "en": "They do.",
     "verb": "Sa",
@@ -252,6 +283,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "dia ni ta dia",
+    "mandombe": "dia ni ta dia",
     "fr": "Je mange.",
     "en": "I eat.",
     "verb": "Dia",
@@ -260,6 +292,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "dia ta dia",
+    "mandombe": "dia ta dia",
     "fr": "Tu manges.",
     "en": "You eat.",
     "verb": "Dia",
@@ -268,6 +301,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "dia ka ta dia",
+    "mandombe": "dia ka ta dia",
     "fr": "Il/Elle mange.",
     "en": "He/She eats.",
     "verb": "Dia",
@@ -276,6 +310,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "dia tu ta dia",
+    "mandombe": "dia tu ta dia",
     "fr": "Nous mangeons.",
     "en": "We eat.",
     "verb": "Dia",
@@ -284,6 +319,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "dia lu ta dia",
+    "mandombe": "dia lu ta dia",
     "fr": "Vous mangez.",
     "en": "You eat.",
     "verb": "Dia",
@@ -292,6 +328,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "dia ba ta dia",
+    "mandombe": "dia ba ta dia",
     "fr": "Ils/Elles mangent.",
     "en": "They eat.",
     "verb": "Dia",
@@ -300,6 +337,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "nua ni ta nua",
+    "mandombe": "nuwa ni ta nuwa",
     "fr": "Je bois.",
     "en": "I drink.",
     "verb": "Nua",
@@ -308,6 +346,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "nua ta nua",
+    "mandombe": "nuwa ta nuwa",
     "fr": "Tu bois.",
     "en": "You drink.",
     "verb": "Nua",
@@ -316,6 +355,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "nua ka ta nua",
+    "mandombe": "nuwa ka ta nuwa",
     "fr": "Il/Elle boit.",
     "en": "He/She drinks.",
     "verb": "Nua",
@@ -324,6 +364,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "nua tu ta nua",
+    "mandombe": "nuwa tu ta nuwa",
     "fr": "Nous buvons.",
     "en": "We drink.",
     "verb": "Nua",
@@ -332,6 +373,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "nua lu ta nua",
+    "mandombe": "nuwa lu ta nuwa",
     "fr": "Vous buvez.",
     "en": "You drink.",
     "verb": "Nua",
@@ -340,6 +382,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "nua ba ta nua",
+    "mandombe": "nuwa ba ta nuwa",
     "fr": "Ils/Elles boivent.",
     "en": "They drink.",
     "verb": "Nua",
@@ -348,6 +391,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ndendi",
+    "mandombe": "ndendi",
     "fr": "Je peux.",
     "en": "I am able.",
     "verb": "Lenda",
@@ -356,6 +400,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "lendi",
+    "mandombe": "lendi",
     "fr": "Tu peux.",
     "en": "You are able.",
     "verb": "Lenda",
@@ -364,6 +409,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "lendi",
+    "mandombe": "lendi",
     "fr": "Il/Elle peut.",
     "en": "He/She is able.",
     "verb": "Lenda",
@@ -372,6 +418,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "tu lendi",
+    "mandombe": "tu lendi",
     "fr": "Nous pouvons.",
     "en": "We are able.",
     "verb": "Lenda",
@@ -380,6 +427,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "lu lendi",
+    "mandombe": "lu lendi",
     "fr": "Vous pouvez.",
     "en": "You are able.",
     "verb": "Lenda",
@@ -388,6 +436,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ba lendi",
+    "mandombe": "ba lendi",
     "fr": "Ils/Elles peuvent.",
     "en": "They are able.",
     "verb": "Lenda",
@@ -396,6 +445,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbongele",
+    "mandombe": "mbongele",
     "fr": "J'ai pris.",
     "en": "I took.",
     "verb": "Bonga",
@@ -404,6 +454,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "bongele",
+    "mandombe": "bongele",
     "fr": "Tu as pris.",
     "en": "You took.",
     "verb": "Bonga",
@@ -412,6 +463,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "bongele",
+    "mandombe": "bongele",
     "fr": "Il/Elle a pris.",
     "en": "He/She took.",
     "verb": "Bonga",
@@ -420,6 +472,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "tu bongele",
+    "mandombe": "tu bongele",
     "fr": "Nous avons pris.",
     "en": "We took.",
     "verb": "Bonga",
@@ -428,6 +481,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "lu bongele",
+    "mandombe": "lu bongele",
     "fr": "Vous avez pris.",
     "en": "You took.",
     "verb": "Bonga",
@@ -436,6 +490,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ba bongele",
+    "mandombe": "ba bongele",
     "fr": "Ils/Elles ont pris.",
     "en": "They took.",
     "verb": "Bonga",
@@ -444,6 +499,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "nzebi",
+    "mandombe": "nzebi",
     "fr": "Je sais.",
     "en": "I know.",
     "verb": "Zaba",
@@ -452,6 +508,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "zebi",
+    "mandombe": "zebi",
     "fr": "Tu sais.",
     "en": "You know.",
     "verb": "Zaba",
@@ -460,6 +517,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "zebi",
+    "mandombe": "zebi",
     "fr": "Il/Elle sait.",
     "en": "He/She knows.",
     "verb": "Zaba",
@@ -468,6 +526,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "tu zebi",
+    "mandombe": "tu zebi",
     "fr": "Nous savons.",
     "en": "We know.",
     "verb": "Zaba",
@@ -476,6 +535,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "lu zebi",
+    "mandombe": "lu zebi",
     "fr": "Vous savez.",
     "en": "You know.",
     "verb": "Zaba",
@@ -484,6 +544,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ba zebi",
+    "mandombe": "ba zebi",
     "fr": "Ils/Elles savent.",
     "en": "They know.",
     "verb": "Zaba",
@@ -492,6 +553,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbele",
+    "mandombe": "mbele",
     "fr": "J'étais.",
     "en": "I was.",
     "verb": "Ba",
@@ -500,6 +562,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "bele",
+    "mandombe": "bele",
     "fr": "Tu étais.",
     "en": "You were.",
     "verb": "Ba",
@@ -508,6 +571,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ka bele",
+    "mandombe": "ka bele",
     "fr": "Il/Elle était.",
     "en": "He/She was.",
     "verb": "Ba",
@@ -516,6 +580,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "tu bele",
+    "mandombe": "tu bele",
     "fr": "Nous étions.",
     "en": "We were.",
     "verb": "Ba",
@@ -524,6 +589,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "lu bele",
+    "mandombe": "lu bele",
     "fr": "Vous étiez.",
     "en": "You were.",
     "verb": "Ba",
@@ -532,6 +598,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ba bele",
+    "mandombe": "ba bele",
     "fr": "Ils/Elles étaient.",
     "en": "They were.",
     "verb": "Ba",
@@ -540,6 +607,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo ni ba",
+    "mandombe": "mbo ni ba",
     "fr": "Je serai.",
     "en": "I will be.",
     "verb": "Ba",
@@ -548,6 +616,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo ba",
+    "mandombe": "mbo ba",
     "fr": "Tu seras.",
     "en": "You will be.",
     "verb": "Ba",
@@ -556,6 +625,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo ka ba",
+    "mandombe": "mbo ka ba",
     "fr": "Il/Elle sera.",
     "en": "He/She will be.",
     "verb": "Ba",
@@ -564,6 +634,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo tu ba",
+    "mandombe": "mbo tu ba",
     "fr": "Nous serons.",
     "en": "We will be.",
     "verb": "Ba",
@@ -572,6 +643,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo lu ba",
+    "mandombe": "mbo lu ba",
     "fr": "Vous serez.",
     "en": "You will be.",
     "verb": "Ba",
@@ -580,6 +652,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo ba ba",
+    "mandombe": "mbo ba ba",
     "fr": "Ils/Elles seront.",
     "en": "They will be.",
     "verb": "Ba",
@@ -588,6 +661,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ntshiri",
+    "mandombe": "ntshiri",
     "fr": "J'ai fait.",
     "en": "I did.",
     "verb": "Sa",
@@ -596,6 +670,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "shiri",
+    "mandombe": "shiri",
     "fr": "Tu as fait.",
     "en": "You did.",
     "verb": "Sa",
@@ -604,6 +679,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "shiri",
+    "mandombe": "shiri",
     "fr": "Il/Elle a fait.",
     "en": "He/She did.",
     "verb": "Sa",
@@ -612,6 +688,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "tu shiri",
+    "mandombe": "tu shiri",
     "fr": "Nous avons fait.",
     "en": "We did.",
     "verb": "Sa",
@@ -620,6 +697,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "lu shiri",
+    "mandombe": "lu shiri",
     "fr": "Vous avez fait.",
     "en": "You did.",
     "verb": "Sa",
@@ -628,6 +706,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ba shiri",
+    "mandombe": "ba shiri",
     "fr": "Ils/Elles ont fait.",
     "en": "They did.",
     "verb": "Sa",
@@ -636,6 +715,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo ni sa",
+    "mandombe": "mbo ni sa",
     "fr": "Je ferai.",
     "en": "I will do.",
     "verb": "Sa",
@@ -644,6 +724,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo sa",
+    "mandombe": "mbo sa",
     "fr": "Tu feras.",
     "en": "You will do.",
     "verb": "Sa",
@@ -652,6 +733,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo ka sa",
+    "mandombe": "mbo ka sa",
     "fr": "Il/Elle fera.",
     "en": "He/She will do.",
     "verb": "Sa",
@@ -660,6 +742,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo tu sa",
+    "mandombe": "mbo tu sa",
     "fr": "Nous ferons.",
     "en": "We will do.",
     "verb": "Sa",
@@ -668,6 +751,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo lu sa",
+    "mandombe": "mbo lu sa",
     "fr": "Vous ferez.",
     "en": "You will do.",
     "verb": "Sa",
@@ -676,6 +760,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo ba sa",
+    "mandombe": "mbo ba sa",
     "fr": "Ils/Elles feront.",
     "en": "They will do.",
     "verb": "Sa",
@@ -684,6 +769,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ndidi",
+    "mandombe": "ndidi",
     "fr": "J'ai mangé.",
     "en": "I ate.",
     "verb": "Dia",
@@ -692,6 +778,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "didi",
+    "mandombe": "didi",
     "fr": "Tu as mangé.",
     "en": "You ate.",
     "verb": "Dia",
@@ -700,6 +787,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "didi",
+    "mandombe": "didi",
     "fr": "Il/Elle a mangé.",
     "en": "He/She ate.",
     "verb": "Dia",
@@ -708,6 +796,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "tu didi",
+    "mandombe": "tu didi",
     "fr": "Nous avons mangé.",
     "en": "We ate.",
     "verb": "Dia",
@@ -716,6 +805,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "lu didi",
+    "mandombe": "lu didi",
     "fr": "Vous avez mangé.",
     "en": "You ate.",
     "verb": "Dia",
@@ -724,6 +814,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ba didi",
+    "mandombe": "ba didi",
     "fr": "Ils/Elles ont mangé.",
     "en": "They ate.",
     "verb": "Dia",
@@ -732,6 +823,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo ni dia",
+    "mandombe": "mbo ni dia",
     "fr": "Je mangerai.",
     "en": "I will eat.",
     "verb": "Dia",
@@ -740,6 +832,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo dia",
+    "mandombe": "mbo dia",
     "fr": "Tu mangeras.",
     "en": "You will eat.",
     "verb": "Dia",
@@ -748,6 +841,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo ka dia",
+    "mandombe": "mbo ka dia",
     "fr": "Il/Elle mangera.",
     "en": "He/She will eat.",
     "verb": "Dia",
@@ -756,6 +850,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo tu dia",
+    "mandombe": "mbo tu dia",
     "fr": "Nous mangerons.",
     "en": "We will eat.",
     "verb": "Dia",
@@ -764,6 +859,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo lu dia",
+    "mandombe": "mbo lu dia",
     "fr": "Vous mangerez.",
     "en": "You will eat.",
     "verb": "Dia",
@@ -772,6 +868,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo ba dia",
+    "mandombe": "mbo ba dia",
     "fr": "Ils/Elles mangeront.",
     "en": "They will eat.",
     "verb": "Dia",
@@ -780,6 +877,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "nuini",
+    "mandombe": "nuwini",
     "fr": "J'ai bu.",
     "en": "I drank.",
     "verb": "Nua",
@@ -788,6 +886,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "nuini",
+    "mandombe": "nuwini",
     "fr": "Tu as bu.",
     "en": "You drank.",
     "verb": "Nua",
@@ -796,6 +895,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "nuini",
+    "mandombe": "nuwini",
     "fr": "Il/Elle a bu.",
     "en": "He/She drank.",
     "verb": "Nua",
@@ -804,6 +904,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "tu nuini",
+    "mandombe": "tu nuwini",
     "fr": "Nous avons bu.",
     "en": "We drank.",
     "verb": "Nua",
@@ -812,6 +913,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "lu nuini",
+    "mandombe": "lu nuwini",
     "fr": "Vous avez bu.",
     "en": "You drank.",
     "verb": "Nua",
@@ -820,6 +922,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ba nuini",
+    "mandombe": "ba nuwini",
     "fr": "Ils/Elles ont bu.",
     "en": "They drank.",
     "verb": "Nua",
@@ -828,6 +931,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo ni nua",
+    "mandombe": "mbo ni nuwa",
     "fr": "Je boirai.",
     "en": "I will drink.",
     "verb": "Nua",
@@ -836,6 +940,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo nua",
+    "mandombe": "mbo nuwa",
     "fr": "Tu boiras.",
     "en": "You will drink.",
     "verb": "Nua",
@@ -844,6 +949,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo ka nua",
+    "mandombe": "mbo ka nuwa",
     "fr": "Il/Elle boira.",
     "en": "He/She will drink.",
     "verb": "Nua",
@@ -852,6 +958,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo tu nua",
+    "mandombe": "mbo tu nuwa",
     "fr": "Nous boirons.",
     "en": "We will drink.",
     "verb": "Nua",
@@ -860,6 +967,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo lu nua",
+    "mandombe": "mbo lu nuwa",
     "fr": "Vous boirez.",
     "en": "You will drink.",
     "verb": "Nua",
@@ -868,6 +976,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo ba nua",
+    "mandombe": "mbo ba nuwa",
     "fr": "Ils/Elles boiront.",
     "en": "They will drink.",
     "verb": "Nua",
@@ -876,6 +985,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "na lendi",
+    "mandombe": "na lendi",
     "fr": "J'ai pu.",
     "en": "I was able to.",
     "verb": "Lenda",
@@ -884,6 +994,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "wa lendi",
+    "mandombe": "wa lendi",
     "fr": "Tu as pu.",
     "en": "You were able to.",
     "verb": "Lenda",
@@ -892,6 +1003,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "wa lendi",
+    "mandombe": "wa lendi",
     "fr": "Il/Elle a pu.",
     "en": "He/She was able to.",
     "verb": "Lenda",
@@ -900,6 +1012,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "tua lendi",
+    "mandombe": "tuwa lendi",
     "fr": "Nous avons pu.",
     "en": "We were able to.",
     "verb": "Lenda",
@@ -908,6 +1021,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "lua lendi",
+    "mandombe": "luwa lendi",
     "fr": "Vous avez pu.",
     "en": "You were able to.",
     "verb": "Lenda",
@@ -916,6 +1030,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ba lendi",
+    "mandombe": "ba lendi",
     "fr": "Ils/Elles ont pu.",
     "en": "They were able to.",
     "verb": "Lenda",
@@ -924,6 +1039,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo ni lenda",
+    "mandombe": "mbo ni lenda",
     "fr": "Je pourrai.",
     "en": "I will be able.",
     "verb": "Lenda",
@@ -932,6 +1048,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo lenda",
+    "mandombe": "mbo lenda",
     "fr": "Tu pourras.",
     "en": "You will be able.",
     "verb": "Lenda",
@@ -940,6 +1057,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo ka lenda",
+    "mandombe": "mbo ka lenda",
     "fr": "Il/Elle pourra.",
     "en": "He/She will be able.",
     "verb": "Lenda",
@@ -948,6 +1066,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo tu lenda",
+    "mandombe": "mbo tu lenda",
     "fr": "Nous pourrons.",
     "en": "We will be able.",
     "verb": "Lenda",
@@ -956,6 +1075,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo lu lenda",
+    "mandombe": "mbo lu lenda",
     "fr": "Vous pourrez.",
     "en": "You will be able.",
     "verb": "Lenda",
@@ -964,6 +1084,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo ba lenda",
+    "mandombe": "mbo ba lenda",
     "fr": "Ils/Elles pourront.",
     "en": "They will be able.",
     "verb": "Lenda",
@@ -972,6 +1093,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "bonga ni ta bonga",
+    "mandombe": "bonga ni ta bonga",
     "fr": "Je prends.",
     "en": "I take.",
     "verb": "Bonga",
@@ -980,6 +1102,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "bonga ta bonga",
+    "mandombe": "bonga ta bonga",
     "fr": "Tu prends.",
     "en": "You take.",
     "verb": "Bonga",
@@ -988,6 +1111,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "bonga ka ta bonga",
+    "mandombe": "bonga ka ta bonga",
     "fr": "Il/Elle prend.",
     "en": "He/She takes.",
     "verb": "Bonga",
@@ -996,6 +1120,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "bonga tu ta bonga",
+    "mandombe": "bonga tu ta bonga",
     "fr": "Nous prenons.",
     "en": "We take.",
     "verb": "Bonga",
@@ -1004,6 +1129,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "bonga lu ta bonga",
+    "mandombe": "bonga lu ta bonga",
     "fr": "Vous prenez.",
     "en": "You take.",
     "verb": "Bonga",
@@ -1012,6 +1138,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "bonga ba ta bonga",
+    "mandombe": "bonga ba ta bonga",
     "fr": "Ils/Elles prennent.",
     "en": "They take.",
     "verb": "Bonga",
@@ -1020,6 +1147,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo ni bonga",
+    "mandombe": "mbo ni bonga",
     "fr": "Je prendrai.",
     "en": "I will take.",
     "verb": "Bonga",
@@ -1028,6 +1156,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo bonga",
+    "mandombe": "mbo bonga",
     "fr": "Tu prendras.",
     "en": "You will take.",
     "verb": "Bonga",
@@ -1036,6 +1165,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo ka bonga",
+    "mandombe": "mbo ka bonga",
     "fr": "Il/Elle prendra.",
     "en": "He/She will take.",
     "verb": "Bonga",
@@ -1044,6 +1174,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo tu bonga",
+    "mandombe": "mbo tu bonga",
     "fr": "Nous prendrons.",
     "en": "We will take.",
     "verb": "Bonga",
@@ -1052,6 +1183,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo lu bonga",
+    "mandombe": "mbo lu bonga",
     "fr": "Vous prendrez.",
     "en": "You will take.",
     "verb": "Bonga",
@@ -1060,6 +1192,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo ba bonga",
+    "mandombe": "mbo ba bonga",
     "fr": "Ils/Elles prendront.",
     "en": "They will take.",
     "verb": "Bonga",
@@ -1068,6 +1201,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "na zebi",
+    "mandombe": "na zebi",
     "fr": "J'ai su.",
     "en": "I knew.",
     "verb": "Zaba",
@@ -1076,6 +1210,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "wa zebi",
+    "mandombe": "wa zebi",
     "fr": "Tu as su.",
     "en": "You knew.",
     "verb": "Zaba",
@@ -1084,6 +1219,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "wa zebi",
+    "mandombe": "wa zebi",
     "fr": "Il/Elle a su.",
     "en": "He/She knew.",
     "verb": "Zaba",
@@ -1092,6 +1228,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "tua zebi",
+    "mandombe": "tuwa zebi",
     "fr": "Nous avons su.",
     "en": "We knew.",
     "verb": "Zaba",
@@ -1100,6 +1237,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "lua zebi",
+    "mandombe": "luwa zebi",
     "fr": "Vous avez su.",
     "en": "You knew.",
     "verb": "Zaba",
@@ -1108,6 +1246,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ba zebi",
+    "mandombe": "ba zebi",
     "fr": "Ils/Elles ont su.",
     "en": "They knew.",
     "verb": "Zaba",
@@ -1116,6 +1255,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo ni zaba",
+    "mandombe": "mbo ni zaba",
     "fr": "Je saurai.",
     "en": "I will know.",
     "verb": "Zaba",
@@ -1124,6 +1264,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo zaba",
+    "mandombe": "mbo zaba",
     "fr": "Tu sauras.",
     "en": "You will know.",
     "verb": "Zaba",
@@ -1132,6 +1273,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo ka zaba",
+    "mandombe": "mbo ka zaba",
     "fr": "Il/Elle saura.",
     "en": "He/She will know.",
     "verb": "Zaba",
@@ -1140,6 +1282,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo tu zaba",
+    "mandombe": "mbo tu zaba",
     "fr": "Nous saurons.",
     "en": "We will know.",
     "verb": "Zaba",
@@ -1148,6 +1291,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo lu zaba",
+    "mandombe": "mbo lu zaba",
     "fr": "Vous saurez.",
     "en": "You will know.",
     "verb": "Zaba",
@@ -1156,6 +1300,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo ba zaba",
+    "mandombe": "mbo ba zaba",
     "fr": "Ils/Elles sauront.",
     "en": "They will know.",
     "verb": "Zaba",
@@ -1164,6 +1309,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ngiena",
+    "mandombe": "ngiena",
     "fr": "Je suis.",
     "en": "I am.",
     "verb": "Ba",
@@ -1172,6 +1318,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "wena",
+    "mandombe": "wena",
     "fr": "Tu es.",
     "en": "You are.",
     "verb": "Ba",
@@ -1180,6 +1327,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "kena",
+    "mandombe": "kena",
     "fr": "Il/Elle est.",
     "en": "He/She is.",
     "verb": "Ba",
@@ -1188,6 +1336,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "tuena",
+    "mandombe": "tuwena",
     "fr": "Nous sommes.",
     "en": "We are.",
     "verb": "Ba",
@@ -1196,6 +1345,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "luena",
+    "mandombe": "luwena",
     "fr": "Vous êtes.",
     "en": "You are.",
     "verb": "Ba",
@@ -1204,6 +1354,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "bena",
+    "mandombe": "bena",
     "fr": "Ils/Elles sont.",
     "en": "They are.",
     "verb": "Ba",
@@ -1212,6 +1363,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ka ngiena ko",
+    "mandombe": "ka ngiena ko",
     "fr": "Je ne suis pas.",
     "en": "I am not.",
     "verb": "Ba",
@@ -1220,6 +1372,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "kuena…ko",
+    "mandombe": "kuena…ko",
     "fr": "Tu n'es pas.",
     "en": "You are not.",
     "verb": "Ba",
@@ -1228,6 +1381,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "kena…ko",
+    "mandombe": "kena…ko",
     "fr": "Il/Elle n'est pas.",
     "en": "He/She is not.",
     "verb": "Ba",
@@ -1236,6 +1390,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ka tuena ko",
+    "mandombe": "ka tuwena ko",
     "fr": "Nous ne sommes pas.",
     "en": "We are not.",
     "verb": "Ba",
@@ -1244,6 +1399,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ka luena ko",
+    "mandombe": "ka luwena ko",
     "fr": "Vous n'êtes pas.",
     "en": "You are not.",
     "verb": "Ba",
@@ -1252,6 +1408,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ka bena ko",
+    "mandombe": "ka bena ko",
     "fr": "Ils/Elles ne sont pas.",
     "en": "They are not.",
     "verb": "Ba",
@@ -1260,6 +1417,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ku Mpumbu na bele",
+    "mandombe": "ku Mpumbu na bele",
     "fr": "Je suis allé.",
     "en": "I went.",
     "verb": "Kwenda",
@@ -1268,6 +1426,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ku Matadi wa bele",
+    "mandombe": "ku Matadi wa bele",
     "fr": "Tu es allé.",
     "en": "You went.",
     "verb": "Kwenda",
@@ -1276,6 +1435,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ku Mfua ka bele",
+    "mandombe": "ku Mfua ka bele",
     "fr": "Il/Elle est allé.",
     "en": "He/She went.",
     "verb": "Kwenda",
@@ -1284,6 +1444,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ku Linzolo tua bele",
+    "mandombe": "ku Linzolo tuwa bele",
     "fr": "Nous sommes allés.",
     "en": "We went.",
     "verb": "Kwenda",
@@ -1292,6 +1453,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ku Kinkala lua bele",
+    "mandombe": "ku Kinkala luwa bele",
     "fr": "Vous êtes allés.",
     "en": "You went.",
     "verb": "Kwenda",
@@ -1300,6 +1462,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ku Mbamu ba bele",
+    "mandombe": "ku Mbamu ba bele",
     "fr": "Ils/Elles sont allés.",
     "en": "They went.",
     "verb": "Kwenda",
@@ -1308,6 +1471,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbaji ku Mpumbu ni kwenda",
+    "mandombe": "mbaji ku Mpumbu ni kwenda",
     "fr": "J'irai.",
     "en": "I will go.",
     "verb": "Kwenda",
@@ -1316,6 +1480,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbaji ku Matadi kwenda",
+    "mandombe": "mbaji ku Matadi kwenda",
     "fr": "Tu iras.",
     "en": "You will go.",
     "verb": "Kwenda",
@@ -1324,6 +1489,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbaji ku Mfua ka kwenda",
+    "mandombe": "mbaji ku Mfua ka kwenda",
     "fr": "Il/Elle ira.",
     "en": "He/She will go.",
     "verb": "Kwenda",
@@ -1332,6 +1498,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbaji ku Lubomo tu kwenda",
+    "mandombe": "mbaji ku Lubomo tu kwenda",
     "fr": "Nous irons.",
     "en": "We will go.",
     "verb": "Kwenda",
@@ -1340,6 +1507,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbaji ku Kinkala lu kwenda",
+    "mandombe": "mbaji ku Kinkala lu kwenda",
     "fr": "Vous irez.",
     "en": "You will go.",
     "verb": "Kwenda",
@@ -1348,6 +1516,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbaji ku Mbamu ba kwenda",
+    "mandombe": "mbaji ku Mbamu ba kwenda",
     "fr": "Ils/Elles iront.",
     "en": "They will go.",
     "verb": "Kwenda",
@@ -1356,6 +1525,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "na kwizi",
+    "mandombe": "na kwizi",
     "fr": "Je suis venu.",
     "en": "I came.",
     "verb": "Kwiza",
@@ -1364,6 +1534,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "wa kwizi",
+    "mandombe": "wa kwizi",
     "fr": "Tu es venu.",
     "en": "You came.",
     "verb": "Kwiza",
@@ -1372,6 +1543,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "wa kwizi",
+    "mandombe": "wa kwizi",
     "fr": "Il est venu.",
     "en": "He came.",
     "verb": "Kwiza",
@@ -1380,6 +1552,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "tua kwizi",
+    "mandombe": "tua kwizi",
     "fr": "Nous sommes venus.",
     "en": "We came.",
     "verb": "Kwiza",
@@ -1388,6 +1561,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "lua kwizi",
+    "mandombe": "lua kwizi",
     "fr": "Vous êtes venus.",
     "en": "You came.",
     "verb": "Kwiza",
@@ -1396,6 +1570,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ba kwizi",
+    "mandombe": "ba kwizi",
     "fr": "Ils sont venus.",
     "en": "They came.",
     "verb": "Kwiza",
@@ -1404,6 +1579,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Mfuidi",
+    "mandombe": "Mfuidi",
     "fr": "Je suis mort.",
     "en": "I died.",
     "verb": "Fua",
@@ -1412,6 +1588,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Fuidi",
+    "mandombe": "Fuidi",
     "fr": "Tu es mort.",
     "en": "You died.",
     "verb": "Fua",
@@ -1420,6 +1597,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Fuidi",
+    "mandombe": "Fuidi",
     "fr": "Il est mort.",
     "en": "He died.",
     "verb": "Fua",
@@ -1428,6 +1606,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Tu fuidi",
+    "mandombe": "Tu fuidi",
     "fr": "Nous sommes morts.",
     "en": "We died.",
     "verb": "Fua",
@@ -1436,6 +1615,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Lu fuidi",
+    "mandombe": "Lu fuidi",
     "fr": "Vous êtes morts.",
     "en": "You died.",
     "verb": "Fua",
@@ -1444,6 +1624,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Ba fuidi",
+    "mandombe": "Ba fuidi",
     "fr": "Ils sont morts.",
     "en": "They died.",
     "verb": "Fua",
@@ -1452,6 +1633,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Mamba ndosele",
+    "mandombe": "Mamba ndosele",
     "fr": "J'ai jeté.",
     "en": "I threw.",
     "verb": "Losa",
@@ -1460,6 +1642,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Mamba losele",
+    "mandombe": "Mamba losele",
     "fr": "Tu as jeté.",
     "en": "You threw.",
     "verb": "Losa",
@@ -1468,6 +1651,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Mamba ka losele",
+    "mandombe": "Mamba ka losele",
     "fr": "Il/Elle a jeté.",
     "en": "He/She threw.",
     "verb": "Losa",
@@ -1476,6 +1660,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Mamba tu losele",
+    "mandombe": "Mamba tu losele",
     "fr": "Nous avons jeté.",
     "en": "We threw.",
     "verb": "Losa",
@@ -1484,6 +1669,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Mamba lu losele",
+    "mandombe": "Mamba lu losele",
     "fr": "Vous avez jeté.",
     "en": "You threw.",
     "verb": "Losa",
@@ -1492,6 +1678,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Mamba ba losele",
+    "mandombe": "Mamba ba losele",
     "fr": "Ils/Elles ont jeté.",
     "en": "They threw.",
     "verb": "Losa",
@@ -1500,6 +1687,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Mudjiri ni lamba",
+    "mandombe": "Mudjiri ni lamba",
     "fr": "Je cuisinerai.",
     "en": "I will cook.",
     "verb": "Lamba",
@@ -1508,6 +1696,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Mudjiri lamba",
+    "mandombe": "Mudjiri lamba",
     "fr": "Tu cuisineras.",
     "en": "You will cook.",
     "verb": "Lamba",
@@ -1516,6 +1705,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Mudjiri ka lamba",
+    "mandombe": "Mudjiri ka lamba",
     "fr": "Il/Elle cuisinera.",
     "en": "He/She will cook.",
     "verb": "Lamba",
@@ -1524,6 +1714,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Mudjiri tu lamba",
+    "mandombe": "Mudjiri tu lamba",
     "fr": "Nous cuisinerons.",
     "en": "We will cook.",
     "verb": "Lamba",
@@ -1532,6 +1723,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Mudjiri lu lamba",
+    "mandombe": "Mudjiri lu lamba",
     "fr": "Vous cuisinerez.",
     "en": "You will cook.",
     "verb": "Lamba",
@@ -1540,6 +1732,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Mudjiri ba lamba",
+    "mandombe": "Mudjiri ba lamba",
     "fr": "Ils/Elles cuisineront.",
     "en": "They will cook.",
     "verb": "Lamba",
@@ -1548,6 +1741,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Nsiri",
+    "mandombe": "Nsiri",
     "fr": "J'ai fait.",
     "en": "I did.",
     "verb": "Sa",
@@ -1556,6 +1750,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Siri / Sidi / Shiri / Shidi",
+    "mandombe": "Siri / Sidi / Shiri / Shidi",
     "fr": "Tu as fait.",
     "en": "You did.",
     "verb": "Sa",
@@ -1564,6 +1759,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Ka sidi / siri / shiri / shidi",
+    "mandombe": "Ka sidi / siri / shiri / shidi",
     "fr": "Il/Elle a fait.",
     "en": "He/She did.",
     "verb": "Sa",
@@ -1572,6 +1768,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Ta/Tua sidi / siri / shiri / shidi",
+    "mandombe": "Ta/Tua sidi / siri / shiri / shidi",
     "fr": "Nous avons fait.",
     "en": "We did.",
     "verb": "Sa",
@@ -1580,6 +1777,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Lua sidi / siri / shiri / shidi",
+    "mandombe": "Lua sidi / siri / shiri / shidi",
     "fr": "Vous avez fait.",
     "en": "You did.",
     "verb": "Sa",
@@ -1588,6 +1786,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Ba sidi / siri / shiri / shidi",
+    "mandombe": "Ba sidi / siri / shiri / shidi",
     "fr": "Ils/Elles ont fait.",
     "en": "They did.",
     "verb": "Sa",
@@ -1596,6 +1795,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Nzololo",
+    "mandombe": "Nzololo",
     "fr": "J'aime bien.",
     "en": "I like.",
     "verb": "Zololo",
@@ -1604,6 +1804,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "zololo",
+    "mandombe": "zololo",
     "fr": "Tu aimes bien.",
     "en": "You like.",
     "verb": "Zololo",
@@ -1612,6 +1813,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Zololo",
+    "mandombe": "Zololo",
     "fr": "Il/Elle aime bien.",
     "en": "He/She likes.",
     "verb": "Zololo",
@@ -1620,6 +1822,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Tu zololo",
+    "mandombe": "Tu zololo",
     "fr": "Nous aimons bien.",
     "en": "We like.",
     "verb": "Zololo",
@@ -1628,6 +1831,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Lu zololo",
+    "mandombe": "Lu zololo",
     "fr": "Vous aimez bien.",
     "en": "You like.",
     "verb": "Zololo",
@@ -1636,6 +1840,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Ba zololo",
+    "mandombe": "Ba zololo",
     "fr": "Ils/Elles aiment bien.",
     "en": "They like.",
     "verb": "Zololo",
@@ -1644,6 +1849,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Mi mfueti bambuka",
+    "mandombe": "Mi mfueti bambuka",
     "fr": "Je dois me souvenir.",
     "en": "I must remember.",
     "verb": "Bambuka",
@@ -1652,6 +1858,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Mi fueti bambuka",
+    "mandombe": "Mi fueti bambuka",
     "fr": "Tu dois te souvenir.",
     "en": "You must remember.",
     "verb": "Bambuka",
@@ -1660,6 +1867,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Mi ka fueti bambuka",
+    "mandombe": "Mi ka fueti bambuka",
     "fr": "Il doit se souvenir.",
     "en": "He must remember.",
     "verb": "Bambuka",
@@ -1668,6 +1876,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Mi tu fueti bambuka",
+    "mandombe": "Mi tu fueti bambuka",
     "fr": "Nous devons nous souvenir.",
     "en": "We must remember.",
     "verb": "Bambuka",
@@ -1676,6 +1885,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Mi lu fueti bambuka",
+    "mandombe": "Mi lu fueti bambuka",
     "fr": "Vous devez vous souvenir.",
     "en": "You must remember.",
     "verb": "Bambuka",
@@ -1684,6 +1894,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Mi ba fueti bambuka",
+    "mandombe": "Mi ba fueti bambuka",
     "fr": "Ils doivent se souvenir.",
     "en": "They must remember.",
     "verb": "Bambuka",
@@ -1692,6 +1903,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Mi mfueni shimba",
+    "mandombe": "Mi mfueni shimba",
     "fr": "Je dois retenir.",
     "en": "I must retain.",
     "verb": "Shimba",
@@ -1700,6 +1912,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Mi fueni shimba",
+    "mandombe": "Mi fueni shimba",
     "fr": "Tu dois retenir.",
     "en": "You must retain.",
     "verb": "Shimba",
@@ -1708,6 +1921,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Mi ka fueni shimba",
+    "mandombe": "Mi ka fueni shimba",
     "fr": "Il doit retenir.",
     "en": "He must retain.",
     "verb": "Shimba",
@@ -1716,6 +1930,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Mi tu fueni shimba",
+    "mandombe": "Mi tu fueni shimba",
     "fr": "Nous devons retenir.",
     "en": "We must retain.",
     "verb": "Shimba",
@@ -1724,6 +1939,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Mi lu fueni shimba",
+    "mandombe": "Mi lu fueni shimba",
     "fr": "Vous devez retenir.",
     "en": "You must retain.",
     "verb": "Shimba",
@@ -1732,6 +1948,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Mi ba fueni shimba",
+    "mandombe": "Mi ba fueni shimba",
     "fr": "Ils doivent retenir.",
     "en": "They must retain.",
     "verb": "Shimba",
@@ -1740,6 +1957,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Mulumba njunini",
+    "mandombe": "Mulumba njunini",
     "fr": "J'ai écorché.",
     "en": "I skinned.",
     "verb": "Yuna",
@@ -1748,6 +1966,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Mulumba yunini",
+    "mandombe": "Mulumba yunini",
     "fr": "Tu as écorché.",
     "en": "You skinned.",
     "verb": "Yuna",
@@ -1756,6 +1975,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Mulumba ka yunini",
+    "mandombe": "Mulumba ka yunini",
     "fr": "Il/Elle a écorché.",
     "en": "He/She skinned.",
     "verb": "Yuna",
@@ -1764,6 +1984,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Mulumba tu yunini",
+    "mandombe": "Mulumba tu yunini",
     "fr": "Nous avons écorché.",
     "en": "We skinned.",
     "verb": "Yuna",
@@ -1772,6 +1993,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Mulumba lu yunini",
+    "mandombe": "Mulumba lu yunini",
     "fr": "Vous avez écorché.",
     "en": "You skinned.",
     "verb": "Yuna",
@@ -1780,6 +2002,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Mulumba ba yunini",
+    "mandombe": "Mulumba ba yunini",
     "fr": "Ils/Elles ont écorché.",
     "en": "They skinned.",
     "verb": "Yuna",
@@ -1788,6 +2011,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Zololo",
+    "mandombe": "Zololo",
     "fr": "Tu aimes.",
     "en": "You love.",
     "verb": "Zololo",
@@ -1796,6 +2020,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Ba zololo",
+    "mandombe": "Ba zololo",
     "fr": "Ils/Elles aiment.",
     "en": "They love.",
     "verb": "Zololo",
@@ -1804,6 +2029,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Zaza ni ta zaza",
+    "mandombe": "Zaza ni ta zaza",
     "fr": "Je suis en train de trembloter.",
     "en": "I am trembling.",
     "verb": "Zaza",
@@ -1812,6 +2038,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Zaza ta zaza",
+    "mandombe": "Zaza ta zaza",
     "fr": "Tu es en train de trembloter.",
     "en": "You are trembling.",
     "verb": "Zaza",
@@ -1820,6 +2047,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Zaza ka ta zaza",
+    "mandombe": "Zaza ka ta zaza",
     "fr": "Il/Elle est en train de trembloter.",
     "en": "He/She is trembling.",
     "verb": "Zaza",
@@ -1828,6 +2056,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Zaza tu ta zaza",
+    "mandombe": "Zaza tu ta zaza",
     "fr": "Nous sommes en train de trembloter.",
     "en": "We are trembling.",
     "verb": "Zaza",
@@ -1836,6 +2065,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Zaza lu ta zaza",
+    "mandombe": "Zaza lu ta zaza",
     "fr": "Vous êtes en train de trembloter.",
     "en": "You are trembling.",
     "verb": "Zaza",
@@ -1844,6 +2074,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Zaza ba ta zaza",
+    "mandombe": "Zaza ba ta zaza",
     "fr": "Ils/Elles sont en train de trembloter.",
     "en": "They are trembling.",
     "verb": "Zaza",
@@ -1852,6 +2083,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Mbata ka (ku) nguindiri",
+    "mandombe": "Mbata ka nguindiri",
     "fr": "Il m'a giflé.",
     "en": "He slapped me.",
     "verb": "Wuinda",
@@ -1860,6 +2092,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Mbata ka ku wuindiri",
+    "mandombe": "Mbata ka ku wuindiri",
     "fr": "Il t'a giflé.",
     "en": "He slapped you.",
     "verb": "Wuinda",
@@ -1868,6 +2101,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Mbata ka mu wuindiri",
+    "mandombe": "Mbata ka mu wuindiri",
     "fr": "Il l'a giflé.",
     "en": "He slapped him.",
     "verb": "Wuinda",
@@ -1876,6 +2110,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Mbata ka tu wuindiri",
+    "mandombe": "Mbata ka tu wuindiri",
     "fr": "Il nous a giflés.",
     "en": "He slapped us.",
     "verb": "Wuinda",
@@ -1884,6 +2119,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Mbata ka lu wuindiri",
+    "mandombe": "Mbata ka lu wuindiri",
     "fr": "Il vous a giflés.",
     "en": "He slapped you.",
     "verb": "Wuinda",
@@ -1892,6 +2128,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Mbata ka ba wuindiri",
+    "mandombe": "Mbata ka ba wuindiri",
     "fr": "Il les a giflés.",
     "en": "He slapped them.",
     "verb": "Wuinda",
@@ -1900,6 +2137,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Mbata ni mu wuindiri",
+    "mandombe": "Mbata ni mu wuindiri",
     "fr": "Je l'ai giflé.",
     "en": "I slapped him.",
     "verb": "Wuinda",
@@ -1908,6 +2146,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Mbata wu mu wuindiri",
+    "mandombe": "Mbata wu mu wuindiri",
     "fr": "Tu l'as giflé.",
     "en": "You slapped him.",
     "verb": "Wuinda",
@@ -1916,6 +2155,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Mbata tu mu wuindiri",
+    "mandombe": "Mbata tu mu wuindiri",
     "fr": "Nous l'avons giflé.",
     "en": "We slapped him.",
     "verb": "Wuinda",
@@ -1924,6 +2164,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Mbata lu mu wuindiri",
+    "mandombe": "Mbata lu mu wuindiri",
     "fr": "Vous l'avez giflé.",
     "en": "You slapped him.",
     "verb": "Wuinda",
@@ -1932,6 +2173,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Mbata ba mu wuindiri",
+    "mandombe": "Mbata ba mu wuindiri",
     "fr": "Ils l'ont giflé.",
     "en": "They slapped him.",
     "verb": "Wuinda",
@@ -1940,6 +2182,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Muntu nguidiri mbata",
+    "mandombe": "Muntu nguidiri mbata",
     "fr": "J'ai giflé quelqu'un.",
     "en": "I slapped someone.",
     "verb": "Wuinda",
@@ -1948,6 +2191,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Muntu wuindiri mbata",
+    "mandombe": "Muntu wuindiri mbata",
     "fr": "Tu as giflé quelqu'un.",
     "en": "You slapped someone.",
     "verb": "Wuinda",
@@ -1956,6 +2200,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Muntu ka wuindiri mbata",
+    "mandombe": "Muntu ka wuindiri mbata",
     "fr": "Il a giflé quelqu'un.",
     "en": "He slapped someone.",
     "verb": "Wuinda",
@@ -1964,6 +2209,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Muntu tu wuindiri mbata",
+    "mandombe": "Muntu tu wuindiri mbata",
     "fr": "Nous avons giflé quelqu'un.",
     "en": "We slapped someone.",
     "verb": "Wuinda",
@@ -1972,6 +2218,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Muntu lu wuindiri mbata",
+    "mandombe": "Muntu lu wuindiri mbata",
     "fr": "Vous avez giflé quelqu'un.",
     "en": "You slapped someone.",
     "verb": "Wuinda",
@@ -1980,6 +2227,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Muntu ba wuindiri mbata",
+    "mandombe": "Muntu ba wuindiri mbata",
     "fr": "Ils ont giflé quelqu'un.",
     "en": "They slapped someone.",
     "verb": "Wuinda",
@@ -1988,6 +2236,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Mbo ni wuinda muntu mbata",
+    "mandombe": "Mbo ni wuinda muntu mbata",
     "fr": "Je giflerai quelqu'un.",
     "en": "I will slap someone.",
     "verb": "Wuinda",
@@ -1996,6 +2245,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Mbo wuinda muntu mbata",
+    "mandombe": "Mbo wuinda muntu mbata",
     "fr": "Tu gifleras quelqu'un.",
     "en": "You will slap someone.",
     "verb": "Wuinda",
@@ -2004,6 +2254,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Mbo ka wuinda muntu mbata",
+    "mandombe": "Mbo ka wuinda muntu mbata",
     "fr": "Il giflera quelqu'un.",
     "en": "He will slap someone.",
     "verb": "Wuinda",
@@ -2012,6 +2263,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Mbo tu wuinda muntu mbata",
+    "mandombe": "Mbo tu wuinda muntu mbata",
     "fr": "Nous giflerons quelqu'un.",
     "en": "We will slap someone.",
     "verb": "Wuinda",
@@ -2020,6 +2272,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Mbo lu wuinda muntu mbata",
+    "mandombe": "Mbo lu wuinda muntu mbata",
     "fr": "Vous giflerez quelqu'un.",
     "en": "You will slap someone.",
     "verb": "Wuinda",
@@ -2028,6 +2281,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Mbo ba wuinda muntu mbata",
+    "mandombe": "Mbo ba wuinda muntu mbata",
     "fr": "Ils gifleront quelqu'un.",
     "en": "They will slap someone.",
     "verb": "Wuinda",
@@ -2036,6 +2290,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Mbo ni kuna mumanga ku nima nzo.",
+    "mandombe": "Mbo ni kuna mumanga ku nima nzo.",
     "fr": "Je planterai.",
     "en": "I will plant.",
     "verb": "Kuna",
@@ -2044,6 +2299,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Mbo kuna mumanga ku nima nzo.",
+    "mandombe": "Mbo kuna mumanga ku nima nzo.",
     "fr": "Tu planteras.",
     "en": "You will plant.",
     "verb": "Kuna",
@@ -2052,6 +2308,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Mbo ka kuna mumanga ku nima nzo.",
+    "mandombe": "Mbo ka kuna mumanga ku nima nzo.",
     "fr": "Il/Elle plantera.",
     "en": "He/She will plant.",
     "verb": "Kuna",
@@ -2060,6 +2317,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Mbo tu kuna mumanga ku nima nzo.",
+    "mandombe": "Mbo tu kuna mumanga ku nima nzo.",
     "fr": "Nous planterons.",
     "en": "We will plant.",
     "verb": "Kuna",
@@ -2068,6 +2326,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Mbo lu kuna mumanga ku nima nzo.",
+    "mandombe": "Mbo lu kuna mumanga ku nima nzo.",
     "fr": "Vous planterez.",
     "en": "You will plant.",
     "verb": "Kuna",
@@ -2076,6 +2335,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Mbo ba kuna mumanga ku nima nzo.",
+    "mandombe": "Mbo ba kuna mumanga ku nima nzo.",
     "fr": "Ils/Elles planteront.",
     "en": "They will plant.",
     "verb": "Kuna",
@@ -2084,6 +2344,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Vunga diani dia nkutikiri.",
+    "mandombe": "Vunga diani dia nkutikiri.",
     "fr": "J'ai rangé.",
     "en": "I tidied up.",
     "verb": "Kutika",
@@ -2092,6 +2353,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Binkuti biaku bia kutikiri.",
+    "mandombe": "Binkuti biaku bia kutikiri.",
     "fr": "Tu as rangé.",
     "en": "You tidied up.",
     "verb": "Kutika",
@@ -2100,6 +2362,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Mavunga mandi ma ka kutikiri.",
+    "mandombe": "Mavunga mandi ma ka kutikiri.",
     "fr": "Il/Elle a rangé.",
     "en": "He/She tidied up.",
     "verb": "Kutika",
@@ -2108,6 +2371,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Lukuba luto lua tu kutikiri.",
+    "mandombe": "Lukuba luto luwa tu kutikiri.",
     "fr": "Nous avons rangé.",
     "en": "We tidied up.",
     "verb": "Kutika",
@@ -2116,6 +2380,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Kumbi dieno dia lu kutikiri.",
+    "mandombe": "Kumbi dieno dia lu kutikiri.",
     "fr": "Vous avez rangé.",
     "en": "You tidied up.",
     "verb": "Kutika",
@@ -2124,6 +2389,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Milele miawu mia ba kutikiri.",
+    "mandombe": "Milele miawu mia ba kutikiri.",
     "fr": "Ils/Elles ont rangé.",
     "en": "They tidied up.",
     "verb": "Kutika",
@@ -2132,6 +2398,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Na kotele ku hata",
+    "mandombe": "Na kotele ku hata",
     "fr": "Je suis entré.",
     "en": "I entered.",
     "verb": "Kota",
@@ -2140,6 +2407,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Kotele ku hata",
+    "mandombe": "Kotele ku hata",
     "fr": "Tu es entré.",
     "en": "You entered.",
     "verb": "Kota",
@@ -2148,6 +2416,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Wa kotele ku hata",
+    "mandombe": "Wa kotele ku hata",
     "fr": "Il est entré.",
     "en": "He entered.",
     "verb": "Kota",
@@ -2156,6 +2425,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Ta kotele ku hata",
+    "mandombe": "Ta kotele ku hata",
     "fr": "Nous sommes entrés.",
     "en": "We entered.",
     "verb": "Kota",
@@ -2164,6 +2434,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Lua kotele ku hata",
+    "mandombe": "Lua kotele ku hata",
     "fr": "Vous êtes entrés.",
     "en": "You entered.",
     "verb": "Kota",
@@ -2172,6 +2443,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Ba kotele ku hata",
+    "mandombe": "Ba kotele ku hata",
     "fr": "Ils sont entrés.",
     "en": "They entered.",
     "verb": "Kota",
@@ -2180,6 +2452,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Yetela ni ta yetela",
+    "mandombe": "Yetela ni ta yetela",
     "fr": "Je suis en train de me réchauffer au feu.",
     "en": "I am warming myself by the fire.",
     "verb": "Yetela",
@@ -2188,6 +2461,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Yetela ta yetela",
+    "mandombe": "Yetela ta yetela",
     "fr": "Tu es en train de te réchauffer au feu.",
     "en": "You are warming yourself by the fire.",
     "verb": "Yetela",
@@ -2196,6 +2470,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Yetela ka ta yetela",
+    "mandombe": "Yetela ka ta yetela",
     "fr": "Il/Elle est en train de se réchauffer au feu.",
     "en": "He/She is warming himself/herself by the fire.",
     "verb": "Yetela",
@@ -2204,6 +2479,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Yetela tu ta yetela",
+    "mandombe": "Yetela tu ta yetela",
     "fr": "Nous sommes en train de nous réchauffer au feu.",
     "en": "We are warming ourselves by the fire.",
     "verb": "Yetela",
@@ -2212,6 +2488,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Yetela lu ta yetela",
+    "mandombe": "Yetela lu ta yetela",
     "fr": "Vous êtes en train de vous réchauffer au feu.",
     "en": "You are warming yourselves by the fire.",
     "verb": "Yetela",
@@ -2220,6 +2497,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Yetela ba ta yetela",
+    "mandombe": "Yetela ba ta yetela",
     "fr": "Ils/Elles sont en train de se réchauffer au feu.",
     "en": "They are warming themselves by the fire.",
     "verb": "Yetela",
@@ -2228,6 +2506,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Njele yilulu ku mamba",
+    "mandombe": "Ngiele ilulu ku mamba",
     "fr": "J'ai mis du temps.",
     "en": "I spent a long time.",
     "verb": "Yilulu",
@@ -2236,6 +2515,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Wele yilulu ku mamba",
+    "mandombe": "Wele ilulu ku mamba",
     "fr": "Tu as mis du temps.",
     "en": "You spent a long time.",
     "verb": "Yilulu",
@@ -2244,6 +2524,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Wele yilulu ku mamba",
+    "mandombe": "Wele ilulu ku mamba",
     "fr": "Il a mis du temps.",
     "en": "He spent a long time.",
     "verb": "Yilulu",
@@ -2252,6 +2533,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Tuele yilulu ku mamba",
+    "mandombe": "Tuele ilulu ku mamba",
     "fr": "Nous avons mis du temps.",
     "en": "We spent a long time.",
     "verb": "Yilulu",
@@ -2260,6 +2542,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Luele yilulu ku mamba",
+    "mandombe": "Luele ilulu ku mamba",
     "fr": "Vous avez mis du temps.",
     "en": "You spent a long time.",
     "verb": "Yilulu",
@@ -2268,6 +2551,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Bele yilulu ku mamba",
+    "mandombe": "Bele ilulu ku mamba",
     "fr": "Ils ont mis du temps.",
     "en": "They spent a long time.",
     "verb": "Yilulu",
@@ -2276,6 +2560,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Luika lue nani",
+    "mandombe": "Luika lue nani",
     "fr": "Je suis poilu.",
     "en": "I am hairy.",
     "verb": "Luika lue",
@@ -2284,6 +2569,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Luika lue naku",
+    "mandombe": "Luika lue naku",
     "fr": "Tu es poilu.",
     "en": "You are hairy.",
     "verb": "Luika lue",
@@ -2292,6 +2578,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Luika lue nandi",
+    "mandombe": "Luika lue nandi",
     "fr": "Il est poilu.",
     "en": "He is hairy.",
     "verb": "Luika lue",
@@ -2300,6 +2587,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Luika lue neto",
+    "mandombe": "Luika lue neto",
     "fr": "Nous sommes poilus.",
     "en": "We are hairy.",
     "verb": "Luika lue",
@@ -2308,6 +2596,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Luika lue neno",
+    "mandombe": "Luika lue neno",
     "fr": "Vous êtes poilus.",
     "en": "You are hairy.",
     "verb": "Luika lue",
@@ -2316,6 +2605,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Luika lue nawu",
+    "mandombe": "Luika lue nawu",
     "fr": "Ils sont poilus.",
     "en": "They are hairy.",
     "verb": "Luika lue",
@@ -2324,6 +2614,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Luika lueri nani",
+    "mandombe": "Luika lueri nani",
     "fr": "J'étais poilu.",
     "en": "I was hairy.",
     "verb": "Luika lueri",
@@ -2332,6 +2623,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Luika lueri naku",
+    "mandombe": "Luika lueri naku",
     "fr": "Tu étais poilu.",
     "en": "You were hairy.",
     "verb": "Luika lueri",
@@ -2340,6 +2632,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Luika lueri nandi",
+    "mandombe": "Luika lueri nandi",
     "fr": "Il/Elle était poilu(e).",
     "en": "He/She was hairy.",
     "verb": "Luika lueri",
@@ -2348,6 +2641,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Luika lueri neto",
+    "mandombe": "Luika lueri neto",
     "fr": "Nous étions poilus.",
     "en": "We were hairy.",
     "verb": "Luika lueri",
@@ -2356,6 +2650,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Luika lueri neno",
+    "mandombe": "Luika lueri neno",
     "fr": "Vous étiez poilus.",
     "en": "You were hairy.",
     "verb": "Luika lueri",
@@ -2364,6 +2659,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Luika lueri nawu",
+    "mandombe": "Luika lueri nawu",
     "fr": "Ils/Elles étaient poilus.",
     "en": "They were hairy.",
     "verb": "Luika lueri",
@@ -2372,6 +2668,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Nua ni ta nua",
+    "mandombe": "Nuwa ni ta nuwa",
     "fr": "Je suis en train de boire.",
     "en": "I am drinking.",
     "verb": "Nua",
@@ -2380,6 +2677,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Nua ta nua",
+    "mandombe": "Nuwa ta nuwa",
     "fr": "Tu es en train de boire.",
     "en": "You are drinking.",
     "verb": "Nua",
@@ -2388,6 +2686,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Nua ka ta nua",
+    "mandombe": "Nuwa ka ta nuwa",
     "fr": "Il/Elle est en train de boire.",
     "en": "He/She is drinking.",
     "verb": "Nua",
@@ -2396,6 +2695,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Nua tu ta nua",
+    "mandombe": "Nuwa tu ta nuwa",
     "fr": "Nous sommes en train de boire.",
     "en": "We are drinking.",
     "verb": "Nua",
@@ -2404,6 +2704,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Nua lu ta nua",
+    "mandombe": "Nuwa lu ta nuwa",
     "fr": "Vous êtes en train de boire.",
     "en": "You are drinking.",
     "verb": "Nua",
@@ -2412,6 +2713,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Nua ba ta nua",
+    "mandombe": "Nuwa ba ta nuwa",
     "fr": "Ils/Elles sont en train de boire.",
     "en": "They are drinking.",
     "verb": "Nua",
@@ -2420,6 +2722,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Nsakalale",
+    "mandombe": "Nsakalale",
     "fr": "Je vais mieux.",
     "en": "I am getting better.",
     "verb": "Sakalala",
@@ -2428,6 +2731,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Sakalale",
+    "mandombe": "Sakalale",
     "fr": "Tu vas mieux.",
     "en": "You are getting better.",
     "verb": "Sakalala",
@@ -2436,6 +2740,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Sakalale",
+    "mandombe": "Sakalale",
     "fr": "Il/Elle va mieux.",
     "en": "He/She is getting better.",
     "verb": "Sakalala",
@@ -2444,6 +2749,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Tu sakalale",
+    "mandombe": "Tu sakalale",
     "fr": "Nous allons mieux.",
     "en": "We are getting better.",
     "verb": "Sakalala",
@@ -2452,6 +2758,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Lu sakalale",
+    "mandombe": "Lu sakalale",
     "fr": "Vous allez mieux.",
     "en": "You are getting better.",
     "verb": "Sakalala",
@@ -2460,6 +2767,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Ba sakalale",
+    "mandombe": "Ba sakalale",
     "fr": "Ils/Elles vont mieux.",
     "en": "They are getting better.",
     "verb": "Sakalala",
@@ -2468,6 +2776,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Muana nkiri ku nima",
+    "mandombe": "Muana nkiri ku nima",
     "fr": "J'ai mis l'enfant au dos.",
     "en": "I put the child on my back.",
     "verb": "Shiri ku nima",
@@ -2476,6 +2785,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Muana shiri ku nima",
+    "mandombe": "Muana shiri ku nima",
     "fr": "Tu as mis l'enfant au dos.",
     "en": "You put the child on your back.",
     "verb": "Shiri ku nima",
@@ -2484,6 +2794,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Muana ka shiri ku nima",
+    "mandombe": "Muana ka shiri ku nima",
     "fr": "Il/elle a mis l'enfant au dos.",
     "en": "He/she put the child on his/her back.",
     "verb": "Shiri ku nima",
@@ -2492,6 +2803,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Muana tu shiri ku nima",
+    "mandombe": "Muana tu shiri ku nima",
     "fr": "Nous avons mis l'enfant au dos.",
     "en": "We put the child on our back.",
     "verb": "Shiri ku nima",
@@ -2500,6 +2812,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Muana lu shiri ku nima",
+    "mandombe": "Muana lu shiri ku nima",
     "fr": "Vous avez mis l'enfant au dos.",
     "en": "You put the child on your back.",
     "verb": "Shiri ku nima",
@@ -2508,6 +2821,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Muana ba shiri ku nima",
+    "mandombe": "Muana ba shiri ku nima",
     "fr": "Ils/elles ont mis l'enfant au dos.",
     "en": "They put the child on their back.",
     "verb": "Shiri ku nima",
@@ -2516,6 +2830,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Lumbu tshi nsuki zani ni sukula",
+    "mandombe": "Lumbu tshi nsuki zani ni sukula",
     "fr": "Je lave les cheveux.",
     "en": "I wash hair.",
     "verb": "Sukula nsuki (laver les cheveux)",
@@ -2524,6 +2839,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Lumbu tshi nsuki ni ku sukula",
+    "mandombe": "Lumbu tshi nsuki ni ku sukula",
     "fr": "Tu laves les cheveux.",
     "en": "You wash hair.",
     "verb": "Sukula nsuki (laver les cheveux)",
@@ -2532,6 +2848,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Lumbu tshi nsuki ni mu sukula",
+    "mandombe": "Lumbu tshi nsuki ni mu sukula",
     "fr": "Il/Elle lave les cheveux.",
     "en": "He/She washes hair.",
     "verb": "Sukula nsuki (laver les cheveux)",
@@ -2540,6 +2857,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Lumbu tshi nsuki ni tu sukula",
+    "mandombe": "Lumbu tshi nsuki ni tu sukula",
     "fr": "Nous lavons les cheveux.",
     "en": "We wash hair.",
     "verb": "Sukula nsuki (laver les cheveux)",
@@ -2548,6 +2866,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Lumbu tshi nsuki ni lu sukula",
+    "mandombe": "Lumbu tshi nsuki ni lu sukula",
     "fr": "Vous lavez les cheveux.",
     "en": "You wash hair.",
     "verb": "Sukula nsuki (laver les cheveux)",
@@ -2556,6 +2875,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Lumbu tshi nsuki ni ba sukula",
+    "mandombe": "Lumbu tshi nsuki ni ba sukula",
     "fr": "Ils/Elles lavent les cheveux.",
     "en": "They wash hair.",
     "verb": "Sukula nsuki (laver les cheveux)",
@@ -2564,6 +2884,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Mama nsuki ka ta ku njumisa",
+    "mandombe": "Mama nsuki ka ta ku njumisa",
     "fr": "Je sèche les cheveux.",
     "en": "I dry hair.",
     "verb": "Yumisa nsuki (sécher les cheveux)",
@@ -2572,6 +2893,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Mama ani nsuki ka ta ku yumisa",
+    "mandombe": "Mama ani nsuki ka ta ku yumisa",
     "fr": "Tu sèches les cheveux.",
     "en": "You dry hair.",
     "verb": "Yumisa nsuki (sécher les cheveux)",
@@ -2580,6 +2902,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Mama nsuki ka ta tu yumisa",
+    "mandombe": "Mama nsuki ka ta tu yumisa",
     "fr": "Nous séchons les cheveux.",
     "en": "We dry hair.",
     "verb": "Yumisa nsuki (sécher les cheveux)",
@@ -2588,6 +2911,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Mama nsuki ka ta lu yumisa",
+    "mandombe": "Mama nsuki ka ta lu yumisa",
     "fr": "Vous séchez les cheveux.",
     "en": "You dry hair.",
     "verb": "Yumisa nsuki (sécher les cheveux)",
@@ -2596,6 +2920,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Mama nsuki ka ta ba yumisa",
+    "mandombe": "Mama nsuki ka ta ba yumisa",
     "fr": "Ils sèchent les cheveux.",
     "en": "They dry hair.",
     "verb": "Yumisa nsuki (sécher les cheveux)",
@@ -2604,6 +2929,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Ku Mputu ntukidi",
+    "mandombe": "Ku Mputu ntukidi",
     "fr": "Je suis venu de.",
     "en": "I came from.",
     "verb": "Tuka",
@@ -2612,6 +2938,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Ku Mputu tukidi",
+    "mandombe": "Ku Mputu tukidi",
     "fr": "Tu es venu de.",
     "en": "You came from.",
     "verb": "Tuka",
@@ -2620,6 +2947,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Ku Mputu ka tukidi",
+    "mandombe": "Ku Mputu ka tukidi",
     "fr": "Il/Elle est venu(e) de.",
     "en": "He/She came from.",
     "verb": "Tuka",
@@ -2628,6 +2956,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Ku Mputu tu tukidi",
+    "mandombe": "Ku Mputu tu tukidi",
     "fr": "Nous sommes venus de.",
     "en": "We came from.",
     "verb": "Tuka",
@@ -2636,6 +2965,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Ku Mputu lu tukidi",
+    "mandombe": "Ku Mputu lu tukidi",
     "fr": "Vous êtes venus de.",
     "en": "You came from.",
     "verb": "Tuka",
@@ -2644,6 +2974,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Ku Mputu ba tukidi",
+    "mandombe": "Ku Mputu ba tukidi",
     "fr": "Ils/Elles sont venu(e)s de.",
     "en": "They came from.",
     "verb": "Tuka",
@@ -2652,6 +2983,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Nsayi ye nani",
+    "mandombe": "Nsai ye nani",
     "fr": "Je suis content.",
     "en": "I am happy.",
     "verb": "Nsayi",
@@ -2660,6 +2992,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Nsayi ye naku",
+    "mandombe": "Nsai ye naku",
     "fr": "Tu es content.",
     "en": "You are happy.",
     "verb": "Nsayi",
@@ -2668,6 +3001,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Nsayi ye nandi",
+    "mandombe": "Nsai ye nandi",
     "fr": "Il est content.",
     "en": "He is happy.",
     "verb": "Nsayi",
@@ -2676,6 +3010,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Nsayi ye neto",
+    "mandombe": "Nsai ye neto",
     "fr": "Nous sommes contents.",
     "en": "We are happy.",
     "verb": "Nsayi",
@@ -2684,6 +3019,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Nsayi ye neno",
+    "mandombe": "Nsai ye neno",
     "fr": "Vous êtes contents.",
     "en": "You are happy.",
     "verb": "Nsayi",
@@ -2692,6 +3028,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Nsayi ye nawu",
+    "mandombe": "Nsai ye nawu",
     "fr": "Ils sont contents.",
     "en": "They are happy.",
     "verb": "Nsayi",
@@ -2700,6 +3037,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mwizu ni ta kwiza",
+    "mandombe": "mwizu ni ta kwiza",
     "fr": "Je viens.",
     "en": "I come.",
     "verb": "Kwiza",
@@ -2708,6 +3046,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mwizu ta kwiza",
+    "mandombe": "mwizu ta kwiza",
     "fr": "Tu viens.",
     "en": "You come.",
     "verb": "Kwiza",
@@ -2716,6 +3055,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mwizu ka ta kwiza",
+    "mandombe": "mwizu ka ta kwiza",
     "fr": "Il/Elle vient.",
     "en": "He/She comes.",
     "verb": "Kwiza",
@@ -2724,6 +3064,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mwizu tu ta kwiza",
+    "mandombe": "mwizu tu ta kwiza",
     "fr": "Nous venons.",
     "en": "We come.",
     "verb": "Kwiza",
@@ -2732,6 +3073,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mwizu lu ta kwiza",
+    "mandombe": "mwizu lu ta kwiza",
     "fr": "Vous venez.",
     "en": "You come.",
     "verb": "Kwiza",
@@ -2740,6 +3082,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mwizu ba ta kwiza",
+    "mandombe": "mwizu ba ta kwiza",
     "fr": "Ils/Elles viennent.",
     "en": "They come.",
     "verb": "Kwiza",
@@ -2748,6 +3091,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "njijiri",
+    "mandombe": "njijiri",
     "fr": "Je suis venu.",
     "en": "I came.",
     "verb": "Kwiza",
@@ -2756,6 +3100,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "wijiri",
+    "mandombe": "wijiri",
     "fr": "Tu es venu.",
     "en": "You came.",
     "verb": "Kwiza",
@@ -2764,6 +3109,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "wi:jiri",
+    "mandombe": "wijiri",
     "fr": "Il/Elle est venu.",
     "en": "He/She came.",
     "verb": "Kwiza",
@@ -2772,6 +3118,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "tuijiri",
+    "mandombe": "tuwijiri",
     "fr": "Nous sommes venus.",
     "en": "We came.",
     "verb": "Kwiza",
@@ -2780,6 +3127,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "luijiri",
+    "mandombe": "luwijiri",
     "fr": "Vous êtes venus.",
     "en": "You came.",
     "verb": "Kwiza",
@@ -2788,6 +3136,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "bi:jiri",
+    "mandombe": "bijiri",
     "fr": "Ils/Elles sont venus.",
     "en": "They came.",
     "verb": "Kwiza",
@@ -2796,6 +3145,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo ni kuiza",
+    "mandombe": "mbo ni kuwiza",
     "fr": "Je viendrai.",
     "en": "I will come.",
     "verb": "Kwiza",
@@ -2804,6 +3154,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo kuiza",
+    "mandombe": "mbo kuwiza",
     "fr": "Tu viendras.",
     "en": "You will come.",
     "verb": "Kwiza",
@@ -2812,6 +3163,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo ka kuiza",
+    "mandombe": "mbo ka kuwiza",
     "fr": "Il/Elle viendra.",
     "en": "He/She will come.",
     "verb": "Kwiza",
@@ -2820,6 +3172,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo tu kuiza",
+    "mandombe": "mbo tu kuwiza",
     "fr": "Nous viendrons.",
     "en": "We will come.",
     "verb": "Kwiza",
@@ -2828,6 +3181,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo lu kuiza",
+    "mandombe": "mbo lu kuwiza",
     "fr": "Vous viendrez.",
     "en": "You will come.",
     "verb": "Kwiza",
@@ -2836,6 +3190,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo ba kuiza",
+    "mandombe": "mbo ba kuwiza",
     "fr": "Ils/Elles viendront.",
     "en": "They will come.",
     "verb": "Kwiza",
@@ -2844,6 +3199,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "banza ni ta banza",
+    "mandombe": "banza ni ta banza",
     "fr": "Je pense.",
     "en": "I think.",
     "verb": "Banza",
@@ -2852,6 +3208,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "banza ta banza",
+    "mandombe": "banza ta banza",
     "fr": "Tu penses.",
     "en": "You think.",
     "verb": "Banza",
@@ -2860,6 +3217,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "banza ka ta banza",
+    "mandombe": "banza ka ta banza",
     "fr": "Il/Elle pense.",
     "en": "He/She thinks.",
     "verb": "Banza",
@@ -2868,6 +3226,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "banza tu ta banza",
+    "mandombe": "banza tu ta banza",
     "fr": "Nous pensons.",
     "en": "We think.",
     "verb": "Banza",
@@ -2876,6 +3235,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "banza lu ta banza",
+    "mandombe": "banza lu ta banza",
     "fr": "Vous pensez.",
     "en": "You think.",
     "verb": "Banza",
@@ -2884,6 +3244,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "banza ba ta banza",
+    "mandombe": "banza ba ta banza",
     "fr": "Ils/Elles pensent.",
     "en": "They think.",
     "verb": "Banza",
@@ -2892,6 +3253,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbendji",
+    "mandombe": "mbenji",
     "fr": "J'ai pensé.",
     "en": "I thought.",
     "verb": "Banza",
@@ -2900,6 +3262,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "bendji",
+    "mandombe": "benji",
     "fr": "Tu as pensé.",
     "en": "You thought.",
     "verb": "Banza",
@@ -2908,6 +3271,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "bendji",
+    "mandombe": "benji",
     "fr": "Il/Elle a pensé.",
     "en": "He/She thought.",
     "verb": "Banza",
@@ -2916,6 +3280,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "tu bendji",
+    "mandombe": "tu benji",
     "fr": "Nous avons pensé.",
     "en": "We thought.",
     "verb": "Banza",
@@ -2924,6 +3289,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "lu bendji",
+    "mandombe": "lu benji",
     "fr": "Vous avez pensé.",
     "en": "You thought.",
     "verb": "Banza",
@@ -2932,6 +3298,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ba bendji",
+    "mandombe": "ba benji",
     "fr": "Ils/Elles ont pensé.",
     "en": "They thought.",
     "verb": "Banza",
@@ -2940,6 +3307,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo ni banza",
+    "mandombe": "mbo ni banza",
     "fr": "Je penserai.",
     "en": "I will think.",
     "verb": "Banza",
@@ -2948,6 +3316,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo banza",
+    "mandombe": "mbo banza",
     "fr": "Tu penseras.",
     "en": "You will think.",
     "verb": "Banza",
@@ -2956,6 +3325,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo ka banza",
+    "mandombe": "mbo ka banza",
     "fr": "Il/Elle pensera.",
     "en": "He/She will think.",
     "verb": "Banza",
@@ -2964,6 +3334,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo tu banza",
+    "mandombe": "mbo tu banza",
     "fr": "Nous penserons.",
     "en": "We will think.",
     "verb": "Banza",
@@ -2972,6 +3343,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo lu banza",
+    "mandombe": "mbo lu banza",
     "fr": "Vous penserez.",
     "en": "You will think.",
     "verb": "Banza",
@@ -2980,6 +3352,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo ba banza",
+    "mandombe": "mbo ba banza",
     "fr": "Ils/Elles penseront.",
     "en": "They will think.",
     "verb": "Banza",
@@ -2988,6 +3361,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "futa ni ta futa",
+    "mandombe": "futa ni ta futa",
     "fr": "Je paie.",
     "en": "I pay.",
     "verb": "Futa",
@@ -2996,6 +3370,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "futa ta futa",
+    "mandombe": "futa ta futa",
     "fr": "Tu paies.",
     "en": "You pay.",
     "verb": "Futa",
@@ -3004,6 +3379,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "futa ka ta futa",
+    "mandombe": "futa ka ta futa",
     "fr": "Il/Elle paie.",
     "en": "He/She pays.",
     "verb": "Futa",
@@ -3012,6 +3388,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "futa tu ta futa",
+    "mandombe": "futa tu ta futa",
     "fr": "Nous payons.",
     "en": "We pay.",
     "verb": "Futa",
@@ -3020,6 +3397,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "futa lu ta futa",
+    "mandombe": "futa lu ta futa",
     "fr": "Vous payez.",
     "en": "You pay.",
     "verb": "Futa",
@@ -3028,6 +3406,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "futa ba ta futa",
+    "mandombe": "futa ba ta futa",
     "fr": "Ils/Elles paient.",
     "en": "They pay.",
     "verb": "Futa",
@@ -3036,6 +3415,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mfutiri",
+    "mandombe": "mfutiri",
     "fr": "J'ai payé.",
     "en": "I paid.",
     "verb": "Futa",
@@ -3044,6 +3424,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "futiri",
+    "mandombe": "futiri",
     "fr": "Tu as payé.",
     "en": "You paid.",
     "verb": "Futa",
@@ -3052,6 +3433,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "futiri",
+    "mandombe": "futiri",
     "fr": "Il/Elle a payé.",
     "en": "He/She paid.",
     "verb": "Futa",
@@ -3060,6 +3442,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "tu futiri",
+    "mandombe": "tu futiri",
     "fr": "Nous avons payé.",
     "en": "We paid.",
     "verb": "Futa",
@@ -3068,6 +3451,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "lu futiri",
+    "mandombe": "lu futiri",
     "fr": "Vous avez payé.",
     "en": "You paid.",
     "verb": "Futa",
@@ -3076,6 +3460,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ba futiri",
+    "mandombe": "ba futiri",
     "fr": "Ils/Elles ont payé.",
     "en": "They paid.",
     "verb": "Futa",
@@ -3084,6 +3469,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo ni futa",
+    "mandombe": "mbo ni futa",
     "fr": "Je payerai.",
     "en": "I will pay.",
     "verb": "Futa",
@@ -3092,6 +3478,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo futa",
+    "mandombe": "mbo futa",
     "fr": "Tu payeras.",
     "en": "You will pay.",
     "verb": "Futa",
@@ -3100,6 +3487,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo ka futa",
+    "mandombe": "mbo ka futa",
     "fr": "Il/Elle payera.",
     "en": "He/She will pay.",
     "verb": "Futa",
@@ -3108,6 +3496,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo tu futa",
+    "mandombe": "mbo tu futa",
     "fr": "Nous payerons.",
     "en": "We will pay.",
     "verb": "Futa",
@@ -3116,6 +3505,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo lu futa",
+    "mandombe": "mbo lu futa",
     "fr": "Vous payerez.",
     "en": "You will pay.",
     "verb": "Futa",
@@ -3124,6 +3514,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo ba futa",
+    "mandombe": "mbo ba futa",
     "fr": "Ils/Elles payeront.",
     "en": "They will pay.",
     "verb": "Futa",
@@ -3132,6 +3523,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mona ni ta mona",
+    "mandombe": "mona ni ta mona",
     "fr": "Je vois.",
     "en": "I see.",
     "verb": "Mona",
@@ -3140,6 +3532,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mona ta mona",
+    "mandombe": "mona ta mona",
     "fr": "Tu vois.",
     "en": "You see.",
     "verb": "Mona",
@@ -3148,6 +3541,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mona ka ta mona",
+    "mandombe": "mona ka ta mona",
     "fr": "Il/Elle voit.",
     "en": "He/She sees.",
     "verb": "Mona",
@@ -3156,6 +3550,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mona tu ta mona",
+    "mandombe": "mona tu ta mona",
     "fr": "Nous voyons.",
     "en": "We see.",
     "verb": "Mona",
@@ -3164,6 +3559,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mona lu ta mona",
+    "mandombe": "mona lu ta mona",
     "fr": "Vous voyez.",
     "en": "You see.",
     "verb": "Mona",
@@ -3172,6 +3568,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mona ba ta mona",
+    "mandombe": "mona ba ta mona",
     "fr": "Ils/Elles voient.",
     "en": "They see.",
     "verb": "Mona",
@@ -3180,6 +3577,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "muini",
+    "mandombe": "muwini",
     "fr": "J'ai vu.",
     "en": "I saw.",
     "verb": "Mona",
@@ -3188,6 +3586,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "muini",
+    "mandombe": "muwini",
     "fr": "Tu as vu.",
     "en": "You saw.",
     "verb": "Mona",
@@ -3196,6 +3595,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "muini",
+    "mandombe": "muwini",
     "fr": "Il/Elle a vu.",
     "en": "He/She saw.",
     "verb": "Mona",
@@ -3204,6 +3604,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "tu muini",
+    "mandombe": "tu muwini",
     "fr": "Nous avons vu.",
     "en": "We saw.",
     "verb": "Mona",
@@ -3212,6 +3613,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "lu muini",
+    "mandombe": "lu muwini",
     "fr": "Vous avez vu.",
     "en": "You saw.",
     "verb": "Mona",
@@ -3220,6 +3622,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ba muini",
+    "mandombe": "ba muwini",
     "fr": "Ils/Elles ont vu.",
     "en": "They saw.",
     "verb": "Mona",
@@ -3228,6 +3631,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo ni mona",
+    "mandombe": "mbo ni mona",
     "fr": "Je verrai.",
     "en": "I will see.",
     "verb": "Mona",
@@ -3236,6 +3640,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo mona",
+    "mandombe": "mbo mona",
     "fr": "Tu verras.",
     "en": "You will see.",
     "verb": "Mona",
@@ -3244,6 +3649,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo ka mona",
+    "mandombe": "mbo ka mona",
     "fr": "Il/Elle verra.",
     "en": "He/She will see.",
     "verb": "Mona",
@@ -3252,6 +3658,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo tu mona",
+    "mandombe": "mbo tu mona",
     "fr": "Nous verrons.",
     "en": "We will see.",
     "verb": "Mona",
@@ -3260,6 +3667,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo lu mona",
+    "mandombe": "mbo lu mona",
     "fr": "Vous verrez.",
     "en": "You will see.",
     "verb": "Mona",
@@ -3268,6 +3676,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo ba mona",
+    "mandombe": "mbo ba mona",
     "fr": "Ils/Elles verront.",
     "en": "They will see.",
     "verb": "Mona",
@@ -3276,6 +3685,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "nzololo",
+    "mandombe": "nzololo",
     "fr": "J'aime.",
     "en": "I love.",
     "verb": "Zola",
@@ -3284,6 +3694,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ka zololo",
+    "mandombe": "ka zololo",
     "fr": "Il/Elle aime.",
     "en": "He/She loves.",
     "verb": "Zola",
@@ -3292,6 +3703,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "tu zololo",
+    "mandombe": "tu zololo",
     "fr": "Nous aimons.",
     "en": "We love.",
     "verb": "Zola",
@@ -3300,6 +3712,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "lu zololo",
+    "mandombe": "lu zololo",
     "fr": "Vous aimez.",
     "en": "You love.",
     "verb": "Zola",
@@ -3308,6 +3721,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "na zolo",
+    "mandombe": "na zolo",
     "fr": "J'ai aimé.",
     "en": "I loved.",
     "verb": "Zola",
@@ -3316,6 +3730,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "wa zolo",
+    "mandombe": "wa zolo",
     "fr": "Tu as aimé.",
     "en": "You loved.",
     "verb": "Zola",
@@ -3324,6 +3739,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "wa zolo",
+    "mandombe": "wa zolo",
     "fr": "Il/Elle a aimé.",
     "en": "He/She loved.",
     "verb": "Zola",
@@ -3332,6 +3748,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "tua zolo",
+    "mandombe": "tuwa zolo",
     "fr": "Nous avons aimé.",
     "en": "We loved.",
     "verb": "Zola",
@@ -3340,6 +3757,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "lua zolo",
+    "mandombe": "luwa zolo",
     "fr": "Vous avez aimé.",
     "en": "You loved.",
     "verb": "Zola",
@@ -3348,6 +3766,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ba zolo",
+    "mandombe": "ba zolo",
     "fr": "Ils/Elles ont aimé.",
     "en": "They loved.",
     "verb": "Zola",
@@ -3356,6 +3775,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo ni zola",
+    "mandombe": "mbo ni zola",
     "fr": "J'aimerai.",
     "en": "I will love.",
     "verb": "Zola",
@@ -3364,6 +3784,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo zola",
+    "mandombe": "mbo zola",
     "fr": "Tu aimeras.",
     "en": "You will love.",
     "verb": "Zola",
@@ -3372,6 +3793,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo ka zola",
+    "mandombe": "mbo ka zola",
     "fr": "Il/Elle aimera.",
     "en": "He/She will love.",
     "verb": "Zola",
@@ -3380,6 +3802,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo tu zola",
+    "mandombe": "mbo tu zola",
     "fr": "Nous aimerons.",
     "en": "We will love.",
     "verb": "Zola",
@@ -3388,6 +3811,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo lu zola",
+    "mandombe": "mbo lu zola",
     "fr": "Vous aimerez.",
     "en": "You will love.",
     "verb": "Zola",
@@ -3396,6 +3820,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo ba zola",
+    "mandombe": "mbo ba zola",
     "fr": "Ils/Elles aimeront.",
     "en": "They will love.",
     "verb": "Zola",
@@ -3404,6 +3829,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "musua ni ta hana",
+    "mandombe": "musuwa ni ta hana",
     "fr": "Je permets.",
     "en": "I permit.",
     "verb": "Hana musua",
@@ -3412,6 +3838,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "musua ta hana",
+    "mandombe": "musuwa ta hana",
     "fr": "Tu permets.",
     "en": "You permit.",
     "verb": "Hana musua",
@@ -3420,6 +3847,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "musua ka ta hana",
+    "mandombe": "musuwa ka ta hana",
     "fr": "Il/Elle permet.",
     "en": "He/She permits.",
     "verb": "Hana musua",
@@ -3428,6 +3856,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "musua tu ta hana",
+    "mandombe": "musuwa tu ta hana",
     "fr": "Nous permettons.",
     "en": "We permit.",
     "verb": "Hana musua",
@@ -3436,6 +3865,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "musua lu ta hana",
+    "mandombe": "musuwa lu ta hana",
     "fr": "Vous permettez.",
     "en": "You permit.",
     "verb": "Hana musua",
@@ -3444,6 +3874,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "musua ba ta hana",
+    "mandombe": "musuwa ba ta hana",
     "fr": "Ils/Elles permettent.",
     "en": "They permit.",
     "verb": "Hana musua",
@@ -3452,6 +3883,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "musua ngeni",
+    "mandombe": "musuwa ngeni",
     "fr": "J'ai permis.",
     "en": "I permitted.",
     "verb": "Hana musua",
@@ -3460,6 +3892,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "musua heni",
+    "mandombe": "musuwa heni",
     "fr": "Tu as permis.",
     "en": "You permitted.",
     "verb": "Hana musua",
@@ -3468,6 +3901,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "musua heni",
+    "mandombe": "musuwa heni",
     "fr": "Il/Elle a permis.",
     "en": "He/She permitted.",
     "verb": "Hana musua",
@@ -3476,6 +3910,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "musua tu heni",
+    "mandombe": "musuwa tu heni",
     "fr": "Nous avons permis.",
     "en": "We permitted.",
     "verb": "Hana musua",
@@ -3484,6 +3919,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "musua lu heni",
+    "mandombe": "musuwa lu heni",
     "fr": "Vous avez permis.",
     "en": "You permitted.",
     "verb": "Hana musua",
@@ -3492,6 +3928,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "musua ba heni",
+    "mandombe": "musuwa ba heni",
     "fr": "Ils/Elles ont permis.",
     "en": "They permitted.",
     "verb": "Hana musua",
@@ -3500,6 +3937,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo ni hana musua",
+    "mandombe": "mbo ni hana musuwa",
     "fr": "Je permettrai.",
     "en": "I will permit.",
     "verb": "Hana musua",
@@ -3508,6 +3946,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo hana musua",
+    "mandombe": "mbo hana musuwa",
     "fr": "Tu permettras.",
     "en": "You will permit.",
     "verb": "Hana musua",
@@ -3516,6 +3955,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo ka hana musua",
+    "mandombe": "mbo ka hana musuwa",
     "fr": "Il/Elle permettra.",
     "en": "He/She will permit.",
     "verb": "Hana musua",
@@ -3524,6 +3964,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo tu hana musua",
+    "mandombe": "mbo tu hana musuwa",
     "fr": "Nous permettrons.",
     "en": "We will permit.",
     "verb": "Hana musua",
@@ -3532,6 +3973,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo lu hana musua",
+    "mandombe": "mbo lu hana musuwa",
     "fr": "Vous permettrez.",
     "en": "You will permit.",
     "verb": "Hana musua",
@@ -3540,6 +3982,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo ba hana musua",
+    "mandombe": "mbo ba hana musuwa",
     "fr": "Ils/Elles permettront.",
     "en": "They will permit.",
     "verb": "Hana musua",
@@ -3548,6 +3991,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "sala ni ta sala",
+    "mandombe": "sala ni ta sala",
     "fr": "Je travaille.",
     "en": "I work.",
     "verb": "Sala",
@@ -3556,6 +4000,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "sala ta sala",
+    "mandombe": "sala ta sala",
     "fr": "Tu travailles.",
     "en": "You work.",
     "verb": "Sala",
@@ -3564,6 +4009,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "sala ka ta sala",
+    "mandombe": "sala ka ta sala",
     "fr": "Il/Elle travaille.",
     "en": "He/She works.",
     "verb": "Sala",
@@ -3572,6 +4018,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "sala tu ta sala",
+    "mandombe": "sala tu ta sala",
     "fr": "Nous travaillons.",
     "en": "We work.",
     "verb": "Sala",
@@ -3580,6 +4027,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "sala lu ta sala",
+    "mandombe": "sala lu ta sala",
     "fr": "Vous travaillez.",
     "en": "You work.",
     "verb": "Sala",
@@ -3588,6 +4036,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "sala ba ta sala",
+    "mandombe": "sala ba ta sala",
     "fr": "Ils/Elles travaillent.",
     "en": "They work.",
     "verb": "Sala",
@@ -3596,6 +4045,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "nsaridi",
+    "mandombe": "nsaridi",
     "fr": "J'ai travaillé.",
     "en": "I worked.",
     "verb": "Sala",
@@ -3604,6 +4054,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "saridi",
+    "mandombe": "saridi",
     "fr": "Tu as travaillé.",
     "en": "You worked.",
     "verb": "Sala",
@@ -3612,6 +4063,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "saridi",
+    "mandombe": "saridi",
     "fr": "Il/Elle a travaillé.",
     "en": "He/She worked.",
     "verb": "Sala",
@@ -3620,6 +4072,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "tu saridi",
+    "mandombe": "tu saridi",
     "fr": "Nous avons travaillé.",
     "en": "We worked.",
     "verb": "Sala",
@@ -3628,6 +4081,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "lu saridi",
+    "mandombe": "lu saridi",
     "fr": "Vous avez travaillé.",
     "en": "You worked.",
     "verb": "Sala",
@@ -3636,6 +4090,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ba saridi",
+    "mandombe": "ba saridi",
     "fr": "Ils/Elles ont travaillé.",
     "en": "They worked.",
     "verb": "Sala",
@@ -3644,6 +4099,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "longoka ni ta longoka",
+    "mandombe": "longoka ni ta longoka",
     "fr": "Je suis en train d'étudier.",
     "en": "I am studying.",
     "verb": "Longoka",
@@ -3652,6 +4108,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "longoka ta longoka",
+    "mandombe": "longoka ta longoka",
     "fr": "Tu es en train d'étudier.",
     "en": "You are studying.",
     "verb": "Longoka",
@@ -3660,6 +4117,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "longoka ka ta longoka",
+    "mandombe": "longoka ka ta longoka",
     "fr": "Il/Elle est en train d'étudier.",
     "en": "He/She is studying.",
     "verb": "Longoka",
@@ -3668,6 +4126,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "longoka tu ta longoka",
+    "mandombe": "longoka tu ta longoka",
     "fr": "Nous sommes en train d'étudier.",
     "en": "We are studying.",
     "verb": "Longoka",
@@ -3676,6 +4135,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "longoka lu ta longoka",
+    "mandombe": "longoka lu ta longoka",
     "fr": "Vous êtes en train d'étudier.",
     "en": "You are studying.",
     "verb": "Longoka",
@@ -3684,6 +4144,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "longoka ba ta longoka",
+    "mandombe": "longoka ba ta longoka",
     "fr": "Ils/Elles sont en train d'étudier.",
     "en": "They are studying.",
     "verb": "Longoka",
@@ -3692,6 +4153,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "nimba ni ta nimba",
+    "mandombe": "nimba ni ta nimba",
     "fr": "Je suis en train de m'endormir.",
     "en": "I am falling asleep.",
     "verb": "Nimba",
@@ -3700,6 +4162,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "nimba ta nimba",
+    "mandombe": "nimba ta nimba",
     "fr": "Tu es en train de t'endormir.",
     "en": "You are falling asleep.",
     "verb": "Nimba",
@@ -3708,6 +4171,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "nimba ka ta nimba",
+    "mandombe": "nimba ka ta nimba",
     "fr": "Il/Elle est en train de s'endormir.",
     "en": "He/She is falling asleep.",
     "verb": "Nimba",
@@ -3716,6 +4180,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "nimba tu ta nimba",
+    "mandombe": "nimba tu ta nimba",
     "fr": "Nous sommes en train de nous endormir.",
     "en": "We are falling asleep.",
     "verb": "Nimba",
@@ -3724,6 +4189,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "nimba lu ta nimba",
+    "mandombe": "nimba lu ta nimba",
     "fr": "Vous êtes en train de vous endormir.",
     "en": "You are falling asleep.",
     "verb": "Nimba",
@@ -3732,6 +4198,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "nimba ba ta nimba",
+    "mandombe": "nimba ba ta nimba",
     "fr": "Ils/Elles sont en train de s'endormir.",
     "en": "They are falling asleep.",
     "verb": "Nimba",
@@ -3740,6 +4207,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Mia mingi ndongokele",
+    "mandombe": "Mia mingi ndongokele",
     "fr": "J'ai appris.",
     "en": "I learned.",
     "verb": "Longoka",
@@ -3748,6 +4216,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Mia mingi longokele",
+    "mandombe": "Mia mingi longokele",
     "fr": "Tu as appris.",
     "en": "You learned.",
     "verb": "Longoka",
@@ -3756,6 +4225,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Mia mingi ka longokele",
+    "mandombe": "Mia mingi ka longokele",
     "fr": "Il/Elle a appris.",
     "en": "He/She learned.",
     "verb": "Longoka",
@@ -3764,6 +4234,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Mia mingi tu longokele",
+    "mandombe": "Mia mingi tu longokele",
     "fr": "Nous avons appris.",
     "en": "We learned.",
     "verb": "Longoka",
@@ -3772,6 +4243,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Mia mingi lu longokele",
+    "mandombe": "Mia mingi lu longokele",
     "fr": "Vous avez appris.",
     "en": "You learned.",
     "verb": "Longoka",
@@ -3780,6 +4252,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Mia mingi ba longokele",
+    "mandombe": "Mia mingi ba longokele",
     "fr": "Ils/Elles ont appris.",
     "en": "They learned.",
     "verb": "Longoka",
@@ -3788,6 +4261,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Manga za jingi ze nani",
+    "mandombe": "Manga za jingi ze nani",
     "fr": "J'ai beaucoup de mangues.",
     "en": "I have many mangos.",
     "verb": "Manga za jingi ze...",
@@ -3796,6 +4270,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Manga za jingi ze naku",
+    "mandombe": "Manga za jingi ze naku",
     "fr": "Tu as beaucoup de mangues.",
     "en": "You have many mangos.",
     "verb": "Manga za jingi ze...",
@@ -3804,6 +4279,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Manga za jingi ze nandi",
+    "mandombe": "Manga za jingi ze nandi",
     "fr": "Il a beaucoup de mangues.",
     "en": "He has many mangos.",
     "verb": "Manga za jingi ze...",
@@ -3812,6 +4288,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Manga za jingi ze neto",
+    "mandombe": "Manga za jingi ze neto",
     "fr": "Nous avons beaucoup de mangues.",
     "en": "We have many mangos.",
     "verb": "Manga za jingi ze...",
@@ -3820,6 +4297,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Manga za jingi ze neno",
+    "mandombe": "Manga za jingi ze neno",
     "fr": "Vous avez beaucoup de mangues.",
     "en": "You have many mangos.",
     "verb": "Manga za jingi ze...",
@@ -3828,6 +4306,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Manga za jingi ze nawu",
+    "mandombe": "Manga za jingi ze nawu",
     "fr": "Ils ont beaucoup de mangues.",
     "en": "They have many mangos.",
     "verb": "Manga za jingi ze...",
@@ -3836,6 +4315,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Ka njena na nduku za zingi ko",
+    "mandombe": "Ka njena na nduku za zingi ko",
     "fr": "Je n'ai pas beaucoup d'amis.",
     "en": "I do not have many friends.",
     "verb": "Ka...na nduku za zingi ko",
@@ -3844,6 +4324,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Kuena na nduku za zingi ko",
+    "mandombe": "Kuena na nduku za zingi ko",
     "fr": "Tu n'as pas beaucoup d'amis.",
     "en": "You do not have many friends.",
     "verb": "Ka...na nduku za zingi ko",
@@ -3852,6 +4333,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Kena na nduku za zingi ko",
+    "mandombe": "Kena na nduku za zingi ko",
     "fr": "Il n'a pas beaucoup d'amis.",
     "en": "He does not have many friends.",
     "verb": "Ka...na nduku za zingi ko",
@@ -3860,6 +4342,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Ka tuena na nduku za zingi ko",
+    "mandombe": "Ka tuena na nduku za zingi ko",
     "fr": "Nous n'avons pas beaucoup d'amis.",
     "en": "We do not have many friends.",
     "verb": "Ka...na nduku za zingi ko",
@@ -3868,6 +4351,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Ka luena na nduku za zingi ko",
+    "mandombe": "Ka luena na nduku za zingi ko",
     "fr": "Vous n'avez pas beaucoup d'amis.",
     "en": "You do not have many friends.",
     "verb": "Ka...na nduku za zingi ko",
@@ -3876,6 +4360,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Ka bena na nduku za zingi ko",
+    "mandombe": "Ka bena na nduku za zingi ko",
     "fr": "Ils n'ont pas beaucoup d'amis.",
     "en": "They do not have many friends.",
     "verb": "Ka...na nduku za zingi ko",
@@ -3884,6 +4369,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Ndambu loso ndidi",
+    "mandombe": "Ndambu loso ndidi",
     "fr": "J'ai mangé un peu de riz.",
     "en": "I ate a bit of rice.",
     "verb": "Ndambu loso...didi",
@@ -3892,6 +4378,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Ndambu loso didi",
+    "mandombe": "Ndambu loso didi",
     "fr": "Tu as mangé un peu de riz.",
     "en": "You ate a bit of rice.",
     "verb": "Ndambu loso...didi",
@@ -3900,6 +4387,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Ndambu loso ka didi",
+    "mandombe": "Ndambu loso ka didi",
     "fr": "Il a mangé un peu de riz.",
     "en": "He ate a bit of rice.",
     "verb": "Ndambu loso...didi",
@@ -3908,6 +4396,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Ndambu loso tu didi",
+    "mandombe": "Ndambu loso tu didi",
     "fr": "Nous avons mangé un peu de riz.",
     "en": "We ate a bit of rice.",
     "verb": "Ndambu loso...didi",
@@ -3916,6 +4405,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Ndambu loso lu didi",
+    "mandombe": "Ndambu loso lu didi",
     "fr": "Vous avez mangé un peu de riz.",
     "en": "You ate a bit of rice.",
     "verb": "Ndambu loso...didi",
@@ -3924,6 +4414,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Ndambu loso ba didi",
+    "mandombe": "Ndambu loso ba didi",
     "fr": "Ils ont mangé un peu de riz.",
     "en": "They ate a bit of rice.",
     "verb": "Ndambu loso...didi",
@@ -3932,6 +4423,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ngueyi",
+    "mandombe": "Nguei",
     "fr": "Je voulais.",
     "en": "I wanted.",
     "verb": "Waya",
@@ -3940,6 +4432,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "weyi",
+    "mandombe": "Wei",
     "fr": "Tu voulais.",
     "en": "You wanted.",
     "verb": "Waya",
@@ -3948,6 +4441,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ka weyi",
+    "mandombe": "Ka wei",
     "fr": "Il/Elle voulait.",
     "en": "He/She wanted.",
     "verb": "Waya",
@@ -3956,6 +4450,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "tu weyi",
+    "mandombe": "Tu wei",
     "fr": "Nous voulions.",
     "en": "We wanted.",
     "verb": "Waya",
@@ -3964,6 +4459,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "lu weyi",
+    "mandombe": "Lu wei",
     "fr": "Vous vouliez.",
     "en": "You wanted.",
     "verb": "Waya",
@@ -3972,6 +4468,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ba weyi",
+    "mandombe": "Ba wei",
     "fr": "Ils/Elles voulaient.",
     "en": "They wanted.",
     "verb": "Waya",
@@ -3980,6 +4477,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Moko ni ta sukula",
+    "mandombe": "Moko ni ta sukula",
     "fr": "Je me lave les mains.",
     "en": "I wash my hands.",
     "verb": "Sukula moko",
@@ -3988,6 +4486,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Moko ta sukula",
+    "mandombe": "Moko ta sukula",
     "fr": "Tu te laves les mains.",
     "en": "You wash your hands.",
     "verb": "Sukula moko",
@@ -3996,6 +4495,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Moko ka ta sukula",
+    "mandombe": "Moko ka ta sukula",
     "fr": "Il se lave les mains.",
     "en": "He washes his hands.",
     "verb": "Sukula moko",
@@ -4004,6 +4504,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Moko tu ta sukula",
+    "mandombe": "Moko tu ta sukula",
     "fr": "Nous nous lavons les mains.",
     "en": "We wash our hands.",
     "verb": "Sukula moko",
@@ -4012,6 +4513,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Moko lu ta sukula",
+    "mandombe": "Moko lu ta sukula",
     "fr": "Vous vous lavez les mains.",
     "en": "You wash your hands.",
     "verb": "Sukula moko",
@@ -4020,6 +4522,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Moko ba ta sukula",
+    "mandombe": "Moko ba ta sukula",
     "fr": "Ils se lavent les mains.",
     "en": "They wash their hands.",
     "verb": "Sukula moko",
@@ -4028,6 +4531,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "na saridi",
+    "mandombe": "na saridi",
     "fr": "J'ai travaillé.",
     "en": "I have worked.",
     "verb": "Sala",
@@ -4036,6 +4540,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "wa saridi",
+    "mandombe": "wa saridi",
     "fr": "Tu as travaillé.",
     "en": "You have worked.",
     "verb": "Sala",
@@ -4044,6 +4549,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "wa saridi",
+    "mandombe": "wa saridi",
     "fr": "Il/Elle a travaillé.",
     "en": "He/She has worked.",
     "verb": "Sala",
@@ -4052,6 +4558,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "tua saridi",
+    "mandombe": "tuwa saridi",
     "fr": "Nous avons travaillé.",
     "en": "We have worked.",
     "verb": "Sala",
@@ -4060,6 +4567,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "lua saridi",
+    "mandombe": "luwa saridi",
     "fr": "Vous avez travaillé.",
     "en": "You have worked.",
     "verb": "Sala",
@@ -4068,6 +4576,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ka na saridi a ko",
+    "mandombe": "ka na saridi a ko",
     "fr": "Je n'ai pas travaillé.",
     "en": "I have not worked.",
     "verb": "Sala",
@@ -4076,6 +4585,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ka wa saridi a ko",
+    "mandombe": "ka wa saridi a ko",
     "fr": "Tu n'as pas travaillé.",
     "en": "You have not worked.",
     "verb": "Sala",
@@ -4084,6 +4594,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ka saridi a ko",
+    "mandombe": "ka saridi a ko",
     "fr": "Il/Elle n'a pas travaillé.",
     "en": "He/She has not worked.",
     "verb": "Sala",
@@ -4092,6 +4603,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ka tua saridi a ko",
+    "mandombe": "ka tuwa saridi a ko",
     "fr": "Nous n'avons pas travaillé.",
     "en": "We have not worked.",
     "verb": "Sala",
@@ -4100,6 +4612,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ka lua saridi a ko",
+    "mandombe": "ka luwa saridi a ko",
     "fr": "Vous n'avez pas travaillé.",
     "en": "You have not worked.",
     "verb": "Sala",
@@ -4108,6 +4621,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ka ba saridi a ko",
+    "mandombe": "ka ba saridi a ko",
     "fr": "Ils/Elles n'ont pas travaillé.",
     "en": "They have not worked.",
     "verb": "Sala",
@@ -4116,6 +4630,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "sala ndieri sala",
+    "mandombe": "sala ndieri sala",
     "fr": "Je travaillais.",
     "en": "I was working.",
     "verb": "Sala",
@@ -4124,6 +4639,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "sala weri sala",
+    "mandombe": "sala weri sala",
     "fr": "Tu travaillais.",
     "en": "You were working.",
     "verb": "Sala",
@@ -4132,6 +4648,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "sala keri sala",
+    "mandombe": "sala keri sala",
     "fr": "Il/Elle travaillait.",
     "en": "He/She was working.",
     "verb": "Sala",
@@ -4140,6 +4657,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "sala tueri sala",
+    "mandombe": "sala tueri sala",
     "fr": "Nous travaillions.",
     "en": "We were working.",
     "verb": "Sala",
@@ -4148,6 +4666,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "sala lueri sala",
+    "mandombe": "sala lueri sala",
     "fr": "Vous travailliez.",
     "en": "You were working.",
     "verb": "Sala",
@@ -4156,6 +4675,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "sala beri sala",
+    "mandombe": "sala beri sala",
     "fr": "Ils/Elles travaillaient.",
     "en": "They were working.",
     "verb": "Sala",
@@ -4164,6 +4684,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ka ndieri a sala ko",
+    "mandombe": "ka ndieri a sala ko",
     "fr": "Je ne travaillais pas.",
     "en": "I was not working.",
     "verb": "Sala",
@@ -4172,6 +4693,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "kueri a sala ko",
+    "mandombe": "kueri a sala ko",
     "fr": "Tu ne travaillais pas.",
     "en": "You were not working.",
     "verb": "Sala",
@@ -4180,6 +4702,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "keri a sala ko",
+    "mandombe": "keri a sala ko",
     "fr": "Il/Elle ne travaillait pas.",
     "en": "He/She was not working.",
     "verb": "Sala",
@@ -4188,6 +4711,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ka tueri a sala ko",
+    "mandombe": "ka tueri a sala ko",
     "fr": "Nous ne travaillions pas.",
     "en": "We were not working.",
     "verb": "Sala",
@@ -4196,6 +4720,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ka lueri a sala ko",
+    "mandombe": "ka lueri a sala ko",
     "fr": "Vous ne travailliez pas.",
     "en": "You were not working.",
     "verb": "Sala",
@@ -4204,6 +4729,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ka beri a sala ko",
+    "mandombe": "ka beri a sala ko",
     "fr": "Ils/Elles ne travaillaient pas.",
     "en": "They were not working.",
     "verb": "Sala",
@@ -4212,6 +4738,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo ni sala",
+    "mandombe": "mbo ni sala",
     "fr": "Je travaillerai.",
     "en": "I will work.",
     "verb": "Sala",
@@ -4220,6 +4747,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo sala",
+    "mandombe": "mbo sala",
     "fr": "Tu travailleras.",
     "en": "You will work.",
     "verb": "Sala",
@@ -4228,6 +4756,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo ka sala",
+    "mandombe": "mbo ka sala",
     "fr": "Il/Elle travaillera.",
     "en": "He/She will work.",
     "verb": "Sala",
@@ -4236,6 +4765,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo tu sala",
+    "mandombe": "mbo tu sala",
     "fr": "Nous travaillerons.",
     "en": "We will work.",
     "verb": "Sala",
@@ -4244,6 +4774,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo lu sala",
+    "mandombe": "mbo lu sala",
     "fr": "Vous travaillerez.",
     "en": "You will work.",
     "verb": "Sala",
@@ -4252,6 +4783,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo ba sala",
+    "mandombe": "mbo ba sala",
     "fr": "Ils/Elles travailleront.",
     "en": "They will work.",
     "verb": "Sala",
@@ -4260,6 +4792,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ka ni sala a ko",
+    "mandombe": "ka ni sala a ko",
     "fr": "Je ne travaillerai pas.",
     "en": "I will not work.",
     "verb": "Sala",
@@ -4268,6 +4801,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ku sala a ko",
+    "mandombe": "ku sala a ko",
     "fr": "Tu ne travailleras pas.",
     "en": "You will not work.",
     "verb": "Sala",
@@ -4276,6 +4810,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ka sala a ko",
+    "mandombe": "ka sala a ko",
     "fr": "Il/Elle ne travaillera pas.",
     "en": "He/She will not work.",
     "verb": "Sala",
@@ -4284,6 +4819,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ka tu sala a ko",
+    "mandombe": "ka tu sala a ko",
     "fr": "Nous ne travaillerons pas.",
     "en": "We will not work.",
     "verb": "Sala",
@@ -4292,6 +4828,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ka lu sala a ko",
+    "mandombe": "ka lu sala a ko",
     "fr": "Vous ne travaillerez pas.",
     "en": "You will not work.",
     "verb": "Sala",
@@ -4300,6 +4837,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ka ba sala a ko",
+    "mandombe": "ka ba sala a ko",
     "fr": "Ils/Elles ne travailleront pas.",
     "en": "They will not work.",
     "verb": "Sala",
@@ -4308,6 +4846,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ka ni kuiza ko",
+    "mandombe": "ka ni kuiza ko",
     "fr": "Je ne viendrai pas.",
     "en": "I will not come.",
     "verb": "Kuiza",
@@ -4316,6 +4855,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ku kuiza ko",
+    "mandombe": "ku kuiza ko",
     "fr": "Tu ne viendras pas.",
     "en": "You will not come.",
     "verb": "Kuiza",
@@ -4324,6 +4864,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ka kuiza ko",
+    "mandombe": "ka kuiza ko",
     "fr": "Il/Elle ne viendra pas.",
     "en": "He/She will not come.",
     "verb": "Kuiza",
@@ -4332,6 +4873,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ka tu kuiza ko",
+    "mandombe": "ka tu kuiza ko",
     "fr": "Nous ne viendrons pas.",
     "en": "We will not come.",
     "verb": "Kuiza",
@@ -4340,6 +4882,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ka lu kuiza ko",
+    "mandombe": "ka lu kuiza ko",
     "fr": "Vous ne viendrez pas.",
     "en": "You will not come.",
     "verb": "Kuiza",
@@ -4348,6 +4891,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ka ba kuiza ko",
+    "mandombe": "ka ba kuiza ko",
     "fr": "Ils/Elles ne viendront pas.",
     "en": "They will not come.",
     "verb": "Kuiza",
@@ -4356,6 +4900,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mululu we nani",
+    "mandombe": "mululu we nani",
     "fr": "Je saigne du nez.",
     "en": "I have a nosebleed.",
     "verb": "Mululu",
@@ -4364,6 +4909,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mululu we naku",
+    "mandombe": "mululu we naku",
     "fr": "Tu saignes du nez.",
     "en": "You have a nosebleed.",
     "verb": "Mululu",
@@ -4372,6 +4918,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mululu we nandi",
+    "mandombe": "mululu we nandi",
     "fr": "Il/Elle saigne du nez.",
     "en": "He/She has a nosebleed.",
     "verb": "Mululu",
@@ -4380,6 +4927,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mululu we neto",
+    "mandombe": "mululu we neto",
     "fr": "Nous saignons du nez.",
     "en": "We have a nosebleed.",
     "verb": "Mululu",
@@ -4388,6 +4936,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mululu we neno",
+    "mandombe": "mululu we neno",
     "fr": "Vous saignez du nez.",
     "en": "You have a nosebleed.",
     "verb": "Mululu",
@@ -4396,6 +4945,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mululu we nawu",
+    "mandombe": "mululu we nawu",
     "fr": "Ils/Elles saignent du nez.",
     "en": "They have a nosebleed.",
     "verb": "Mululu",
@@ -4404,6 +4954,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ka ngiena na mululu ko",
+    "mandombe": "ka ngiena na mululu ko",
     "fr": "Je ne saigne pas du nez.",
     "en": "I do not bleed from the nose.",
     "verb": "Mululu",
@@ -4412,6 +4963,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "kuena na mululu ko",
+    "mandombe": "kuena na mululu ko",
     "fr": "Tu ne saignes pas du nez.",
     "en": "You do not bleed from the nose.",
     "verb": "Mululu",
@@ -4420,6 +4972,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "kena na mululu ko",
+    "mandombe": "kena na mululu ko",
     "fr": "Il/Elle ne saigne pas du nez.",
     "en": "He/She does not bleed from the nose.",
     "verb": "Mululu",
@@ -4428,6 +4981,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ka tuena na mululu ko",
+    "mandombe": "ka tuena na mululu ko",
     "fr": "Nous ne saignons pas du nez.",
     "en": "We do not bleed from the nose.",
     "verb": "Mululu",
@@ -4436,6 +4990,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ka luena na mululu ko",
+    "mandombe": "ka luena na mululu ko",
     "fr": "Vous ne saignez pas du nez.",
     "en": "You do not bleed from the nose.",
     "verb": "Mululu",
@@ -4444,6 +4999,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ka bena na mululu ko",
+    "mandombe": "ka bena na mululu ko",
     "fr": "Ils/Elles ne saignent pas du nez.",
     "en": "They do not bleed from the nose.",
     "verb": "Mululu",
@@ -4452,6 +5008,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ka ngieri a na mululu ko",
+    "mandombe": "ka ngieri a na mululu ko",
     "fr": "Je ne saignais pas du nez.",
     "en": "I was not bleeding from the nose.",
     "verb": "Mululu",
@@ -4460,6 +5017,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "kueri a na mululu ko",
+    "mandombe": "kueri a na mululu ko",
     "fr": "Tu ne saignais pas du nez.",
     "en": "You were not bleeding from the nose.",
     "verb": "Mululu",
@@ -4468,6 +5026,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "keri a na mululu ko",
+    "mandombe": "keri a na mululu ko",
     "fr": "Il/Elle ne saignait pas du nez.",
     "en": "He/She was not bleeding from the nose.",
     "verb": "Mululu",
@@ -4476,6 +5035,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ka tueri a na mululu ko",
+    "mandombe": "ka tueri a na mululu ko",
     "fr": "Nous ne saignions pas du nez.",
     "en": "We were not bleeding from the nose.",
     "verb": "Mululu",
@@ -4484,6 +5044,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ka lueri a na mululu ko",
+    "mandombe": "ka lueri a na mululu ko",
     "fr": "Vous ne saigniez pas du nez.",
     "en": "You were not bleeding from the nose.",
     "verb": "Mululu",
@@ -4492,6 +5053,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ka beri a na mululu ko",
+    "mandombe": "ka beri a na mululu ko",
     "fr": "Ils/Elles ne saignaient pas du nez.",
     "en": "They were not bleeding from the nose.",
     "verb": "Mululu",
@@ -4500,6 +5062,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "bilongo ni kue nue",
+    "mandombe": "bilongo ni kue nue",
     "fr": "Je bois les médicaments.",
     "en": "I drink the medicines.",
     "verb": "Nua",
@@ -4508,6 +5071,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "bilongo kue nue",
+    "mandombe": "bilongo kue nue",
     "fr": "Tu bois les médicaments.",
     "en": "You drink the medicines.",
     "verb": "Nua",
@@ -4516,6 +5080,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "bilongo ka kue nue",
+    "mandombe": "bilongo ka kue nue",
     "fr": "Il/Elle boit les médicaments.",
     "en": "He/She drinks the medicines.",
     "verb": "Nua",
@@ -4524,6 +5089,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "bilongo tu kue nue",
+    "mandombe": "bilongo tu kue nue",
     "fr": "Nous buvons les médicaments.",
     "en": "We drink the medicines.",
     "verb": "Nua",
@@ -4532,6 +5098,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "bilongo lu kue nue",
+    "mandombe": "bilongo lu kue nue",
     "fr": "Vous buvez les médicaments.",
     "en": "You drink the medicines.",
     "verb": "Nua",
@@ -4540,6 +5107,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "bilongo ba kue nue",
+    "mandombe": "bilongo ba kue nue",
     "fr": "Ils/Elles boivent les médicaments.",
     "en": "They drink the medicines.",
     "verb": "Nua",
@@ -4548,6 +5116,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Ku Mfua na tuka",
+    "mandombe": "Ku Mfuwa na tuka",
     "fr": "Je viens de.",
     "en": "I come from.",
     "verb": "Tuka",
@@ -4556,6 +5125,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Ku Linzolo wa tuka",
+    "mandombe": "Ku Linzolo wa tuka",
     "fr": "Tu viens de.",
     "en": "You come from.",
     "verb": "Tuka",
@@ -4564,6 +5134,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Ku Boko ka tuka",
+    "mandombe": "Ku Boko ka tuka",
     "fr": "Il/Elle vient de.",
     "en": "He/She comes from.",
     "verb": "Tuka",
@@ -4572,6 +5143,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Ku Mbanza Nganga tua tuka",
+    "mandombe": "Ku Mbanza Nganga tuwa tuka",
     "fr": "Nous venons de.",
     "en": "We come from.",
     "verb": "Tuka",
@@ -4580,6 +5152,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Ku Mbanza Ngungu lua tuka",
+    "mandombe": "Ku Mbanza Ngungu luwa tuka",
     "fr": "Vous venez de.",
     "en": "You come from.",
     "verb": "Tuka",
@@ -4588,11 +5161,229 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "Ku Luozi ba tuka",
+    "mandombe": "Ku Luozi ba tuka",
     "fr": "Ils/Elles viennent de.",
     "en": "They come from.",
     "verb": "Tuka",
     "tense": "Présent",
     "person": "Ils/Elles"
+  },
+  {
+    "lari": "Ka ni ta zonza ko.",
+    "mandombe": "Ka Ni Ta Zonza Ko",
+    "fr": "je ne dis rien",
+    "en": "I say nothing",
+    "verb": "zonza",
+    "tense": "Ne rien dire (present negatif)",
+    "person": "mono"
+  },
+  {
+    "lari": "Ku ta zonza ko.",
+    "mandombe": "Ku Ta Zonza Ko",
+    "fr": "tu ne dis rien",
+    "en": "you say nothing",
+    "verb": "zonza",
+    "tense": "Ne rien dire (present negatif)",
+    "person": "nge"
+  },
+  {
+    "lari": "Ka ta zonza ko.",
+    "mandombe": "Ka Ta Zonza Ko",
+    "fr": "il/elle ne dit rien",
+    "en": "he/she says nothing",
+    "verb": "zonza",
+    "tense": "Ne rien dire (present negatif)",
+    "person": "yandi"
+  },
+  {
+    "lari": "Ka tu ta zonza ko.",
+    "mandombe": "Ka Tu Ta Zonza Ko",
+    "fr": "nous ne disons rien",
+    "en": "we say nothing",
+    "verb": "zonza",
+    "tense": "Ne rien dire (present negatif)",
+    "person": "beto"
+  },
+  {
+    "lari": "Ka lu ta zonza ko.",
+    "mandombe": "Ka Lu Ta Zonza Ko",
+    "fr": "vous ne dites rien",
+    "en": "you (pl.) say nothing",
+    "verb": "zonza",
+    "tense": "Ne rien dire (present negatif)",
+    "person": "beno"
+  },
+  {
+    "lari": "Ka ba ta zonza ko.",
+    "mandombe": "Ka Ba Ta Zonza Ko",
+    "fr": "ils/elles ne disent rien",
+    "en": "they say nothing",
+    "verb": "zonza",
+    "tense": "Ne rien dire (present negatif)",
+    "person": "bawu"
+  },
+  {
+    "lari": "Ka ni ta ta diambu ko.",
+    "mandombe": "Ka Ni Ta Ta Diambu Ko",
+    "fr": "je ne dis rien",
+    "en": "I say nothing",
+    "verb": "ta diambu",
+    "tense": "Ne rien dire — variante avec ta diambu",
+    "person": "mono"
+  },
+  {
+    "lari": "Ku ta ta diambu ko.",
+    "mandombe": "Ku Ta Ta Diambu Ko",
+    "fr": "tu ne dis rien",
+    "en": "you say nothing",
+    "verb": "ta diambu",
+    "tense": "Ne rien dire — variante avec ta diambu",
+    "person": "nge"
+  },
+  {
+    "lari": "Ka ta ta diambu ko.",
+    "mandombe": "Ka Ta Ta Diambu Ko",
+    "fr": "il/elle ne dit rien",
+    "en": "he/she says nothing",
+    "verb": "ta diambu",
+    "tense": "Ne rien dire — variante avec ta diambu",
+    "person": "yandi"
+  },
+  {
+    "lari": "Ka tu ta ta diambu ko.",
+    "mandombe": "Ka Tu Ta Ta Diambu Ko",
+    "fr": "nous ne disons rien",
+    "en": "we say nothing",
+    "verb": "ta diambu",
+    "tense": "Ne rien dire — variante avec ta diambu",
+    "person": "beto"
+  },
+  {
+    "lari": "Ka lu ta ta diambu ko.",
+    "mandombe": "Ka Lu Ta Ta Diambu Ko",
+    "fr": "vous ne dites rien",
+    "en": "you (pl.) say nothing",
+    "verb": "ta diambu",
+    "tense": "Ne rien dire — variante avec ta diambu",
+    "person": "beno"
+  },
+  {
+    "lari": "Ka ba ta ta diambu ko.",
+    "mandombe": "Ka Ba Ta Ta Diambu Ko",
+    "fr": "ils/elles ne disent rien",
+    "en": "they say nothing",
+    "verb": "ta diambu",
+    "tense": "Ne rien dire — variante avec ta diambu",
+    "person": "bawu"
+  },
+  {
+    "lari": "Ka ni ta bula mbembo ko.",
+    "mandombe": "Ka Ni Ta Bula Mbembo Ko",
+    "fr": "je ne dis rien",
+    "en": "I say nothing",
+    "verb": "bula mbembo",
+    "tense": "Rester silencieux (present)",
+    "person": "mono"
+  },
+  {
+    "lari": "Ku ta bula mbembo ko.",
+    "mandombe": "Ku Ta Bula Mbembo Ko",
+    "fr": "tu restes silencieux",
+    "en": "you stay silent",
+    "verb": "bula mbembo",
+    "tense": "Rester silencieux (present)",
+    "person": "nge"
+  },
+  {
+    "lari": "Ka ta bula mbembo ko.",
+    "mandombe": "Ka Ta Bula Mbembo Ko",
+    "fr": "il/elle reste silencieux",
+    "en": "he/she stays silent",
+    "verb": "bula mbembo",
+    "tense": "Rester silencieux (present)",
+    "person": "yandi"
+  },
+  {
+    "lari": "Ka tu ta bula mbembo ko.",
+    "mandombe": "Ka Tu Ta Bula Mbembo Ko",
+    "fr": "nous restons silencieux",
+    "en": "we stay silent",
+    "verb": "bula mbembo",
+    "tense": "Rester silencieux (present)",
+    "person": "beto"
+  },
+  {
+    "lari": "Ka lu ta bula mbembo ko.",
+    "mandombe": "Ka Lu Ta Bula Mbembo Ko",
+    "fr": "vous restez silencieux",
+    "en": "you (pl.) stay silent",
+    "verb": "bula mbembo",
+    "tense": "Rester silencieux (present)",
+    "person": "beno"
+  },
+  {
+    "lari": "Ka ba ta bula mbembo ko.",
+    "mandombe": "Ka Ba Ta Bula Mbembo Ko",
+    "fr": "ils/elles restent silencieux",
+    "en": "they stay silent",
+    "verb": "bula mbembo",
+    "tense": "Rester silencieux (present)",
+    "person": "bawu"
+  },
+  {
+    "lari": "Ka na bula mbembo ko.",
+    "mandombe": "Ka Na Bula Mbembo Ko",
+    "fr": "je suis reste(e) muet(te)",
+    "en": "I stayed silent",
+    "verb": "bula mbembo",
+    "tense": "Rester silencieux (passe)",
+    "person": "mono"
+  },
+  {
+    "lari": "Ka wa bula mbembo ko.",
+    "mandombe": "Ka Wa Bula Mbembo Ko",
+    "fr": "tu es reste silencieux",
+    "en": "you stayed silent",
+    "verb": "bula mbembo",
+    "tense": "Rester silencieux (passe)",
+    "person": "nge"
+  },
+  {
+    "lari": "Ka bula mbembo ko.",
+    "mandombe": "Ka Bula Mbembo Ko",
+    "fr": "il/elle est reste(e) silencieux(se)",
+    "en": "he/she stayed silent",
+    "verb": "bula mbembo",
+    "tense": "Rester silencieux (passe)",
+    "person": "yandi"
+  },
+  {
+    "lari": "Ka tua bula mbembo ko.",
+    "mandombe": "Ka Tua Bula Mbembo Ko",
+    "fr": "nous sommes restes silencieux",
+    "en": "we stayed silent",
+    "verb": "bula mbembo",
+    "tense": "Rester silencieux (passe)",
+    "person": "beto",
+    "note": "Variante : Ka ta bula mbembo ko."
+  },
+  {
+    "lari": "Ka lua bula mbembo ko.",
+    "mandombe": "Ka Lua Bula Mbembo Ko",
+    "fr": "vous etes restes silencieux",
+    "en": "you (pl.) stayed silent",
+    "verb": "bula mbembo",
+    "tense": "Rester silencieux (passe)",
+    "person": "beno"
+  },
+  {
+    "lari": "Ka ba bula mbembo ko.",
+    "mandombe": "Ka Ba Bula Mbembo Ko",
+    "fr": "ils/elles sont restes silencieux",
+    "en": "they stayed silent",
+    "verb": "bula mbembo",
+    "tense": "Rester silencieux (passe)",
+    "person": "bawu"
   },
   {
     "lari": "Njena",
@@ -7677,6 +8468,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "djoka ni ta djoka",
+    "mandombe": "joka ni ta joka",
     "fr": "Je cours.",
     "en": "I run.",
     "verb": "Djoka (courir)",
@@ -7685,6 +8477,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "djoka ta djoka",
+    "mandombe": "joka ta joka",
     "fr": "Tu cours.",
     "en": "You run.",
     "verb": "Djoka (courir)",
@@ -7693,6 +8486,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "djoka ka ta djoka",
+    "mandombe": "joka ka ta joka",
     "fr": "Il/Elle court.",
     "en": "He/She runs.",
     "verb": "Djoka (courir)",
@@ -7701,6 +8495,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "djoka tu ta djoka",
+    "mandombe": "joka tu ta joka",
     "fr": "Nous courons.",
     "en": "We run.",
     "verb": "Djoka (courir)",
@@ -7709,6 +8504,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "djoka lu ta djoka",
+    "mandombe": "joka lu ta joka",
     "fr": "Vous courez.",
     "en": "You (pl.) run.",
     "verb": "Djoka (courir)",
@@ -7717,6 +8513,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "djoka ba ta djoka",
+    "mandombe": "joka ba ta joka",
     "fr": "Ils/Elles courent.",
     "en": "They run.",
     "verb": "Djoka (courir)",
@@ -7725,6 +8522,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ndjokele",
+    "mandombe": "nzokele",
     "fr": "J'ai couru.",
     "en": "I ran.",
     "verb": "Djoka (courir)",
@@ -7733,6 +8531,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "djokele",
+    "mandombe": "jokele",
     "fr": "Tu as couru.",
     "en": "You ran.",
     "verb": "Djoka (courir)",
@@ -7741,6 +8540,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "djokele",
+    "mandombe": "jokele",
     "fr": "Il/Elle a couru.",
     "en": "He/She ran.",
     "verb": "Djoka (courir)",
@@ -7749,6 +8549,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "tu djokele",
+    "mandombe": "tu jokele",
     "fr": "Nous avons couru.",
     "en": "We ran.",
     "verb": "Djoka (courir)",
@@ -7757,6 +8558,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "lu djokele",
+    "mandombe": "lu jokele",
     "fr": "Vous avez couru.",
     "en": "You (pl.) ran.",
     "verb": "Djoka (courir)",
@@ -7765,6 +8567,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "ba djokele",
+    "mandombe": "ba jokele",
     "fr": "Ils/Elles ont couru.",
     "en": "They ran.",
     "verb": "Djoka (courir)",
@@ -7773,6 +8576,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo ni djoka",
+    "mandombe": "mbo ni joka",
     "fr": "Je courrai.",
     "en": "I will run.",
     "verb": "Djoka (courir)",
@@ -7781,6 +8585,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo djoka",
+    "mandombe": "mbo joka",
     "fr": "Tu courras.",
     "en": "You will run.",
     "verb": "Djoka (courir)",
@@ -7789,6 +8594,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo ka djoka",
+    "mandombe": "mbo ka joka",
     "fr": "Il/Elle courra.",
     "en": "He/She will run.",
     "verb": "Djoka (courir)",
@@ -7797,6 +8603,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo tu djoka",
+    "mandombe": "mbo tu joka",
     "fr": "Nous courrons.",
     "en": "We will run.",
     "verb": "Djoka (courir)",
@@ -7805,6 +8612,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo lu djoka",
+    "mandombe": "mbo lu joka",
     "fr": "Vous courrez.",
     "en": "You (pl.) will run.",
     "verb": "Djoka (courir)",
@@ -7813,6 +8621,7 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
   },
   {
     "lari": "mbo ba djoka",
+    "mandombe": "mbo ba joka",
     "fr": "Ils/Elles courront.",
     "en": "They will run.",
     "verb": "Djoka (courir)",
@@ -8130,6 +8939,200 @@ export const CONJUGATION_FORMS: ConjugationForm[] = [
     "en": "They will lift.",
     "verb": "Nanguna (lever)",
     "tense": "Futur · mbo + particule du pronom + infinitif",
+    "person": "Ils/Elles"
+  },
+  {
+    "lari": "nturidi",
+    "fr": "J'ai mis.",
+    "en": "I put.",
+    "verb": "Tula (mettre, poser, déposer, arriver, être arrivé)",
+    "tense": "Passé",
+    "person": "Je"
+  },
+  {
+    "lari": "turidi",
+    "fr": "Tu as mis.",
+    "en": "You put.",
+    "verb": "Tula (mettre, poser, déposer, arriver, être arrivé)",
+    "tense": "Passé",
+    "person": "Tu"
+  },
+  {
+    "lari": "turidi",
+    "fr": "Il/Elle a mis.",
+    "en": "He/She put.",
+    "verb": "Tula (mettre, poser, déposer, arriver, être arrivé)",
+    "tense": "Passé",
+    "person": "Il/Elle",
+    "note": "Accentuation sur le /ri/ : on entend que c'est la 3e personne."
+  },
+  {
+    "lari": "tu turidi",
+    "fr": "Nous avons mis.",
+    "en": "We put.",
+    "verb": "Tula (mettre, poser, déposer, arriver, être arrivé)",
+    "tense": "Passé",
+    "person": "Nous"
+  },
+  {
+    "lari": "lu turidi",
+    "fr": "Vous avez mis.",
+    "en": "You (pl.) put.",
+    "verb": "Tula (mettre, poser, déposer, arriver, être arrivé)",
+    "tense": "Passé",
+    "person": "Vous"
+  },
+  {
+    "lari": "ba turidi",
+    "fr": "Ils/Elles ont mis.",
+    "en": "They put.",
+    "verb": "Tula (mettre, poser, déposer, arriver, être arrivé)",
+    "tense": "Passé",
+    "person": "Ils/Elles"
+  },
+  {
+    "lari": "ka nturidi a ko",
+    "fr": "Je n'ai pas mis.",
+    "en": "I did not put.",
+    "verb": "Tula (mettre, poser, déposer, arriver, être arrivé)",
+    "tense": "Passé négatif · ka / ku + particule du pronom + verbe + a ko",
+    "person": "Je"
+  },
+  {
+    "lari": "ku turidi a ko",
+    "fr": "Tu n'as pas mis.",
+    "en": "You did not put.",
+    "verb": "Tula (mettre, poser, déposer, arriver, être arrivé)",
+    "tense": "Passé négatif · ka / ku + particule du pronom + verbe + a ko",
+    "person": "Tu"
+  },
+  {
+    "lari": "ka turidi a ko",
+    "fr": "Il/Elle n'a pas mis.",
+    "en": "He/She did not put.",
+    "verb": "Tula (mettre, poser, déposer, arriver, être arrivé)",
+    "tense": "Passé négatif · ka / ku + particule du pronom + verbe + a ko",
+    "person": "Il/Elle",
+    "note": "Accentuation sur le /ri/ : on entend que c'est la 3e personne."
+  },
+  {
+    "lari": "ka tu turidi a ko",
+    "fr": "Nous n'avons pas mis.",
+    "en": "We did not put.",
+    "verb": "Tula (mettre, poser, déposer, arriver, être arrivé)",
+    "tense": "Passé négatif · ka / ku + particule du pronom + verbe + a ko",
+    "person": "Nous"
+  },
+  {
+    "lari": "ka lu turidi a ko",
+    "fr": "Vous n'avez pas mis.",
+    "en": "You (pl.) did not put.",
+    "verb": "Tula (mettre, poser, déposer, arriver, être arrivé)",
+    "tense": "Passé négatif · ka / ku + particule du pronom + verbe + a ko",
+    "person": "Vous"
+  },
+  {
+    "lari": "ka ba turidi a ko",
+    "fr": "Ils/Elles n'ont pas mis.",
+    "en": "They did not put.",
+    "verb": "Tula (mettre, poser, déposer, arriver, être arrivé)",
+    "tense": "Passé négatif · ka / ku + particule du pronom + verbe + a ko",
+    "person": "Ils/Elles"
+  },
+  {
+    "lari": "mbo ni tula",
+    "fr": "mettrai / arriverai",
+    "en": "I will put / arrive.",
+    "verb": "Tula (mettre, poser, déposer, arriver, être arrivé)",
+    "tense": "Futur · mbo + particule du pronom + infinitif",
+    "person": "Je"
+  },
+  {
+    "lari": "mbo tula",
+    "fr": "mettras / arriveras",
+    "en": "You will put / arrive.",
+    "verb": "Tula (mettre, poser, déposer, arriver, être arrivé)",
+    "tense": "Futur · mbo + particule du pronom + infinitif",
+    "person": "Tu"
+  },
+  {
+    "lari": "mbo ka tula",
+    "fr": "mettra / arrivera",
+    "en": "He/She will put / arrive.",
+    "verb": "Tula (mettre, poser, déposer, arriver, être arrivé)",
+    "tense": "Futur · mbo + particule du pronom + infinitif",
+    "person": "Il/Elle"
+  },
+  {
+    "lari": "mbo tu tula",
+    "fr": "mettrons / arriverons",
+    "en": "We will put / arrive.",
+    "verb": "Tula (mettre, poser, déposer, arriver, être arrivé)",
+    "tense": "Futur · mbo + particule du pronom + infinitif",
+    "person": "Nous"
+  },
+  {
+    "lari": "mbo lu tula",
+    "fr": "mettrez / arriverez",
+    "en": "You (pl.) will put / arrive.",
+    "verb": "Tula (mettre, poser, déposer, arriver, être arrivé)",
+    "tense": "Futur · mbo + particule du pronom + infinitif",
+    "person": "Vous"
+  },
+  {
+    "lari": "mbo ba tula",
+    "fr": "mettront / arriveront",
+    "en": "They will put / arrive.",
+    "verb": "Tula (mettre, poser, déposer, arriver, être arrivé)",
+    "tense": "Futur · mbo + particule du pronom + infinitif",
+    "person": "Ils/Elles"
+  },
+  {
+    "lari": "ka ni tula ko",
+    "fr": "Je ne mettrai pas / n'arriverai pas.",
+    "en": "I will not put / arrive.",
+    "verb": "Tula (mettre, poser, déposer, arriver, être arrivé)",
+    "tense": "Futur négatif · ka / ku + particule du pronom + verbe + ko",
+    "person": "Je"
+  },
+  {
+    "lari": "ku tula ko",
+    "fr": "Tu ne mettras pas / n'arriveras pas.",
+    "en": "You will not put / arrive.",
+    "verb": "Tula (mettre, poser, déposer, arriver, être arrivé)",
+    "tense": "Futur négatif · ka / ku + particule du pronom + verbe + ko",
+    "person": "Tu"
+  },
+  {
+    "lari": "ka tula ko",
+    "fr": "Il/Elle ne mettra pas / n'arrivera pas.",
+    "en": "He/She will not put / arrive.",
+    "verb": "Tula (mettre, poser, déposer, arriver, être arrivé)",
+    "tense": "Futur négatif · ka / ku + particule du pronom + verbe + ko",
+    "person": "Il/Elle"
+  },
+  {
+    "lari": "ka tu tula ko",
+    "fr": "Nous ne mettrons pas / n'arriverons pas.",
+    "en": "We will not put / arrive.",
+    "verb": "Tula (mettre, poser, déposer, arriver, être arrivé)",
+    "tense": "Futur négatif · ka / ku + particule du pronom + verbe + ko",
+    "person": "Nous"
+  },
+  {
+    "lari": "ka lu tula ko",
+    "fr": "Vous ne mettrez pas / n'arriverez pas.",
+    "en": "You (pl.) will not put / arrive.",
+    "verb": "Tula (mettre, poser, déposer, arriver, être arrivé)",
+    "tense": "Futur négatif · ka / ku + particule du pronom + verbe + ko",
+    "person": "Vous"
+  },
+  {
+    "lari": "ka ba tula ko",
+    "fr": "Ils/Elles ne mettront pas / n'arriveront pas.",
+    "en": "They will not put / arrive.",
+    "verb": "Tula (mettre, poser, déposer, arriver, être arrivé)",
+    "tense": "Futur négatif · ka / ku + particule du pronom + verbe + ko",
     "person": "Ils/Elles"
   },
   {
@@ -9047,4 +10050,25 @@ export function findConjugationMatch(
   const key = normalizeKey(text);
   if (!key) return null;
   return (direction === "to-lari" ? byFr.get(key) : byLari.get(key)) || null;
+}
+
+/** Recherche structurée réservée aux conjugaisons attestées. */
+export function findConjugations(filters: {
+  query?: string;
+  verb?: string;
+  tense?: string;
+  person?: string;
+}, limit = 60): ConjugationForm[] {
+  const query = normalizeKey(filters.query || "");
+  const verb = normalizeKey(filters.verb || "");
+  const tense = normalizeKey(filters.tense || "");
+  const person = normalizeKey(filters.person || "");
+
+  return CONJUGATION_FORMS.filter((f) => {
+    if (verb && !normalizeKey(f.verb || "").includes(verb)) return false;
+    if (tense && !normalizeKey(f.tense || "").includes(tense)) return false;
+    if (person && !normalizeKey(f.person || "").includes(person)) return false;
+    if (!query) return true;
+    return normalizeKey([f.lari, f.fr, f.en || "", f.verb || "", f.tense || "", f.person || ""].join(" ")).includes(query);
+  }).slice(0, limit);
 }

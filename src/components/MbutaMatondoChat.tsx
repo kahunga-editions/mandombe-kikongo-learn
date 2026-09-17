@@ -10,6 +10,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
 import { supabase } from "@/integrations/supabase/client";
 import PronunciationCheck from "@/components/PronunciationCheck";
+import { cleanMandombe } from "@/lib/mandombeText";
 
 import lecon00 from "../../supabase/functions/_shared/mbuta-lecon-00.json";
 import lecon03 from "../../supabase/functions/_shared/mbuta-lecon-03.json";
@@ -193,7 +194,8 @@ function MandombeBubble({ block, isPlaying, audioDurationMs, onAdminCorrect, isA
   const [typed, setTyped] = useState(0);
   const [showLari, setShowLari] = useState(false);
   const [showFr, setShowFr] = useState(false);
-  const total = block.lari.length;
+  const mandombe = cleanMandombe(block.lari);
+  const total = mandombe.length;
 
   useEffect(() => {
     setTyped(0);
@@ -241,7 +243,7 @@ function MandombeBubble({ block, isPlaying, audioDurationMs, onAdminCorrect, isA
         className="font-mandombe text-3xl text-gold leading-loose"
         style={{ minHeight: "1.5em" }}
       >
-        {block.lari.slice(0, typed)}
+        {mandombe.slice(0, typed)}
       </div>
 
       {/* Layer 2 — Kikongo Lari (latin) */}

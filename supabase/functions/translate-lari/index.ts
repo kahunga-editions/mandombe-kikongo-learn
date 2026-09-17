@@ -5057,7 +5057,7 @@ serve(async (req) => {
           ].filter(Boolean);
           return new Response(JSON.stringify({
             translation: conjDirection === "to-lari" ? match.lari : gloss,
-            mandombe: match.lari,
+            mandombe: match.mandombe || match.lari,
             ipa: "",
             notes: noteParts.join(" — "),
           }), {

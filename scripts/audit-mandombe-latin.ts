@@ -26,7 +26,12 @@ for (const e of JSON.parse(fs.readFileSync(dictPath, "utf8")) as any[]) {
 }
 
 // 2. lessons.ts + corpus TS (analyse textuelle des paires lari/mandombe)
-for (const rel of ["src/data/lessons.ts", "supabase/functions/_shared/lessons-corpus.ts"]) {
+for (const rel of [
+  "src/data/lessons.ts",
+  "src/data/survivalVerbs.ts",
+  "supabase/functions/_shared/lessons-corpus.ts",
+  "supabase/functions/_shared/conjugations-corpus.ts",
+]) {
   const p = path.join(ROOT, rel);
   if (!fs.existsSync(p)) continue;
   const src = fs.readFileSync(p, "utf8");

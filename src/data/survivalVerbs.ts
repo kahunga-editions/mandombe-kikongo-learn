@@ -2038,7 +2038,6 @@ export const survivalVerbs: SurvivalVerb[] = [
             "fr": "J'ai pensé.",
             "en": "I thought.",
             "verbForm": "bendji",
-            "mandombe": "mbenji",
             "note": "En Mandombe on écrit mbenji ; la translittération latine reste mbendji."
           },
           {
@@ -2046,40 +2045,35 @@ export const survivalVerbs: SurvivalVerb[] = [
             "lari": "bendji",
             "fr": "Tu as pensé.",
             "en": "You thought.",
-            "verbForm": "bendji",
-            "mandombe": "benji"
+            "verbForm": "bendji"
           },
           {
             "person": "Il/Elle",
             "lari": "bendji",
             "fr": "Il/Elle a pensé.",
             "en": "He/She thought.",
-            "verbForm": "bendji",
-            "mandombe": "benji"
+            "verbForm": "bendji"
           },
           {
             "person": "Nous",
             "lari": "tu bendji",
             "fr": "Nous avons pensé.",
             "en": "We thought.",
-            "verbForm": "bendji",
-            "mandombe": "tu benji"
+            "verbForm": "bendji"
           },
           {
             "person": "Vous",
             "lari": "lu bendji",
             "fr": "Vous avez pensé.",
             "en": "You (pl.) thought.",
-            "verbForm": "bendji",
-            "mandombe": "lu benji"
+            "verbForm": "bendji"
           },
           {
             "person": "Ils/Elles",
             "lari": "ba bendji",
             "fr": "Ils/Elles ont pensé.",
             "en": "They thought.",
-            "verbForm": "bendji",
-            "mandombe": "ba benji"
+            "verbForm": "bendji"
           }
         ]
       },
@@ -5289,7 +5283,7 @@ export const survivalVerbs: SurvivalVerb[] = [
             "fr": "J'ai couru.",
             "en": "I ran.",
             "verbForm": "djokele",
-            "mandombe": "njokele"
+            "mandombe": "nzokele"
           },
           {
             "person": "Tu",
@@ -5389,7 +5383,7 @@ export const survivalVerbs: SurvivalVerb[] = [
         "rule": "mbo + particule du pronom + infinitif"
       }
     ],
-    "note": "En Mandombe le dj s'écrit j : joka, njokele. La translittération latine garde dj."
+    "note": "En Mandombe, djoka se tape joka. Cas nommé : ndjokele se tape nzokele ; la transcription et la prononciation restent ndjokele."
   },
   {
     "verb": "Noka",
