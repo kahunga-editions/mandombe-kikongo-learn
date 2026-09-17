@@ -10,8 +10,6 @@ import { cleanMandombe } from "@/lib/mandombeText";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useTranslatedContent } from "@/hooks/useTranslatedContent";
 import { lessons } from "@/data/lessons";
-import { conjugationSeries } from "@/data/conjugationSeries";
-import { verbeBaData } from "@/data/verbeBa";
 import { survivalVerbs } from "@/data/survivalVerbs";
 
 interface FlatTable {
@@ -167,7 +165,7 @@ const Conjugations = () => {
           verbMandombe: table.verbMandombe || table.verb,
           meaning: (isFr ? table.meaning?.fr : table.meaning?.en) || table.meaning?.fr || "",
           tense: (isFr ? table.tenseFr : table.tense) || table.tense,
-          isExpression: table.kind === "expression",
+          isExpression: false,
           rows: (table.rows || []).map((r) => {
             const mandombeText = r.mandombe || r.lari;
             const mandombeClean = cleanMandombe(mandombeText);
@@ -262,51 +260,8 @@ const Conjugations = () => {
       });
     });
 
-    conjugationSeries.forEach((s, sIndex) => {
-      s.rows.forEach((row, rowIndex) => {
-        const rowText = [s.pattern, s.verb, row.person, row.lari, row.fr, row.en]
-          .filter(Boolean)
-          .map((value) => norm(value || ""));
-        if (!rowText.some((value) => value.includes(q))) return;
-        results.push({
-          id: `series-${sIndex}-${rowIndex}`,
-          verb: s.verb || s.pattern,
-          meaning: s.pattern,
-          tense: s.pattern,
-          person: row.person,
-          lari: row.lari,
-          mandombe: row.lari,
-          fr: row.fr,
-          en: row.en,
-          verbForm: row.verbForm || s.verb,
-        });
-      });
-    });
-
-    verbeBaData.forEach((e, eIndex) => {
-      const forms: Array<[string, string, string, string, string]> = [
-        ["c", e.c_lat, e.c_kil, e.c_fr, isFr ? "Présent (forme courte)" : "Present (short form)"],
-        ["f", e.f_lat, e.f_kil, e.f_fr, isFr ? "Présent" : "Present"],
-        ["p", e.p_lat, e.p_kil, e.p_fr, isFr ? "Passé" : "Past"],
-      ];
-      forms.forEach(([key, lat, kil, fr, tense]) => {
-        const rowText = [e.classe, e.classe_fr, lat, kil, fr, tense].map((v) => norm(v || ""));
-        if (!rowText.some((value) => value.includes(q))) return;
-        results.push({
-          id: `ba-${eIndex}-${key}`,
-          verb: isFr ? "Ba — être" : "Ba — to be",
-          meaning: e.classe_fr,
-          tense,
-          person: e.classe,
-          lari: lat,
-          mandombe: kil,
-          fr,
-        });
-      });
-    });
-
     return results;
-  }, [tables, query, isFr]);
+  }, [tables, query]);
 
 
 
