@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { Search, Layers } from "lucide-react";
+import { Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Switch } from "@/components/ui/switch";
 import Navbar from "@/components/Navbar";
@@ -13,7 +13,6 @@ import { lessons } from "@/data/lessons";
 import { conjugationSeries } from "@/data/conjugationSeries";
 import { verbeBaData } from "@/data/verbeBa";
 import { survivalVerbs } from "@/data/survivalVerbs";
-import { useValidatedForms } from "@/hooks/useValidatedForms";
 
 interface FlatTable {
   lessonId: string;
@@ -130,9 +129,8 @@ function HighlightedMandombe({
   return (
     <span className={className}>
       {lastMatch.prefix}
-      <span className="relative inline-flex items-end justify-center px-2 pb-[0.75em] pt-[0.1em] align-baseline">
-        <span aria-hidden className="pointer-events-none absolute inset-x-0 bottom-0 h-[1.2em] rounded bg-verb" />
-        <span className="relative font-bold leading-none text-verb-foreground">{lastMatch.match}</span>
+      <span className="inline rounded bg-verb px-1 font-bold text-verb-foreground">
+        {lastMatch.match}
       </span>
       {lastMatch.suffix}
     </span>
@@ -145,7 +143,6 @@ const Conjugations = () => {
   const isFr = language === "fr";
   const [query, setQuery] = useState("");
   const [showSelectedTranslation, setShowSelectedTranslation] = useState(false);
-  const { data: validatedForms = [] } = useValidatedForms();
 
   const translatedGloss = (fr?: string, en?: string) => {
     if (!fr) return en || "";
@@ -159,6 +156,7 @@ const Conjugations = () => {
     for (const lesson of lessons) {
       if (!lesson?.conjugations) continue;
       for (const table of lesson.conjugations) {
+        if (table.kind === "expression") continue;
         // Le verbe etre se conjugue par personne : ses tables sont affichees comme les autres.
         // C'est aux 3es personnes que la forme s'accorde avec la classe du nom.
 
@@ -225,33 +223,6 @@ const Conjugations = () => {
     return out;
   }, [isFr]);
 
-
-  const grouped = useMemo(() => {
-    const q = norm(query);
-    const match = (t: FlatTable) =>
-      !q ||
-      norm(t.verb).includes(q) ||
-      norm(t.meaning).includes(q) ||
-      norm(t.tense).includes(q) ||
-      t.rows.some(
-        (r) =>
-          norm(r.lari).includes(q) ||
-          norm(r.person).includes(q) ||
-          norm(r.fr || "").includes(q) ||
-          norm(r.en || "").includes(q) ||
-          norm(r.note || "").includes(q),
-      );
-
-    const map = new Map<string, FlatTable[]>();
-    for (const t of tables) {
-      if (!match(t)) continue;
-      const key = `${t.verb}|${t.meaning}`;
-      const arr = map.get(key) || [];
-      arr.push(t);
-      map.set(key, arr);
-    }
-    return Array.from(map.entries()).sort((a, b) => a[0].localeCompare(b[0]));
-  }, [tables, query]);
 
   const searchResults = useMemo<SearchResult[]>(() => {
     const q = norm(query);
@@ -334,44 +305,8 @@ const Conjugations = () => {
       });
     });
 
-    // Formes validées par l'expert dans le traducteur (mémoire partagée).
-    const known = new Set(results.map((r) => norm(r.lari)));
-    validatedForms.forEach((f, fIndex) => {
-      const rowText = [f.lari, f.gloss, f.notes].filter(Boolean).map((v) => norm(v || ""));
-      if (!rowText.some((value) => value.includes(q))) return;
-      if (known.has(norm(f.lari))) return;
-      results.push({
-        id: `validated-${fIndex}`,
-        verb: isFr ? "Traducteur" : "Translator",
-        meaning: f.gloss,
-        tense: "",
-        person: "",
-        lari: f.lari,
-        mandombe: f.mandombe || f.lari,
-        fr: f.gloss,
-        en: f.lang === "en" ? f.gloss : undefined,
-        note: f.notes,
-      });
-    });
-
     return results;
-  }, [tables, query, isFr, validatedForms]);
-
-  const series = useMemo(() => {
-    const q = norm(query);
-    if (!q) return conjugationSeries;
-    return conjugationSeries.filter(
-      (s) =>
-        norm(s.pattern).includes(q) ||
-        s.rows.some(
-          (r) =>
-            norm(r.lari).includes(q) ||
-            norm(r.person).includes(q) ||
-            norm(r.fr).includes(q) ||
-            norm(r.en || "").includes(q),
-        ),
-    );
-  }, [query]);
+  }, [tables, query, isFr]);
 
 
 
@@ -443,7 +378,7 @@ const Conjugations = () => {
                         <span className="font-semibold text-primary">{result.verb}</span>
                         <span>{result.tense}</span>
                       </div>
-                      <div className="font-mandombe block w-full mt-3 text-4xl md:text-5xl leading-[2.2] text-gold break-words">
+                      <div className="font-mandombe mt-3 mb-3 block w-full break-words text-3xl text-gold [overflow-wrap:anywhere] md:text-4xl">
                         <HighlightedMandombe text={result.mandombe} verb={result.verbForm} />
                       </div>
                       <div className="mt-2 flex items-center gap-2 flex-wrap">
@@ -466,230 +401,6 @@ const Conjugations = () => {
           </section>
         )}
 
-        {!query.trim() && validatedForms.length > 0 && (
-          <section className="max-w-3xl mx-auto mt-16">
-            <div className="flex items-center gap-2">
-              <Layers className="w-5 h-5 text-primary" />
-              <h2 className="font-display text-2xl font-bold text-foreground">
-                {isFr ? "Formes du traducteur" : "Forms from the translator"}
-              </h2>
-            </div>
-            <p className="mt-2 text-muted-foreground">
-              {isFr
-                ? "Ces formes complètent les tableaux et sont réutilisées par le traducteur."
-                : "These forms complete the tables and are reused by the translator."}
-            </p>
-            <ul className="mt-6 space-y-3">
-              {validatedForms.slice(0, 30).map((f, i) => (
-                <li key={`vf-${i}`} className="border border-border bg-card rounded-lg px-5 py-4">
-                  <div className="font-mandombe block w-full text-4xl md:text-5xl leading-[2.2] text-gold break-words">
-                    {cleanMandombe(f.mandombe || f.lari)}
-                  </div>
-                  <div className="mt-2 flex items-center gap-2 flex-wrap">
-                    <span className="text-base font-medium text-foreground">{f.lari}</span>
-                    <MandombeSpeaker lariText={f.lari} />
-                  </div>
-                  <div className="mt-1 text-base text-muted-foreground">{f.gloss}</div>
-                  {f.notes && <div className="mt-1 text-xs italic text-muted-foreground">{f.notes}</div>}
-                </li>
-              ))}
-            </ul>
-          </section>
-        )}
-
-        {!query.trim() && <section className="max-w-5xl mx-auto mt-16">
-          <div className="flex items-center gap-2">
-            <Layers className="w-5 h-5 text-primary" />
-            <h2 className="font-display text-2xl font-bold text-foreground">
-              {isFr ? "Le verbe être dans tous ses états" : "The verb to be in all its states"}
-            </h2>
-          </div>
-          <p className="mt-2 text-muted-foreground">
-            {isFr
-              ? "Le verbe être se conjugue par personne. Aux troisièmes personnes, du singulier comme du pluriel, la forme s'accorde avec la classe du nom : voici ces formes, contractée, pleine et au passé."
-              : "The verb to be is conjugated by person. In the third person, singular and plural alike, the form agrees with the noun class: here are those forms, contracted, full and past."}
-          </p>
-
-          <div className="mt-6 grid gap-4 md:grid-cols-2">
-            {verbeBaData.map((e, i) => (
-              <article key={`${e.classe}-${i}`} className="bg-card border border-border rounded-2xl p-5">
-                <ul className="divide-y divide-border/60">
-                  <li className="py-4">
-                    <span className="text-xs uppercase tracking-wide text-muted-foreground">
-                      {isFr ? "Présent" : "Present"}
-                    </span>
-                    <div className="mt-3 space-y-4">
-                      {/* forme courte */}
-                      <div>
-                        <div className="font-mandombe block w-full leading-[2.2] pb-2 text-2xl md:text-3xl text-gold break-words">
-                          <HighlightedMandombe text={e.c_kil} verb={e.c} />
-                        </div>
-                        <div className="mt-2 flex items-center gap-2 flex-wrap">
-                          <span className="text-sm text-foreground/80">{e.c_lat}</span>
-                          <MandombeSpeaker lariText={e.c_lat} />
-                        </div>
-                        <div className="mt-1 text-sm text-muted-foreground italic">{translatedGloss(e.c_fr)}</div>
-                      </div>
-
-                      {/* forme pleine */}
-                      <div className="pt-4 border-t border-border/40">
-                        <span className="text-xs uppercase tracking-wide text-muted-foreground">
-                          {isFr ? "Forme pleine" : "Full form"}
-                        </span>
-                        <div className="font-mandombe block w-full leading-[2.2] pb-2 mt-2 text-2xl md:text-3xl text-gold break-words">
-                          <HighlightedMandombe text={e.f_kil} verb={e.f} />
-                        </div>
-                        <div className="mt-2 flex items-center gap-2 flex-wrap">
-                          <span className="text-sm text-foreground/80">{e.f_lat}</span>
-                          <MandombeSpeaker lariText={e.f_lat} />
-                        </div>
-                        <div className="mt-1 text-sm text-muted-foreground italic">{translatedGloss(e.f_fr)}</div>
-                      </div>
-                    </div>
-                  </li>
-
-                  <li className="py-4">
-                    <span className="text-xs uppercase tracking-wide text-muted-foreground">
-                      {isFr ? "Passé" : "Past"}
-                    </span>
-                    <div className="font-mandombe block w-full leading-[2.2] pb-2 mt-3 text-2xl md:text-3xl text-gold break-words">
-                      <HighlightedMandombe text={e.p_kil} verb={e.p} />
-                    </div>
-                    <div className="mt-2 flex items-center gap-2 flex-wrap">
-                      <span className="text-sm text-foreground/80">{e.p_lat}</span>
-                      <MandombeSpeaker lariText={e.p_lat} />
-                    </div>
-                    <div className="mt-1 text-sm text-muted-foreground italic">{translatedGloss(e.p_fr)}</div>
-                  </li>
-                </ul>
-              </article>
-            ))}
-          </div>
-        </section>}
-
-        {!query.trim() && (
-          <section className="max-w-5xl mx-auto mt-16">
-            <div className="bg-card border border-border rounded-2xl p-6">
-              <h2 className="font-display text-xl font-bold text-foreground">
-                {isFr ? "Deux règles qui ouvrent tout" : "Two rules that unlock everything"}
-              </h2>
-              <ul className="mt-4 space-y-3 text-muted-foreground">
-                <li>
-                  <span className="font-semibold text-foreground">
-                    {isFr ? "Le futur" : "The future"}
-                  </span>{" "}
-                  : mbo + {isFr ? "particule du pronom" : "pronoun particle"} + {isFr ? "infinitif" : "infinitive"} —
-                  <span className="text-foreground/80"> mbo ni dia, mbo dia, mbo ka dia, mbo tu dia, mbo lu dia, mbo ba dia.</span>
-                </li>
-                <li>
-                  <span className="font-semibold text-foreground">
-                    {isFr ? "Le présent en cours" : "The ongoing present"}
-                  </span>{" "}
-                  : {isFr ? "thème" : "theme"} + {isFr ? "particule du pronom" : "pronoun particle"} + ta + {isFr ? "verbe" : "verb"} —
-                  <span className="text-foreground/80"> dia ni ta dia, dia ta dia, dia ka ta dia, dia tu ta dia, dia lu ta dia, dia ba ta dia.</span>
-                </li>
-              </ul>
-            </div>
-          </section>
-        )}
-
-        {!query.trim() && <section className="max-w-5xl mx-auto mt-16 space-y-10">
-          {grouped.map(([key, group]) => (
-            <article key={key} className="bg-card border border-border rounded-2xl p-6">
-              <div className="font-mandombe block w-full leading-[2.2] pb-2 text-4xl md:text-5xl text-gold break-words">
-                <HighlightedMandombe text={group[0].verbMandombe} verb={group[0].verb} />
-              </div>
-              <div className="mt-2 flex flex-wrap items-center gap-3">
-                <h2 className="text-xl font-bold text-foreground/80">{group[0].verb}</h2>
-                <MandombeSpeaker lariText={group[0].verb} />
-                {group[0].isExpression && (
-                  <span className="text-[10px] uppercase tracking-wide px-2 py-1 rounded-full bg-muted text-muted-foreground">
-                    {isFr ? "Expression" : "Expression"}
-                  </span>
-                )}
-              </div>
-              <p className="text-muted-foreground">{group[0].meaning}</p>
-
-              <div className="mt-6 grid gap-6 md:grid-cols-2">
-                {group.map((table, ti) => (
-                  <div key={`${key}-${table.tense}-${ti}`} className="rounded-xl border border-border/70 p-4">
-                    <h3 className="text-sm font-semibold uppercase tracking-wide text-primary">{table.tense}</h3>
-                    <ul className="mt-3 divide-y divide-border/60">
-                      {table.rows.map((row, ri) => (
-                        <li key={ri} className="py-3">
-                          <div className="font-mandombe block w-full leading-[2.2] pb-2 text-3xl md:text-4xl text-gold break-words">
-                            <HighlightedMandombe text={row.mandombe} verb={row.verbForm} />
-                          </div>
-                          <div className="mt-2 flex items-center gap-2 flex-wrap">
-                            <span className="text-sm text-foreground/80">{row.lari}</span>
-                            <MandombeSpeaker lariText={row.lari} />
-                          </div>
-                          {(row.fr || row.en) && (
-                            <div className="mt-1 text-sm text-muted-foreground">{translatedGloss(row.fr, row.en)}</div>
-                          )}
-                          {row.note && <div className="text-xs text-muted-foreground italic">{row.note}</div>}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
-              </div>
-            </article>
-          ))}
-        </section>}
-
-
-        {!query.trim() && series.length > 0 && (
-          <section className="max-w-5xl mx-auto mt-16">
-            <div className="flex items-center gap-2">
-              <Layers className="w-5 h-5 text-primary" />
-              <h2 className="font-display text-2xl font-bold text-foreground">
-                {isFr ? "Séries de personnes" : "Person series"}
-              </h2>
-            </div>
-            <p className="mt-2 text-muted-foreground">
-              {isFr
-                ? "La même phrase déclinée avec les marqueurs ni, tu, ka, lu, ba."
-                : "The same sentence across the markers ni, tu, ka, lu, ba."}
-            </p>
-
-            <div className="mt-6 grid gap-6">
-              {series.map((s) => (
-                <article key={s.pattern} className="bg-card border border-border rounded-2xl p-6">
-                  <h3 className="text-sm font-semibold uppercase tracking-wide text-primary">{s.pattern}</h3>
-                  <ul className="mt-4 grid gap-4 md:grid-cols-2">
-                    {s.rows.map((row, ri) => {
-                      let verbForm = row.verbForm;
-                      if (!verbForm && !s.verb) {
-                        const words = cleanMandombe(row.lari).split(" ").filter(Boolean);
-                        const last = words[words.length - 1];
-                        verbForm = last && !PRONOUN_ENDINGS.has(last.toLowerCase()) ? last : undefined;
-                      }
-                      return (
-                        <li key={ri} className="rounded-xl border border-border/70 p-4">
-                          <div className="font-mandombe block w-full leading-[2.2] pb-2 text-3xl md:text-4xl text-gold break-words">
-                            <HighlightedMandombe text={row.lari} verb={s.verb || verbForm} />
-                          </div>
-                          <div className="mt-2 flex items-center gap-2 flex-wrap">
-                            <span className="text-sm text-foreground/80">{row.lari}</span>
-                            <MandombeSpeaker lariText={row.lari} />
-                          </div>
-                          <div className="text-sm text-muted-foreground">{translatedGloss(row.fr, row.en)}</div>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </article>
-              ))}
-            </div>
-          </section>
-        )}
-
-        {!query.trim() && grouped.length === 0 && series.length === 0 && (
-          <p className="text-center text-muted-foreground mt-16">
-            {isFr ? "Aucune conjugaison trouvée." : "No conjugation found."}
-          </p>
-        )}
       </main>
 
       <Footer />
