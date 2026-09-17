@@ -21,7 +21,12 @@ export function useValidatedForms() {
     queryFn: async () => {
       const { data, error } = await supabase.functions.invoke("validated-forms", { body: {} });
       if (error) return [];
-      return (data?.forms as ValidatedForm[]) || [];
+      const forms = ((data?.forms as ValidatedForm[]) || []).map((f) => ({
+        ...f,
+        // Mention de provenance sans valeur pour l'apprenant.
+        notes: /^(valid[ée] par l['']utilisateur\.?)$/i.test((f.notes || "").trim()) ? undefined : f.notes,
+      }));
+      return forms;
     },
   });
 }
