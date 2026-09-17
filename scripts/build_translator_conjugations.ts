@@ -11,6 +11,7 @@ import { lessons } from "../src/data/lessons";
 
 interface Form {
   lari: string;
+  mandombe?: string;
   fr: string;
   en?: string;
   verb?: string;
@@ -38,6 +39,7 @@ const push = (f: Form) => {
   seen.add(key);
   forms.push({
     lari: f.lari.trim(),
+    mandombe: f.mandombe?.trim() || undefined,
     fr: f.fr.trim(),
     en: f.en?.trim() || undefined,
     verb: f.verb?.trim() || undefined,
@@ -53,6 +55,7 @@ for (const lesson of lessons as any[]) {
     for (const r of table.rows || []) {
       push({
         lari: r.lari,
+        mandombe: r.mandombe,
         fr: r.fr,
         en: r.en,
         verb: table.verb,
@@ -70,6 +73,7 @@ for (const v of survivalVerbs) {
     for (const r of t.rows) {
       push({
         lari: r.lari,
+        mandombe: r.mandombe,
         fr: r.fr,
         en: r.en,
         verb: `${v.verb} (${v.meaning})`,
@@ -110,6 +114,7 @@ for (const e of verbeBaData as any[]) {
 const out = `// Généré par scripts/build_translator_conjugations.ts — ne pas éditer à la main.
 export interface ConjugationForm {
   lari: string;
+  mandombe?: string;
   fr: string;
   en?: string;
   verb?: string;
@@ -182,6 +187,27 @@ export function findConjugationMatch(
   const key = normalizeKey(text);
   if (!key) return null;
   return (direction === "to-lari" ? byFr.get(key) : byLari.get(key)) || null;
+}
+
+/** Recherche structurée réservée aux conjugaisons attestées. */
+export function findConjugations(filters: {
+  query?: string;
+  verb?: string;
+  tense?: string;
+  person?: string;
+}, limit = 60): ConjugationForm[] {
+  const query = normalizeKey(filters.query || "");
+  const verb = normalizeKey(filters.verb || "");
+  const tense = normalizeKey(filters.tense || "");
+  const person = normalizeKey(filters.person || "");
+
+  return CONJUGATION_FORMS.filter((f) => {
+    if (verb && !normalizeKey(f.verb || "").includes(verb)) return false;
+    if (tense && !normalizeKey(f.tense || "").includes(tense)) return false;
+    if (person && !normalizeKey(f.person || "").includes(person)) return false;
+    if (!query) return true;
+    return normalizeKey([f.lari, f.fr, f.en || "", f.verb || "", f.tense || "", f.person || ""].join(" ")).includes(query);
+  }).slice(0, limit);
 }
 `;
 

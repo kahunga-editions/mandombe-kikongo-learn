@@ -33,7 +33,7 @@ const STRIP_ACCENTS = (s: string) =>
  * - njeka, njevo, manjevo, njele, njelele s'ecrivent avec nz
  * La translitteration latine, elle, reste inchangee.
  */
-const NJE_CASES: Record<string, string> = {
+const NAMED_MANDOMBE_CASES: Record<string, string> = {
   nje: "ngie",
   njena: "ngiena",
   njeka: "nzeka",
@@ -41,13 +41,15 @@ const NJE_CASES: Record<string, string> = {
   manjevo: "manzevo",
   njele: "nzele",
   njelele: "nzelele",
+  // Cas nommé uniquement : le latin et la prononciation restent « ndjokele ».
+  ndjokele: "nzokele",
 };
 
-const applyNjeCases = (text: string): string =>
+const applyNamedMandombeCases = (text: string): string =>
   text
     .split(" ")
     .map((w) => {
-      const mapped = NJE_CASES[w.toLowerCase()];
+      const mapped = NAMED_MANDOMBE_CASES[w.toLowerCase()];
       if (!mapped) return w;
       return w[0] === w[0].toUpperCase()
         ? mapped[0].toUpperCase() + mapped.slice(1)
@@ -56,7 +58,7 @@ const applyNjeCases = (text: string): string =>
     .join(" ");
 
 export const cleanMandombe = (text: string): string =>
-  applyNjeCases(
+  applyNamedMandombeCases(
     STRIP_ACCENTS(text ?? "")
       .replace(/[()]/g, "")
       .replace(/[^A-Za-z ]+/g, " ")

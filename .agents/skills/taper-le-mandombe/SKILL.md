@@ -29,6 +29,7 @@ Ce sont des cas nommés, pas des règles générales. Ne rien en extrapoler.
 - `tshio` → `kio`, `tshie` → `kie` (ex. `Tshioni` → `Kioni`)
 - `ia` final de mot long → `iya` en Mandombe seulement (`tilapia` → `tilapiya`)
 - `bendji` se tape `benji` en Mandombe (`mbendji` → `mbenji`, `tu bendji` → `tu benji`, etc.) ; la translittération latine reste `bendji` / `mbendji`. Cas nommé, non généralisable au groupe `ndj`.
+- `ndjokele` se tape `nzokele` en Mandombe ; la transcription latine et la prononciation restent `ndjokele`. Cas nommé, non généralisable : ne jamais créer une règle `ndj` → `nz`.
 - apostrophe retirée dans le cas `nl` : `n'lemvo` → `nlemvo`
 - **règle du N majuscule** : un mot en `N'` + consonne se tape tel quel avec un **N majuscule** : `N'kila`, `N'kento`, `N'kumba`, `N'kelo`, `N'kalu`, `N'kolo`, `N'kama`, `N'ti`, `N'tima`, `N'tekolo`. `Ntshila` est la prononciation, jamais la saisie.
 - `nua` se tape tel quel
@@ -51,6 +52,7 @@ Le silence n'est jamais comblé par une invention.
 - ne jamais substituer un son pour contourner un défaut de rendu (`nj` ≠ `nz`, `dz` ≠ `dj`, `z` ≠ `j`)
 - ne jamais construire une table de remappage de sons
 - ne jamais laisser une lettre latine résiduelle dans un rendu Mandombe
+- pour chaque conjugaison, conserver séparément la graphie Mandombe, la transcription latine et la prononciation ; ne jamais recopier automatiquement l'une dans l'autre quand un cas nommé existe
 - ne jamais exporter en DOCX un document contenant du Mandombe (ODT et PDF uniquement)
 
 ## Lexique de contrôle (corrections validées, à ne pas reproduire à l'envers)
