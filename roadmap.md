@@ -1,9 +1,9 @@
 # Roadmap
 
 ## En cours
-- [ ] Corriger `ndjokele` : Mandombe `nzokele`, transcription et prononciation `ndjokele`
-- [ ] Partager uniquement le corpus de conjugaisons avec le traducteur et Mbuta Matondo
-- [ ] Étendre l'audit Mandombe aux données de conjugaison et vérifier les rendus
+- [x] Corriger `ndjokele` : Mandombe `nzokele`, transcription et prononciation `ndjokele`
+- [x] Partager uniquement le corpus de conjugaisons avec le traducteur et Mbuta Matondo
+- [x] Étendre l'audit Mandombe aux données de conjugaison et vérifier les rendus
 - [x] Simplifier l'accueil de Conjugaisons : recherche seule avant saisie
 - [x] Retirer de Conjugaisons les phrases et mentions provenant du traducteur
 - [x] Stabiliser la taille et l'espacement Mandombe dans les résultats de conjugaison
