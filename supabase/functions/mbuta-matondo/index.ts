@@ -864,6 +864,43 @@ async function callGateway(messages: unknown[], stream: boolean) {
   });
 }
 
+function buildAutomaticConjugationContext(text: string): string {
+  if (!/\b(conjug|verbe|présent|present|passé|passe|futur|imparfait|personne|singulier|pluriel)\w*/i.test(text)) {
+    return "";
+  }
+
+  const tokens = text
+    .toLocaleLowerCase("fr")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .match(/[a-z]{3,}/g) ?? [];
+  const ignored = new Set([
+    "conjugue", "conjuguer", "conjugaison", "verbe", "present", "passe", "futur",
+    "imparfait", "personne", "singulier", "pluriel", "premiere", "deuxieme", "troisieme",
+  ]);
+  const forms = [];
+  const seen = new Set<string>();
+
+  for (const token of tokens) {
+    if (ignored.has(token)) continue;
+    for (const form of findConjugations({ query: token }, 60)) {
+      const key = [form.lari, form.verb, form.tense, form.person].join("|");
+      if (seen.has(key)) continue;
+      seen.add(key);
+      forms.push(form);
+      if (forms.length >= 60) break;
+    }
+    if (forms.length >= 60) break;
+  }
+
+  if (forms.length === 0) return "";
+  return [
+    "CONJUGAISONS ATTESTÉES TROUVÉES AUTOMATIQUEMENT :",
+    "Utilise uniquement les lignes utiles ci-dessous, mot pour mot. N'invente aucune forme.",
+    JSON.stringify(forms),
+  ].join("\n");
+}
+
 const MAX_MESSAGES = 30;
 const MAX_MESSAGE_CHARS = 4000;
 
@@ -922,6 +959,10 @@ serve(async (req) => {
       : Array.isArray(lastUserMsg?.content)
         ? lastUserMsg.content.map((p: any) => p?.text || "").join(" ")
         : "";
+    const automaticConjugationContext = buildAutomaticConjugationContext(lastUserText);
+    if (automaticConjugationContext) {
+      conversation.splice(1, 0, { role: "system", content: automaticConjugationContext });
+    }
     const sendOfflineSSE = () => {
       const finalText = sanitizeOutput(mbutaOfflineReply(lastUserText));
       const stream = new ReadableStream({
