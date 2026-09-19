@@ -1,7 +1,7 @@
 # Roadmap
 
 ## En cours
-- [ ] Restaurer `mbenji` / `benji` en Mandombe pour le passé de `Banza`, sans modifier la transcription `mbendji` / `bendji`
+- [x] Restaurer `mbenji` / `benji` en Mandombe pour le passé de `Banza`, sans modifier la transcription `mbendji` / `bendji`
 - [x] Corriger `ndjokele` : Mandombe `nzokele`, transcription et prononciation `ndjokele`
 - [x] Partager uniquement le corpus de conjugaisons avec le traducteur et Mbuta Matondo
 - [x] Étendre l'audit Mandombe aux données de conjugaison et vérifier les rendus
