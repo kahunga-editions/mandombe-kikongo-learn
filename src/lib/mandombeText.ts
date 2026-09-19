@@ -34,6 +34,9 @@ const STRIP_ACCENTS = (s: string) =>
  * La translitteration latine, elle, reste inchangee.
  */
 const NAMED_MANDOMBE_CASES: Record<string, string> = {
+  // Cas nommes uniquement : le latin et la prononciation restent bendji / mbendji.
+  bendji: "benji",
+  mbendji: "mbenji",
   nje: "ngie",
   njena: "ngiena",
   njeka: "nzeka",

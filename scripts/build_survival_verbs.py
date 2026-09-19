@@ -60,6 +60,10 @@ def fut(verb, comp=""):
 
 
 MANDOMBE_NAMED_WORDS = {
+    # Cas valide par l'autrice : bendji se tape benji en Mandombe uniquement.
+    # La transcription latine et la prononciation restent bendji / mbendji.
+    "bendji": "benji",
+    "mbendji": "mbenji",
     "djoka": "joka",
     "djokele": "jokele",
     # Cas valide par l'autrice : la transcription et la prononciation restent
