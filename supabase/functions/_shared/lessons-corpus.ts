@@ -20583,8 +20583,8 @@ export const LESSONS_CORPUS: LessonSummary[] = [
         "french": "peut-etre"
       },
       {
-        "lari": "ngule",
-        "french": "cochon"
+        "lari": "ngulu",
+        "french": "cochon (le et les cochons, invariable)"
       },
       {
         "lari": "kanda",
@@ -20607,7 +20607,7 @@ export const LESSONS_CORPUS: LessonSummary[] = [
         "french": "deux"
       },
       {
-        "lari": "Kampe ngule ka ba tekele.",
+        "lari": "Kampe ngulu ka ba tekele.",
         "french": "Peut-etre il leur a vendu des cochons."
       },
       {
@@ -20637,7 +20637,7 @@ export const LESSONS_CORPUS: LessonSummary[] = [
       {
         "type": "matching",
         "question": "Associez chaque mot a son sens",
-        "answer": "ngule=pig, kanda=family, nsusu ya mbakala=rooster, nsusu ya nkento=hen"
+        "answer": "ngulu=pig, kanda=family, nsusu ya mbakala=rooster, nsusu ya nkento=hen"
       },
       {
         "type": "multiple-choice",
