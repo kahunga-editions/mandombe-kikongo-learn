@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { Search } from "lucide-react";
+import { Search, SearchX } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Switch } from "@/components/ui/switch";
 import Navbar from "@/components/Navbar";
@@ -349,9 +349,19 @@ const Conjugations = () => {
                 </ul>
               </>
             ) : (
-              <p className="text-center text-muted-foreground py-6">
-                {isFr ? "Aucune conjugaison trouvée." : "No conjugation found."}
-              </p>
+              <div className="py-10 text-center" role="status">
+                <SearchX className="mx-auto h-8 w-8 text-muted-foreground" aria-hidden="true" />
+                <p className="mt-3 font-medium text-foreground">
+                  {isFr
+                    ? `Aucun verbe trouvé pour « ${query.trim()} ».`
+                    : `No verb found for “${query.trim()}”.`}
+                </p>
+                <p className="mt-1 text-sm text-muted-foreground">
+                  {isFr
+                    ? "Vérifiez l'orthographe ou essayez l'infinitif du verbe."
+                    : "Check the spelling or try the verb's infinitive form."}
+                </p>
+              </div>
             )}
           </section>
         )}

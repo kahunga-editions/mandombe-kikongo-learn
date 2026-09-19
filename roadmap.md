@@ -1,6 +1,8 @@
 # Roadmap
 
 ## En cours
+- [x] Vérifier sur mobile que le Mandombe ne déborde ni ne chevauche la transcription dans Conjugaisons
+- [x] Clarifier l'état vide de Conjugaisons quand aucun verbe ne correspond à la recherche
 - [x] Restaurer `mbenji` / `benji` en Mandombe pour le passé de `Banza`, sans modifier la transcription `mbendji` / `bendji`
 - [x] Corriger `ndjokele` : Mandombe `nzokele`, transcription et prononciation `ndjokele`
 - [x] Partager uniquement le corpus de conjugaisons avec le traducteur et Mbuta Matondo
