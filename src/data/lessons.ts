@@ -31549,7 +31549,7 @@ lessons.push({
   credit: "Corpus Nzo Mikanda",
   vocabulary: [
     { lari: "kampe", mandombe: "Kampe", french: "peut-etre", english: "maybe" },
-    { lari: "ngulu", mandombe: "Ngule", french: "cochon (le et les cochons, invariable)", english: "pig (singular and plural, invariable)" },
+    { lari: "ngulu", mandombe: "Ngulu", french: "cochon (le et les cochons, invariable)", english: "pig (singular and plural, invariable)" },
     { lari: "kanda", mandombe: "Kanda", french: "famille", english: "family" },
     { lari: "nsusu", mandombe: "Nsusu", french: "poule", english: "chicken, hen" },
     { lari: "nsusu ya mbakala", mandombe: "Nsusu Ya Mbakala", french: "coq", english: "rooster" },
@@ -31557,7 +31557,7 @@ lessons.push({
     { lari: "zole", mandombe: "Zole", french: "deux", english: "two" },
   ],
   phrases: [
-    { lari: "Kampe ngulu ka ba tekele.", mandombe: "Kampe Ngule Ka Ba Tekele", french: "Peut-etre il leur a vendu des cochons.", english: "Maybe he sold them pigs." },
+    { lari: "Kampe ngulu ka ba tekele.", mandombe: "Kampe Ngulu Ka Ba Tekele", french: "Peut-etre il leur a vendu des cochons.", english: "Maybe he sold them pigs." },
     { lari: "Kampe kanda diandi.", mandombe: "Kampe Kanda Diandi", french: "C'est peut-etre sa famille.", english: "Maybe it is his family." },
     { lari: "Nsusu zole ka neti.", mandombe: "Nsusu Zole Ka Neti", french: "Il a apporte deux poules.", english: "He brought two chickens." },
     { lari: "Nsusu ya mbakala na ya nkento ka neti.", mandombe: "Nsusu Ya Mbakala Na Ya Nkento Ka Neti", french: "Il a apporte un coq et une poule.", english: "He brought a rooster and a hen." },
