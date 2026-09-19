@@ -867,7 +867,7 @@ export const LESSONS_CORPUS: LessonSummary[] = [
       {
         "type": "multiple-choice",
         "question": "Comment exprimer le présent progressif dans 'Je coupe' ?",
-        "answer": "ni ta zenga"
+        "answer": "zenga ni ta zenga"
       },
       {
         "type": "multiple-choice",
@@ -3214,6 +3214,10 @@ export const LESSONS_CORPUS: LessonSummary[] = [
       {
         "lari": "Bunzadi",
         "french": "Parenté par alliance"
+      },
+      {
+        "lari": "Mikishi",
+        "french": "Rituel de soin pour la communauté et la famille"
       },
       {
         "lari": "Bunsonga bua muntu",
@@ -20184,7 +20188,7 @@ export const LESSONS_CORPUS: LessonSummary[] = [
         "french": "Demain on va se rencontrer"
       },
       {
-        "lari": "a ma",
+        "lari": "Ama",
         "french": "ma chère"
       },
       {
@@ -20273,6 +20277,374 @@ export const LESSONS_CORPUS: LessonSummary[] = [
       }
     ],
     "exercises": []
+  },
+  {
+    "id": "ka-ta-zonza-ko-silence",
+    "title": "Ne rien dire — la négation, le silence et les scènes du quotidien",
+    "level": "intermediate",
+    "topic": "ka",
+    "vocab": [
+      {
+        "lari": "muti",
+        "french": "the"
+      },
+      {
+        "lari": "kafi",
+        "french": "cafe"
+      },
+      {
+        "lari": "nua",
+        "french": "boire"
+      },
+      {
+        "lari": "zonza",
+        "french": "parler"
+      },
+      {
+        "lari": "ta",
+        "french": "dire"
+      },
+      {
+        "lari": "diambu",
+        "french": "affaire, parole, probleme"
+      },
+      {
+        "lari": "bula mbembo",
+        "french": "rester coi, rester muet, ne rien dire"
+      },
+      {
+        "lari": "mfulu",
+        "french": "lit"
+      },
+      {
+        "lari": "mpamba",
+        "french": "vide"
+      },
+      {
+        "lari": "lembo muntu",
+        "french": "personne (aucune personne)"
+      },
+      {
+        "lari": "kati",
+        "french": "chambre"
+      },
+      {
+        "lari": "kutika",
+        "french": "ranger"
+      },
+      {
+        "lari": "zabana",
+        "french": "se connaitre l'un l'autre"
+      },
+      {
+        "lari": "ntama",
+        "french": "depuis que"
+      },
+      {
+        "lari": "kota",
+        "french": "entrer, rentrer"
+      },
+      {
+        "lari": "Muti ni ta nua.",
+        "french": "Je prends du the."
+      },
+      {
+        "lari": "Kafi ni ta nua.",
+        "french": "Je prends du cafe."
+      },
+      {
+        "lari": "Ka ta zonza ko.",
+        "french": "Elle ne parle pas."
+      },
+      {
+        "lari": "Ka zonzaka bua buingi ko.",
+        "french": "Elle ne parle pas beaucoup."
+      },
+      {
+        "lari": "Ka hanaka mbote ko.",
+        "french": "Elle ne dit pas bonjour."
+      },
+      {
+        "lari": "Kotele.",
+        "french": "Elle est rentree."
+      },
+      {
+        "lari": "Keri ku nzo.",
+        "french": "Elle est rentree a la maison."
+      },
+      {
+        "lari": "Mfulu ya mpamba.",
+        "french": "Le lit etait vide."
+      }
+    ],
+    "exercises": [
+      {
+        "type": "multiple-choice",
+        "question": "Comment dit-on « Je prends du the » en lari ?",
+        "answer": "Muti ni ta nua."
+      },
+      {
+        "type": "fill-in-blank",
+        "question": "Ka ni ta ___ ko. (je ne dis rien)",
+        "answer": "zonza"
+      },
+      {
+        "type": "matching",
+        "question": "Associez chaque phrase a son sens",
+        "answer": "Ka diambu a ko.=It does not matter, Kotele.=She has come home, Mfulu ya mpamba.=The bed was empty, Kati ba kutikiri.=They made the bedroom"
+      },
+      {
+        "type": "multiple-choice",
+        "question": "Quelle phrase signifie « tu es reste silencieux » ?",
+        "answer": "Ka wa bula mbembo ko."
+      }
+    ]
+  },
+  {
+    "id": "luala-luele-mpashi",
+    "title": "Se blesser — luala, la douleur et montrer ou l'on a mal",
+    "level": "beginner",
+    "topic": "luala",
+    "vocab": [
+      {
+        "lari": "luala",
+        "french": "se blesser"
+      },
+      {
+        "lari": "luele",
+        "french": "le passe de luala"
+      },
+      {
+        "lari": "mpashi",
+        "french": "douleur, mal"
+      },
+      {
+        "lari": "nsongela / nsongesa",
+        "french": "montre-moi"
+      },
+      {
+        "lari": "ntala",
+        "french": "regarde-moi"
+      },
+      {
+        "lari": "tshio",
+        "french": "ca, ceci"
+      },
+      {
+        "lari": "tshima",
+        "french": "chose"
+      },
+      {
+        "lari": "Luala luele?",
+        "french": "Est-ce que tu t'es blesse ?"
+      },
+      {
+        "lari": "Luala nduele?",
+        "french": "Est-ce que je me suis blesse ?"
+      },
+      {
+        "lari": "Luala ka luele?",
+        "french": "Est-ce qu'elle s'est blessee ?"
+      },
+      {
+        "lari": "Luala tu luele?",
+        "french": "Est-ce que nous nous sommes blesses ?"
+      },
+      {
+        "lari": "Luala lu luele?",
+        "french": "Est-ce que vous vous etes blesses ?"
+      },
+      {
+        "lari": "Luala ba luele?",
+        "french": "Est-ce qu'ils se sont blesses ?"
+      },
+      {
+        "lari": "Mpashi ta mona?",
+        "french": "Est-ce que tu as mal ?"
+      },
+      {
+        "lari": "Ntshi bi ta ku sa mpashi?",
+        "french": "Ou as-tu mal (qu'est-ce qui te fait mal) ?"
+      }
+    ],
+    "exercises": [
+      {
+        "type": "multiple-choice",
+        "question": "Comment demande-t-on « Est-ce que tu t'es blesse ? » en lari ?",
+        "answer": "Luala luele?"
+      },
+      {
+        "type": "fill-in-blank",
+        "question": "___ ta mona ? (Est-ce que tu as mal ?)",
+        "answer": "Mpashi"
+      },
+      {
+        "type": "matching",
+        "question": "Associez chaque phrase a son sens",
+        "answer": "Ntala.=Look at me, Nsongela.=Show me, Tala tshima tshio.=Look at that, Ntshi bi ta ku sa mpashi?=Where does it hurt?"
+      },
+      {
+        "type": "multiple-choice",
+        "question": "Quelle phrase signifie « Montre-moi ou tu as mal » ?",
+        "answer": "Nsongela ha ta yama."
+      }
+    ]
+  },
+  {
+    "id": "dia-tshio-na-tshi",
+    "title": "Manger ceci avec cela — dia tshio na tshi",
+    "level": "beginner",
+    "topic": "dia",
+    "vocab": [
+      {
+        "lari": "dia",
+        "french": "manger"
+      },
+      {
+        "lari": "tshio",
+        "french": "ca, ceci"
+      },
+      {
+        "lari": "tshi",
+        "french": "ca, cela"
+      },
+      {
+        "lari": "na",
+        "french": "avec, et"
+      },
+      {
+        "lari": "mbote",
+        "french": "bon, bien"
+      },
+      {
+        "lari": "lendi",
+        "french": "tu peux"
+      },
+      {
+        "lari": "Dia tshima tshio na tshi.",
+        "french": "Mange ca avec ca."
+      },
+      {
+        "lari": "Dia na tshio na tshi.",
+        "french": "Mange ca avec ca."
+      },
+      {
+        "lari": "Na tshi ba dila tshio.",
+        "french": "Ca se mange avec ca."
+      },
+      {
+        "lari": "Dila tshio na tshi.",
+        "french": "Tu dois le manger avec ca."
+      },
+      {
+        "lari": "Lendi tsha dila na tshi.",
+        "french": "Tu peux le manger avec ca."
+      },
+      {
+        "lari": "Nsunga ya mbote.",
+        "french": "Ca sent bon."
+      },
+      {
+        "lari": "Ha tshimoshi ya dila bio.",
+        "french": "Ca se mange ensemble."
+      }
+    ],
+    "exercises": [
+      {
+        "type": "multiple-choice",
+        "question": "Comment dit-on « Ca sent bon » en lari ?",
+        "answer": "Nsunga ya mbote."
+      },
+      {
+        "type": "fill-in-blank",
+        "question": "Dia tshima tshio ___ tshi. (Mange ca avec ca)",
+        "answer": "na"
+      },
+      {
+        "type": "matching",
+        "question": "Associez chaque phrase a son sens",
+        "answer": "Lendi tsha dila na tshi.=You can eat it with that, Dila tshio na tshi.=You must eat it with that, Na tshi ba dila tshio.=This is eaten with that, Ha tshimoshi ya dila bio.=They are eaten together"
+      },
+      {
+        "type": "multiple-choice",
+        "question": "Quelle phrase signifie « Tu dois le manger avec ca » ?",
+        "answer": "Dila tshio na tshi."
+      }
+    ]
+  },
+  {
+    "id": "kampe-peut-etre",
+    "title": "Peut-etre — kampe et apporter des animaux",
+    "level": "intermediate",
+    "topic": "kampe",
+    "vocab": [
+      {
+        "lari": "kampe",
+        "french": "peut-etre"
+      },
+      {
+        "lari": "ngule",
+        "french": "cochon"
+      },
+      {
+        "lari": "kanda",
+        "french": "famille"
+      },
+      {
+        "lari": "nsusu",
+        "french": "poule"
+      },
+      {
+        "lari": "nsusu ya mbakala",
+        "french": "coq"
+      },
+      {
+        "lari": "nsusu ya nkento",
+        "french": "poule (femelle)"
+      },
+      {
+        "lari": "zole",
+        "french": "deux"
+      },
+      {
+        "lari": "Kampe ngule ka ba tekele.",
+        "french": "Peut-etre il leur a vendu des cochons."
+      },
+      {
+        "lari": "Kampe kanda diandi.",
+        "french": "C'est peut-etre sa famille."
+      },
+      {
+        "lari": "Nsusu zole ka neti.",
+        "french": "Il a apporte deux poules."
+      },
+      {
+        "lari": "Nsusu ya mbakala na ya nkento ka neti.",
+        "french": "Il a apporte un coq et une poule."
+      }
+    ],
+    "exercises": [
+      {
+        "type": "multiple-choice",
+        "question": "Comment dit-on « peut-etre » en lari ?",
+        "answer": "kampe"
+      },
+      {
+        "type": "fill-in-blank",
+        "question": "Nsusu ___ ka neti. (Il a apporte deux poules)",
+        "answer": "zole"
+      },
+      {
+        "type": "matching",
+        "question": "Associez chaque mot a son sens",
+        "answer": "ngule=pig, kanda=family, nsusu ya mbakala=rooster, nsusu ya nkento=hen"
+      },
+      {
+        "type": "multiple-choice",
+        "question": "Quelle phrase signifie « Il a apporte un coq et une poule » ?",
+        "answer": "Nsusu ya mbakala na ya nkento ka neti."
+      }
+    ]
   }
 ];
 
