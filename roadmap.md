@@ -1,6 +1,8 @@
 # Roadmap
 
 ## En cours
+- [x] Créer un visuel indicatif de la page PayPal Developer pour repérer le Client ID
+- [ ] Ajouter le paiement PayPal unique de 37 EUR avec accès Premium à vie après confirmation du paiement
 - [x] Vérifier les possibilités sans accès Stripe : aucun accès ni récupération de clé documenté pour la connexion actuelle
 - [x] Indiquer où trouver le Client ID PayPal et distinguer test et paiements réels
 - [ ] Tester la synchronisation Stripe → Premium de bout en bout — bloqué par l'absence de clé de signature
