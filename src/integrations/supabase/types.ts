@@ -253,6 +253,9 @@ export type Database = {
       lifetime_unlocks: {
         Row: {
           amount_cents: number | null
+          currency: string | null
+          paypal_capture_id: string | null
+          paypal_order_id: string | null
           product: string
           purchased_at: string
           stripe_session_id: string | null
@@ -260,6 +263,9 @@ export type Database = {
         }
         Insert: {
           amount_cents?: number | null
+          currency?: string | null
+          paypal_capture_id?: string | null
+          paypal_order_id?: string | null
           product: string
           purchased_at?: string
           stripe_session_id?: string | null
@@ -267,6 +273,9 @@ export type Database = {
         }
         Update: {
           amount_cents?: number | null
+          currency?: string | null
+          paypal_capture_id?: string | null
+          paypal_order_id?: string | null
           product?: string
           purchased_at?: string
           stripe_session_id?: string | null

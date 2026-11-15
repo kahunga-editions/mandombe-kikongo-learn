@@ -4,6 +4,7 @@ import { storedPremiumIsActive } from "./premium-state.ts";
 
 export const FREE_LIMIT = 11;
 export const LIFETIME_PRODUCT = "translator_dictionary";
+export const FULL_PREMIUM_PRODUCT = "full_premium";
 
 export function getServiceClient(): SupabaseClient {
   return createClient(
@@ -38,9 +39,9 @@ export async function hasUnlimitedAccess(
     .from("lifetime_unlocks")
     .select("user_id")
     .eq("user_id", userId)
-    .eq("product", LIFETIME_PRODUCT)
-    .maybeSingle();
-  return !!unlock;
+    .in("product", [LIFETIME_PRODUCT, FULL_PREMIUM_PRODUCT])
+    .limit(1);
+  return Boolean(unlock?.length);
 }
 
 export async function getUsageCount(
@@ -91,7 +92,7 @@ export function quotaExceededResponse(corsHeaders: Record<string, string>): Resp
     JSON.stringify({
       error: "quota_exceeded",
       message:
-        "You've used all 11 free translations. Unlock unlimited access for $19.99 or subscribe to Premium.",
+        "Vous avez utilisé vos 11 traductions gratuites. Débloquez tout le site à vie pour 37 € avec PayPal.",
     }),
     { status: 402, headers: { ...corsHeaders, "Content-Type": "application/json" } },
   );

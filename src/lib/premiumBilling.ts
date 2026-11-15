@@ -1,12 +1,11 @@
 import { FunctionsHttpError } from "@supabase/supabase-js";
 import { supabase } from "@/integrations/supabase/client";
 
-// Premium access granted by a role is not a paid Stripe subscription.
-export const premiumBillingAction = (isPremium: boolean, subscriptionEnd: string | null) =>
-  isPremium && subscriptionEnd ? "customer-portal" : "create-checkout";
+export const PAYPAL_PREMIUM_PRICE_EUR = 37;
+export const PAYPAL_PREMIUM_PRODUCT = "full_premium";
 
-export async function openPremiumBilling(action: "customer-portal" | "create-checkout") {
-  const { data, error } = await supabase.functions.invoke(action);
+async function invokeBilling<T>(action: string, body?: Record<string, string>): Promise<T> {
+  const { data, error } = await supabase.functions.invoke(action, { body });
   if (error) {
     const details = error instanceof FunctionsHttpError
       ? await error.context.text()
@@ -14,9 +13,27 @@ export async function openPremiumBilling(action: "customer-portal" | "create-che
     console.error(`${action} failed:`, details);
     throw new Error("Le paiement est indisponible pour le moment. Réessayez dans quelques instants.");
   }
+  return data as T;
+}
+
+export async function openPremiumBilling(action: "customer-portal" | "create-checkout") {
+  const data = await invokeBilling<{ url?: string }>(action);
   if (!data?.url || typeof data.url !== "string") {
     throw new Error("Le lien de paiement n'a pas pu être créé. Réessayez.");
   }
   // Async popup creation is blocked by some browsers; navigate the current tab.
   window.location.assign(data.url);
+}
+
+export async function createPayPalPremiumOrder() {
+  const data = await invokeBilling<{ orderId?: string }>("create-paypal-premium-order", {});
+  if (!data?.orderId) throw new Error("PayPal n'a pas pu créer la commande. Réessayez.");
+  return data.orderId;
+}
+
+export async function capturePayPalPremiumOrder(orderId: string) {
+  return invokeBilling<{ verified: boolean; status?: string; product?: string }>(
+    "capture-paypal-premium-order",
+    { orderId },
+  );
 }

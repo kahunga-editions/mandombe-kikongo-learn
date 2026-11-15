@@ -1,4 +1,4 @@
-import { openPremiumBilling, premiumBillingAction } from "@/lib/premiumBilling";
+import { openPremiumBilling } from "@/lib/premiumBilling";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { Globe, User, LogOut, Crown } from "lucide-react";
@@ -30,11 +30,16 @@ const Navbar = () => {
       navigate("/auth");
       return;
     }
-    try {
-      await openPremiumBilling(premiumBillingAction(isPremium, subscriptionEnd));
-    } catch (err) {
-      toast.error(err instanceof Error ? err.message : "Le paiement est indisponible.");
+    if (isPremium && subscriptionEnd) {
+      try {
+        await openPremiumBilling("customer-portal");
+      } catch (err) {
+        toast.error(err instanceof Error ? err.message : "La gestion de l'abonnement est indisponible.");
+      }
+      return;
     }
+    navigate("/#premium");
+    window.setTimeout(() => document.getElementById("premium")?.scrollIntoView({ behavior: "smooth" }), 100);
   };
 
   return (
@@ -105,7 +110,11 @@ const Navbar = () => {
                   }`}
                 >
                   <Crown className="w-4 h-4" />
-                  {isPremium && subscriptionEnd ? t("nav.managePlan") : t("nav.goPremium")}
+                  {isPremium && subscriptionEnd
+                    ? t("nav.managePlan")
+                    : isPremium
+                      ? "Premium actif"
+                      : t("nav.goPremium")}
                 </Button>
               )}
               <Button variant="ghost"

@@ -21,7 +21,6 @@ serve(async (req) => {
 
   try {
     const stripeKey = Deno.env.get("STRIPE_SECRET_KEY");
-    if (!stripeKey) throw new Error("STRIPE_SECRET_KEY is not set");
 
     const authHeader = req.headers.get("Authorization");
     if (!authHeader) throw new Error("No authorization header");
@@ -50,14 +49,15 @@ serve(async (req) => {
 
     const isAdmin = roles?.some((r: any) => r.role === "admin") ?? false;
 
-    // Lifetime translator/dictionary unlock
-    const { data: lifetimeRow } = await supabaseClient
+    // Lifetime translator/dictionary and full-site Premium unlocks
+    const { data: lifetimeRows, error: lifetimeError } = await supabaseClient
       .from("lifetime_unlocks")
-      .select("user_id")
+      .select("product")
       .eq("user_id", user.id)
-      .eq("product", "translator_dictionary")
-      .maybeSingle();
-    const hasLifetimeTranslator = !!lifetimeRow;
+      .in("product", ["translator_dictionary", "full_premium"]);
+    if (lifetimeError) throw new Error("Cannot read lifetime access");
+    const hasLifetimeTranslator = lifetimeRows?.some((row) => row.product === "translator_dictionary") ?? false;
+    const hasLifetimePremium = lifetimeRows?.some((row) => row.product === "full_premium") ?? false;
 
     // Free-tier usage counter
     const FREE_LIMIT = 11;
@@ -81,7 +81,7 @@ serve(async (req) => {
 
     // Preserve legacy checkout verification until the webhook signing secret is configured.
     // Once configured, the webhook owns subscription writes and reads use its stored state.
-    if (!Deno.env.get("STRIPE_WEBHOOK_SECRET")) {
+    if (!Deno.env.get("STRIPE_WEBHOOK_SECRET") && stripeKey) {
       const stripe = new Stripe(stripeKey, { apiVersion: "2025-08-27.basil" });
       const customers = await stripe.customers.list({ email: user.email, limit: 1 });
       if (customers.data[0]) {
@@ -96,9 +96,10 @@ serve(async (req) => {
     }
 
     return new Response(JSON.stringify({
-      subscribed: hasActiveSub,
+      subscribed: hasActiveSub || hasLifetimePremium,
       isAdmin,
       subscription_end: subscriptionEnd,
+      lifetime_premium: hasLifetimePremium,
       hasLifetimeTranslator,
       translatorUsesRemaining,
       translatorUsesLimit: FREE_LIMIT,

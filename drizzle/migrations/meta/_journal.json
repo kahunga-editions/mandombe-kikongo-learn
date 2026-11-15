@@ -8,6 +8,13 @@
       "when": 1794748823539,
       "tag": "0000_stripe_premium_webhook_sync",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1794750829796,
+      "tag": "0001_paypal_lifetime_premium",
+      "breakpoints": true
     }
   ]
 }
