@@ -234,6 +234,7 @@ const Lessons = () => {
                   <Link
                     key={lesson.id}
                     to="/#premium"
+                    onClick={() => window.__lovableEvents?.track?.("project.locked_lesson_clicked", { lesson_id: String(lesson.id), level: lesson.level })}
                     aria-label={`${getLessonTitle(lesson)} — Premium`}
                     className="relative block bg-card rounded-xl border border-border overflow-hidden opacity-75 hover:opacity-100 hover:border-gold/50 transition-all cursor-pointer"
                   >

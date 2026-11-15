@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "events": {
+    "project.locked_lesson_clicked": {
+      "event_schema_version": 1,
+      "description": "A visitor without Premium clicked a locked lesson card.",
+      "privacy": {
+        "contains_pii": false,
+        "purpose": "product_analytics"
+      },
+      "properties_schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "lesson_id",
+          "level"
+        ],
+        "properties": {
+          "lesson_id": {
+            "type": "string"
+          },
+          "level": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "project.premium_section_viewed": {
+      "event_schema_version": 1,
+      "description": "The Premium offer section became visible to a non-Premium visitor (once per page load).",
+      "privacy": {
+        "contains_pii": false,
+        "purpose": "product_analytics"
+      },
+      "properties_schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "signed_in"
+        ],
+        "properties": {
+          "signed_in": {
+            "type": "boolean"
+          }
+        }
+      }
+    }
+  }
+}

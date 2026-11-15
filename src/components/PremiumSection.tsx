@@ -5,6 +5,7 @@ import { Crown, BookOpen, Headphones, ScrollText, Infinity as InfinityIcon } fro
 import { useAuth } from "@/contexts/AuthContext";
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
+import { useEffect, useRef } from "react";
 
 const features = [
   { icon: BookOpen, label: "Toutes les leçons et tout le vocabulaire" },
@@ -16,6 +17,21 @@ const features = [
 const PremiumSection = () => {
   const { user, isPremium, isAdmin, subscriptionEnd } = useAuth();
   const navigate = useNavigate();
+  const offerRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    if (isPremium || !offerRef.current) return;
+    let sent = false;
+    const observer = new IntersectionObserver((entries) => {
+      if (!sent && entries.some((e) => e.isIntersecting)) {
+        sent = true;
+        window.__lovableEvents?.track?.("project.premium_section_viewed", { signed_in: !!user });
+        observer.disconnect();
+      }
+    }, { threshold: 0.4 });
+    observer.observe(offerRef.current);
+    return () => observer.disconnect();
+  }, [isPremium, user]);
 
   const manageSubscription = async () => {
     try {
@@ -61,7 +77,7 @@ const PremiumSection = () => {
   }
 
   return (
-    <section id="premium" className="py-24 bg-background">
+    <section id="premium" ref={offerRef} className="py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto bg-gradient-to-br from-earth-deep to-earth-deep/90 rounded-2xl p-8 md:p-12 text-center relative overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 bg-gold/5 rounded-full -translate-y-1/2 translate-x-1/3" />
