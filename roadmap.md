@@ -1,6 +1,7 @@
 # Roadmap
 
 ## En cours
+- [x] Indiquer où trouver le Client ID PayPal et distinguer test et paiements réels
 - [ ] Installer et tester la synchronisation sécurisée Stripe → Premium
 - [ ] Connecter Stripe au nouveau point de réception et enregistrer sa clé de signature
 - [x] Réparer l'ouverture du paiement Premium et vérifier le parcours connecté sans débit

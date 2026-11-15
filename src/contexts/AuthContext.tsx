@@ -140,6 +140,12 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
       }
     });
 
+    const refreshOnReturn = () => {
+      if (document.visibilityState === "visible") void checkSubscription();
+    };
+    window.addEventListener("focus", refreshOnReturn);
+    document.addEventListener("visibilitychange", refreshOnReturn);
+
     // Refresh subscription every 60s
     const interval = setInterval(() => {
       void checkSubscription();
@@ -148,6 +154,8 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     return () => {
       subscription.unsubscribe();
       clearInterval(interval);
+      window.removeEventListener("focus", refreshOnReturn);
+      document.removeEventListener("visibilitychange", refreshOnReturn);
     };
   }, [checkSubscription]);
 

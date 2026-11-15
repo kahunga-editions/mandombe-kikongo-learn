@@ -1,5 +1,6 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import Stripe from "https://esm.sh/stripe@18.5.0";
+import { premiumState, storedPremiumIsActive } from "../_shared/premium-state.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
 const corsHeaders = {
@@ -69,63 +70,28 @@ serve(async (req) => {
     const usedCount = usageRow?.count ?? 0;
     const translatorUsesRemaining = Math.max(0, FREE_LIMIT - usedCount);
 
-    const stripe = new Stripe(stripeKey, { apiVersion: "2025-08-27.basil" });
-    const customers = await stripe.customers.list({ email: user.email, limit: 1 });
+    const { data: stored, error: storedError } = await supabaseClient
+      .from("subscriptions")
+      .select("is_premium, status, current_period_end")
+      .eq("user_id", user.id);
+    if (storedError) throw new Error("Cannot read subscription status");
+    const active = stored?.find((row) => storedPremiumIsActive(row));
+    let hasActiveSub = Boolean(active);
+    let subscriptionEnd = active?.current_period_end ?? null;
 
-    if (customers.data.length === 0) {
-      return new Response(JSON.stringify({
-        subscribed: false,
-        isAdmin,
-        hasLifetimeTranslator,
-        translatorUsesRemaining,
-        translatorUsesLimit: FREE_LIMIT,
-      }), {
-        headers: { ...corsHeaders, "Content-Type": "application/json" },
-        status: 200,
-      });
-    }
-
-    const customerId = customers.data[0].id;
-    const subscriptions = await stripe.subscriptions.list({
-      customer: customerId,
-      status: "active",
-      limit: 1,
-    });
-
-    const hasActiveSub = subscriptions.data.length > 0;
-    let subscriptionEnd = null;
-
-    if (hasActiveSub) {
-      const sub = subscriptions.data[0];
-      subscriptionEnd = new Date(sub.current_period_end * 1000).toISOString();
-
-      // Sync to subscriptions table
-      const { data: existing } = await supabaseClient
-        .from("subscriptions")
-        .select("id")
-        .eq("user_id", user.id)
-        .limit(1);
-
-      if (existing && existing.length > 0) {
-        await supabaseClient
-          .from("subscriptions")
-          .update({
-            stripe_subscription_id: sub.id,
-            stripe_customer_id: customerId,
-            status: "active",
-            is_premium: true,
-            current_period_end: subscriptionEnd,
-          })
-          .eq("user_id", user.id);
+    // Preserve legacy checkout verification until the webhook signing secret is configured.
+    // Once configured, the webhook owns subscription writes and reads use its stored state.
+    if (!Deno.env.get("STRIPE_WEBHOOK_SECRET")) {
+      const stripe = new Stripe(stripeKey, { apiVersion: "2025-08-27.basil" });
+      const customers = await stripe.customers.list({ email: user.email, limit: 1 });
+      if (customers.data[0]) {
+        const list = await stripe.subscriptions.list({ customer: customers.data[0].id, status: "active", limit: 100, expand: ["data.latest_invoice"] });
+        const paid = list.data.map((sub) => premiumState(sub)).find((state) => state.isPremium);
+        hasActiveSub = Boolean(paid);
+        subscriptionEnd = paid?.periodEnd ?? null;
       } else {
-        await supabaseClient.from("subscriptions").insert({
-          user_id: user.id,
-          stripe_subscription_id: sub.id,
-          stripe_customer_id: customerId,
-          status: "active",
-          is_premium: true,
-          current_period_end: subscriptionEnd,
-        });
+        hasActiveSub = false;
+        subscriptionEnd = null;
       }
     }
 

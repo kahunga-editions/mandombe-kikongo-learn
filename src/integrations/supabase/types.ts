@@ -346,6 +346,27 @@ export type Database = {
         }
         Relationships: []
       }
+      stripe_webhook_events: {
+        Row: {
+          event_created: number
+          event_id: string
+          processed_at: string
+          user_id: string
+        }
+        Insert: {
+          event_created: number
+          event_id: string
+          processed_at?: string
+          user_id: string
+        }
+        Update: {
+          event_created?: number
+          event_id?: string
+          processed_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       subscriptions: {
         Row: {
           created_at: string
@@ -509,6 +530,21 @@ export type Database = {
           msg_id: number
           read_ct: number
         }[]
+      }
+      sync_stripe_premium_event: {
+        Args: {
+          p_customer_id: string
+          p_email: string
+          p_event_created: number
+          p_event_id: string
+          p_is_premium: boolean
+          p_period_end: string
+          p_period_start: string
+          p_status: string
+          p_subscription_id: string
+          p_user_id: string
+        }
+        Returns: boolean
       }
     }
     Enums: {

@@ -1,6 +1,7 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import Stripe from "https://esm.sh/stripe@18.5.0";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
+import { PREMIUM_PRICE_ID } from "../_shared/premium-state.ts";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -37,6 +38,9 @@ serve(async (req) => {
     let customerId: string | undefined;
     if (customers.data.length > 0) {
       customerId = customers.data[0].id;
+    } else {
+      const customer = await stripe.customers.create({ email: user.email, metadata: { user_id: user.id } });
+      customerId = customer.id;
     }
 
     const origin = req.headers.get("origin") || "https://nzomikanda.com";
@@ -44,7 +48,9 @@ serve(async (req) => {
     const session = await stripe.checkout.sessions.create({
       customer: customerId,
       customer_email: customerId ? undefined : user.email,
-      line_items: [{ price: "price_1T3oEkBd8z1DEMAaEs8zDLTQ", quantity: 1 }],
+      client_reference_id: user.id,
+      subscription_data: { metadata: { user_id: user.id } },
+      line_items: [{ price: PREMIUM_PRICE_ID, quantity: 1 }],
       mode: "subscription",
       success_url: `${origin}/?checkout=success`,
       cancel_url: `${origin}/?checkout=cancel`,

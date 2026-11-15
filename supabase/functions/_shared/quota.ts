@@ -1,12 +1,14 @@
 import { createClient, SupabaseClient } from "https://esm.sh/@supabase/supabase-js@2";
 
+import { storedPremiumIsActive } from "./premium-state.ts";
+
 export const FREE_LIMIT = 11;
 export const LIFETIME_PRODUCT = "translator_dictionary";
 
 export function getServiceClient(): SupabaseClient {
   return createClient(
-    Deno.env.get("SUPABASE_URL")!,
-    Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
+    Deno.env.get("SUPABASE_URL") ?? "",
+    Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "",
     { auth: { persistSession: false } },
   );
 }
@@ -25,12 +27,11 @@ export async function hasUnlimitedAccess(
   // active premium sub?
   const { data: sub } = await supabase
     .from("subscriptions")
-    .select("is_premium, status")
+    .select("is_premium, status, current_period_end")
     .eq("user_id", userId)
     .eq("is_premium", true)
-    .eq("status", "active")
-    .maybeSingle();
-  if (sub) return true;
+    .eq("status", "active");
+  if (sub?.some((row) => storedPremiumIsActive(row))) return true;
 
   // lifetime unlock?
   const { data: unlock } = await supabase
