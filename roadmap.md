@@ -1,6 +1,7 @@
 # Roadmap
 
 ## En cours
+- [x] Réparer l'ouverture du paiement Premium et vérifier le parcours connecté sans débit
 - [x] Vérifier sur mobile que le Mandombe ne déborde ni ne chevauche la transcription dans Conjugaisons
 - [x] Clarifier l'état vide de Conjugaisons quand aucun verbe ne correspond à la recherche
 - [x] Restaurer `mbenji` / `benji` en Mandombe pour le passé de `Banza`, sans modifier la transcription `mbendji` / `bendji`

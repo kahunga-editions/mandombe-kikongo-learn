@@ -1,7 +1,9 @@
+import { openPremiumBilling } from "@/lib/premiumBilling";
+import { Button } from "@/components/ui/button";
 import { Lock } from "lucide-react";
 import { useAuth } from "@/contexts/AuthContext";
 import { useNavigate } from "react-router-dom";
-import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
 import { ReactNode } from "react";
 
 interface PremiumGateProps {
@@ -24,11 +26,9 @@ const PremiumGate = ({ children, label = "Premium Content" }: PremiumGateProps) 
     }
     // User is logged in but not premium → checkout
     try {
-      const { data, error } = await supabase.functions.invoke("create-checkout");
-      if (error) throw error;
-      if (data?.url) window.open(data.url, "_blank");
+      await openPremiumBilling("create-checkout");
     } catch (err) {
-      console.error("Checkout error:", err);
+      toast.error(err instanceof Error ? err.message : "Le paiement est indisponible.");
     }
   };
 
@@ -43,12 +43,12 @@ const PremiumGate = ({ children, label = "Premium Content" }: PremiumGateProps) 
         <p className="text-cream/70 text-sm mb-4 max-w-xs text-center">
           {user ? "Upgrade to Premium to unlock this content" : "Sign in and go Premium to unlock"}
         </p>
-        <button
+        <Button
           onClick={handleClick}
           className="pointer-events-auto bg-gold hover:bg-gold/90 text-earth-deep px-6 py-2.5 rounded-lg font-bold transition-colors"
         >
           {user ? "Go Premium — $9.99/mo" : "Sign In to Unlock"}
-        </button>
+        </Button>
       </div>
     </div>
   );

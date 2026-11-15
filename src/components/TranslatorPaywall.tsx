@@ -1,3 +1,5 @@
+import { openPremiumBilling } from "@/lib/premiumBilling";
+import { Button } from "@/components/ui/button";
 import { Crown, Infinity, Lock } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "@/contexts/AuthContext";
@@ -38,12 +40,9 @@ const TranslatorPaywall = ({ variant = "full", reason = "quota" }: TranslatorPay
       return;
     }
     try {
-      const { data, error } = await supabase.functions.invoke("create-checkout");
-      if (error) throw error;
-      if (data?.url) window.open(data.url, "_blank");
+      await openPremiumBilling("create-checkout");
     } catch (e) {
-      console.error(e);
-      toast.error("Erreur lors de la création du paiement");
+      toast.error(e instanceof Error ? e.message : "Le paiement est indisponible.");
     }
   };
 
@@ -66,9 +65,9 @@ const TranslatorPaywall = ({ variant = "full", reason = "quota" }: TranslatorPay
       </p>
 
       <div className="grid sm:grid-cols-2 gap-3 max-w-xl mx-auto">
-        <button
+        <Button
           onClick={goLifetime}
-          className="flex flex-col items-center justify-center gap-1 bg-gold hover:bg-gold/90 text-earth-deep px-5 py-4 rounded-xl font-bold transition-colors"
+          className="h-auto whitespace-normal flex flex-col items-center justify-center gap-1 bg-gold hover:bg-gold/90 text-earth-deep px-5 py-4 rounded-xl font-bold transition-colors"
         >
           <span className="flex items-center gap-2">
             <Infinity className="w-5 h-5" /> Accès à vie — 19,99 $
@@ -76,10 +75,10 @@ const TranslatorPaywall = ({ variant = "full", reason = "quota" }: TranslatorPay
           <span className="text-xs font-medium opacity-80">
             Traducteur + Dictionnaire pour toujours
           </span>
-        </button>
-        <button
+        </Button>
+        <Button
           onClick={goPremium}
-          className="flex flex-col items-center justify-center gap-1 border border-gold/50 text-cream hover:bg-gold/10 px-5 py-4 rounded-xl font-bold transition-colors"
+          className="h-auto whitespace-normal flex flex-col items-center justify-center gap-1 border border-gold/50 text-cream hover:bg-gold/10 px-5 py-4 rounded-xl font-bold transition-colors"
         >
           <span className="flex items-center gap-2">
             <Crown className="w-5 h-5 text-gold" /> Premium — 9,99 $/mois
@@ -87,7 +86,7 @@ const TranslatorPaywall = ({ variant = "full", reason = "quota" }: TranslatorPay
           <span className="text-xs font-medium opacity-80">
             Tout le contenu du site
           </span>
-        </button>
+        </Button>
       </div>
 
       {!user && (

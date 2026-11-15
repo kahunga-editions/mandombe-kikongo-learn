@@ -1,3 +1,5 @@
+import { openPremiumBilling, premiumBillingAction } from "@/lib/premiumBilling";
+import { Button } from "@/components/ui/button";
 import { Crown, BookOpen, Headphones, ScrollText, Infinity as InfinityIcon, Languages } from "lucide-react";
 import { useAuth } from "@/contexts/AuthContext";
 import { useNavigate } from "react-router-dom";
@@ -12,7 +14,7 @@ const features = [
 ];
 
 const PremiumSection = () => {
-  const { user, isPremium } = useAuth();
+  const { user, isPremium, isAdmin, subscriptionEnd } = useAuth();
   const navigate = useNavigate();
 
   const handleClick = async () => {
@@ -20,22 +22,10 @@ const PremiumSection = () => {
       navigate("/auth");
       return;
     }
-    if (isPremium) {
-      try {
-        const { data, error } = await supabase.functions.invoke("customer-portal");
-        if (error) throw error;
-        if (data?.url) window.open(data.url, "_blank");
-      } catch (err) {
-        console.error("Portal error:", err);
-      }
-      return;
-    }
     try {
-      const { data, error } = await supabase.functions.invoke("create-checkout");
-      if (error) throw error;
-      if (data?.url) window.open(data.url, "_blank");
+      await openPremiumBilling(premiumBillingAction(isPremium, subscriptionEnd));
     } catch (err) {
-      console.error("Checkout error:", err);
+      toast.error(err instanceof Error ? err.message : "Le paiement est indisponible.");
     }
   };
 
@@ -48,17 +38,17 @@ const PremiumSection = () => {
               <Crown className="w-8 h-8 text-gold" />
             </div>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-              You're a Premium Member! 🎉
+              {isAdmin && !subscriptionEnd ? "Votre accès administrateur est actif" : "Votre accès Premium est actif"}
             </h2>
             <p className="text-muted-foreground max-w-lg mx-auto mb-8 text-lg">
-              You have full access to all content. Enjoy your learning journey!
+              {isAdmin && !subscriptionEnd ? "Vous avez accès à tous les contenus sans abonnement payant." : "Vous avez accès à tous les contenus."}
             </p>
-            <button
+            <Button
               onClick={handleClick}
-              className="bg-gold hover:bg-gold/90 text-earth-deep px-8 py-3 rounded-lg font-bold transition-colors"
+              className="h-auto whitespace-normal bg-gold hover:bg-gold/90 text-earth-deep px-8 py-3 rounded-lg font-bold transition-colors"
             >
-              Manage Subscription
-            </button>
+              {subscriptionEnd ? "Gérer mon abonnement" : "Souscrire à Premium — 9,99 $/mois"}
+            </Button>
           </div>
         </div>
       </section>
@@ -94,13 +84,13 @@ const PremiumSection = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-3 justify-center items-stretch">
-              <button
+              <Button
                 onClick={handleClick}
-                className="bg-gold hover:bg-gold/90 text-earth-deep px-8 py-4 rounded-lg text-base font-bold transition-colors inline-flex items-center justify-center gap-2"
+                className="h-auto whitespace-normal bg-gold hover:bg-gold/90 text-earth-deep px-8 py-4 rounded-lg text-base font-bold transition-colors inline-flex items-center justify-center gap-2"
               >
                 <Crown className="w-5 h-5" /> Go Premium — $9.99/month
-              </button>
-              <button
+              </Button>
+              <Button
                 onClick={async () => {
                   if (!user) {
                     navigate("/auth?next=/translator");
@@ -115,10 +105,10 @@ const PremiumSection = () => {
                     toast.error("Erreur lors de la création du paiement");
                   }
                 }}
-                className="border border-gold/50 text-cream hover:bg-gold/10 px-8 py-4 rounded-lg text-base font-bold transition-colors inline-flex items-center justify-center gap-2"
+                className="h-auto whitespace-normal border border-gold/50 text-cream hover:bg-gold/10 px-8 py-4 rounded-lg text-base font-bold transition-colors inline-flex items-center justify-center gap-2"
               >
                 <InfinityIcon className="w-5 h-5 text-gold" /> Lifetime Translator + Dictionary — $19.99
-              </button>
+              </Button>
             </div>
             <p className="text-cream/50 text-sm mt-4">
               Premium: cancel anytime, full access. Lifetime: one-time payment, forever access to translator & dictionary.

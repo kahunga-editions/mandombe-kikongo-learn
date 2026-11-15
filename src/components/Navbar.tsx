@@ -1,8 +1,10 @@
+import { openPremiumBilling, premiumBillingAction } from "@/lib/premiumBilling";
+import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { Globe, User, LogOut, Crown } from "lucide-react";
 import { useAuth } from "@/contexts/AuthContext";
 import { useNavigate } from "react-router-dom";
-import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
 import { useLanguage, Language } from "@/contexts/LanguageContext";
 
 const languages: { code: Language; label: string }[] = [
@@ -28,22 +30,10 @@ const Navbar = () => {
       navigate("/auth");
       return;
     }
-    if (isPremium) {
-      try {
-        const { data, error } = await supabase.functions.invoke("customer-portal");
-        if (error) throw error;
-        if (data?.url) window.open(data.url, "_blank");
-      } catch (err) {
-        console.error("Portal error:", err);
-      }
-      return;
-    }
     try {
-      const { data, error } = await supabase.functions.invoke("create-checkout");
-      if (error) throw error;
-      if (data?.url) window.open(data.url, "_blank");
+      await openPremiumBilling(premiumBillingAction(isPremium, subscriptionEnd));
     } catch (err) {
-      console.error("Checkout error:", err);
+      toast.error(err instanceof Error ? err.message : "Le paiement est indisponible.");
     }
   };
 
@@ -73,17 +63,17 @@ const Navbar = () => {
 
         <div className="flex items-center gap-3">
           <div className="relative">
-            <button
+            <Button variant="ghost"
               onClick={() => setLangOpen(!langOpen)}
               className="flex items-center gap-1.5 text-cream/80 hover:text-gold transition-colors text-sm"
             >
               <Globe className="w-4 h-4" />
               {languages.find((l) => l.code === language)?.label}
-            </button>
+            </Button>
             {langOpen && (
               <div className="absolute right-0 top-full mt-2 bg-earth-deep border border-gold/20 rounded-md shadow-lg py-1 min-w-[140px]">
                 {languages.map((lang) => (
-                  <button
+                  <Button variant="ghost"
                     key={lang.code}
                     onClick={() => { setLanguage(lang.code); setLangOpen(false); }}
                     className={`w-full text-left px-4 py-2 text-sm transition-colors ${
@@ -91,7 +81,7 @@ const Navbar = () => {
                     }`}
                   >
                     {lang.label}
-                  </button>
+                  </Button>
                 ))}
               </div>
             )}
@@ -105,42 +95,42 @@ const Navbar = () => {
                   <a href="/admin/corrections" className="text-xs text-gold/70 hover:text-gold transition-colors font-medium">Corrections</a>
                 </>
               )}
-              {!(isAdmin && !isPremium) && !(isAdmin && isPremium && !subscriptionEnd) ? (
-                <button
+              {(
+                <Button
                   onClick={handlePremiumClick}
                   className={`flex items-center gap-1.5 px-4 py-2 rounded-md text-sm font-semibold transition-colors ${
-                    isPremium
+                    isPremium && subscriptionEnd
                       ? "bg-gold/20 text-gold hover:bg-gold/30"
                       : "bg-primary hover:bg-primary/90 text-primary-foreground"
                   }`}
                 >
                   <Crown className="w-4 h-4" />
-                  {isPremium ? t("nav.managePlan") : t("nav.goPremium")}
-                </button>
-              ) : null}
-              <button
+                  {isPremium && subscriptionEnd ? t("nav.managePlan") : t("nav.goPremium")}
+                </Button>
+              )}
+              <Button variant="ghost"
                 onClick={signOut}
                 className="text-cream/60 hover:text-cream transition-colors p-2"
                 title="Sign out"
               >
                 <LogOut className="w-4 h-4" />
-              </button>
+              </Button>
             </div>
           ) : (
             <div className="flex items-center gap-2">
-              <button
+              <Button variant="ghost"
                 onClick={() => navigate("/auth")}
                 className="text-cream/80 hover:text-gold transition-colors text-sm font-medium flex items-center gap-1.5"
               >
                 <User className="w-4 h-4" />
                 {t("nav.signIn")}
-              </button>
-              <button
+              </Button>
+              <Button
                 onClick={handlePremiumClick}
                 className="bg-primary hover:bg-primary/90 text-primary-foreground px-4 py-2 rounded-md text-sm font-semibold transition-colors"
               >
                 {t("nav.goPremium")}
-              </button>
+              </Button>
             </div>
           )}
         </div>
