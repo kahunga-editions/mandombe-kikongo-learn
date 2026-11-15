@@ -9,8 +9,17 @@ import StoryPreview from "@/components/StoryPreview";
 import KilolakaPreview from "@/components/KilolakaPreview";
 import PremiumSection from "@/components/PremiumSection";
 import Footer from "@/components/Footer";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 const Index = () => {
+  const { hash } = useLocation();
+  useEffect(() => {
+    if (!hash) return;
+    const go = () => document.getElementById(hash.slice(1))?.scrollIntoView({ block: "start" });
+    const timers = [300, 900, 1800].map((ms) => setTimeout(go, ms));
+    return () => timers.forEach(clearTimeout);
+  }, [hash]);
   return (
     <div className="min-h-screen bg-background">
       <SEO

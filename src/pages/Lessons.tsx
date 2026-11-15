@@ -231,9 +231,11 @@ const Lessons = () => {
 
               if (isLocked) {
                 return (
-                  <div
+                  <Link
                     key={lesson.id}
-                    className="relative bg-card rounded-xl border border-border overflow-hidden opacity-75"
+                    to="/#premium"
+                    aria-label={`${getLessonTitle(lesson)} — Premium`}
+                    className="relative block bg-card rounded-xl border border-border overflow-hidden opacity-75 hover:opacity-100 hover:border-gold/50 transition-all cursor-pointer"
                   >
                     <div className="p-6">
                       <div className="flex items-start justify-between mb-4">
@@ -257,7 +259,7 @@ const Lessons = () => {
                       <p className="text-cream font-display font-bold text-lg">Premium</p>
                       <p className="text-cream/60 text-xs mt-1">{t("exercises.upgrade")}</p>
                     </div>
-                  </div>
+                  </Link>
                 );
               }
 
