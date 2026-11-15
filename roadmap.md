@@ -1,9 +1,10 @@
 # Roadmap
 
 ## En cours
+- [x] Vérifier les possibilités sans accès Stripe : aucun accès ni récupération de clé documenté pour la connexion actuelle
 - [x] Indiquer où trouver le Client ID PayPal et distinguer test et paiements réels
-- [ ] Installer et tester la synchronisation sécurisée Stripe → Premium
-- [ ] Connecter Stripe au nouveau point de réception et enregistrer sa clé de signature
+- [ ] Tester la synchronisation Stripe → Premium de bout en bout — bloqué par l'absence de clé de signature
+- [ ] Enregistrer la clé de signature du point Stripe créé en test — bloqué par l'absence d'accès au compte Stripe
 - [x] Réparer l'ouverture du paiement Premium et vérifier le parcours connecté sans débit
 - [x] Vérifier sur mobile que le Mandombe ne déborde ni ne chevauche la transcription dans Conjugaisons
 - [x] Clarifier l'état vide de Conjugaisons quand aucun verbe ne correspond à la recherche
