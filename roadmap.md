@@ -1,6 +1,8 @@
 # Roadmap
 
 ## En cours
+- [ ] Installer et tester la synchronisation sécurisée Stripe → Premium
+- [ ] Connecter Stripe au nouveau point de réception et enregistrer sa clé de signature
 - [x] Réparer l'ouverture du paiement Premium et vérifier le parcours connecté sans débit
 - [x] Vérifier sur mobile que le Mandombe ne déborde ni ne chevauche la transcription dans Conjugaisons
 - [x] Clarifier l'état vide de Conjugaisons quand aucun verbe ne correspond à la recherche
