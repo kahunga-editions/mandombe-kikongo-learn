@@ -1,10 +1,8 @@
-import { openPremiumBilling } from "@/lib/premiumBilling";
 import PayPalPremiumButton from "@/components/PayPalPremiumButton";
 import { Button } from "@/components/ui/button";
 import { Crown, BookOpen, Headphones, ScrollText, Infinity as InfinityIcon } from "lucide-react";
 import { useAuth } from "@/contexts/AuthContext";
 import { useNavigate } from "react-router-dom";
-import { toast } from "sonner";
 import { useEffect, useRef } from "react";
 
 const features = [
@@ -33,14 +31,6 @@ const PremiumSection = () => {
     return () => observer.disconnect();
   }, [isPremium, user]);
 
-  const manageSubscription = async () => {
-    try {
-      await openPremiumBilling("customer-portal");
-    } catch (err) {
-      toast.error(err instanceof Error ? err.message : "La gestion de l'abonnement est indisponible.");
-    }
-  };
-
   if (isPremium) {
     const lifetime = !isAdmin && !subscriptionEnd;
     return (
@@ -62,14 +52,6 @@ const PremiumSection = () => {
                 ? "Tous les contenus sont débloqués, sans date d'expiration."
                 : "Vous avez accès à tous les contenus."}
             </p>
-            {subscriptionEnd && (
-              <Button
-                onClick={manageSubscription}
-                className="h-auto whitespace-normal bg-gold hover:bg-gold/90 text-earth-deep px-8 py-3 rounded-lg font-bold transition-colors"
-              >
-                Gérer mon abonnement
-              </Button>
-            )}
           </div>
         </div>
       </section>

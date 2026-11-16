@@ -16,15 +16,6 @@ async function invokeBilling<T>(action: string, body?: Record<string, string>): 
   return data as T;
 }
 
-export async function openPremiumBilling(action: "customer-portal" | "create-checkout") {
-  const data = await invokeBilling<{ url?: string }>(action);
-  if (!data?.url || typeof data.url !== "string") {
-    throw new Error("Le lien de paiement n'a pas pu être créé. Réessayez.");
-  }
-  // Async popup creation is blocked by some browsers; navigate the current tab.
-  window.location.assign(data.url);
-}
-
 export async function createPayPalPremiumOrder() {
   const data = await invokeBilling<{ orderId?: string }>("create-paypal-premium-order", {});
   if (!data?.orderId) throw new Error("PayPal n'a pas pu créer la commande. Réessayez.");

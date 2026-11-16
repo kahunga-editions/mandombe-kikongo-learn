@@ -1,10 +1,8 @@
-import { openPremiumBilling } from "@/lib/premiumBilling";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { Globe, User, LogOut, Crown } from "lucide-react";
 import { useAuth } from "@/contexts/AuthContext";
 import { useNavigate } from "react-router-dom";
-import { toast } from "sonner";
 import { useLanguage, Language } from "@/contexts/LanguageContext";
 
 const languages: { code: Language; label: string }[] = [
@@ -22,22 +20,10 @@ const languages: { code: Language; label: string }[] = [
 const Navbar = () => {
   const [langOpen, setLangOpen] = useState(false);
   const { language, setLanguage, t } = useLanguage();
-  const { user, isPremium, isAdmin, subscriptionEnd, signOut } = useAuth();
+  const { user, isPremium, isAdmin, signOut } = useAuth();
   const navigate = useNavigate();
 
-  const handlePremiumClick = async () => {
-    if (!user) {
-      navigate("/auth");
-      return;
-    }
-    if (isPremium && subscriptionEnd) {
-      try {
-        await openPremiumBilling("customer-portal");
-      } catch (err) {
-        toast.error(err instanceof Error ? err.message : "La gestion de l'abonnement est indisponible.");
-      }
-      return;
-    }
+  const handlePremiumClick = () => {
     navigate("/#premium");
     window.setTimeout(() => document.getElementById("premium")?.scrollIntoView({ behavior: "smooth" }), 100);
   };
@@ -104,15 +90,13 @@ const Navbar = () => {
                 <Button
                   onClick={handlePremiumClick}
                   className={`flex items-center gap-1.5 px-4 py-2 rounded-md text-sm font-semibold transition-colors ${
-                    isPremium && subscriptionEnd
+                    isPremium
                       ? "bg-gold/20 text-gold hover:bg-gold/30"
                       : "bg-primary hover:bg-primary/90 text-primary-foreground"
                   }`}
                 >
                   <Crown className="w-4 h-4" />
-                  {isPremium && subscriptionEnd
-                    ? t("nav.managePlan")
-                    : isPremium
+                  {isPremium
                       ? "Premium actif"
                       : t("nav.goPremium")}
                 </Button>

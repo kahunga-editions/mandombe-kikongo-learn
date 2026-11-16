@@ -415,7 +415,7 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.stories": "Histórias",
     "nav.kilolaka": "Kilolaka",
     "nav.signIn": "Entrar",
-    "nav.goPremium": "Assinar Premium",
+    "nav.goPremium": "Desbloquear Premium",
     "nav.managePlan": "Gerir Assinatura",
 
     // Hero

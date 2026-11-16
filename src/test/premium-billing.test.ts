@@ -9,6 +9,7 @@ import {
   capturePayPalPremiumOrder,
   createPayPalPremiumOrder,
 } from "@/lib/premiumBilling";
+import { retiredMonthlyCheckout } from "../../supabase/functions/_shared/retired-checkout";
 
 describe("PayPal lifetime Premium", () => {
   beforeEach(() => invoke.mockReset());
@@ -19,6 +20,19 @@ describe("PayPal lifetime Premium", () => {
 
   it("uses the lifetime full-site unlock rather than a subscription", () => {
     expect(PAYPAL_PREMIUM_PRODUCT).toBe("full_premium");
+  });
+
+  it("rejects the retired monthly checkout without creating a payment link", () => {
+    const response = retiredMonthlyCheckout();
+    expect(response.status).toBe(410);
+    expect(response.body.recurring).toBe(false);
+    expect(response.body).not.toHaveProperty("url");
+  });
+
+  it("offers only a lifetime full-site payment of 3700 cents in EUR on the retired checkout", () => {
+    expect(retiredMonthlyCheckout().body).toMatchObject({
+      product: "full_premium", amount_cents: 3700, currency: "EUR", recurring: false,
+    });
   });
 
   it("creates a PayPal order without accepting a browser-supplied price", async () => {

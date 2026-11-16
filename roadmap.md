@@ -1,6 +1,7 @@
 # Roadmap
 
 ## En cours
+- [x] Retirer les boutons d'abonnement et désactiver toute nouvelle souscription mensuelle ; conserver uniquement PayPal à 37 EUR à vie
 - [x] Retrouver la vraie page PayPal Developer et guider vers le Client ID sans schéma inventé
 - [x] Ajouter le paiement PayPal unique de 37 EUR avec accès Premium à vie après confirmation du paiement
 - [x] Vérifier les possibilités sans accès Stripe : aucun accès ni récupération de clé documenté pour la connexion actuelle
