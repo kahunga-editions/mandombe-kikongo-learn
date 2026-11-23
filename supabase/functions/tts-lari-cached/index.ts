@@ -151,13 +151,8 @@ Deno.serve(async (req) => {
       console.log("Skipping ElevenLabs (quota cooldown active)");
     }
 
-    if (!audioBytes) {
-      const fb = await lovableAiFallback(text);
-      if (fb) {
-        audioBytes = fb;
-        usedFallback = true;
-      }
-    }
+    // No generic fallback voice: only the trained Lari ElevenLabs voice is allowed.
+    void lovableAiFallback;
 
     if (!audioBytes) {
       return new Response(
