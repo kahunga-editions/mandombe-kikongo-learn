@@ -1,0 +1,2 @@
+DROP POLICY IF EXISTS "Authenticated users can view battle profiles" ON public.battle_profiles;
+CREATE POLICY "Users can view own battle profile" ON public.battle_profiles FOR SELECT TO authenticated USING (user_id = auth.uid());

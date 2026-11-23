@@ -15,6 +15,13 @@
       "when": 1794750829796,
       "tag": "0001_paypal_lifetime_premium",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1795435955986,
+      "tag": "0002_restrict_battle_profiles_select",
+      "breakpoints": true
     }
   ]
 }
